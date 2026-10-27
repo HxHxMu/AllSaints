@@ -6,3 +6,5 @@ video/out/
 __pycache__/
 *.pyc
 .DS_Store
+# Local secrets written by `elevenlabs onboard`
+/.env
