@@ -1,0 +1,66 @@
+{
+  "name": "All Saints",
+  "short": "A.S.†",
+  "tagline": "The saints the world forgot. Heaven didn't.",
+  "mission": "Daily one-minute lives of lesser-known saints, told with reverence, on their feast day.",
+  "colors": {
+    "soot": "#0D0B09",
+    "umber": "#1C1712",
+    "gilt": "#C9A44C",
+    "giltLight": "#E6C878",
+    "vellum": "#EFE6D2",
+    "ash": "#9A9183",
+    "martyr": "#7A1F1F",
+    "lapis": "#22406B"
+  },
+  "colorRoles": {
+    "background": "soot",
+    "surface": "umber",
+    "primary": "gilt",
+    "text": "vellum",
+    "muted": "ash",
+    "accentMartyr": "martyr (martyrs only: thin rule under name)",
+    "accentMarian": "lapis (map water, Marian feasts)"
+  },
+  "fonts": {
+    "display": {"family": "Cinzel", "use": "Saint names, title cards, monogram. Always uppercase, tracking +12%."},
+    "text": {"family": "EB Garamond", "use": "Captions and on-screen lines. SemiBold 600 for captions."},
+    "accent": {"family": "Cormorant Garamond Italic", "use": "Quotes, the devotional close, feast-day line."}
+  },
+  "motion": {
+    "fps": 30,
+    "size": [1080, 1920],
+    "artMove": "Slow push-in or drift, 4-8% scale over a scene. Never fast zooms, never shake.",
+    "transitions": "Cross-dissolve 0.6s or dip-to-soot 0.4s. No swipes, spins, or glitch effects.",
+    "textIn": "Fade + 12px rise, 0.5s, ease-out.",
+    "lightLeak": "Subtle warm candle flicker vignette, opacity under 15%.",
+    "grain": "Fine film grain, 4% opacity, for a unified look across different paintings.",
+    "watermark": "A.S.† initials, top-left, 60% opacity, throughout."
+  },
+  "voice": {
+    "narrator": "Warm, deep male. Unhurried (about 140 words per minute). Reverent, never preachy or sensational.",
+    "elevenlabs": {"voice_id": "JBFqnCBsd6RMkjVDRZzb", "model_id": "eleven_multilingual_v2", "stability": 0.55, "similarity_boost": 0.8, "style": 0.15, "speed": 0.92}
+  },
+  "writing": {
+    "length": "125-145 spoken words (about 55-62 seconds).",
+    "structure": [
+      "HOOK (1 sentence, under 14 words): the single most arresting true detail of their life.",
+      "WHO: name, era, place in one breath.",
+      "STORY: 3-4 beats, concrete and visual. One idea per sentence.",
+      "TURN: what their holiness looked like in practice.",
+      "CLOSE: one line of meaning for today, then 'Saint ___, pray for us.'"
+    ],
+    "rules": [
+      "Accuracy over drama. Separate history from tradition: use 'tradition holds' / 'according to legend' for unverified miracles and martyrdom details.",
+      "Use 'Saint' only for canonized saints or pre-congregation saints venerated as such; use 'Blessed' / 'Venerable' correctly.",
+      "Reverent, warm, plain words. No slang, no clickbait ('you won't believe'), no sarcasm.",
+      "Avoid graphic description of martyrdom; name it with dignity.",
+      "Never contradict Catholic teaching; never speculate about a saint's private sins beyond the historical record.",
+      "Pronunciation: spell unusual names phonetically in the TTS line if needed."
+    ]
+  },
+  "caption": {
+    "template": "{hook_line}\n\n{name} · Feast day: {feast}\n{one_line_summary}\n\n{prayer}\n\n—\nSources: {sources}\nArt: {art_credits}\n\n{hashtags}",
+    "hashtags_base": ["#catholic", "#saints", "#saintoftheday", "#catholicsaints", "#feastday", "#allsaints", "#catholicfaith", "#prayforus"]
+  }
+}

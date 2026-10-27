@@ -1,0 +1,680 @@
+{
+ "id": "sample",
+ "saint": {
+  "name": "Saint Frumentius",
+  "display_name": "St. Frumentius",
+  "dates": "c. 300 \u2013 c. 383",
+  "region": "Aksum, Ethiopia",
+  "feast": "October 27",
+  "martyr": false
+ },
+ "voice": "episodes/sample/voice.mp3",
+ "voiceDuration": 67.63,
+ "music": "episodes/sample/music.mp3",
+ "words": [
+  {
+   "text": "Two",
+   "start": 0.3,
+   "end": 0.675
+  },
+  {
+   "text": "boys",
+   "start": 0.735,
+   "end": 1.155
+  },
+  {
+   "text": "survived",
+   "start": 1.215,
+   "end": 1.815
+  },
+  {
+   "text": "a",
+   "start": 1.875,
+   "end": 2.16
+  },
+  {
+   "text": "massacre",
+   "start": 2.22,
+   "end": 2.82
+  },
+  {
+   "text": "on",
+   "start": 2.88,
+   "end": 3.21
+  },
+  {
+   "text": "the",
+   "start": 3.27,
+   "end": 3.645
+  },
+  {
+   "text": "Red",
+   "start": 3.705,
+   "end": 4.08
+  },
+  {
+   "text": "Sea.",
+   "start": 4.14,
+   "end": 4.56
+  },
+  {
+   "text": "One",
+   "start": 4.87,
+   "end": 5.245
+  },
+  {
+   "text": "would",
+   "start": 5.305,
+   "end": 5.77
+  },
+  {
+   "text": "bring",
+   "start": 5.83,
+   "end": 6.295
+  },
+  {
+   "text": "the",
+   "start": 6.355,
+   "end": 6.73
+  },
+  {
+   "text": "Gospel",
+   "start": 6.79,
+   "end": 7.3
+  },
+  {
+   "text": "to",
+   "start": 7.36,
+   "end": 7.69
+  },
+  {
+   "text": "Ethiopia.",
+   "start": 7.75,
+   "end": 8.395
+  },
+  {
+   "text": "His",
+   "start": 9.105,
+   "end": 9.48
+  },
+  {
+   "text": "name",
+   "start": 9.54,
+   "end": 9.96
+  },
+  {
+   "text": "was",
+   "start": 10.02,
+   "end": 10.395
+  },
+  {
+   "text": "Frumentius,",
+   "start": 10.455,
+   "end": 11.19
+  },
+  {
+   "text": "a",
+   "start": 11.5,
+   "end": 11.785
+  },
+  {
+   "text": "young",
+   "start": 11.845,
+   "end": 12.31
+  },
+  {
+   "text": "Christian",
+   "start": 12.37,
+   "end": 13.015
+  },
+  {
+   "text": "from",
+   "start": 13.075,
+   "end": 13.495
+  },
+  {
+   "text": "Tyre,",
+   "start": 13.555,
+   "end": 14.02
+  },
+  {
+   "text": "in",
+   "start": 14.33,
+   "end": 14.66
+  },
+  {
+   "text": "the",
+   "start": 14.72,
+   "end": 15.095
+  },
+  {
+   "text": "fourth",
+   "start": 15.155,
+   "end": 15.665
+  },
+  {
+   "text": "century.",
+   "start": 15.725,
+   "end": 16.325
+  },
+  {
+   "text": "Pirates",
+   "start": 17.035,
+   "end": 17.59
+  },
+  {
+   "text": "killed",
+   "start": 17.65,
+   "end": 18.16
+  },
+  {
+   "text": "the",
+   "start": 18.22,
+   "end": 18.595
+  },
+  {
+   "text": "crew",
+   "start": 18.655,
+   "end": 19.075
+  },
+  {
+   "text": "of",
+   "start": 19.135,
+   "end": 19.465
+  },
+  {
+   "text": "their",
+   "start": 19.525,
+   "end": 19.99
+  },
+  {
+   "text": "ship.",
+   "start": 20.05,
+   "end": 20.515
+  },
+  {
+   "text": "Only",
+   "start": 20.825,
+   "end": 21.245
+  },
+  {
+   "text": "he",
+   "start": 21.305,
+   "end": 21.635
+  },
+  {
+   "text": "and",
+   "start": 21.695,
+   "end": 22.07
+  },
+  {
+   "text": "his",
+   "start": 22.13,
+   "end": 22.505
+  },
+  {
+   "text": "brother",
+   "start": 22.565,
+   "end": 23.12
+  },
+  {
+   "text": "Aedesius",
+   "start": 23.18,
+   "end": 23.78
+  },
+  {
+   "text": "were",
+   "start": 23.84,
+   "end": 24.26
+  },
+  {
+   "text": "spared,",
+   "start": 24.32,
+   "end": 24.875
+  },
+  {
+   "text": "and",
+   "start": 25.185,
+   "end": 25.56
+  },
+  {
+   "text": "carried",
+   "start": 25.62,
+   "end": 26.175
+  },
+  {
+   "text": "as",
+   "start": 26.235,
+   "end": 26.565
+  },
+  {
+   "text": "captives",
+   "start": 26.625,
+   "end": 27.225
+  },
+  {
+   "text": "to",
+   "start": 27.285,
+   "end": 27.615
+  },
+  {
+   "text": "the",
+   "start": 27.675,
+   "end": 28.05
+  },
+  {
+   "text": "royal",
+   "start": 28.11,
+   "end": 28.575
+  },
+  {
+   "text": "court",
+   "start": 28.635,
+   "end": 29.1
+  },
+  {
+   "text": "of",
+   "start": 29.16,
+   "end": 29.49
+  },
+  {
+   "text": "Aksum.",
+   "start": 29.55,
+   "end": 30.06
+  },
+  {
+   "text": "There,",
+   "start": 30.77,
+   "end": 31.28
+  },
+  {
+   "text": "the",
+   "start": 31.59,
+   "end": 31.965
+  },
+  {
+   "text": "captives",
+   "start": 32.025,
+   "end": 32.625
+  },
+  {
+   "text": "became",
+   "start": 32.685,
+   "end": 33.195
+  },
+  {
+   "text": "trusted",
+   "start": 33.255,
+   "end": 33.81
+  },
+  {
+   "text": "servants",
+   "start": 33.87,
+   "end": 34.47
+  },
+  {
+   "text": "of",
+   "start": 34.53,
+   "end": 34.86
+  },
+  {
+   "text": "the",
+   "start": 34.92,
+   "end": 35.295
+  },
+  {
+   "text": "king.",
+   "start": 35.355,
+   "end": 35.82
+  },
+  {
+   "text": "Frumentius",
+   "start": 36.13,
+   "end": 36.82
+  },
+  {
+   "text": "helped",
+   "start": 36.88,
+   "end": 37.39
+  },
+  {
+   "text": "raise",
+   "start": 37.45,
+   "end": 37.915
+  },
+  {
+   "text": "the",
+   "start": 37.975,
+   "end": 38.35
+  },
+  {
+   "text": "young",
+   "start": 38.41,
+   "end": 38.875
+  },
+  {
+   "text": "prince,",
+   "start": 38.935,
+   "end": 39.49
+  },
+  {
+   "text": "and",
+   "start": 39.8,
+   "end": 40.175
+  },
+  {
+   "text": "gathered",
+   "start": 40.235,
+   "end": 40.835
+  },
+  {
+   "text": "Christian",
+   "start": 40.895,
+   "end": 41.54
+  },
+  {
+   "text": "merchants",
+   "start": 41.6,
+   "end": 42.245
+  },
+  {
+   "text": "to",
+   "start": 42.305,
+   "end": 42.635
+  },
+  {
+   "text": "pray.",
+   "start": 42.695,
+   "end": 43.16
+  },
+  {
+   "text": "Years",
+   "start": 43.87,
+   "end": 44.335
+  },
+  {
+   "text": "later,",
+   "start": 44.395,
+   "end": 44.905
+  },
+  {
+   "text": "he",
+   "start": 45.215,
+   "end": 45.545
+  },
+  {
+   "text": "went",
+   "start": 45.605,
+   "end": 46.025
+  },
+  {
+   "text": "to",
+   "start": 46.085,
+   "end": 46.415
+  },
+  {
+   "text": "Alexandria",
+   "start": 46.475,
+   "end": 47.165
+  },
+  {
+   "text": "and",
+   "start": 47.225,
+   "end": 47.6
+  },
+  {
+   "text": "begged",
+   "start": 47.66,
+   "end": 48.17
+  },
+  {
+   "text": "Saint",
+   "start": 48.23,
+   "end": 48.695
+  },
+  {
+   "text": "Athanasius",
+   "start": 48.755,
+   "end": 49.445
+  },
+  {
+   "text": "to",
+   "start": 49.505,
+   "end": 49.835
+  },
+  {
+   "text": "send",
+   "start": 49.895,
+   "end": 50.315
+  },
+  {
+   "text": "Aksum",
+   "start": 50.375,
+   "end": 50.84
+  },
+  {
+   "text": "a",
+   "start": 50.9,
+   "end": 51.185
+  },
+  {
+   "text": "bishop.",
+   "start": 51.245,
+   "end": 51.8
+  },
+  {
+   "text": "Athanasius",
+   "start": 52.11,
+   "end": 52.8
+  },
+  {
+   "text": "chose",
+   "start": 52.86,
+   "end": 53.325
+  },
+  {
+   "text": "him.",
+   "start": 53.385,
+   "end": 53.805
+  },
+  {
+   "text": "Ethiopians",
+   "start": 54.515,
+   "end": 55.205
+  },
+  {
+   "text": "still",
+   "start": 55.265,
+   "end": 55.73
+  },
+  {
+   "text": "call",
+   "start": 55.79,
+   "end": 56.21
+  },
+  {
+   "text": "him",
+   "start": 56.27,
+   "end": 56.645
+  },
+  {
+   "text": "Abba",
+   "start": 56.705,
+   "end": 57.125
+  },
+  {
+   "text": "Salama:",
+   "start": 57.185,
+   "end": 57.74
+  },
+  {
+   "text": "Father",
+   "start": 58.05,
+   "end": 58.56
+  },
+  {
+   "text": "of",
+   "start": 58.62,
+   "end": 58.95
+  },
+  {
+   "text": "Peace.",
+   "start": 59.01,
+   "end": 59.52
+  },
+  {
+   "text": "He",
+   "start": 59.83,
+   "end": 60.16
+  },
+  {
+   "text": "turned",
+   "start": 60.22,
+   "end": 60.73
+  },
+  {
+   "text": "his",
+   "start": 60.79,
+   "end": 61.165
+  },
+  {
+   "text": "captivity",
+   "start": 61.225,
+   "end": 61.87
+  },
+  {
+   "text": "into",
+   "start": 61.93,
+   "end": 62.35
+  },
+  {
+   "text": "a",
+   "start": 62.41,
+   "end": 62.695
+  },
+  {
+   "text": "mission.",
+   "start": 62.755,
+   "end": 63.355
+  },
+  {
+   "text": "Saint",
+   "start": 64.065,
+   "end": 64.53
+  },
+  {
+   "text": "Frumentius,",
+   "start": 64.59,
+   "end": 65.325
+  },
+  {
+   "text": "pray",
+   "start": 65.635,
+   "end": 66.055
+  },
+  {
+   "text": "for",
+   "start": 66.115,
+   "end": 66.49
+  },
+  {
+   "text": "us.",
+   "start": 66.55,
+   "end": 66.925
+  }
+ ],
+ "scenes": [
+  {
+   "kind": "art",
+   "start": 0,
+   "image": "episodes/sample/a.jpg",
+   "w": 1200,
+   "h": 1600,
+   "focus": {
+    "x": 0.5,
+    "y": 0.3
+   },
+   "move": "in",
+   "credit": "Placeholder art"
+  },
+  {
+   "kind": "map",
+   "start": 9.105,
+   "lat": 14.13,
+   "lon": 38.72,
+   "place": "Aksum \u00b7 Ethiopia"
+  },
+  {
+   "kind": "art",
+   "start": 17.035,
+   "image": "episodes/sample/c.jpg",
+   "w": 1100,
+   "h": 1500,
+   "focus": {
+    "x": 0.5,
+    "y": 0.3
+   },
+   "move": "out",
+   "credit": "Placeholder art"
+  },
+  {
+   "kind": "art",
+   "start": 30.77,
+   "image": "episodes/sample/a.jpg",
+   "w": 1200,
+   "h": 1600,
+   "focus": {
+    "x": 0.5,
+    "y": 0.3
+   },
+   "move": "up",
+   "credit": "Placeholder art"
+  },
+  {
+   "kind": "art",
+   "start": 43.87,
+   "image": "episodes/sample/b.jpg",
+   "w": 2000,
+   "h": 1300,
+   "focus": {
+    "x": 0.5,
+    "y": 0.3
+   },
+   "move": "in",
+   "credit": "Placeholder art"
+  },
+  {
+   "kind": "art",
+   "start": 54.515,
+   "image": "episodes/sample/c.jpg",
+   "w": 1100,
+   "h": 1500,
+   "focus": {
+    "x": 0.5,
+    "y": 0.3
+   },
+   "move": "out",
+   "credit": "Placeholder art"
+  },
+  {
+   "kind": "close",
+   "start": 64.065,
+   "image": "episodes/sample/c.jpg",
+   "text": "Saint Frumentius, pray for us."
+  }
+ ],
+ "title": {
+  "start": 9.305,
+  "end": 16.935
+ },
+ "outro": 3,
+ "cover": {
+  "image": "episodes/sample/a.jpg",
+  "w": 1200,
+  "h": 1600,
+  "focus": {
+   "x": 0.5,
+   "y": 0.3
+  }
+ }
+}

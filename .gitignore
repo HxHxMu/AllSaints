@@ -1,0 +1,8 @@
+node_modules/
+work/
+video/public/episodes/*
+!video/public/episodes/sample/
+video/out/
+__pycache__/
+*.pyc
+.DS_Store
