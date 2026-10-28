@@ -2,7 +2,7 @@
  "id": "2026-11-01",
  "date": "2026-11-01",
  "status": "review",
- "updated": "2026-10-28T08:55:31+00:00",
+ "updated": "2026-10-28T08:56:03+00:00",
  "saint": {
   "qid": "Q714835",
   "name": "Saint Marcellus of Paris",
@@ -193,5 +193,7 @@
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/cover.jpg",
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/preview.mp4"
- }
+ },
+ "review_sends": 1,
+ "review_message_id": 19
 }

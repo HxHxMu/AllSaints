@@ -2,7 +2,7 @@
  "id": "2026-10-31",
  "date": "2026-10-31",
  "status": "review",
- "updated": "2026-10-28T08:55:22+00:00",
+ "updated": "2026-10-28T08:56:00+00:00",
  "saint": {
   "qid": "Q582213",
   "name": "Saint Alphonsus Rodríguez",
@@ -202,5 +202,7 @@
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/cover.jpg",
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/preview.mp4"
- }
+ },
+ "review_sends": 1,
+ "review_message_id": 17
 }
