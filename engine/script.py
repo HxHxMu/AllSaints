@@ -65,7 +65,7 @@ Requirements:
 - Every factual claim must appear in "claims" with its source index; label legendary material kind "tradition" and phrase it that way in the script.
 - 8-14 hashtags, lowercase, including the saint's name tag and place tags."""
     for attempt in range(3):
-        s = claude_json(prompt, system=SYSTEM, max_tokens=3500, temperature=0.7)
+        s = claude_json(prompt, system=SYSTEM)
         n = word_count(s)
         if 115 <= n <= 155:
             return s
@@ -93,6 +93,6 @@ Return ONLY JSON:
  "confidence": 0-100,
  "reviewer_note": "one line for the human approver: anything they should double-check"}}
 Use "reject" only if the saint is not actually venerated in the Catholic Church or the sources are too thin for an honest minute."""
-    res = claude_json(prompt, max_tokens=4500, temperature=0.1)
+    res = claude_json(prompt)
     log(f"Fact-check: {res.get('verdict')} ({res.get('confidence')}) issues={len(res.get('issues', []))}")
     return res

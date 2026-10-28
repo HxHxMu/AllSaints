@@ -72,7 +72,7 @@ EP_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def load_episodes():
-    return {p.stem: json.loads(p.read_text()) for p in sorted(EP_DIR.glob("*.json"))}
+    return {p.stem: json.loads(p.read_text()) for p in sorted(EP_DIR.glob("*.json")) if not p.name.startswith("._")}  # skip macOS ._ files
 
 
 def load_episode(ep_id):
@@ -102,7 +102,7 @@ def log(*a):
 _client = None
 
 
-def claude(messages, system=None, max_tokens=4000, temperature=0.6):
+def claude(messages, system=None, max_tokens=16000):
     """Call Claude, trying configured models in order. Returns text."""
     global _client
     import anthropic
@@ -113,7 +113,7 @@ def claude(messages, system=None, max_tokens=4000, temperature=0.6):
     for m in models:
         for attempt in range(3):
             try:
-                kw = dict(model=m, max_tokens=max_tokens, messages=messages, temperature=temperature)
+                kw = dict(model=m, max_tokens=max_tokens, messages=messages)
                 if system:
                     kw["system"] = system
                 r = _client.messages.create(**kw)
@@ -158,13 +158,13 @@ def parse_json(text):
     return obj
 
 
-def claude_json(prompt, system=None, max_tokens=4000, temperature=0.5, images=None):
+def claude_json(prompt, system=None, images=None):
     content = []
     for img in images or []:
         content.append(img)
     content.append({"type": "text", "text": prompt})
     for attempt in range(2):
-        txt = claude([{"role": "user", "content": content}], system=system, max_tokens=max_tokens, temperature=temperature)
+        txt = claude([{"role": "user", "content": content}], system=system)
         try:
             return parse_json(txt)
         except Exception as e:

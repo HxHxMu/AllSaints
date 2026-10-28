@@ -9,7 +9,7 @@ MUSIC = ROOT / "assets" / "music"
 
 
 def pick_bed(seed: str):
-    beds = sorted([p for p in MUSIC.iterdir() if p.suffix.lower() in (".mp3", ".wav", ".m4a", ".aac") and not p.name.startswith("placeholder")]) if MUSIC.exists() else []
+    beds = sorted([p for p in MUSIC.iterdir() if p.suffix.lower() in (".mp3", ".wav", ".m4a", ".aac") and not p.name.startswith(("placeholder", "._"))]) if MUSIC.exists() else []
     if not beds:
         beds = sorted(MUSIC.glob("placeholder*.mp3")) or [make_placeholder()]
     i = int(hashlib.md5(seed.encode()).hexdigest(), 16) % len(beds)
