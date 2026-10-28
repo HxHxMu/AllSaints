@@ -3,7 +3,7 @@ import subprocess, hashlib
 import numpy as np
 from scipy.io import wavfile
 from scipy.signal import fftconvolve, butter, sosfilt
-from common import ROOT, log
+from common import ROOT, WORK, log
 
 MUSIC = ROOT / "assets" / "music"
 
@@ -13,7 +13,31 @@ def pick_bed(seed: str):
     if not beds:
         beds = sorted(MUSIC.glob("placeholder*.mp3")) or [make_placeholder()]
     i = int(hashlib.md5(seed.encode()).hexdigest(), 16) % len(beds)
-    return beds[i]
+    return prepare(beds[i])
+
+
+def prepare(src, target_lufs=-15, min_seconds=100):
+    """Level-match a bed to the mix's reference loudness and, if shorter than an episode could run,
+    extend it by crossfading it into itself (Remotion's loop would otherwise hard-cut)."""
+    out = WORK / "music" / (src.stem + "-bed.mp3")
+    if out.exists() and out.stat().st_size and out.stat().st_mtime > src.stat().st_mtime:
+        return out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(src)],
+                               capture_output=True, text=True).stdout.strip())
+    copies = max(1, -(-min_seconds // int(dur - 4)))  # ceil; each crossfade overlaps 4 s
+    steps, prev = [], "[0]"
+    for k in range(1, copies):
+        steps.append(f"{prev}[{k}]acrossfade=d=4:c1=tri:c2=tri[x{k}]")
+        prev = f"[x{k}]"
+    steps.append(f"{prev}loudnorm=I={target_lufs}:TP=-1.5:LRA=11")
+    inputs = [a for _ in range(copies) for a in ("-i", str(src))]
+    tmp = out.with_suffix(".tmp.mp3")  # rename only when complete, so a failed run never leaves a bad bed cached
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(steps),
+                    "-ar", "44100", "-b:a", "192k", str(tmp)], check=True)
+    tmp.replace(out)
+    log(f"Prepared music bed {src.name}")
+    return out
 
 
 def make_placeholder(name="placeholder-pad-1.mp3", seconds=95, sr=44100, seed=7):
