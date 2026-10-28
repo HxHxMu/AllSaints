@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 # Local secrets written by `elevenlabs onboard`
 /.env
+
+# macOS resource forks on external drives
+._*
