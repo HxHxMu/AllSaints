@@ -179,7 +179,7 @@ def cmd_generate(a):
 
 
 def publish_due():
-    import instagram, storage, telegram
+    import telegram
     cfg = load_config()
     now = dt.datetime.now(tz())
     if cfg.get("paused") or not cfg.get("launch_date") or now.date() < dt.date.fromisoformat(cfg["launch_date"]):
@@ -193,8 +193,23 @@ def publish_due():
         telegram.send(f"⏰ Today's episode ({ep['saint']['display_name']}) still needs approval – it posts at {cfg['post_time']}.")
         ep["reminded"] = True
         save_episode(ep)
+    if ep["status"] == "publishing":
+        # a job killed mid-upload leaves "publishing" behind; after 30 min treat it as a failed attempt
+        started = dt.datetime.fromisoformat(ep.get("updated", now.isoformat()))
+        if now - started > dt.timedelta(minutes=30):
+            ep["status"] = "approved"
     if ep["status"] != "approved" or now < due_time:
         return
+    try:
+        publish_episode(ep)
+    except Exception:
+        pass  # logged + reported to Telegram; retried on the next poll
+
+
+def publish_episode(ep):
+    """Post one episode's Reel now (used by the daily schedule and `pipeline.py publish <id>`)."""
+    import instagram, storage, telegram
+    now = dt.datetime.now(tz())
     log("Publishing", ep["id"])
     ep["status"] = "publishing"
     save_episode(ep)
@@ -215,6 +230,7 @@ def publish_due():
         save_episode(ep)
         if ep["publish_attempts"] in (1, 3):
             telegram.send(f"❌ Publishing failed ({ep['publish_attempts']}x): {str(e)[:300]}\nWill retry.")
+        raise
 
 
 def cmd_poll(a):
@@ -233,6 +249,8 @@ def main():
     g.add_argument("--max", type=int)
     g.add_argument("--no-upload", action="store_true")
     sub.add_parser("poll")
+    pb = sub.add_parser("publish")
+    pb.add_argument("episode", help="episode id, e.g. 2026-10-29 or intro")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -241,6 +259,11 @@ def main():
         cmd_generate(a)
     elif a.cmd == "poll":
         cmd_poll(a)
+    elif a.cmd == "publish":
+        ep = load_episode(a.episode)
+        if not ep or ep.get("status") not in ("approved", "review") or not ep.get("assets"):
+            raise SystemExit(f"Episode {a.episode} not found, already published, or not uploaded")
+        publish_episode(ep)
     elif a.cmd == "refresh-token":
         import instagram
         instagram.refresh_token()

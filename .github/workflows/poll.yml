@@ -1,7 +1,10 @@
 name: Approvals & publishing
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    # Odd minutes: GitHub delays or drops scheduled runs most at :00/:10/... when its queue is busiest.
+    - cron: "3,13,23,33,43,53 * * * *"
+    # Extra runs right after the 07:30 America/New_York post time (11:3x UTC in EDT, 12:3x UTC in EST).
+    - cron: "33,47 11,12 * * *"
   workflow_dispatch:
 permissions:
   contents: write
