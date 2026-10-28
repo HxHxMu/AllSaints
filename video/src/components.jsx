@@ -141,24 +141,28 @@ export const CloseScene = ({scene, saint, durationInFrames, outroFrames}) => {
 		<AbsoluteFill style={{opacity, backgroundColor: C.soot}}>
 			{scene.image && (
 				<div style={{position: 'absolute', left: 0, top: 0, width: 270, height: 480, transform: 'scale(4.4)', transformOrigin: '0 0', overflow: 'hidden'}}>
-					<Img src={src(scene.image)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(4px) brightness(0.28) sepia(0.3)'}} />
+					<Img src={src(scene.image)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(4px) brightness(0.34) sepia(0.3)'}} />
 				</div>
 			)}
 			<AbsoluteFill style={{background: `radial-gradient(ellipse at 50% 58%, rgba(201,164,76,${0.16 * glow}) 0%, rgba(13,11,9,0) 55%)`}} />
 			<AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', padding: '0 90px', opacity: prayerOut}}>
-				<div style={{fontFamily: ACCENT, fontStyle: 'italic', fontWeight: 500, fontSize: 84, lineHeight: 1.2, color: C.vellum, textAlign: 'center', ...rise(f, 8, 24)}}>
+				<div style={{fontFamily: ACCENT, fontStyle: 'italic', fontWeight: 500, fontSize: 84, lineHeight: 1.2, color: C.vellum, textAlign: 'center', textShadow: '0 3px 22px rgba(0,0,0,0.95)', ...rise(f, 8, 24)}}>
 					{scene.text || `${saint.name}, pray for us.`}
 				</div>
 				<div style={{width: 120, height: 2, background: C.gilt, marginTop: 50, ...rise(f, 20, 20)}} />
 			</AbsoluteFill>
 			{o > 0 && (
-				<AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>
-					<Img src={staticFile('brand/monogram-transparent.svg')} style={{width: 520, height: 520, ...rise(o, 0, 20)}} />
-					<div style={{fontFamily: DISPLAY, fontSize: 34, letterSpacing: '0.3em', color: C.gilt, marginTop: 10, ...rise(o, 8, 18)}}>ALL SAINTS</div>
-					{saint.feast && (
-						<div style={{fontFamily: TEXT, fontStyle: 'italic', fontSize: 38, color: C.ash, marginTop: 26, ...rise(o, 14, 18)}}>Feast day · {saint.feast}</div>
-					)}
-				</AbsoluteFill>
+				<>
+					{/* darken the art behind the outro so the gilt mark and feast date read clearly */}
+					<AbsoluteFill style={{backgroundColor: C.soot, opacity: interpolate(o, [0, 12], [0, 0.55], {extrapolateRight: 'clamp'})}} />
+					<AbsoluteFill style={{justifyContent: 'center', alignItems: 'center'}}>
+						<Img src={staticFile('brand/monogram-transparent.svg')} style={{width: 540, height: 540, filter: 'brightness(1.25) drop-shadow(0 0 28px rgba(230,200,120,0.35))', ...rise(o, 0, 20)}} />
+						<div style={{fontFamily: DISPLAY, fontWeight: 600, fontSize: 42, letterSpacing: '0.3em', color: C.giltLight, marginTop: 14, textShadow: '0 2px 16px rgba(0,0,0,0.9)', ...rise(o, 8, 18)}}>ALL SAINTS</div>
+						{saint.feast && (
+							<div style={{fontFamily: TEXT, fontStyle: 'italic', fontWeight: 500, fontSize: 50, color: C.vellum, marginTop: 30, textShadow: '0 2px 16px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.9)', ...rise(o, 14, 18)}}>Feast day · {saint.feast}</div>
+						)}
+					</AbsoluteFill>
+				</>
 			)}
 		</AbsoluteFill>
 	);
@@ -204,13 +208,13 @@ export const Captions = ({words, hideAfter}) => {
 };
 
 /* ---------- Atmosphere: vignette, grain, candle flicker, watermark ---------- */
-export const Atmosphere = ({showMark = true}) => {
+export const Atmosphere = ({showMark = true, bottomShade = 1}) => {
 	const f = useCurrentFrame();
 	const flick = 0.1 + 0.03 * Math.sin(f / 4.1) + 0.02 * Math.sin(f / 1.7 + 1) + 0.015 * (random(`fl${Math.floor(f / 3)}`) - 0.5);
 	const seed = Math.floor(f / 2) % 12;
 	return (
 		<>
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(13,11,9,0.55) 0%, rgba(13,11,9,0) 22%, rgba(13,11,9,0) 42%, rgba(13,11,9,0.62) 60%, rgba(13,11,9,0.8) 78%, rgba(13,11,9,0.92) 100%)'}} />
+			<AbsoluteFill style={{opacity: bottomShade, background: 'linear-gradient(180deg, rgba(13,11,9,0.55) 0%, rgba(13,11,9,0) 22%, rgba(13,11,9,0) 42%, rgba(13,11,9,0.62) 60%, rgba(13,11,9,0.8) 78%, rgba(13,11,9,0.92) 100%)'}} />
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)'}} />
 			<AbsoluteFill style={{background: `radial-gradient(ellipse at 15% 100%, rgba(230,160,70,${flick}) 0%, rgba(0,0,0,0) 45%)`, mixBlendMode: 'screen'}} />
 			<AbsoluteFill style={{opacity: 0.08, mixBlendMode: 'overlay', backgroundImage: `url(${staticFile(`brand/grain${seed % 4}.png`)})`, backgroundSize: '512px 512px', backgroundPosition: `${(seed * 137) % 512}px ${(seed * 211) % 512}px`}} />

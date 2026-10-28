@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, interpolate, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ArtScene, MapScene, TitleCard, CloseScene, Captions, Atmosphere, Credit, C, src} from './components';
 import {loadFonts} from './fonts';
 
@@ -15,6 +15,9 @@ export const Episode = (props) => {
 	const outroFrames = Math.round((props.outro || 3) * fps);
 	const fr = (s) => Math.round(s * fps);
 	const closeStart = scenes.find((s) => s.kind === 'close')?.start;
+	const frame = useCurrentFrame();
+	// the caption shade would mute the close prayer and outro, so lift it as the close scene begins
+	const bottomShade = closeStart ? interpolate(frame, [fr(closeStart), fr(closeStart) + 18], [1, 0.25], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
 
 	return (
 		<AbsoluteFill style={{backgroundColor: C.soot}}>
@@ -33,7 +36,7 @@ export const Episode = (props) => {
 				);
 			})}
 
-			<Atmosphere showMark />
+			<Atmosphere showMark bottomShade={bottomShade} />
 
 			{scenes.map((s, i) =>
 				s.kind === 'art' && s.credit ? (
