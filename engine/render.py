@@ -69,13 +69,16 @@ def render(ep_id, props, outdir: Path):
     remotion(["still", "src/index.js", "Cover", str(cover_png), f"--props={pfile}"])
     cover = outdir / "cover.jpg"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(cover_png), "-q:v", "2", str(cover)], check=True)
-    preview = video
-    if video.stat().st_size > 45 * 1024 * 1024:
-        preview = outdir / "preview.mp4"
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-vf", "scale=720:-2", "-c:v", "libx264",
-                        "-crf", "26", "-preset", "fast", "-c:a", "aac", "-b:a", "128k", str(preview)], check=True)
+    preview = make_preview(video, outdir / "preview.mp4")
     log(f"Rendered {video} ({video.stat().st_size / 1e6:.1f} MB)")
     return {"video": video, "cover": cover, "preview": preview}
+
+
+def make_preview(video, preview):
+    """Small 720p copy (~5-8 MB) for the Telegram review; the full file stays for Instagram."""
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-vf", "scale=720:-2", "-c:v", "libx264",
+                    "-crf", "28", "-preset", "fast", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(preview)], check=True)
+    return preview
 
 
 def stage_assets(ep_id, files: dict):

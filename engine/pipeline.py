@@ -129,12 +129,15 @@ def generate_one(date: dt.date, upload=True):
         ep.pop("caption_hook_override", None)
         if upload:
             import storage, telegram
-            urls = storage.upload(f"ep-{ep_id}", {"video.mp4": out["video"], "cover.jpg": out["cover"]},
+            urls = storage.upload(f"ep-{ep_id}", {"video.mp4": out["video"], "cover.jpg": out["cover"], "preview.mp4": out["preview"]},
                                   name=f"{ep_id} · {final['saint']['name']}", body=ep["caption"])
             ep["assets"] = urls
             ep["status"] = "review"
             save_episode(ep)
-            ep["review_message_id"] = telegram.send_review(ep, out["preview"])
+            try:
+                ep["review_message_id"] = telegram.send_review(ep)
+            except Exception as e:  # the episode is done and uploaded; the poll re-sends missing reviews
+                log("Telegram review not sent:", e)
         else:
             ep["status"] = "review"
             ep["local"] = {k: str(v) for k, v in out.items()}
@@ -236,6 +239,7 @@ def publish_episode(ep):
 def cmd_poll(a):
     import telegram, storage
     actions = telegram.process_updates()
+    telegram.resend_missing_reviews()
     if "generate" in actions:
         storage.dispatch_workflow("generate.yml")
     publish_due()

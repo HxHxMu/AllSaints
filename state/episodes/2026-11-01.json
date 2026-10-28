@@ -1,8 +1,8 @@
 {
  "id": "2026-11-01",
  "date": "2026-11-01",
- "status": "failed",
- "updated": "2026-10-28T08:53:44+00:00",
+ "status": "review",
+ "updated": "2026-10-28T08:55:31+00:00",
  "saint": {
   "qid": "Q714835",
   "name": "Saint Marcellus of Paris",
@@ -188,10 +188,10 @@
  ],
  "duration": 67.1,
  "caption": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.\n\nSaint Marcellus of Paris · Feast day: November 1\nSaint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.\n\nSaint Marcellus, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintmarcellus #saintmarcel #marcellusofparis #paris #notredame #lutetia #romangaul #france #catholicsaints #allsaints #novemberfirst #lesserknownsaints #catholicreels #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
- "attempts": 1,
+ "attempts": 0,
  "assets": {
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/video.mp4",
-  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/cover.jpg"
- },
- "error": "ConnectionError: ('Connection aborted.', TimeoutError('The write operation timed out'))"
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/preview.mp4"
+ }
 }

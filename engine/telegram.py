@@ -36,21 +36,54 @@ def buttons(ep_id):
     ]}
 
 
-def send_review(ep, preview_path):
+def send_review(ep):
+    """Video review with Approve/Redo/Edit/New-saint buttons. Telegram fetches the preview from the
+    release URL itself (no upload from the runner, which timed out on ~50 MB files); falls back to a
+    downloaded upload, then to a text message with a link and the same buttons."""
+    import storage
+    from common import WORK
     cid = chat_id()
     if not cid:
         return None
     cfg = load_config()
-    fc = ep.get("factcheck", {})
+    fc = ep.get("factcheck") or {}
     head = (f"🕯 {ep['saint']['display_name']} · {ep['saint'].get('feast', '')}\n"
             f"Scheduled: {ep['date']} at {cfg['post_time']} ({cfg['timezone'].split('/')[-1].replace('_', ' ')})\n"
             f"Fact-check: {fc.get('verdict', '?')} · confidence {fc.get('confidence', '?')}%\n"
             f"Note: {fc.get('reviewer_note', '—')}")
-    with open(preview_path, "rb") as f:
-        msg = api("sendVideo", files={"video": f}, chat_id=cid, caption=head[:1024], supports_streaming="true",
-                  width=1080, height=1920, reply_markup=buttons(ep["id"]))
+    assets = ep.get("assets", {})
+    src = assets.get("preview.mp4") or assets.get("video.mp4")
+    kw = dict(chat_id=cid, caption=head[:1024], supports_streaming="true", width=720, height=1280, reply_markup=buttons(ep["id"]))
+    msg = None
+    if src:
+        msg = api("sendVideo", video=storage.resolve_direct(src), **kw)
+        if not msg and assets.get("preview.mp4"):
+            path = WORK / f"{ep['id']}-preview.mp4"
+            storage.download(assets["preview.mp4"], path)
+            for attempt in range(3):
+                try:
+                    with open(path, "rb") as f:
+                        msg = api("sendVideo", files={"video": f}, **kw)
+                    break
+                except Exception as e:
+                    log("Telegram upload failed, retrying:", e)
+    if not msg:
+        msg = api("sendMessage", chat_id=cid, text=f"{head}\n\n▶️ Watch: {assets.get('video.mp4', '(no video)')}",
+                  reply_markup=buttons(ep["id"]))
     send("📝 Caption:\n\n" + ep["caption"] + ("\n\n⚠️ Issues fixed by fact-check:\n- " + "\n- ".join(fc.get("issues", [])) if fc.get("issues") else ""))
     return msg["message_id"] if msg else None
+
+
+def resend_missing_reviews():
+    """Episodes that finished but whose review never reached Telegram (network error) get it now."""
+    for ep in load_episodes().values():
+        if ep.get("status") == "review" and ep.get("assets") and not ep.get("review_message_id") and ep.get("review_sends", 0) < 3:
+            ep["review_sends"] = ep.get("review_sends", 0) + 1
+            try:
+                ep["review_message_id"] = send_review(ep)
+            except Exception as e:
+                log("Review re-send failed:", ep["id"], e)
+            save_episode(ep)
 
 
 HELP = """A.S.† Studio commands
