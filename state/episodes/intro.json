@@ -1,0 +1,88 @@
+{
+ "id": "intro",
+ "date": "2026-10-28",
+ "status": "approved",
+ "saint": {
+  "name": "All Saints",
+  "display_name": "All Saints",
+  "dates": "",
+  "region": "One saint · every feast day",
+  "feast": "",
+  "martyr": false
+ },
+ "script": {
+  "saint": {
+   "name": "All Saints",
+   "display_name": "All Saints",
+   "dates": "",
+   "region": "One saint · every feast day",
+   "feast": "",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "visual": "art",
+    "text": "Every day, the Church remembers a saint. Most of them, the world has forgotten.",
+    "scene": "A long procession of saints of every era and land (martyrs with palms, desert monks, nuns, bishops, missionaries from Africa, Asia, Europe and the Americas) walking toward Christ enthroned in glory."
+   },
+   {
+    "role": "who",
+    "visual": "map",
+    "lat": 30.0,
+    "lon": 25.0,
+    "place": "East · West",
+    "text": "Martyrs of Rome. Monks of the desert. Missionaries who crossed oceans and never came home."
+   },
+   {
+    "role": "story",
+    "visual": "art",
+    "text": "Each day here, one of them. A true story, told in a minute, on their feast day.",
+    "scene": "An old monk-scribe at a lectern by candlelight, illuminating a great open book of the lives of the saints, small painted saints visible on its pages."
+   },
+   {
+    "role": "story",
+    "visual": "art",
+    "text": "History where we know it. Tradition where we don't. Always with reverence.",
+    "scene": "Desert hermits in a rocky wilderness beside a small chapel, and far off on the sea a wooden mission ship under sail carrying friars to distant lands."
+   },
+   {
+    "role": "turn",
+    "visual": "art",
+    "text": "The saints the world forgot. Heaven didn't.",
+    "scene": "The court of Heaven: countless haloed saints gathered in rows on gold around the Lamb, rays of light descending, angels holding crowns."
+   },
+   {
+    "role": "close",
+    "visual": "close",
+    "text": "All Saints, pray for us."
+   }
+  ],
+  "pronunciations": {},
+  "caption_hook": "Welcome to All Saints. ✝",
+  "summary": "",
+  "hashtags": [
+   "#catholic",
+   "#saints",
+   "#saintoftheday",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#feastday",
+   "#catholicfaith",
+   "#byzantineicon",
+   "#iconography",
+   "#prayforus",
+   "#allsaints"
+  ]
+ },
+ "caption": "Welcome to All Saints. ✝\n\nEvery day, one saint the world forgot, on their feast day: martyrs, monks, missionaries, mystics. A true story in about a minute.\n\nHistory where we know it. Tradition where we don't. Always with reverence.\n\nFollow to meet a new saint each morning.\n\nThe saints the world forgot. Heaven didn't.\nAll Saints, pray for us. 🕯\n\n—\nArt: Illustrations in the Byzantine style, AI-generated (Google Gemini)\n\n#catholic #saints #saintoftheday #catholicsaints #lesserknownsaints #feastday #catholicfaith #byzantineicon #iconography #prayforus #allsaints",
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 34.5,
+ "updated": "2026-10-28T06:14:10+00:00",
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/cover.jpg"
+ }
+}
