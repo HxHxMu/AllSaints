@@ -66,6 +66,7 @@ Instagram and YouTube are tracked separately: a failed Short retries up to 3x an
    Click past "Google hasn't verified this app", choose the **All Saints channel** (Brand Account) when asked.
    It writes the three `YT_*` values to `.env` and, if `gh` is installed, to GitHub secrets (Production environment).
 6. Check: `python engine/pipeline.py yt-whoami` → should print the channel name.
+   Put its handle in `state/config.json` as `"youtube_channel": "@…"`: uploads refuse to run for any other channel.
 7. **API audit:** uploads from a new API project are forced *private* until Google's YouTube API compliance audit
    passes. Apply via the "YouTube API Services – Audit and Quota Extension" form. Until then set
    `"youtube_privacy": "private"` in `state/config.json` and hit Publish in YouTube Studio (the Telegram message links it).

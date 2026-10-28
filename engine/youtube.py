@@ -90,6 +90,7 @@ def upload_short(ep, video_path: Path):
     if BRAND.get("youtube", {}).get("synthetic_media"):
         meta["status"]["containsSyntheticMedia"] = True
     token = _access_token()
+    _check_channel(token)
     size = video_path.stat().st_size
     r = session.post(UPLOAD_URL, params={"uploadType": "resumable", "part": "snippet,status"}, json=meta, timeout=60,
                      headers={"Authorization": f"Bearer {token}", "X-Upload-Content-Type": "video/mp4",
@@ -106,8 +107,18 @@ def upload_short(ep, video_path: Path):
     return {"id": vid["id"], "url": f"https://youtube.com/shorts/{vid['id']}", "privacy": vid.get("status", {}).get("privacyStatus", privacy)}
 
 
-def me():
-    token = _access_token()
+def _check_channel(token):
+    """Refuse to upload unless the token belongs to the configured channel (config "youtube_channel", e.g. "@allholysaints")."""
+    want = (load_config().get("youtube_channel") or "").lower().lstrip("@")
+    if not want:
+        raise RuntimeError('Set "youtube_channel" (the channel handle) in state/config.json before uploading')
+    got = me(token)
+    if not isinstance(got, dict) or (got.get("handle") or "").lower().lstrip("@") != want:
+        raise RuntimeError(f"YouTube token is for {got}, not @{want}; rerun `pipeline.py yt-auth` and pick the All Saints channel")
+
+
+def me(token=None):
+    token = token or _access_token()
     r = session.get(f"{API}/channels", params={"part": "snippet,statistics", "mine": "true"},
                     headers={"Authorization": f"Bearer {token}"}, timeout=30)
     r.raise_for_status()
@@ -125,7 +136,7 @@ def authorize(client_secret_file):
     port, state = 8765, secrets.token_urlsafe(16)
     redirect = f"http://127.0.0.1:{port}"
     url = AUTH_URL + "?" + urllib.parse.urlencode({"client_id": c["client_id"], "redirect_uri": redirect, "response_type": "code",
-                                                   "scope": SCOPES, "access_type": "offline", "prompt": "consent", "state": state})
+                                                   "scope": SCOPES, "access_type": "offline", "prompt": "select_account consent", "state": state})
     got = {}
 
     class H(http.server.BaseHTTPRequestHandler):
