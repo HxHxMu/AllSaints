@@ -3,7 +3,7 @@
   "post_time": "07:30",
   "days_ahead": 7,
   "max_generate_per_run": 3,
-  "launch_date": null,
+  "launch_date": "2026-10-29",
   "telegram_chat_id": 77355330,
   "anthropic_models": [
     "claude-sonnet-4-5",
