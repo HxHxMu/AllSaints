@@ -1,5 +1,6 @@
 """Find freely licensed sacred art on Wikimedia Commons and assign it to beats with Claude vision."""
 import base64, io, re, html
+from itertools import zip_longest
 from PIL import Image
 from common import http, get_json, log, claude_json
 
@@ -42,10 +43,11 @@ def search_files(q, limit=8):
 
 def _clean(s):
     s = html.unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
-    return re.sub(r"\s+", " ", s)
+    s = re.split(r"\s*(?:label|title) QS:", s)[0]  # drop Wikidata template residue ('label QS:Len,"…"')
+    return re.sub(r"\s+", " ", s).strip()
 
 
-def image_info(titles, width=1600):
+def image_info(titles, width=500):  # Wikimedia only serves standard thumb widths (500/960/1280/1920/3840)
     out = {}
     titles = [t for t in dict.fromkeys(titles) if not BAD_NAME.search(t)]
     for i in range(0, len(titles), 40):
@@ -65,7 +67,7 @@ def image_info(titles, width=1600):
             date = _clean(md.get("DateTimeOriginal", {}).get("value", ""))[:30]
             name = _clean(md.get("ObjectName", {}).get("value", "")) or p["title"][5:].rsplit(".", 1)[0]
             out[p["title"]] = {
-                "title": p["title"], "thumb": ii.get("thumburl") or ii["url"], "w": ii["width"], "h": ii["height"],
+                "title": p["title"], "thumb": ii.get("thumburl") or ii["url"], "url": ii["url"], "w": ii["width"], "h": ii["height"],
                 "license": lic, "artist": artist, "date": date, "name": name[:90],
                 "page": ii.get("descriptionurl"),
                 "desc": _clean(md.get("ImageDescription", {}).get("value", ""))[:200],
@@ -83,14 +85,18 @@ def collect_candidates(saint, script, max_n=28):
             log("category fetch failed", e)
     short = re.sub(r"^(Saint|St\.?|Saints)\s+", "", saint["name"])
     queries = [f'"{short}" saint', f"{short} icon", f"{short} painting"]
+    # art_hint ends with comma-separated search phrases; Commons ANDs every word, so search each phrase alone
     for b in script["beats"]:
         if b.get("visual") == "art" and b.get("art_hint"):
-            queries.append(b["art_hint"].split(":")[-1][:80])
-    for q in queries:
+            queries += [p.strip()[:60] for p in b["art_hint"].split(":")[-1].split(",") if p.strip()][:3]
+    found = []
+    for q in dict.fromkeys(queries):
         try:
-            titles += search_files(q)
+            found.append(search_files(q, limit=5))
         except Exception as e:
             log("search failed", q, e)
+    # round-robin across queries so later beats aren't crowded out by the max_n cut
+    titles += [t for group in zip_longest(*found) for t in group if t]
     info = image_info(titles)
     # keep order: wikidata image first, category, then searches
     cands = [info[t] for t in dict.fromkeys(titles) if t in info]
@@ -134,11 +140,14 @@ Return ONLY JSON: {{"beats": [{{"i": <beat index>, "image": <image number>, "foc
     return usable, res
 
 
-def download(url, path, width=2000):
-    url = re.sub(r"/(\d+)px-", f"/{width}px-", url)
-    r = http.get(url, timeout=120)
-    if r.status_code != 200:
-        r = http.get(re.sub(r"/\d+px-", "/1600px-", url), timeout=120)
+def download(url, path, original=None):
+    """Fetch the largest standard thumb width (Wikimedia rejects others), else the original file."""
+    for w in (1920, 1280, 960):
+        r = http.get(re.sub(r"/\d+px-", f"/{w}px-", url), timeout=120)
+        if r.status_code == 200:
+            break
+    if r.status_code != 200 and original:
+        r = http.get(original, timeout=120)
     r.raise_for_status()
     im = Image.open(io.BytesIO(r.content)).convert("RGB")
     if max(im.size) > 2400:

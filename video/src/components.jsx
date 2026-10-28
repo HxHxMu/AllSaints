@@ -210,7 +210,7 @@ export const Atmosphere = ({showMark = true}) => {
 	const seed = Math.floor(f / 2) % 12;
 	return (
 		<>
-			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(13,11,9,0.55) 0%, rgba(13,11,9,0) 22%, rgba(13,11,9,0) 50%, rgba(13,11,9,0.7) 78%, rgba(13,11,9,0.9) 100%)'}} />
+			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(13,11,9,0.55) 0%, rgba(13,11,9,0) 22%, rgba(13,11,9,0) 42%, rgba(13,11,9,0.62) 60%, rgba(13,11,9,0.8) 78%, rgba(13,11,9,0.92) 100%)'}} />
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)'}} />
 			<AbsoluteFill style={{background: `radial-gradient(ellipse at 15% 100%, rgba(230,160,70,${flick}) 0%, rgba(0,0,0,0) 45%)`, mixBlendMode: 'screen'}} />
 			<AbsoluteFill style={{opacity: 0.08, mixBlendMode: 'overlay', backgroundImage: `url(${staticFile(`brand/grain${seed % 4}.png`)})`, backgroundSize: '512px 512px', backgroundPosition: `${(seed * 137) % 512}px ${(seed * 211) % 512}px`}} />

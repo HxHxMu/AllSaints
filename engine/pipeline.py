@@ -42,7 +42,7 @@ def build_art(saint, final, work):
             c = usable[int(sel["image"])]
             fn = work / f"art{int(sel['image'])}.jpg"
             if fn.name not in files:
-                files[fn.name] = art.download(c["thumb"], fn)
+                files[fn.name] = art.download(c["thumb"], fn, c.get("url"))
             w, h = files[fn.name]
             art_map[k] = {"image": fn, "w": w, "h": h, "focus": sel.get("focus") or {"x": 0.5, "y": 0.35},
                           "move": sel.get("move", "in"), "credit": f"{c['name']} — {c['artist'] or 'Unknown artist'}"[:80]}
