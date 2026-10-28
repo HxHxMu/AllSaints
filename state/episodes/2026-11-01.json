@@ -1,0 +1,197 @@
+{
+ "id": "2026-11-01",
+ "date": "2026-11-01",
+ "status": "failed",
+ "updated": "2026-10-28T08:53:44+00:00",
+ "saint": {
+  "qid": "Q714835",
+  "name": "Saint Marcellus of Paris",
+  "display_name": "St. Marcellus of Paris",
+  "dates": "d. 436",
+  "region": "Lutetia (Paris), Roman Gaul",
+  "feast": "November 1",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q714835",
+  "name": "Marcellus of Paris",
+  "links": 10,
+  "enwiki": "Marcellus_of_Paris",
+  "images": [
+   "Rajhradsk%C3%BD%20kl%C3%A1%C5%A1ter%2C%20socha%20%2811%29.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Marcellus of Paris",
+  "birth": null,
+  "death": 436,
+  "lon": 2.352222222,
+  "lat": 48.856666666,
+  "selection_reason": "Marcellus of Paris, a humble-born ninth bishop of Paris, has a vivid life recorded by Venantius Fortunatus (including the famous legend of the serpent he led away with his crozier), a lasting Parisian legacy in a Notre-Dame bell, and a Nov 1 feast, while Gaul/Frankish France has not been featured in the recent run of Jerusalem, North Africa and Spain.",
+  "catholic_veneration": "Saint listed in the Roman Martyrology on November 1 as bishop of Paris; venerated in the Latin Church, especially in the Archdiocese of Paris."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Marcellus of Paris",
+   "display_name": "St. Marcellus of Paris",
+   "dates": "d. 436",
+   "region": "Lutetia (Paris), Roman Gaul",
+   "feast": "November 1",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says a bishop of Paris turned the Seine's water into wine.",
+    "visual": "art",
+    "scene": "A devotional icon of a bishop in fifth-century vestments standing on the bank of a broad river. He raises his hand in blessing over a vessel of water, as townspeople in late Roman Gallic dress look on, with a small walled Roman town behind them.",
+    "art_hint": "Medieval illumination or painting of Saint Marcellus of Paris blessing; search: Saint Marcel Paris, Marcellus bishop Paris, Saint Marcel Seine"
+   },
+   {
+    "role": "who",
+    "text": "Saint Marcellus was born in Lutetia, Roman Gaul, the town we now call Paris, and died there in the fifth century.",
+    "visual": "map",
+    "lat": 48.8554,
+    "lon": 2.347,
+    "place": "Lutetia · Paris, France"
+   },
+   {
+    "role": "story",
+    "text": "He gave himself to virtue and to prayer. That is why he was recommended to Prudentius, the bishop of Paris. Prudentius ordained him a Reader.",
+    "visual": "art",
+    "scene": "A devotional icon of an older bishop in Roman-era liturgical dress laying a hand on a kneeling young man's head inside a plain Gallo-Roman basilica with round arches. A few clergy stand by, holding a book.",
+    "art_hint": "Ordination of a young cleric by a bishop, early medieval painting; search: Saint Marcel ordination, ordination clerc évêque enluminure, Saint Marcel Paris stained glass"
+   },
+   {
+    "role": "story",
+    "text": "Then he was raised to the priesthood. When Prudentius died, Marcellus became the ninth bishop of Paris.",
+    "visual": "art",
+    "scene": "A devotional icon of Marcellus enthroned as bishop in a modest Gallo-Roman church, wearing a mitre-less bishop's vestments of the fifth century. Clergy and laity gather around him in a warm, candlelit interior.",
+    "art_hint": "Saint Marcel bishop of Paris enthroned or portrait; search: Saint Marcel évêque de Paris, Marcellus of Paris painting, Saint Marcel statue"
+   },
+   {
+    "role": "story",
+    "text": "His preaching brought many pagans to the faith. Tradition adds that Seine water became wine and balsam. According to legend, he slew a dragon, a story told of Christianity's victory over the demon.",
+    "visual": "art",
+    "scene": "A devotional icon of Marcellus in bishop's vestments standing over a subdued dragon at the edge of a river outside the Roman town, one hand raised in blessing. Townspeople in Gallic dress watch from a distance.",
+    "art_hint": "Saint Marcel and the dragon, medieval art; search: Saint Marcel dragon, Saint Marcellus dragon Paris, Saint Marcel Notre-Dame sculpture"
+   },
+   {
+    "role": "turn",
+    "text": "Beyond the wonders, his story is one of prayer and preaching. A bell of Notre-Dame still bears his name. Quiet faithfulness is never forgotten by heaven.",
+    "visual": "art",
+    "scene": "A devotional icon of Marcellus kneeling in prayer before an altar in a simple church, with the towers of a medieval Notre-Dame de Paris rising beyond the window and a great bell hanging in a tower.",
+    "art_hint": "Notre-Dame de Paris bells or Saint Marcel prayer; search: Notre-Dame de Paris bell, Saint Marcel Notre-Dame, Saint Marcel Paris painting"
+   },
+   {
+    "role": "close",
+    "text": "Saint Marcellus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Marcellus": "mar-SEL-us",
+   "Lutetia": "loo-TEE-shuh",
+   "Prudentius": "proo-DEN-shus",
+   "Seine": "SEN"
+  },
+  "caption_hook": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.",
+  "summary": "Saint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.",
+  "hashtags": [
+   "#saintmarcellus",
+   "#saintmarcel",
+   "#marcellusofparis",
+   "#paris",
+   "#notredame",
+   "#lutetia",
+   "#romangaul",
+   "#france",
+   "#catholicsaints",
+   "#allsaints",
+   "#novemberfirst",
+   "#lesserknownsaints",
+   "#catholicreels"
+  ],
+  "claims": [
+   {
+    "claim": "Marcellus of Paris was the ninth bishop of Paris.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "A bell of Notre-Dame de Paris is named after him.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was born in Lutetia, now Paris, in Roman Gaul.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died in Paris in the fifth century, on 1 November (the source gives 436, while also saying he served as bishop until 435).",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His dedication to virtue and prayer led to his recommendation to Prudentius, bishop of Paris.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Prudentius ordained him a Reader.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was promoted to the priesthood and succeeded Prudentius after his death.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His preaching led to the conversion of many pagans.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is said to have turned water from the Seine into wine and balsam.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He is said to have slain a dragon, a fable representing Christianity's victory over the demon.",
+    "source": 0,
+    "kind": "tradition"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Story beat: 'the same water became balsam' is not in the source. The source says only that miracles like turning Seine water into wine and balsam made him famous. Reworded to 'Seine water became wine and balsam,' still framed as tradition.",
+   "Turn beat: 'His holiness was not in wonders' is unsupported. It also sits oddly after the script has just recounted wonders, and it is theologically careless. Replaced with a neutral line that the story rests on prayer and preaching, which the source does support.",
+   "Dates: the source says he was bishop 'until 435' but died 1 November 436. The script's 'd. 436' and 'fifth century' are consistent with the source, so no change. The inconsistency is flagged for the approver.",
+   "Feast 'November 1': the source gives this only as the date of death, not as a liturgical feast. It is left unchanged, but the approver should confirm it."
+  ],
+  "confidence": 84,
+  "reviewer_note": "The source is a single thin Wikipedia entry. It gives bishop 'until 435' but death on 1 Nov 436, and it does not state a feast day. Please confirm the Nov 1 feast and the death year against a Catholic reference."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Marcellus of Paris",
+   "url": "https://en.wikipedia.org/wiki/Marcellus_of_Paris"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 67.1,
+ "caption": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.\n\nSaint Marcellus of Paris · Feast day: November 1\nSaint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.\n\nSaint Marcellus, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintmarcellus #saintmarcel #marcellusofparis #paris #notredame #lutetia #romangaul #france #catholicsaints #allsaints #novemberfirst #lesserknownsaints #catholicreels #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 1,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-01/cover.jpg"
+ },
+ "error": "ConnectionError: ('Connection aborted.', TimeoutError('The write operation timed out'))"
+}

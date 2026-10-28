@@ -1,0 +1,206 @@
+{
+ "id": "2026-10-31",
+ "date": "2026-10-31",
+ "status": "failed",
+ "updated": "2026-10-28T08:42:57+00:00",
+ "saint": {
+  "qid": "Q582213",
+  "name": "Saint Alphonsus Rodríguez",
+  "display_name": "St. Alphonsus Rodríguez",
+  "dates": "1532 – 1617",
+  "region": "Majorca, Spain",
+  "feast": "October 31",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q582213",
+  "name": "Alphonsus Rodriguez",
+  "links": 16,
+  "enwiki": "Alphonsus_Rodriguez",
+  "images": [
+   "AlonsoRodrigMallorca.jpg",
+   "Alphonse%20Rodriguez%2C%20After%20Anton%20Wierix%20II%20%28ca%201552%20-%20ca%201624%29.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Alphonsus Rodriguez",
+  "birth": 1532,
+  "death": 1617,
+  "lon": 2.649722222,
+  "lat": 39.566666666,
+  "selection_reason": "Alphonsus Rodríguez was a widower who lost his wife and children, then spent forty years as a humble Jesuit porter in Majorca and mentored St. Peter Claver. His story is moving, well documented through his own writings and his canonization, and it is a different region and era from the last two posts.",
+  "catholic_veneration": "Canonized by Pope Leo XIII in 1888; listed in the Roman Martyrology on October 31 and kept as a feast by the Society of Jesus."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Alphonsus Rodríguez",
+   "display_name": "St. Alphonsus Rodríguez",
+   "dates": "1532 – 1617",
+   "region": "Majorca, Spain",
+   "feast": "October 31",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "He lost his wife and children, then spent forty-six years opening a door.",
+    "visual": "art",
+    "scene": "A devotional icon of a Jesuit lay brother in a plain black cassock standing at the heavy wooden door of a sixteenth-century Spanish college, one hand on the latch, a gentle light falling across the threshold.",
+    "art_hint": "Alphonsus Rodriguez Jesuit porter painting; San Alonso Rodríguez; Jesuit brother doorkeeper"
+   },
+   {
+    "role": "who",
+    "text": "Saint Alphonsus Rodríguez, a Spanish wool merchant's son born in fifteen thirty-two, later served on Majorca.",
+    "visual": "map",
+    "lat": 39.5696,
+    "lon": 2.6502,
+    "place": "Majorca · Spain"
+   },
+   {
+    "role": "story",
+    "text": "By thirty-one, he had lost his wife and two children. Then the third child died too.",
+    "visual": "art",
+    "scene": "A grieving man in sixteenth-century Spanish merchant's dress kneels in prayer in a modest whitewashed home, bolts of wool cloth on a table behind him and a crucifix on the wall.",
+    "art_hint": "grieving widower kneeling prayer Spanish sixteenth century; Alphonsus Rodriguez prayer; Spanish merchant devotional painting"
+   },
+   {
+    "role": "story",
+    "text": "In fifteen seventy-one, he was admitted to the Jesuits as a lay brother. It is said the provincial remarked he could enter to become a saint.",
+    "visual": "art",
+    "scene": "A middle-aged man in simple dress kneels before a Jesuit superior in a black cassock inside a stone room of a sixteenth-century Spanish Jesuit house; the superior lays a hand on his shoulder.",
+    "art_hint": "Jesuit lay brother admitted novitiate; Alphonsus Rodriguez Society of Jesus; Jesuit superior sixteenth century painting"
+   },
+   {
+    "role": "story",
+    "text": "He was sent to Majorca as porter of the Jesuit college. He said that whenever the bell rang, he pictured God waiting at the door.",
+    "visual": "art",
+    "scene": "A Jesuit brother in a black cassock pauses at an arched wooden door of a Mediterranean stone college on Majorca, a bell rope beside him, his face turned toward a soft light beyond the door.",
+    "art_hint": "Alphonsus Rodriguez Mallorca Montesion college; Jesuit porter door bell; Palma Mallorca Jesuit college"
+   },
+   {
+    "role": "story",
+    "text": "Saint Peter Claver lived with him, and followed his advice to ask for the missions of South America.",
+    "visual": "art",
+    "scene": "In a simple porter's lodge with a stone floor and a small crucifix, an older Jesuit brother in a black cassock speaks gently with a younger Jesuit in a cassock, who listens attentively.",
+    "art_hint": "Peter Claver Alphonsus Rodriguez Mallorca; Saint Peter Claver painting; Jesuit saints conversation"
+   },
+   {
+    "role": "turn",
+    "text": "He carried messages, advised the troubled, and gave alms to the poor. Holiness can be as simple as opening a door with love.",
+    "visual": "art",
+    "scene": "At the open door of a Spanish Jesuit college, a Jesuit brother in a black cassock hands bread to a poor woman and child while a sorrowful visitor waits nearby, golden light in the doorway.",
+    "art_hint": "Alphonsus Rodriguez giving alms; Jesuit brother charity poor door; San Alonso Rodríguez painting"
+   },
+   {
+    "role": "close",
+    "text": "Saint Alphonsus Rodríguez, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Rodríguez": "Rod-REE-gess",
+   "Alphonsus": "Al-FON-sus",
+   "Claver": "Clah-VAIR",
+   "Majorca": "Ma-JOR-ka"
+  },
+  "caption_hook": "A widower with little schooling became the doorkeeper who changed lives.",
+  "summary": "Saint Alphonsus Rodríguez, a widower who lost his wife and children, became a Jesuit lay brother and served as porter in Majorca for forty-six years, welcoming every visitor as if God stood at the door.",
+  "hashtags": [
+   "#saintalphonsusrodriguez",
+   "#alphonsusrodriguez",
+   "#jesuits",
+   "#majorca",
+   "#mallorca",
+   "#spain",
+   "#saintpeterclaver",
+   "#catholicsaints",
+   "#allsaints",
+   "#lesserknownsaints",
+   "#jesuitbrother",
+   "#catholic"
+  ],
+  "claims": [
+   {
+    "claim": "Alphonsus Rodríguez was born in 1532 and died on 31 October 1617.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the son of a wool merchant.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His wife died by the time he was thirty-one, as did two of their three children; the death of his third child turned his thoughts to religious life.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was admitted to the Society of Jesus as a lay brother on 31 January 1571, despite little education and poor health.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The provincial is supposed to have said that if Alphonsus was not qualified to be a brother or priest, he could enter to become a saint.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was sent to the college on Mallorca and served as porter for forty-six years.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He said that each time the bell rang, he envisioned God standing at the door seeking admittance.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Peter Claver lived with him on Mallorca and followed his advice in asking for the missions of South America.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "As porter he delivered messages, ran errands, advised the troubled, consoled the sorrowful, and distributed alms to the needy.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He served with such love that opening the door became for him a sacramental gesture.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Who beat: the text said 'born in Spain' but the map pins Majorca (Palma), which could imply a birthplace. The source gives no birthplace. Reworded to 'a Spanish wool merchant's son born in fifteen thirty-two, later served on Majorca', so the pin now marks his place of service.",
+   "Admission beat: the source's 'age 40' contradicts its own birth and admission dates (25 July 1532 to 31 Jan 1571 is about 38). Replaced 'At forty' with 'In fifteen seventy-one', which the source supports without the conflict.",
+   "Admission beat: 'a superior told him' overstated the source, which says only that the provincial 'is supposed to have said' it. Changed to 'It is said the provincial remarked', keeping it as tradition rather than history.",
+   "Caption: 'no schooling' overstates the source, which says he was 'without education' but had an incomplete year at Alcalá and a failed attempt at Barcelona. Changed to 'little schooling'.",
+   "Hashtag '#petercla' was truncated. Changed to '#saintpeterclaver'.",
+   "Checked and left unchanged: the wife and two children died by age 31 and the third child died later; the 46 years as porter; the bell and God at the door; Claver and South America; the duties of messages, advice and alms. All are supported by the source."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The source gives no birthplace (he is traditionally said to be from Segovia), so the map pin marks Majorca, where he served. The source's 'age 40' at admission conflicts with its own dates, so the script now says 1571 only. The feast date of October 31 is not stated in the source, so please confirm it against the current calendar."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Alphonsus Rodriguez",
+   "url": "https://en.wikipedia.org/wiki/Alphonsus_Rodriguez"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 69.3,
+ "caption": "A widower with little schooling became the doorkeeper who changed lives.\n\nSaint Alphonsus Rodríguez · Feast day: October 31\nSaint Alphonsus Rodríguez, a widower who lost his wife and children, became a Jesuit lay brother and served as porter in Majorca for forty-six years, welcoming every visitor as if God stood at the door.\n\nSaint Alphonsus Rodríguez, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintalphonsusrodriguez #alphonsusrodriguez #jesuits #majorca #mallorca #spain #saintpeterclaver #catholicsaints #allsaints #lesserknownsaints #jesuitbrother #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 1,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/cover.jpg"
+ },
+ "error": "ConnectionError: ('Connection aborted.', TimeoutError('The write operation timed out'))"
+}

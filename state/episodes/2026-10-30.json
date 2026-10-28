@@ -1,0 +1,201 @@
+{
+ "id": "2026-10-30",
+ "date": "2026-10-30",
+ "status": "review",
+ "updated": "2026-10-28T08:31:47+00:00",
+ "saint": {
+  "qid": "Q16509164",
+  "name": "Saint Marcellus of Tangier",
+  "display_name": "St. Marcellus of Tangier",
+  "dates": "c. 250 – 298",
+  "region": "Tingis (Tangier), Roman North Africa",
+  "feast": "October 30",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q16509164",
+  "name": "Marcellus of Tangier",
+  "links": 15,
+  "enwiki": "Marcellus_of_Tangier",
+  "images": [
+   "Marcellus%20Cassian.jpg",
+   "MarceloLeon.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Marcellus of Tangier",
+  "birth": 300,
+  "death": 298,
+  "lon": -5.8044679,
+  "lat": 35.7694908,
+  "selection_reason": "Marcellus's authentic Acts record the centurion flinging down his belt and vine-staff at Emperor Maximian's birthday feast, declaring 'I serve Jesus Christ the eternal King,' followed by his trial and beheading. This gives a vivid, dramatic, well-documented story, and it shifts the focus from Jerusalem and a bishop to North Africa and a Roman soldier-martyr.",
+  "catholic_veneration": "Roman Martyrology, with his feast on October 30 as a martyr in the Latin Church; also venerated in the Orthodox Church"
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Marcellus of Tangier",
+   "display_name": "St. Marcellus of Tangier",
+   "dates": "c. 250 – 298",
+   "region": "Tingis (Tangier), Roman North Africa",
+   "feast": "October 30",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A centurion threw down his belt and weapons at an emperor's feast.",
+    "visual": "art",
+    "scene": "An icon of a Roman centurion in a red cloak and bronze armor at a banquet hall, flinging his belt and sword to the floor. Seated officers look on in shock beneath a Roman arcade with marble columns.",
+    "art_hint": "Roman centurion casting down his belt before a banquet, devotional icon. Search: Saint Marcellus centurion, Marcelo centurión, Marcellus of Tangier icon"
+   },
+   {
+    "role": "who",
+    "text": "Saint Marcellus, a Roman centurion at Tingis, today's Tangier, in North Africa, near the end of the third century.",
+    "visual": "map",
+    "lat": 35.7595,
+    "lon": -5.834,
+    "place": "Tingis (Tangier) · Roman North Africa"
+   },
+   {
+    "role": "story",
+    "text": "On Emperor Maximian's birthday, the feast required sacrifice to the Roman gods. Marcellus, it is said, would not take part. He cast off his belt, his weapons, and the vine staff that marked his rank.",
+    "visual": "art",
+    "scene": "An icon of Saint Marcellus standing before Roman soldiers in a courtyard of a Roman provincial garrison. His belt, sword and vine staff lie at his feet, and a pagan altar with smoke stands nearby.",
+    "art_hint": "Marcellus the Centurion discarding his arms and vine staff. Search: San Marcelo centurión, Marcellus centurion martyr, vitis centurion staff"
+   },
+   {
+    "role": "story",
+    "text": "Brought before the deputy prefect Agricolanus, he pleaded guilty to renouncing his allegiance to an earthly ruler. He was martyred by the sword.",
+    "visual": "art",
+    "scene": "An icon of Saint Marcellus standing calmly in a Roman tribunal before a seated magistrate in a toga. Soldiers with spears flank him, and a stone basilica interior rises behind.",
+    "art_hint": "Trial of a Roman soldier-martyr before a magistrate. Search: Saint Marcellus trial Agricolanus, Roman martyr tribunal, San Marcelo mártir"
+   },
+   {
+    "role": "story",
+    "text": "It is said that Cassian, the court's shorthand writer, was so angered he refused to record the trial.",
+    "visual": "art",
+    "scene": "An icon of a Roman court scribe in a plain tunic who sets down his stylus and wax tablet and turns away from the bench. The tribunal's marble columns and a seated judge appear behind him.",
+    "art_hint": "Saint Cassian of Tangier the stenographer laying down his tablet. Search: Saint Cassian of Tangier, San Casiano de Tánger, Roman notary martyr"
+   },
+   {
+    "role": "story",
+    "text": "His relics were later enshrined in León, Spain, where he became a patron saint of the city.",
+    "visual": "art",
+    "scene": "An icon of Saint Marcellus in a centurion's tunic holding a martyr's cross and palm, with a Spanish Romanesque church and the old walls of León behind him.",
+    "art_hint": "San Marcelo patron of León, Spain, church of San Marcelo. Search: San Marcelo León, Iglesia de San Marcelo León, Saint Marcellus León relics"
+   },
+   {
+    "role": "turn",
+    "text": "He gave up his rank rather than divide his loyalty. Some loyalties cannot be shared.",
+    "visual": "art",
+    "scene": "An icon of Saint Marcellus in a simple white tunic with a martyr's palm, unarmed, standing before a gold background. His discarded belt and vine staff lie at his feet.",
+    "art_hint": "Martyr centurion holding the palm, belt laid aside. Search: Saint Marcellus the Centurion icon, Marcellus Tangier martyr, Orthodox icon Marcellus centurion"
+   },
+   {
+    "role": "close",
+    "text": "Saint Marcellus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Marcellus": "mar-SELL-us",
+   "Tingis": "TIN-jis",
+   "Tangier": "tan-JEER",
+   "Maximian": "mak-SIM-ee-un",
+   "Agricolanus": "ag-rih-koh-LAH-nus",
+   "Cassian": "KASH-un",
+   "León": "lay-OWN"
+  },
+  "caption_hook": "He laid down his rank at the emperor's table, and kept his faith.",
+  "summary": "According to tradition, Saint Marcellus, a Roman centurion at Tingis in North Africa, cast off his belt, weapons and vine staff rather than sacrifice to the gods, and was martyred by the sword.",
+  "hashtags": [
+   "#saintmarcellus",
+   "#marcellusofTangier",
+   "#marcellusthecenturion",
+   "#tangier",
+   "#morocco",
+   "#northafrica",
+   "#leon",
+   "#spain",
+   "#romanmartyrs",
+   "#catholicsaints",
+   "#allsaints",
+   "#feastofsaints",
+   "#october30"
+  ],
+  "claims": [
+   {
+    "claim": "Marcellus is said to have been a Roman centurion stationed at Tingis, modern Tangier.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He refused to take part in the birthday celebrations of Emperor Maximian, which would have required sacrifice to the Roman gods.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He threw off his military belt, weapons, and vine staff, the symbol of his rank.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was brought before the deputy Praetorian prefect Aurelius Agricolanus and pleaded guilty to repudiating his allegiance to an earthly leader.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Marcellus was martyred with a sword.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The official shorthand writer, Cassian, was so angry at the sentence that he refused to record the proceedings and was martyred as well.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "His relics were later brought to and enshrined at León, Spain, and he became a patron saint of the city.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is venerated as a martyr-saint in the Catholic and Eastern Orthodox churches, with his feast on October 30.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died in 298 AD, near the end of the third century.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Story beat 3 stated as plain fact that Marcellus refused to join the sacrifices. Source 0 frames the whole account as 'is said'. Added the hedge 'it is said' (+3 words, total about 144).",
+   "Claims list marked the Agricolanus trial and the death by the sword as 'history'. Source 0 gives these only as part of the legend, and says an alternative version is largely apocryphal. Re-labelled both 'tradition'.",
+   "Summary stated the legend as flat fact. Added 'According to tradition' so it matches the script's hedging.",
+   "Checked and left unchanged: the Tangier coordinates, the feast on October 30, the title 'Saint' and martyr status, the date 298 and the c. mid-3rd-century birth, the 'deputy prefect' title, 'a patron saint' of León, and the Cassian beat (already hedged with 'It is said'). The script does not use the apocryphal León-birth, wife and twelve sons material. Word count stays within 125-145."
+  ],
+  "confidence": 85,
+  "reviewer_note": "The whole account rests on a legend (source 0 is Wikipedia only), so please confirm the hedged wording is acceptable. Also check that the hook's 'feast' and the 'banquet hall' in the art prompt (source 0 says only 'birthday celebrations') are not read as documented detail."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Marcellus of Tangier",
+   "url": "https://en.wikipedia.org/wiki/Marcellus_of_Tangier"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 69.7,
+ "caption": "He laid down his rank at the emperor's table, and kept his faith.\n\nSaint Marcellus of Tangier · Feast day: October 30\nAccording to tradition, Saint Marcellus, a Roman centurion at Tingis in North Africa, cast off his belt, weapons and vine staff rather than sacrifice to the gods, and was martyred by the sword.\n\nSaint Marcellus, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintmarcellus #marcellusofTangier #marcellusthecenturion #tangier #morocco #northafrica #leon #spain #romanmartyrs #catholicsaints #allsaints #feastofsaints #october30 #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-30/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-30/cover.jpg"
+ },
+ "review_message_id": 13
+}
