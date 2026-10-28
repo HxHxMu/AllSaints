@@ -4,3 +4,4 @@ cryptography>=42
 pillow>=10
 numpy>=1.26
 scipy>=1.11
+faster-whisper>=1.1

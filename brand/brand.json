@@ -38,6 +38,22 @@
     "watermark": "A.S.† initials, top-left, 60% opacity, throughout."
   },
   "voice": {
+    "provider": "gemini",
+    "gemini": {
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Riko",
+      "wpm": 140,
+      "profile": "The Master Storyteller. A warm, deep, unhurried male narrator telling the lives of the saints.",
+      "scene": "A quiet church at dusk. One candle. He speaks to a single listener.",
+      "notes": "Reverent, never theatrical. Unhurried but moving, with only brief pauses between sentences. Say the names of people and places carefully and clearly.",
+      "beats": {
+        "hook": "Quiet intrigue: draw the listener in, as if sharing something remarkable.",
+        "who": "Plain and grounded, introducing a person and a place.",
+        "story": "Steady storytelling; let each image land.",
+        "turn": "Softer and slower; this is the heart of it.",
+        "close": "Prayerful and gentle, slightly slower, with a brief pause before 'pray for us'."
+      }
+    },
     "narrator": "Warm, deep male. Unhurried (about 140 words per minute). Reverent, never preachy or sensational.",
     "elevenlabs": {"voice_id": "JBFqnCBsd6RMkjVDRZzb", "model_id": "eleven_multilingual_v2", "stability": 0.55, "similarity_boost": 0.8, "style": 0.15, "speed": 0.92}
   },
