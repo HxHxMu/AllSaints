@@ -37,9 +37,9 @@ def buttons(ep_id):
 
 
 def send_review(ep):
-    """Video review with Approve/Redo/Edit/New-saint buttons. Telegram fetches the preview from the
-    release URL itself (no upload from the runner, which timed out on ~50 MB files); falls back to a
-    downloaded upload, then to a text message with a link and the same buttons."""
+    """Video review with Approve/Redo/Edit/New-saint buttons, sent as the ~5 MB 720p preview
+    (uploading the ~50 MB master timed out from GitHub's runners; Telegram can't fetch GitHub
+    release URLs itself). Falls back to a text message with a link and the same buttons."""
     import storage
     from common import WORK
     cid = chat_id()
@@ -52,21 +52,19 @@ def send_review(ep):
             f"Fact-check: {fc.get('verdict', '?')} · confidence {fc.get('confidence', '?')}%\n"
             f"Note: {fc.get('reviewer_note', '—')}")
     assets = ep.get("assets", {})
-    src = assets.get("preview.mp4") or assets.get("video.mp4")
     kw = dict(chat_id=cid, caption=head[:1024], supports_streaming="true", width=720, height=1280, reply_markup=buttons(ep["id"]))
     msg = None
-    if src:
-        msg = api("sendVideo", video=storage.resolve_direct(src), **kw)
-        if not msg and assets.get("preview.mp4"):
-            path = WORK / f"{ep['id']}-preview.mp4"
-            storage.download(assets["preview.mp4"], path)
-            for attempt in range(3):
-                try:
-                    with open(path, "rb") as f:
-                        msg = api("sendVideo", files={"video": f}, **kw)
+    if assets.get("preview.mp4"):
+        path = WORK / f"{ep['id']}-preview.mp4"
+        storage.download(assets["preview.mp4"], path)
+        for attempt in range(3):
+            try:
+                with open(path, "rb") as f:
+                    msg = api("sendVideo", files={"video": f}, **kw)
+                if msg:
                     break
-                except Exception as e:
-                    log("Telegram upload failed, retrying:", e)
+            except Exception as e:
+                log("Telegram upload failed, retrying:", e)
     if not msg:
         msg = api("sendMessage", chat_id=cid, text=f"{head}\n\n▶️ Watch: {assets.get('video.mp4', '(no video)')}",
                   reply_markup=buttons(ep["id"]))
