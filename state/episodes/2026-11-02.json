@@ -1,0 +1,211 @@
+{
+ "id": "2026-11-02",
+ "date": "2026-11-02",
+ "status": "review",
+ "updated": "2026-10-28T09:54:53+00:00",
+ "saint": {
+  "qid": "Q469199",
+  "name": "Saint Victorinus of Pettau",
+  "display_name": "St. Victorinus of Pettau",
+  "dates": "fl. c. 270 – c. 304",
+  "region": "Poetovio (Ptuj), Pannonia, modern Slovenia",
+  "feast": "November 2",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q469199",
+  "name": "Victorinus of Pettau",
+  "links": 28,
+  "enwiki": "Victorinus_of_Pettau",
+  "images": [
+   "Victorinus%20%28cropped%29.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Victorinus of Pettau",
+  "birth": 250,
+  "death": 303,
+  "lon": 15.871388888,
+  "lat": 46.418611111,
+  "selection_reason": "Victorinus of Pettau is the best-documented of the six: the earliest great Latin biblical commentator, a Greek-speaking bishop whose Apocalypse commentary survives and was revised by Jerome, and who was martyred under Diocletian. His story is vivid and little known, and he is not a household name.",
+  "catholic_veneration": "Venerated as bishop and martyr in the Roman Martyrology, with his commemoration at Poetovio (Ptuj) in Pannonia, and honored in the Catholic Church in Slovenia."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Victorinus of Pettau",
+   "display_name": "St. Victorinus of Pettau",
+   "dates": "fl. c. 270 – c. 304",
+   "region": "Poetovio (Ptuj), Pannonia, modern Slovenia",
+   "feast": "November 2",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "The first theologian to explain Scripture in Latin spoke Greek better.",
+    "visual": "art",
+    "scene": "A bearded third-century bishop in plain liturgical vestments sits at a wooden desk, a scroll open before him, pen in hand, a codex of Scripture beside him in a small stone room lit by an oil lamp.",
+    "art_hint": "early Christian bishop writing at a desk, manuscript scribe icon: bishop scribe manuscript, Church Father writing, early Christian writer"
+   },
+   {
+    "role": "who",
+    "text": "Saint Victorinus was bishop of Poetovio, now Ptuj in Slovenia, in the Roman province of Pannonia, in the third century.",
+    "visual": "map",
+    "lat": 46.42,
+    "lon": 15.87,
+    "place": "Poetovio (Ptuj) · Pannonia"
+   },
+   {
+    "role": "story",
+    "text": "He was probably born in Roman Greece, or in Poetovio itself, a garrison city of mixed peoples.",
+    "visual": "art",
+    "scene": "A Roman frontier town on a river in Pannonia, with stone walls, tiled roofs and a gate, where soldiers in Roman armor and townspeople in tunics and cloaks mingle in a market street. A bishop in a simple robe stands among them.",
+    "art_hint": "Roman provincial town on the Danube frontier: Roman Poetovio, Ptuj Roman, Roman town Pannonia"
+   },
+   {
+    "role": "story",
+    "text": "He wrote commentaries on Genesis, on Isaiah, on Matthew, and on the book of Revelation. Jerome found his Latin style lacking, yet his content remarkable.",
+    "visual": "art",
+    "scene": "The bishop Victorinus stands beside a table of scrolls and codices, each labeled only by its shape and binding, as a younger scribe copies from a text while the bishop explains with a raised hand.",
+    "art_hint": "Church Father with scrolls and scribe: scribe copying manuscript, early Christian scholar, Saint Jerome study"
+   },
+   {
+    "role": "story",
+    "text": "Most of his works were lost. His commentary on Revelation survived, written not long after the Valerian persecution. There he sees the four living creatures as the four Gospels.",
+    "visual": "art",
+    "scene": "An icon of the four living creatures from Revelation, the man, lion, ox and eagle, which symbolize the four Evangelists, surrounding Christ enthroned in glory. Bishop Victorinus kneels at the side with an open book.",
+    "art_hint": "four evangelist symbols tetramorph: Christ in majesty tetramorph, four living creatures Revelation, Book of Revelation icon"
+   },
+   {
+    "role": "turn",
+    "text": "He was a teacher, opening Scripture for a Church that had known persecution. Under Diocletian, he gave his life. Jerome records that he died a martyr. Faithful teaching, quietly given, can outlast an empire.",
+    "visual": "art",
+    "scene": "A bishop martyr in vestments holds a martyr's palm and a book, standing calmly before the gate of a Roman city, with a halo, a pale gold background and the red cloak of martyrdom.",
+    "art_hint": "bishop martyr with palm and book icon: Saint Victorinus of Pettau, bishop martyr icon, Diocletian persecution martyr"
+   },
+   {
+    "role": "close",
+    "text": "Saint Victorinus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Victorinus": "Vik-toh-REE-nus",
+   "Poetovio": "Poh-eh-TOH-vee-oh",
+   "Ptuj": "puh-TOO-ee",
+   "Pannonia": "pa-NO-nee-ah",
+   "Diocletian": "Dy-oh-KLEE-shun",
+   "Valerian": "vuh-LEER-ee-an",
+   "Pettau": "PET-ow"
+  },
+  "caption_hook": "He taught the Latin-speaking Church to read Scripture, in a language that was not his first.",
+  "summary": "Saint Victorinus of Pettau, bishop of Poetovio, was the first theologian to write biblical commentary in Latin, and he died a martyr under Diocletian.",
+  "hashtags": [
+   "#saintvictorinus",
+   "#victorinusofpettau",
+   "#poetovio",
+   "#ptuj",
+   "#slovenia",
+   "#pannonia",
+   "#catholicsaints",
+   "#churchfathers",
+   "#martyr",
+   "#bishop",
+   "#novemberssaints",
+   "#allsaints",
+   "#lesserknownsaints"
+  ],
+  "claims": [
+   {
+    "claim": "Victorinus of Pettau was bishop of Poetovio (modern Ptuj, Slovenia) in Pannonia.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He flourished about 270 and died in 303 or 304.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was probably born in Roman Greece or in Poetovio, a city of mixed population because of its military character.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He spoke Greek better than Latin.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the first theologian to use Latin for exegesis.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He wrote commentaries on Genesis, Isaiah, Matthew and the Apocalypse, among other books.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Jerome thought his Latin works more remarkable for their matter than for their style.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Only the Commentary on the Apocalypse and On the Creation of the World survived past antiquity; the rest were lost.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Apocalypse commentary was composed not long after the Valerian persecution, about 260.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He interprets the four living creatures of Revelation as the four Gospels.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was martyred during Diocletian's persecutions; according to Jerome he died a martyr in 304.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is commemorated in the Latin Catholic Church on 2 November.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Beat 4: 'Jerome thought his Latin plain' softened the source. Jerome judged the Latin works more remarkable for matter than for style, because Victorinus spoke Greek better than Latin. Reworded to match.",
+   "Beat 6: 'His holiness was patient teaching' and 'lately wounded by persecution' are unsourced pious embellishment. Replaced with a plainer, source-safe statement that he was a teacher of Scripture for a Church that had known persecution. The martyrdom claims (Diocletian, Jerome records he died a martyr) are supported and kept.",
+   "The closing reflection ('can outlast an empire') is a devotional reflection rather than a historical claim. Kept, and reads as reverent.",
+   "Checked and correct: the map coordinates for Ptuj (46.42, 15.87), the November 2 feast, the bishop and martyr titles, the Poetovio/Pannonia identification, the birthplace hedged with 'probably', and the date range. The Apocalypse commentary of about 260 is described as written not long after the Valerian persecution, as in the source. Word count stays within 125-145."
+  ],
+  "confidence": 86,
+  "reviewer_note": "The Wikipedia source is the only one. Please confirm that he holds the title 'Saint' in the Roman Martyrology (2 Nov). Consider whether to mention that his commentary is millenarian and that the Gelasian Decree condemned his works. The script omits both, which is not a falsehood but is an omission."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Victorinus of Pettau",
+   "url": "https://en.wikipedia.org/wiki/Victorinus_of_Pettau"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 70.9,
+ "caption": "He taught the Latin-speaking Church to read Scripture, in a language that was not his first.\n\nSaint Victorinus of Pettau · Feast day: November 2\nSaint Victorinus of Pettau, bishop of Poetovio, was the first theologian to write biblical commentary in Latin, and he died a martyr under Diocletian.\n\nSaint Victorinus, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintvictorinus #victorinusofpettau #poetovio #ptuj #slovenia #pannonia #catholicsaints #churchfathers #martyr #bishop #novemberssaints #allsaints #lesserknownsaints #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-02/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-02/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-02/preview.mp4"
+ },
+ "review_message_id": 21
+}

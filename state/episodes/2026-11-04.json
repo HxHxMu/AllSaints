@@ -1,0 +1,210 @@
+{
+ "id": "2026-11-04",
+ "date": "2026-11-04",
+ "status": "review",
+ "updated": "2026-10-28T10:07:30+00:00",
+ "saint": {
+  "qid": "Q203177",
+  "name": "Saints Vitalis and Agricola",
+  "display_name": "Sts. Vitalis and Agricola",
+  "dates": "d. c. 304",
+  "region": "Bologna, Italy",
+  "feast": "November 4",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q203177",
+  "name": "Vitalis and Agricola",
+  "links": 11,
+  "enwiki": "Saints_Vitalis_and_Agricola",
+  "images": [
+   "1424%20-%20Bologna%20-%20Santi%20Vitale%20e%20Agricola%20-%20Rilievo%20facciata%20-%20Foto%20Giovanni%20Dall%27Orto%2C%209-Feb-2008.jpg",
+   "Martirio%20di%20Agricola.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Saints Vitalis and Agricola",
+  "birth": null,
+  "death": null,
+  "selection_reason": "The master Vitalis and his slave Agricola, martyred together at Bologna around 304, make a moving, surprising story: the slave goes to the cross first while the master encourages him, and Ambrose, who found their relics in 393, left a firsthand account. It is better documented than Emeric's legendary Life, and the story is about equality in Christ.",
+  "catholic_veneration": "Listed in the Roman Martyrology on 4 November as martyrs of Bologna; their relics are venerated in the Basilica of Santi Vitale e Agricola in Bologna."
+ },
+ "script": {
+  "saint": {
+   "name": "Saints Vitalis and Agricola",
+   "display_name": "Sts. Vitalis and Agricola",
+   "dates": "d. c. 304",
+   "region": "Bologna, Italy",
+   "feast": "November 4",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says a master led his slave to Christ, and both gave their lives.",
+    "visual": "art",
+    "scene": "An icon of two men standing close together in plain Roman tunics, one older and one younger, each holding a martyr's palm and a small cross, gold background, with the arches of a Roman city behind them.",
+    "art_hint": "Icon or painting of the two martyrs together. Search: Vitale e Agricola, Saints Vitalis and Agricola, Vitale Agricola Bologna"
+   },
+   {
+    "role": "who",
+    "text": "Vitalis and Agricola died in Bologna, in Italy, around the year three hundred and four.",
+    "visual": "map",
+    "lat": 44.4949,
+    "lon": 11.3426,
+    "place": "Bologna · Italy"
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds that Agricola, a gentle Christian, brought his slave Vitalis to the faith. The two grew deeply attached to one another.",
+    "visual": "art",
+    "scene": "A Christian master in a Roman toga sits with a younger man in a plain servant's tunic inside a modest Roman house with a columned courtyard. The master gently lays a hand on the younger man's shoulder as they look toward a small cross.",
+    "art_hint": "Devotional painting of a master and servant in friendship and prayer. Search: Agricola Vitalis conversion, Roman house Christians, San Vitale e Agricola painting"
+   },
+   {
+    "role": "story",
+    "text": "Diocletian's persecution reached Bologna. Tradition holds Vitalis was the first to die, in the amphitheatre.",
+    "visual": "art",
+    "scene": "A Roman amphitheatre with tiered stone arches under a pale sky. Vitalis stands calm and upright in the arena, hands raised in prayer, while Roman soldiers and a crowd look on from a respectful distance.",
+    "art_hint": "Martyrdom of Vitalis shown with dignity, without graphic detail. Search: Martyrdom of Saint Vitalis Bologna, San Vitale Bologna painting, Roman amphitheatre martyr icon"
+   },
+   {
+    "role": "story",
+    "text": "Agricola, tradition says, was tortured and flattered, but would not give up his faith. He was crucified.",
+    "visual": "art",
+    "scene": "Agricola stands before a Roman magistrate in a stone hall. He holds a small cross to his chest with a steady, gentle face. In the background, a simple wooden cross rises against the sky outside the city walls.",
+    "art_hint": "Agricola before the magistrate or on the cross, shown reverently. Search: Sant'Agricola martyr Bologna, Martyrdom of Saint Agricola, Agricola crucifixion painting"
+   },
+   {
+    "role": "story",
+    "text": "Nearly ninety years later, Bishop Eusebius found their relics. Saint Ambrose was there, and spread their veneration across Western Europe.",
+    "visual": "art",
+    "scene": "Late Roman Italy, c. 393. Bishop Eusebius and Ambrose, both in liturgical vestments, stand with clergy as a reliquary casket is carried into a basilica with round arches and mosaics. Candles and incense fill the air.",
+    "art_hint": "Ambrose and the translation of relics. Search: Saint Ambrose relics Vitalis Agricola, Translation of relics Bologna, Basilica Santi Vitale e Agricola"
+   },
+   {
+    "role": "turn",
+    "text": "One was master, the other a slave. Yet the Church remembers them side by side, as brothers in the same Lord. In Christ, no one stands beneath another.",
+    "visual": "art",
+    "scene": "A gold-ground icon of Vitalis and Agricola standing as equals, shoulder to shoulder in the same simple tunics. Each holds a martyr's palm, and Christ is shown above them in a halo of light, blessing both.",
+    "art_hint": "Icon of the two martyrs side by side with Christ. Search: Santi Vitale e Agricola, Vitale and Agricola icon, Bologna martyrs altarpiece"
+   },
+   {
+    "role": "close",
+    "text": "Saints Vitalis and Agricola, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Vitalis": "vih-TAH-lis",
+   "Agricola": "ah-GRIK-oh-lah",
+   "Bologna": "boh-LOHN-yah",
+   "Diocletian": "dy-oh-KLEE-shun",
+   "Eusebius": "yoo-SEE-bee-us",
+   "Ambrose": "AM-brohz"
+  },
+  "caption_hook": "Master and slave. In Christ, brothers to the end.",
+  "summary": "Vitalis and Agricola, a slave and his master, were martyred at Bologna around 304 and are still venerated there today.",
+  "hashtags": [
+   "#saintvitalis",
+   "#saintagricola",
+   "#vitaleagricola",
+   "#bologna",
+   "#italy",
+   "#catholicsaints",
+   "#martyrs",
+   "#diocletian",
+   "#saintambrose",
+   "#november4",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "claims": [
+   {
+    "claim": "Vitalis and Agricola are venerated as martyrs and saints who died at Bologna about 304.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "They died during the persecution ordered by the Roman Emperor Diocletian.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Agricola, a Christian of Bologna known for his gentleness, converted his slave Vitalis, and the two became deeply attached.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Vitalis was the first to suffer martyrdom, executed in the amphitheatre.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Agricola was tortured and flattered by the persecutors, who failed to win him over, and he was finally crucified.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "In 392 or 393, Bishop Eusebius of Bologna announced the discovery of their relics and reburied them with Christian rites, with Ambrose present.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The cult spread through Western Europe through the efforts of Ambrose, who sent relics to Milan and Florence.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Ambrose's mention of the martyrs in his oration De exhortatione virginitatis is the only source for their lives.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Their feast is observed on 4 November.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The cult was centered on Bologna, where a basilica was built to hold the relics.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "'who' beat said they 'lived in Bologna around 304'. The sources give only the approximate date of death (martyred at Bologna about 304), not when they lived. Changed 'lived' to 'died'.",
+   "Hook stated the conversion of the slave as plain fact, but the sources present it as legend (the 'Legend' section). Added 'Tradition says'.",
+   "The Agricola beat (torture, flattery, crucifixion) was told as unqualified fact, though it is legend. Reworded to 'Agricola, tradition says, was tortured and flattered…'. This is a rewording of the same sentence and keeps the word count about the same.",
+   "'Ambrose of Milan' is not supported by the sources, which call him only St. Ambrose and say he took relics to Milan. Changed to 'Saint Ambrose' in the text and 'Ambrose' in the scene description, and dropped 'Bishop' for him in the scene.",
+   "The relics scene said '393' flatly, but Source 0 says 392 or 393. Changed to 'c. 393'.",
+   "Claim 9 combined the feast date (Source 1) with the Bologna basilica (Source 0) under Source 1 alone. Split it into two claims with the correct sources.",
+   "Checked and left unchanged: the map coordinates for Bologna are correct; the feast of 4 November, the 'martyr' label and 'Saints' are supported; 'nearly ninety years' is a fair reading of c. 304 to 392/393; the 'brothers in the same Lord' reflection is orthodox and does not claim anything historical."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Spoken text is about 139 words. Please confirm the 'nearly ninety years' figure (c. 304 to 392/393) is acceptable. The sources say only that Ambrose attended the reburial and do not say who led it beyond Eusebius."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Saints Vitalis and Agricola",
+   "url": "https://en.wikipedia.org/wiki/Saints_Vitalis_and_Agricola"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913)/Sts. Vitalis and Agricola",
+   "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Sts._Vitalis_and_Agricola"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 71.1,
+ "caption": "Master and slave. In Christ, brothers to the end.\n\nSaints Vitalis and Agricola · Feast day: November 4\nVitalis and Agricola, a slave and his master, were martyred at Bologna around 304 and are still venerated there today.\n\nSaints Vitalis and Agricola, pray for us. 🕯\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintvitalis #saintagricola #vitaleagricola #bologna #italy #catholicsaints #martyrs #diocletian #saintambrose #november4 #lesserknownsaints #allsaints #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-04/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-04/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-04/preview.mp4"
+ },
+ "review_message_id": 25
+}

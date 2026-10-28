@@ -1,0 +1,205 @@
+{
+ "id": "2026-11-03",
+ "date": "2026-11-03",
+ "status": "review",
+ "updated": "2026-10-28T10:01:02+00:00",
+ "saint": {
+  "qid": "Q2575112",
+  "name": "Saint Winifred",
+  "display_name": "St. Winifred",
+  "dates": "fl. 7th century",
+  "region": "Holywell and Gwytherin, Wales",
+  "feast": "November 3",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q2575112",
+  "name": "Winifred",
+  "links": 14,
+  "enwiki": "Saint_Winifred",
+  "images": [
+   "Statue%20of%20St%20Winefride%2C%2019th%20century%20%28cropped%29.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Saint Winefride",
+  "birth": 635,
+  "death": 680,
+  "lon": -3.681,
+  "lat": 53.139,
+  "selection_reason": "Winifred's story is vivid and moving: a Welsh virgin beheaded by Prince Caradog for refusing him, then restored to life by her uncle St Beuno, with a healing spring rising where her head fell. It is documented in a 12th-century vita and continues in the living pilgrimage at Holywell, made a National Shrine in November 2023. She is lesser-known than a household-name saint, and Wales is a fresh region and era after the recent Gaul, Pannonia and Iberia entries.",
+  "catholic_veneration": "Canonized pre-congregation virgin martyr listed in the Roman Martyrology on 3 November. She is celebrated in Wales and in the Archdiocese of Cardiff and Diocese of Wrexham, and St Winefride's Well at Holywell is the National Shrine of England and Wales."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Winifred",
+   "display_name": "St. Winifred",
+   "dates": "fl. 7th century",
+   "region": "Holywell and Gwytherin, Wales",
+   "feast": "November 3",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition holds she was beheaded, and then restored to life.",
+    "visual": "art",
+    "scene": "A devotional icon of a young Welsh noblewoman in a plain veiled gown, kneeling in prayer with a halo, beside a stone well and a green hillside. A saintly monk stands behind her with raised hand in blessing. Early medieval Welsh setting, no text.",
+    "art_hint": "Saint Winifred restored to life with Saint Beuno; search: Saint Winifred, Winefride, Gwenffrewi, Holywell well painting"
+   },
+   {
+    "role": "who",
+    "text": "Winifred, Gwenffrewi in Welsh, lived in seventh-century Wales, by tradition the daughter of a chieftain of Tegeingl.",
+    "visual": "map",
+    "lat": 53.2756,
+    "lon": -3.2227,
+    "place": "Holywell · Wales"
+   },
+   {
+    "role": "story",
+    "text": "According to legend, a suitor named Caradog was enraged when she decided to become a nun.",
+    "visual": "art",
+    "scene": "A devotional icon of a young woman in a simple veil and long gown, turning gently away from a richly dressed young Welsh nobleman who reaches toward her. Behind them stand a timber hall with a thatched roof and a green valley. Early medieval Wales, no text.",
+    "art_hint": "young Welsh woman choosing religious life, medieval; search: Saint Winifred, Winefride legend, Gwenffrewi stained glass"
+   },
+   {
+    "role": "story",
+    "text": "When she refused him, he struck her down, and a healing spring appeared where her head fell.",
+    "visual": "art",
+    "scene": "A devotional icon showing a young woman in a veil fallen on a grassy hillside, with a clear spring of water beginning to rise from the ground beside her. The scene is solemn and dignified, with no graphic detail. Wooded Welsh hills in the background, no text.",
+    "art_hint": "martyrdom of Saint Winifred and the spring, solemn; search: Saint Winefride's Well, Winifred martyrdom, Holywell spring"
+   },
+   {
+    "role": "story",
+    "text": "Tradition says her kinsman, Saint Beuno, restored her to life. He is said to have promised that those who ask there in her name will receive grace, if it is good for the soul.",
+    "visual": "art",
+    "scene": "A devotional icon of Saint Beuno in a monk's robe and halo, seated on a stone beside a pool. He raises his hand in blessing over Winifred, who stands beside him in a white veil with her hands folded. Welsh hillside and spring in the background, no text.",
+    "art_hint": "Saint Beuno blessing Saint Winifred at the well; search: Saint Beuno, Saint Winifred, Beuno's stone, Holywell"
+   },
+   {
+    "role": "story",
+    "text": "Pilgrims still come to Holywell, now a national shrine.",
+    "visual": "art",
+    "scene": "A devotional icon of pilgrims in modest dress gathered around the stone-framed well and pool at Holywell, lifting their hands in prayer. A Gothic stone shrine canopy rises above the water and a steep wooded hill behind it. No text.",
+    "art_hint": "pilgrims at St Winefride's Well Holywell; search: St Winefride's Well, Holywell shrine, Holywell pilgrimage"
+   },
+   {
+    "role": "turn",
+    "text": "Tradition says after eight years at Holywell she felt called to leave, and went inland to Gwytherin to serve as abbess. Holiness may begin with one brave refusal, and is lived in the years after.",
+    "visual": "art",
+    "scene": "A devotional icon of Saint Winifred as an abbess in a nun's habit and wimple, holding a crozier. Women religious stand around her before a small stone and timber convent church in a quiet river valley. Early medieval Wales, no text.",
+    "art_hint": "Saint Winifred as abbess with crozier; search: Saint Winifred abbess, Winefride stained glass Llanasa, Gwytherin"
+   },
+   {
+    "role": "close",
+    "text": "Saint Winifred, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Gwenffrewi": "Gwen-FREH-wee",
+   "Tegeingl": "Teg-AYN-gul",
+   "Caradog": "ka-RAH-dog",
+   "Beuno": "BAY-no",
+   "Gwytherin": "Gwuh-THEH-rin"
+  },
+  "caption_hook": "A spring in Wales, a story of refusal, and a place of pilgrimage still visited today.",
+  "summary": "According to legend, Saint Winifred, a seventh-century Welsh noblewoman, refused a suitor, was restored to life through Saint Beuno, and later served as abbess at Gwytherin, while the spring at Holywell remains a national shrine.",
+  "hashtags": [
+   "#saintwinifred",
+   "#saintwinefride",
+   "#gwenffrewi",
+   "#wales",
+   "#holywell",
+   "#welshsaints",
+   "#saintbeuno",
+   "#gwytherin",
+   "#catholicsaints",
+   "#pilgrimage",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "claims": [
+   {
+    "claim": "Winifred (Welsh: Gwenffrewi) was a Welsh virgin martyr of the 7th century.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "According to legend, she was the daughter of a chieftain of Tegeingl, Tyfid ap Eiludd.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to legend, her suitor Caradog was enraged when she decided to become a nun and, when she refused his advances, decapitated her.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "A healing spring appeared where her head fell.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Her head was rejoined to her body through the efforts of Saint Beuno, a relative of her mother, and she was restored to life.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Tradition holds that Beuno promised that whoever asked a benefit of God on that spot in Winifred's name would obtain the grace if it was for the good of his soul.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "After eight years at Holywell she received an inspiration to leave, went inland to Gwytherin, and became a nun and abbess there.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "An 8th-century oak reliquary of Winifred was identified after pieces were found in 1991, which is evidence of an early cult.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "St Winefride's Well at Holywell, Flintshire, is a pilgrimage site granted National Shrine status for England and Wales in November 2023.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Winifred is commemorated on 3 November in the liturgical calendar for Wales.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "saint.martyr was false, but the source calls her a 'virgin martyr' and 'martyr saint' (also an 'honorary martyr' in iconography), and claim 1 says martyr. Set to true.",
+   "'Who' beat stated the chieftain parentage as plain fact, but the source gives it only as legend. Added 'by tradition'.",
+   "'Turn' beat stated the move to Gwytherin and the abbess role as fact, but the source gives them as legend (and says she became a nun and abbess there 'later'). Added 'Tradition says' and kept the length within 125-145 words (now about 143).",
+   "Hook scene described Beuno as a 'saintly bishop', but the sources never call him a bishop. Changed to 'saintly monk'.",
+   "caption_hook said the pilgrimage 'has never stopped', which the sources do not support. The Shrewsbury shrine was destroyed in 1540 and the sources only say Holywell is now a pilgrimage site. Reworded.",
+   "Duplicate hashtag #holywell removed."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Check that the martyr flag (true) matches your house style, since she was restored to life and died later. The map pin (Holywell) matches the well, and the script wording now marks the family and Gwytherin details as tradition."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Saint Winifred",
+   "url": "https://en.wikipedia.org/wiki/Saint_Winifred"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 69.3,
+ "caption": "A spring in Wales, a story of refusal, and a place of pilgrimage still visited today.\n\nSaint Winifred · Feast day: November 3\nAccording to legend, Saint Winifred, a seventh-century Welsh noblewoman, refused a suitor, was restored to life through Saint Beuno, and later served as abbess at Gwytherin, while the spring at Holywell remains a national shrine.\n\nSaint Winifred, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintwinifred #saintwinefride #gwenffrewi #wales #holywell #welshsaints #saintbeuno #gwytherin #catholicsaints #pilgrimage #lesserknownsaints #allsaints #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/preview.mp4"
+ },
+ "review_message_id": 23
+}
