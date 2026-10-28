@@ -14,6 +14,13 @@ BRAND = json.loads((ROOT / "brand" / "brand.json").read_text())
 for d in (STATE, DATA, WORK):
     d.mkdir(exist_ok=True)
 
+# Local runs: load KEY=value lines from .env (gitignored); real env vars win.
+if (ROOT / ".env").exists():
+    for line in (ROOT / ".env").read_text().splitlines():
+        k, sep, v = line.strip().partition("=")
+        if sep and k and not k.startswith("#") and v.strip() and not os.environ.get(k.strip()):
+            os.environ[k.strip()] = v.strip().strip("'\"")
+
 UA = "AllSaintsBot/1.0 (https://github.com; educational Catholic saints Reels) python-requests"
 http = requests.Session()
 http.headers.update({"User-Agent": UA})

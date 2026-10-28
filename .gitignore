@@ -11,3 +11,4 @@ __pycache__/
 
 # macOS resource forks on external drives
 ._*
+.venv/

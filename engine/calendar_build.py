@@ -10,7 +10,9 @@ SPARQL = "https://query.wikidata.org/sparql"
 
 QUERY = """
 SELECT ?s ?sLabel ?feastLabel ?links ?article ?image ?commonscat ?birth ?death ?coord ?relLabel WHERE {
-  ?s wdt:P411 wd:Q43115 ;
+  # saint · Catholic saint · canonized saint · pre-congregation saint
+  VALUES ?status { wd:Q43115 wd:Q3464126 wd:Q123110154 wd:Q18344276 }
+  ?s wdt:P411 ?status ;
      wdt:P841 ?feast ;
      wikibase:sitelinks ?links .
   ?article schema:about ?s ; schema:isPartOf <https://en.wikipedia.org/> .

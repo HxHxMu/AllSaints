@@ -1,5 +1,5 @@
 """Source gathering (Wikipedia, Catholic Encyclopedia 1913 via Wikisource) and saint selection."""
-import json, random
+import json, random, re
 from common import http, DATA, log, claude_json, load_config, load_episodes, month_day_label
 
 WP = "https://en.wikipedia.org/w/api.php"
@@ -27,9 +27,14 @@ def catholic_encyclopedia(name):
     q = name.replace("Saint ", "").replace("St. ", "")
     r = http.get(WS, params={"action": "query", "list": "search", "srsearch": f'"{q}" intitle:"Catholic Encyclopedia (1913)"',
                              "srlimit": 5, "format": "json"}, timeout=30).json()
+    ql = q.lower()
     for hit in r.get("query", {}).get("search", []):
         t = hit["title"]
-        if t.startswith("Catholic Encyclopedia (1913)/") and q.split()[0].lower() in t.lower():
+        if not t.startswith("Catholic Encyclopedia (1913)/St"):
+            continue
+        # saint articles are "St. Name[ of Place]": accept the exact name, or a bare-name article
+        leaf = re.sub(r"^(st\.|sts\.|saint)\s+", "", t.split("/", 1)[1].lower())
+        if leaf.startswith(ql) or (leaf == ql.split()[0]):
             txt = _extract(WS, t)
             if len(txt) > 300:
                 return t, txt

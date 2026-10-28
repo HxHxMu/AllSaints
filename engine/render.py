@@ -4,6 +4,10 @@ from pathlib import Path
 from common import VIDEO, log
 
 MOVES = ["in", "right", "out", "up", "left", "in", "down", "out"]
+# Remotion's bundled chrome-headless-shell hangs on "Waiting for root component" on macOS 15; use installed Chrome there.
+MAC_CHROME = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+if "REMOTION_BROWSER" not in os.environ and MAC_CHROME.exists():
+    os.environ["REMOTION_BROWSER"] = str(MAC_CHROME)
 
 
 def build_props(ep_id, script, tts, art_map, music_rel):
