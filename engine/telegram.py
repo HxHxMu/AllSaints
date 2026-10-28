@@ -99,7 +99,8 @@ def _status_text():
     lines = [f"Launch: {cfg.get('launch_date') or 'not set'} · Post time {cfg['post_time']} · {'⏸ paused' if cfg.get('paused') else '▶️ active'}"]
     icon = {"review": "👀", "approved": "✅", "published": "📣", "generating": "⚙️", "redo_requested": "🔁", "failed": "❌"}
     for e in eps[:14]:
-        lines.append(f"{icon.get(e['status'], '•')} {e['date']} {e.get('saint', {}).get('display_name', '…')} – {e['status']}")
+        yt = " · ▶️" if (e.get("youtube") or {}).get("id") else (" · ▶️❌" if (e.get("youtube") or {}).get("error") else "")
+        lines.append(f"{icon.get(e['status'], '•')} {e['date']} {e.get('saint', {}).get('display_name', '…')} – {e['status']}{yt}")
     return "\n".join(lines)
 
 

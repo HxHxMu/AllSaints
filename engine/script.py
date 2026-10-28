@@ -32,6 +32,7 @@ SCHEMA = """{
  "pronunciations": {"Aedesius": "Ay-DEE-see-us"},
  "caption_hook": "first line of the Instagram caption (not identical to the spoken hook)",
  "summary": "one-sentence summary for the caption",
+ "youtube_title": "YouTube Shorts title, max 60 characters: the saint's name plus what makes the story remarkable, e.g. 'St. Frumentius: The Shipwrecked Boy Who Became a Bishop'; searchable, no clickbait, no emojis",
  "hashtags": ["#saintfrumentius", "#ethiopia", "..."],
  "claims": [{"claim": "...", "source": 0, "kind": "history|tradition"}]
 }"""

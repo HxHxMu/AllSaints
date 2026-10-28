@@ -36,6 +36,7 @@ Buttons on each preview: **Approve**, **Redo** (reply with what to change, or `f
 | `TELEGRAM_BOT_TOKEN` | @BotFather → /newbot |
 | `IG_ACCESS_TOKEN` | Meta App Dashboard (below) |
 | `IG_TOKEN_KEY` | any long random string (encrypts the refreshed token in `state/`) |
+| `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | set by `pipeline.py yt-auth` (below) |
 
 Optional repo variable / env: `ELEVENLABS_VOICE_ID` to change narrator, `ANTHROPIC_MODEL` to pin a model.
 
@@ -49,6 +50,28 @@ Optional repo variable / env: `ELEVENLABS_VOICE_ID` to change narrator, `ANTHROP
    Dashboard tokens last 60 days; `maintenance.yml` refreshes it weekly.
 6. Make sure `instagram_business_basic` and `instagram_business_content_publish` are among the permissions.
    Your own account = Standard Access → no App Review needed.
+
+## YouTube Shorts setup (once)
+
+Each published episode is also uploaded as a Short (same MP4, its own title/description from `youtube.py`).
+Instagram and YouTube are tracked separately: a failed Short retries up to 3x and never re-posts the Reel.
+
+1. console.cloud.google.com → **New project** ("All Saints").
+2. **APIs & Services → Library** → enable **YouTube Data API v3**.
+3. **OAuth consent screen** (Google Auth Platform): External, app name "All Saints", your email.
+   Add yourself as a test user, then **Publish app → In production** (unverified is fine for your own account).
+   Left in *Testing*, the refresh token expires after 7 days and uploads stop.
+4. **Credentials → Create credentials → OAuth client ID → Desktop app** → download the JSON (keep it out of the repo).
+5. Locally: `python engine/pipeline.py yt-auth ~/Downloads/client_secret_….json`.
+   Click past "Google hasn't verified this app", choose the **All Saints channel** (Brand Account) when asked.
+   It writes the three `YT_*` values to `.env` and, if `gh` is installed, to GitHub secrets (Production environment).
+6. Check: `python engine/pipeline.py yt-whoami` → should print the channel name.
+7. **API audit:** uploads from a new API project are forced *private* until Google's YouTube API compliance audit
+   passes. Apply via the "YouTube API Services – Audit and Quota Extension" form. Until then set
+   `"youtube_privacy": "private"` in `state/config.json` and hit Publish in YouTube Studio (the Telegram message links it).
+8. YouTube Studio → Settings → Channel → Advanced: audience **"No, not made for kids"** (also set per upload).
+
+Test one: `python engine/pipeline.py youtube 2026-10-28` (needs the episode's release assets).
 
 ## Brand
 

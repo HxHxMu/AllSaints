@@ -3,6 +3,8 @@
   python engine/pipeline.py generate [--date YYYY-MM-DD] [--max N] [--no-upload]
   python engine/pipeline.py poll            # Telegram updates + publish due episodes
   python engine/pipeline.py refresh-token
+  python engine/pipeline.py youtube <episode>  # upload one episode's Short now
+  python engine/pipeline.py yt-auth <client_secret.json>
   python engine/pipeline.py build-calendar
 """
 import argparse, datetime as dt, json, shutil, sys, traceback
@@ -201,6 +203,9 @@ def publish_due():
         started = dt.datetime.fromisoformat(ep.get("updated", now.isoformat()))
         if now - started > dt.timedelta(minutes=30):
             ep["status"] = "approved"
+    if ep["status"] == "published":
+        publish_youtube(ep)  # retries a Short that failed after the Reel went out
+        return
     if ep["status"] != "approved" or now < due_time:
         return
     try:
@@ -210,7 +215,7 @@ def publish_due():
 
 
 def publish_episode(ep):
-    """Post one episode's Reel now (used by the daily schedule and `pipeline.py publish <id>`)."""
+    """Post one episode's Reel now, then its YouTube Short (used by the daily schedule and `pipeline.py publish <id>`)."""
     import instagram, storage, telegram
     now = dt.datetime.now(tz())
     log("Publishing", ep["id"])
@@ -227,6 +232,7 @@ def publish_episode(ep):
         telegram.send(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink', '')}")
     except Exception as e:
         traceback.print_exc()
+        publish_youtube(ep)  # a Reel failure shouldn't hold the Short back
         ep["status"] = "approved"
         ep["publish_error"] = str(e)[:500]
         ep["publish_attempts"] = ep.get("publish_attempts", 0) + 1
@@ -234,6 +240,31 @@ def publish_episode(ep):
         if ep["publish_attempts"] in (1, 3):
             telegram.send(f"❌ Publishing failed ({ep['publish_attempts']}x): {str(e)[:300]}\nWill retry.")
         raise
+    publish_youtube(ep, vid)
+
+
+def publish_youtube(ep, video=None):
+    """Upload the episode as a YouTube Short once; independent of Instagram, max 3 attempts."""
+    import youtube, storage, telegram
+    yt = ep.get("youtube") or {}
+    if not youtube.configured() or yt.get("id") or yt.get("attempts", 0) >= 3 or not ep.get("assets"):
+        return
+    try:
+        if not video:
+            video = storage.download(ep["assets"]["video.mp4"], WORK / f"{ep['id']}-video.mp4")
+        res = youtube.upload_short(ep, video)
+        ep["youtube"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
+        save_episode(ep)
+        note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
+        telegram.send(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
+    except Exception as e:
+        traceback.print_exc()
+        yt["attempts"] = yt.get("attempts", 0) + 1
+        yt["error"] = str(e)[:500]
+        ep["youtube"] = yt
+        save_episode(ep)
+        if yt["attempts"] in (1, 3):
+            telegram.send(f"❌ YouTube upload failed ({yt['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if yt["attempts"] < 3 else ""))
 
 
 def cmd_poll(a):
@@ -255,6 +286,11 @@ def main():
     sub.add_parser("poll")
     pb = sub.add_parser("publish")
     pb.add_argument("episode", help="episode id, e.g. 2026-10-29 or intro")
+    yb = sub.add_parser("youtube")
+    yb.add_argument("episode")
+    ya = sub.add_parser("yt-auth")
+    ya.add_argument("client_secret", help="OAuth client JSON downloaded from Google Cloud (Desktop app)")
+    sub.add_parser("yt-whoami")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -268,6 +304,18 @@ def main():
         if not ep or ep.get("status") not in ("approved", "review") or not ep.get("assets"):
             raise SystemExit(f"Episode {a.episode} not found, already published, or not uploaded")
         publish_episode(ep)
+    elif a.cmd == "youtube":
+        ep = load_episode(a.episode)
+        if not ep or not ep.get("assets"):
+            raise SystemExit(f"Episode {a.episode} not found or not uploaded")
+        (ep.get("youtube") or {}).pop("attempts", None)
+        publish_youtube(ep)
+    elif a.cmd == "yt-auth":
+        import youtube
+        youtube.authorize(a.client_secret)
+    elif a.cmd == "yt-whoami":
+        import youtube
+        print(youtube.me())
     elif a.cmd == "refresh-token":
         import instagram
         instagram.refresh_token()

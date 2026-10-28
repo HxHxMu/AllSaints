@@ -79,6 +79,11 @@
     "template": "{hook_line}\n\n{name} · Feast day: {feast}\n{one_line_summary}\n\n{prayer}\n\n—\nSources: {sources}\nArt: {art_credits}\n\n{hashtags}",
     "hashtags_base": ["#catholic", "#saints", "#saintoftheday", "#catholicsaints", "#feastday", "#allsaints", "#catholicfaith", "#prayforus"]
   },
+  "youtube": {
+    "disclosure": "Researched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.",
+    "footer": "A new forgotten saint every morning. Subscribe, and pray with us.",
+    "synthetic_media": false
+  },
   "illustration": {
     "model": "gemini-3.1-flash-lite-image",
     "style": "Painted as a traditional Byzantine icon: egg tempera on a wooden panel, burnished gold-leaf background, flat stylized figures with bold dark outlines, elongated proportions, inverse perspective, symbolic simplified architecture and landscape, solemn non-naturalistic faces with large calm eyes, deep reds, ultramarine and ochre, subtle craquelure and aged patina. Reverent and devotional. Vertical composition. The painting fills the entire image edge to edge: no panel edge, no border, no frame. No text, no letters, no inscriptions.",
