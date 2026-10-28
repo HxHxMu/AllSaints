@@ -3,11 +3,13 @@ import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoCon
 import {geoOrthographic, geoPath, geoGraticule10} from 'd3-geo';
 import {feature} from 'topojson-client';
 import land110 from 'world-atlas/land-110m.json';
+import land50 from 'world-atlas/land-50m.json';
 import brand from './brand.json';
 import {DISPLAY, TEXT, ACCENT} from './fonts';
 
 export const C = brand.colors;
 const LAND = feature(land110, land110.objects.land);
+const LAND_FINE = feature(land50, land50.objects.land); // used once zoomed in, where 110m coastlines turn jagged
 const GRAT = geoGraticule10();
 const ease = Easing.bezier(0.25, 0.1, 0.25, 1);
 
@@ -62,20 +64,28 @@ export const ArtScene = ({scene, durationInFrames}) => {
 };
 
 /* ---------- Globe map scene ---------- */
+const MAP_ZOOM = 14; // globe (R 410) -> a region roughly 1,000 km across
+const sink = Easing.bezier(0.45, 0, 0.35, 1);
+
 export const MapScene = ({scene, durationInFrames}) => {
 	const f = useCurrentFrame();
 	const {width: FW} = useVideoConfig();
 	const {lat = 41.9, lon = 12.5, place = ''} = scene;
 	const t = interpolate(f, [0, Math.min(45, durationInFrames)], [0, 1], {extrapolateRight: 'clamp', easing: ease});
-	const drift = interpolate(f, [0, durationInFrames], [0, 4]);
+	// slow continuous descent: mostly eased, with a linear share so it is still drifting in on the last frame
+	const p = interpolate(f, [0, durationInFrames], [0, 1], {extrapolateRight: 'clamp'});
+	const z = 0.85 * sink(p) + 0.15 * p;
+	const zoom = Math.exp(Math.log(MAP_ZOOM) * z);
 	const R = 410, cy = 860;
 	const proj = geoOrthographic()
-		.scale(R * (0.92 + 0.08 * t))
+		.scale(R * (0.92 + 0.08 * t) * zoom)
 		.translate([FW / 2, cy])
-		.rotate([-(lon - 35 * (1 - t)) - drift, -(lat - 8 * (1 - t))])
-		.clipAngle(90);
+		.rotate([-(lon - 35 * (1 - t)), -(lat - 8 * (1 - t))])
+		.clipAngle(90)
+		.clipExtent([[-20, -20], [FW + 20, 1940]]);
 	const path = geoPath(proj);
 	const pt = proj([lon, lat]);
+	const fine = interpolate(zoom, [2, 3.5], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}); // crossfade to 50m coastlines
 	const pulse = 1 + 0.25 * Math.sin(f / 8);
 	const opacity = useFade(durationInFrames, 18, 0);
 	return (
@@ -90,7 +100,8 @@ export const MapScene = ({scene, durationInFrames}) => {
 				</defs>
 				<path d={path({type: 'Sphere'})} fill="url(#sea)" stroke={C.gilt} strokeWidth={2} />
 				<path d={path(GRAT)} fill="none" stroke={C.gilt} strokeOpacity={0.12} strokeWidth={1} />
-				<path d={path(LAND)} fill={C.umber} stroke={C.gilt} strokeOpacity={0.55} strokeWidth={1.2} />
+				{fine < 1 && <path d={path(LAND)} fill={C.umber} stroke={C.gilt} strokeOpacity={0.55} strokeWidth={1.2} />}
+				{fine > 0 && <path d={path(LAND_FINE)} fill={C.umber} stroke={C.gilt} strokeOpacity={0.55} strokeWidth={1.2} opacity={fine} />}
 				{pt && (
 					<g opacity={interpolate(f, [30, 45], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}>
 						<circle cx={pt[0]} cy={pt[1]} r={22 * pulse} fill={C.gilt} opacity={0.18} />
