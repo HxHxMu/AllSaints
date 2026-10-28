@@ -1,0 +1,200 @@
+{
+ "id": "2026-10-29",
+ "date": "2026-10-29",
+ "status": "review",
+ "updated": "2026-10-28T05:50:10+00:00",
+ "saint": {
+  "qid": "Q947675",
+  "name": "Saint Narcissus of Jerusalem",
+  "display_name": "St. Narcissus of Jerusalem",
+  "dates": "c. 99 – c. 216",
+  "region": "Jerusalem, Holy Land",
+  "feast": "October 29",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q947675",
+  "name": "Narcissus of Jerusalem",
+  "links": 21,
+  "enwiki": "Narcissus_of_Jerusalem",
+  "images": [
+   "B%C3%A9n%C3%A9vent-l%E2%80%99Abbaye%20Saint-Barth%C3%A9l%C3%A9my%20Vitrail%20Narcissus%20of%20Jerusalem%20%28cropped%29.jpg"
+  ],
+  "religions": [
+   "Christianity"
+  ],
+  "commonscat": "Narcissus of Jerusalem",
+  "birth": 99,
+  "death": 216,
+  "lon": 35.23104,
+  "lat": 31.775689,
+  "selection_reason": "Eusebius documents Narcissus's story: the miracle of water turned to oil for the Easter vigil lamps, the slander by three men whose oaths of innocence ended in fire, disease and blindness, his retreat into the desert, and his return as a bishop over 100 years old. It is vivid, surprising and early, and he is not a household name.",
+  "catholic_veneration": "Roman Martyrology, feast on October 29 (Latin Church). He is also venerated in the Eastern Churches, with the Orthodox feast on August 7."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Narcissus of Jerusalem",
+   "display_name": "St. Narcissus of Jerusalem",
+   "dates": "c. 99 – c. 216",
+   "region": "Jerusalem, Holy Land",
+   "feast": "October 29",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Falsely accused, the old bishop forgave his accusers and left Jerusalem.",
+    "visual": "art",
+    "scene": "An elderly bishop with a white beard and plain early-Christian vestments stands before a small group of men in a stone hall. He raises one hand in a gesture of forgiveness. Their faces are lowered, and the arched windows show a hazy Judean sky.",
+    "art_hint": "an old bishop forgiving accusers in an early Christian setting; Byzantine icon of a bishop saint; search: Narcissus of Jerusalem icon, Byzantine bishop icon, early Christian bishop"
+   },
+   {
+    "role": "who",
+    "text": "Saint Narcissus of Jerusalem, of Greek origin, born, tradition holds, in the year ninety-nine. He became Jerusalem's thirtieth bishop at eighty or more.",
+    "visual": "map",
+    "lat": 31.7683,
+    "lon": 35.2137,
+    "place": "Jerusalem · Holy Land"
+   },
+   {
+    "role": "story",
+    "text": "According to Eusebius, at the Easter Vigil he changed water into oil, so every lamp in the church could burn.",
+    "visual": "art",
+    "scene": "Inside a modest early church at night, the aged bishop Narcissus blesses a large clay jar as deacons hold rows of small oil lamps. Warm light falls on the faces of the gathered faithful, and the walls are plain plastered stone.",
+    "art_hint": "Easter vigil lamps lit in an early church, a bishop blessing a jar of oil; search: Easter vigil lamps icon, oil lamps early church, bishop blessing oil"
+   },
+   {
+    "role": "story",
+    "text": "People in his own Christian community accused him of serious wrongs. The charges proved false. He lived in seclusion for several years.",
+    "visual": "art",
+    "scene": "The aged bishop Narcissus walks alone along a rocky path out of the walled city of Jerusalem, carrying a staff. Behind him are ancient stone walls and gates, and ahead of him are quiet Judean hills at dusk.",
+    "art_hint": "a solitary elderly saint leaving a city for the hills; hermit in the Judean landscape; search: Judean desert icon, hermit saint landscape, Jerusalem walls icon"
+   },
+   {
+    "role": "story",
+    "text": "Three bishops governed in his absence. When he returned, the people unanimously asked him to resume his duties.",
+    "visual": "art",
+    "scene": "A crowd of men, women and children in tunics and cloaks gathers at a Jerusalem gate to welcome the returning bishop Narcissus. He is white-haired and leaning on a staff, and the people reach out their hands to him.",
+    "art_hint": "a bishop welcomed back by the faithful at the gates of Jerusalem; search: return of the bishop icon, Jerusalem gate icon, early Christian community icon"
+   },
+   {
+    "role": "turn",
+    "text": "Too old to carry it alone, he named Alexander his assistant bishop, and kept serving through constant prayer and calls for unity and peace. His answer to injury was forgiveness, and his gift to the Church was peace.",
+    "visual": "art",
+    "scene": "The aged bishop Narcissus sits in prayer beside the younger bishop Alexander, one hand resting on his shoulder. They are in a simple early-Christian chapel with a lamp burning before them.",
+    "art_hint": "two bishops in prayer, an elder blessing a younger; search: Saint Alexander of Jerusalem icon, Narcissus and Alexander, early bishops icon"
+   },
+   {
+    "role": "close",
+    "text": "Saint Narcissus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Narcissus": "nar-SIS-us",
+   "Eusebius": "yoo-SEE-bee-us"
+  },
+  "caption_hook": "A bishop past eighty was slandered by his own people. His answer was forgiveness.",
+  "summary": "Saint Narcissus of Jerusalem, an early bishop, was falsely accused, forgave his accusers, lived in seclusion, and returned at the people's request to serve in prayer and peace.",
+  "hashtags": [
+   "#saintnarcissus",
+   "#narcissusofjerusalem",
+   "#jerusalem",
+   "#holyland",
+   "#earlychurch",
+   "#eusebius",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#october29",
+   "#forgiveness",
+   "#allsaints",
+   "#catholicreels"
+  ],
+  "claims": [
+   {
+    "claim": "Narcissus of Jerusalem lived from about 99 to about 216 AD and was an early bishop (patriarch) of Jerusalem.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Of Greek origin, he was born in the year 99, according to tradition.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was at least eighty when he became the thirtieth bishop of Jerusalem.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to Eusebius, at the Easter Vigil Narcissus changed water into oil to supply all the lamps of the church.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Members of the Christian community made serious allegations against him, which proved false.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He forgave his accusers and left Jerusalem to live in seclusion for several years.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Three bishops governed the See of Jerusalem in succession during his absence.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "On his return the people unanimously asked him to resume his episcopal duties.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Because of his extreme age and the weight of his duties, he made Alexander of Jerusalem his coadjutor bishop.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He continued to serve through constant prayer and exhortations to the faithful for unity and peace.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is venerated in the Roman Catholic Church on October 29.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Beat 'who': 'a Greek born' was awkward and 'its thirtieth bishop' had no clear antecedent in the narration. Changed to 'of Greek origin, born, tradition holds, in the year ninety-nine' and 'Jerusalem's thirtieth bishop'. The tradition framing is kept.",
+   "Beat 'story' (accusations): the opening 'Then' implied a chronological order that the source does not give. Removed it.",
+   "Beat 'turn': the closing line 'his gift to the Church was peace' is devotional interpretation. It rests on the sourced 'exhortations for unity and peace' but is not stated in the source. Left in as a reflection, and flagged for the approver.",
+   "The source's dates are internally strained. Born 99 and at least 80 at his episcopate would make him well over 100 at death in c. 216. The script already marks the birth year as 'tradition holds', which is acceptable. The miracle is attributed to Eusebius, which is correct.",
+   "The map (Jerusalem, 31.7683, 35.2137), feast date October 29, 'Saint' title and martyr:false all check out against the source. Word count is about 137, within the 125-145 range."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The source is a single Wikipedia article, and the birth year 99 and death year 216 would imply an age over 115. Consider softening the dates on screen, and check that the closing line about 'his gift to the Church was peace' is acceptable as reflection."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Narcissus of Jerusalem",
+   "url": "https://en.wikipedia.org/wiki/Narcissus_of_Jerusalem"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 67.0,
+ "caption": "A bishop past eighty was slandered by his own people. His answer was forgiveness.\n\nSaint Narcissus of Jerusalem · Feast day: October 29\nSaint Narcissus of Jerusalem, an early bishop, was falsely accused, forgave his accusers, lived in seclusion, and returned at the people's request to serve in prayer and peace.\n\nSaint Narcissus, pray for us. 🕯\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#saintnarcissus #narcissusofjerusalem #jerusalem #holyland #earlychurch #eusebius #catholicsaints #lesserknownsaints #october29 #forgiveness #allsaints #catholicreels #catholic #saints #saintoftheday #feastday #catholicfaith #prayforus",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-29/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-29/cover.jpg"
+ },
+ "review_message_id": 6
+}
