@@ -21,12 +21,12 @@ def sources_block(sources):
 SCHEMA = """{
  "saint": {"name": "Saint Frumentius", "display_name": "St. Frumentius", "dates": "c. 300 – c. 383", "region": "Aksum, Ethiopia", "feast": "October 27", "martyr": false},
  "beats": [
-  {"role": "hook", "text": "...", "visual": "art", "art_hint": "the image that fits + 2-4 Wikimedia Commons search terms"},
+  {"role": "hook", "text": "...", "visual": "art", "scene": "what an icon of this moment shows: figures, action, setting", "art_hint": "the image that fits + 2-4 Wikimedia Commons search terms"},
   {"role": "who", "text": "...", "visual": "map", "lat": 14.13, "lon": 38.72, "place": "Aksum · Ethiopia"},
-  {"role": "story", "text": "...", "visual": "art", "art_hint": "..."},
-  {"role": "story", "text": "...", "visual": "art", "art_hint": "..."},
-  {"role": "story", "text": "...", "visual": "art", "art_hint": "..."},
-  {"role": "turn", "text": "...", "visual": "art", "art_hint": "..."},
+  {"role": "story", "text": "...", "visual": "art", "scene": "...", "art_hint": "..."},
+  {"role": "story", "text": "...", "visual": "art", "scene": "...", "art_hint": "..."},
+  {"role": "story", "text": "...", "visual": "art", "scene": "...", "art_hint": "..."},
+  {"role": "turn", "text": "...", "visual": "art", "scene": "...", "art_hint": "..."},
   {"role": "close", "text": "Saint Frumentius, pray for us.", "visual": "close"}
  ],
  "pronunciations": {"Aedesius": "Ay-DEE-see-us"},
@@ -63,7 +63,8 @@ Requirements:
 - "dates": use "c." when uncertain; "fl." if only active dates are known.
 - pronunciations: map any unusual name to a phonetic respelling (one token, hyphens allowed) so the narrator says it right; leave empty if none.
 - Every factual claim must appear in "claims" with its source index; label legendary material kind "tradition" and phrase it that way in the script.
-- 8-14 hashtags, lowercase, including the saint's name tag and place tags."""
+- 8-14 hashtags, lowercase, including the saint's name tag and place tags.
+- "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
     for attempt in range(3):
         s = claude_json(prompt, system=SYSTEM)
         n = word_count(s)

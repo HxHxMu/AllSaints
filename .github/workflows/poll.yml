@@ -12,6 +12,7 @@ concurrency:
 jobs:
   poll:
     runs-on: ubuntu-latest
+    environment: Production   # secrets live in the Production environment
     timeout-minutes: 25
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

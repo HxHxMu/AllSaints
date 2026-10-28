@@ -27,8 +27,28 @@ def build_caption(ep):
     return cap[:2150]
 
 
-def build_art(saint, final, work):
-    """Find, pick and download art; returns ({beat_index|'cover'|'close': art}, credit lines)."""
+def build_art(ep_id, saint, final, work):
+    """Art per beat: Luis's overrides in art/<ep_id>/ first, then icon illustrations (default) or Commons art.
+    Returns ({beat_index|'cover'|'close': art}, credit lines)."""
+    import illustrate
+    art_map = illustrate.overrides(ep_id, work)
+    credits = ["Additional artwork: All Saints"] if art_map else []
+    if load_config().get("art_source", "illustrated") == "illustrated":
+        painted = illustrate.illustrate(saint, final, work, skip=set(art_map))
+        if painted:
+            credits.append(illustrate.ILL["credit"])
+        art_map = {**painted, **art_map}
+        beats = sorted(k for k in art_map if isinstance(k, int))
+        if beats:
+            art_map.setdefault("cover", dict(art_map[beats[0]]))
+            art_map.setdefault("close", dict(art_map[beats[-1]]))
+        return art_map, credits
+    commons_map, commons_credits = commons_art(saint, final, work)
+    return {**commons_map, **art_map}, credits + commons_credits
+
+
+def commons_art(saint, final, work):
+    """Find, pick and download Wikimedia Commons art (art_source: "commons")."""
     import art
     cands = art.collect_candidates(saint, final)
     log(f"{len(cands)} art candidates")
@@ -83,7 +103,7 @@ def generate_one(date: dt.date, upload=True):
         final = fc.get("script") or draft
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
-        art_map, credits = build_art(saint, final, work)
+        art_map, credits = build_art(ep_id, saint, final, work)
         # narration
         t = tts.synthesize(final, work)
         bed = music.pick_bed(ep_id)

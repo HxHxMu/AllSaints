@@ -62,5 +62,12 @@
   "caption": {
     "template": "{hook_line}\n\n{name} · Feast day: {feast}\n{one_line_summary}\n\n{prayer}\n\n—\nSources: {sources}\nArt: {art_credits}\n\n{hashtags}",
     "hashtags_base": ["#catholic", "#saints", "#saintoftheday", "#catholicsaints", "#feastday", "#allsaints", "#catholicfaith", "#prayforus"]
+  },
+  "illustration": {
+    "model": "gemini-3.1-flash-lite-image",
+    "style": "Painted as a traditional Byzantine icon: egg tempera on a wooden panel, burnished gold-leaf background, flat stylized figures with bold dark outlines, elongated proportions, inverse perspective, symbolic simplified architecture and landscape, solemn non-naturalistic faces with large calm eyes, deep reds, ultramarine and ochre, subtle craquelure and aged patina. Reverent and devotional. Vertical composition. The painting fills the entire image edge to edge: no panel edge, no border, no frame. No text, no letters, no inscriptions.",
+    "setting_rule": "Architecture, clothing, armor and landscape must be authentic to {region} in the saint's era ({dates}), not generic European.",
+    "consistency": "Keep it strictly iconographic (flat, gilded, stylized), never a naturalistic oil painting. Dress each figure exactly as the scene says; keep a religious habit's colors consistent with the order named (e.g. Dominicans: white habit and black cape).",
+    "credit": "Illustration in the Byzantine style, AI-generated (Google Gemini)"
   }
 }

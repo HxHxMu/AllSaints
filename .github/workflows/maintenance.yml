@@ -14,6 +14,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
+    environment: Production   # secrets live in the Production environment
     env:
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
