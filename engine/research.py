@@ -1,6 +1,6 @@
 """Source gathering (Wikipedia, Catholic Encyclopedia 1913 via Wikisource) and saint selection."""
 import json, random, re
-from common import http, DATA, log, claude_json, load_config, load_episodes, month_day_label
+from common import get_json, DATA, log, claude_json, load_config, load_episodes, month_day_label
 
 WP = "https://en.wikipedia.org/w/api.php"
 WS = "https://en.wikisource.org/w/api.php"
@@ -10,7 +10,7 @@ def _extract(api, title, intro=False):
     p = {"action": "query", "prop": "extracts", "explaintext": 1, "redirects": 1, "titles": title, "format": "json"}
     if intro:
         p["exintro"] = 1
-    r = http.get(api, params=p, timeout=30).json()
+    r = get_json(api, p)
     page = next(iter(r["query"]["pages"].values()))
     return page.get("extract", "") or ""
 
@@ -25,8 +25,8 @@ def wiki_full(title):
 
 def catholic_encyclopedia(name):
     q = name.replace("Saint ", "").replace("St. ", "")
-    r = http.get(WS, params={"action": "query", "list": "search", "srsearch": f'"{q}" intitle:"Catholic Encyclopedia (1913)"',
-                             "srlimit": 5, "format": "json"}, timeout=30).json()
+    r = get_json(WS, {"action": "query", "list": "search", "srsearch": f'"{q}" intitle:"Catholic Encyclopedia (1913)"',
+                             "srlimit": 5, "format": "json"})
     ql = q.lower()
     for hit in r.get("query", {}).get("search", []):
         t = hit["title"]

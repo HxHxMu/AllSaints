@@ -27,8 +27,32 @@ def build_caption(ep):
     return cap[:2150]
 
 
+def build_art(saint, final, work):
+    """Find, pick and download art; returns ({beat_index|'cover'|'close': art}, credit lines)."""
+    import art
+    cands = art.collect_candidates(saint, final)
+    log(f"{len(cands)} art candidates")
+    art_map, credits = {}, []
+    if cands:
+        usable, pick = art.assign_art(saint, final, cands)
+        files = {}
+        for k, sel in [(b["i"], b) for b in pick.get("beats", [])] + [("cover", pick.get("cover")), ("close", {"image": pick.get("close_bg")})]:
+            if not sel or sel.get("image") is None or not (0 <= int(sel["image"]) < len(usable)):
+                continue
+            c = usable[int(sel["image"])]
+            fn = work / f"art{int(sel['image'])}.jpg"
+            if fn.name not in files:
+                files[fn.name] = art.download(c["thumb"], fn)
+            w, h = files[fn.name]
+            art_map[k] = {"image": fn, "w": w, "h": h, "focus": sel.get("focus") or {"x": 0.5, "y": 0.35},
+                          "move": sel.get("move", "in"), "credit": f"{c['name']} — {c['artist'] or 'Unknown artist'}"[:80]}
+            if k not in ("cover", "close"):
+                credits.append(art.credit_line(c))
+    return art_map, credits
+
+
 def generate_one(date: dt.date, upload=True):
-    import research, script as scriptmod, art, tts, render, music
+    import research, script as scriptmod, tts, render, music
     ep_id = date.isoformat()
     ep = load_episode(ep_id) or {"id": ep_id, "date": ep_id}
     redo = ep.get("redo") or {}
@@ -59,25 +83,7 @@ def generate_one(date: dt.date, upload=True):
         final = fc.get("script") or draft
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
-        # art
-        cands = art.collect_candidates(saint, final)
-        log(f"{len(cands)} art candidates")
-        art_map, credits = {}, []
-        if cands:
-            usable, pick = art.assign_art(saint, final, cands)
-            files = {}
-            for k, sel in [(b["i"], b) for b in pick.get("beats", [])] + [("cover", pick.get("cover")), ("close", {"image": pick.get("close_bg")})]:
-                if not sel or sel.get("image") is None or not (0 <= int(sel["image"]) < len(usable)):
-                    continue
-                c = usable[int(sel["image"])]
-                fn = work / f"art{int(sel['image'])}.jpg"
-                if fn.name not in files:
-                    files[fn.name] = art.download(c["thumb"], fn)
-                w, h = files[fn.name]
-                art_map[k] = {"image": fn, "w": w, "h": h, "focus": sel.get("focus") or {"x": 0.5, "y": 0.35},
-                              "move": sel.get("move", "in"), "credit": f"{c['name']} — {c['artist'] or 'Unknown artist'}"[:80]}
-                if k not in ("cover", "close"):
-                    credits.append(art.credit_line(c))
+        art_map, credits = build_art(saint, final, work)
         # narration
         t = tts.synthesize(final, work)
         bed = music.pick_bed(ep_id)

@@ -21,9 +21,27 @@ if (ROOT / ".env").exists():
         if sep and k and not k.startswith("#") and v.strip() and not os.environ.get(k.strip()):
             os.environ[k.strip()] = v.strip().strip("'\"")
 
-UA = "AllSaintsBot/1.0 (https://github.com; educational Catholic saints Reels) python-requests"
+UA = "AllSaintsBot/1.0 (https://github.com/HxHxMu/AllSaints; educational Catholic saints Reels) python-requests"
 http = requests.Session()
 http.headers.update({"User-Agent": UA})
+
+
+def get_json(url, params=None, timeout=40, tries=8):
+    """GET JSON from Wikimedia APIs, backing off on rate limits / non-JSON error pages."""
+    for attempt in range(tries):
+        r = http.get(url, params=params, timeout=timeout)
+        try:
+            if r.status_code == 200:
+                return r.json()
+        except ValueError:
+            pass
+        if attempt == tries - 1:
+            r.raise_for_status()
+            raise RuntimeError(f"Non-JSON response from {url}: {r.text[:200]}")
+        # Commons 503s are intermittent; short retries beat its 30-60 s retry-after
+        wait = min(int(r.headers.get("retry-after", 0) or 0) or 3 * (attempt + 1), 15)
+        log(f"{url} -> {r.status_code}; retrying in {wait}s")
+        time.sleep(wait)
 
 
 def env(name, default=None, required=False):

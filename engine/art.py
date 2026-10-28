@@ -1,7 +1,7 @@
 """Find freely licensed sacred art on Wikimedia Commons and assign it to beats with Claude vision."""
 import base64, io, re, html
 from PIL import Image
-from common import http, log, claude_json
+from common import http, get_json, log, claude_json
 
 API = "https://commons.wikimedia.org/w/api.php"
 OK_LICENSE = re.compile(r"public domain|^pd|cc0|cc[ -]by(-sa)?[ -]\d|cc[ -]by(-sa)?$", re.I)
@@ -11,7 +11,7 @@ BAD_NAME = re.compile(r"\.(svg|gif|pdf|djvu|webm|ogv|ogg|mp3|tif)$|coat[_ ]of[_ 
 
 def _get(params):
     params = {**params, "format": "json", "formatversion": 2}
-    return http.get(API, params=params, timeout=40).json()
+    return get_json(API, params)
 
 
 def category_files(cat, depth=1, limit=60):
