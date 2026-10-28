@@ -1,0 +1,14 @@
+{
+  "timezone": "America/New_York",
+  "post_time": "07:30",
+  "days_ahead": 7,
+  "max_generate_per_run": 3,
+  "launch_date": null,
+  "telegram_chat_id": 77355330,
+  "anthropic_models": [
+    "claude-sonnet-4-5",
+    "claude-sonnet-4-5-20250929",
+    "claude-3-7-sonnet-latest"
+  ],
+  "scope": "Canonized saints (incl. pre-congregation saints), Eastern Catholic saints, early Church martyrs. Must be venerated in the Catholic Church (Latin or Eastern Catholic). Prefer lesser-known figures with a vivid, documented story."
+}
