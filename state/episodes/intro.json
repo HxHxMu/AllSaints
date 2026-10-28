@@ -1,7 +1,7 @@
 {
  "id": "intro",
  "date": "2026-10-28",
- "status": "approved",
+ "status": "published",
  "saint": {
   "name": "All Saints",
   "display_name": "All Saints",
@@ -80,9 +80,14 @@
   "Illustration in the Byzantine style, AI-generated (Google Gemini)"
  ],
  "duration": 34.5,
- "updated": "2026-10-28T06:14:10+00:00",
+ "updated": "2026-10-28T06:16:07+00:00",
  "assets": {
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/cover.jpg"
- }
+ },
+ "published": {
+  "media_id": "17986789761064929",
+  "permalink": "https://www.instagram.com/reel/DfBxBInDaZv/"
+ },
+ "published_at": "2026-10-28T02:14-04:00"
 }
