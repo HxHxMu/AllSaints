@@ -117,6 +117,7 @@ def process_updates():
             if cfg.get("telegram_chat_id") and cq["message"]["chat"]["id"] != cfg["telegram_chat_id"]:
                 continue
             kind, ep_id = cq["data"].split(":", 1)
+            log(f"Telegram button: {kind} {ep_id}")
             ep = load_episode(ep_id)
             if not ep:
                 api("answerCallbackQuery", callback_query_id=cq["id"], text="Episode not found")
@@ -152,6 +153,7 @@ def process_updates():
         cid = msg.get("chat", {}).get("id")
         if not text or not cid:
             continue
+        log(f"Telegram message: {text.split()[0] if text.startswith('/') else '(text)'}")
         if text.startswith("/start"):
             if not cfg.get("telegram_chat_id"):
                 cfg["telegram_chat_id"] = cid
