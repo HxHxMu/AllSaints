@@ -99,7 +99,7 @@ Candidates:
 
 Pick the ONE candidate that will make the most moving, surprising, well-documented one-minute story, who is genuinely venerated as a saint in the Catholic Church (Latin or Eastern Catholic). Reject anyone venerated only by Orthodox, Anglican or other non-Catholic churches, anyone whose cult was suppressed, and anyone too famous (household names).
 Return JSON: {{"index": <int>, "reason": "<one sentence>", "catholic_veneration": "<how they are venerated: Roman Martyrology / Eastern Catholic calendar / etc.>"}}"""
-    res = claude_json(prompt)
+    res = claude_json(prompt, label="select")
     pick = shortlist[int(res["index"])]
     pick["selection_reason"] = res.get("reason")
     pick["catholic_veneration"] = res.get("catholic_veneration")

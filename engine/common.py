@@ -118,9 +118,23 @@ def log(*a):
 
 # ---------------- Claude ----------------
 _client = None
+USAGE = []  # token counts of every Claude call this run, for the episode record
 
 
-def claude(messages, system=None, max_tokens=16000):
+def _record(label, r):
+    u = r.usage
+    row = {"step": label, "model": r.model, "in": u.input_tokens,
+           "cache_write": u.cache_creation_input_tokens or 0, "cache_read": u.cache_read_input_tokens or 0,
+           "out": u.output_tokens}
+    thinking = getattr(getattr(u, "output_tokens_details", None), "thinking_tokens", None)
+    if thinking is not None:
+        row["thinking"] = thinking
+    USAGE.append(row)
+    log("Claude[{step}] {model} in={in} cache_write={cache_write} cache_read={cache_read} out={out}".format(**row)
+        + (f" (thinking {thinking})" if thinking is not None else ""))
+
+
+def claude(messages, system=None, max_tokens=16000, label="claude"):
     """Call Claude, trying configured models in order. Returns text."""
     global _client
     import anthropic
@@ -135,6 +149,7 @@ def claude(messages, system=None, max_tokens=16000):
                 if system:
                     kw["system"] = system
                 r = _client.messages.create(**kw)
+                _record(label, r)
                 return "".join(b.text for b in r.content if getattr(b, "type", "") == "text")
             except anthropic.NotFoundError as e:
                 last = e
@@ -176,13 +191,17 @@ def parse_json(text):
     return obj
 
 
-def claude_json(prompt, system=None, images=None):
+def claude_json(prompt, system=None, images=None, context=None, label="claude"):
+    """`context`: bulky text shared by several calls (e.g. sources). It goes first, behind a cache
+    breakpoint, so later calls with the same system + context read it from the prompt cache."""
     content = []
     for img in images or []:
         content.append(img)
+    if context:
+        content.append({"type": "text", "text": context, "cache_control": {"type": "ephemeral"}})
     content.append({"type": "text", "text": prompt})
     for attempt in range(2):
-        txt = claude([{"role": "user", "content": content}], system=system)
+        txt = claude([{"role": "user", "content": content}], system=system, label=label)
         try:
             return parse_json(txt)
         except Exception as e:

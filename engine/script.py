@@ -1,6 +1,6 @@
 """Script writing + independent fact-check pass."""
-import json
-from common import BRAND, claude_json, log, month_day_label
+import json, re
+from common import BRAND, claude_json, load_config, log, month_day_label
 
 SYSTEM = f"""You write for "All Saints" (A.S.†): one-minute Instagram Reels on lesser-known Catholic saints, narrated by a warm, deep, unhurried male voice over sacred art.
 Tagline: {BRAND['tagline']}
@@ -16,6 +16,11 @@ Writing rules:
 
 def sources_block(sources):
     return "\n\n".join(f"[{i}] {s['title']} ({s['url']})\n{s['text']}" for i, s in enumerate(sources))
+
+
+def sources_context(sources):
+    """Shared, cached prefix for write_script attempts and fact_check: must stay byte-identical."""
+    return "SOURCES (use only these facts):\n" + sources_block(sources)
 
 
 SCHEMA = """{
@@ -39,6 +44,13 @@ SCHEMA = """{
 }"""
 
 
+def schema():
+    """art_hint (Commons search terms) is only read when art comes from Commons; don't pay to generate it otherwise."""
+    if load_config().get("art_source", "illustrated") == "commons":
+        return SCHEMA
+    return re.sub(r', "art_hint": "[^"]*"', "", SCHEMA)
+
+
 def word_count(script):
     return sum(len(b["text"].split()) for b in script["beats"])
 
@@ -52,11 +64,10 @@ Why chosen: {saint.get('selection_reason', '')}
 Catholic veneration: {saint.get('catholic_veneration', '')}
 {('Reviewer feedback to apply: ' + note) if note else ''}
 
-SOURCES (use only these facts):
-{sources_block(sources)}
+Use only the facts in the SOURCES above.
 
 Return ONLY JSON in exactly this shape (the example values are placeholders):
-{SCHEMA}
+{schema()}
 
 Requirements:
 - 6 to 8 beats; first is "hook", second is "who" (with map coordinates of where their story mainly happened), last is "close" containing only the prayer line "Saint <Name>, pray for us." (use "Saints ... pray for us." for a pair).
@@ -68,21 +79,23 @@ Requirements:
 - 8-14 hashtags, lowercase: first the saint's name tag (e.g. #saintfrumentius), next the most specific place or patronage tag, then others.
 - "share_cta": one gentle caption line inviting a share, only if it is natural: by name ("Know someone named Winifred? Send them their saint.") when the saint's name is still given today, or by patronage ("Send this to a nurse who could use a patron today.") only if the sources state the patronage. Otherwise "". Never pushy, no "comment Amen".
 - "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
+    ctx = sources_context(sources)
+    task = prompt
     for attempt in range(3):
-        s = claude_json(prompt, system=SYSTEM)
+        s = claude_json(task, system=SYSTEM, context=ctx, label="script")
         n = word_count(s)
         if 115 <= n <= 155:
             return s
         log(f"Script length {n} words; retrying")
-        prompt += f"\n\nYour previous draft had {n} words. Hit 125-145 words."
+        # show the draft so the model trims or extends it instead of starting over
+        task = (prompt + f"\n\nYour previous draft had {n} spoken words; it must have 125-145. "
+                "Revise it to that length, keeping everything else that works. Previous draft:\n"
+                + json.dumps(s, ensure_ascii=False))
     return s
 
 
 def fact_check(script, sources):
-    prompt = f"""You are a careful Catholic historian and fact-checker for a reverent saints series. Check this script against the SOURCES only.
-
-SOURCES:
-{sources_block(sources)}
+    prompt = f"""You are a careful Catholic historian and fact-checker for a reverent saints series. Check this script against the SOURCES above only.
 
 SCRIPT JSON:
 {json.dumps(script, ensure_ascii=False, indent=1)}
@@ -93,10 +106,10 @@ Fix problems with the smallest possible edits, keeping the same beats, roles and
 Return ONLY JSON:
 {{"verdict": "pass" | "fixed" | "reject",
  "issues": ["short description of each problem found and how it was fixed"],
- "script": <the full corrected script JSON, same shape as input>,
+ "script": <only if verdict is "fixed": the full corrected script JSON, same shape as input; otherwise null>,
  "confidence": 0-100,
  "reviewer_note": "one line for the human approver: anything they should double-check"}}
 Use "reject" only if the saint is not actually venerated in the Catholic Church or the sources are too thin for an honest minute."""
-    res = claude_json(prompt)
+    res = claude_json(prompt, system=SYSTEM, context=sources_context(sources), label="factcheck")
     log(f"Fact-check: {res.get('verdict')} ({res.get('confidence')}) issues={len(res.get('issues', []))}")
     return res

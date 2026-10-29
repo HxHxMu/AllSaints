@@ -136,7 +136,7 @@ Choose images for a reverent, beautiful vertical (9:16) video. Rules:
 - An image may be used at most twice (with different focus points). Each beat must get an image if any acceptable image exists.
 - focus: normalized (x,y) of the key subject (usually the saint's face) so the vertical crop keeps it; move: one of in, out, left, right, up, down (slow camera move that suits the composition; use left/right for wide images).
 Return ONLY JSON: {{"beats": [{{"i": <beat index>, "image": <image number>, "focus": {{"x": 0.5, "y": 0.35}}, "move": "in"}}], "cover": {{"image": <n>, "focus": {{"x":0.5,"y":0.35}}}}, "close_bg": <n>, "rejected": [<n>...], "quality": "good|thin|none"}}"""
-    res = claude_json(prompt, images=imgs)
+    res = claude_json(prompt, images=imgs, label="art")
     return usable, res
 
 

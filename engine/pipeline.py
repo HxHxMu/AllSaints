@@ -106,8 +106,9 @@ def commons_art(saint, final, work):
     return art_map, credits
 
 
-def generate_one(date: dt.date, upload=True):
-    import research, script as scriptmod, tts, render, music
+def generate_one(date: dt.date, upload=True, usage_start=None):
+    import common, research, script as scriptmod, tts, render, music
+    usage_start = len(common.USAGE) if usage_start is None else usage_start
     ep_id = date.isoformat()
     ep = load_episode(ep_id) or {"id": ep_id, "date": ep_id}
     redo = ep.get("redo") or {}
@@ -134,7 +135,9 @@ def generate_one(date: dt.date, upload=True):
             ep["redo"] = {"new_saint": True}
             ep["status"] = "redo_requested"
             save_episode(ep)
-            return generate_one(date, upload)
+            return generate_one(date, upload, usage_start)
+        if fc.get("verdict") == "fixed" and not fc.get("script"):
+            log("Fact-check said 'fixed' but returned no script; keeping the draft")
         final = fc.get("script") or draft
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
@@ -153,6 +156,7 @@ def generate_one(date: dt.date, upload=True):
             "saint_pick": {k: v for k, v in saint.items() if k != "intro"},
             "script": final,
             "factcheck": {k: fc.get(k) for k in ("verdict", "issues", "confidence", "reviewer_note")},
+            "usage": common.USAGE[usage_start:],
             "sources": [{"title": s["title"], "url": s["url"]} for s in sources],
             "art_credits": credits,
             "duration": round(t["voiceDuration"] + 3.8, 1),
