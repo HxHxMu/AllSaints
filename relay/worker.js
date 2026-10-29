@@ -81,7 +81,8 @@ export default {
 
 		// Telegram's view of webhook delivery (pending count, last error).
 		if (url.pathname === '/webhook-info' && req.method === 'GET') {
-			return Response.json(await (await tg(env, 'getWebhookInfo', {})).json());
+			const [info, me] = await Promise.all([tg(env, 'getWebhookInfo', {}), tg(env, 'getMe', {})].map((p) => p.then((r) => r.json())));
+			return Response.json({...info, bot: me.result?.username});
 		}
 
 		// One-time switch of the bot to this relay (POST /setup) or back to polling (POST /setup?off=1).
