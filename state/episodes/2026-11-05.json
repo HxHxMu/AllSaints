@@ -1,0 +1,212 @@
+{
+ "id": "2026-11-05",
+ "date": "2026-11-05",
+ "status": "review",
+ "updated": "2026-10-29T09:22:57+00:00",
+ "saint": {
+  "qid": "Q204891",
+  "name": "Saint Guido Maria Conforti",
+  "display_name": "St. Guido Maria Conforti",
+  "dates": "1865 – 1931",
+  "region": "Parma, Italy",
+  "feast": "November 5",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q204891",
+  "name": "Guido Maria Conforti",
+  "links": 15,
+  "enwiki": "Guido_Maria_Conforti",
+  "images": [
+   "Guido%20Maria%20Conforti%20Vescovo.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Guido Maria Conforti",
+  "birth": 1865,
+  "death": 1931,
+  "lon": 10.328,
+  "lat": 44.801472222,
+  "selection_reason": "Conforti has the best-documented and most moving story of the group: a frail archbishop of Ravenna and Parma who longed to be a missionary, founded the Xaverians, and sent others to China. He is canonized but not a household name, and as a 20th-century founder he contrasts with the recent run of ancient martyrs and Celtic saints, even though Italy was also yesterday's region.",
+  "catholic_veneration": "Canonized by Pope Benedict XVI in 2011 (beatified 1996); his feast on November 5 is in the Roman Martyrology and the Latin Church calendar, and the Xaverian Missionaries celebrate it."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Guido Maria Conforti",
+   "display_name": "St. Guido Maria Conforti",
+   "dates": "1865 – 1931",
+   "region": "Parma, Italy",
+   "feast": "November 5",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "He longed to be a missionary, but two religious orders turned him away.",
+    "visual": "art",
+    "scene": "A young Italian seminarian in a black cassock stands before the closed wooden door of a stone religious house, his hands folded and his head slightly bowed. The setting is a late nineteenth-century Italian town street at dusk.",
+    "art_hint": "a young priest at a closed door, a longing for mission. Search: Guido Maria Conforti, Conforti young, seminarian Parma, Xaverian founder"
+   },
+   {
+    "role": "who",
+    "text": "Saint Guido Maria Conforti, born in eighteen sixty-five, near Parma, Italy.",
+    "visual": "map",
+    "lat": 44.8,
+    "lon": 10.33,
+    "place": "Parma · Italy"
+   },
+   {
+    "role": "story",
+    "text": "On his way to school, he stopped each day at church to speak with Christ crucified. He recalled, \"I looked at Him and He looked at me and seemed to say so many things.\"",
+    "visual": "art",
+    "scene": "A small boy in plain nineteenth-century Italian village clothes kneels alone before a large crucifix in a modest parish church, his school satchel set beside him. Soft light falls through a window onto the cross.",
+    "art_hint": "a boy praying before a crucifix in a village church. Search: Guido Conforti boy, Santa Maria della Pace Ravadese, child praying crucifix, Conforti"
+   },
+   {
+    "role": "story",
+    "text": "In seminary, he read Francis Xavier and longed to be a missionary. So in eighteen ninety-five, he founded the Xaverian Missionaries.",
+    "visual": "art",
+    "scene": "A priest in a black cassock sits at a desk in a Parma seminary study with an open book. Beside him a small group of young men in cassocks gather as the first members of his new missionary society.",
+    "art_hint": "a priest founding a missionary society with young followers. Search: Xaverian Missionaries founder, Conforti founder, Saint Francis Xavier portrait, Parma seminary"
+   },
+   {
+    "role": "story",
+    "text": "In eighteen ninety-nine, he sent the first of them to China.",
+    "visual": "art",
+    "scene": "Young European missionaries in black cassocks, with small bundles, stand on a harbor quay in China as a steamship waits. Qing-dynasty buildings with curved tiled roofs and local people in period dress are behind them.",
+    "art_hint": "missionaries arriving in China around 1900. Search: Xaverian missionaries China, Qing dynasty harbor, missionaries China 1899, Xaverian China"
+   },
+   {
+    "role": "story",
+    "text": "Poor health led him from Ravenna to Parma, where he visited every parish.",
+    "visual": "art",
+    "scene": "A bishop in a purple cassock and simple cap rides a horse along a rural road in Emilia, Italy, toward a village with a brick bell tower. Farm fields and poplars lie around him.",
+    "art_hint": "a bishop on horseback visiting country parishes in Italy. Search: Guido Conforti bishop Parma, Conforti archbishop, Parma countryside, Duomo di Parma"
+   },
+   {
+    "role": "turn",
+    "text": "Turned away himself, he opened the road for others. In nineteen twenty-eight, he traveled to China to visit them. A refused dream can still reach the world.",
+    "visual": "art",
+    "scene": "An archbishop in his sixties, in a purple cassock, is greeted by Xaverian missionaries in black cassocks in Shanghai in the 1920s. City rooftops are visible behind them.",
+    "art_hint": "an archbishop greeting missionaries in China. Search: Guido Maria Conforti China 1928, Conforti Shanghai, Xaverian mission China, Saint Guido Conforti"
+   },
+   {
+    "role": "close",
+    "text": "Saint Guido Maria Conforti, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Guido": "GWEE-doh",
+   "Conforti": "kon-FOR-tee",
+   "Xaverian": "ZAY-veer-ee-an",
+   "Xavier": "ZAY-vee-er",
+   "Ravenna": "rah-VEN-nah",
+   "Parma": "PAR-mah"
+  },
+  "caption_hook": "Rejected by the Jesuits and the Salesians, he founded his own mission and sent it to China.",
+  "summary": "Saint Guido Maria Conforti, turned away from the missionary orders he sought, founded the Xaverian Missionaries and sent them to China.",
+  "youtube_title": "St. Guido Conforti: Refused as a Missionary, He Founded One",
+  "hashtags": [
+   "#saintguidomariaconforti",
+   "#parma",
+   "#xaverianmissionaries",
+   "#guidoconforti",
+   "#italy",
+   "#catholicmissions",
+   "#missionaries",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saintoftheday",
+   "#catholic",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Guido? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Conforti's requests to join the Society of Jesus and the Salesians of Saint John Bosco were denied.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He felt a desire to be a missionary after reading the works of Francis Xavier in seminary.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was born in 1865 in Casalora di Ravadese, in the diocese and province of Parma, Italy.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "As a schoolboy, he stopped each day at his parish church and conversed with the crucified Christ.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He later recalled: \"I looked at Him and He looked at me and seemed to say so many things.\"",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded the Xaverian Missionaries on 3 December 1895.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1899 he sent the order's first missionaries to China.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He became Archbishop of Ravenna in 1902 and resigned in 1904 because of ill health, then became Coadjutor Bishop and later Bishop of Parma.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "As Bishop of Parma he traveled to all parishes by horseback or other means.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He traveled to China in 1928 to visit the Xaverian Missionaries working there, arriving in Shanghai on 26 October 1928.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died on 5 November 1931, was beatified in 1996 and was canonized in 2011 by Pope Benedict XVI.",
+    "source": 0,
+    "kind": "history"
+   }
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Turn-beat scene called Conforti an 'elderly archbishop'. He was 63 in 1928, and the sources say nothing about his appearance. Changed to 'an archbishop in his sixties'.",
+   "Turn-beat scene showed a 'modest mission church in Shanghai' with a welcoming crowd. The sources say only that he arrived in Shanghai and inspected the missionaries' work. Made the setting generic and less specific.",
+   "The founding scene places the first members in a Parma seminary study. The sources give the date of founding but not the place. Left as a visual only, since no narration claims it."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The narration is supported by the source. The feast date of November 5 matches his death date, but the source never states a feast day, so please confirm it against the liturgical calendar. The map pin is Parma city, a few km from his birthplace of Casalora di Ravadese."
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Guido Maria Conforti",
+   "url": "https://en.wikipedia.org/wiki/Guido_Maria_Conforti"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 66.7,
+ "caption": "Rejected by the Jesuits and the Salesians, he founded his own mission and sent it to China.\n\nSaint Guido Maria Conforti · Feast day: November 5\nSaint Guido Maria Conforti, turned away from the missionary orders he sought, founded the Xaverian Missionaries and sent them to China.\n\nSaint Guido Maria Conforti, pray for us. 🕯\n\nSave this to pray with again next November 5.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintguidomariaconforti #parma",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-05/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-05/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-05/preview.mp4"
+ },
+ "review_message_id": 35
+}
