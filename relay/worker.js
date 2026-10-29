@@ -79,6 +79,11 @@ export default {
 			return Response.json(await inbox(env).take(offset));
 		}
 
+		// Telegram's view of webhook delivery (pending count, last error).
+		if (url.pathname === '/webhook-info' && req.method === 'GET') {
+			return Response.json(await (await tg(env, 'getWebhookInfo', {})).json());
+		}
+
 		// One-time switch of the bot to this relay (POST /setup) or back to polling (POST /setup?off=1).
 		if (url.pathname === '/setup' && req.method === 'POST') {
 			const r = url.searchParams.get('off')
