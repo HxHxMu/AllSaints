@@ -34,6 +34,7 @@ SCHEMA = """{
  "summary": "one-sentence summary for the caption",
  "youtube_title": "YouTube Shorts title, max 60 characters: the saint's name plus what makes the story remarkable, e.g. 'St. Frumentius: The Shipwrecked Boy Who Became a Bishop'; searchable, no clickbait, no emojis",
  "hashtags": ["#saintfrumentius", "#ethiopia", "..."],
+ "share_cta": "Know someone named Frumentius? Send them their saint.",
  "claims": [{"claim": "...", "source": 0, "kind": "history|tradition"}]
 }"""
 
@@ -64,7 +65,8 @@ Requirements:
 - "dates": use "c." when uncertain; "fl." if only active dates are known.
 - pronunciations: map any unusual name to a phonetic respelling (one token, hyphens allowed) so the narrator says it right; leave empty if none.
 - Every factual claim must appear in "claims" with its source index; label legendary material kind "tradition" and phrase it that way in the script.
-- 8-14 hashtags, lowercase, including the saint's name tag and place tags.
+- 8-14 hashtags, lowercase: first the saint's name tag (e.g. #saintfrumentius), next the most specific place or patronage tag, then others.
+- "share_cta": one gentle caption line inviting a share, only if it is natural: by name ("Know someone named Winifred? Send them their saint.") when the saint's name is still given today, or by patronage ("Send this to a nurse who could use a patron today.") only if the sources state the patronage. Otherwise "". Never pushy, no "comment Amen".
 - "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
     for attempt in range(3):
         s = claude_json(prompt, system=SYSTEM)

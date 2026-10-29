@@ -85,7 +85,7 @@ Locally they live in `.env` (gitignored). **Never print/cat `.env`; never ask Lu
 - Remotion license: free for individuals/≤3-person companies — fine for now.
 
 ## Next steps
-1. Luis: delete the private test Short in YouTube Studio; **apply for the YouTube API audit**.
+1. YouTube API audit **submitted 2026-10-28** (evidence in `work/audit/`). On approval → `youtube_privacy: "public"`. Test Short UrIN6H8q_18 is the reviewer's example — delete after review, before 10-28's real upload.
 2. Watch the first live day (10-29): Reel posts + private Short uploads; publish the Short from Studio.
 3. Keep the review queue ≥7 days approved.
 4. Website (see Monetization open questions) → saint pages, email signup, support page.
@@ -107,4 +107,5 @@ cd video && npx remotion studio src/index.js          # preview templates with s
 - `node_modules/` is not in the repo — run `npm ci` in `video/`.
 - `work/` and `video/public/episodes/*` (except `sample/`) are scratch, gitignored.
 - Keep writing rules in `brand/brand.json`, not hard-coded in prompts — prompts read them.
+- Captions: 5 Instagram hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint tags) and one rotating CTA (`caption.ctas` + the script's `share_cta`). CTAs live in captions/descriptions only, never in the narration; no engagement bait.
 - Accuracy and reverence beat engagement tricks. Never invent saint quotes; label legend as tradition.
