@@ -67,7 +67,7 @@ Locally they live in `.env` (gitignored). **Never print/cat `.env`; never ask Lu
 ### YouTube specifics
 - Google Cloud project "All Saints": YouTube Data API v3 enabled; OAuth app **External, In production, unverified** (fine — 100-user cap, Luis is 1). Don't add a logo on Branding (forces verification). Home-page branding verification fails for github.com — ignore it.
 - Re-auth: `.venv/bin/python engine/pipeline.py yt-auth <client_secret.json>` (writes `.env` + gh secrets). Luis's Google login also owns **Alianza Divina Collective** — always pick **@AllHolySaints**; `config.youtube_channel` makes uploads refuse any other channel. Verify with `yt-whoami`.
-- **Uploads are private** (`config.youtube_privacy: "private"`) until Google's YouTube API compliance audit passes — Luis publishes from Studio via the Telegram link. After approval → set `"public"`.
+- **Uploads are public** (`config.youtube_privacy: "public"`, since 2026-10-29). No API audit needed: Google closed ours, saying uploads from unverified projects aren't forced private; default quota is 100 uploads/day. Set `"private"` to publish from Studio by hand instead.
 - Title from `script.youtube_title` (fallback "St. X, Region") + `#Shorts`; category Education; not made for kids.
 
 ## Status (2026-10-28)
@@ -85,8 +85,8 @@ Locally they live in `.env` (gitignored). **Never print/cat `.env`; never ask Lu
 - Remotion license: free for individuals/≤3-person companies — fine for now.
 
 ## Next steps
-1. YouTube API audit **submitted 2026-10-28** (evidence in `work/audit/`). On approval → `youtube_privacy: "public"`. Test Short UrIN6H8q_18 is the reviewer's example — delete after review, before 10-28's real upload.
-2. Watch the first live day (10-29): Reel posts + private Short uploads; publish the Short from Studio.
+1. Delete test Short UrIN6H8q_18 in Studio (it was the audit example; audit closed as unnecessary).
+2. Watch the first public Short upload (10-30) arrive public; 10-29's went up private and is published from Studio.
 3. Keep the review queue ≥7 days approved.
 4. Website (see Monetization open questions) → saint pages, email signup, support page.
 5. Haiku routing for cheap Claude steps; flag ElevenLabs-fallback episodes.

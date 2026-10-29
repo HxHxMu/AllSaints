@@ -70,9 +70,9 @@ Instagram and YouTube are tracked separately: a failed Short retries up to 3x an
    It writes the three `YT_*` values to `.env` and, if `gh` is installed, to GitHub secrets (Production environment).
 6. Check: `python engine/pipeline.py yt-whoami` → should print the channel name.
    Put its handle in `state/config.json` as `"youtube_channel": "@…"`: uploads refuse to run for any other channel.
-7. **API audit:** uploads from a new API project are forced *private* until Google's YouTube API compliance audit
-   passes. Apply via the "YouTube API Services – Audit and Quota Extension" form. Until then set
-   `"youtube_privacy": "private"` in `state/config.json` and hit Publish in YouTube Studio (the Telegram message links it).
+7. **Privacy:** uploads go out as `"youtube_privacy"` in `state/config.json` (`"public"`). No API audit is needed:
+   Google no longer forces uploads from unverified projects to private, and the default quota is 100 uploads/day.
+   Set `"private"` to review each Short in YouTube Studio first (the Telegram message links it).
 8. YouTube Studio → Settings → Channel → Advanced: audience **"No, not made for kids"** (also set per upload).
 
 Test one: `python engine/pipeline.py youtube 2026-10-28` (needs the episode's release assets).

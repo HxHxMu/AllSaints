@@ -1,8 +1,8 @@
 """YouTube Shorts upload (Data API v3, OAuth refresh token; no Google client libraries needed).
 
 Secrets: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (get them once with `pipeline.py yt-auth <client_secret.json>`).
-Until Google's API compliance audit passes, uploads from a new API project are forced to private:
-set config "youtube_privacy": "private" and publish from YouTube Studio by hand.
+Privacy comes from config "youtube_privacy" (public; set "private" to publish from YouTube Studio by hand).
+Uploads from unverified API projects are no longer forced private (Google, 2026-10), so no audit is needed.
 """
 import http.server, json, secrets, shutil, subprocess, urllib.parse, webbrowser
 from pathlib import Path
