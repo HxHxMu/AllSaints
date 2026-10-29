@@ -104,49 +104,70 @@ def _status_text():
     return "\n".join(lines)
 
 
+def _fetch_updates(offset):
+    """From the Cloudflare relay (relay/worker.js) when configured: Telegram then pushes updates to it by
+    webhook and getUpdates is disabled. The relay drops ids below `offset`, i.e. those already committed."""
+    relay = env("TELEGRAM_RELAY_URL")
+    if not relay:
+        return api("getUpdates", offset=offset, timeout=0, allowed_updates=["message", "callback_query"]) or []
+    try:  # a relay outage must not stop publishing; queued updates are picked up next poll
+        r = http.get(f"{relay.rstrip('/')}/updates", params={"offset": offset}, timeout=30,
+                     headers={"Authorization": f"Bearer {env('TELEGRAM_RELAY_SECRET', '')}"})
+        r.raise_for_status()
+        return [u for u in r.json() if u["update_id"] >= offset]
+    except Exception as e:
+        log("Telegram relay unavailable:", e)
+        return []
+
+
+def _answer(cq, **kw):
+    if not cq.get("_answered"):  # the relay already answered it the moment it was tapped
+        api("answerCallbackQuery", callback_query_id=cq["id"], **kw)
+
+
 def process_updates():
     """Handle button presses and messages. Returns list of actions for the pipeline (e.g. 'generate')."""
     st = load_json("telegram.json", {"offset": 0, "pending": None})
-    ups = api("getUpdates", offset=st["offset"], timeout=0, allowed_updates=["message", "callback_query"]) or []
+    ups = _fetch_updates(st["offset"])
     actions = []
     cfg = load_config()
     for u in ups:
         st["offset"] = u["update_id"] + 1
         if "callback_query" in u:
-            cq = u["callback_query"]
+            cq = dict(u["callback_query"], _answered=u.get("_answered"))
             if cfg.get("telegram_chat_id") and cq["message"]["chat"]["id"] != cfg["telegram_chat_id"]:
                 continue
             kind, ep_id = cq["data"].split(":", 1)
             log(f"Telegram button: {kind} {ep_id}")
             ep = load_episode(ep_id)
             if not ep:
-                api("answerCallbackQuery", callback_query_id=cq["id"], text="Episode not found")
+                _answer(cq, text="Episode not found")
                 continue
             if kind == "approve":
                 ep["status"] = "approved"
                 save_episode(ep)
-                api("answerCallbackQuery", callback_query_id=cq["id"], text="Approved ✅")
+                _answer(cq, text="Approved ✅")
                 api("editMessageReplyMarkup", chat_id=cq["message"]["chat"]["id"], message_id=cq["message"]["message_id"],
                     reply_markup={"inline_keyboard": [[{"text": f"✅ Approved – posts {ep['date']}", "callback_data": f"noop:{ep_id}"}],
                                                       [{"text": "↩️ Undo", "callback_data": f"unapprove:{ep_id}"}]]})
             elif kind == "unapprove":
                 ep["status"] = "review"
                 save_episode(ep)
-                api("answerCallbackQuery", callback_query_id=cq["id"], text="Back in review")
+                _answer(cq, text="Back in review")
                 api("editMessageReplyMarkup", chat_id=cq["message"]["chat"]["id"], message_id=cq["message"]["message_id"], reply_markup=buttons(ep_id))
             elif kind in ("redo", "caption"):
                 st["pending"] = {"kind": kind, "ep": ep_id}
-                api("answerCallbackQuery", callback_query_id=cq["id"])
+                _answer(cq)
                 send("What should change? (e.g. 'stronger hook', 'better art for the second scene', 'slower ending'). Send 'fresh' for a new take."
                      if kind == "redo" else "Send the new caption text (I'll keep the sources, credits and hashtags).")
             elif kind == "newsaint":
                 ep["status"] = "redo_requested"
                 ep["redo"] = {"new_saint": True, "note": None}
                 save_episode(ep)
-                api("answerCallbackQuery", callback_query_id=cq["id"], text="Picking a different saint…")
+                _answer(cq, text="Picking a different saint…")
                 actions.append("generate")
             else:
-                api("answerCallbackQuery", callback_query_id=cq["id"])
+                _answer(cq)
             continue
         msg = u.get("message") or {}
         text = (msg.get("text") or "").strip()

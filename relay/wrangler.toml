@@ -1,0 +1,16 @@
+name = "allsaints-telegram-relay"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+OWNER_CHAT_ID = "77355330"
+GH_REPO = "HxHxMu/AllSaints"
+GH_WORKFLOW = "poll.yml"
+
+[[durable_objects.bindings]]
+name = "INBOX"
+class_name = "Inbox"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Inbox"]
