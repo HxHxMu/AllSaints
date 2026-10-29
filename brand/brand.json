@@ -89,6 +89,7 @@
   "youtube": {
     "disclosure": "Researched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.",
     "footer": "Subscribe for a forgotten saint every morning, and pray with us.",
+    "support": "🕯 Help keep the forgotten remembered. Light a candle: {url}",
     "synthetic_media": false
   },
   "illustration": {

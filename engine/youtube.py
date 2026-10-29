@@ -50,6 +50,8 @@ def build_description(ep):
     tags = " ".join(dict.fromkeys(saint_tags(s, 1) + CAP["hashtags_base"]))  # YouTube shows the first 3 above the title
     share = (s.get("share_cta") or "").strip()
     yt = BRAND.get("youtube", {})
+    support = load_config().get("support_url", "").strip()  # Ko-fi page; the line is skipped until it's set
+    support = yt.get("support", "{url}").format(url=support) + "\n" if support else ""
     desc = f"""{s.get('caption_hook', '').strip()}
 
 {s.get('summary', '').strip()}
@@ -64,7 +66,7 @@ Sources:
 Art: {credits}
 {yt.get('disclosure', '')}
 
-{share + chr(10) if share else ''}{yt.get('footer', '')}
+{share + chr(10) if share else ''}{support}{yt.get('footer', '')}
 
 {tags} #Shorts"""
     return desc.replace("<", "").replace(">", "")[:4900]  # YouTube rejects angle brackets
