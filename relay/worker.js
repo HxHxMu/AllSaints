@@ -7,6 +7,9 @@
 //
 // Secrets (wrangler secret put): TELEGRAM_BOT_TOKEN, WEBHOOK_SECRET, RELAY_SECRET, GH_TOKEN
 // Vars (wrangler.toml): OWNER_CHAT_ID, GH_REPO, GH_WORKFLOW
+// GitHub secrets for the poll: TELEGRAM_RELAY_URL (this Worker's URL), TELEGRAM_RELAY_SECRET (= RELAY_SECRET).
+// Revert to plain polling: POST /setup?off=1, then delete the TELEGRAM_RELAY_URL secret.
+// Check GET /webhook-info that `bot` is the All Saints bot before any POST /setup.
 import {DurableObject} from 'cloudflare:workers';
 
 const TOASTS = {
