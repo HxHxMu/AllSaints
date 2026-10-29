@@ -1,14 +1,17 @@
 # A.S.† — All Saints
 
-Daily one-minute Instagram Reels on lesser-known Catholic saints, posted on their feast day.
+Daily one-minute videos on lesser-known Catholic saints, posted on their feast day as
+**Instagram Reels** ([@all.holy.saints](https://www.instagram.com/all.holy.saints/)) and **YouTube Shorts** ([@AllHolySaints](https://www.youtube.com/@AllHolySaints)).
 Fully automated, with human approval in Telegram before anything goes live.
+
+**[Privacy Policy](PRIVACY.md) · [Terms of Service](TERMS.md)** · This project uses YouTube API Services: [YouTube Terms of Service](https://www.youtube.com/t/terms) · [Google Privacy Policy](https://policies.google.com/privacy)
 
 ```
 Wikidata feast calendar ─► Claude picks the saint ─► Wikipedia + Catholic Encyclopedia (1913)
    ─► Claude writes script ─► independent Claude fact-check ─► Wikimedia Commons art (PD / CC)
    ─► Claude vision picks images + focus points ─► ElevenLabs narration (word timestamps)
    ─► Remotion renders 1080×1920 Reel + cover ─► GitHub Release ─► Telegram: ✅ / 🔁 / ✏️ / 🔄
-   ─► approved Reel publishes on its feast day at the set time (Instagram API)
+   ─► approved episode publishes on its feast day at the set time (Instagram API + YouTube Data API)
 ```
 
 ## How it runs (GitHub Actions, free on a public repo)

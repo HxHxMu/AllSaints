@@ -1,5 +1,7 @@
 # All Saints — Privacy Policy
 
+This project uses **YouTube API Services**.
+
 _Last updated: October 28, 2026_
 
 All Saints (A.S.†) is a small automated publishing tool run by Luis Bonilla. It researches, produces and posts short videos about Catholic saints to the All Saints accounts on Instagram (@all.holy.saints) and YouTube.
@@ -15,6 +17,12 @@ All Saints (A.S.†) is a small automated publishing tool run by Luis Bonilla. I
 
 ## Storage
 OAuth credentials are stored as encrypted secrets in the project's GitHub repository settings and are used only to post the channel's own videos. Episode data (scripts, sources, publishing status) contains no personal data.
+
+## Retention and deletion
+- **Access tokens** are refreshed on each run and not stored. The **refresh token** is kept only as an encrypted GitHub secret until access is revoked; revoking access (links below) makes it unusable immediately, and the owner then deletes the secret.
+- **YouTube API data** read by the tool (the channel's own name, handle and subscriber count) is used only during the run to confirm the right channel is connected and is not stored.
+- **Uploaded video IDs and URLs** of the channel's own videos are kept in the project's episode records so the same video is not posted twice. Deleting a video on YouTube removes it; its record can be deleted on request.
+- To request deletion of any data, use the contact below; requests are handled within 7 days.
 
 ## Google and YouTube
 This tool uses YouTube API Services. By watching All Saints videos on YouTube you are subject to the [YouTube Terms of Service](https://www.youtube.com/t/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
