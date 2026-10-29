@@ -1,8 +1,8 @@
 {
  "id": "2026-10-29",
  "date": "2026-10-29",
- "status": "approved",
- "updated": "2026-10-29T01:38:49+00:00",
+ "status": "published",
+ "updated": "2026-10-29T11:31:23+00:00",
  "saint": {
   "qid": "Q947675",
   "name": "Saint Narcissus of Jerusalem",
@@ -196,5 +196,16 @@
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-29/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-29/cover.jpg"
  },
- "review_message_id": 6
+ "review_message_id": 6,
+ "published": {
+  "media_id": "17877808548636524",
+  "permalink": "https://www.instagram.com/reel/DfE53F6EdF8/"
+ },
+ "published_at": "2026-10-29T07:30-04:00",
+ "youtube": {
+  "id": "UgE71CxG_Hk",
+  "url": "https://youtube.com/shorts/UgE71CxG_Hk",
+  "privacy": "private",
+  "published_at": "2026-10-29T07:31-04:00"
+ }
 }
