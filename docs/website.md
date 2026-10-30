@@ -1,7 +1,7 @@
 # Website — planned, not built (decisions 2026-10-29)
 
 - **Hosting:** Cloudflare Pages; GitHub branch previews, merge to main = production. Code in `/site` of this repo (add `site/CLAUDE.md` when it exists).
-- **Domain:** own domain (allholysaints.com suggested, not bought yet — blocks launch).
+- **Domain:** **allholysaints.com** (bought 2026-10-29). DNS on Cloudflare; email via Cloudflare Email Routing.
 - **Languages:** English + Spanish at launch (`/es/`, hreflang).
 - **Stack:** Astro static site built from `state/episodes/*.json`; Tailwind v4 with brand.json tokens; Fontsource fonts; astro-embed YouTube (tap-to-load); Pagefind search; Satori share cards; sitemap/RSS/schema.org.
 - **Revenue pieces:** Ko-fi "Light a candle"; Bookshop.org affiliate only (FTC disclosure); Beehiiv weekly Sunday digest (signup via a Pages Function + Turnstile).

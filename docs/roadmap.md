@@ -1,6 +1,6 @@
 # Open to-dos (update as they close)
 
-**Luis:** set the 10-29 Short (UgE71CxG_Hk) public in Studio; delete test Short UrIN6H8q_18; add the Ko-fi link to the IG bio; buy the domain.
+**Luis:** set the 10-29 Short (UgE71CxG_Hk) public in Studio; delete test Short UrIN6H8q_18; add the Ko-fi link to the IG bio; move allholysaints.com DNS to Cloudflare (if not bought there) and set up Email Routing.
 **Watch:** 10-30 is the first automatic public Short.
 **Build next:** website design pass (`docs/website.md`); cost report from `ep.usage` after a few generate runs; Haiku for `select_saint`.
 **Keep:** review queue ≥7 days approved.
