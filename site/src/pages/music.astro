@@ -1,0 +1,78 @@
+---
+// Blue Chant, Luis's album. Like the videos, the player is not on the page until it's tapped:
+// no SoundCloud request (or cookie) before then.
+import { Picture } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import { SUPPORT_URL } from "../lib/episodes";
+import cover from "../assets/music/blue-chant-vol1.jpg";
+
+const ALBUM = "https://soundcloud.com/all-holy-saints/sets/blue-chant-volume-1";
+const PLAYLIST_ID = "2322287526";
+const tracks = [
+  ["Ave Maria", "ave-maria-1"],
+  ["Benedicta in Mulieribus", "benedicta-in-mulieribus-2"],
+  ["Veritatis", "veritatis-3"],
+  ["Trinitas", "trinitas-4"],
+  ["Rosa Mystica", "rosa-mystica-5"],
+];
+const roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+---
+<Base title="Blue Chant · Music" description="Blue Chant, Volume I: Gregorian chant played as jazz. Original music for prayer, study and the quiet hours.">
+  <article class="wrap music">
+    <div class="cover" data-sc={PLAYLIST_ID}>
+      <Picture src={cover} alt="Blue Chant, Volume I: a monk-cantor sings at a lectern beside an upright bass, under a blue night sky"
+        formats={["avif", "webp"]} widths={[390, 700, 1000, 1400]} sizes="(min-width: 1024px) 40vw, 100vw" loading="eager" />
+    </div>
+    <div class="text">
+      <p class="label">The music of All Saints</p>
+      <h1 class="name">Blue Chant</h1>
+      <p class="devotional lead">Volume I. Gregorian chant played as jazz.</p>
+      <button class="rubric" type="button" data-listen>
+        <span>▶ Listen here<small>Five pieces, all original</small></span><span aria-hidden="true">›</span>
+      </button>
+      <p class="fine muted">The player loads from SoundCloud when you tap. Or <a href={ALBUM}>listen on SoundCloud</a>.</p>
+      <ol class="tracks">
+        {tracks.map(([title, slug], i) => (
+          <li><span class="numeral">{roman[i]}</span> <a href={`https://soundcloud.com/all-holy-saints/${slug}`}>{title}</a></li>
+        ))}
+      </ol>
+      <p>Old modes and plainsong melodies over upright bass, brushed drums and late-night piano. Music for prayer, study and the quiet hours.</p>
+      <h2 class="label">How it's made</h2>
+      <p>Composed and produced by Luis Bonilla, made with AI tools.</p>
+      {SUPPORT_URL && <a class="rubric support" href={SUPPORT_URL} rel="noopener"><span>🕯 Light a candle<small>Help keep the forgotten remembered.</small></span><span aria-hidden="true">›</span></a>}
+    </div>
+  </article>
+</Base>
+
+<script>
+  const cover = document.querySelector<HTMLElement>(".cover[data-sc]");
+  document.querySelector("[data-listen]")?.addEventListener("click", () => {
+    if (!cover || cover.classList.contains("playing")) return cover?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const f = document.createElement("iframe");
+    const url = encodeURIComponent(`https://api.soundcloud.com/playlists/${cover.dataset.sc}`);
+    f.src = `https://w.soundcloud.com/player/?url=${url}&color=%237a1f1f&auto_play=true&visual=false&show_comments=false&show_reposts=false&show_teaser=false`;
+    f.title = "Blue Chant, Volume I (SoundCloud player)";
+    f.allow = "autoplay; encrypted-media";
+    cover.classList.add("playing");
+    cover.append(f);
+    cover.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+</script>
+
+<style>
+  .music { display: grid; gap: 28px; padding-top: 16px; }
+  .cover :global(img) { width: 100%; height: auto; aspect-ratio: 1; display: block; }
+  .cover :global(iframe) { width: 100%; height: 400px; border: 0; margin-top: 12px; display: block; }
+  .text { display: grid; gap: 16px; max-width: 42rem; align-content: start; }
+  .lead { font-size: 1.4375rem; color: var(--gilt-light); }
+  [data-listen] { text-align: left; }
+  .fine { font-size: 1rem; }
+  .tracks { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 10px; font-size: 1.1875rem; }
+  .tracks .numeral { display: inline-block; min-width: 2.2em; }
+  h2 { color: var(--gilt); font-weight: 400; margin-top: 12px; }
+  .support { margin-top: 12px; max-width: 30rem; }
+  @media (min-width: 1024px) {
+    .music { grid-template-columns: 5fr 7fr; gap: 56px; padding-top: 32px; }
+    .cover { position: sticky; top: 24px; align-self: start; }
+  }
+</style>
