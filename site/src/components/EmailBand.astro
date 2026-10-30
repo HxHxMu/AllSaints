@@ -32,6 +32,20 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   if (new URLSearchParams(location.search).get("signup") === "error") {
     document.querySelector<HTMLElement>("[data-signup-error]")?.removeAttribute("hidden");
   }
+  // Turnstile verifies in the background; a quick submit can beat it and arrive without a token.
+  // Hold the submit until the token is there (or ~20 s pass), then send the form as usual.
+  const form = document.querySelector<HTMLFormElement>('form[action="/api/subscribe"]');
+  form?.addEventListener("submit", (e) => {
+    const token = () => form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')?.value;
+    if (token()) return;
+    e.preventDefault();
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (button) button.disabled = true;
+    const started = Date.now();
+    const wait = setInterval(() => {
+      if (token() || Date.now() - started > 20000) { clearInterval(wait); form.submit(); }
+    }, 250);
+  });
 </script>
 
 <style>
