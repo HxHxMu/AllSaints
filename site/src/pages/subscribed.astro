@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Subscribed" description="You're subscribed to All Saints.">
+  <section class="wrap note">
+    <h1 class="name">You're subscribed</h1>
+    <p class="devotional">Welcome. A week of forgotten saints will arrive each Sunday.</p>
+    <p lang="es" class="devotional es">Bienvenido. Cada domingo recibirás una semana de santos olvidados.</p>
+    <p><a href="/">Today's saint</a> · <a href="/es/" lang="es">El santo de hoy</a></p>
+  </section>
+</Base>
+<style>
+  .note { padding-block: 96px; display: grid; gap: 16px; max-width: 42rem; }
+  .devotional { font-size: 1.4375rem; }
+  .es { color: var(--ash); }
+</style>

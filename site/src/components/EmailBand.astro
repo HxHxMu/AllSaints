@@ -1,0 +1,52 @@
+---
+// The one lapis band (DESIGN.md): after the prayer and the candle, never before.
+// Shown only once Turnstile is configured (PUBLIC_TURNSTILE_SITE_KEY at build time).
+import type { Lang } from "../lib/episodes";
+import { t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const T = t[lang];
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+{siteKey && (
+  <section class="band" id="signup" aria-labelledby="signup-h">
+    <form method="post" action="/api/subscribe" class="inner">
+      <h2 id="signup-h" class="devotional">{T.bandLine}</h2>
+      <p class="err" hidden data-signup-error role="alert">{T.bandError}</p>
+      <input type="hidden" name="lang" value={lang}>
+      <input type="hidden" name="from" value={Astro.url.pathname}>
+      <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+      <div class="row">
+        <label class="visually-hidden" for="signup-email">{T.bandEmail}</label>
+        <input id="signup-email" type="email" name="email" required autocomplete="email" placeholder={T.bandEmail}>
+        <button class="rubric" type="submit">{T.bandButton}</button>
+      </div>
+      <div class="cf-turnstile" data-sitekey={siteKey} data-theme="dark" data-appearance="interaction-only" data-language={lang}></div>
+      <p class="fine">{T.bandFine}</p>
+    </form>
+  </section>
+)}
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+<script>
+  if (new URLSearchParams(location.search).get("signup") === "error") {
+    document.querySelector<HTMLElement>("[data-signup-error]")?.removeAttribute("hidden");
+  }
+</script>
+
+<style>
+  .band { background: var(--lapis); margin-top: 56px; }
+  .inner { max-width: 46rem; margin-inline: auto; padding: 36px var(--gutter); display: grid; gap: 14px; }
+  h2 { font-size: 1.5625rem; line-height: 1.25; color: var(--vellum); }
+  .row { display: grid; gap: 10px; }
+  input[type="email"] {
+    width: 100%; padding: 14px 12px; border: 1px solid rgb(239 230 210 / 45%); border-radius: 3px;
+    background: rgb(13 11 9 / 35%); color: var(--vellum); font: 1.1875rem var(--text);
+  }
+  input[type="email"]::placeholder { color: rgb(239 230 210 / 65%); }
+  .rubric { justify-content: center; }
+  .fine { font-size: 1rem; color: rgb(239 230 210 / 80%); }
+  .err { color: var(--vellum); font-size: 1.0625rem; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  @media (min-width: 640px) { .row { grid-template-columns: 1fr auto; } .rubric { width: auto; } }
+</style>

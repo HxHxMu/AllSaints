@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Check your email" description="Confirm your subscription to All Saints.">
+  <section class="wrap note">
+    <h1 class="name">Check your email</h1>
+    <p class="devotional">We sent you a confirmation link. Tap it, and the saints will find you on Sunday.</p>
+    <p lang="es" id="es" class="devotional es">Te enviamos un enlace de confirmación. Tócalo y los santos te encontrarán el domingo.</p>
+    <p><a href="/">Today's saint</a> · <a href="/es/" lang="es">El santo de hoy</a></p>
+  </section>
+</Base>
+<style>
+  .note { padding-block: 96px; display: grid; gap: 16px; max-width: 42rem; }
+  .devotional { font-size: 1.4375rem; }
+  .es { color: var(--ash); }
+</style>

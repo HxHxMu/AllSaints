@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Poster from "./Poster.astro";
+import EmailBand from "./EmailBand.astro";
 import { neighbors, manuscriptDate, minutes, monthName, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 
@@ -83,6 +84,7 @@ const jsonld = {
       <p class="feast muted">{T.feast}: {feast}</p>
     </div>
   </article>
+  <EmailBand lang={lang} />
 </Base>
 
 <style>

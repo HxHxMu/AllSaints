@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://allholysaints.com",
   trailingSlash: "always",
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !/\/(check-email|subscribed)\/$/.test(page) })],
   build: { inlineStylesheets: "always" },
   vite: { server: { fs: { allow: [".."] } } },
 });
