@@ -171,19 +171,18 @@ def _playlist_id(token, title, ep=None):
 
 
 def set_playlist_cover(token, playlist_id, jpg: Path):
-    """Upload a square JPEG as the playlist's image (playlistImages; replaces an existing one)."""
+    """Upload a square JPEG as the playlist's image (playlistImages, type "hero", 1:1 only; replaces an existing one)."""
     h = {"Authorization": f"Bearer {token}"}
     have = session.get(f"{API}/playlistImages", params={"part": "snippet", "parent": playlist_id}, headers=h, timeout=30)
-    existing = (have.json().get("items") or [None])[0] if have.status_code == 200 else None
+    for old in (have.json().get("items") or []) if have.status_code == 200 else []:
+        session.delete(f"{API}/playlistImages", params={"id": old["id"]}, headers=h, timeout=30)  # update() rejects every part
     meta = {"snippet": {"playlistId": playlist_id, "type": "hero"}}
-    if existing:
-        meta["id"] = existing["id"]
     b = "allsaints" + secrets.token_hex(8)
     body = (f"--{b}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{json.dumps(meta)}\r\n"
             f"--{b}\r\nContent-Type: image/jpeg\r\n\r\n").encode() + jpg.read_bytes() + f"\r\n--{b}--".encode()
-    r = (session.put if existing else session.post)(
-        "https://www.googleapis.com/upload/youtube/v3/playlistImages", params={"part": "snippet", "uploadType": "multipart"},
-        headers={**h, "Content-Type": f"multipart/related; boundary={b}"}, data=body, timeout=120)
+    r = session.post("https://www.googleapis.com/upload/youtube/v3/playlistImages",
+                     params={"part": "snippet", "uploadType": "multipart"},
+                     headers={**h, "Content-Type": f"multipart/related; boundary={b}"}, data=body, timeout=120)
     if r.status_code != 200:
         raise RuntimeError(f"Playlist cover upload failed {r.status_code}: {r.text[:300]}")
 
@@ -196,7 +195,13 @@ def _new_playlist_cover(token, playlist_id, title, ep):
         assets = ep.get("assets", {})
         url, clean = (assets["art.jpg"], True) if assets.get("art.jpg") else (assets["cover.jpg"], False)
         art = storage.download(url, WORK / f"{ep['id']}-playlist-art.jpg")
-        jpg = playlist_cover.make_cover(title, art, WORK / f"playlist-{playlist_id}.jpg", cover_crop=not clean)
+        try:
+            focus, face_y, zoom = *playlist_cover.locate_saint(art), 0.8
+        except Exception as e:
+            log("Saint not located, centred crop:", str(e)[:120])
+            focus, face_y, zoom = 0.5, None, 1.0
+        jpg = playlist_cover.make_cover(title, art, WORK / f"playlist-{playlist_id}.jpg", cover_crop=not clean,
+                                        focus=focus, face_y=face_y, zoom=zoom)
         set_playlist_cover(token, playlist_id, jpg)
         log("Playlist cover set:", title)
     except Exception as e:
