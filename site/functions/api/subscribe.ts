@@ -39,8 +39,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }
   }
 
-  if (!env.BEEHIIV_API_KEY || !env.BEEHIIV_PUBLICATION_ID) console.log("beehiiv env missing");
-  const r = await fetch(`https://api.beehiiv.com/v2/publications/${env.BEEHIIV_PUBLICATION_ID}/subscriptions`, {
+  // tolerate stray text pasted around the id in the dashboard
+  const pub = String(env.BEEHIIV_PUBLICATION_ID || "").match(/pub_[0-9a-f-]+/i)?.[0];
+  if (!env.BEEHIIV_API_KEY || !pub) console.log("beehiiv env missing");
+  const r = await fetch(`https://api.beehiiv.com/v2/publications/${pub}/subscriptions`, {
     method: "POST",
     headers: { Authorization: `Bearer ${env.BEEHIIV_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
