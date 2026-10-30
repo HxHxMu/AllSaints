@@ -1,8 +1,8 @@
 {
  "id": "2026-10-30",
  "date": "2026-10-30",
- "status": "approved",
- "updated": "2026-10-29T05:40:17+00:00",
+ "status": "published",
+ "updated": "2026-10-30T11:31:32+00:00",
  "saint": {
   "qid": "Q16509164",
   "name": "Saint Marcellus of Tangier",
@@ -197,5 +197,16 @@
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-30/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-30/cover.jpg"
  },
- "review_message_id": 13
+ "review_message_id": 13,
+ "published": {
+  "media_id": "17961387498238778",
+  "permalink": "https://www.instagram.com/reel/DfHepsFkUmn/"
+ },
+ "published_at": "2026-10-30T07:30-04:00",
+ "youtube": {
+  "id": "Q4Y2EpmtzOA",
+  "url": "https://youtube.com/shorts/Q4Y2EpmtzOA",
+  "privacy": "public",
+  "published_at": "2026-10-30T07:31-04:00"
+ }
 }
