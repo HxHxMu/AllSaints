@@ -1,6 +1,6 @@
 # All Saints — Terms of Service
 
-_Last updated: October 28, 2026_
+_Last updated: October 29, 2026_
 
 All Saints (A.S.†) publishes short devotional videos about Catholic saints on Instagram (@all.holy.saints) and YouTube. The publishing tool in this repository is operated solely by Luis Bonilla for the All Saints channel; it is not offered as a service to other users.
 
@@ -19,4 +19,4 @@ Original scripts, music, branding and artwork © All Saints. Public-domain and C
 See the [Privacy Policy](https://github.com/HxHxMu/AllSaints/blob/main/PRIVACY.md).
 
 ## Contact
-Message [@all.holy.saints](https://www.instagram.com/all.holy.saints/) on Instagram or open an issue at [github.com/HxHxMu/AllSaints](https://github.com/HxHxMu/AllSaints/issues).
+Email [hello@allholysaints.com](mailto:hello@allholysaints.com). You can also message [@all.holy.saints](https://www.instagram.com/all.holy.saints/) on Instagram.
