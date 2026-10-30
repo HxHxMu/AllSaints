@@ -2,7 +2,7 @@
  "id": "2026-10-30",
  "date": "2026-10-30",
  "status": "published",
- "updated": "2026-10-30T17:20:20+00:00",
+ "updated": "2026-10-30T17:21:44+00:00",
  "saint": {
   "qid": "Q16509164",
   "name": "Saint Marcellus of Tangier",
@@ -208,7 +208,11 @@
   "url": "https://youtube.com/shorts/Q4Y2EpmtzOA",
   "privacy": "public",
   "published_at": "2026-10-30T07:31-04:00",
-  "playlist_attempts": 1,
-  "playlist_error": "No module named 'anthropic'"
- }
+  "playlists": [
+   "Saints of October",
+   "Saints of Africa"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Africa"
 }

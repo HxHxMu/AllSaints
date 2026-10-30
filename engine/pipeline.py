@@ -345,7 +345,10 @@ def youtube_playlists(ep):
         yt["playlist_error"] = str(e)[:300]
         if yt["playlist_attempts"] == 1:
             hint = "\nRerun `pipeline.py yt-auth` once (playlists need a new permission)." if "403" in str(e) else ""
-            telegram.send(f"⚠️ Couldn't add {ep['saint']['display_name']} to playlists: {str(e)[:200]}{hint}")
+            try:
+                telegram.send(f"⚠️ Couldn't add {ep['saint']['display_name']} to playlists: {str(e)[:200]}{hint}")
+            except Exception:
+                traceback.print_exc()
     ep["youtube"] = yt
     save_episode(ep)
 

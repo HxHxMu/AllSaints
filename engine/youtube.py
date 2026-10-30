@@ -4,7 +4,7 @@ Secrets: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (get them once with `p
 Privacy comes from config "youtube_privacy" (public; set "private" to publish from YouTube Studio by hand).
 Uploads from unverified API projects are no longer forced private (Google, 2026-10), so no audit is needed.
 """
-import http.server, json, secrets, shutil, subprocess, urllib.parse, webbrowser
+import http.server, json, secrets, shutil, subprocess, time, urllib.parse, webbrowser
 from pathlib import Path
 import datetime as dt
 from common import BRAND, ROOT, claude_json, env, http as session, load_config, log
@@ -175,10 +175,18 @@ def add_to_playlists(ep, done=()):
     for title in playlist_titles(ep):
         if title in done:
             continue
-        r = session.post(f"{API}/playlistItems", params={"part": "snippet"}, timeout=30,
-                         headers={"Authorization": f"Bearer {token}"},
-                         json={"snippet": {"playlistId": _playlist_id(token, title),
-                                           "resourceId": {"kind": "youtube#video", "videoId": ep["youtube"]["id"]}}})
+        pid, vid, h = _playlist_id(token, title), ep["youtube"]["id"], {"Authorization": f"Bearer {token}"}
+        have = session.get(f"{API}/playlistItems", params={"part": "id", "playlistId": pid, "videoId": vid},
+                           headers=h, timeout=30)
+        if have.status_code == 200 and have.json().get("items"):  # already there (rerun after a partial failure)
+            added.append(title)
+            continue
+        for wait in (0, 5, 15, 30):  # a just-created playlist answers 409 "aborted" for a few seconds
+            time.sleep(wait)
+            r = session.post(f"{API}/playlistItems", params={"part": "snippet"}, timeout=30, headers=h,
+                             json={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+            if r.status_code not in (409, 500, 503):
+                break
         if r.status_code != 200:
             raise RuntimeError(f"Adding to playlist {title!r} failed {r.status_code}: {r.text[:300]}")
         added.append(title)
