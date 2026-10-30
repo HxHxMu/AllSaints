@@ -1,6 +1,7 @@
 // POST /api/subscribe: the email band's form → Beehiiv (double opt-in is on in Beehiiv, so
 // nobody is added until they confirm by email). Works without JavaScript: answers with redirects.
-// Secrets live in Cloudflare Pages → Settings → Variables and Secrets, never in the repo.
+// Secrets live in Cloudflare Pages → Settings → Variables and Secrets, never in the repo
+// (or: `npx wrangler pages secret put BEEHIIV_API_KEY --project-name allholysaints` in site/, then redeploy).
 interface Env {
   BEEHIIV_API_KEY: string;
   BEEHIIV_PUBLICATION_ID: string;
