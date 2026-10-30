@@ -6,13 +6,16 @@ Uploads from unverified API projects are no longer forced private (Google, 2026-
 """
 import http.server, json, secrets, shutil, subprocess, urllib.parse, webbrowser
 from pathlib import Path
-from common import BRAND, ROOT, env, http as session, load_config, log
+import datetime as dt
+from common import BRAND, ROOT, claude_json, env, http as session, load_config, log
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
 UPLOAD_URL = "https://www.googleapis.com/upload/youtube/v3/videos"
 API = "https://www.googleapis.com/youtube/v3"
-SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly"
+# youtube.force-ssl = manage playlists (added 2026-10-30; older refresh tokens lack it until `yt-auth` is rerun)
+SCOPES = ("https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly "
+          "https://www.googleapis.com/auth/youtube.force-ssl")
 CATEGORY_EDUCATION = "27"
 
 
@@ -110,6 +113,76 @@ def upload_short(ep, video_path: Path):
     vid = r.json()
     log("YouTube upload:", vid["id"], vid.get("status", {}).get("uploadStatus"), vid.get("status", {}).get("privacyStatus"))
     return {"id": vid["id"], "url": f"https://youtube.com/shorts/{vid['id']}", "privacy": vid.get("status", {}).get("privacyStatus", privacy)}
+
+
+CONTINENTS = ["Africa", "Asia", "Europe", "the Americas", "the Middle East", "Oceania"]
+
+
+def continent(ep):
+    """Where the saint lived, as one of CONTINENTS (Haiku, once per episode; cached on ep["continent"])."""
+    if ep.get("continent") in CONTINENTS:
+        return ep["continent"]
+    s = ep["saint"]
+    out = claude_json(
+        f"Saint: {s.get('name')} ({s.get('dates', '')}). Region: {s.get('region', '')}.\n"
+        f"Which one of {CONTINENTS} did this saint live and work in? Use today's geography: Egypt and North Africa "
+        "are Africa; the Holy Land, Syria, Lebanon, Mesopotamia, Persia, Arabia, Armenia and Anatolia (Asia Minor) are "
+        "the Middle East; Russia and Constantinople are Europe. If they lived in several, pick where they did their "
+        'main work or died. Answer JSON: {"continent": "..."}', label="continent", tier="haiku")
+    c = out.get("continent") if isinstance(out, dict) else None
+    if c not in CONTINENTS:
+        raise RuntimeError(f"Continent not recognised: {out}")
+    ep["continent"] = c
+    return c
+
+
+def playlist_titles(ep):
+    pl = BRAND.get("youtube", {}).get("playlists", {})
+    month = dt.date.fromisoformat(ep["id"]).strftime("%B")  # episode id = feast date
+    return [pl.get("month", "Saints of {name}").format(name=month),
+            pl.get("region", "Saints of {name}").format(name=continent(ep))]
+
+
+def _playlist_id(token, title):
+    """The channel's playlist with this exact title, created (public) if missing."""
+    h = {"Authorization": f"Bearer {token}"}
+    params = {"part": "snippet", "mine": "true", "maxResults": 50}
+    while True:
+        r = session.get(f"{API}/playlists", params=params, headers=h, timeout=30)
+        r.raise_for_status()
+        data = r.json()
+        for it in data.get("items", []):
+            if it["snippet"]["title"] == title:
+                return it["id"]
+        if not data.get("nextPageToken"):
+            break
+        params["pageToken"] = data["nextPageToken"]
+    desc = BRAND.get("youtube", {}).get("playlists", {}).get("description", "")
+    r = session.post(f"{API}/playlists", params={"part": "snippet,status"}, headers=h, timeout=30,
+                     json={"snippet": {"title": title, "description": desc.format(title=title), "defaultLanguage": "en"},
+                           "status": {"privacyStatus": "public"}})
+    if r.status_code != 200:
+        raise RuntimeError(f"Creating playlist {title!r} failed {r.status_code}: {r.text[:300]}")
+    log("YouTube playlist created:", title)
+    return r.json()["id"]
+
+
+def add_to_playlists(ep, done=()):
+    """Add the episode's Short to its month and continent playlists; skips titles in `done`. Returns the titles added."""
+    token = _access_token()
+    _check_channel(token)
+    added = []
+    for title in playlist_titles(ep):
+        if title in done:
+            continue
+        r = session.post(f"{API}/playlistItems", params={"part": "snippet"}, timeout=30,
+                         headers={"Authorization": f"Bearer {token}"},
+                         json={"snippet": {"playlistId": _playlist_id(token, title),
+                                           "resourceId": {"kind": "youtube#video", "videoId": ep["youtube"]["id"]}}})
+        if r.status_code != 200:
+            raise RuntimeError(f"Adding to playlist {title!r} failed {r.status_code}: {r.text[:300]}")
+        added.append(title)
+    return added
 
 
 def _check_channel(token):

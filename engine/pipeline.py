@@ -264,6 +264,7 @@ def publish_due():
             ep["status"] = "approved"
     if ep["status"] == "published":
         publish_youtube(ep)  # retries a Short that failed after the Reel went out
+        youtube_playlists(ep)
         return
     if ep["status"] != "approved" or now < due_time:
         return
@@ -316,6 +317,7 @@ def publish_youtube(ep, video=None):
         save_episode(ep)
         note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
         telegram.send(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
+        youtube_playlists(ep)
     except Exception as e:
         traceback.print_exc()
         yt["attempts"] = yt.get("attempts", 0) + 1
@@ -324,6 +326,28 @@ def publish_youtube(ep, video=None):
         save_episode(ep)
         if yt["attempts"] in (1, 3):
             telegram.send(f"❌ YouTube upload failed ({yt['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if yt["attempts"] < 3 else ""))
+
+
+def youtube_playlists(ep):
+    """Put a published Short in its month + continent playlists; max 3 attempts, never blocks anything else."""
+    import youtube, telegram
+    yt = ep.get("youtube") or {}
+    if not youtube.configured() or not yt.get("id") or yt.get("playlists_done") or yt.get("playlist_attempts", 0) >= 3:
+        return
+    try:
+        yt["playlists"] = yt.get("playlists", []) + youtube.add_to_playlists(ep, done=yt.get("playlists", []))
+        yt["playlists_done"] = True
+        yt.pop("playlist_error", None)
+        log("Playlists:", ", ".join(yt["playlists"]))
+    except Exception as e:
+        traceback.print_exc()
+        yt["playlist_attempts"] = yt.get("playlist_attempts", 0) + 1
+        yt["playlist_error"] = str(e)[:300]
+        if yt["playlist_attempts"] == 1:
+            hint = "\nRerun `pipeline.py yt-auth` once (playlists need a new permission)." if "403" in str(e) else ""
+            telegram.send(f"⚠️ Couldn't add {ep['saint']['display_name']} to playlists: {str(e)[:200]}{hint}")
+    ep["youtube"] = yt
+    save_episode(ep)
 
 
 def cmd_poll(a):
@@ -350,6 +374,8 @@ def main():
     ya = sub.add_parser("yt-auth")
     ya.add_argument("client_secret", help="OAuth client JSON downloaded from Google Cloud (Desktop app)")
     sub.add_parser("yt-whoami")
+    yp = sub.add_parser("yt-playlists", help="add published Shorts to their playlists (backfill / retry)")
+    yp.add_argument("episode", nargs="?", default="all")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -372,6 +398,12 @@ def main():
     elif a.cmd == "yt-auth":
         import youtube
         youtube.authorize(a.client_secret)
+    elif a.cmd == "yt-playlists":
+        eps = [load_episode(a.episode)] if a.episode != "all" else load_episodes().values()
+        for ep in eps:
+            if ep and (ep.get("youtube") or {}).get("id"):
+                ep["youtube"].pop("playlist_attempts", None)
+                youtube_playlists(ep)
     elif a.cmd == "yt-whoami":
         import youtube
         print(youtube.me())

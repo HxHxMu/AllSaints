@@ -90,7 +90,12 @@
     "disclosure": "Researched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.",
     "footer": "Subscribe for a forgotten saint every morning, and pray with us.",
     "support": "🕯 Help keep the forgotten remembered. Light a candle: {url}",
-    "synthetic_media": false
+    "synthetic_media": false,
+    "playlists": {
+      "month": "Saints of {name}",
+      "region": "Saints of {name}",
+      "description": "{title}. Lesser-known Catholic saints, one short story each, posted on their feast day."
+    }
   },
   "illustration": {
     "model": "gemini-3.1-flash-lite-image",
