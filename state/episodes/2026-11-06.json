@@ -1,0 +1,310 @@
+{
+ "id": "2026-11-06",
+ "date": "2026-11-06",
+ "status": "review",
+ "updated": "2026-10-30T09:26:26+00:00",
+ "saint": {
+  "qid": "Q374056",
+  "name": "Saint Nuno Álvares Pereira",
+  "display_name": "St. Nuno Álvares Pereira",
+  "dates": "1360 – 1431",
+  "region": "Portugal",
+  "feast": "November 6",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q374056",
+  "name": "Nuno Álvares Pereira",
+  "links": 28,
+  "enwiki": "Nuno_%C3%81lvares_Pereira",
+  "images": [
+   "S%C3%A3o%20nun%27alvares%20pereira.jpg",
+   "SantoCondest%C3%A1vel%202008-2.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Nuno Álvares Pereira",
+  "birth": 1360,
+  "death": 1431,
+  "lon": -9.14,
+  "lat": 38.71222222,
+  "selection_reason": "Nuno Álvares Pereira, the undefeated Portuguese constable who won at Aljubarrota in 1385, gave away his fortune, and ended his life as a humble Carmelite lay brother begging at the door, is a vivid, well-documented story of a warrior turned servant, and it brings a new region (Portugal) and era (late medieval) after a run of Wales, Gaul and Italy.",
+  "catholic_veneration": "Canonized by Pope Benedict XVI on 26 April 2009 (beatified 1918); his feast on 6 November is kept in the Carmelite calendar and in Portugal, and he is listed in the Roman Martyrology."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Nuno Álvares Pereira",
+   "display_name": "St. Nuno Álvares Pereira",
+   "dates": "1360 – 1431",
+   "region": "Portugal",
+   "feast": "November 6",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "The undefeated constable of Portugal ended his life as a humble lay brother.",
+    "visual": "art",
+    "scene": "A medieval Portuguese knight in plate armor, his sword laid down, kneels before an altar in a plain Carmelite habit draped over his arm, in a stone church with Gothic arches and soft candlelight."
+   },
+   {
+    "role": "who",
+    "text": "Saint Nuno Álvares Pereira was born in Portugal in thirteen sixty.",
+    "visual": "map",
+    "lat": 39.5,
+    "lon": -8.0,
+    "place": "Portugal"
+   },
+   {
+    "role": "story",
+    "text": "When the Portuguese throne was disputed, young Nuno took the side of John, Master of Aviz.",
+    "visual": "art",
+    "scene": "A young nobleman in late fourteenth-century Portuguese armor stands beside a dark-robed prince before a crowd of knights and townspeople in a Lisbon hall, banners raised."
+   },
+   {
+    "role": "story",
+    "text": "As constable of the realm, he led its armies, and he was never defeated. In August of thirteen eighty-five, at Aljubarrota, he helped secure John's crown.",
+    "visual": "art",
+    "scene": "The constable on horseback commands Portuguese soldiers on a dry hillside under red and white banners, with lines of troops drawn up and a vast sky behind."
+   },
+   {
+    "role": "story",
+    "text": "When the wars ended, he gave away his fortune. In fourteen twenty-three, he entered the Carmelite convent he had founded in Lisbon, as a lay brother.",
+    "visual": "art",
+    "scene": "The former warrior, now older, hands over his belongings to poor people at the gate of a Gothic Carmelite convent in Lisbon, a brown-robed friar waiting at the door."
+   },
+   {
+    "role": "story",
+    "text": "He took the name Nuno of Saint Mary. He died there in fourteen thirty-one. In two thousand nine, Pope Benedict the Sixteenth canonized him.",
+    "visual": "art",
+    "scene": "An aged man in a Carmelite habit rests in a bare monastic cell, a crucifix and a small image of the Virgin Mary on the wall, golden light at the window, brothers praying beside him."
+   },
+   {
+    "role": "turn",
+    "text": "The man who once commanded armies now begged at the door. Strength, he shows us, is found in giving.",
+    "visual": "art",
+    "scene": "A humble lay brother in a brown Carmelite habit stands at a convent door in Lisbon holding out an open hand for alms, while townspeople pass in medieval dress."
+   },
+   {
+    "role": "close",
+    "text": "Saint Nuno, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Nuno": "NOO-noo",
+   "Álvares": "AL-vuh-resh",
+   "Pereira": "puh-RAY-ruh",
+   "Aljubarrota": "AL-zhoo-bar-ROH-tah",
+   "Aviz": "ah-VEESH"
+  },
+  "caption_hook": "A commander who never lost a battle chose to be the least in the house.",
+  "summary": "Nuno Álvares Pereira, the undefeated Portuguese constable who helped win Aljubarrota, gave away his fortune and ended his days as a Carmelite lay brother.",
+  "youtube_title": "St. Nuno Pereira: Undefeated Constable Turned Brother",
+  "hashtags": [
+   "#saintnunoalvarespereira",
+   "#aljubarrota",
+   "#portugal",
+   "#holyconstable",
+   "#carmelite",
+   "#lisbon",
+   "#medievalsaints",
+   "#catholicsaints",
+   "#saintoftheday",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Nuno? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Nuno Álvares Pereira was born in Portugal in 1360 (24 June).",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the son of Álvaro Gonçalves Pereira, prior of the Order of the Hospital in Portugal.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "At about sixteen he married Leonor de Alvim, a wealthy widow, and they had children.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "After King Ferdinand I died in 1383 without a male heir, the Portuguese throne was disputed (the 1383–1385 crisis).",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Nuno took the side of John, Master of Aviz, who became King John I.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Nuno became Constable of Portugal, commander of the kingdom's armies.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was never defeated in battle.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He fought at Atoleiros (1384), Aljubarrota (August 1385) and Valverde.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The victory at Aljubarrota helped secure the crown for John of Aviz.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "After the wars he gave away his fortune.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His daughter Beatriz married Afonso, Count of Barcelos, an illegitimate son of King John I; their descendants founded the House of Braganza.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded the Carmo convent in Lisbon and in 1423 entered it as a lay brother.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He took the name Nuno de Santa Maria (Nuno of Saint Mary) and lived humbly, begging at the door.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died on 1 November 1431.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified in 1918 and canonized by Pope Benedict XVI on 26 April 2009.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His feast day is 6 November, kept in the Carmelite calendar and in Portugal.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Lisbon",
+   "Aljubarrota",
+   "Portugal"
+  ],
+  "story": [
+   "Nuno Álvares Pereira was born on 24 June 1360 in the Kingdom of Portugal, in the fourteenth century. His father, Álvaro Gonçalves Pereira, was prior of the Order of the Hospital in Portugal, a man of rank and a figure of the military and religious world of his day. The boy grew up among nobles, courts and arms, and from early on he was marked for a soldier's life.",
+   "At about sixteen he married Leonor de Alvim, a wealthy widow, and the couple had children. His daughter Beatriz would later marry Afonso, Count of Barcelos, an illegitimate son of King John I. From that union descended the House of Braganza, which in time would rule Portugal. So Nuno's family history is bound up with the story of the kingdom itself.",
+   "The turning point of his public life came in 1383. King Ferdinand I died without a male heir, and Portugal faced a crisis over who should rule. The danger was that the kingdom might fall under the crown of neighboring Castile. Many Portuguese rallied to John, Master of Aviz, and Nuno stood with him. He was named Constable of Portugal, the commander of the kingdom's armies, while still a young man.",
+   "What followed was a series of hard-fought campaigns. Nuno fought at Atoleiros in 1384, and then at Aljubarrota in August 1385, the battle that helped secure John's crown. He also fought at Valverde. In all of it, he was never defeated. John became King John I, and a new dynasty, the House of Aviz, began.",
+   "Victory could have made Nuno a very rich and powerful man. Instead, when the wars ended, he gave away his fortune. His wealth went out in generosity, and he turned his attention from the battlefield to prayer and to the poor. He also founded the Carmo convent in Lisbon, a house of the Carmelite Order.",
+   "In 1423 he did something few would expect of a great commander. He entered the convent he had founded, not as a prior or an honored guest, but as a lay brother. He took the name Nuno de Santa Maria, Nuno of Saint Mary. The constable who had once led armies now lived humbly among the brothers and begged at the door. He died there on 1 November 1431.",
+   "The Church has remembered him well. He was beatified in 1918, and Pope Benedict XVI canonized him on 26 April 2009. His feast is kept on 6 November in the Carmelite calendar and in Portugal. In Lisbon, the story of the warrior who became a servant still speaks plainly: strength is not measured by what we hold, but by what we are willing to give."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Map pin: the 'who' beat says he was born in Portugal, but the pin and label point to Lisbon. That implies a Lisbon birth, which the sources do not state. Lisbon is where he later founded the Carmo convent. The pin now marks Portugal generally.",
+   "Story paragraph 1 places a man born in 1360 'in the last decades of the fourteenth century', which is wrong for his birth. Changed to 'in the fourteenth century'.",
+   "Story paragraph 4 says Aljubarrota 'did the most to secure John's crown'. The source only says it helped secure the crown. Softened to match.",
+   "Spoken beats checked: the dates 1360, 1385, 1423 and 1431, the title of constable, 'never defeated', the name Nuno of Saint Mary, the 2009 canonization by Benedict XVI, and the lay brother and begging details all match the sources. Word count is about 140, and the hook is 13 words. No legend is presented as history."
+  ],
+  "confidence": 86,
+  "reviewer_note": "Check the map pin: sources only say he was born in Portugal, so it is now a general Portugal pin. Some accounts name Cernache do Bonjardim as his birthplace, so confirm that before using a specific one. Scene details like banner colors and the 'dark-robed prince' are artistic, not sourced."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2403,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 921,
+   "thinking": 688
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1782,
+   "cache_write": 690,
+   "cache_read": 0,
+   "out": 8999,
+   "thinking": 5847
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 3866,
+   "cache_write": 0,
+   "cache_read": 690,
+   "out": 6370,
+   "thinking": 3737
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1331,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2076,
+   "thinking": 700
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Nuno %C3%81lvares Pereira",
+   "url": "https://en.wikipedia.org/wiki/Nuno_%C3%81lvares_Pereira"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.0,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Nuno Álvares Pereira",
+  "display_name": "San Nuno",
+  "region": "Portugal",
+  "dates": "1360 – 1431",
+  "hook": "Un comandante que nunca perdió una batalla eligió ser el menor de la casa.",
+  "summary": "Nuno Álvares Pereira, el condestable portugués invicto que ayudó a ganar Aljubarrota, entregó su fortuna y terminó sus días como hermano lego carmelita.",
+  "story": [
+   "Nuno Álvares Pereira nació el 24 de junio de 1360 en el Reino de Portugal, en el siglo XIV. Su padre, Álvaro Gonçalves Pereira, era prior de la Orden del Hospital en Portugal, un hombre de rango y una figura del mundo militar y religioso de su tiempo. El niño creció entre nobles, cortes y armas, y desde muy temprano se le destinó a la vida de soldado.",
+   "A los dieciséis años aproximadamente se casó con Leonor de Alvim, una viuda adinerada, y la pareja tuvo hijos. Su hija Beatriz se casaría más tarde con Afonso, conde de Barcelos, hijo ilegítimo del rey Juan I. De esa unión descendió la Casa de Braganza, que con el tiempo gobernaría Portugal. Así, la historia de la familia de Nuno está unida a la historia del propio reino.",
+   "El punto de inflexión de su vida pública llegó en 1383. El rey Fernando I murió sin heredero varón, y Portugal se enfrentó a una crisis sobre quién debía gobernar. El peligro era que el reino cayera bajo la corona vecina de Castilla. Muchos portugueses se unieron a Juan, Maestre de Avís, y Nuno se puso de su lado. Fue nombrado condestable de Portugal, comandante de los ejércitos del reino, siendo todavía un hombre joven.",
+   "Lo que siguió fue una serie de campañas muy disputadas. Nuno luchó en Atoleiros en 1384, y luego en Aljubarrota en agosto de 1385, la batalla que ayudó a asegurar la corona para Juan. También combatió en Valverde. En todas ellas nunca fue derrotado. Juan se convirtió en el rey Juan I, y comenzó una nueva dinastía, la Casa de Avís.",
+   "La victoria podría haber convertido a Nuno en un hombre muy rico y poderoso. Sin embargo, cuando terminaron las guerras, entregó su fortuna. Su riqueza se fue en generosidad, y dirigió su atención desde el campo de batalla a la oración y a los pobres. También fundó el convento del Carmo en Lisboa, una casa de la Orden Carmelita.",
+   "En 1423 hizo algo que pocos esperarían de un gran comandante. Ingresó en el convento que había fundado, no como prior ni como huésped de honor, sino como hermano lego. Tomó el nombre de Nuno de Santa María. El condestable que en otro tiempo había dirigido ejércitos vivía ahora humildemente entre los hermanos y pedía limosna a la puerta. Murió allí el 1 de noviembre de 1431.",
+   "La Iglesia lo ha recordado bien. Fue beatificado en 1918, y el papa Benedicto XVI lo canonizó el 26 de abril de 2009. Su fiesta se celebra el 6 de noviembre en el calendario carmelita y en Portugal. En Lisboa, la historia del guerrero que se hizo servidor sigue hablando con claridad: la fortaleza no se mide por lo que retenemos, sino por lo que estamos dispuestos a dar."
+  ],
+  "prayer": "San Nuno, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Lisboa",
+   "Aljubarrota",
+   "Portugal"
+  ]
+ },
+ "caption": "A commander who never lost a battle chose to be the least in the house.\n\nSaint Nuno Álvares Pereira · Feast day: November 6\nNuno Álvares Pereira, the undefeated Portuguese constable who helped win Aljubarrota, gave away his fortune and ended his days as a Carmelite lay brother.\n\nSaint Nuno, pray for us. 🕯\n\nFollow for tomorrow's forgotten saint, every morning.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintnunoalvarespereira #aljubarrota",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/art.jpg"
+ },
+ "review_message_id": 41
+}
