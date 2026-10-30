@@ -1,6 +1,7 @@
 // Downloads each episode's icon art from its GitHub release into src/assets/art/<id>.jpg
 // (Astro then makes responsive AVIF/WebP). Prefers art.jpg (the clean icon); older episodes
 // only have cover.jpg, whose title text sits below ~60% height, so we keep the top part.
+// Full-length icons are cropped to their top 70% (head to waist) so all art frames alike.
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import sharp from "sharp";
 
@@ -19,7 +20,10 @@ for (const f of readdirSync(EPISODES).filter((n) => n.endsWith(".json") && !n.st
   const dest = new URL(`${ep.id}.jpg`, OUT);
   if (!ep.assets || existsSync(dest)) continue;
   let img = await get(`${REPO}/ep-${ep.id}/art.jpg`);
-  if (!img) {
+  if (img) {
+    const { width, height } = await sharp(img).metadata();
+    img = await sharp(img).extract({ left: 0, top: 0, width, height: Math.round(height * 0.7) }).jpeg({ quality: 90 }).toBuffer();
+  } else {
     const cover = await get(`${REPO}/ep-${ep.id}/cover.jpg`);
     if (!cover) { console.warn(`no art for ${ep.id}`); continue; }
     const { width, height } = await sharp(cover).metadata();

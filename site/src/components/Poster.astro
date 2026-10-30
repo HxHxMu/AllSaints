@@ -46,9 +46,10 @@ const label = `Play the one-minute story of ${saint.display}`;
 
 <style>
   .poster { position: relative; overflow: hidden; background: var(--umber); }
-  .poster :global(img), .noart { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
-  .home { height: min(400px, 52svh); }
-  .page { height: min(420px, 55svh); }
+  .poster :global(img), .noart { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  /* grows with width so tablets don't get a thin strip of a near-square icon */
+  .home { height: clamp(360px, 75vw, 70svh); }
+  .page { height: clamp(380px, 75vw, 72svh); }
   .noart { background: var(--umber); }
   .play {
     position: absolute; left: var(--gutter); bottom: 16px; width: 56px; height: 56px; border-radius: 50%;
