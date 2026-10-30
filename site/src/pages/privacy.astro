@@ -1,0 +1,5 @@
+---
+import Doc from "../components/Doc.astro";
+import { compiledContent } from "../../../PRIVACY.md";
+---
+<Doc title="Privacy" description="What All Saints collects (almost nothing) and how the site works without cookies." html={await compiledContent()} />

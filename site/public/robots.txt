@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allholysaints.com/sitemap-index.xml

@@ -1,0 +1,86 @@
+/* Tokens and base styles from DESIGN.md ("The Night Office"). */
+@font-face {
+  font-family: "Junicode";
+  src: url("/fonts/Junicode-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --soot: #0D0B09;
+  --umber: #1C1712;
+  --vellum: #EFE6D2;
+  --ash: #9A9183;
+  --gilt: #C9A44C;
+  --gilt-light: #E6C878;
+  --martyr: #7A1F1F;
+  --martyr-hover: #8C2626;
+  --lapis: #22406B;
+  --rule: rgb(201 164 76 / 25%);
+  --divider: rgb(154 145 131 / 18%);
+
+  --display: "Cinzel", "EB Garamond", serif;
+  --text: "EB Garamond", Georgia, serif;
+  --devotional: "Cormorant Garamond", "EB Garamond", serif;
+  --numeral: "Junicode", "EB Garamond", serif;
+
+  --gutter: 20px;
+  --measure: 62ch;
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--soot);
+  color: var(--vellum);
+  font-family: var(--text);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, ol, ul, figure { margin: 0; }
+a { color: var(--gilt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--gilt-light); }
+:focus-visible { outline: 2px solid var(--gilt-light); outline-offset: 3px; }
+
+.wrap { padding-inline: var(--gutter); max-width: 1200px; margin-inline: auto; }
+.name {
+  font-family: var(--display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: 1.08;
+  font-size: clamp(1.75rem, 1.2rem + 2.6vw, 3.25rem);
+  text-wrap: balance;
+}
+.devotional { font-family: var(--devotional); font-style: italic; font-weight: 500; }
+.numeral { font-family: var(--numeral); font-variant-numeric: oldstyle-nums; color: var(--gilt); }
+.label { font-variant-caps: all-small-caps; letter-spacing: .06em; font-size: 1.0625rem; color: var(--ash); }
+.muted { color: var(--ash); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Rubric: every action, and nothing else, is martyr red. */
+.rubric {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: var(--martyr); color: var(--vellum); text-decoration: none;
+  padding: 15px 18px; border-radius: 3px; font-size: 1.1875rem; line-height: 1.3;
+  border: 0; font-family: var(--text); cursor: pointer; width: 100%;
+  transition: background-color 100ms ease-out;
+}
+.rubric:hover { background: var(--martyr-hover); color: var(--vellum); }
+.rubric:active { transform: translateY(1px); }
+.rubric small { display: block; font-size: 1rem; opacity: .8; }
+
+.rise { animation: rise 500ms var(--ease-out) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  @view-transition { navigation: none; }
+}
+.rubric .numeral { color: inherit; }

@@ -9,6 +9,11 @@ All Saints (A.S.†) publishes short devotional videos about Catholic saints on 
 - Material from tradition or legend is presented as such. Content is provided for devotional and educational purposes, as is, without warranty of completeness or accuracy.
 - Videos are not official teaching of the Catholic Church.
 
+## Website and support
+- allholysaints.com shows the same content as the videos, with longer stories and sources.
+- "Light a candle" is voluntary support through Ko-fi. All Saints is not a registered charity, so support is not tax-deductible. Thank you.
+- If book links are added, some may be affiliate links that earn a small commission at no cost to you; they will be marked.
+
 ## YouTube
 All Saints uses YouTube API Services. Use of All Saints videos on YouTube is subject to the [YouTube Terms of Service](https://www.youtube.com/t/terms).
 

@@ -1,0 +1,66 @@
+---
+// The icon is the video: tapping it swaps in the YouTube player (no iframe, no YouTube
+// requests until then). Without a YouTube id it is just the image.
+import { Picture } from "astro:assets";
+import type { Saint } from "../lib/episodes";
+import { minutes } from "../lib/episodes";
+
+interface Props { saint: Saint; eager?: boolean; height?: "home" | "page" }
+const { saint, eager = false, height = "home" } = Astro.props;
+const label = `Play the one-minute story of ${saint.display}`;
+---
+<figure class:list={["poster", height]} data-yt={saint.youtubeId}>
+  {saint.art
+    ? <Picture src={saint.art} alt={`Icon of ${saint.display}`} formats={["avif", "webp"]} widths={[390, 600, 780, 1100]}
+        sizes="(min-width: 1024px) 60vw, 100vw" loading={eager ? "eager" : "lazy"} fetchpriority={eager ? "high" : "auto"} />
+    : <div class="noart" role="img" aria-label={`Icon of ${saint.display}`}></div>}
+  {saint.youtubeId && (
+    <button class="play" type="button" aria-label={label}>
+      <span class="tri" aria-hidden="true"></span>
+    </button>
+  )}
+  {saint.youtubeId && <span class="visually-hidden">{minutes(saint.duration)}</span>}
+</figure>
+
+<script>
+  for (const fig of document.querySelectorAll<HTMLElement>(".poster[data-yt]")) {
+    const id = fig.dataset.yt;
+    if (!id) continue;
+    const play = () => {
+      const f = document.createElement("iframe");
+      f.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&playsinline=1&rel=0`;
+      f.title = "All Saints video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      fig.classList.add("playing");
+      fig.replaceChildren(f);
+    };
+    fig.querySelector(".play")?.addEventListener("click", play);
+    document.querySelectorAll(`[data-play="${id}"]`).forEach((b) => b.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!fig.classList.contains("playing")) play();
+      fig.scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+  }
+</script>
+
+<style>
+  .poster { position: relative; overflow: hidden; background: var(--umber); }
+  .poster :global(img), .noart { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+  .home { height: min(400px, 52svh); }
+  .page { height: min(420px, 55svh); }
+  .noart { background: var(--umber); }
+  .play {
+    position: absolute; left: var(--gutter); bottom: 16px; width: 56px; height: 56px; border-radius: 50%;
+    background: rgb(13 11 9 / 72%); border: 1px solid var(--gilt); display: grid; place-items: center;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 40%); cursor: pointer; padding: 0;
+  }
+  .play:hover { border-color: var(--gilt-light); }
+  .tri { border-left: 16px solid var(--gilt-light); border-block: 10px solid transparent; margin-left: 4px; }
+  .playing { height: auto; aspect-ratio: 9 / 16; max-height: 86svh; background: #000; }
+  .playing :global(iframe) { width: 100%; height: 100%; border: 0; }
+  @media (min-width: 1024px) {
+    .home { height: min(640px, 78svh); }
+    .play { left: 24px; bottom: 24px; }
+  }
+</style>
