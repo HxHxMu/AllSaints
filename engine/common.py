@@ -134,13 +134,17 @@ def _record(label, r):
         + (f" (thinking {thinking})" if thinking is not None else ""))
 
 
-def claude(messages, system=None, max_tokens=16000, label="claude"):
-    """Call Claude, trying configured models in order. Returns text."""
+def claude(messages, system=None, max_tokens=16000, label="claude", tier="sonnet"):
+    """Call Claude, trying configured models in order. Returns text.
+    tier="haiku" uses the newest Haiku for cheap steps (translation)."""
     global _client
     import anthropic
     if _client is None:
         _client = anthropic.Anthropic(api_key=env("ANTHROPIC_API_KEY", required=True))
-    models = [env("ANTHROPIC_MODEL")] if env("ANTHROPIC_MODEL") else _auto_models() + load_config()["anthropic_models"]
+    if tier == "haiku":
+        models = _auto_models("haiku") + HAIKU_FALLBACK
+    else:
+        models = [env("ANTHROPIC_MODEL")] if env("ANTHROPIC_MODEL") else _auto_models() + load_config()["anthropic_models"]
     last = None
     for m in models:
         for attempt in range(3):
@@ -160,22 +164,22 @@ def claude(messages, system=None, max_tokens=16000, label="claude"):
     raise RuntimeError(f"Claude call failed: {last}")
 
 
-_auto = None
+_auto = {}
+HAIKU_FALLBACK = ["claude-haiku-5-5", "claude-haiku-4-5"]
 
 
-def _auto_models():
-    """Newest Sonnet model available to this key (models.list returns newest first)."""
-    global _auto
-    if _auto is None:
-        _auto = []
+def _auto_models(kind="sonnet"):
+    """Newest model of this kind available to this key (models.list returns newest first)."""
+    if kind not in _auto:
+        _auto[kind] = []
         try:
             for m in _client.models.list(limit=50).data:
-                if "sonnet" in m.id:
-                    _auto = [m.id]
+                if kind in m.id:
+                    _auto[kind] = [m.id]
                     break
         except Exception as e:
             log("models.list failed:", e)
-    return _auto
+    return _auto[kind]
 
 
 def parse_json(text):
@@ -191,7 +195,7 @@ def parse_json(text):
     return obj
 
 
-def claude_json(prompt, system=None, images=None, context=None, label="claude"):
+def claude_json(prompt, system=None, images=None, context=None, label="claude", tier="sonnet"):
     """`context`: bulky text shared by several calls (e.g. sources). It goes first, behind a cache
     breakpoint, so later calls with the same system + context read it from the prompt cache."""
     content = []
@@ -201,7 +205,7 @@ def claude_json(prompt, system=None, images=None, context=None, label="claude"):
         content.append({"type": "text", "text": context, "cache_control": {"type": "ephemeral"}})
     content.append({"type": "text", "text": prompt})
     for attempt in range(2):
-        txt = claude([{"role": "user", "content": content}], system=system, label=label)
+        txt = claude([{"role": "user", "content": content}], system=system, label=label, tier=tier)
         try:
             return parse_json(txt)
         except Exception as e:

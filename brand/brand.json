@@ -98,5 +98,13 @@
     "setting_rule": "Architecture, clothing, armor and landscape must be authentic to {region} in the saint's era ({dates}), not generic European.",
     "consistency": "Keep it strictly iconographic (flat, gilded, stylized), never a naturalistic oil painting. Dress each figure exactly as the scene says; keep a religious habit's colors consistent with the order named (e.g. Dominicans: white habit and black cape).",
     "credit": "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+  },
+  "site_es": {
+    "tagline": "Los santos que el mundo olvidó. El cielo no.",
+    "disclosure": "Investigado y escrito con ayuda de IA, verificado con las fuentes indicadas arriba y aprobado por una persona antes de publicarse. La narración es una voz de IA; los iconos son arte generado por IA al estilo bizantino.",
+    "credits": {
+      "Illustration in the Byzantine style, AI-generated (Google Gemini)": "Ilustración al estilo bizantino, generada por IA (Google Gemini)",
+      "Additional artwork: All Saints": "Arte adicional: All Saints"
+    }
   }
 }

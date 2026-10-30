@@ -153,6 +153,11 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         final = fc.get("script") or draft
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
+        try:  # the website's Spanish edition; never blocks the video
+            es = scriptmod.translate_es(final) if final.get("story") else None
+        except Exception as e:
+            log("Spanish translation failed:", e)
+            es = None
         art_map, credits = build_art(ep_id, saint, final, work)
         icon = art_map.get("cover", {}).get("image")  # clean art (no title) for the website
         # narration
@@ -175,6 +180,8 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
             "duration": round(t["voiceDuration"] + 3.8, 1),
             "narrator": t["narrator"],
         })
+        if es:
+            ep["es"] = es
         ep["caption"] = build_caption(ep)
         ep.pop("redo", None)
         ep.pop("error", None)

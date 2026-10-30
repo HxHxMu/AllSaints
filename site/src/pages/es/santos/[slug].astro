@@ -1,0 +1,9 @@
+---
+import SaintView from "../../../components/SaintView.astro";
+import { saintsIn } from "../../../lib/episodes";
+
+export function getStaticPaths() {
+  return saintsIn("es").map((saint) => ({ params: { slug: saint.slug }, props: { saint } }));
+}
+---
+<SaintView saint={Astro.props.saint} lang="es" />

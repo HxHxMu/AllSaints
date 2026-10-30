@@ -40,7 +40,10 @@ SCHEMA = """{
  "youtube_title": "YouTube Shorts title, max 60 characters: the saint's name plus what makes the story remarkable, e.g. 'St. Frumentius: The Shipwrecked Boy Who Became a Bishop'; searchable, no clickbait, no emojis",
  "hashtags": ["#saintfrumentius", "#ethiopia", "..."],
  "share_cta": "Know someone named Frumentius? Send them their saint.",
- "claims": [{"claim": "...", "source": 0, "kind": "history|tradition"}]
+ "claims": [{"claim": "...", "source": 0, "kind": "history|tradition"}],
+ "story": ["paragraph 1 of the long-form story for the website", "..."],
+ "patronages": ["sailors", "..."],
+ "places": ["Aksum", "Ethiopia"]
 }"""
 
 
@@ -78,6 +81,8 @@ Requirements:
 - Every factual claim must appear in "claims" with its source index; label legendary material kind "tradition" and phrase it that way in the script.
 - 8-14 hashtags, lowercase: first the saint's name tag (e.g. #saintfrumentius), next the most specific place or patronage tag, then others.
 - "share_cta": one gentle caption line inviting a share, only if it is natural: by name ("Know someone named Winifred? Send them their saint.") when the saint's name is still given today, or by patronage ("Send this to a nurse who could use a patron today.") only if the sources state the patronage. Otherwise "". Never pushy, no "comment Amen".
+- "story" (for the website, read not heard): 600-800 words in 5-8 paragraphs telling the saint's whole life from the same SOURCES, in the same reverent voice, with more context than the minute allows (family, era, what the Church was facing, what remains today). Keep history and tradition clearly apart ("tradition holds..."), no invented quotes or details, abbreviations and numerals are fine here. Don't end with the prayer line; the page adds it.
+- "patronages": only patronages the SOURCES state; [] if none. "places": 2-5 places tied to their life, most specific first.
 - "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
     ctx = sources_context(sources)
     task = prompt
@@ -100,16 +105,54 @@ def fact_check(script, sources):
 SCRIPT JSON:
 {json.dumps(script, ensure_ascii=False, indent=1)}
 
+Check both the spoken beats and the website "story" paragraphs.
 For every sentence: is it supported by the sources? Is legend presented as history? Are dates, places, titles (Saint/Blessed, martyr, bishop, etc.) right? Is anything theologically careless or irreverent? Is the map location right?
 Fix problems with the smallest possible edits, keeping the same beats, roles and length (125-145 words).
+Story problems are fixed as find/replace pairs, never by rewriting the story.
 
 Return ONLY JSON:
 {{"verdict": "pass" | "fixed" | "reject",
  "issues": ["short description of each problem found and how it was fixed"],
- "script": <only if verdict is "fixed": the full corrected script JSON, same shape as input; otherwise null>,
+ "script": <only if the beats or other fields needed fixing: the full corrected script JSON WITHOUT the "story" field; otherwise null>,
+ "story_fixes": [{{"find": "exact text from a story paragraph", "replace": "corrected text"}}],
  "confidence": 0-100,
  "reviewer_note": "one line for the human approver: anything they should double-check"}}
 Use "reject" only if the saint is not actually venerated in the Catholic Church or the sources are too thin for an honest minute."""
     res = claude_json(prompt, system=SYSTEM, context=sources_context(sources), label="factcheck")
     log(f"Fact-check: {res.get('verdict')} ({res.get('confidence')}) issues={len(res.get('issues', []))}")
+    # the checker returns story corrections only (cheaper than echoing ~700 words); apply them here
+    story = list(script.get("story") or [])
+    for f in res.get("story_fixes") or []:
+        hit = next((i for i, p in enumerate(story) if f.get("find") and f["find"] in p), None)
+        if hit is None:
+            log("Story fix not applied (text not found):", str(f.get("find"))[:80])
+        else:
+            story[hit] = story[hit].replace(f["find"], f.get("replace", ""), 1)
+    if res.get("script"):
+        for k in ("story", "patronages", "places"):
+            res["script"].setdefault(k, script.get(k))
+        res["script"]["story"] = story
+    elif story != (script.get("story") or []):
+        res["script"] = {**script, "story": story}
     return res
+
+
+ES_SYSTEM = """You translate "All Saints" saint pages from English into Spanish for Catholic readers in Latin America and Spain: warm, reverent, natural Spanish (neutral, "ustedes"), not word-for-word. Use the traditional Spanish names of saints and places (San/Santa, and Santo before Tomás, Tomé, Toribio, Domingo; e.g. "San Narciso de Jerusalén"). Keep "tradition holds" as "según la tradición" and keep history and tradition apart exactly as the English does. Never add facts."""
+
+
+def translate_es(final):
+    """Spanish edition of the website fields (cheap Haiku pass, right after the script is final)."""
+    s = final["saint"]
+    src = {
+        "name": s["name"], "region": s.get("region", ""), "dates": s.get("dates", ""),
+        "hook": final.get("caption_hook", ""), "summary": final.get("summary", ""),
+        "story": final.get("story") or [], "prayer": final["beats"][-1]["text"],
+        "patronages": final.get("patronages") or [], "places": final.get("places") or [],
+    }
+    prompt = ("Translate every value of this JSON into Spanish and return ONLY JSON with the same keys "
+              '(also add "display_name": the short form, e.g. "San Narciso"). In "dates" translate only words '
+              '("c." stays "c.", "fl." stays "fl.", "century" -> "siglo").\n' + json.dumps(src, ensure_ascii=False))
+    es = claude_json(prompt, system=ES_SYSTEM, label="translate_es", tier="haiku")
+    if len(es.get("story") or []) != len(src["story"]):
+        log("Spanish story paragraph count differs; keeping it anyway")
+    return es

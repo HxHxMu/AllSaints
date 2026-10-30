@@ -2,7 +2,7 @@
  "id": "2026-11-05",
  "date": "2026-11-05",
  "status": "approved",
- "updated": "2026-10-29T13:33:12+00:00",
+ "updated": "2026-10-30T04:35:56+00:00",
  "saint": {
   "qid": "Q204891",
   "name": "Saint Guido Maria Conforti",
@@ -179,6 +179,22 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Guido Maria Conforti was born in 1865 at Casalora di Ravadese, in the countryside of the diocese of Parma, Italy. He was the eighth of ten children of Rinaldo and Antonia Adorni Conforti. His father hoped that the boy would stay and manage the family farm.",
+   "From 1872 Guido attended an elementary school run by the De La Salle Brothers. Each day on his way there he stopped at Santa Maria della Pace, his parish church, to speak with the crucified Jesus. Those quiet visits are where his vocation first became clear. He later recalled: \"I looked at Him and He looked at me and seemed to say so many things.\"",
+   "In November 1876 he entered the seminary in Parma, despite his father's hopes for the farm. There he began to read the works of Francis Xavier, and the great missionary inspired in him a desire to be a missionary. He asked to join the Society of Jesus or the Salesians of Saint John Bosco, but both requests were denied. The seminary's rector, Andrea Carlo Ferrari, who later became a cardinal and is now Blessed, became his mentor. Conforti was appointed vice-rector.",
+   "He was ordained a priest on 22 September 1888 at Fontanellato and then served as a professor at the local seminary. The missionary calling that two religious families had set aside did not leave him. On 3 December 1895 he founded the Xaverian Missionaries, named for the saint who had first stirred his heart. Pope Leo XIII approved the new community on 3 December 1898, and in 1899 Conforti sent its first missionaries to China. In 1896 he had also become Vicar-General of the Diocese of Parma.",
+   "In May 1902 Leo XIII named him Archbishop of Ravenna, and he was consecrated on 11 June 1902 at the Basilica of Saint Paul Outside the Walls in Rome. His health was poor, and in October 1904 he submitted his resignation. On 14 November of that year he was made Coadjutor Bishop of Parma and Titular Archbishop of Stauropolis. In 1907 he became Bishop of Parma, keeping the personal title of Archbishop. He traveled to the parishes of his diocese on horseback or by other means, and he worked especially for religious education and for the involvement of young people in the life of the Church.",
+   "His concern for the missions reached beyond his own diocese. He is said to have provided the initiative behind Pope Benedict XV's encyclical Maximum illud, issued on 30 November 1919, which is called the Magna Carta of modern Catholic missionary work. In 1928 he traveled to China to see the Xaverian Missionaries at work. He reached Shanghai on 26 October 1928 and met his contacts to inspect their labors. The man who had been refused entry into the missionary orders now stood in the mission field to which he had sent others.",
+   "Conforti returned to Parma and fell ill in October 1931. He died about a month later, on 5 November 1931, and was interred in Parma. His tomb was moved in 1942 and again in 1996. His spiritual writings were approved by theologians in 1946, and his cause was opened in Parma in 1959. Pope John Paul II declared him Venerable on 11 February 1982 and beatified him on 17 March 1996. Pope Benedict XVI approved the decree for a second miracle on 10 December 2010 and canonized him on 23 October 2011."
+  ],
+  "patronages": [],
+  "places": [
+   "Parma",
+   "Casalora di Ravadese",
+   "Ravenna",
+   "Shanghai"
   ]
  },
  "factcheck": {
@@ -208,5 +224,59 @@
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-05/cover.jpg",
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-05/preview.mp4"
  },
- "review_message_id": 35
+ "review_message_id": 35,
+ "es": {
+  "display_name": "San Guido",
+  "name": "San Guido María Conforti",
+  "region": "Parma, Italia",
+  "dates": "1865 – 1931",
+  "hook": "Rechazado por los jesuitas y los salesianos, fundó su propia misión y la envió a China.",
+  "summary": "San Guido María Conforti, rechazado por las órdenes misioneras a las que quiso unirse, fundó a los Misioneros Xaverianos y los envió a China.",
+  "story": [
+   "Guido María Conforti nació en 1865 en Casalora di Ravadese, en el campo de la diócesis de Parma, Italia. Era el octavo de diez hijos de Rinaldo y Antonia Adorni Conforti. Su padre esperaba que el muchacho se quedara y administrara la granja familiar.",
+   "Desde 1872 Guido asistió a una escuela primaria dirigida por los Hermanos de La Salle. Cada día, de camino a la escuela, se detenía en Santa María de la Paz, la iglesia de su parroquia, para hablar con Jesús crucificado. Aquellas visitas silenciosas fueron el lugar donde su vocación se hizo clara por primera vez. Más tarde recordó: \"Lo miré y Él me miró y parecía decirme tantas cosas.\"",
+   "En noviembre de 1876 ingresó en el seminario de Parma, a pesar de las esperanzas de su padre respecto a la granja. Allí comenzó a leer las obras de San Francisco Javier, y el gran misionero despertó en él el deseo de ser misionero. Pidió ingresar en la Compañía de Jesús o en los Salesianos de San Juan Bosco, pero ambas solicitudes fueron denegadas. El rector del seminario, Andrés Carlos Ferrari, que más tarde llegó a ser cardenal y hoy es beato, se convirtió en su mentor. Conforti fue nombrado vicerrector.",
+   "Fue ordenado sacerdote el 22 de septiembre de 1888 en Fontanellato, y luego sirvió como profesor en el seminario local. La vocación misionera que dos congregaciones religiosas habían dejado de lado no lo abandonó. El 3 de diciembre de 1895 fundó los Misioneros Xaverianos, que llevan el nombre del santo que primero despertó su corazón. El papa León XIII aprobó la nueva comunidad el 3 de diciembre de 1898, y en 1899 Conforti envió a sus primeros misioneros a China. En 1896 también había sido nombrado vicario general de la diócesis de Parma.",
+   "En mayo de 1902 el papa León XIII lo nombró arzobispo de Rávena, y fue consagrado el 11 de junio de 1902 en la Basílica de San Pablo Extramuros, en Roma. Su salud era frágil, y en octubre de 1904 presentó su renuncia. El 14 de noviembre de ese año fue nombrado obispo coadjutor de Parma y arzobispo titular de Stauropolis. En 1907 se convirtió en obispo de Parma, conservando el título personal de arzobispo. Recorría las parroquias de su diócesis a caballo o por otros medios, y trabajó especialmente por la educación religiosa y por la participación de los jóvenes en la vida de la Iglesia.",
+   "Su preocupación por las misiones fue más allá de su propia diócesis. Se dice que él dio la iniciativa de la encíclica Maximum illud del papa Benedicto XV, publicada el 30 de noviembre de 1919, que es llamada la Magna Carta de la obra misionera católica moderna. En 1928 viajó a China para ver a los Misioneros Xaverianos en plena labor. Llegó a Shanghái el 26 de octubre de 1928 y se reunió con sus contactos para inspeccionar sus trabajos. El hombre al que se le había negado el ingreso en las órdenes misioneras estaba ahora en el campo de misión al que había enviado a otros.",
+   "Conforti regresó a Parma y enfermó en octubre de 1931. Murió alrededor de un mes después, el 5 de noviembre de 1931, y fue sepultado en Parma. Su tumba fue trasladada en 1942 y de nuevo en 1996. Sus escritos espirituales fueron aprobados por teólogos en 1946, y su causa de beatificación se abrió en Parma en 1959. El papa Juan Pablo II lo declaró venerable el 11 de febrero de 1982 y lo beatificó el 17 de marzo de 1996. El papa Benedicto XVI aprobó el decreto de un segundo milagro el 10 de diciembre de 2010 y lo canonizó el 23 de octubre de 2011."
+  ],
+  "prayer": "San Guido María Conforti, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Parma",
+   "Casalora di Ravadese",
+   "Rávena",
+   "Shanghái"
+  ]
+ },
+ "usage": [
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1773,
+   "cache_write": 2554,
+   "cache_read": 0,
+   "out": 8277,
+   "thinking": 4519
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4499,
+   "cache_write": 0,
+   "cache_read": 2554,
+   "out": 4940,
+   "thinking": 4207
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1622,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2884,
+   "thinking": 1141
+  }
+ ]
 }

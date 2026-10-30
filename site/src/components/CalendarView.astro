@@ -1,0 +1,82 @@
+---
+import Base from "../layouts/Base.astro";
+import { saintsIn, roman, monthName, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+// Newest first, grouped by month: a typeset litany, no thumbnails (DESIGN.md).
+const rows = [...saintsIn(lang)].reverse();
+const months: { key: string; label: string; items: typeof rows }[] = [];
+for (const s of rows) {
+  const key = s.date.slice(0, 7);
+  if (months.at(-1)?.key !== key) months.push({ key, label: `${monthName(s.date, lang)} ${s.date.slice(0, 4)}`, items: [] });
+  months.at(-1)!.items.push(s);
+}
+const line = (s: (typeof rows)[number]) => s.hook.length > 90 ? s.hook.slice(0, 88).replace(/\s+\S*$/, "") + "…" : s.hook;
+---
+<Base title={T.litany} description={T.litanyDesc} current="calendar" lang={lang} alt={lang === "en" ? paths.es.calendar : paths.en.calendar}>
+  <div class="wrap litany">
+    <h1 class="title">{T.litany}</h1>
+    <label class="search">
+      <span class="visually-hidden">{T.findLabel}</span>
+      <input type="search" placeholder={T.find} autocomplete="off" data-filter>
+    </label>
+    {months.map((m) => (
+      <section class="month" data-month>
+        <h2 class="label">{m.label}</h2>
+        <ol>
+          {m.items.map((s) => (
+            <li data-text={`${s.name} ${s.region} ${s.places.join(" ")} ${s.patronages.join(" ")} ${s.hook} ${s.summary}`.toLowerCase()}>
+              <a href={P.saint(s.slug)}>
+                <span class="numeral d">{roman(Number(s.date.slice(8, 10)))}</span>
+                <span class="n">{s.display}<span class="l devotional">{line(s)}</span></span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+    <p class="none muted" hidden data-none>{T.none}</p>
+  </div>
+</Base>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>("[data-filter]")!;
+  const none = document.querySelector<HTMLElement>("[data-none]")!;
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    let shown = 0;
+    for (const m of document.querySelectorAll<HTMLElement>("[data-month]")) {
+      let any = false;
+      for (const li of m.querySelectorAll<HTMLElement>("li")) {
+        const hit = !q || li.dataset.text!.normalize("NFD").replace(/[̀-ͯ]/g, "").includes(q);
+        li.hidden = !hit;
+        any ||= hit;
+        shown += hit ? 1 : 0;
+      }
+      m.hidden = !any;
+    }
+    none.hidden = shown > 0;
+  });
+</script>
+
+<style>
+  .litany { max-width: 46rem; padding-top: 8px; }
+  .title { font-family: var(--display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 1.5rem; }
+  .search input {
+    width: 100%; margin: 14px 0 8px; padding: 10px 0; background: transparent; color: var(--vellum);
+    border: 0; border-bottom: 1px solid rgb(201 164 76 / 50%); border-radius: 0; font: italic 1.1875rem var(--text);
+  }
+  .search input::placeholder { color: var(--ash); }
+  .search input:focus-visible { outline: none; border-bottom-color: var(--gilt-light); }
+  .month h2 { color: var(--gilt); font-weight: 400; margin: 28px 0 4px; letter-spacing: .08em; }
+  ol { list-style: none; margin: 0; padding: 0; }
+  li a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 6px; padding: 12px 0; border-bottom: 1px solid var(--divider); text-decoration: none; color: var(--vellum); }
+  li a:hover .n { color: var(--gilt-light); }
+  .d { font-size: 1.1875rem; }
+  .n { font-size: 1.25rem; line-height: 1.25; }
+  .l { display: block; font-size: 1.125rem; color: var(--ash); margin-top: 2px; }
+  .none { margin-top: 24px; }
+</style>

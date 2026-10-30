@@ -1,7 +1,8 @@
 # Website — live at https://allholysaints.com (launched 2026-10-29)
 
 **Built (v1, English):** Astro 5 in `/site`; home, saint pages (tap-to-play YouTube, story, prayer, sources, Ko-fi), litany calendar with search, about/privacy/terms. Shows `published` episodes only (`SITE_ALL=1 npm run build` previews review/approved locally). Art: release `art.jpg` (clean icon, uploaded by the pipeline), else top crop of `cover.jpg` (`site/scripts/fetch-art.mjs`). Hosting: Cloudflare Pages project `allholysaints` (root `site`, `npm run build`, `dist`, NODE_VERSION 22, build watch paths `site/* state/episodes/* brand/*`), www → apex 301 Redirect Rule, Web Analytics on (beacon allowed in `site/public/_headers` CSP).
-**Not built yet:** Spanish `/es/`, Beehiiv signup, Bookshop.org books, long-form story in the pipeline, share cards, RSS.
+**Built (2026-10-29, v2):** long-form story + patronages/places from the script call (`script.story`), Spanish edition at `/es/` (`/es/santos/<slug>/`, `/es/calendario/`) from `ep.es`, hreflang, EN/ES switch (hidden until a Spanish saint exists). Older episodes fall back to the narration beats and have no Spanish page. Spanish brand copy: `brand.json → site_es`. About/privacy/terms are English only.
+**Not built yet:** Beehiiv signup, Bookshop.org books, share cards, RSS, backfill of story/Spanish for episodes made before 2026-10-29.
 
 ## Original plan (decisions 2026-10-29)
 

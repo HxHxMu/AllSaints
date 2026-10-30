@@ -8,8 +8,11 @@ Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logg
 data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → research.select_saint   Claude picks 1 of ~12 candidates for the date
  → research.gather_sources Wikipedia full text + Catholic Encyclopedia 1913 (Wikisource)
- → script.write_script     Claude, JSON beats (hook/who/story…/turn/close), 125–145 words, + youtube_title, share_cta
- → script.fact_check       second Claude pass vs the same cached sources; returns a script only when "fixed"; may "reject"
+ → script.write_script     Claude, JSON beats (hook/who/story…/turn/close), 125–145 words, + youtube_title, share_cta,
+                           + website fields: story (600–800 words, 5–8 paragraphs), patronages, places
+ → script.fact_check       second Claude pass vs the same cached sources; checks beats + story; returns a script only when
+                           beats need fixing, story fixes as find/replace pairs (applied in fact_check); may "reject"
+ → script.translate_es     Haiku (common tier="haiku") → ep.es (Spanish name, hook, story, prayer…); failure never blocks
  → illustrate.illustrate   Gemini image per beat (brand.json → illustration); overrides from art/<ep_id>/
    (art.collect_candidates / assign_art only when config art_source = "commons")
  → tts.synthesize          Gemini TTS per beat + faster-whisper timings (fallback ElevenLabs), paced, loudnorm −16 LUFS
@@ -44,4 +47,4 @@ Instagram: 5 hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint 
 
 ## Cost
 - Model auto-picks the newest Sonnet; sources sent once as a cached context block shared by script and fact-check; per-call usage stored in `ep.usage`. Output/thinking tokens dominate cost.
-- Not built: route `research.select_saint` to Haiku; effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.
+- Haiku tier exists (`claude_json(..., tier="haiku")`, used by translate_es). Not built: route `research.select_saint` to Haiku; effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.

@@ -2,18 +2,19 @@
 // The icon is the video: tapping it swaps in the YouTube player (no iframe, no YouTube
 // requests until then). Without a YouTube id it is just the image.
 import { Picture } from "astro:assets";
-import type { Saint } from "../lib/episodes";
+import type { Saint, Lang } from "../lib/episodes";
 import { minutes } from "../lib/episodes";
+import { t } from "../lib/i18n";
 
-interface Props { saint: Saint; eager?: boolean; height?: "home" | "page" }
-const { saint, eager = false, height = "home" } = Astro.props;
-const label = `Play the one-minute story of ${saint.display}`;
+interface Props { saint: Saint; eager?: boolean; height?: "home" | "page"; lang?: Lang }
+const { saint, eager = false, height = "home", lang = "en" } = Astro.props;
+const label = t[lang].play(saint.display);
 ---
 <figure class:list={["poster", height]} data-yt={saint.youtubeId}>
   {saint.art
-    ? <Picture src={saint.art} alt={`Icon of ${saint.display}`} formats={["avif", "webp"]} widths={[390, 600, 780, 1100]}
+    ? <Picture src={saint.art} alt={t[lang].icon(saint.display)} formats={["avif", "webp"]} widths={[390, 600, 780, 1100]}
         sizes="(min-width: 1024px) 60vw, 100vw" loading={eager ? "eager" : "lazy"} fetchpriority={eager ? "high" : "auto"} />
-    : <div class="noart" role="img" aria-label={`Icon of ${saint.display}`}></div>}
+    : <div class="noart" role="img" aria-label={t[lang].icon(saint.display)}></div>}
   {saint.youtubeId && (
     <button class="play" type="button" aria-label={label}>
       <span class="tri" aria-hidden="true"></span>

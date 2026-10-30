@@ -1,0 +1,55 @@
+---
+import Base from "../layouts/Base.astro";
+import Poster from "./Poster.astro";
+import { latest, neighbors, manuscriptDate, minutes, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+const today = latest(lang);
+const { prev } = today ? neighbors(today, lang) : { prev: undefined };
+const alt = lang === "en" ? paths.es.home : paths.en.home;
+---
+<Base title="All Saints" description={`${T.homeDesc} ${T.tagline}`} image={today?.cover} lang={lang} alt={alt}>
+  {today ? (
+    <article class="today">
+      <div class="art"><Poster saint={today} eager lang={lang} /></div>
+      <div class="info wrap rise">
+        <p class="numeral date"><time datetime={today.date}>{manuscriptDate(today.date, lang)}</time></p>
+        <h1 class="name"><a href={P.saint(today.slug)}>{today.name}</a></h1>
+        <p class="devotional hook">{today.hook}</p>
+        {today.youtubeId
+          ? <button class="rubric" type="button" data-play={today.youtubeId}><span>{T.watch}</span><span class="numeral">{minutes(today.duration)}</span></button>
+          : <a class="rubric" href={P.saint(today.slug)}><span>{T.read}</span><span aria-hidden="true">›</span></a>}
+        {today.youtubeId && <p class="more"><a href={P.saint(today.slug)}>{T.readFull}</a></p>}
+      </div>
+      <nav class="days wrap" aria-label={T.otherDays}>
+        {prev && <a href={P.saint(prev.slug)}><span class="label">{T.yesterday}</span><b>{prev.display}</b></a>}
+        <a class="cal" href={P.calendar}><span class="label">{T.allSaints}</span><b>{T.theCalendar}</b></a>
+      </nav>
+    </article>
+  ) : (
+    <section class="wrap empty"><h1 class="name">All Saints</h1><p class="devotional">{T.tagline}</p><p>{T.soon}</p></section>
+  )}
+</Base>
+
+<style>
+  .info { padding-top: 22px; display: grid; gap: 10px; }
+  .date { font-size: 1.1875rem; letter-spacing: .04em; }
+  .name a { color: inherit; text-decoration: none; }
+  .hook { font-size: 1.4375rem; line-height: 1.3; margin-bottom: 12px; }
+  .more { font-size: 1.0625rem; }
+  .days { display: flex; justify-content: space-between; gap: 16px; margin-top: 28px; padding-block: 22px; border-top: 1px solid var(--rule); }
+  .days a { text-decoration: none; color: var(--vellum); display: grid; }
+  .days a:hover b { color: var(--gilt-light); }
+  .days b { font-weight: 400; font-size: 1.125rem; }
+  .days .cal { text-align: right; margin-left: auto; }
+  .empty { padding-block: 120px; display: grid; gap: 16px; }
+  @media (min-width: 1024px) {
+    .today { display: grid; grid-template-columns: 2fr 3fr; grid-template-areas: "info art" "days art"; max-width: 1200px; margin-inline: auto; padding-inline: var(--gutter); gap: 0 48px; align-items: end; }
+    .art { grid-area: art; }
+    .info { grid-area: info; padding-inline: 0; max-width: 34rem; }
+    .days { grid-area: days; padding-inline: 0; }
+  }
+</style>
