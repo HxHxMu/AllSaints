@@ -106,6 +106,13 @@ def commons_art(saint, final, work):
     return art_map, credits
 
 
+MAX_REJECTS = 3  # saints per date the fact-check may reject before the episode fails
+
+
+class GiveUp(RuntimeError):
+    """A failure that retrying on the next run won't fix; waits for /generate."""
+
+
 def generate_one(date: dt.date, upload=True, usage_start=None):
     import common, research, script as scriptmod, tts, render, music
     usage_start = len(common.USAGE) if usage_start is None else usage_start
@@ -114,6 +121,7 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
     redo = ep.get("redo") or {}
     note = redo.get("note")
     exclude = [ep["saint"]["qid"]] if redo.get("new_saint") and ep.get("saint", {}).get("qid") else []
+    exclude += [r["qid"] for r in ep.get("rejected", [])]  # saints the fact-check turned down for this date
     prev_status = ep.get("status")
     ep["status"] = "generating"
     save_episode(ep)
@@ -130,6 +138,10 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         draft = scriptmod.write_script(saint, sources, date, note=note)
         fc = scriptmod.fact_check(draft, sources)
         if fc.get("verdict") == "reject":
+            ep.setdefault("rejected", []).append({"qid": saint["qid"], "name": saint["name"], "note": fc.get("reviewer_note")})
+            if len(ep["rejected"]) >= MAX_REJECTS:  # don't keep paying for scripts on a date with no good candidate
+                raise GiveUp(f"Fact-check rejected {len(ep['rejected'])} saints for this date: "
+                                   + ", ".join(r["name"] for r in ep["rejected"]))
             log("Fact-check rejected saint; choosing another")
             ep["saint"] = {"qid": saint["qid"], "name": saint["name"]}
             ep["redo"] = {"new_saint": True}
@@ -160,6 +172,7 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
             "sources": [{"title": s["title"], "url": s["url"]} for s in sources],
             "art_credits": credits,
             "duration": round(t["voiceDuration"] + 3.8, 1),
+            "narrator": t["narrator"],
         })
         ep["caption"] = build_caption(ep)
         ep.pop("redo", None)
@@ -186,7 +199,7 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
     except Exception as e:
         traceback.print_exc()
         ep["status"] = "failed"
-        ep["attempts"] = ep.get("attempts", 0) + 1
+        ep["attempts"] = 3 if isinstance(e, GiveUp) else ep.get("attempts", 0) + 1
         ep["error"] = f"{type(e).__name__}: {e}"[:500]
         save_episode(ep)
         try:

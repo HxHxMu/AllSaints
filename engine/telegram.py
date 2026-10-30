@@ -51,6 +51,9 @@ def send_review(ep):
             f"Scheduled: {ep['date']} at {cfg['post_time']} ({cfg['timezone'].split('/')[-1].replace('_', ' ')})\n"
             f"Fact-check: {fc.get('verdict', '?')} · confidence {fc.get('confidence', '?')}%\n"
             f"Note: {fc.get('reviewer_note', '—')}")
+    if ep.get("narrator", "").startswith("elevenlabs"):
+        head = ("⚠️ Narrated by the ElevenLabs fallback (Gemini TTS failed). Free-tier audio isn't licensed "
+                "for commercial use: tap 🔁 Redo to re-voice it with Gemini.\n\n" + head)
     assets = ep.get("assets", {})
     kw = dict(chat_id=cid, caption=head[:1024], supports_streaming="true", width=720, height=1280, reply_markup=buttons(ep["id"]))
     msg = None
@@ -213,6 +216,10 @@ def process_updates():
             save_config(cfg)
             send("▶️ Publishing resumed.")
         elif text.startswith("/generate"):
+            for e in load_episodes().values():  # failed episodes that gave up get a fresh set of retries
+                if e.get("status") == "failed" and e["date"] >= today().isoformat():
+                    e["attempts"] = 0
+                    save_episode(e)
             actions.append("generate")
             send("⚙️ Generating missing episodes…")
         elif st.get("pending"):

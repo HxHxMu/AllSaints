@@ -76,9 +76,6 @@ Locally they live in `.env` (gitignored). **Never print/cat `.env`; never ask Lu
 **Not yet exercised live:** a scheduled YouTube upload from `poll.yml` on Actions (first one: 10-29); `youtube_title` from a freshly generated script.
 
 ## Known issues / TODO (small)
-- `pipeline.generate_one`: fact-check `reject` recurses with no cap → add max 3 saints per date.
-- Telegram `/generate` should reset `attempts` on `failed` episodes.
-- ElevenLabs fallback is silent (only a log line) → record the narrator in the episode and flag it in the Telegram review.
 - Map place label can collide with captions when the location sits low on the globe.
 - Render speed ~0.3 s/frame on 2 cores; grain uses PNG tiles; close-scene blur at ¼ res — keep it that way.
 - Videos are ~45–70 MB (10-28 was 69 MB); Telegram preview uses a downscaled `preview.mp4`.
@@ -89,7 +86,7 @@ Locally they live in `.env` (gitignored). **Never print/cat `.env`; never ask Lu
 2. Watch the first public Short upload (10-30) arrive public; 10-29's went up private and is published from Studio.
 3. Keep the review queue ≥7 days approved.
 4. Website (see Monetization open questions) → saint pages, email signup, support page.
-5. Haiku routing for cheap Claude steps; flag ElevenLabs-fallback episodes.
+5. Haiku routing for cheap Claude steps.
 
 ## Commands
 ```bash
@@ -102,6 +99,7 @@ cd video && npx remotion studio src/index.js          # preview templates with s
 ```
 
 ## Gotchas
+- Fact-check rejects: max 3 saints per date (`MAX_REJECTS`, list in `ep.rejected`), then the episode fails without auto-retry; `/generate` resets `attempts`. `ep.narrator` records the TTS used; ElevenLabs episodes get a ⚠️ in the Telegram review.
 - **External drive (`/Volumes/lebe`)**: macOS writes `._*` files everywhere (gitignored; `load_episodes` skips them). Use `git config core.filemode false`.
 - The bot commits `state/` constantly — `git pull --rebase --autostash` before pushing.
 - `node_modules/` is not in the repo — run `npm ci` in `video/`.

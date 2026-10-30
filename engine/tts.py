@@ -179,11 +179,12 @@ def synthesize(script, outdir: Path):
     pron = script.get("pronunciations") or {}
     beats = script["beats"]
     provider = BRAND["voice"].get("provider", "elevenlabs")
-    per_beat = None
+    per_beat, narrator = None, "elevenlabs"
     if provider == "gemini":
         try:
             per_beat = [_gemini_beat(b, pron, outdir / f"beat{i}.mp3") for i, b in enumerate(beats)]
             per_beat = _pace(per_beat, [outdir / f"beat{i}.mp3" for i in range(len(beats))])
+            narrator = f"gemini:{BRAND['voice']['gemini']['voice']}"
             log(f"Narration: Gemini {BRAND['voice']['gemini']['voice']}")
         except Exception as e:
             log("Gemini narration failed, falling back to ElevenLabs:", e)
@@ -211,4 +212,4 @@ def synthesize(script, outdir: Path):
                     "-ar", "44100", "-b:a", "160k", str(out)], check=True)
     total = duration(out)
     log(f"Voice: {total:.1f}s, {len(words)} words")
-    return {"voice": out, "voiceDuration": total, "words": words, "beat_starts": beat_starts}
+    return {"voice": out, "voiceDuration": total, "words": words, "beat_starts": beat_starts, "narrator": narrator}
