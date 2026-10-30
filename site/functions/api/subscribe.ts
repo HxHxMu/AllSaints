@@ -17,7 +17,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const fail = () => back(request, `${page}?signup=error#signup`);
   if (form.get("website")) return back(request, "/check-email/");  // honeypot: bots fill every field
   const email = String(form.get("email") || "").trim().toLowerCase();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) return fail();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) {
+    console.log("bad email");
+    return fail();
+  }
 
   if (env.TURNSTILE_SECRET) {
     const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -27,10 +30,15 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         response: String(form.get("cf-turnstile-response") || ""),
         remoteip: request.headers.get("CF-Connecting-IP") || "",
       }),
-    }).then((r) => r.json<{ success: boolean }>()).catch(() => ({ success: false }));
-    if (!check.success) return fail();
+    }).then((r) => r.json<{ success: boolean; "error-codes"?: string[] }>())
+      .catch((e) => ({ success: false, "error-codes": [`fetch: ${e}`] }));
+    if (!check.success) {
+      console.log("turnstile", JSON.stringify(check["error-codes"] || []));
+      return fail();
+    }
   }
 
+  if (!env.BEEHIIV_API_KEY || !env.BEEHIIV_PUBLICATION_ID) console.log("beehiiv env missing");
   const r = await fetch(`https://api.beehiiv.com/v2/publications/${env.BEEHIIV_PUBLICATION_ID}/subscriptions`, {
     method: "POST",
     headers: { Authorization: `Bearer ${env.BEEHIIV_API_KEY}`, "Content-Type": "application/json" },
