@@ -24,6 +24,7 @@ Automated devotional channel: **one ~60 s vertical video a day about a lesser-kn
 ## Where the details are (read when relevant)
 - `engine/CLAUDE.md` — pipeline, state, secrets, YouTube/Instagram, captions, cost design (loads when working in `engine/`).
 - `video/CLAUDE.md` — Remotion templates, render notes (loads when working in `video/`).
+- `DESIGN.md` — the website's design system ("The Night Office"). **Read it before any visual/UI work; don't deviate without Luis's approval.**
 - `docs/monetization.md` — revenue phases and plan. `docs/website.md` — website decisions (not built). `docs/roadmap.md` — open to-dos.
 
 ## Layout
