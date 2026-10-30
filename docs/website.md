@@ -1,7 +1,7 @@
 # Website — planned, not built (decisions 2026-10-29)
 
 - **Hosting:** Cloudflare Pages; GitHub branch previews, merge to main = production. Code in `/site` of this repo (add `site/CLAUDE.md` when it exists).
-- **Domain:** **allholysaints.com** (bought 2026-10-29). DNS on Cloudflare; email via Cloudflare Email Routing.
+- **Domain:** **allholysaints.com** (bought 2026-10-29). DNS on Cloudflare; email: **hello@allholysaints.com** is a forward-only address (Cloudflare Email Routing → Luis's Gmail; no mailbox). No DNSSEC until the domain moves to Cloudflare Registrar (IONOS can't with external nameservers).
 - **Languages:** English + Spanish at launch (`/es/`, hreflang).
 - **Stack:** Astro static site built from `state/episodes/*.json`; Tailwind v4 with brand.json tokens; Fontsource fonts; astro-embed YouTube (tap-to-load); Pagefind search; Satori share cards; sitemap/RSS/schema.org.
 - **Revenue pieces:** Ko-fi "Light a candle"; Bookshop.org affiliate only (FTC disclosure); Beehiiv weekly Sunday digest (signup via a Pages Function + Turnstile).
