@@ -154,6 +154,7 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
         art_map, credits = build_art(ep_id, saint, final, work)
+        icon = art_map.get("cover", {}).get("image")  # clean art (no title) for the website
         # narration
         t = tts.synthesize(final, work)
         bed = music.pick_bed(ep_id)
@@ -181,7 +182,8 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         ep.pop("caption_hook_override", None)
         if upload:
             import storage, telegram
-            urls = storage.upload(f"ep-{ep_id}", {"video.mp4": out["video"], "cover.jpg": out["cover"], "preview.mp4": out["preview"]},
+            urls = storage.upload(f"ep-{ep_id}", {"video.mp4": out["video"], "cover.jpg": out["cover"], "preview.mp4": out["preview"],
+                                                      **({"art.jpg": icon} if icon else {})},
                                   name=f"{ep_id} · {final['saint']['name']}", body=ep["caption"])
             ep["assets"] = urls
             ep["status"] = "review"

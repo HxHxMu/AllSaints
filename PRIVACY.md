@@ -24,6 +24,13 @@ OAuth credentials are stored as encrypted secrets in the project's GitHub reposi
 - **Uploaded video IDs and URLs** of the channel's own videos are kept in the project's episode records so the same video is not posted twice. Deleting a video on YouTube removes it; its record can be deleted on request.
 - To request deletion of any data, use the contact below; requests are handled within 7 days.
 
+## The website (allholysaints.com)
+- **No cookies and no tracking.** The site sets no cookies. Visits are counted with Cloudflare Web Analytics, which is cookieless and reports only totals (pages, countries, devices), never individual visitors.
+- **Hosting.** The site is served by Cloudflare, which processes IP addresses briefly to deliver pages and block attacks, under the [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+- **Videos** load from YouTube (youtube-nocookie.com) only when you tap play; from then on YouTube's terms and Google's privacy policy apply.
+- **Email digest** (when offered): if you subscribe, your email address is kept by our newsletter provider only to send the weekly email; every email has an unsubscribe link.
+- **Support and links.** "Light a candle" opens our Ko-fi page; Ko-fi handles any payment under its own privacy policy, and we never see card details.
+
 ## Google and YouTube
 This tool uses YouTube API Services. By watching All Saints videos on YouTube you are subject to the [YouTube Terms of Service](https://www.youtube.com/t/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
 You can revoke the tool's access to a Google account at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions) or via the [Google security settings page](https://security.google.com/settings/security/permissions).

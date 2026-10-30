@@ -1,0 +1,18 @@
+---
+// Renders a policy file from the repo root so the site and GitHub show the same text.
+import Base from "../layouts/Base.astro";
+interface Props { title: string; description: string; html: string }
+const { title, description, html } = Astro.props;
+---
+<Base title={title} description={description}>
+  <article class="wrap doc" set:html={html} />
+</Base>
+<style>
+  .doc { max-width: 42rem; padding-top: 16px; }
+  .doc :global(h1) { font-family: var(--display); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 1.5rem; line-height: 1.2; margin-bottom: 12px; }
+  .doc :global(h2) { font-variant-caps: all-small-caps; letter-spacing: .06em; color: var(--gilt); font-weight: 400; font-size: 1.25rem; margin: 32px 0 8px; }
+  .doc :global(p), .doc :global(li) { font-size: 1.125rem; }
+  .doc :global(p + p), .doc :global(ul) { margin-top: 10px; }
+  .doc :global(em) { color: var(--ash); }
+  .doc :global(code) { font-size: .95em; color: var(--ash); }
+</style>

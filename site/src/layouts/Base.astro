@@ -1,0 +1,75 @@
+---
+import "@fontsource/cinzel/600.css";
+import "@fontsource/eb-garamond/400.css";
+import "@fontsource/eb-garamond/400-italic.css";
+import "@fontsource/eb-garamond/500.css";
+import "@fontsource/cormorant-garamond/500-italic.css";
+import "../styles/global.css";
+import { TAGLINE } from "../lib/episodes";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string | null;
+  type?: "website" | "article";
+  jsonld?: object;
+  current?: "calendar";
+}
+const { title, description, image, type = "website", jsonld, current } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === "All Saints" ? `All Saints · ${TAGLINE}` : `${title} · All Saints`;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta name="theme-color" content="#0D0B09">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:site_name" content="All Saints">
+  <meta property="og:type" content={type}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  {image && <meta property="og:image" content={image}>}
+  <meta name="twitter:card" content={image ? "summary_large_image" : "summary"}>
+  {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+  <!-- Cloudflare Web Analytics: cookieless; token added once the Pages project exists -->
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header class="bar wrap">
+    <a class="mono" href="/" aria-label="All Saints, home">A.S.†</a>
+    <nav class="label" aria-label="Main">
+      <a href="/calendar/" aria-current={current === "calendar" ? "page" : undefined}>Calendar</a>
+      <span aria-hidden="true"> · </span>
+      <span class="lang"><b>EN</b><span aria-hidden="true"> / </span><span title="Spanish edition coming soon">ES</span></span>
+    </nav>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="foot wrap">
+    <p class="devotional tag">{TAGLINE}</p>
+    <p class="label links">
+      <a href="/about/">About</a> · <a href="https://www.instagram.com/all.holy.saints/">Instagram</a> ·
+      <a href="https://www.youtube.com/@AllHolySaints">YouTube</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+    </p>
+    <p class="label">hello@allholysaints.com</p>
+  </footer>
+</body>
+</html>
+
+<style>
+  .bar { display: flex; justify-content: space-between; align-items: baseline; padding-block: 16px 12px; }
+  .mono { font-family: var(--display); font-weight: 600; letter-spacing: .14em; color: var(--gilt); text-decoration: none; font-size: 1.0625rem; }
+  nav a { color: var(--ash); text-decoration: none; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--vellum); }
+  .lang b { color: var(--vellum); font-weight: 500; }
+  .foot { padding-block: 72px 48px; display: grid; gap: 10px; }
+  .tag { font-size: 1.4375rem; color: var(--vellum); }
+  .links a { color: var(--ash); }
+  .links a:hover { color: var(--vellum); }
+</style>

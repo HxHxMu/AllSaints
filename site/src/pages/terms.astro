@@ -1,0 +1,6 @@
+---
+import Doc from "../components/Doc.astro";
+import { compiledContent } from "../../../TERMS.md";
+const html = (await compiledContent()).replaceAll("https://github.com/HxHxMu/AllSaints/blob/main/PRIVACY.md", "/privacy/");
+---
+<Doc title="Terms" description="Terms of use for All Saints videos and allholysaints.com." html={html} />
