@@ -346,7 +346,8 @@ def add_to_playlists(ep, done=()):
         for wait in (0, 5, 15, 30):  # a just-created playlist answers 409 "aborted" for a few seconds
             time.sleep(wait)
             r = session.post(f"{API}/playlistItems", params={"part": "snippet"}, timeout=30, headers=h,
-                             json={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+                             json={"snippet": {"playlistId": pid, "position": 0,  # newest first
+                                               "resourceId": {"kind": "youtube#video", "videoId": vid}}})
             if r.status_code not in (409, 500, 503):
                 break
         if r.status_code != 200:
