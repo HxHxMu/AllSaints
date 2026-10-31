@@ -10,6 +10,7 @@ from common import ROOT, env, http, log
 
 GRAPH = "https://graph.facebook.com/v24.0"
 RUPLOAD = "https://rupload.facebook.com/video-upload/v24.0"
+APP_ID = "1155309167189478"  # "All Saints Publisher" (public id; the secret is typed at fb-auth's hidden prompt)
 
 
 def configured():
@@ -72,7 +73,8 @@ def authorize():
     pages_read_engagement, pages_manage_posts) for a never-expiring Page token, then stores FB_PAGE_ID and
     FB_PAGE_TOKEN in .env and (if `gh` is installed) as GitHub secrets in the Production environment.
     Everything is typed at hidden prompts; nothing is printed."""
-    app_id = input("Meta App ID: ").strip()
+    app_id = env("FB_APP_ID", APP_ID)
+    print(f"Meta app: All Saints Publisher ({app_id})")
     app_secret = getpass.getpass("App secret (hidden): ").strip()
     short = getpass.getpass("User token from Graph API Explorer (hidden): ").strip()
     long_user = _check(http.get(f"{GRAPH}/oauth/access_token", timeout=30, params={
