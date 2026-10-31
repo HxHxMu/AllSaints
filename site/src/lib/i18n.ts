@@ -4,8 +4,10 @@ import type { Lang } from "./episodes";
 import brand from "../../../brand/brand.json";
 
 export const paths = {
-  en: { home: "/", calendar: "/calendar/", saint: (slug: string) => `/saints/${slug}/` },
-  es: { home: "/es/", calendar: "/es/calendario/", saint: (slug: string) => `/es/santos/${slug}/` },
+  en: { home: "/", calendar: "/calendar/", saint: (slug: string) => `/saints/${slug}/`,
+        patrons: "/patrons/", patron: (slug: string) => `/patrons/${slug}/`, places: "/places/", place: (slug: string) => `/places/${slug}/` },
+  es: { home: "/es/", calendar: "/es/calendario/", saint: (slug: string) => `/es/santos/${slug}/`,
+        patrons: "/es/patronos/", patron: (slug: string) => `/es/patronos/${slug}/`, places: "/es/lugares/", place: (slug: string) => `/es/lugares/${slug}/` },
 };
 
 export const t = {
@@ -15,6 +17,13 @@ export const t = {
     sources: "Sources", art: "Art", publicDomain: "public domain", candle: "🕯 Light a candle",
     candleSub: "Help keep the forgotten remembered.", feast: "Feast day", patron: "Patron of",
     menu: "Menu", menuClose: "Close menu", navLabel: "Main",
+    feastDay: "Feast Day", places: "Places", byPatron: "By patronage", byPlace: "By place",
+    patronsTitle: "Patron saints", patronsDesc: "Lesser-known Catholic saints by what they are patrons of.",
+    placesTitle: "Saints by place", placesDesc: "Lesser-known Catholic saints by the places they lived, served and died.",
+    patronOf: (n: string, count: number) => `Patron ${count === 1 ? "saint" : "saints"} of ${n}`,
+    saintsOf: (n: string) => `Saints of ${n}`,
+    topicDesc: (title: string, names: string) => `${title}: ${names}. Their stories and prayers, on their feast days.`,
+    topicsNone: "None yet. The calendar grows every day.", count: (n: number) => `${n} ${n === 1 ? "saint" : "saints"}`,
     share: "Share this saint", shareSub: "Send the story to someone",
     deeper: "Go deeper", booksFine: "Links go to Bookshop.org, which supports independent bookstores. All Saints earns a small commission on books bought there.",
     litany: "The Litany", litanyDesc: "Every saint All Saints has remembered, day by day.",
@@ -32,6 +41,13 @@ export const t = {
     sources: "Fuentes", art: "Arte", publicDomain: "dominio público", candle: "🕯 Enciende una vela",
     candleSub: "Ayúdanos a que los olvidados sean recordados.", feast: "Fiesta", patron: "Patrono de",
     menu: "Menú", menuClose: "Cerrar menú", navLabel: "Principal",
+    feastDay: "Fiesta", places: "Lugares", byPatron: "Por patronazgo", byPlace: "Por lugar",
+    patronsTitle: "Santos patronos", patronsDesc: "Santos católicos poco conocidos, según su patronazgo.",
+    placesTitle: "Santos por lugar", placesDesc: "Santos católicos poco conocidos, según los lugares donde vivieron, sirvieron y murieron.",
+    patronOf: (n: string, count: number) => `${count === 1 ? "Santo patrono" : "Santos patronos"}: ${n}`,
+    saintsOf: (n: string) => `Santos de ${n}`,
+    topicDesc: (title: string, names: string) => `${title}: ${names}. Sus historias y oraciones, en su fiesta.`,
+    topicsNone: "Todavía ninguno. El calendario crece cada día.", count: (n: number) => `${n} ${n === 1 ? "santo" : "santos"}`,
     share: "Comparte este santo", shareSub: "Envía la historia a alguien",
     deeper: "Para profundizar", booksFine: "Libros en inglés. Los enlaces van a Bookshop.org, que apoya a las librerías independientes. All Saints recibe una pequeña comisión por los libros comprados allí.",
     litany: "La Letanía", litanyDesc: "Cada santo que All Saints ha recordado, día a día.",

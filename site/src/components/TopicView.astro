@@ -1,0 +1,44 @@
+---
+// One patronage or place: its saints as litany rows (date, name, hook), newest first.
+import Base from "../layouts/Base.astro";
+import { roman, monthName, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+import type { Kind, Topic } from "../lib/topics";
+
+interface Props { topic: Topic; kind: Kind; lang: Lang }
+const { topic, kind, lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+const title = kind === "patron" ? T.patronOf(topic.name, topic.saints.length) : T.saintsOf(topic.name);
+const rows = [...topic.saints].reverse();
+const line = (h: string) => h.length > 90 ? h.slice(0, 88).replace(/\s+\S*$/, "") + "…" : h;
+const day = (iso: string) => lang === "es" ? `${Number(iso.slice(8, 10))} de ${monthName(iso, lang)}` : `${monthName(iso)} ${Number(iso.slice(8, 10))}`;
+---
+<Base title={title} description={T.topicDesc(title, rows.map((s) => s.name).join(", "))} lang={lang}>
+  <div class="wrap topic">
+    <p class="label crumb"><a href={kind === "patron" ? P.patrons : P.places}>{kind === "patron" ? T.patronsTitle : T.placesTitle}</a></p>
+    <h1 class="title">{title}</h1>
+    <ol>
+      {rows.map((s) => (
+        <li>
+          <a href={P.saint(s.slug)}>
+            <span class="numeral d">{roman(Number(s.date.slice(8, 10)))}</span>
+            <span class="n">{s.display}<span class="l devotional">{line(s.hook)}</span><span class="f label">{T.feast}: {day(s.date)}</span></span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+
+<style>
+  .topic { max-width: 46rem; padding-top: 8px; }
+  .crumb a { color: var(--ash); }
+  .title { font-family: var(--display); font-weight: 600; letter-spacing: .06em; font-size: 1.75rem; line-height: 1.2; margin: 6px 0 12px; }
+  ol { list-style: none; margin: 0; padding: 0; }
+  li a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--divider); text-decoration: none; color: var(--vellum); }
+  li a:hover .n { color: var(--gilt-light); }
+  .d { font-size: 1.1875rem; }
+  .n { font-size: 1.25rem; line-height: 1.25; }
+  .l { display: block; font-size: 1.125rem; color: var(--ash); margin-top: 2px; }
+  .f { display: block; margin-top: 4px; font-size: .9375rem; }
+</style>

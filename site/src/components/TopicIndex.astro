@@ -1,0 +1,37 @@
+---
+// All patronages or all places, A–Z, each with its count of saints. Not indexed by search engines while empty.
+import Base from "../layouts/Base.astro";
+import { type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+import { topics, type Kind } from "../lib/topics";
+
+interface Props { kind: Kind; lang: Lang }
+const { kind, lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+const list = topics(lang, kind);
+const title = kind === "patron" ? T.patronsTitle : T.placesTitle;
+const other = lang === "en" ? paths.es : paths.en;
+---
+<Base title={title} description={kind === "patron" ? T.patronsDesc : T.placesDesc} lang={lang}
+  alt={kind === "patron" ? other.patrons : other.places} noindex={list.length === 0}>
+  <div class="wrap topics">
+    <h1 class="title">{title}</h1>
+    <p class="muted">{kind === "patron" ? T.patronsDesc : T.placesDesc}</p>
+    {list.length === 0 ? <p class="muted">{T.topicsNone}</p> : (
+      <ul>
+        {list.map((x) => (
+          <li><a href={kind === "patron" ? P.patron(x.slug) : P.place(x.slug)}><span>{x.name}</span><span class="muted c">{T.count(x.saints.length)}</span></a></li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>
+
+<style>
+  .topics { max-width: 46rem; padding-top: 8px; display: grid; gap: 10px; align-content: start; }
+  .title { font-family: var(--display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 1.5rem; }
+  ul { list-style: none; margin: 8px 0 0; padding: 0; }
+  li a { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--divider); color: var(--vellum); text-decoration: none; font-size: 1.25rem; }
+  li a:hover span:first-child { color: var(--gilt-light); }
+  .c { font-size: 1rem; white-space: nowrap; }
+</style>

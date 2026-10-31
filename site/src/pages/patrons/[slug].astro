@@ -1,0 +1,9 @@
+---
+import TopicView from "../../components/TopicView.astro";
+import { topics } from "../../lib/topics";
+
+export function getStaticPaths() {
+  return topics("en", "patron").map((topic) => ({ params: { slug: topic.slug }, props: { topic } }));
+}
+---
+<TopicView topic={Astro.props.topic} kind="patron" lang="en" />

@@ -5,6 +5,7 @@ import EmailBand from "./EmailBand.astro";
 import { neighbors, manuscriptDate, minutes, monthName, shareCard, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 import { booksFor, bookUrl } from "../lib/books";
+import { topicSlug } from "../lib/topics";
 
 interface Props { saint: Saint; lang: Lang }
 const { saint, lang } = Astro.props;
@@ -37,7 +38,7 @@ const jsonld = {
   }),
 };
 ---
-<Base title={saint.name} description={saint.summary || saint.hook} image={shareCard(saint, lang)} type="article" jsonld={jsonld} lang={lang} alt={alt}>
+<Base title={`${saint.name} · ${T.feastDay} ${feast}`} description={saint.summary || saint.hook} image={shareCard(saint, lang)} type="article" jsonld={jsonld} lang={lang} alt={alt}>
   <article class="saint">
     <div class="art"><Poster saint={saint} eager height="page" lang={lang} /></div>
     <div class="text wrap">
@@ -49,7 +50,8 @@ const jsonld = {
           {saint.region && <span> · {saint.region}</span>}
           {saint.martyr && <span> · {T.martyr}</span>}
         </p>
-        {saint.patronages.length > 0 && <p class="meta muted">{T.patron} {saint.patronages.join(", ")}</p>}
+        {saint.patronages.length > 0 && <p class="meta muted">{T.patron} {saint.patronages.map((p, i) => <>{i > 0 && ", "}<a href={P.patron(topicSlug(p))}>{p}</a></>)}</p>}
+        {saint.places.length > 0 && <p class="meta muted">{T.places}: {saint.places.map((p, i) => <>{i > 0 && " · "}<a href={P.place(topicSlug(p))}>{p}</a></>)}</p>}
         <p class="devotional hook">{saint.hook}</p>
         {saint.youtubeId && (
           <button class="rubric" type="button" data-play={saint.youtubeId}><span>{T.watch}</span><span class="numeral">{minutes(saint.duration)}</span></button>
@@ -137,6 +139,8 @@ const jsonld = {
   .head { display: grid; gap: 10px; }
   .date { font-size: 1.1875rem; }
   .meta { font-size: 1.0625rem; }
+  .meta a { color: inherit; text-decoration-color: var(--rule); }
+  .meta a:hover { color: var(--gilt-light); }
   .plain { color: inherit; }
   .hook { font-size: 1.4375rem; line-height: 1.3; margin: 6px 0 14px; }
   .story { margin-top: 36px; max-width: var(--measure); }

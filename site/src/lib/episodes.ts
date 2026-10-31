@@ -16,7 +16,7 @@ const showAll = process.env.SITE_ALL === "1";
 const visible = new Set(showAll ? ["published", "approved", "review", "publishing"] : ["published"]);
 
 export type Lang = "en" | "es";
-type Text = {
+export type Text = {
   slug: string; name: string; display: string; dates: string; region: string;
   hook: string; summary: string; story: string[]; prayer: string; patronages: string[]; places: string[];
 };

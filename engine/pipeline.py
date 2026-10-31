@@ -387,6 +387,8 @@ def main():
     sub.add_parser("yt-whoami")
     yp = sub.add_parser("yt-playlists", help="add published Shorts to their playlists (backfill / retry)")
     yp.add_argument("episode", nargs="?", default="all")
+    lp = sub.add_parser("yt-localize", help="add the Spanish title/description to uploaded Shorts")
+    lp.add_argument("episode", nargs="?", default="all")
     bp = sub.add_parser("books", help="look up books about the saint for the website (backfill / redo)")
     bp.add_argument("episode", nargs="?", default="all")
     sub.add_parser("refresh-token")
@@ -417,6 +419,12 @@ def main():
             if ep and (ep.get("youtube") or {}).get("id"):
                 ep["youtube"].pop("playlist_attempts", None)
                 youtube_playlists(ep)
+    elif a.cmd == "yt-localize":
+        import youtube
+        eps = [load_episode(a.episode)] if a.episode != "all" else load_episodes().values()
+        for ep in eps:
+            if ep and ep.get("es") and (ep.get("youtube") or {}).get("id"):
+                youtube.set_localizations(ep)
     elif a.cmd == "books":
         import books
         eps = [load_episode(a.episode)] if a.episode != "all" else load_episodes().values()

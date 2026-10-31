@@ -4,7 +4,7 @@ Secrets: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (get them once with `p
 Privacy comes from config "youtube_privacy" (public; set "private" to publish from YouTube Studio by hand).
 Uploads from unverified API projects are no longer forced private (Google, 2026-10), so no audit is needed.
 """
-import http.server, json, secrets, shutil, subprocess, time, urllib.parse, webbrowser
+import http.server, json, re, secrets, shutil, subprocess, time, urllib.parse, webbrowser
 from pathlib import Path
 import datetime as dt
 from common import BRAND, ROOT, claude_json, env, http as session, load_config, log
@@ -47,7 +47,7 @@ def build_description(ep):
     s = ep["script"]
     saint = s["saint"]
     prayer = next((b["text"] for b in s["beats"] if b["role"] == "close"), f"{saint['name']}, pray for us.")
-    srcs = "\n".join(f"• {x['title']}: {x['url']}" if x.get("url") else f"• {x['title']}" for x in ep.get("sources", []))
+    srcs = "\n".join(f"• {urllib.parse.unquote(x['title'])}: {x['url']}" if x.get("url") else f"• {urllib.parse.unquote(x['title'])}" for x in ep.get("sources", []))
     credits = "; ".join(dict.fromkeys(ep.get("art_credits", []))) or "public domain"
     from pipeline import saint_tags, CAP
     tags = " ".join(dict.fromkeys(saint_tags(s, 1) + CAP["hashtags_base"]))  # YouTube shows the first 3 above the title
@@ -63,6 +63,8 @@ def build_description(ep):
 
 {prayer} 🕯
 
+Read the full story: {page_url(ep)}
+
 —
 Sources:
 {srcs}
@@ -73,6 +75,83 @@ Art: {credits}
 
 {tags} #Shorts"""
     return desc.replace("<", "").replace(">", "")[:4900]  # YouTube rejects angle brackets
+
+
+SITE = "https://allholysaints.com"
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+
+def site_slug(name):
+    """Same rule as site/src/lib/episodes.ts slugify: the page address for a saint's name."""
+    import unicodedata
+    name = re.sub(r"^(Saints?|Sts?\.|San|Santos?|Santas?)\s+", "", name, flags=re.I)
+    name = unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
+
+
+def page_url(ep, lang="en"):
+    if lang == "es":
+        return f"{SITE}/es/santos/{site_slug(ep['es']['name'])}/"
+    return f"{SITE}/saints/{site_slug(ep['script']['saint']['name'])}/"
+
+
+def _short_title(name, text):
+    """"Name: text" cut at a word to fit YouTube's 100 characters with " #Shorts"."""
+    title = f"{name}: {text}".strip()
+    if len(title) > 90:
+        title = title[:90].rsplit(" ", 1)[0].rstrip(",;:—-") + "…"
+    return title + " #Shorts"
+
+
+def localizations(ep):
+    """The Spanish title and description (ep.es from translate_es), so the Short shows in Spanish searches."""
+    es = ep.get("es")
+    if not es or not es.get("name"):
+        return {}
+    s, site_es = ep["script"], BRAND.get("site_es", {})
+    d = dt.date.fromisoformat(ep["date"])
+    srcs = "\n".join(f"• {urllib.parse.unquote(x['title'])}: {x['url']}" if x.get("url") else f"• {urllib.parse.unquote(x['title'])}" for x in ep.get("sources", []))
+    credits = "; ".join(site_es.get("credits", {}).get(c, c) for c in dict.fromkeys(ep.get("art_credits", []))) or "dominio público"
+    desc = f"""{es.get('hook', '').strip()}
+
+{es.get('summary', '').strip()}
+
+{es['name']} · {es.get('dates') or s['saint'].get('dates', '')} · Fiesta: {d.day} de {MESES[d.month - 1]}
+
+{es.get('prayer', '').strip()} 🕯
+
+Lee su historia completa: {page_url(ep, 'es')}
+
+—
+Fuentes:
+{srcs}
+Arte: {credits}
+{site_es.get('disclosure', '')}
+
+#santos #catolico #Shorts"""
+    return {"es": {"title": _short_title(es.get("display_name") or es["name"], es.get("hook", "")),
+                   "description": desc.replace("<", "").replace(">", "")[:4900]}}
+
+
+def set_localizations(ep):
+    """Add the Spanish title/description to an already uploaded Short (backfill; new uploads carry them)."""
+    loc = localizations(ep)
+    vid = (ep.get("youtube") or {}).get("id")
+    if not loc or not vid:
+        return False
+    token = _access_token()
+    _check_channel(token)
+    r = session.get(f"{API}/videos", params={"part": "snippet", "id": vid}, headers={"Authorization": f"Bearer {token}"}, timeout=30)
+    snippet = r.json()["items"][0]["snippet"]
+    body = {"id": vid, "localizations": loc,
+            "snippet": {"title": snippet["title"], "description": snippet.get("description", ""), "categoryId": snippet["categoryId"],
+                        "tags": snippet.get("tags", []), "defaultLanguage": "en", "defaultAudioLanguage": snippet.get("defaultAudioLanguage", "en")}}
+    r = session.put(f"{API}/videos", params={"part": "snippet,localizations"}, json=body,
+                    headers={"Authorization": f"Bearer {token}"}, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"YouTube localizations failed {r.status_code}: {r.text[:300]}")
+    log(f"YouTube: Spanish title/description on {vid}")
+    return True
 
 
 def build_tags(ep):
@@ -97,10 +176,14 @@ def upload_short(ep, video_path: Path):
             "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False, "embeddable": True}}
     if BRAND.get("youtube", {}).get("synthetic_media"):
         meta["status"]["containsSyntheticMedia"] = True
+    parts = "snippet,status"
+    if loc := localizations(ep):  # Spanish title/description for Spanish-language search
+        meta["localizations"] = loc
+        parts += ",localizations"
     token = _access_token()
     _check_channel(token)
     size = video_path.stat().st_size
-    r = session.post(UPLOAD_URL, params={"uploadType": "resumable", "part": "snippet,status"}, json=meta, timeout=60,
+    r = session.post(UPLOAD_URL, params={"uploadType": "resumable", "part": parts}, json=meta, timeout=60,
                      headers={"Authorization": f"Bearer {token}", "X-Upload-Content-Type": "video/mp4",
                               "X-Upload-Content-Length": str(size)})
     if r.status_code != 200:
