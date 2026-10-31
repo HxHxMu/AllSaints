@@ -72,7 +72,17 @@ def send_review(ep):
         msg = api("sendMessage", chat_id=cid, text=f"{head}\n\n▶️ Watch: {assets.get('video.mp4', '(no video)')}",
                   reply_markup=buttons(ep["id"]))
     send("📝 Caption:\n\n" + ep["caption"] + ("\n\n⚠️ Issues fixed by fact-check:\n- " + "\n- ".join(fc.get("issues", [])) if fc.get("issues") else ""))
+    if ep.get("books"):
+        send(books_text(ep))
     return msg["message_id"] if msg else None
+
+
+def books_text(ep):
+    """The per-saint books found for the web page. Bookshop can't be checked automatically, so Luis looks."""
+    lines = [f"{i}. {b['title']} · {b['author']} ({b.get('year') or '?'})\n   https://bookshop.org/book/{b['isbn']}"
+             for i, b in enumerate(ep["books"], 1)]
+    return ("📚 Books for the web page (check they're the right saint and in stock):\n" + "\n".join(lines)
+            + f"\n\nWrong or unavailable? /nobooks {ep['id']}")
 
 
 def resend_missing_reviews():
@@ -92,7 +102,8 @@ HELP = """A.S.† Studio commands
 /launch YYYY-MM-DD – set launch date (nothing posts before it)
 /time HH:MM – daily post time
 /pause · /resume – stop/start publishing
-/generate – make missing episodes now"""
+/generate – make missing episodes now
+/nobooks YYYY-MM-DD – drop the suggested books from that saint's web page"""
 
 
 def _status_text():
@@ -215,6 +226,15 @@ def process_updates():
             cfg["paused"] = False
             save_config(cfg)
             send("▶️ Publishing resumed.")
+        elif text.startswith("/nobooks"):
+            m = re.search(r"\d{4}-\d{2}-\d{2}", text)
+            ep = load_episode(m.group(0)) if m else None
+            if ep:
+                ep["books"] = []
+                save_episode(ep)
+                send(f"📚 Books removed from {ep['saint'].get('display_name', ep['id'])}'s page. The general shelf stays.")
+            else:
+                send("Usage: /nobooks 2026-11-05")
         elif text.startswith("/generate"):
             for e in load_episodes().values():  # failed episodes that gave up get a fresh set of retries
                 if e.get("status") == "failed" and e["date"] >= today().isoformat():

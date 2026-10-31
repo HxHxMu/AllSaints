@@ -4,6 +4,7 @@ import Poster from "./Poster.astro";
 import EmailBand from "./EmailBand.astro";
 import { neighbors, manuscriptDate, minutes, monthName, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
+import { booksFor, bookUrl } from "../lib/books";
 
 interface Props { saint: Saint; lang: Lang }
 const { saint, lang } = Astro.props;
@@ -11,6 +12,7 @@ const T = t[lang], P = paths[lang];
 const { prev, next } = neighbors(saint, lang);
 const day = (iso: string) => lang === "es" ? `${Number(iso.slice(8, 10))} de ${monthName(iso, lang)}` : `${monthName(iso)} ${Number(iso.slice(8, 10))}`;
 const feast = day(saint.date);
+const books = booksFor(saint);
 const alt = lang === "en" ? (saint.es ? paths.es.saint(saint.es.slug) : null) : paths.en.saint(saint.slug);
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const jsonld = {
@@ -68,6 +70,16 @@ const jsonld = {
         <p class="muted small">{T.art}: {saint.credits.map((c) => credit(c, lang)).join("; ") || T.publicDomain}. {disclosure(lang)}</p>
       </section>
 
+      {books.length > 0 && (
+        <section class="books" aria-labelledby="books-h">
+          <h2 id="books-h" class="label">{T.deeper}</h2>
+          <ul>
+            {books.map((b) => <li><a href={bookUrl(b)} rel="noopener sponsored"><cite>{b.title}</cite></a><span class="muted">{b.author}</span></li>)}
+          </ul>
+          <p class="muted small">{T.booksFine}</p>
+        </section>
+      )}
+
       {SUPPORT_URL && (
         <section class="support" aria-label="All Saints">
           <a class="rubric" href={SUPPORT_URL} rel="noopener">
@@ -104,6 +116,12 @@ const jsonld = {
   .sources h2 { font-weight: 400; }
   .sources ul { margin: 0; padding-left: 1.1em; font-size: 1.0625rem; }
   .small { font-size: 1rem; line-height: 1.5; }
+  .books { margin-top: 40px; display: grid; gap: 10px; max-width: var(--measure); }
+  .books h2 { font-weight: 400; }
+  .books ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .books li { display: grid; gap: 2px; font-size: 1.125rem; line-height: 1.35; }
+  .books cite { font-style: italic; }
+  .books li .muted { font-size: 1rem; }
   .support { margin-top: 40px; max-width: 30rem; }
   .days { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); }
   .days a { text-decoration: none; color: var(--vellum); display: grid; }

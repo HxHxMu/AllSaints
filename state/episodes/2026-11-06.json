@@ -2,7 +2,7 @@
  "id": "2026-11-06",
  "date": "2026-11-06",
  "status": "approved",
- "updated": "2026-10-30T14:30:23+00:00",
+ "updated": "2026-10-31T04:19:20+00:00",
  "saint": {
   "qid": "Q374056",
   "name": "Saint Nuno Álvares Pereira",
@@ -306,5 +306,6 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/art.jpg"
  },
- "review_message_id": 41
+ "review_message_id": 41,
+ "books": []
 }

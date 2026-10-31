@@ -2,7 +2,7 @@
  "id": "2026-10-31",
  "date": "2026-10-31",
  "status": "approved",
- "updated": "2026-10-29T05:40:17+00:00",
+ "updated": "2026-10-31T04:20:13+00:00",
  "saint": {
   "qid": "Q582213",
   "name": "Saint Alphonsus Rodríguez",
@@ -204,5 +204,13 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-10-31/preview.mp4"
  },
  "review_sends": 1,
- "review_message_id": 17
+ "review_message_id": 17,
+ "books": [
+  {
+   "title": "The Life of Blessed Alphonsus Rodriguez, Lay-Brother of the Society of Jesus",
+   "author": "Henry Foley",
+   "isbn": "9781021187604",
+   "year": 2023
+  }
+ ]
 }

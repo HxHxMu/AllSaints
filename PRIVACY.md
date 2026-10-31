@@ -29,7 +29,7 @@ OAuth credentials are stored as encrypted secrets in the project's GitHub reposi
 - **Hosting.** The site is served by Cloudflare, which processes IP addresses briefly to deliver pages and block attacks, under the [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 - **Videos** load from YouTube (youtube-nocookie.com) only when you tap play; from then on YouTube's terms and Google's privacy policy apply. The same goes for music: the SoundCloud player loads only when you tap "Listen", and from then on [SoundCloud's privacy policy](https://soundcloud.com/pages/privacy) applies.
 - **Email digest.** If you subscribe, your email address goes to our newsletter provider, [Beehiiv](https://www.beehiiv.com/privacy), only to send the weekly email; you confirm by email first, and every email has an unsubscribe link. The signup form is protected by Cloudflare Turnstile, which checks for bots without cookies or tracking.
-- **Support and links.** "Light a candle" opens our Ko-fi page; Ko-fi handles any payment under its own privacy policy, and we never see card details.
+- **Support and links.** "Light a candle" opens our Ko-fi page; Ko-fi handles any payment under its own privacy policy, and we never see card details. Book links go to Bookshop.org with our affiliate code, so it can tell us that a sale came from All Saints and pay a small commission; we don't learn who bought what.
 
 ## Google and YouTube
 This tool uses YouTube API Services. By watching All Saints videos on YouTube you are subject to the [YouTube Terms of Service](https://www.youtube.com/t/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).

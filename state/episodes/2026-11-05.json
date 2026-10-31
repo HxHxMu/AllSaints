@@ -2,7 +2,7 @@
  "id": "2026-11-05",
  "date": "2026-11-05",
  "status": "approved",
- "updated": "2026-10-30T04:35:56+00:00",
+ "updated": "2026-10-31T04:19:20+00:00",
  "saint": {
   "qid": "Q204891",
   "name": "Saint Guido Maria Conforti",
@@ -278,5 +278,6 @@
    "out": 2884,
    "thinking": 1141
   }
- ]
+ ],
+ "books": []
 }

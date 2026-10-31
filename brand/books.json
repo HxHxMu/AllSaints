@@ -1,0 +1,18 @@
+{
+  "_note": "The website's 'Go deeper' shelf (Bookshop.org). Each saint page shows the saint's own books (ep.books) first, then the best matches from here, 3 in all. A book tagged with an era is only shown for saints of that era. Tags: general, martyr, early (died before 600), medieval (600-1500), modern (after 1500), legend, and the continents used for YouTube playlists (Africa, Asia, Europe, the Americas, the Middle East, Oceania). Every ISBN was checked in stock on bookshop.org on 2026-10-30; recheck before adding more.",
+  "shelf": [
+    { "title": "All Saints: Daily Reflections on Saints, Prophets, and Witnesses for Our Time", "author": "Robert Ellsberg", "isbn": "9780824594480", "tags": ["general"] },
+    { "title": "Butler's Lives of the Saints (Concise Edition)", "author": "Michael Walsh, ed.", "isbn": "9780060692995", "tags": ["general"] },
+    { "title": "The Oxford Dictionary of Saints", "author": "David Farmer", "isbn": "9780199596607", "tags": ["general", "Europe"] },
+    { "title": "Voices of the Saints", "author": "Bert Ghezzi", "isbn": "9780829428063", "tags": ["general"] },
+    { "title": "The Fathers of the Church", "author": "Mike Aquilina", "isbn": "9781612785615", "tags": ["early"] },
+    { "title": "'Let Us Die That We May Live': Greek Homilies on Christian Martyrs", "author": "Pauline Allen et al.", "isbn": "9780415240420", "tags": ["martyr", "early", "the Middle East"] },
+    { "title": "The Sayings of the Desert Fathers", "author": "Benedicta Ward, trans.", "isbn": "9780879079598", "tags": ["early", "Africa", "the Middle East"] },
+    { "title": "The Golden Legend: Readings on the Saints", "author": "Jacobus de Voragine", "isbn": "9780691154077", "tags": ["legend", "martyr"] },
+    { "title": "How Africa Shaped the Christian Mind", "author": "Thomas C. Oden", "isbn": "9780830837052", "tags": ["Africa", "early"] },
+    { "title": "African Saints: Saints, Martyrs, and Holy People from the Continent of Africa", "author": "Frederick Quinn", "isbn": "9780824519711", "tags": ["Africa"] },
+    { "title": "Saints of the Americas", "author": "Jude Winkler, OFM Conv.", "isbn": "9780899425405", "tags": ["the Americas"] },
+    { "title": "The Martyrs of Japan", "author": "St. Alphonsus Liguori", "isbn": "9781499306170", "tags": ["Asia", "modern"] },
+    { "title": "101 Questions and Answers on Eastern Catholic Churches", "author": "Edward Faulk", "isbn": "9780809144419", "tags": ["the Middle East"] }
+  ]
+}

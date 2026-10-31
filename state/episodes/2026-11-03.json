@@ -2,7 +2,7 @@
  "id": "2026-11-03",
  "date": "2026-11-03",
  "status": "approved",
- "updated": "2026-10-29T06:13:48+00:00",
+ "updated": "2026-10-31T04:19:19+00:00",
  "saint": {
   "qid": "Q2575112",
   "name": "Saint Winifred",
@@ -201,5 +201,6 @@
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/cover.jpg",
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/preview.mp4"
  },
- "review_message_id": 23
+ "review_message_id": 23,
+ "books": []
 }

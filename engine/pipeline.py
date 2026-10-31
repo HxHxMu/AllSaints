@@ -4,6 +4,7 @@
   python engine/pipeline.py poll            # Telegram updates + publish due episodes
   python engine/pipeline.py refresh-token
   python engine/pipeline.py youtube <episode>  # upload one episode's Short now
+  python engine/pipeline.py books [episode|all]  # website books about the saint (all = only episodes without)
   python engine/pipeline.py yt-auth <client_secret.json>
   python engine/pipeline.py build-calendar
 """
@@ -158,6 +159,12 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         except Exception as e:
             log("Spanish translation failed:", e)
             es = None
+        try:  # the website's "Go deeper" books about this saint (suggestions; /nobooks in Telegram drops them)
+            import books
+            found_books = books.find(final["saint"])
+        except Exception as e:
+            log("Book lookup failed:", e)
+            found_books = []
         art_map, credits = build_art(ep_id, saint, final, work)
         icon = art_map.get("cover", {}).get("image")  # clean art (no title) for the website
         # narration
@@ -182,6 +189,7 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         })
         if es:
             ep["es"] = es
+        ep["books"] = found_books
         ep["caption"] = build_caption(ep)
         ep.pop("redo", None)
         ep.pop("error", None)
@@ -379,6 +387,8 @@ def main():
     sub.add_parser("yt-whoami")
     yp = sub.add_parser("yt-playlists", help="add published Shorts to their playlists (backfill / retry)")
     yp.add_argument("episode", nargs="?", default="all")
+    bp = sub.add_parser("books", help="look up books about the saint for the website (backfill / redo)")
+    bp.add_argument("episode", nargs="?", default="all")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -407,6 +417,14 @@ def main():
             if ep and (ep.get("youtube") or {}).get("id"):
                 ep["youtube"].pop("playlist_attempts", None)
                 youtube_playlists(ep)
+    elif a.cmd == "books":
+        import books
+        eps = [load_episode(a.episode)] if a.episode != "all" else load_episodes().values()
+        for ep in eps:
+            if ep and re.fullmatch(r"\d{4}-\d{2}-\d{2}", ep["id"]) and (a.episode != "all" or "books" not in ep):
+                ep["books"] = books.find(ep["saint"])
+                save_episode(ep)
+                print(ep["id"], ep["saint"]["name"], [b["title"] for b in ep["books"]])
     elif a.cmd == "yt-whoami":
         import youtube
         print(youtube.me())

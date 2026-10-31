@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-auth|yt-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|books|yt-auth|yt-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -13,6 +13,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → script.fact_check       second Claude pass vs the same cached sources; checks beats + story; returns a script only when
                            beats need fixing, story fixes as find/replace pairs (applied in fact_check); may "reject"
  → script.translate_es     Haiku (common tier="haiku") → ep.es (Spanish name, hook, story, prayer…); failure never blocks
+ → books.find              Open Library books whose title names the saint → ep.books (website; /nobooks in Telegram drops them)
  → illustrate.illustrate   Gemini image per beat (brand.json → illustration); overrides from art/<ep_id>/
    (art.collect_candidates / assign_art only when config art_source = "commons")
  → tts.synthesize          Gemini TTS per beat + faster-whisper timings (fallback ElevenLabs), paced, loudnorm −16 LUFS
