@@ -391,6 +391,10 @@ def main():
     lp.add_argument("episode", nargs="?", default="all")
     bp = sub.add_parser("books", help="look up books about the saint for the website (backfill / redo)")
     bp.add_argument("episode", nargs="?", default="all")
+    cp = sub.add_parser("compilation", help="the month's Shorts as one video, uploaded private (default: the month ending today)")
+    cp.add_argument("month", nargs="?", help="YYYY-MM")
+    cp.add_argument("--force", action="store_true", help="redo even if uploaded / before compilation_from")
+    cp.add_argument("--no-upload", action="store_true", help="render only (work/compilation-YYYY-MM/)")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -433,6 +437,9 @@ def main():
                 ep["books"] = books.find(ep["saint"])
                 save_episode(ep)
                 print(ep["id"], ep["saint"]["name"], [b["title"] for b in ep["books"]])
+    elif a.cmd == "compilation":
+        import compilation
+        compilation.make(a.month, force=a.force, upload=not a.no_upload)
     elif a.cmd == "yt-whoami":
         import youtube
         print(youtube.me())

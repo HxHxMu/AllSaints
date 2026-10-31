@@ -153,6 +153,19 @@ def process_updates():
                 continue
             kind, ep_id = cq["data"].split(":", 1)
             log(f"Telegram button: {kind} {ep_id}")
+            if kind == "comppublish":  # the monthly compilation (compilation.py), not an episode
+                import compilation
+                try:
+                    comp = compilation.publish(ep_id)
+                    _answer(cq, text="Published 📣")
+                    api("editMessageReplyMarkup", chat_id=cq["message"]["chat"]["id"], message_id=cq["message"]["message_id"],
+                        reply_markup={"inline_keyboard": [[{"text": "📣 Public on YouTube", "callback_data": f"noop:{ep_id}"}]]})
+                    send(f"📣 Saints of {compilation.month_name(ep_id)} is public: {comp['youtube']['url']}")
+                except Exception as e:
+                    log("Compilation publish failed:", e)
+                    _answer(cq, text="Publish failed")
+                    send(f"❌ Couldn't publish the compilation: {str(e)[:300]}\nTap Publish again to retry.")
+                continue
             ep = load_episode(ep_id)
             if not ep:
                 _answer(cq, text="Episode not found")

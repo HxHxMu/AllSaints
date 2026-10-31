@@ -180,6 +180,13 @@ def upload_short(ep, video_path: Path):
     if loc := localizations(ep):  # Spanish title/description for Spanish-language search
         meta["localizations"] = loc
         parts += ",localizations"
+    vid = upload_video(meta, video_path, parts)
+    return {"id": vid["id"], "url": f"https://youtube.com/shorts/{vid['id']}", "privacy": vid.get("status", {}).get("privacyStatus", privacy)}
+
+
+def upload_video(meta, video_path: Path, parts=None, thumbnail: Path = None):
+    """Resumable upload of any video (Shorts and the monthly compilation). Returns the API's video resource."""
+    parts = parts or ",".join(k for k in ("snippet", "status", "localizations") if k in meta)
     token = _access_token()
     _check_channel(token)
     size = video_path.stat().st_size
@@ -189,13 +196,44 @@ def upload_short(ep, video_path: Path):
     if r.status_code != 200:
         raise RuntimeError(f"YouTube upload init failed {r.status_code}: {r.text[:400]}")
     with open(video_path, "rb") as f:
-        r = session.put(r.headers["Location"], data=f, timeout=900,
+        r = session.put(r.headers["Location"], data=f, timeout=3600,
                         headers={"Authorization": f"Bearer {token}", "Content-Type": "video/mp4", "Content-Length": str(size)})
     if r.status_code not in (200, 201):
         raise RuntimeError(f"YouTube upload failed {r.status_code}: {r.text[:400]}")
     vid = r.json()
     log("YouTube upload:", vid["id"], vid.get("status", {}).get("uploadStatus"), vid.get("status", {}).get("privacyStatus"))
-    return {"id": vid["id"], "url": f"https://youtube.com/shorts/{vid['id']}", "privacy": vid.get("status", {}).get("privacyStatus", privacy)}
+    if thumbnail:  # custom thumbnails need a phone-verified channel; a failure only logs
+        t = session.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": vid["id"]},
+                         headers={"Authorization": f"Bearer {token}", "Content-Type": "image/jpeg"},
+                         data=thumbnail.read_bytes(), timeout=120)
+        if t.status_code != 200:
+            log("Thumbnail not set:", t.status_code, t.text[:200])
+    return vid
+
+
+def set_privacy(video_id, privacy):
+    """videos.update replaces the whole status part, so the other fields are sent again."""
+    token = _access_token()
+    _check_channel(token)
+    status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False, "embeddable": True}
+    if BRAND.get("youtube", {}).get("synthetic_media"):
+        status["containsSyntheticMedia"] = True
+    r = session.put(f"{API}/videos", params={"part": "status"}, headers={"Authorization": f"Bearer {token}"},
+                    json={"id": video_id, "status": status}, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"YouTube privacy change failed {r.status_code}: {r.text[:300]}")
+
+
+def add_video_to_playlist(title, video_id, position=None):
+    """Put one video in the channel playlist with this title (created if missing); `position` 0 = first."""
+    token = _access_token()
+    pid, h = _playlist_id(token, title), {"Authorization": f"Bearer {token}"}
+    snippet = {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": video_id}}
+    if position is not None:
+        snippet["position"] = position
+    r = session.post(f"{API}/playlistItems", params={"part": "snippet"}, headers=h, json={"snippet": snippet}, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"Adding to playlist {title!r} failed {r.status_code}: {r.text[:300]}")
 
 
 CONTINENTS = ["Africa", "Asia", "Europe", "the Americas", "the Middle East", "Oceania"]

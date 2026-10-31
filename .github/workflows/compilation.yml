@@ -1,0 +1,46 @@
+name: Monthly compilation
+on:
+  schedule:
+    # 15:07 UTC = 10–11 AM New York, after the day's 7:30 post. On the month's last day it makes that month;
+    # on the 1st–3rd it retries last month if it failed. Other days exit at once (compilation.due_month).
+    - cron: "7 15 28-31,1-3 * *"
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month YYYY-MM (optional; default: the month ending today)"
+        required: false
+      force:
+        description: "Redo even if already uploaded"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: compilation
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    environment: Production   # secrets live in the Production environment
+    timeout-minutes: 120
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q requests cryptography anthropic pillow
+      - name: Compile
+        run: python engine/pipeline.py compilation ${{ github.event.inputs.month }} ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+      - name: Save state
+        if: always()
+        run: bash scripts/commit-state.sh "compilation"
