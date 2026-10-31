@@ -114,6 +114,7 @@ def _status_text():
     icon = {"review": "👀", "approved": "✅", "published": "📣", "generating": "⚙️", "redo_requested": "🔁", "failed": "❌"}
     for e in eps[:14]:
         yt = " · ▶️" if (e.get("youtube") or {}).get("id") else (" · ▶️❌" if (e.get("youtube") or {}).get("error") else "")
+        yt += " · 📘" if (e.get("facebook") or {}).get("id") else (" · 📘❌" if (e.get("facebook") or {}).get("error") else "")
         lines.append(f"{icon.get(e['status'], '•')} {e['date']} {e.get('saint', {}).get('display_name', '…')} – {e['status']}{yt}")
     return "\n".join(lines)
 

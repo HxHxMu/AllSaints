@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|compilation|yt-auth|yt-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|compilation|yt-auth|yt-whoami|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -22,7 +22,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → storage.upload          GitHub Release `ep-YYYY-MM-DD`
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
-   → instagram.publish_reel → youtube.upload_short (independent; ≤3 retries; never re-posts the Reel)
+   → instagram.publish_reel → youtube.upload_short + facebook.publish_reel (each independent; ≤3 retries; never re-posts the Reel)
 ```
 
 ## State (`state/`, committed by the bot)
@@ -32,7 +32,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Fact-check rejects: max 3 saints per date (`MAX_REJECTS`), then the episode fails without auto-retry (`GiveUp`); Telegram `/generate` resets `attempts`. ElevenLabs-narrated episodes get a ⚠️ in the review: free-tier audio isn't licensed for commercial use, redo them.
 
 ## Secrets (GitHub → Environments → **Production**; locally `.env`)
-`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`.
+`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`.
 
 ## Workflows
 `generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below). `scripts/commit-state.sh` commits state with rebase retries.
@@ -43,6 +43,10 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Uploads are public (`youtube_privacy: "public"` since 2026-10-29; Google closed our audit as unnecessary; quota 100 uploads/day). `"private"` = publish from Studio by hand.
 - Playlists: after each upload the Short goes into "Saints of <Month>" (feast month) and "Saints of <continent>" (`youtube.continent`: Haiku sorts `saint.region` into Africa / Asia / Europe / the Americas / the Middle East / Oceania once, cached as `ep.continent`). Playlists are created public on first use; titles/description in `brand.json → youtube.playlists`. State: `ep.youtube.playlists`, `playlists_done`, `playlist_attempts` (≤3, today's episode only; a fresh playlist 409s for a few seconds, so inserts retry; reruns skip videos already in a playlist). Backfill/retry: `pipeline.py yt-playlists [ep_id|all]`. Covers: `playlist_cover.py`, square 1080 (the API only takes type "hero" at 1:1, and YouTube shows the whole square inside its 16:9 card, so it's designed to read small: icon full-bleed, face in the top third, big Cinzel words on soot at the bottom). Icon from the episode that opens the playlist (clean `art.jpg`, else the painted band of `cover.jpg`); Haiku (`locate_saint`) finds the saint's face to frame the crop. A new playlist gets its cover automatically (failure only logs). Redo one by hand: `playlist_cover.py "Saints of X" art.jpg out.jpg [focus face_y zoom]`, then `youtube.set_playlist_cover(token, playlist_id, jpg)` (deletes the old image first; the API's update call doesn't work). Needs the `youtube.force-ssl` scope (added 2026-10-30: rerun `yt-auth` once).
 - Title: `script.youtube_title` (fallback "St. X, Region") + `#Shorts`; category Education; not made for kids. Spanish title/description go in as YouTube `localizations.es` when `ep.es` exists (shown to Spanish-language viewers and search; backfill `pipeline.py yt-localize [ep|all]`). Both descriptions link the saint's web page ("Read the full story"; `youtube.page_url` mirrors the site's slug rule). Description carries `brand.json → youtube.disclosure` (AI assistance), sources, art credits, the Ko-fi line when `config.support_url` is set, and the footer.
+
+## Facebook Page
+- Instagram's "share to Facebook" setting doesn't apply to API-published Reels, so `facebook.publish_reel` posts the same video to the Page (Graph `video_reels`: start → upload by `file_url`, falling back to the file → finish PUBLISHED with the IG caption). Runs only after the Reel is on Instagram; state `ep.facebook` {id, url | attempts, error}; ≤3 attempts; never blocks Instagram/YouTube. Skipped until `FB_PAGE_ID`/`FB_PAGE_TOKEN` exist.
+- Setup: Meta app (the Instagram one) → add Facebook Login; Graph API Explorer → user token with `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, tick the Page → `pipeline.py fb-auth` (hidden prompts: App ID, secret, token; exchanges for a never-expiring Page token, writes `.env` + gh secrets). Check: `fb-whoami`. Retry/backfill one: `pipeline.py facebook <ep_id>`.
 
 ## Monthly compilation (`compilation.py`)
 - On a month's last day (after the 7:30 post) the month's **published** Shorts become one 16:9 video: each Short centred on its own blurred icon, saint name/feast on the left, monogram on the right; a "Saints of <Month>" title card and an end card (tagline + `youtube.footer`) over `assets/music/allsaints-2.mp3`. Chapters per saint, links to each saint's page, the disclosure, Spanish `localizations` when every episode has `es`. Custom thumbnail (five icons + month). No AI, ~1 min of runner time per saint.

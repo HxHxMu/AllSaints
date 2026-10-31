@@ -27,6 +27,8 @@ jobs:
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
