@@ -1,0 +1,290 @@
+{
+ "id": "2026-11-07",
+ "date": "2026-11-07",
+ "status": "review",
+ "updated": "2026-10-31T09:23:55+00:00",
+ "saint": {
+  "qid": "Q980830",
+  "name": "Saint Herculanus of Perugia",
+  "display_name": "St. Herculanus of Perugia",
+  "dates": "died 549",
+  "region": "Perugia, Umbria, Italy",
+  "feast": "November 7",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q980830",
+  "name": "Herculanus of Perugia",
+  "links": 12,
+  "enwiki": "Herculanus_of_Perugia",
+  "images": [
+   "Pietro%20Perugino%20cat48h.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Saint Herculanus of Perugia",
+  "birth": 450,
+  "death": 549,
+  "lon": 12.38854847,
+  "lat": 43.11191816,
+  "selection_reason": "Herculanus is documented by Pope Gregory the Great's own Dialogues, and his story is vivid and surprising: the last grain fed to a lamb to bluff the besieging Goths, then martyrdom under Totila and a body found intact with the head rejoined. He is also a true lesser-known figure, and he is not the previous day's Portuguese layman or a back-to-back repeat.",
+  "catholic_veneration": "Roman Martyrology, feast on November 7 (second feast March 1); patron saint of Perugia, with a pre-congregation cult attested since Gregory the Great (Dialogues III.13)."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Herculanus of Perugia",
+   "display_name": "St. Herculanus of Perugia",
+   "dates": "died 549",
+   "region": "Perugia, Umbria, Italy",
+   "feast": "November 7",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says a bishop fed his city's last grain to a lamb.",
+    "visual": "art",
+    "scene": "A devotional icon of a bishop in sixth-century Italian vestments, kneeling beside a small white lamb and holding out the last of a nearly empty sack of grain, inside a stone hill town."
+   },
+   {
+    "role": "who",
+    "text": "Saint Herculanus was bishop of Perugia, in Umbria, in the sixth century. Today he is its patron saint.",
+    "visual": "map",
+    "lat": 43.1107,
+    "lon": 12.3908,
+    "place": "Perugia · Umbria · Italy"
+   },
+   {
+    "role": "story",
+    "text": "In the year five hundred forty-nine, the Ostrogoths under King Totila besieged Perugia.",
+    "visual": "art",
+    "scene": "An icon of a walled hill town in Umbria, with towers and stone gates, ringed by a Gothic army in sixth-century mail and round shields with banners and tents on the plain below."
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds that Herculanus fed the last sack of grain to the last lamb. The Goths, he hoped, would think the city had food to spare.",
+    "visual": "art",
+    "scene": "An icon of the bishop on the city wall, gesturing toward a lamb eating grain from a sack while townspeople look on in sixth-century Italian tunics and cloaks and Gothic soldiers watch from beyond the walls."
+   },
+   {
+    "role": "story",
+    "text": "But Totila was not fooled. He took the city, and Herculanus was martyred.",
+    "visual": "art",
+    "scene": "An icon of the bishop in vestments standing calmly and with dignity inside the captured city's stone gate, with armed Gothic soldiers nearby and King Totila, crowned in Gothic dress, in the background."
+   },
+   {
+    "role": "story",
+    "text": "Pope Gregory the Great wrote of his martyrdom in his Dialogues. He writes that forty days later, the bishop's head was found miraculously reunited with his body.",
+    "visual": "art",
+    "scene": "An icon of the bishop lying on a funeral bier in vestments, his body whole and peaceful, with a halo and a ring of mourning Perugian clergy and townspeople holding candles in a stone church."
+   },
+   {
+    "role": "turn",
+    "text": "His plan failed, yet he spent their last grain hoping to save his people. Love like that is never wasted.",
+    "visual": "art",
+    "scene": "An icon of Saint Herculanus in bishop's vestments with a halo, holding a martyr's palm and a small lamb in his arms, the hill town of Perugia rising behind him."
+   },
+   {
+    "role": "close",
+    "text": "Saint Herculanus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Herculanus": "Her-kyoo-LAY-nus",
+   "Perugia": "Peh-ROO-jah",
+   "Ostrogoths": "OSS-troh-goths",
+   "Totila": "TOT-ih-lah",
+   "Umbria": "UM-bree-ah"
+  },
+  "caption_hook": "When Perugia was under siege, tradition says its bishop fed the last grain to a lamb.",
+  "summary": "Saint Herculanus, bishop of Perugia, is said to have tried to save his besieged city by feeding its last grain to a lamb, and he died a martyr when King Totila took the city in 549.",
+  "youtube_title": "St. Herculanus: The Bishop Who Fed Grain to a Lamb",
+  "hashtags": [
+   "#saintherculanus",
+   "#perugia",
+   "#umbria",
+   "#patronsaintofperugia",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#martyr",
+   "#popegregorythegreat",
+   "#saintoftheday",
+   "#allsaints",
+   "#catholicreels",
+   "#italy"
+  ],
+  "share_cta": "Know someone from Perugia? Send them their patron saint.",
+  "claims": [
+   {
+    "claim": "Herculanus of Perugia died in 549 AD and was bishop of Perugia.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was canonized by the Catholic Church and is recognised as patron saint of Perugia.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His main feast day is November 7; his second feast is March 1.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "According to Pope Gregory the Great in his Dialogues, Herculanus suffered martyrdom when Totila, king of the Ostrogoths, captured Perugia in 549.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Before the city was captured, Herculanus is said to have fed the last sack of grain to the last lamb.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The lamb was meant to give the Ostrogoths the impression that the Perugians had food to spare and could withstand the siege.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Totila was not fooled by the trick and captured the city just the same.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Totila is said to have ordered a cruel death for Herculanus; the soldier charged with it took pity and beheaded him before it was completed.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Gregory writes that forty days after his head was cut off, it was found miraculously reunited to his body.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The inhabitants of the castle of Cisterna in Umbria, above the River Puglia, were under Perugian rule and obliged to send three pounds of wax to Perugia for the feast of Saint Herculanus.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Perugia"
+  ],
+  "places": [
+   "Perugia",
+   "Umbria",
+   "Cisterna",
+   "Italy"
+  ],
+  "story": [
+   "Herculanus of Perugia, known in Italian as Ercolano, was a bishop who died in the year 549. His city, Perugia, sits in the region of Umbria, and it is still his city: the Catholic Church recognises him as a saint and as the patron saint of Perugia. His main feast is kept on November 7, and a second feast follows on March 1. He is not among the famous names of the calendar. There is no long biography to read, and nothing we can responsibly say about his childhood or his family. What survives is smaller, and in its way sturdier: the witness of a pope, and a city's long memory.",
+   "The witness is Pope Gregory the Great, who wrote about Herculanus in his Dialogues. According to Gregory, Herculanus suffered martyrdom when Totila, king of the Ostrogoths, captured Perugia in 549. That is the firm center of the story: a bishop, a besieged city, a conquering king, and a man who died a martyr. Everything else comes to us with the careful words the Church uses for what has been handed down: it is said, tradition holds.",
+   "Before the city fell, Herculanus is said to have tried to save it with a clever and tender plan. Tradition holds that he took the last sack of grain in Perugia and fed it to the last lamb. The purpose was to give the Ostrogoth forces the impression that the Perugians had food to spare, so much that they could pour their precious grain into a weak lamb. If the plan worked, the city would be able to withstand the siege. We can picture the scene without adding to it: a bishop beside a lamb, a nearly empty sack, and a whole city holding its breath.",
+   "It did not work. Totila was not fooled, and he captured the city just the same. Tradition holds that the king ordered a cruel death for the bishop, but that the soldier charged with carrying it out took pity on him and ended his life before the cruelty was finished. We will not dwell on the details. It is enough to say what the Church says: Herculanus died as a martyr, and the one man sent to harm him showed, in that moment, a little mercy.",
+   "Gregory adds one more thing. He writes that forty days after the head of Herculanus had been cut off, it was found miraculously reunited to his body. This is the pope's account, and it belongs to the tradition handed down about this bishop. Whatever we make of the detail, it speaks of a bishop remembered not as lost, but as kept.",
+   "His memory was carried in ordinary ways, too. The inhabitants of the castle of Cisterna in Umbria, above the River Puglia, were under Perugian rule, and they were obliged to send three pounds of wax to Perugia for the feast of Saint Herculanus. It is a small duty, the kind written down among the obligations of a village. But it shows how the feast of a bishop became part of the life of a wider countryside, reaching beyond the walls of the city he tried to save.",
+   "The plan of Herculanus failed. The lamb did not save Perugia, and the grain did not turn the king. Yet the Church does not remember him for the success of a plan. Tradition remembers a shepherd who is said to have spent the last of what his people had in the hope of keeping them safe, and who gave his life when that hope failed. Holiness is not always measured by what works. Sometimes it is measured by what we are willing to spend for others, and that kind of love, as the story of this forgotten bishop shows, is never wasted."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Story beat 4: 'Pope Gregory the Great records it' could make listeners think Gregory is the source for the lamb story. The sources only credit Gregory with the martyrdom under Totila and the reunited head. Changed to 'wrote of his martyrdom'.",
+   "Turn beat: 'spent all they had to save his people' states a tradition-based detail as plain fact and overstates the outcome. Changed to 'spent their last grain hoping to save his people', same length.",
+   "Story beat 3 scene: the art showed Herculanus standing before Totila, an encounter no source reports. Reworded so the king is only in the background and the bishop is inside the captured gate.",
+   "Hook beat scene: removed 'bishop's pallium', a detail not in the sources and doubtful for a sixth-century bishop.",
+   "caption_hook: stated the lamb and grain episode as fact. Added 'tradition says'.",
+   "Story paragraph 7: 'It remembers a shepherd who spent the last of what his people had' presented the grain tradition as certain history. Hedged with 'Tradition' and 'is said to have'.",
+   "Checked and correct: death in 549, bishop of Perugia, patron saint, feast days, Gregory's Dialogues, Totila, forty days, the Cisterna wax detail, and the map coordinates for Perugia. The spoken script is about 135 words after the edits, within the 125-145 target."
+  ],
+  "confidence": 90,
+  "reviewer_note": "The sources are a single thin Wikipedia entry. Please confirm you are comfortable with the lamb/grain tradition being hedged throughout, and note the youtube_title still states the lamb episode without a hedge (kept short for the title). The 'St.' in display_name and the title was left as is since it is not spoken."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 3497,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1017,
+   "thinking": 800
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1763,
+   "cache_write": 1361,
+   "cache_read": 0,
+   "out": 9788,
+   "thinking": 6598
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 3865,
+   "cache_write": 0,
+   "cache_read": 1361,
+   "out": 6601,
+   "thinking": 3976
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1603,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 4176,
+   "thinking": 2424
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Herculanus of Perugia",
+   "url": "https://en.wikipedia.org/wiki/Herculanus_of_Perugia"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 65.6,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Herculano",
+  "name": "San Herculano de Perugia",
+  "region": "Perugia, Umbría, Italia",
+  "dates": "murió 549",
+  "hook": "Cuando Perugia estaba sitiada, según la tradición su obispo dio de comer el último grano a un cordero.",
+  "summary": "San Herculano, obispo de Perugia, habría intentado salvar a su ciudad sitiada dando de comer el último grano a un cordero, y murió como mártir cuando el rey Totila tomó la ciudad en 549.",
+  "story": [
+   "Herculano de Perugia, conocido en italiano como Ercolano, fue un obispo que murió en el año 549. Su ciudad, Perugia, se encuentra en la región de Umbría, y sigue siendo suya: la Iglesia católica lo reconoce como santo y como patrono de Perugia. Su fiesta principal se celebra el 7 de noviembre, y una segunda fiesta le sigue el 1 de marzo. No figura entre los nombres más conocidos del calendario. No hay una larga biografía que leer, ni nada que podamos afirmar con responsabilidad sobre su infancia o su familia. Lo que sobrevive es más pequeño y, a su manera, más sólido: el testimonio de un papa y la larga memoria de una ciudad.",
+   "El testimonio es el del papa san Gregorio Magno, quien escribió sobre Herculano en sus Diálogos. Según Gregorio, Herculano sufrió el martirio cuando Totila, rey de los ostrogodos, tomó Perugia en 549. Ese es el centro firme de la historia: un obispo, una ciudad sitiada, un rey conquistador y un hombre que murió como mártir. Todo lo demás nos llega con las palabras prudentes que la Iglesia emplea para lo que ha sido transmitido: se dice, según la tradición.",
+   "Antes de que la ciudad cayera, se dice que Herculano intentó salvarla con un plan astuto y tierno. Según la tradición, tomó el último saco de grano de Perugia y lo dio de comer al último cordero. El propósito era dar a las fuerzas ostrogodas la impresión de que los peruginos tenían comida de sobra, tanta que podían verter su preciado grano en un cordero débil. Si el plan funcionaba, la ciudad podría resistir el asedio. Podemos imaginar la escena sin añadirle nada: un obispo junto a un cordero, un saco casi vacío y una ciudad entera conteniendo la respiración.",
+   "No funcionó. Totila no se dejó engañar y, de todos modos, tomó la ciudad. Según la tradición, el rey ordenó una muerte cruel para el obispo, pero el soldado encargado de llevarla a cabo se compadeció de él y acabó con su vida antes de que la crueldad se consumara. No nos detendremos en los detalles. Basta decir lo que dice la Iglesia: Herculano murió como mártir, y el único hombre enviado para hacerle daño mostró, en ese momento, un poco de misericordia.",
+   "Gregorio añade una cosa más. Escribe que cuarenta días después de que la cabeza de Herculano fuera cortada, se encontró milagrosamente unida de nuevo a su cuerpo. Este es el relato del papa, y forma parte de la tradición transmitida sobre este obispo. Sea cual sea nuestra opinión sobre este detalle, habla de un obispo recordado no como perdido, sino como guardado.",
+   "Su memoria también se conservó de maneras cotidianas. Los habitantes del castillo de Cisterna, en Umbría, sobre el río Puglia, estaban bajo el dominio de Perugia y tenían la obligación de enviar tres libras de cera a Perugia para la fiesta de San Herculano. Es un deber pequeño, del tipo que se anota entre las obligaciones de un pueblo. Pero muestra cómo la fiesta de un obispo llegó a formar parte de la vida de un campo más amplio, más allá de las murallas de la ciudad que intentó salvar.",
+   "El plan de Herculano fracasó. El cordero no salvó a Perugia, y el grano no hizo cambiar de parecer al rey. Sin embargo, la Iglesia no lo recuerda por el éxito de un plan. La tradición recuerda a un pastor que, según se dice, gastó lo último que tenía su pueblo con la esperanza de mantenerlo a salvo, y que entregó su vida cuando esa esperanza se perdió. La santidad no siempre se mide por lo que funciona. A veces se mide por lo que estamos dispuestos a dar por los demás, y ese tipo de amor, como muestra la historia de este obispo olvidado, nunca se desperdicia."
+  ],
+  "prayer": "San Herculano, ruega por nosotros.",
+  "patronages": [
+   "Perugia"
+  ],
+  "places": [
+   "Perugia",
+   "Umbría",
+   "Cisterna",
+   "Italia"
+  ]
+ },
+ "books": [],
+ "caption": "When Perugia was under siege, tradition says its bishop fed the last grain to a lamb.\n\nSaint Herculanus of Perugia · Feast day: November 7\nSaint Herculanus, bishop of Perugia, is said to have tried to save his besieged city by feeding its last grain to a lamb, and he died a martyr when King Totila took the city in 549.\n\nSaint Herculanus, pray for us. 🕯\n\nHad you ever heard of St. Herculanus of Perugia before today?\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintherculanus #umbria",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/art.jpg"
+ },
+ "review_message_id": 46
+}
