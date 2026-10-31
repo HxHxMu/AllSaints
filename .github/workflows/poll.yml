@@ -18,6 +18,7 @@ jobs:
     environment: Production   # secrets live in the Production environment
     timeout-minutes: 25
     env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # YouTube playlists: continent via Haiku
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_RELAY_URL: ${{ secrets.TELEGRAM_RELAY_URL }}
       TELEGRAM_RELAY_SECRET: ${{ secrets.TELEGRAM_RELAY_SECRET }}

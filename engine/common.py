@@ -46,8 +46,8 @@ def get_json(url, params=None, timeout=40, tries=8):
 
 def env(name, default=None, required=False):
     v = os.environ.get(name, default)
-    if required and not v:
-        raise SystemExit(f"Missing required environment variable {name}")
+    if required and not v:  # RuntimeError, not SystemExit, so callers' `except Exception` contains it
+        raise RuntimeError(f"Missing required environment variable {name}")
     return v
 
 
