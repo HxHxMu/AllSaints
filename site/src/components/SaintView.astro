@@ -69,6 +69,7 @@ const jsonld = {
           <span>{T.share}<small data-share-note>{T.shareSub}</small></span><span aria-hidden="true">›</span>
         </button>
         <p class="visually-hidden" role="status" data-share-status></p>
+        <p class="label fb" hidden data-share-fb><a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`} target="_blank" rel="noopener">{T.shareFb}</a></p>
       </div>
 
       <section class="sources" aria-labelledby="src-h">
@@ -110,7 +111,9 @@ const jsonld = {
 
 <script>
   // Phones open their own share sheet (WhatsApp, Messages…) with the link; the share card comes with it.
-  // Elsewhere the link is copied. Nothing is loaded from any other site.
+  // Elsewhere the link is copied. Computers (a mouse, or no share sheet) also get a plain link to Facebook's
+  // share page. Nothing is loaded from any other site.
+  if (!navigator.share || matchMedia("(hover: hover) and (pointer: fine)").matches) document.querySelectorAll<HTMLElement>("[data-share-fb]").forEach((el) => { el.hidden = false; });
   document.querySelectorAll<HTMLButtonElement>("[data-share]").forEach((btn) => {
     const note = btn.querySelector<HTMLElement>("[data-share-note]");
     const status = btn.parentElement?.querySelector<HTMLElement>("[data-share-status]");
@@ -150,6 +153,7 @@ const jsonld = {
   }
   .prayer { font-size: 1.875rem; line-height: 1.2; color: var(--gilt-light); margin: 40px 0 8px; }
   .share { margin-top: 24px; max-width: 30rem; }
+  .share .fb { margin: 10px 0 0; }
   .sources { margin-top: 48px; display: grid; gap: 8px; max-width: var(--measure); }
   .sources h2 { font-weight: 400; }
   .sources ul { margin: 0; padding-left: 1.1em; font-size: 1.0625rem; }
