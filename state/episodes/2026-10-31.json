@@ -1,8 +1,8 @@
 {
  "id": "2026-10-31",
  "date": "2026-10-31",
- "status": "approved",
- "updated": "2026-10-31T04:20:13+00:00",
+ "status": "published",
+ "updated": "2026-10-31T11:31:23+00:00",
  "saint": {
   "qid": "Q582213",
   "name": "Saint Alphonsus Rodríguez",
@@ -212,5 +212,16 @@
    "isbn": "9781021187604",
    "year": 2023
   }
- ]
+ ],
+ "published": {
+  "media_id": "18144611071720583",
+  "permalink": "https://www.instagram.com/reel/DfKDc4dj0oJ/"
+ },
+ "published_at": "2026-10-31T07:30-04:00",
+ "youtube": {
+  "id": "FvcsQYsF2F4",
+  "url": "https://youtube.com/shorts/FvcsQYsF2F4",
+  "privacy": "public",
+  "published_at": "2026-10-31T07:31-04:00"
+ }
 }
