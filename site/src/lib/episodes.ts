@@ -38,6 +38,8 @@ const MONTHS = {
 };
 export const monthName = (iso: string, lang: Lang = "en") => MONTHS[lang][Number(iso.slice(5, 7)) - 1];
 export const manuscriptDate = (iso: string, lang: Lang = "en") => `${roman(Number(iso.slice(8, 10)))} · ${monthName(iso, lang)}`;
+// the saint's 1200×630 link-preview card (scripts/share-cards.mjs); the Spanish edition has its own
+export const shareCard = (s: Saint, lang: Lang) => `/og/${s.id}${lang === "es" && s.es ? "-es" : ""}.jpg`;
 export const minutes = (s: number | null) => (s ? `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}` : "");
 
 const slugify = (name: string) =>

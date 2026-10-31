@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Poster from "./Poster.astro";
 import EmailBand from "./EmailBand.astro";
-import { neighbors, manuscriptDate, minutes, monthName, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
+import { neighbors, manuscriptDate, minutes, monthName, shareCard, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 import { booksFor, bookUrl } from "../lib/books";
 
@@ -37,7 +37,7 @@ const jsonld = {
   }),
 };
 ---
-<Base title={saint.name} description={saint.summary || saint.hook} image={saint.cover} type="article" jsonld={jsonld} lang={lang} alt={alt}>
+<Base title={saint.name} description={saint.summary || saint.hook} image={shareCard(saint, lang)} type="article" jsonld={jsonld} lang={lang} alt={alt}>
   <article class="saint">
     <div class="art"><Poster saint={saint} eager height="page" lang={lang} /></div>
     <div class="text wrap">

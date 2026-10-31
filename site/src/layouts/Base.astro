@@ -24,6 +24,8 @@ const T = t[lang], P = paths[lang];
 const other: Lang = lang === "en" ? "es" : "en";
 const hasEs = lang === "es" || saintsIn("es").length > 0;  // no ES switch until the first translation exists
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// link previews: a page's own share card (scripts/share-cards.mjs, 1200×630), else the channel's
+const card = new URL(image || "/og/default.jpg", Astro.site).href;
 const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${title} · All Saints`;
 ---
 <!doctype html>
@@ -44,8 +46,11 @@ const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${tit
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
-  {image && <meta property="og:image" content={image}>}
-  <meta name="twitter:card" content={image ? "summary_large_image" : "summary"}>
+  <meta property="og:image" content={card}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content={title}>
+  <meta name="twitter:card" content="summary_large_image">
   {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 </head>
 <body>

@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Poster from "./Poster.astro";
-import { latest, neighbors, manuscriptDate, minutes, type Lang } from "../lib/episodes";
+import { latest, neighbors, manuscriptDate, minutes, shareCard, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 
 interface Props { lang: Lang }
@@ -11,7 +11,7 @@ const today = latest(lang);
 const { prev } = today ? neighbors(today, lang) : { prev: undefined };
 const alt = lang === "en" ? paths.es.home : paths.en.home;
 ---
-<Base title="All Saints" description={`${T.homeDesc} ${T.tagline}`} image={today?.cover} lang={lang} alt={alt}>
+<Base title="All Saints" description={`${T.homeDesc} ${T.tagline}`} image={today && shareCard(today, lang)} lang={lang} alt={alt}>
   {today ? (
     <article class="today">
       <div class="art"><Poster saint={today} eager lang={lang} /></div>

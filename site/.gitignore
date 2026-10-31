@@ -3,3 +3,4 @@ dist/
 .astro/
 src/assets/art/
 ._*
+public/og/
