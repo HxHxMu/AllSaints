@@ -49,4 +49,4 @@ Instagram: 5 hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint 
 
 ## Cost
 - Model auto-picks the newest Sonnet; sources sent once as a cached context block shared by script and fact-check; per-call usage stored in `ep.usage`. Output/thinking tokens dominate cost.
-- Haiku tier exists (`claude_json(..., tier="haiku")`, used by translate_es). Not built: route `research.select_saint` to Haiku; effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.
+- Haiku tier exists (`claude_json(..., tier="haiku")`, used by translate_es). `select_saint` stays on Sonnet: tested 2026-10-30 on Nov 7–10, Haiku matched or was fine on 3 dates but picked Herodion of Patras for Nov 10 (mostly legend, main feast April 8; Sonnet chose Justus of Canterbury). It would save ~1.3¢/episode (~$0.40/mo), and one bad pick costs a fact-check reject plus a new script (~15¢). Not built: effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.
