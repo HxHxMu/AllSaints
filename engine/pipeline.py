@@ -313,6 +313,15 @@ def publish_episode(ep):
     publish_youtube(ep, vid)
 
 
+def _notify(text):
+    """Telegram note after a post has succeeded: a failure here must not mark the post failed (a retry would double-post)."""
+    import telegram
+    try:
+        telegram.send(text)
+    except Exception:
+        traceback.print_exc()
+
+
 def publish_facebook(ep, video=None):
     """Post the Reel to the Facebook Page once, after it's on Instagram; independent, max 3 attempts."""
     import facebook, storage, telegram
@@ -323,7 +332,7 @@ def publish_facebook(ep, video=None):
         res = facebook.publish_reel(ep["caption"], video_url=storage.resolve_direct(ep["assets"]["video.mp4"]), video_path=video)
         ep["facebook"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
         save_episode(ep)
-        telegram.send(f"📘 On Facebook: {ep['saint']['display_name']}\n{res['url']}")
+        _notify(f"📘 On Facebook: {ep['saint']['display_name']}\n{res['url']}")
     except Exception as e:
         traceback.print_exc()
         fb["attempts"] = fb.get("attempts", 0) + 1
@@ -347,7 +356,7 @@ def publish_youtube(ep, video=None):
         ep["youtube"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
         save_episode(ep)
         note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
-        telegram.send(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
+        _notify(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
         youtube_playlists(ep)
     except Exception as e:
         traceback.print_exc()
