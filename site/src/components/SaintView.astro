@@ -62,6 +62,13 @@ const jsonld = {
 
       <p class="prayer devotional">{saint.prayer}</p>
 
+      <div class="share">
+        <button class="rubric" type="button" data-share data-title={saint.name} data-text={saint.hook} data-url={url}>
+          <span>{T.share}<small data-share-note>{T.shareSub}</small></span><span aria-hidden="true">›</span>
+        </button>
+        <p class="visually-hidden" role="status" data-share-status></p>
+      </div>
+
       <section class="sources" aria-labelledby="src-h">
         <h2 id="src-h" class="label">{T.sources}</h2>
         <ul>
@@ -99,6 +106,32 @@ const jsonld = {
   <EmailBand lang={lang} />
 </Base>
 
+<script>
+  // Phones open their own share sheet (WhatsApp, Messages…) with the link; the share card comes with it.
+  // Elsewhere the link is copied. Nothing is loaded from any other site.
+  document.querySelectorAll<HTMLButtonElement>("[data-share]").forEach((btn) => {
+    const note = btn.querySelector<HTMLElement>("[data-share-note]");
+    const status = btn.parentElement?.querySelector<HTMLElement>("[data-share-status]");
+    const original = note?.textContent || "";
+    btn.addEventListener("click", async () => {
+      const { title = "", text = "", url = location.href } = btn.dataset;
+      if (navigator.share) {
+        try { await navigator.share({ title, text, url }); } catch { /* closed the sheet */ }
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        const done = document.documentElement.lang === "es" ? "Enlace copiado" : "Link copied";
+        if (note) note.textContent = done;
+        if (status) status.textContent = done;
+        setTimeout(() => { if (note) note.textContent = original; if (status) status.textContent = ""; }, 2500);
+      } catch {
+        window.prompt(document.documentElement.lang === "es" ? "Copia el enlace:" : "Copy the link:", url);
+      }
+    });
+  });
+</script>
+
 <style>
   .text { display: grid; gap: 0; padding-top: 22px; }
   .head { display: grid; gap: 10px; }
@@ -112,6 +145,7 @@ const jsonld = {
     font-family: var(--display); color: var(--gilt); float: left; font-size: 3.6rem; line-height: .9; padding: 6px 8px 0 0;
   }
   .prayer { font-size: 1.875rem; line-height: 1.2; color: var(--gilt-light); margin: 40px 0 8px; }
+  .share { margin-top: 24px; max-width: 30rem; }
   .sources { margin-top: 48px; display: grid; gap: 8px; max-width: var(--measure); }
   .sources h2 { font-weight: 400; }
   .sources ul { margin: 0; padding-left: 1.1em; font-size: 1.0625rem; }

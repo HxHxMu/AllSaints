@@ -46,6 +46,11 @@ const slugify = (name: string) =>
   name.replace(/^(Saints?|Sts?\.|San|Santos?|Santas?)\s+/i, "").normalize("NFD").replace(/[̀-ͯ]/g, "")
     .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
+// older episodes stored Wikipedia titles URL-encoded ("Nuno %C3%81lvares"); screen readers read that letter by letter
+const readableSource = (s: { title: string; url?: string }) => {
+  try { return { ...s, title: decodeURIComponent(s.title) }; } catch { return s; }
+};
+
 function toSaint(ep: any): Saint {
   const s = ep.script, saint = s.saint;
   const beats: any[] = s.beats || [];
@@ -64,7 +69,7 @@ function toSaint(ep: any): Saint {
       prayer: es.prayer || "", patronages: es.patronages || [], places: es.places || [],
     },
     youtubeId: ep.youtube?.id || null,
-    duration: ep.duration || null, sources: ep.sources || [], credits: [...new Set<string>(ep.art_credits || [])],
+    duration: ep.duration || null, sources: (ep.sources || []).map(readableSource), credits: [...new Set<string>(ep.art_credits || [])],
     cover: ep.assets?.["cover.jpg"] || null, art: art[`../assets/art/${ep.id}.jpg`]?.default || null,
     continent: ep.continent || null, books: ep.books || [],
   };

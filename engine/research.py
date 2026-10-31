@@ -1,5 +1,5 @@
 """Source gathering (Wikipedia, Catholic Encyclopedia 1913 via Wikisource) and saint selection."""
-import json, random, re
+import json, random, re, urllib.parse
 from common import get_json, DATA, log, claude_json, load_config, load_episodes, month_day_label
 
 WP = "https://en.wikipedia.org/w/api.php"
@@ -45,7 +45,7 @@ def gather_sources(saint):
     """Return list of {title,url,text} for the research prompt."""
     src = []
     full = wiki_full(saint["enwiki"])
-    src.append({"title": f"Wikipedia: {saint['enwiki'].replace('_', ' ')}",
+    src.append({"title": f"Wikipedia: {urllib.parse.unquote(saint['enwiki']).replace('_', ' ')}",
                 "url": f"https://en.wikipedia.org/wiki/{saint['enwiki']}", "text": full[:14000]})
     try:
         t, txt = catholic_encyclopedia(saint["name"])
