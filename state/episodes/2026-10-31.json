@@ -2,7 +2,7 @@
  "id": "2026-10-31",
  "date": "2026-10-31",
  "status": "published",
- "updated": "2026-10-31T11:31:23+00:00",
+ "updated": "2026-10-31T14:32:01+00:00",
  "saint": {
   "qid": "Q582213",
   "name": "Saint Alphonsus Rodríguez",
@@ -222,6 +222,12 @@
   "id": "FvcsQYsF2F4",
   "url": "https://youtube.com/shorts/FvcsQYsF2F4",
   "privacy": "public",
-  "published_at": "2026-10-31T07:31-04:00"
- }
+  "published_at": "2026-10-31T07:31-04:00",
+  "playlists": [
+   "Saints of October",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
