@@ -6,6 +6,7 @@
 }
 
 :root {
+  --bar-h: 56px;
   --soot: #0D0B09;
   --umber: #1C1712;
   --vellum: #EFE6D2;
@@ -30,7 +31,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--bar-h) + 12px); }
 body {
   margin: 0;
   background: var(--soot);
@@ -62,7 +63,7 @@ a:hover { color: var(--gilt-light); }
 .label { font-variant-caps: all-small-caps; letter-spacing: .06em; font-size: 1.0625rem; color: var(--ash); }
 .muted { color: var(--ash); }
 /* skip link: hidden until a keyboard user tabs to it */
-.skip { position: absolute; left: var(--gutter); top: 8px; z-index: 10; padding: 10px 16px; background: var(--martyr); color: var(--vellum); transform: translateY(-200%); }
+.skip { position: absolute; left: var(--gutter); top: 8px; z-index: 30; padding: 10px 16px; background: var(--martyr); color: var(--vellum); transform: translateY(-200%); }
 .skip:focus { transform: none; }
 main:focus { outline: none; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

@@ -26,6 +26,12 @@ const hasEs = lang === "es" || saintsIn("es").length > 0;  // no ES switch until
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // link previews: a page's own share card (scripts/share-cards.mjs, 1200×630), else the channel's
 const card = new URL(image || "/og/default.jpg", Astro.site).href;
+const here = Astro.url.pathname;
+const nav = [
+  { href: P.calendar, label: T.calendar, on: current === "calendar" || here.startsWith(P.calendar) },
+  { href: "/music/", label: T.music, on: here.startsWith("/music/") },
+  { href: "/about/", label: T.about, on: here.startsWith("/about/") },
+];
 const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${title} · All Saints`;
 ---
 <!doctype html>
@@ -55,37 +61,95 @@ const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${tit
 </head>
 <body>
   <a class="skip" href="#main">{T.skip}</a>
-  <header class="bar wrap">
-    <a class="mono" href={P.home} aria-label={T.homeLabel}>A.S.†</a>
-    <nav class="label" aria-label="Main">
-      <a href={P.calendar} aria-current={current === "calendar" ? "page" : undefined}>{T.calendar}</a>
-      {hasEs && <span aria-hidden="true"> · </span>}
-      {hasEs && <span class="lang">
-        {lang === "en" ? <b>EN</b> : <a href={alt || paths.en.home} hreflang="en" lang="en" aria-label="English">EN</a>}
-        <span aria-hidden="true"> / </span>
-        {lang === "es" ? <b>ES</b> : <a href={alt || paths.es.home} hreflang="es" lang="es" aria-label="Español">ES</a>}
-      </span>}
-    </nav>
+  <!-- sticky top bar; on phones the links fold into a menu (one list, shown inline from 768px) -->
+  <header class="bar">
+    <div class="wrap bar-in">
+      <a class="mono" href={P.home} aria-label={T.homeLabel}>A.S.†</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu
+        data-open={T.menu} data-close={T.menuClose} aria-label={T.menu}>
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <nav class="label nav" id="site-nav" aria-label={T.navLabel}>
+        <ul>
+          {nav.map((n) => <li><a href={n.href} aria-current={n.on ? "page" : undefined}>{n.label}</a></li>)}
+          {hasEs && <li class="lang">
+            {lang === "en" ? <b>EN</b> : <a href={alt || paths.en.home} hreflang="en" lang="en" aria-label="English">EN</a>}
+            <span aria-hidden="true"> / </span>
+            {lang === "es" ? <b>ES</b> : <a href={alt || paths.es.home} hreflang="es" lang="es" aria-label="Español">ES</a>}
+          </li>}
+        </ul>
+      </nav>
+    </div>
   </header>
   <main id="main" tabindex="-1"><slot /></main>
   <footer class="foot wrap">
     <p class="devotional tag">{T.tagline}</p>
     <p class="label links">
-      <a href="/about/">{T.about}</a> · <a href="/music/">{T.music}</a> · <a href="https://www.instagram.com/all.holy.saints/">Instagram</a> ·
+      <a href={P.calendar}>{T.calendar}</a> · <a href="/about/">{T.about}</a> · <a href="/music/">{T.music}</a> · <a href="https://www.instagram.com/all.holy.saints/">Instagram</a> ·
       <a href="https://www.youtube.com/@AllHolySaints">YouTube</a> · <a href="/privacy/">{T.privacy}</a> · <a href="/terms/">{T.terms}</a>
     </p>
     <p class="label">hello@allholysaints.com</p>
   </footer>
+  <script>
+    // phone menu: the button opens and closes the nav; Escape, a tap outside or picking a link closes it
+    const btn = document.querySelector<HTMLButtonElement>("[data-menu]")!;
+    const nav = document.getElementById("site-nav")!;
+    const set = (open: boolean) => {
+      btn.setAttribute("aria-expanded", String(open));
+      btn.setAttribute("aria-label", (open ? btn.dataset.close : btn.dataset.open)!);
+      nav.classList.toggle("open", open);
+    };
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      set(open);
+      if (open) nav.querySelector<HTMLElement>("a")?.focus();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("open")) { set(false); btn.focus(); }
+    });
+    document.addEventListener("click", (e) => {
+      if (nav.classList.contains("open") && !(e.target as Element).closest(".bar")) set(false);
+    });
+    nav.addEventListener("click", (e) => { if ((e.target as Element).closest("a")) set(false); });
+    matchMedia("(min-width: 768px)").addEventListener("change", () => set(false));
+  </script>
 </body>
 </html>
 
 <style>
-  .bar { display: flex; justify-content: space-between; align-items: baseline; padding-block: 16px 12px; }
+  .bar { position: sticky; top: 0; z-index: 20; background: var(--soot); border-bottom: 1px solid var(--divider); }
+  .bar-in { display: flex; justify-content: space-between; align-items: center; min-height: var(--bar-h); }
   .mono { font-family: var(--display); font-weight: 600; letter-spacing: .14em; color: var(--gilt); text-decoration: none; font-size: 1.0625rem; }
-  /* the padding grows the tap area past WCAG 2.2's 24px minimum; the negative margin keeps the layout */
-  nav a { color: var(--ash); text-decoration: none; display: inline-block; padding: 11px 6px; margin: -11px -6px; }
-  nav a:hover, nav a[aria-current="page"] { color: var(--vellum); }
+  .nav ul { list-style: none; margin: 0; padding: 0; }
+  .nav a { color: var(--ash); text-decoration: none; }
+  .nav a:hover, .nav a[aria-current="page"] { color: var(--vellum); }
   .lang b { color: var(--vellum); font-weight: 500; }
+  .menu-btn { display: grid; place-items: center; width: 44px; height: 44px; margin-right: -10px; background: none; border: 0; color: var(--vellum); cursor: pointer; }
+  .bars { display: grid; gap: 5px; width: 22px; }
+  .bars i { display: block; height: 1.5px; background: currentColor; transition: transform 200ms var(--ease-out), opacity 200ms; }
+  [aria-expanded="true"] .bars i:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  [aria-expanded="true"] .bars i:nth-child(2) { opacity: 0; }
+  [aria-expanded="true"] .bars i:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  /* phone: the nav drops down under the bar, one 48px row per link */
+  @media (max-width: 767px) {
+    .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--soot); border-bottom: 1px solid var(--rule); }
+    .nav.open { display: block; }
+    .nav ul { padding: 8px var(--gutter) 16px; }
+    .nav li { border-top: 1px solid var(--divider); }
+    .nav li:first-child { border-top: 0; }
+    .nav a, .nav .lang b { display: inline-flex; align-items: center; min-height: 48px; font-size: 1.25rem; letter-spacing: .08em; }
+    .nav .lang { display: flex; align-items: center; }
+    .nav .lang a, .nav .lang b { padding-inline: 12px; }
+    .nav .lang > :first-child { padding-left: 0; }
+  }
+  /* desktop: inline, separated by middots */
+  @media (min-width: 768px) {
+    .menu-btn { display: none; }
+    .nav ul { display: flex; align-items: center; }
+    .nav li + li::before { content: "·"; color: var(--ash); margin-inline: 10px; }
+    /* the padding grows the tap area past WCAG 2.2's 24px minimum; the negative margin keeps the layout */
+    .nav a { display: inline-block; padding: 11px 6px; margin: -11px -6px; }
+  }
   .foot { padding-block: 72px 48px; display: grid; gap: 10px; }
   .tag { font-size: 1.4375rem; color: var(--vellum); }
   .links a { color: var(--ash); }

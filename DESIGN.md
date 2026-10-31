@@ -140,7 +140,7 @@ The faces come from the world the saints lived in: inscriptions, missals and boo
 
 ## Layout
 
-- **Phone (base, 390px design width):** 20px side gutter. Home order: top bar (monogram left; Calendar · EN / ES right) → icon, full width, 400px tall, cropped so the face sits in the upper third, tap to play → numeral date → name → devotional hook → rubric "▶ Watch his story · 1:06" (must be above the fold on a 390×844 screen) → Yesterday / Tomorrow row.
+- **Phone (base, 390px design width):** 20px side gutter. Home order: top bar (monogram left; menu button right) → icon, full width, 400px tall, cropped so the face sits in the upper third, tap to play → numeral date → name → devotional hook → rubric "▶ Watch his story · 1:06" (must be above the fold on a 390×844 screen) → Yesterday / Tomorrow row.
 - **Saint page:** the icon fades into soot at the top (160px band), then name, meta line, story, prayer, sources, AI disclosure, books ("Go deeper"), "Light a candle" rubric, then the lapis email band. Nothing asks for money or an email before the prayer.
 - **Calendar ("the litany"):** one long typeset list by month: Junicode date numeral in a 62px column, name in vellum, one italic line in ash. Today in gilt-light; future dates in ash. A search field ("Find a saint, a place, a patronage…") filters the list live; the list works without JavaScript. No thumbnails.
 - **Desktop (≥1024px):** max width 1200px. Home: icon on the right three-fifths, name/hook/rubric lower left, large soot silence. Saint page: icon sticky in a left column (5/12), story in the right column at 62ch.
@@ -158,7 +158,7 @@ Nearly square: rubrics 3px, inputs 0px (an underline only), play button round. N
 
 - **Rubric (primary action):** martyr fill, vellum label, optional right-aligned numeral or second line in 16px at 80% opacity. Hover: #8C2626. Focus: gilt-light ring. Active: 1px down. Disabled: not used (hide unavailable actions instead).
 - **Play affordance on the icon:** 56px round, soot at 72% with a 1px gilt ring and a gilt-light triangle, bottom-left of the art. Tapping replaces the art with the YouTube player (no iframe until tapped; `youtube-nocookie.com`).
-- **Top bar:** monogram (Cinzel, gilt) links home; labels in small caps; the current language in vellum, the other in ash.
+- **Top bar:** sticky (soot, 1px divider rule, 56px; approved by Luis 2026-10-30). Monogram (Cinzel, gilt) links home; labels in small caps; the current language in vellum, the other in ash. Desktop (≥768px): Calendar · Music · About · EN / ES inline. Phone: a three-line menu button (44px, turns to ✕) drops down Calendar, Music, About and EN / ES as 48px rows; Escape, a tap outside or a link closes it.
 - **Litany row:** date, name, line; the whole row is the link; hover/focus tints the name gilt-light. Empty search state: "No saint by that name yet. The calendar grows every day."
 - **Search input:** underline in gilt at 50%, italic placeholder in ash; full-width on phones.
 - **Email band:** lapis field, one line of copy ("A week of saints, in one quiet email."), email input + rubric; success and error messages in vellum on the same band.
