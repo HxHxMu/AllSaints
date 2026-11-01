@@ -3,37 +3,195 @@
   "dir": "work/sung/01",
   "audio": "audio.wav",
   "art": "art.jpg",
-  "art_crop": [302, 123, 1707, 1888],
+  "art_crop": [
+    302,
+    123,
+    1707,
+    1888
+  ],
   "title": "Veni, Redemptor Gentium",
   "title_en": "Come, Thou Redeemer of the earth",
   "byline": "An Advent hymn of St. Ambrose of Milan",
   "dates": "c. 339–397",
-  "cards": [[0, 22.5], [112, 158]],
+  "cards": [
+    [
+      0,
+      22.5
+    ],
+    [
+      112,
+      158
+    ]
+  ],
   "stanzas": [
-    {"n": 1, "at": 24.3, "latin": ["Intende, qui regis Israel,", "super Cherubim qui sedes,", "appare Ephraem coram, excita", "potentiam tuam et veni."],
-     "english": ["Hear us, you who rule Israel,", "enthroned above the Cherubim;", "appear before Ephraim, stir up", "your power, and come."]},
-    {"n": 2, "at": 52.0, "latin": ["Veni, redemptor gentium,", "ostende partum virginis;", "miretur omne saeculum:", "talis decet partus Deo."],
-     "english": ["Come, Thou Redeemer of the earth,", "Come, testify Thy Virgin-birth:", "All lands admire, all times applaud:", "Such is the birth that fits a God."]},
-    {"n": 3, "at": 82.5, "latin": ["Non ex virili semine,", "sed mystico spiramine", "Verbum Dei factum est caro,", "fructusque ventris floruit."],
-     "english": ["Begotten of no human will,", "But of the Spirit, mystic still,", "The Word of God, in flesh array'd,", "The promis'd fruit to man display'd."]},
-    {"n": 4, "at": 96.6, "until": 111.5, "latin": ["Alvus tumescit virginis,", "claustrum pudoris permanet,", "vexilla virtutum micant,", "versatur in templo Deus."],
-     "english": ["The Virgin womb that burden gain'd,", "With Virgin honour all unstain'd:", "The banners there of virtue glow:", "God in His temple dwells below."]},
-    {"n": 5, "at": 160.0, "latin": ["Procedat e thalamo suo,", "pudoris aula regia,", "geminae gigas substantiae", "alacris ut currat viam."],
-     "english": ["Proceeding from His chamber free,", "The royal hall of chastity,", "Giant of twofold substance, straight", "His destin'd way He runs elate."]},
-    {"n": 6, "at": 186.8, "latin": ["Egressus eius a Patre,", "regressus eius ad Patrem;", "excursus usque ad inferos,", "recursus ad sedem Dei."],
-     "english": ["From God the Father He proceeds:", "To God the Father back He speeds:", "Proceeds, as far as very hell;", "Speeds back, to light ineffable."]},
-    {"n": 7, "at": 213.5, "latin": ["Aequalis aeterno Patri,", "carnis tropaeo cingere,", "infirma nostri corporis", "virtute firmans perpeti."],
-     "english": ["O Equal to Thy Father, Thou!", "Gird on Thy fleshly mantle now:", "The weakness of our mortal state", "With deathless might invigorate."]},
-    {"n": 8, "at": 226.9, "latin": ["Praesepe iam fulget tuum,", "lumenque nox spirat novum,", "quod nulla nox interpolet", "fideque iugi luceat."],
-     "english": ["Thy cradle here shall glitter bright,", "And darkness breathe a newer light;", "Where endless faith shall shine serene,", "And twilight never intervene."]},
-    {"n": 2, "at": 244.2, "until": 276.5, "latin": ["Veni, redemptor gentium,", "ostende partum virginis;", "miretur omne saeculum:", "talis decet partus Deo."],
-     "english": ["Come, Thou Redeemer of the earth,", "Come, testify Thy Virgin-birth:", "All lands admire, all times applaud:", "Such is the birth that fits a God."]}
+    {
+      "n": 1,
+      "at": 24.3,
+      "latin": [
+        "Intende, qui regis Israel,",
+        "super Cherubim qui sedes,",
+        "appare Ephraem coram, excita",
+        "potentiam tuam et veni."
+      ],
+      "english": [
+        "Hear us, you who rule Israel,",
+        "enthroned above the Cherubim;",
+        "appear before Ephraim, stir up",
+        "your power, and come."
+      ]
+    },
+    {
+      "n": 2,
+      "at": 52.0,
+      "latin": [
+        "Veni, redemptor gentium,",
+        "ostende partum virginis;",
+        "miretur omne saeculum:",
+        "talis decet partus Deo."
+      ],
+      "english": [
+        "Come, Thou Redeemer of the earth,",
+        "Come, testify Thy Virgin-birth:",
+        "All lands admire, all times applaud:",
+        "Such is the birth that fits a God."
+      ]
+    },
+    {
+      "n": 3,
+      "at": 82.5,
+      "latin": [
+        "Non ex virili semine,",
+        "sed mystico spiramine",
+        "Verbum Dei factum est caro,",
+        "fructusque ventris floruit."
+      ],
+      "english": [
+        "Begotten of no human will,",
+        "But of the Spirit, mystic still,",
+        "The Word of God, in flesh array'd,",
+        "The promis'd fruit to man display'd."
+      ]
+    },
+    {
+      "n": 4,
+      "at": 96.6,
+      "until": 111.5,
+      "latin": [
+        "Alvus tumescit virginis,",
+        "claustrum pudoris permanet,",
+        "vexilla virtutum micant,",
+        "versatur in templo Deus."
+      ],
+      "english": [
+        "The Virgin womb that burden gain'd,",
+        "With Virgin honour all unstain'd:",
+        "The banners there of virtue glow:",
+        "God in His temple dwells below."
+      ]
+    },
+    {
+      "n": 5,
+      "at": 160.0,
+      "latin": [
+        "Procedat e thalamo suo,",
+        "pudoris aula regia,",
+        "geminae gigas substantiae",
+        "alacris ut currat viam."
+      ],
+      "english": [
+        "Proceeding from His chamber free,",
+        "The royal hall of chastity,",
+        "Giant of twofold substance, straight",
+        "His destin'd way He runs elate."
+      ]
+    },
+    {
+      "n": 6,
+      "at": 186.8,
+      "latin": [
+        "Egressus eius a Patre,",
+        "regressus eius ad Patrem;",
+        "excursus usque ad inferos,",
+        "recursus ad sedem Dei."
+      ],
+      "english": [
+        "From God the Father He proceeds:",
+        "To God the Father back He speeds:",
+        "Proceeds, as far as very hell;",
+        "Speeds back, to light ineffable."
+      ]
+    },
+    {
+      "n": 7,
+      "at": 213.5,
+      "latin": [
+        "Aequalis aeterno Patri,",
+        "carnis tropaeo cingere,",
+        "infirma nostri corporis",
+        "virtute firmans perpeti."
+      ],
+      "english": [
+        "O Equal to Thy Father, Thou!",
+        "Gird on Thy fleshly mantle now:",
+        "The weakness of our mortal state",
+        "With deathless might invigorate."
+      ]
+    },
+    {
+      "n": 8,
+      "at": 226.9,
+      "latin": [
+        "Praesepe iam fulget tuum,",
+        "lumenque nox spirat novum,",
+        "quod nulla nox interpolet",
+        "fideque iugi luceat."
+      ],
+      "english": [
+        "Thy cradle here shall glitter bright,",
+        "And darkness breathe a newer light;",
+        "Where endless faith shall shine serene,",
+        "And twilight never intervene."
+      ]
+    },
+    {
+      "n": 2,
+      "at": 244.2,
+      "until": 276.5,
+      "latin": [
+        "Veni, redemptor gentium,",
+        "ostende partum virginis;",
+        "miretur omne saeculum:",
+        "talis decet partus Deo."
+      ],
+      "english": [
+        "Come, Thou Redeemer of the earth,",
+        "Come, testify Thy Virgin-birth:",
+        "All lands admire, all times applaud:",
+        "Such is the birth that fits a God."
+      ]
+    }
   ],
   "credits_at": 277.5,
   "credits": [
-    ["Words", "St. Ambrose of Milan (c. 339–397)"],
-    ["English", "J. M. Neale, The Hymnal Noted (1851); stanza I, All Saints"],
-    ["Music", "All Saints"]
+    [
+      "Words",
+      "St. Ambrose of Milan (c. 339–397)"
+    ],
+    [
+      "English",
+      "J. M. Neale, The Hymnal Noted (1851); stanza I, All Saints"
+    ],
+    [
+      "Music",
+      "All Saints"
+    ]
   ],
-  "closing": "Saint Ambrose, pray for us."
+  "closing": "Saint Ambrose, pray for us.",
+  "youtube": {
+    "id": "GDp51tse34g",
+    "url": "https://youtu.be/GDp51tse34g",
+    "privacy": "private",
+    "uploaded": "2026-11-01",
+    "category": "10 (Music)"
+  }
 }
