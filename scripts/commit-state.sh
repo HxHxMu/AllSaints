@@ -11,7 +11,11 @@ skip=" [skip ci]"
 git diff --cached -U0 -- state/episodes | grep -qE '^\+ *"(status": "published|url": "https://youtube\.com/shorts/)' && skip=""
 git commit -q -m "state: $1$skip"
 for i in 1 2 3 4 5; do
-  git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && exit 0
+  if git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main; then
+    # tells poll.yml to run the website build check (site.yml) for commits that rebuild the site
+    [ -z "$skip" ] && [ -n "${GITHUB_OUTPUT:-}" ] && echo "site=true" >> "$GITHUB_OUTPUT"
+    exit 0
+  fi
   sleep $((i * 3))
 done
 echo "Failed to push state" && exit 1

@@ -1,0 +1,47 @@
+name: Website build check
+# Builds the site the way Cloudflare Pages does. If it fails, Cloudflare keeps serving the last good
+# version and new saints quietly stop appearing, so a failure here sends a Telegram note.
+# Bot commits are pushed with GITHUB_TOKEN, which doesn't start push workflows: poll.yml calls this
+# directly after a commit that rebuilds the site (a publish or a new Short).
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "state/episodes/**", "state/config.json", "brand/**", ".github/workflows/site.yml"]
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: Production   # secrets live in the Production environment
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # the state the poll run just pushed
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22   # same as Cloudflare Pages (NODE_VERSION)
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: Build
+        working-directory: site
+        run: npm run build 2>&1 | tee ../build.log; exit ${PIPESTATUS[0]}
+      - name: Tell Telegram
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          pip install -q requests
+          why="$(grep -m1 -E '^(Error|TypeError|SyntaxError|\[ERROR\])' build.log 2>/dev/null | cut -c1-600)"
+          export MSG="⚠️ The website didn't build, so allholysaints.com isn't showing new saints (the last good version stays up).
+          ${why}
+          ${RUN_URL}"
+          cd engine && python -c "import os, telegram; telegram.send(os.environ['MSG'])"

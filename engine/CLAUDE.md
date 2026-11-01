@@ -35,7 +35,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`.
 
 ## Workflows
-`generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below). `scripts/commit-state.sh` commits state with rebase retries.
+`generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below), `site.yml` (website build check: on pushes touching site/state/brand, and called by poll after a commit that rebuilds the site; a failure sends Telegram ⚠️ — bot pushes use GITHUB_TOKEN, which starts no push workflows, hence the call). `scripts/commit-state.sh` commits state with rebase retries.
 
 ## YouTube
 - Google Cloud project "All Saints"; OAuth app External, In production, unverified (fine, 100-user cap). Don't add a logo on Branding (forces verification); ignore the github.com home-page verification failure.

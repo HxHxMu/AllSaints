@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: Production   # secrets live in the Production environment
     timeout-minutes: 25
+    outputs:
+      site: ${{ steps.state.outputs.site }}
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # YouTube playlists: continent via Haiku
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -41,5 +43,12 @@ jobs:
       - run: pip install -q requests cryptography anthropic pillow  # anthropic + pillow: YouTube playlists and their covers
       - run: python engine/pipeline.py poll
       - name: Save state
+        id: state
         if: always()
         run: bash scripts/commit-state.sh "poll"
+  site:
+    # the website build check, only after a commit that rebuilds the site (a publish or a new Short)
+    needs: poll
+    if: always() && needs.poll.outputs.site == 'true'
+    uses: ./.github/workflows/site.yml
+    secrets: inherit
