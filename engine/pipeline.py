@@ -57,7 +57,8 @@ def build_caption(ep):
         body = ep["caption_hook_override"].strip()
     else:
         body = f"{s.get('caption_hook', '').strip()}\n\n{saint['name']} · Feast day: {saint.get('feast', '')}\n{s.get('summary', '').strip()}\n\n{prayer} 🕯"
-    srcs = " · ".join(x["title"].split(":")[0] if x["title"].startswith("Wikipedia") else "Catholic Encyclopedia (1913)" for x in ep.get("sources", []))
+    # source names without the article ("Santi e Beati: San X" → "Santi e Beati"; old "Catholic Encyclopedia (1913)/St. X" too)
+    srcs = " · ".join(dict.fromkeys(re.split(r"[:/]", x["title"])[0].strip() for x in ep.get("sources", [])))
     credits = "; ".join(dict.fromkeys(ep.get("art_credits", [])))
     cap = f"{body}\n\n{pick_cta(ep)}\n\n—\nSources: {srcs}\nArt: {credits or 'public domain'}\n\n{' '.join(tags)}"
     return cap[:2150]
@@ -138,6 +139,10 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         sources = research.gather_sources(saint)
         draft = scriptmod.write_script(saint, sources, date, note=note)
         fc = scriptmod.fact_check(draft, sources)
+        if research.wikipedia_only(sources) and fc.get("verdict") != "reject":
+            # nothing independent to check against: say so where Luis approves, and cap the score
+            fc["confidence"] = min(fc.get("confidence") or 0, 70)
+            fc["reviewer_note"] = "⚠️ Wikipedia is the only source; check the facts before approving. " + (fc.get("reviewer_note") or "")
         if fc.get("verdict") == "reject":
             ep.setdefault("rejected", []).append({"qid": saint["qid"], "name": saint["name"], "note": fc.get("reviewer_note")})
             if len(ep["rejected"]) >= MAX_REJECTS:  # don't keep paying for scripts on a date with no good candidate

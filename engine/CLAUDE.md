@@ -6,8 +6,11 @@ Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logg
 ## Flow
 ```
 data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
- → research.select_saint   Claude picks 1 of ~12 candidates for the date
- → research.gather_sources Wikipedia full text + Catholic Encyclopedia 1913 (Wikisource)
+ → research.select_saint   Claude picks 1 of ~12 candidates for the date (told which have Catholic references; prefers them)
+ → research.gather_sources Wikipedia full text + up to 4 Catholic references found by Wikidata ID (CATHOLIC_REFS:
+                           Catholic Encyclopedia/New Advent, causesanti.va, Santi e Beati, Nominis, Heiligenlexikon;
+                           page text ≤8000 chars each), Wikisource Catholic Encyclopedia title search as fallback.
+                           Wikipedia-only → fact-check confidence capped at 70 + ⚠️ in the Telegram review note
  → script.write_script     Claude, JSON beats (hook/who/story…/turn/close), 125–145 words, + youtube_title, share_cta,
                            + website fields: story (600–800 words, 5–8 paragraphs), patronages, places
  → script.fact_check       second Claude pass vs the same cached sources; checks beats + story; returns a script only when

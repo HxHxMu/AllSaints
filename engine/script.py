@@ -20,7 +20,10 @@ def sources_block(sources):
 
 def sources_context(sources):
     """Shared, cached prefix for write_script attempts and fact_check: must stay byte-identical."""
-    return "SOURCES (use only these facts):\n" + sources_block(sources)
+    return ("SOURCES (use only these facts). Some are in Italian, French or German: read them in the original and write in English. "
+            "Where Wikipedia and a Catholic reference disagree, follow the Catholic reference. "
+            "Tell legends exactly as the sources tell them (who did what, and how it ended); don't merge or heighten details.\n"
+            + sources_block(sources))
 
 
 SCHEMA = """{
