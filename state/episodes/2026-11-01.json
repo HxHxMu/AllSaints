@@ -2,12 +2,12 @@
  "id": "2026-11-01",
  "date": "2026-11-01",
  "status": "published",
- "updated": "2026-11-01T17:06:50+00:00",
+ "updated": "2026-11-01T17:57:12+00:00",
  "saint": {
   "qid": "Q714835",
   "name": "Saint Marcellus of Paris",
   "display_name": "St. Marcellus of Paris",
-  "dates": "d. 436",
+  "dates": "d. c. 436",
   "region": "Lutetia (Paris), Roman Gaul",
   "feast": "November 1",
   "martyr": false
@@ -35,7 +35,7 @@
   "saint": {
    "name": "Saint Marcellus of Paris",
    "display_name": "St. Marcellus of Paris",
-   "dates": "d. 436",
+   "dates": "d. c. 436",
    "region": "Lutetia (Paris), Roman Gaul",
    "feast": "November 1",
    "martyr": false
@@ -72,7 +72,7 @@
    },
    {
     "role": "story",
-    "text": "His preaching brought many pagans to the faith. Tradition adds that Seine water became wine and balsam. According to legend, he slew a dragon, a story told of Christianity's victory over the demon.",
+    "text": "His preaching brought many pagans to the faith. Tradition adds that Seine water became wine and balsam. According to legend, he faced a great serpent that terrified the town, laid his stole on it and led it away, commanding it never to return, a story told of Christianity's victory over evil. The Roman Martyrology keeps his feast on November 1; because that is All Saints' Day, Paris has also kept his memory on November 3.",
     "visual": "art",
     "scene": "A devotional icon of Marcellus in bishop's vestments standing over a subdued dragon at the edge of a river outside the Roman town, one hand raised in blessing. Townspeople in Gallic dress watch from a distance.",
     "art_hint": "Saint Marcel and the dragon, medieval art; search: Saint Marcel dragon, Saint Marcellus dragon Paris, Saint Marcel Notre-Dame sculpture"
@@ -130,8 +130,8 @@
     "kind": "history"
    },
    {
-    "claim": "He died in Paris in the fifth century, on 1 November (the source gives 436, while also saying he served as bishop until 435).",
-    "source": 0,
+    "claim": "He died in Paris on 1 November; the year is uncertain (410 or 436).",
+    "source": 1,
     "kind": "history"
    },
    {
@@ -160,9 +160,14 @@
     "kind": "tradition"
    },
    {
-    "claim": "He is said to have slain a dragon, a fable representing Christianity's victory over the demon.",
-    "source": 0,
+    "claim": "He is said to have subdued a great serpent with his stole and led it away from the town.",
+    "source": 1,
     "kind": "tradition"
+   },
+   {
+    "claim": "His feast is 1 November in the Roman Martyrology; Paris also celebrated him on 3 November.",
+    "source": 1,
+    "kind": "history"
    }
   ]
  },
@@ -181,6 +186,18 @@
   {
    "title": "Wikipedia: Marcellus of Paris",
    "url": "https://en.wikipedia.org/wiki/Marcellus_of_Paris"
+  },
+  {
+   "title": "Santi e Beati: Saint Marcellus of Paris",
+   "url": "https://www.santiebeati.it/dettaglio/93122"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Saint Marcellus of Paris",
+   "url": "https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Saint Marcellus of Paris",
+   "url": "https://www.heiligenlexikon.de/BiographienM/Marcellus.html"
   }
  ],
  "art_credits": [
@@ -219,5 +236,11 @@
   "playlists_done": true
  },
  "continent": "Europe",
- "slug": "marcellus-of-paris"
+ "slug": "marcellus-of-paris",
+ "corrections": [
+  {
+   "date": "2026-11-01",
+   "note": "Page text: the serpent legend follows Fortunatus (led away, not slain); death year marked uncertain; Nov 3 Paris observance noted; Catholic references added. The published video still says 'slew a dragon'."
+  }
+ ]
 }

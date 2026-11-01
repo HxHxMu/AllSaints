@@ -12,3 +12,6 @@ __pycache__/
 # macOS resource forks on external drives
 ._*
 .venv/
+
+# Wrangler local cache
+.wrangler/
