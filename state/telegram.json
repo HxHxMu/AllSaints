@@ -1,7 +1,4 @@
 {
- "offset": 234758554,
- "pending": {
-  "kind": "redo",
-  "ep": "2026-11-04"
- }
+ "offset": 234758555,
+ "pending": null
 }

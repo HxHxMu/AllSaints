@@ -1,8 +1,8 @@
 {
  "id": "2026-11-04",
  "date": "2026-11-04",
- "status": "review",
- "updated": "2026-11-01T22:45:43+00:00",
+ "status": "redo_requested",
+ "updated": "2026-11-01T22:47:26+00:00",
  "saint": {
   "qid": "Q203177",
   "name": "Saints Vitalis and Agricola",
@@ -207,5 +207,9 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-04/preview.mp4"
  },
  "review_message_id": 25,
- "books": []
+ "books": [],
+ "redo": {
+  "new_saint": false,
+  "note": "The narration says Agricola was tortured. The Catholic Encyclopedia, the Roman Martyrology and Santi e Beati all say it was Vitalis, his servant"
+ }
 }
