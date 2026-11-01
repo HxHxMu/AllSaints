@@ -400,6 +400,11 @@ def cmd_poll(a):
     if "generate" in actions:
         storage.dispatch_workflow("generate.yml")
     publish_due()
+    try:
+        import shares
+        shares.run_due()  # one-off scheduled posts (state/shares.json); never blocks the daily post
+    except Exception:
+        traceback.print_exc()
 
 
 def main():

@@ -68,6 +68,16 @@ def publish_reel(description, video_url=None, video_path: Path = None):
     return {"id": vid, "url": url}
 
 
+def post_link(message, link):
+    """A Page post with a link (Facebook builds the preview card from the link's page). Returns {id, url}."""
+    page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
+    pid = _check(http.post(f"{GRAPH}/{page}/feed", data={"message": message, "link": link, "access_token": tok}, timeout=60),
+                 "link post")["id"]
+    url = http.get(f"{GRAPH}/{pid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    log("Facebook post:", pid)
+    return {"id": pid, "url": url or f"https://www.facebook.com/{pid}"}
+
+
 def authorize():
     """One-time local setup: trades a short-lived user token (Graph API Explorer, with pages_show_list,
     pages_read_engagement, pages_manage_posts) for a never-expiring Page token, then stores FB_PAGE_ID and
