@@ -10,7 +10,7 @@
 """
 import argparse, datetime as dt, json, re, shutil, sys, traceback, unicodedata
 from pathlib import Path
-from common import (BRAND, WORK, log, load_config, load_episodes, load_episode, save_episode, today, tz, month_day_label)
+from common import (BRAND, STATE, WORK, log, load_config, load_episodes, load_episode, save_episode, today, tz, month_day_label)
 
 CAP = BRAND["caption"]
 
@@ -407,6 +407,25 @@ def cmd_poll(a):
         traceback.print_exc()
 
 
+def cmd_post(post_id):
+    """A one-off carousel Luis approved in chat (images hosted on a GitHub release). Each platform once; reruns skip what's done."""
+    import facebook, instagram, storage, telegram
+    p = STATE / "posts" / f"{post_id}.json"
+    post = json.loads(p.read_text())
+    save = lambda: p.write_text(json.dumps(post, indent=1, ensure_ascii=False) + "\n")
+    ig, fb = post.get("instagram"), post.get("facebook")
+    if ig and not ig.get("permalink"):
+        ig.update(instagram.publish_carousel(ig["caption"], [storage.resolve_direct(u) for u in post["images"]]))
+        save()
+        telegram.send(f"📣 Instagram carousel posted: {post['title']}\n{ig['permalink']}")
+    if fb and not fb.get("url") and facebook.configured():
+        WORK.mkdir(exist_ok=True)
+        files = [storage.download(u, WORK / f"post-{post_id}-{i}.jpg") for i, u in enumerate(post["images"])]
+        fb.update(facebook.post_photos(fb["message"], files))
+        save()
+        telegram.send(f"📣 Facebook post: {post['title']}\n{fb['url']}")
+
+
 def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -436,6 +455,8 @@ def main():
     cp.add_argument("month", nargs="?", help="YYYY-MM")
     cp.add_argument("--force", action="store_true", help="redo even if uploaded / before compilation_from")
     cp.add_argument("--no-upload", action="store_true", help="render only (work/compilation-YYYY-MM/)")
+    po = sub.add_parser("post", help="publish an approved one-off carousel, state/posts/<id>.json (Instagram + Facebook)")
+    po.add_argument("post_id")
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
@@ -491,6 +512,8 @@ def main():
         ep = load_episode(a.episode)
         (ep.get("facebook") or {}).pop("attempts", None)
         publish_facebook(ep)
+    elif a.cmd == "post":
+        cmd_post(a.post_id)
     elif a.cmd == "yt-whoami":
         import youtube
         print(youtube.me())

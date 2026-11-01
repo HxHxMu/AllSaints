@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "refresh-token | build-calendar | whoami | yt-whoami | fb-whoami"
+        description: "refresh-token | build-calendar | whoami | yt-whoami | fb-whoami | post <id>"
         required: true
         default: whoami
 permissions:

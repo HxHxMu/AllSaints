@@ -78,6 +78,22 @@ def post_link(message, link):
     return {"id": pid, "url": url or f"https://www.facebook.com/{pid}"}
 
 
+def post_photos(message, paths):
+    """A Page post with several photos (uploaded unpublished, then attached to one feed post). Returns {id, url}."""
+    page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
+    media = {}
+    for i, p in enumerate(paths):
+        with open(p, "rb") as f:
+            pid = _check(http.post(f"{GRAPH}/{page}/photos", data={"published": "false", "access_token": tok},
+                                   files={"source": (Path(p).name, f, "image/jpeg")}, timeout=120), "photo upload")["id"]
+        media[f"attached_media[{i}]"] = f'{{"media_fbid":"{pid}"}}'
+    post = _check(http.post(f"{GRAPH}/{page}/feed", data={"message": message, "access_token": tok, **media}, timeout=60),
+                  "photo post")["id"]
+    url = http.get(f"{GRAPH}/{post}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    log("Facebook photo post:", post)
+    return {"id": post, "url": url or f"https://www.facebook.com/{post}"}
+
+
 def authorize():
     """One-time local setup: trades a short-lived user token (Graph API Explorer, with pages_show_list,
     pages_read_engagement, pages_manage_posts) for a never-expiring Page token, then stores FB_PAGE_ID and

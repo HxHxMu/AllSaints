@@ -1,4 +1,4 @@
-"""Publish Reels with the Instagram API (Instagram Login, graph.instagram.com)."""
+"""Publish Reels (and the odd carousel) with the Instagram API (Instagram Login, graph.instagram.com)."""
 import base64, hashlib, os, time
 from pathlib import Path
 from cryptography.fernet import Fernet
@@ -113,3 +113,25 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
         else:
             errors.append(f"resumable create failed: {r.text[:300]}")
     raise RuntimeError(" | ".join(errors))
+
+
+def publish_carousel(caption, image_urls):
+    """A feed carousel of 2-10 JPEGs at public URLs (Instagram fetches them). Returns {media_id, permalink}."""
+    tok, uid = get_token(), _uid()
+    children = []
+    for url in image_urls:
+        r = http.post(f"{GRAPH}/{uid}/media", data={"image_url": url, "is_carousel_item": "true", "access_token": tok}, timeout=60)
+        if not r.ok:
+            raise RuntimeError(f"Carousel item failed: {r.text[:300]}")
+        ok, st = _wait(r.json()["id"], tok, max_wait=180)
+        if not ok:
+            raise RuntimeError(f"Carousel item not ready: {st}")
+        children.append(r.json()["id"])
+    r = http.post(f"{GRAPH}/{uid}/media", timeout=60, data={"media_type": "CAROUSEL", "children": ",".join(children),
+                                                            "caption": caption, "access_token": tok})
+    if not r.ok:
+        raise RuntimeError(f"Carousel container failed: {r.text[:300]}")
+    ok, st = _wait(r.json()["id"], tok, max_wait=300)
+    if not ok:
+        raise RuntimeError(f"Carousel not ready: {st}")
+    return _publish(r.json()["id"], tok)
