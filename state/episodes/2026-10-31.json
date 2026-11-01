@@ -2,7 +2,7 @@
  "id": "2026-10-31",
  "date": "2026-10-31",
  "status": "published",
- "updated": "2026-11-01T17:07:58+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q582213",
   "name": "Saint Alphonsus Rodríguez",
@@ -171,6 +171,26 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Alphonsus Rodríguez, called Alonso or Alfonso in Spanish, was born in Segovia, Spain, in 1532. Some sources give 1533. His father was a wool merchant. When Blessed Peter Faber, one of the first companions of Saint Ignatius of Loyola, came to the city to preach, the Rodríguez household received him. Faber helped prepare the boy for his First Communion.",
+   "At twelve he was sent to the new Jesuit college at Alcalá, but his schooling was cut short. His father died, and by some accounts the family business had fallen into poverty. Alphonsus went home to help his mother keep it going. At twenty-six he married María Suárez, a woman of his own station. They had three children. By the time he was thirty-one, his wife and two of the children had died, and then the third child died as well. In his grief he turned to a life of prayer and penance, and he began to think of entering a religious order.",
+   "That was not easy. He had almost no formal education, and it seemed impossible for him to enter the Society. At thirty-nine he tried to make up the lack at the College of Barcelona, but it did not succeed, and his severe fasting and penances had weakened his health. After a considerable delay he was admitted to the Society of Jesus as a lay brother on 31 January 1571, at the age of forty. The provincial is supposed to have said that if Alphonsus was not suited to be a brother or a priest, he could enter in order to become a saint. After six months of probation, at Valencia or Gandia (the sources dispute which), he was sent to the newly founded Jesuit college on Majorca.",
+   "There he was given the humblest of posts, that of porter. He kept that post for forty-six years. He received visitors, called the fathers and students who were wanted in the parlor, carried messages, ran errands, and gave alms to the poor. Many people who had no one else came to the porter's lodge for comfort and advice. He told how, each time the bell rang, he imagined that God himself was standing outside asking to come in. In this way the simple act of opening a door became, for him, a gesture of prayer and love. Missionaries bound for the Americas passed through the college, and one of the Jesuits who lived there, Saint Peter Claver, later called the apostle of the slaves, came to value Alphonsus's holiness. He followed his advice in asking to be sent to the missions of South America.",
+   "His inner life was demanding. The sources speak of extreme bodily penances, of frequent scruples and anxieties, of complete obedience to his superiors, and of a prayer that continued even in the busiest work. He was devoted to the Sacred Heart, to Our Lady, and especially to her Immaculate Conception. He copied out the Little Office of the Blessed Virgin for those who asked. The Catholic Encyclopedia notes that he is often said to have written the Little Office of the Immaculate Conception, but argues that the office already existed before his time. It does grant that he helped to make it widely known. He is reported to have received visions and other mystical graces. Tradition holds that one evening, climbing a stair in the college, he smelled a foul and deadly breath from a window above the cistern courtyard. It is said that this was the devil trying to suffocate him. He fainted and would have fallen down the stairs, but his guardian angel held him, cleared the air, and led him safely to his room. He later wrote about how sin chokes the life of the soul. In another prayer from his writings he says, \"O Lord, if I knew how and were able, I would serve and love you as all the creatures of heaven and earth together.\"",
+   "His superiors, seeing the good he did among the townspeople, sometimes let him speak to the community in the refectory on feast days. On more than one occasion the Jesuits sat on past dinner to hear him finish. At their command he also set down his reflections, drawn from everyday life. These were later published as the Obras Espirituales. They have no pretense to style, but the Catholic Encyclopedia praises their sound doctrine and spiritual depth. In his eighties he grew very frail, and his memory failed until he could not even recall his favorite prayers. He died on Majorca at the end of October 1617, on 30 or 31 October according to the sources. The feast day is 31 October. According to the Dicastery for the Causes of Saints, the viceroys and the whole nobility of the city attended his funeral. He had been revered as a saint during his lifetime.",
+   "The Church made it official over time. He was declared Venerable in 1626. In 1633 the General Council of Majorca chose him as one of the special patrons of the city and island. In 1760 Pope Clement XIII decreed that his virtues were heroic, but the expulsion of the Jesuits from Spain in 1773 and the suppression of the Society delayed his beatification until 1825. Pope Leo XIII canonized him on 15 January 1888 in Saint Peter's Basilica. His remains are enshrined on Majorca. Pope Francis named him among the Jesuits associated with devotion to the Sacred Heart in the 2024 encyclical Dilexit nos. The poet Gerard Manley Hopkins, himself a Jesuit, wrote a sonnet in his honor. A municipality in Québec and a parish in Maryland bear his name. The Roman Martyrology remembers a man who lost his wife, his children and his goods, and who became an example of humility, obedience and constancy in sacrifice."
+  ],
+  "patronages": [
+   "Porters and doorkeepers",
+   "Majorca",
+   "Segovia"
+  ],
+  "places": [
+   "Palma",
+   "Majorca",
+   "Segovia",
+   "Alcalá"
   ]
  },
  "factcheck": {
@@ -190,6 +210,18 @@
   {
    "title": "Wikipedia: Alphonsus Rodriguez",
    "url": "https://en.wikipedia.org/wiki/Alphonsus_Rodriguez"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Alphonsus Rodriguez",
+   "url": "https://www.newadvent.org/cathen/01341a.htm"
+  },
+  {
+   "title": "Dicastery for the Causes of Saints: Alphonsus Rodriguez",
+   "url": "https://www.causesanti.va/it/santi-e-beati/alfonso-rodriguez.html"
+  },
+  {
+   "title": "Santi e Beati: Alphonsus Rodriguez",
+   "url": "https://www.santiebeati.it/dettaglio/75650"
   }
  ],
  "art_credits": [
@@ -235,5 +267,79 @@
   "url": "https://www.facebook.com/reel/2192438495035467/",
   "published_at": "2026-10-31T11:19-04:00"
  },
- "slug": "alphonsus-rodriguez"
+ "slug": "alphonsus-rodriguez",
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "Story paragraph 1: 'the family was known for its hospitality' is not in the sources. They say only that the family hosted Peter Faber when he came to preach. Removed the phrase.",
+   "Story paragraph 1: 'The Society of Jesus was then very young, and this was Alphonsus's first meeting with the Jesuits' is unsupported. No source says it was his first contact or comments on the Society's age. Removed the sentence.",
+   "Story paragraph 3: 'the Jesuits hesitated to receive a man who could not study for the priesthood' goes beyond the sources, which say entry seemed impossible for lack of education and that admission came after considerable delay. Reworded.",
+   "Story paragraph 5: the Catholic Encyclopedia argues that the Little Office of the Immaculate Conception already existed and that he lacked the education to write it. 'But that he did not' states this more flatly than the source does. Softened to match.",
+   "Spoken beats pass: word count is about 143, the hook is under 14 words, and legend is hedged ('It is said'). The Majorca map point (Palma, 39.5696, 2.6502) is correct. Saint, Blessed and Venerable are used correctly. Peter Claver's advice and the porter duties match the sources.",
+   "Story legends (the devil and guardian angel episode, the provincial's remark) are correctly marked as tradition. The 'sacramental gesture' idea is fairly paraphrased."
+  ],
+  "confidence": 85,
+  "reviewer_note": "Sources disagree on his birth year: the Catholic Encyclopedia and Wikipedia say 1532, while the Dicastery says 1533. The beat uses 1532, so consider whether to avoid the year. The spoken provincial line drops the source's condition ('if not qualified to be a brother or priest'). Peter Faber is called Blessed per the sources, but he was declared a saint in 2013, so check this against current usage."
+ },
+ "es": {
+  "name": "San Alfonso Rodríguez",
+  "display_name": "San Alfonso",
+  "region": "Mallorca, España",
+  "dates": "1532 – 1617",
+  "hook": "Un viudo con poca instrucción llegó a ser el portero que cambió vidas.",
+  "summary": "San Alfonso Rodríguez, un viudo que perdió a su esposa y a sus hijos, se hizo hermano jesuita laico y sirvió como portero en Mallorca durante cuarenta y seis años, recibiendo a cada visitante como si Dios estuviera a la puerta.",
+  "story": [
+   "Alfonso Rodríguez, llamado Alonso o Alfonso en español, nació en Segovia, España, en 1532. Algunas fuentes dan 1533. Su padre era comerciante de lana. Cuando el beato Pedro Fabro, uno de los primeros compañeros de San Ignacio de Loyola, llegó a la ciudad para predicar, la familia Rodríguez lo recibió en su casa. Fabro ayudó a preparar al niño para su Primera Comunión.",
+   "A los doce años fue enviado al nuevo colegio jesuita de Alcalá, pero su formación se interrumpió. Su padre murió y, según algunos relatos, el negocio familiar había caído en la pobreza. Alfonso regresó a casa para ayudar a su madre a mantenerlo a flote. A los veintiséis años se casó con María Suárez, una mujer de su mismo rango social. Tuvieron tres hijos. Cuando cumplió treinta y un años, su esposa y dos de los hijos habían muerto, y después murió también el tercero. En su dolor se volcó en una vida de oración y penitencia, y empezó a pensar en entrar en una orden religiosa.",
+   "No era fácil. Tenía casi ninguna formación académica, y parecía imposible que ingresara en la Compañía. A los treinta y nueve años intentó suplir esa carencia en el colegio de Barcelona, pero no lo logró, y sus ayunos y penitencias severas habían debilitado su salud. Tras una demora considerable, fue admitido en la Compañía de Jesús como hermano laico el 31 de enero de 1571, a los cuarenta años. Se dice que el provincial afirmó que, si Alfonso no era apto para ser hermano ni sacerdote, podía entrar para llegar a ser santo. Después de seis meses de noviciado, en Valencia o en Gandía (las fuentes discrepan sobre cuál), fue enviado al colegio jesuita recién fundado en Mallorca.",
+   "Allí se le asignó el más humilde de los cargos: el de portero. Desempeñó ese puesto durante cuarenta y seis años. Recibía a las visitas, llamaba a los padres y a los estudiantes que eran requeridos en el locutorio, llevaba mensajes, hacía recados y daba limosna a los pobres. Muchas personas que no tenían a nadie más acudían a la portería en busca de consuelo y consejo. Contaba que, cada vez que sonaba la campana, imaginaba que era Dios mismo quien estaba fuera pidiendo entrar. De este modo, el sencillo acto de abrir una puerta se convirtió para él en un gesto de oración y de amor. Los misioneros que partían hacia América pasaban por el colegio, y uno de los jesuitas que vivían allí, San Pedro Claver, llamado más tarde apóstol de los esclavos, llegó a valorar la santidad de Alfonso. Siguió su consejo al pedir ser enviado a las misiones de Sudamérica.",
+   "Su vida interior era exigente. Las fuentes hablan de penitencias corporales extremas, de frecuentes escrúpulos y angustias, de una obediencia completa a sus superiores y de una oración que continuaba incluso en medio del trabajo más intenso. Fue devoto del Sagrado Corazón, de Nuestra Señora y, de modo especial, de su Inmaculada Concepción. Copió el Oficio Parvo de la Santísima Virgen para quienes se lo pidieron. La Enciclopedia Católica señala que a menudo se dice que escribió el Oficio Parvo de la Inmaculada Concepción, pero sostiene que el oficio ya existía antes de su tiempo. Sí reconoce que él contribuyó a darlo a conocer ampliamente. Se cuenta que recibió visiones y otras gracias místicas. Según la tradición, una noche, al subir una escalera del colegio, percibió un aliento fétido y mortal que salía de una ventana sobre el patio de la cisterna. Se dice que era el demonio, que intentaba asfixiarlo. Se desmayó y habría caído por la escalera, pero su ángel custodio lo sostuvo, despejó el aire y lo condujo sano y salvo a su habitación. Más tarde escribió sobre cómo el pecado ahoga la vida del alma. En otra oración de sus escritos dice: \"¡Oh Señor, si supiera cómo y pudiera, te serviría y amaría como todas las criaturas del cielo y de la tierra juntas!\"",
+   "Sus superiores, al ver el bien que hacía entre los habitantes del pueblo, a veces le permitían hablar a la comunidad en el refectorio en las fiestas. En más de una ocasión, los jesuitas se quedaron sentados después de la cena para escucharlo terminar. Por encargo de ellos, también puso por escrito sus reflexiones, extraídas de la vida cotidiana. Estas fueron publicadas más tarde como las Obras Espirituales. No pretenden ningún estilo elaborado, pero la Enciclopedia Católica elogia su doctrina sana y su profundidad espiritual. En sus ochenta años se volvió muy frágil, y su memoria falló hasta el punto de que ya no recordaba ni sus oraciones favoritas. Murió en Mallorca a finales de octubre de 1617, el 30 o el 31 de octubre según las fuentes. Su fiesta se celebra el 31 de octubre. Según el Dicasterio para las Causas de los Santos, los virreyes y toda la nobleza de la ciudad asistieron a su funeral. Había sido venerado como santo durante su vida.",
+   "La Iglesia lo reconoció oficialmente con el tiempo. Fue declarado Venerable en 1626. En 1633 el Consejo General de Mallorca lo eligió como uno de los patronos especiales de la ciudad y de la isla. En 1760 el papa Clemente XIII decretó que sus virtudes fueron heroicas, pero la expulsión de los jesuitas de España en 1773 y la supresión de la Compañía retrasaron su beatificación hasta 1825. El papa León XIII lo canonizó el 15 de enero de 1888 en la Basílica de San Pedro. Sus restos reposan en Mallorca. El papa Francisco lo mencionó entre los jesuitas vinculados a la devoción al Sagrado Corazón en la encíclica Dilexit nos de 2024. El poeta Gerard Manley Hopkins, también jesuita, escribió un soneto en su honor. Un municipio de Quebec y una parroquia de Maryland llevan su nombre. El Martirologio Romano recuerda a un hombre que perdió a su esposa, a sus hijos y sus bienes, y que se convirtió en ejemplo de humildad, obediencia y constancia en el sacrificio."
+  ],
+  "prayer": "San Alfonso Rodríguez, ruega por nosotros.",
+  "patronages": [
+   "Porteros",
+   "Mallorca",
+   "Segovia"
+  ],
+  "places": [
+   "Palma",
+   "Mallorca",
+   "Segovia",
+   "Alcalá"
+  ],
+  "slug": "alfonso-rodriguez"
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 591,
+   "cache_write": 8931,
+   "cache_read": 0,
+   "out": 4212,
+   "thinking": 2288
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4884,
+   "cache_write": 0,
+   "cache_read": 8931,
+   "out": 9626,
+   "thinking": 8735
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 2325,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3927,
+   "thinking": 1203
+  }
+ ]
 }

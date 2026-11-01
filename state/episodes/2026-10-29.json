@@ -2,7 +2,7 @@
  "id": "2026-10-29",
  "date": "2026-10-29",
  "status": "published",
- "updated": "2026-11-01T17:06:50+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q947675",
   "name": "Saint Narcissus of Jerusalem",
@@ -166,6 +166,21 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Saint Narcissus of Jerusalem lived to be 116 years old, and the Church remembers him above all as a man whose old age was spiritually strong. His name is the same as that of the youth in Greek myth who fell in love with his own reflection. The saint had nothing else in common with him. The old Italian lives of the saints note that he was the opposite of that figure: humble, devoted to others, and vigorous in body and mind to the end.",
+   "He was born around the year 96, though some sources say 99. The sources agree that he was not of Jewish family. Tradition holds that he was of Greek origin. He came into the world when the ruins left by the Roman destruction of Jerusalem, under Titus, were still fresh. Over the course of his long life he watched the city slowly rise again and fill with people. It came to hold a large Christian community alongside its Jewish neighbors.",
+   "He was almost a hundred years old when he was chosen as the thirtieth bishop of Jerusalem. The Catholic sources say he was chosen for his virtue more than for his age. He did not treat the office as an honor to rest in. He governed for many years and with firmness. He presided over a council of the bishops of Palestine, held at Caesarea, which decided that Easter should always be kept on a Sunday. The Roman Martyrology records that he stood in full agreement with Pope Saint Victor on this, and that the mystery of the Lord's Resurrection could only be celebrated on a Sunday.",
+   "One miracle of note is attributed to him, and it comes to us through the historian Eusebius. On the night of Easter, the oil for the church's lamps ran out and the wicks stood dry. Narcissus is said to have changed water into oil, so that the lamps could be lit for the Vigil. This is the Church's tradition of what happened, handed down by Eusebius, and not an event we can confirm from other records.",
+   "Narcissus was a stern bishop. He wanted the people around him to be honest, humble and good, and his firmness troubled those who were corrupt. Some of them struck back with a grave accusation against him, which they backed with solemn oaths. History does not tell us what the charge was. It does tell us that it was false. Not everyone believed it, but to spare the Church scandal, the aged bishop left Jerusalem, though he was innocent. Tradition holds that he withdrew to the desert to live in seclusion. He is also remembered as having forgiven his accusers.",
+   "According to the old account, those who had sworn falsely were struck by terrible punishments, until one of them confessed the lie. By then, Narcissus was thought to be dead. Two successors were elected one after the other. When the second died, Narcissus reappeared in Jerusalem, and the faithful led him back to his bishop's chair with great honor.",
+   "He was far too old to carry the work alone, so he took a coadjutor, Alexander, who later became a saint himself. The Italian reference describes this as the first such arrangement in the history of the episcopate, a custom that continues today. Narcissus went on serving his flock and others beyond it through constant prayer and urging the faithful toward unity and peace.",
+   "The last word we have of him is in a letter from Alexander. As the Italian source gives it, the letter says that Narcissus sends his greetings, that he has completed one hundred and sixteen years, and that he urges the faithful, as Alexander does, to keep concord. His feast is celebrated in the Roman Catholic Church on October 29, and in the Eastern Orthodox Church on August 7. His emblem is the pastoral staff. His long life shows holiness that accepts an injustice without bitterness and keeps working for peace."
+  ],
+  "patronages": [],
+  "places": [
+   "Jerusalem",
+   "Caesarea"
   ]
  },
  "factcheck": {
@@ -184,6 +199,10 @@
   {
    "title": "Wikipedia: Narcissus of Jerusalem",
    "url": "https://en.wikipedia.org/wiki/Narcissus_of_Jerusalem"
+  },
+  {
+   "title": "Santi e Beati: Narcissus of Jerusalem",
+   "url": "https://www.santiebeati.it/dettaglio/90411"
   }
  ],
  "art_credits": [
@@ -215,5 +234,75 @@
  },
  "continent": "the Middle East",
  "books": [],
- "slug": "narcissus-of-jerusalem"
+ "slug": "narcissus-of-jerusalem",
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "WHO beat followed Wikipedia (born 99, 'eighty or more') where the Catholic reference (Santi e Beati and the Roman Martyrology) says born around 96 and nearly a hundred when elected. Changed to the Catholic figures. The dates field and claims were updated to match.",
+   "STORY beat said three bishops governed in his absence (Wikipedia). The Catholic reference says he was thought dead and two successors were elected, and he returned when the second died. Rewrote the beat to the Catholic version. 'The people unanimously asked him' came from Wikipedia only and was replaced with 'the faithful restored him with honor'.",
+   "Caption hook said 'past eighty', which no longer matches the corrected age. Reworded.",
+   "Story paragraph: 'in the year 70' for the destruction under Titus is not in the sources. Removed.",
+   "Story paragraph: 'One miracle is attributed to him' conflicts with Wikipedia, which says Eusebius records many miracles and one of note. Changed to 'One miracle of note'.",
+   "Claims list updated to match the corrected beats.",
+   "Spoken beats now total about 142 words, within the 125-145 range. The map location (Jerusalem), the martyr flag (false), the feast (October 29) and the use of 'Saint' are all correct."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Sources disagree on Narcissus's birth year (96 vs 99), his age at election (nearly 100 vs 80+) and the number of successors (two vs three); I followed the Catholic reference. The 'dates' field shows 'early third century' because the sources give no death year, so check it. The hook's forgiveness detail comes from Wikipedia only."
+ },
+ "es": {
+  "display_name": "San Narciso",
+  "name": "San Narciso de Jerusalén",
+  "region": "Jerusalén, Tierra Santa",
+  "dates": "c. 99 – c. 216",
+  "hook": "Un obispo de más de ochenta años fue calumniado por los suyos. Su respuesta fue el perdón.",
+  "summary": "San Narciso de Jerusalén, un obispo de los primeros tiempos, fue acusado falsamente, perdonó a sus acusadores, vivió en retiro y regresó a petición del pueblo para servir en la oración y la paz.",
+  "story": [
+   "San Narciso de Jerusalén vivió hasta los 116 años, y la Iglesia lo recuerda sobre todo como un hombre cuya vejez fue espiritualmente fuerte. Su nombre es el mismo que el del joven de la mitología griega que se enamoró de su propio reflejo. El santo no tuvo nada más en común con él. Las antiguas vidas de santos italianas señalan que fue lo contrario de aquel personaje: humilde, entregado a los demás y vigoroso en cuerpo y mente hasta el final.",
+   "Nació hacia el año 96, aunque algunas fuentes dicen 99. Las fuentes coinciden en que no era de familia judía. Según la tradición, era de origen griego. Vino al mundo cuando aún estaban frescas las ruinas dejadas por la destrucción romana de Jerusalén bajo Tito. A lo largo de su larga vida vio cómo la ciudad se reconstruía poco a poco y se llenaba de gente. Llegó a tener una numerosa comunidad cristiana junto a sus vecinos judíos.",
+   "Tenía casi cien años cuando fue elegido trigésimo obispo de Jerusalén. Las fuentes católicas dicen que fue elegido por su virtud más que por su edad. No consideró el cargo como un honor para descansar. Gobernó durante muchos años con firmeza. Presidió un concilio de obispos de Palestina, celebrado en Cesarea, que decidió que la Pascua debía celebrarse siempre en domingo. El Martirologio Romano registra que estuvo plenamente de acuerdo en esto con el papa San Víctor, y que el misterio de la Resurrección del Señor solo podía celebrarse en domingo.",
+   "Se le atribuye un milagro notable, que nos llega a través del historiador Eusebio. En la noche de Pascua se acabó el aceite de las lámparas de la iglesia y las mechas quedaron secas. Se dice que Narciso convirtió agua en aceite, para que las lámparas pudieran encenderse durante la Vigilia. Esta es la tradición de la Iglesia sobre lo sucedido, transmitida por Eusebio, y no un hecho que podamos confirmar con otros documentos.",
+   "Narciso era un obispo severo. Quería que las personas a su alrededor fueran honradas, humildes y buenas, y su firmeza incomodaba a los corruptos. Algunos de ellos contraatacaron con una grave acusación contra él, que respaldaron con juramentos solemnes. La historia no nos dice cuál era la acusación. Sí nos dice que era falsa. No todos la creyeron, pero para evitar un escándalo a la Iglesia, el anciano obispo abandonó Jerusalén, aunque era inocente. Según la tradición, se retiró al desierto para vivir en soledad. También se le recuerda por haber perdonado a sus acusadores.",
+   "Según el antiguo relato, quienes habían jurado en falso sufrieron terribles castigos, hasta que uno de ellos confesó la mentira. Para entonces, se creía que Narciso había muerto. Se eligieron dos sucesores, uno tras otro. Cuando murió el segundo, Narciso reapareció en Jerusalén, y los fieles lo llevaron de vuelta a su cátedra episcopal con gran honor.",
+   "Era demasiado anciano para cargar solo con la labor, así que tomó como coadjutor a Alejandro, que más tarde también llegó a ser santo. La referencia italiana describe esto como el primer caso de este tipo en la historia del episcopado, una costumbre que continúa hoy. Narciso siguió sirviendo a su rebaño y a otros más allá de él mediante la oración constante y exhortando a los fieles a la unidad y la paz.",
+   "La última noticia que tenemos de él está en una carta de Alejandro. Según la fuente italiana, la carta dice que Narciso envía sus saludos, que ha cumplido ciento dieciséis años y que exhorta a los fieles, como lo hace Alejandro, a mantener la concordia. Su fiesta se celebra en la Iglesia católica romana el 29 de octubre, y en la Iglesia ortodoxa oriental el 7 de agosto. Su emblema es el báculo pastoral. Su larga vida muestra una santidad que acepta la injusticia sin amargura y que sigue trabajando por la paz."
+  ],
+  "prayer": "San Narciso, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Jerusalén",
+   "Cesarea"
+  ],
+  "slug": "narciso-de-jerusalen"
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 592,
+   "cache_write": 4445,
+   "cache_read": 0,
+   "out": 2502,
+   "thinking": 1276
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4120,
+   "cache_write": 0,
+   "cache_read": 4445,
+   "out": 8200,
+   "thinking": 5505
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1679,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 4208,
+   "thinking": 2429
+  }
+ ]
 }

@@ -2,7 +2,7 @@
  "id": "2026-11-03",
  "date": "2026-11-03",
  "status": "approved",
- "updated": "2026-10-31T04:19:19+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q2575112",
   "name": "Saint Winifred",
@@ -169,6 +169,25 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Saint Winifred, called Gwenffrewi in Welsh, is a saint of Wales. Her name is tied to a spring at Holywell in Flintshire, where pilgrims have gone for centuries. She is remembered as a virgin, a nun, and an abbess. The earliest written accounts of her life come from the twelfth century, about five hundred years after the age she is said to have lived in. So we must be careful to keep what is history apart from what is tradition.",
+   "The Catholic Encyclopedia places her birth at Holywell around the year 600. Her father, Thevit (Tyfid), was a Welsh nobleman who held land in what is now Flintshire. Her mother, Wenlo, was a sister of Saint Beuno. That made Beuno Winifred's uncle. He had first lived as a hermit and later founded a community at Clynnog Fawr. While he was looking for a place to build a monastery, he visited his sister's family. He settled in a hollow near Holywell, built a chapel there, said Mass, and preached. Winifred was one of his most attentive listeners. At fifteen she was already given to prayer and austerity, and she often spent whole nights keeping watch in church. With her parents' consent, she prepared to give her life to God.",
+   "The legend turns on a young man named Caradog, the son of a neighbouring prince. According to the tradition, he came to ask for her hand while her parents were at Mass. He knew she had resolved to belong to God alone, and this only inflamed him. She fled toward the church, where her uncle Beuno was celebrating Mass. Caradog overtook her on the slope above the present well and struck off her head with his sword. The head rolled downhill, and a spring broke out where it came to rest.",
+   "Tradition holds that Beuno left the altar when he heard. He carried the head to the body and covered both with his cloak. Then he went back into the church and finished the Mass. Afterward he knelt and prayed, and the cloak was lifted. Winifred rose as if waking from sleep, marked only by a thin white line around her neck. Seeing Caradog standing by with a defiant air, Beuno called on heaven's justice, and the man fell dead. Popular belief added that the ground swallowed him. The Roman Martyrology does not mention these events. Catholic reference works describe it as a hagiographical tradition that cannot be confirmed historically.",
+   "According to tradition, Winifred then took vows of virginity and poverty. A convent was built on her father's land, with a chapel over the well, and she became abbess of a community of young women. Beuno left Holywell and returned to Caernarfon. Before he went, tradition says, he sat upon a stone that now stands in the outer pool of the well. He promised, in God's name, that whoever asked three times at that place for a favour in Winifred's name would receive it, if it was for the good of his soul. Winifred, for her part, promised to send him a yearly token of her affection for as long as she remained at Holywell and until she heard of his death.",
+   "Eight years after Beuno's departure, the accounts say, she heard that he had died, and she felt inspired to leave. There was also a practical danger. The Saxon kingdom of Northumbria was pressing on the borders of North Wales, and Anglesey and Chester were already in Saxon hands. Winifred set out on pilgrimage to find a place of rest. She came at last to Gwytherin, near the source of the River Elwy, a quiet place in the hills. There she was welcomed by Saint Elerius, who gave his name to the river. She joined a community of nuns and lived first in humble obedience to its abbess. After the abbess died, Winifred governed the house herself until her own death. The Catholic Encyclopedia gives the date as 3 November, about the year 660, and says that Christ foretold her death to her in a vision.",
+   "Her memory did not fade. In 1991, fragments of an eighth-century oak reliquary were identified as belonging to the Arch Gwenfrewi, her reliquary. One historian has called it good evidence that she was honoured as a saint very soon after her death. In 1138, relics said to be hers were carried from Gwytherin to Shrewsbury Abbey, where a great shrine drew pilgrims in the late Middle Ages. Prior Robert of Shrewsbury wrote the most influential life of her. King Henry the Eighth destroyed the shrine in 1540. Because she lived in the first millennium, Winifred was never formally canonized. She is a saint by popular acclaim. The Roman Martyrology of 2004 names her on 2 November as a virgin and a nun outstanding in her witness. In England and Wales her feast is kept on 3 November.",
+   "Today the spring at Holywell is a place of pilgrimage, often called the Lourdes of Wales. In November 2023 it was granted the status of National Shrine for England and Wales. The site is cared for by Cadw and the Diocese of Wrexham. Pilgrims still come to pray there, as they have for centuries."
+  ],
+  "patronages": [
+   "Wales"
+  ],
+  "places": [
+   "Holywell",
+   "Gwytherin",
+   "Shrewsbury",
+   "Wales"
   ]
  },
  "factcheck": {
@@ -188,6 +207,14 @@
   {
    "title": "Wikipedia: Saint Winifred",
    "url": "https://en.wikipedia.org/wiki/Saint_Winifred"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Winifred",
+   "url": "https://www.newadvent.org/cathen/15656a.htm"
+  },
+  {
+   "title": "Santi e Beati: Winifred",
+   "url": "https://www.santiebeati.it/dettaglio/76025"
   }
  ],
  "art_credits": [
@@ -202,5 +229,79 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-03/preview.mp4"
  },
  "review_message_id": 23,
- "books": []
+ "books": [],
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "Turn beat: 'went inland to Gwytherin to serve as abbess' implies she went there to be abbess. The sources say she first lived under another abbess and became abbess after that abbess died. Changed to 'where she later became abbess' (spoken length is now 144 words).",
+   "Story P1: 'one of the best-loved saints of Wales' is not in the sources, and Wikipedia says she is mostly venerated in England, not Wales. Replaced with 'a saint of Wales'.",
+   "Story P3: 'Winifred told him she had resolved to belong to God alone' is not in the sources. The Catholic Encyclopedia says only that he knew of her resolve. Fixed.",
+   "Story P4: 'The Church has never asked the faithful to prove this account' is an unsupported theological claim. Replaced with a sourced statement that the Roman Martyrology does not mention these events.",
+   "Story P5: 'returned to his own monastery' is not in the sources. The Catholic Encyclopedia says Beuno returned to Caernarvon. Fixed.",
+   "Story P7: the shrine drew pilgrims 'throughout the Middle Ages', but Wikipedia says the Late Middle Ages. Fixed.",
+   "Story P8: 'for more than a thousand years' is unsupported. Pilgrimage to the well is documented from the 12th century, and the 8th-century reliquary shows an early cult, not pilgrimage at Holywell. Changed to 'for centuries'.",
+   "Checked and left unchanged: the map coordinates match Holywell. The 'kinsman' wording is safe, since the sources differ on whether Beuno was her uncle or her mother's uncle. The legend is framed with 'tradition' and 'legend' throughout the spoken beats, and the martyrdom is described without graphic detail."
+  ],
+  "confidence": 86,
+  "reviewer_note": "Beuno's kinship differs between sources (uncle per the Catholic Encyclopedia, great-uncle per Wikipedia). The spoken beat says 'kinsman' to stay safe. Also confirm that putting the 'meaning' line inside the turn beat is acceptable for the close structure."
+ },
+ "es": {
+  "display_name": "Santa Winifreda",
+  "name": "Santa Winifreda",
+  "region": "Holywell y Gwytherin, Gales",
+  "dates": "fl. siglo VII",
+  "hook": "Una fuente en Gales, una historia de rechazo y un lugar de peregrinación que aún se visita hoy.",
+  "summary": "Según la leyenda, Santa Winifreda, noble galesa del siglo VII, rechazó a un pretendiente, fue devuelta a la vida por intercesión de San Beuno y más tarde sirvió como abadesa en Gwytherin, mientras que la fuente de Holywell sigue siendo un santuario nacional.",
+  "story": [
+   "Santa Winifreda, llamada Gwenffrewi en galés, es una santa de Gales. Su nombre está unido a una fuente en Holywell, en Flintshire, adonde los peregrinos acuden desde hace siglos. Se la recuerda como virgen, religiosa y abadesa. Los relatos escritos más antiguos sobre su vida proceden del siglo XII, unos quinientos años después de la época en que se dice que vivió. Por eso debemos tener cuidado de distinguir lo que es historia de lo que es tradición.",
+   "La Enciclopedia Católica sitúa su nacimiento en Holywell hacia el año 600. Su padre, Thevit (Tyfid), era un noble galés que poseía tierras en lo que hoy es Flintshire. Su madre, Wenlo, era hermana de San Beuno. Así, Beuno era tío de Winifreda. Él había vivido primero como ermitaño y más tarde fundó una comunidad en Clynnog Fawr. Mientras buscaba un lugar donde construir un monasterio, visitó a la familia de su hermana. Se estableció en un valle cerca de Holywell, construyó allí una capilla, celebró la Misa y predicó. Winifreda fue una de sus oyentes más atentas. A los quince años ya se dedicaba a la oración y a la austeridad, y con frecuencia pasaba noches enteras velando en la iglesia. Con el consentimiento de sus padres, se preparó para entregar su vida a Dios.",
+   "La leyenda gira en torno a un joven llamado Caradog, hijo de un príncipe vecino. Según la tradición, llegó a pedir su mano mientras sus padres estaban en Misa. Él sabía que ella había resuelto pertenecer solo a Dios, y esto solo avivó su deseo. Ella huyó hacia la iglesia, donde su tío Beuno celebraba la Misa. Caradog la alcanzó en la ladera, sobre el pozo actual, y le cortó la cabeza con su espada. La cabeza rodó cuesta abajo, y brotó un manantial en el lugar donde se detuvo.",
+   "La tradición afirma que Beuno abandonó el altar al oír lo ocurrido. Llevó la cabeza hasta el cuerpo y cubrió ambos con su capa. Luego volvió a la iglesia y terminó la Misa. Después se arrodilló y oró, y la capa se alzó. Winifreda se levantó como quien despierta de un sueño, con solo una fina línea blanca alrededor del cuello. Al ver a Caradog de pie junto a ellos, con actitud desafiante, Beuno invocó la justicia del cielo, y el hombre cayó muerto. La creencia popular añadió que la tierra lo tragó. El Martirologio Romano no menciona estos hechos. Las obras de referencia católicas los describen como una tradición hagiográfica que no puede confirmarse históricamente.",
+   "Según la tradición, Winifreda hizo entonces votos de virginidad y pobreza. Se construyó un convento en tierras de su padre, con una capilla sobre el pozo, y ella fue elegida abadesa de una comunidad de jóvenes. Beuno dejó Holywell y regresó a Caernarfon. Antes de marcharse, dice la tradición, se sentó sobre una piedra que hoy se encuentra en la poza exterior del pozo. Prometió, en nombre de Dios, que quien pidiera allí tres veces un favor en nombre de Winifreda lo recibiría, siempre que fuera para bien de su alma. Winifreda, por su parte, prometió enviarle cada año una señal de afecto mientras permaneciera en Holywell y hasta que supiera de su muerte.",
+   "Ocho años después de la partida de Beuno, según los relatos, ella supo que había muerto y sintió el impulso de marcharse. También había un peligro práctico. El reino sajón de Northumbria presionaba en las fronteras del norte de Gales, y Anglesey y Chester ya estaban en manos sajonas. Winifreda emprendió una peregrinación en busca de un lugar de descanso. Llegó finalmente a Gwytherin, cerca del nacimiento del río Elwy, un lugar tranquilo entre las colinas. Allí la acogió San Elerio, que dio su nombre al río. Se unió a una comunidad de monjas y vivió al principio en humilde obediencia a su abadesa. Cuando la abadesa murió, Winifreda gobernó la casa ella misma hasta su propia muerte. La Enciclopedia Católica indica como fecha el 3 de noviembre, hacia el año 660, y señala que Cristo le anunció su muerte en una visión.",
+   "Su recuerdo no se desvaneció. En 1991 se identificaron fragmentos de un relicario de roble del siglo VIII como pertenecientes al Arca de Gwenfrewi, su relicario. Un historiador ha dicho que es una buena prueba de que fue honrada como santa muy poco después de su muerte. En 1138, unas reliquias que se decían suyas fueron trasladadas de Gwytherin a la abadía de Shrewsbury, donde un gran santuario atrajo a peregrinos durante la baja Edad Media. El prior Roberto de Shrewsbury escribió la vida de la santa más influyente. El rey Enrique VIII destruyó el santuario en 1540. Como vivió en el primer milenio, Winifreda nunca fue canonizada formalmente. Es santa por aclamación popular. El Martirologio Romano de 2004 la menciona el 2 de noviembre como virgen y religiosa destacada por su testimonio. En Inglaterra y Gales su fiesta se celebra el 3 de noviembre.",
+   "Hoy la fuente de Holywell es un lugar de peregrinación, a menudo llamado el Lourdes de Gales. En noviembre de 2023 recibió el estatus de Santuario Nacional para Inglaterra y Gales. El lugar es atendido por Cadw y por la diócesis de Wrexham. Los peregrinos siguen acudiendo a rezar allí, como lo han hecho durante siglos."
+  ],
+  "prayer": "Santa Winifreda, ruega por nosotros.",
+  "patronages": [
+   "Gales"
+  ],
+  "places": [
+   "Holywell",
+   "Gwytherin",
+   "Shrewsbury",
+   "Gales"
+  ]
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 583,
+   "cache_write": 11018,
+   "cache_read": 0,
+   "out": 3723,
+   "thinking": 1994
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4908,
+   "cache_write": 0,
+   "cache_read": 11018,
+   "out": 10005,
+   "thinking": 6102
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 2183,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3596,
+   "thinking": 1072
+  }
+ ]
 }

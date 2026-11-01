@@ -169,6 +169,24 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Very little is known for certain about Saints Vitalis and Agricola, and the Church is honest about that. Their story comes to us from a few ancient voices, above all Saint Ambrose, the bishop of Milan. What the sources do tell us is brief. It is also remarkable: a master and his slave, who died for the same faith and are remembered together.",
+   "Tradition holds that Agricola was a Christian citizen of Bologna, a man loved for his gentleness. His slave, Vitalis, came to share his faith. The tradition says Agricola himself led Vitalis to Christ. The two, the legend says, grew deeply attached to one another. Little is known of their daily lives. The tradition shows a master and servant who had become brothers in faith.",
+   "Around the year 304, the Emperor Diocletian ordered a persecution of Christians, and it reached Bologna. According to tradition, both men were brought to the amphitheatre. Vitalis was the first to suffer. The Roman Martyrology, following Ambrose, says that he endured torments so great that no part of his body was left unwounded, and that he died. We need not dwell on the details. It is enough to say that he held to Christ to the end.",
+   "Agricola was left to face the same trial. Tradition says the persecutors hoped that the sight of his servant's suffering would break his resolve. They also tried flattery, hoping to win him over. The sources say it had the opposite effect. Agricola was strengthened and encouraged by the death of his faithful servant. He was not terrified. He followed Vitalis in martyrdom, and was crucified. Today the Church calls them the first martyrs of Bologna, and the palm is their emblem.",
+   "Then the two were nearly forgotten. They were buried in a Jewish cemetery in the city, and for almost ninety years nothing more is recorded. In 392 or 393, Bishop Eusebius of Bologna announced that their remains had been found. He reburied them with Christian rites, and Saint Ambrose was present. Ambrose urged the people to honor the relics, and the veneration of the two martyrs began to grow.",
+   "Ambrose carried their memory far beyond Bologna. He took some of the relics to Milan. He brought others to Florence, including some of the blood, parts of the cross, and the nails. These were placed in a church built by a devout widow named Juliana. There he gave an oration praising virginity, with special thought for Juliana's three daughters. His mention of the two martyrs near the beginning of that oration is the only ancient source for their lives. In 396, relics were sent to Victricus, Bishop of Rouen, and about then to Paulinus of Nola and others. In the late sixth century, Gregory of Tours even complained that no account of their martyrdom had been written. Still, their veneration was already widespread in the fifth and sixth centuries.",
+   "Bologna remained the center of their cult. A basilica was built to keep their relics, and their remains were later moved to an adjoining chapel. Today the church of San Vitale e Agricola in Arena is said to stand over the ruins of the Roman amphitheatre where they died. Its crypt dates to the eleventh century. Their feast is kept on 4 November, and Salsomaggiore Terme honors them as patrons.",
+   "The Church has long seen in them a quiet lesson. One was a master and the other a slave, set apart by the world, yet joined by the palm of martyrdom. Centuries later, Bologna would remember their witness of equality and solidarity when it freed its serfs in the decree known as the Liber Paradisus. The Church's own prayer for them speaks of a humanity reconciled in the love of Christ."
+  ],
+  "patronages": [
+   "Salsomaggiore Terme"
+  ],
+  "places": [
+   "Bologna",
+   "Milan",
+   "Florence"
   ]
  },
  "factcheck": {
@@ -191,8 +209,12 @@
    "url": "https://en.wikipedia.org/wiki/Saints_Vitalis_and_Agricola"
   },
   {
-   "title": "Catholic Encyclopedia (1913)/Sts. Vitalis and Agricola",
-   "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Sts._Vitalis_and_Agricola"
+   "title": "Catholic Encyclopedia (1913): Vitalis and Agricola",
+   "url": "https://www.newadvent.org/cathen/15486b.htm"
+  },
+  {
+   "title": "Santi e Beati: Vitalis and Agricola",
+   "url": "https://www.santiebeati.it/dettaglio/76110"
   }
  ],
  "art_credits": [
@@ -208,6 +230,78 @@
  },
  "review_message_id": 25,
  "books": [],
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "Hook was 14 words; the rule is under 14. Trimmed to 13 and kept the 'Tradition says' framing.",
+   "Story beat 3 (spoken), claim 5 and story paragraph 4 say Agricola himself was tortured. That follows Wikipedia, but the Catholic Encyclopedia, the Roman Martyrology and Santi e Beati say Vitalis was the one tortured. Agricola faced flattery and the sight of his servant's sufferings, then crucifixion. Fixed the beat, the claim and the paragraph to follow the Catholic references.",
+   "Story paragraph 2: 'Most accounts say' implies several independent accounts, but the sources only give the one tradition. Changed to 'The tradition says'.",
+   "Story paragraph 2: 'Nothing is recorded of their families or their daily lives' and 'a household' are not in the sources. Softened to 'Little is known of their daily lives' and removed 'household'.",
+   "Story paragraph 4: 'Since then the Church has called them the first martyrs' implies this title dates from their deaths, but the cult began only in 392 or 393. Changed to 'Today the Church calls them'.",
+   "display_name used the abbreviation 'Sts.'. Spelled out as 'Saints'.",
+   "Spoken beats now total about 141 words, within the 125-145 range. Map coordinates for Bologna are correct. Titles, dates and the 4 November feast match the sources."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Please double-check two points. First, the sources say Ambrose took 'parts of the cross, and the nails' to Florence. I left the wording as the source has it, but a listener could mistake it for the True Cross, so consider clarifying or dropping it. Second, 'only source for their lives' follows the Catholic Encyclopedia, but Santi e Beati also cites Paulinus of Nola, so the story paragraph's wording is slightly strong."
+ },
+ "es": {
+  "name": "San Vital y San Agrícola",
+  "display_name": "San Vital",
+  "region": "Bolonia, Italia",
+  "dates": "m. c. 304",
+  "hook": "Amo y esclavo. En Cristo, hermanos hasta el final.",
+  "summary": "Vital y Agrícola, un esclavo y su amo, fueron martirizados en Bolonia alrededor del año 304 y todavía hoy se les venera allí.",
+  "story": [
+   "Se sabe muy poco con certeza sobre san Vital y san Agrícola, y la Iglesia es honesta al respecto. Su historia nos llega a través de unas pocas voces antiguas, sobre todo la de san Ambrosio, obispo de Milán. Lo que las fuentes sí nos dicen es breve. También es admirable: un amo y su esclavo, que murieron por la misma fe y son recordados juntos.",
+   "Según la tradición, Agrícola era un ciudadano cristiano de Bolonia, un hombre querido por su mansedumbre. Su esclavo, Vital, llegó a compartir su fe. La tradición dice que el propio Agrícola llevó a Vital a Cristo. Según la leyenda, los dos llegaron a unirse con un profundo afecto. Se sabe poco de su vida cotidiana. La tradición muestra a un amo y a un siervo que se habían hecho hermanos en la fe.",
+   "Hacia el año 304, el emperador Diocleciano ordenó una persecución contra los cristianos, y esta llegó a Bolonia. Según la tradición, ambos hombres fueron llevados al anfiteatro. Vital fue el primero en sufrir. El Martirologio Romano, siguiendo a Ambrosio, dice que soportó tormentos tan grandes que no quedó parte de su cuerpo sin herir, y que murió. No es necesario detenerse en los detalles. Basta decir que se mantuvo fiel a Cristo hasta el final.",
+   "Agrícola fue dejado para afrontar la misma prueba. La tradición dice que los perseguidores esperaban que la visión del sufrimiento de su siervo quebrantara su firmeza. También intentaron la adulación, con la esperanza de ganárselo. Las fuentes dicen que el efecto fue el contrario. Agrícola fue fortalecido y animado por la muerte de su fiel siervo. No se llenó de terror. Siguió a Vital en el martirio y fue crucificado. Hoy la Iglesia los llama los primeros mártires de Bolonia, y la palma es su emblema.",
+   "Después, los dos quedaron casi olvidados. Fueron enterrados en un cementerio judío de la ciudad, y durante casi noventa años no hay más registros. En el año 392 o 393, el obispo Eusebio de Bolonia anunció que sus restos habían sido encontrados. Los volvió a enterrar con ritos cristianos, y san Ambrosio estuvo presente. Ambrosio exhortó al pueblo a venerar las reliquias, y la veneración de los dos mártires comenzó a crecer.",
+   "Ambrosio llevó su memoria mucho más allá de Bolonia. Llevó algunas de las reliquias a Milán. Llevó otras a Florencia, entre ellas algo de la sangre, fragmentos de la cruz y los clavos. Estas fueron colocadas en una iglesia construida por una piadosa viuda llamada Juliana. Allí pronunció un discurso en alabanza de la virginidad, con especial atención a las tres hijas de Juliana. Su mención de los dos mártires al comienzo de ese discurso es la única fuente antigua sobre sus vidas. En el año 396, se enviaron reliquias a Victricio, obispo de Ruan, y hacia esa época a Paulino de Nola y a otros. A finales del siglo VI, Gregorio de Tours incluso se quejó de que no se hubiera escrito ningún relato de su martirio. Aun así, su veneración ya estaba extendida en los siglos V y VI.",
+   "Bolonia siguió siendo el centro de su culto. Se construyó una basílica para custodiar sus reliquias, y sus restos fueron trasladados más tarde a una capilla contigua. Hoy se dice que la iglesia de San Vital y San Agrícola en Arena se levanta sobre las ruinas del anfiteatro romano donde murieron. Su cripta data del siglo XI. Su fiesta se celebra el 4 de noviembre, y Salsomaggiore Terme los honra como patronos.",
+   "La Iglesia ha visto desde hace mucho tiempo en ellos una lección silenciosa. Uno era amo y el otro esclavo, separados por el mundo, pero unidos por la palma del martirio. Siglos después, Bolonia recordaría su testimonio de igualdad y solidaridad cuando liberó a sus siervos mediante el decreto conocido como Liber Paradisus. La oración propia de la Iglesia por ellos habla de una humanidad reconciliada en el amor de Cristo."
+  ],
+  "prayer": "San Vital y San Agrícola, rogad por nosotros.",
+  "patronages": [
+   "Salsomaggiore Terme"
+  ],
+  "places": [
+   "Bolonia",
+   "Milán",
+   "Florencia"
+  ]
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 603,
+   "cache_write": 4605,
+   "cache_read": 0,
+   "out": 2979,
+   "thinking": 1693
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4389,
+   "cache_write": 0,
+   "cache_read": 4605,
+   "out": 9947,
+   "thinking": 6259
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1692,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3410,
+   "thinking": 1504
+  }
+ ],
  "redo": {
   "new_saint": false,
   "note": "The narration says Agricola was tortured. The Catholic Encyclopedia, the Roman Martyrology and Santi e Beati all say it was Vitalis, his servant"

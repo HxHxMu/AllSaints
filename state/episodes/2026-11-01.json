@@ -2,7 +2,7 @@
  "id": "2026-11-01",
  "date": "2026-11-01",
  "status": "published",
- "updated": "2026-11-01T17:57:12+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q714835",
   "name": "Saint Marcellus of Paris",
@@ -169,6 +169,24 @@
     "source": 1,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Saint Marcellus was the ninth bishop of Paris, which in his day was still the Roman town of Lutetia, on the Île de la Cité in Gaul. He lived at the turn of the fifth century, in the years when the old Roman world was growing unsteady. We know him less through documents than through memory. Even the year of his death is uncertain.",
+   "Tradition holds that he was born into a modest family near the Petit-Pont, not far from where Notre-Dame stands today. Some accounts name the rue de la Calandre. These details belong to later tradition, because no records from his own time survive to confirm his childhood, his ordinations or the length of his ministry. What the sources describe is his character. He gave himself to prayer and to the practice of virtue, and he was serious and studious, especially in theology. That drew the notice of Prudentius, then bishop of Paris, who gave him the order of Reader and made him his archdeacon.",
+   "When Prudentius died and the see fell vacant, the people acclaimed Marcellus as his successor. He became bishop in a hard season. Roman administration had almost vanished, shaken by invasions from beyond the frontier. The sources describe a bishop who stepped into the gap. He stood against armed bands and defended his people, and he is said to have drained the marshes along the Bièvre river. He stayed close to ordinary folk, most of whom were still pagan. Preaching brought many of them to the faith.",
+   "His biography was written about the year 570, roughly a century and a half later. The poet Venantius Fortunatus composed it at the request of Germanus, bishop of Paris, working from oral tradition. Fortunatus admitted the limits of what he had received: most of the saint's deeds, he wrote, had been stolen away by the jealousy of time. Yet he left a picture of a bishop who gave himself fully to his duties. He worked for the conversion of sinners, the teaching of the ignorant, the visiting of the sick and the help of prisoners, and he laboured to keep friendship among all the faithful.",
+   "The Life is filled with wonders. It tells of healings, of water changed into wine, and of a contact with red-hot iron. Some accounts place the water miracle at the Seine and add balsam. These stories show the kind of holiness the sixth century admired. They are not independent proof that the events occurred, and they should be read as tradition.",
+   "The most famous tradition concerns a great serpent. According to legend, a woman of poor reputation was buried with great ceremony, and a huge serpent from the Bièvre marsh came and devoured her body. The townspeople were terrified. Marcellus confronted the creature, laid his stole upon it like a halter, and led it out of the city, commanding it never to return. The sources say we cannot tell whether this happened, and the animal cannot be matched to any real species. The story reached far beyond the tale itself, however. It shaped the public image of their bishop: a pastor at the head of his people, freeing them from fear, with the evil he drove out shown as a serpent or dragon at his feet.",
+   "Tradition gives November 1 as the day of his death, but the year is unknown. Many books give 436, though others suggest 410, and neither date is certain. According to Nominis, he himself chose his burial place, on the left bank of the Seine, south of the ancient city beside the Roman road toward Lyon and Italy. Archaeology confirms a late Roman burial ground there, in what is now the faubourg Saint-Marcel, though it has not identified his tomb. His grave soon became a place of pilgrimage. Gregory of Tours speaks of a small chapel in the area, a sign of how early the devotion began. The faithful of Lutetia used to say, simply, \"We are going to Saint-Marcel.\"",
+   "In time the church over the tomb grew into a collegiate church, and a district took his name. Tradition holds that his relics were carried to the cathedral at the time of the Norman raids, though other accounts place the move in the tenth century. The French Revolution destroyed much of this heritage, including relics attributed to him. Yet his memory remained in the name of a Paris quarter, in medieval images of the bishop and the serpent, including those at Notre-Dame, and in a bell of the cathedral that bears his name. The Roman Martyrology keeps his feast on November 1. Because that day is All Saints, the Church in Paris has also honoured him on November 3. Parishioners count him with Saint Denis and Saint Geneviève among the protectors of ancient Paris. His holiness lay in unglamorous work: prayer, teaching, the care of the poor and sick, and the steady defence of his flock."
+  ],
+  "patronages": [
+   "Paris"
+  ],
+  "places": [
+   "Paris",
+   "Notre-Dame de Paris",
+   "Faubourg Saint-Marcel"
   ]
  },
  "factcheck": {
@@ -188,15 +206,15 @@
    "url": "https://en.wikipedia.org/wiki/Marcellus_of_Paris"
   },
   {
-   "title": "Santi e Beati: Saint Marcellus of Paris",
+   "title": "Santi e Beati: Marcellus of Paris",
    "url": "https://www.santiebeati.it/dettaglio/93122"
   },
   {
-   "title": "Nominis (Église catholique en France): Saint Marcellus of Paris",
+   "title": "Nominis (Église catholique en France): Marcellus of Paris",
    "url": "https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html"
   },
   {
-   "title": "Ökumenisches Heiligenlexikon: Saint Marcellus of Paris",
+   "title": "Ökumenisches Heiligenlexikon: Marcellus of Paris",
    "url": "https://www.heiligenlexikon.de/BiographienM/Marcellus.html"
   }
  ],
@@ -241,6 +259,82 @@
   {
    "date": "2026-11-01",
    "note": "Page text: the serpent legend follows Fortunatus (led away, not slain); death year marked uncertain; Nov 3 Paris observance noted; Catholic references added. The published video still says 'slew a dragon'."
+  }
+ ],
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "The spoken beats ran about 181 words against the 125-145 limit. I cut the feast-day sentence, the 'victory over evil' clause, 'commanding it never to return', and trimmed the 'who' line. The beats now total about 140 words.",
+   "The 'who' line was reworded to 'now Paris' to save words. Birth in Lutetia and death in the fifth century are both supported (410 or 436).",
+   "display_name used the abbreviation 'St.'; changed to 'Saint'.",
+   "The dates field 'd. c. 436' overstated certainty. The sources give 1 November, with the year uncertain (410 or 436).",
+   "Story: 'small Roman town' is not in the sources; 'small' removed.",
+   "Story: 'the little bridge that led onto the island' is not in the sources. Replaced with Nominis's 'not far from where Notre-Dame stands today'.",
+   "Story: 'What the sources agree on is his character' overstates agreement. Changed to 'describe'.",
+   "Story: 'the older date [410] has the weaker support' contradicts Santi e Beati, which says 436 is the less solid date. Changed to 'neither date is certain'.",
+   "Story: 'It became the sign by which Parisians knew their bishop' overstates Santi e Beati, which says the legend helped define his public image. Softened.",
+   "Spoken serpent beat: the claim is already hedged with 'according to legend'. Legend and history are kept separate."
+  ],
+  "confidence": 86,
+  "reviewer_note": "Beats now total about 140 words. The feast-day and Seine-balsam details live only in the website story, and the hook's wine miracle is labelled tradition. Please confirm you are happy that the beats no longer mention the 1 and 3 November feasts."
+ },
+ "es": {
+  "name": "San Marcelo de París",
+  "display_name": "San Marcelo",
+  "region": "Lutecia (París), Galia romana",
+  "dates": "m. c. 436",
+  "hook": "Una campana de Notre-Dame lleva todavía el nombre de un obispo que la mayor parte del mundo ha olvidado.",
+  "summary": "San Marcelo, noveno obispo de París en el siglo V, es recordado por su oración, su predicación a los paganos y una campana de Notre-Dame que lleva su nombre.",
+  "story": [
+   "San Marcelo fue el noveno obispo de París, que en su tiempo todavía era la ciudad romana de Lutecia, en la isla de la Cité, en la Galia. Vivió hacia el cambio del siglo V, en los años en que el antiguo mundo romano se volvía inestable. Lo conocemos menos por documentos que por la memoria. Ni siquiera se sabe con certeza el año de su muerte.",
+   "Según la tradición, nació en una familia humilde cerca del Petit-Pont, no lejos de donde hoy se alza Notre-Dame. Algunos relatos mencionan la calle de la Calandre. Estos detalles pertenecen a la tradición posterior, pues no se conservan registros de su tiempo que confirmen su infancia, sus ordenaciones ni la duración de su ministerio. Lo que describen las fuentes es su carácter. Se entregó a la oración y a la práctica de la virtud, y fue serio y estudioso, especialmente en teología. Esto atrajo la atención de Prudencio, entonces obispo de París, que le confirió el orden de lector y lo hizo su archidiácono.",
+   "Cuando Prudencio murió y la sede quedó vacante, el pueblo aclamó a Marcelo como su sucesor. Llegó al episcopado en una época difícil. La administración romana casi había desaparecido, sacudida por las invasiones que llegaban desde más allá de la frontera. Las fuentes describen a un obispo que ocupó ese vacío. Se enfrentó a bandas armadas y defendió a su pueblo, y se dice que desecó los pantanos a lo largo del río Bièvre. Permaneció cerca de la gente sencilla, la mayoría todavía pagana. La predicación llevó a muchos de ellos a la fe.",
+   "Su biografía fue escrita hacia el año 570, unos siglo y medio después. El poeta Venancio Fortunato la compuso a petición de Germán, obispo de París, basándose en la tradición oral. Fortunato reconoció los límites de lo que había recibido: la mayor parte de las obras del santo, escribió, habían sido arrebatadas por la envidia del tiempo. Aun así, dejó el retrato de un obispo que se entregó por completo a sus deberes. Trabajó por la conversión de los pecadores, la enseñanza de los ignorantes, la visita a los enfermos y la ayuda a los presos, y se esforzó por mantener la amistad entre todos los fieles.",
+   "La Vida está llena de prodigios. Narra curaciones, agua convertida en vino y un contacto con hierro al rojo vivo. Algunos relatos sitúan el milagro del agua en el Sena y añaden un bálsamo. Estos relatos muestran el tipo de santidad que admiraba el siglo VI. No son una prueba independiente de que los hechos ocurrieran, y deben leerse como tradición.",
+   "La tradición más famosa se refiere a una gran serpiente. Según la leyenda, una mujer de mala fama fue enterrada con gran ceremonia, y una enorme serpiente surgida del pantano del Bièvre llegó y devoró su cuerpo. Los habitantes de la ciudad se aterrorizaron. Marcelo se enfrentó a la criatura, colocó sobre ella su estola a modo de ronzal y la condujo fuera de la ciudad, ordenándole que nunca regresara. Las fuentes dicen que no podemos saber si esto sucedió, y el animal no puede identificarse con ninguna especie real. Sin embargo, el relato fue mucho más allá del cuento. Dio forma a la imagen pública de su obispo: un pastor al frente de su pueblo, que lo libera del miedo, con el mal que expulsó representado como una serpiente o un dragón a sus pies.",
+   "Según la tradición, su muerte ocurrió el 1 de noviembre, pero el año es desconocido. Muchos libros dan el 436, aunque otros sugieren el 410, y ninguna de las dos fechas es segura. Según Nominis, él mismo eligió su lugar de sepultura, en la orilla izquierda del Sena, al sur de la antigua ciudad, junto a la calzada romana que iba hacia Lyon e Italia. La arqueología confirma un cementerio de época romana tardía en lo que hoy es el faubourg Saint-Marcel, aunque no ha identificado su tumba. Su sepulcro pronto se convirtió en lugar de peregrinación. Gregorio de Tours habla de una pequeña capilla en la zona, señal de lo temprano que surgió esta devoción. Los fieles de Lutecia solían decir sencillamente: «Vamos a Saint-Marcel».",
+   "Con el tiempo, la iglesia construida sobre la tumba se convirtió en colegiata, y un barrio tomó su nombre. Según la tradición, sus reliquias fueron llevadas a la catedral durante las incursiones normandas, aunque otros relatos sitúan el traslado en el siglo X. La Revolución Francesa destruyó gran parte de este patrimonio, incluidas las reliquias que se le atribuían. Sin embargo, su memoria permaneció en el nombre de un barrio de París, en imágenes medievales del obispo y la serpiente, entre ellas las de Notre-Dame, y en una campana de la catedral que lleva su nombre. El Martirologio Romano conserva su fiesta el 1 de noviembre. Como ese día es Todos los Santos, la Iglesia en París también lo ha honrado el 3 de noviembre. Los fieles de la parroquia lo cuentan, junto a San Dionisio y Santa Genoveva, entre los protectores del antiguo París. Su santidad estuvo en una labor poco llamativa: la oración, la enseñanza, el cuidado de pobres y enfermos, y la defensa constante de su grey."
+  ],
+  "prayer": "San Marcelo, ruega por nosotros.",
+  "patronages": [
+   "París"
+  ],
+  "places": [
+   "París",
+   "Notre-Dame de París",
+   "Faubourg Saint-Marcel"
+  ],
+  "slug": "marcelo-de-paris"
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 672,
+   "cache_write": 8105,
+   "cache_read": 0,
+   "out": 4063,
+   "thinking": 2421
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4612,
+   "cache_write": 0,
+   "cache_read": 8105,
+   "out": 9570,
+   "thinking": 6650
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 2092,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3648,
+   "thinking": 1237
   }
  ]
 }

@@ -2,7 +2,7 @@
  "id": "2026-11-02",
  "date": "2026-11-02",
  "status": "approved",
- "updated": "2026-10-31T04:19:19+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q469199",
   "name": "Saint Victorinus of Pettau",
@@ -177,6 +177,22 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Saint Victorinus was bishop of Poetovio, a Roman garrison city in the province of Pannonia. Today it is Ptuj, in Slovenia, and in German it was called Pettau. His name is Latin and means \"the victor.\" We know very little about his life. His account of martyrdom, the passio, has been lost. What we know comes from scattered mentions in Jerome, Optatus of Milevis and Cassiodorus, and from his own writings.",
+   "His origins are uncertain. Wikipedia says he was probably born in Roman Greece, on the border between the Eastern and Western Empires, or in Poetovio itself, a city of mixed peoples because of its military character. The Ökumenisches Heiligenlexikon places his birth around the year 230, somewhere in Pannonia. The sources point to Greek as his first language, and Wikipedia adds that he spoke it better than Latin. The sources tell us nothing of his family. Santi e Beati notes that before he became a bishop he had been a rhetorician, a teacher of public speaking.",
+   "He lived in the third century, when the Church in the Roman world had known persecution and would know it again. In that time Victorinus did something new. He is regarded as the first theologian to explain the Scriptures in Latin. He drew on Greek authors, above all Origen, whose work he opened to the Church of the West. He also admired earlier teachers such as Papias of Hierapolis and Irenaeus of Lyon.",
+   "Jerome tells us that Victorinus wrote commentaries on Genesis, Exodus and Leviticus, on Isaiah, Ezekiel and Habakkuk, on Ecclesiastes and the Song of Songs, and on the Gospel of Matthew. Jerome gave him an honorable place among the Church's writers. He judged that Victorinus's Latin was plain, since Greek was his native tongue, but that his meaning was sublime. Jerome quoted him from time to time.",
+   "Most of these works did not survive antiquity. His commentary on the Book of Revelation did, written about the year 260, not long after the persecution under Valerian. Jerome later published it in a revised form. The original text came to light in a manuscript found in 1918. The Heiligenlexikon adds that his reading of the creation account in Genesis survives, along with a reading of the parable of the ten virgins in Matthew. Wikipedia lists only the Revelation commentary and a short work, On the Creation of the World.",
+   "In his commentary he reads Revelation as a faithful teacher of his day. He sees the four living creatures praising God as the four Gospels. He sees the two-edged sword from the mouth of Christ as the Scriptures, with one edge the Old Testament and the other the New. He takes the great city drunk with the blood of the saints to be Rome and its persecutions. All of this shows how a bishop of the third century read the book, and why it still interests scholars.",
+   "His reading was not without question. Jerome thought Victorinus had been influenced by millenarianism, the belief that Christ would return to reign on earth for a thousand years. It was widespread in those lands at that time. Centuries later, a sixth-century list known as the Gelasian Decree named his writings among those to be avoided. Even so, the Church kept his memory.",
+   "Victorinus died a martyr in the persecution under Emperor Diocletian, around the year 303 or 304. Jerome says he died a martyr. Santi e Beati, drawing on the surviving references, says that he seems to have died for the faith in that violent persecution. We have no reliable account of how it happened, and we do not need one to honor him. He taught Scripture to a Church under threat, and in the end he bore witness with his life.",
+   "His memory outlasted the troubles that struck his region over the centuries. For a time he was wrongly thought to have been the first bishop of Poitiers, and until the seventeenth century he was sometimes confused with another writer, Victorinus Afer. The Church commemorates him on 2 November, in both the Latin Catholic and the Eastern Orthodox traditions. In Ptuj, a monument raised in 2003 recalls the bishop who once taught there."
+  ],
+  "patronages": [],
+  "places": [
+   "Ptuj",
+   "Pannonia"
   ]
  },
  "factcheck": {
@@ -194,6 +210,14 @@
   {
    "title": "Wikipedia: Victorinus of Pettau",
    "url": "https://en.wikipedia.org/wiki/Victorinus_of_Pettau"
+  },
+  {
+   "title": "Santi e Beati: Victorinus of Pettau",
+   "url": "https://www.santiebeati.it/dettaglio/93125"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Victorinus of Pettau",
+   "url": "https://www.heiligenlexikon.de/BiographienV/Viktorin_von_Pettau.html"
   }
  ],
  "art_credits": [
@@ -208,5 +232,74 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-02/preview.mp4"
  },
  "review_message_id": 21,
- "books": []
+ "books": [],
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "Spoken beat 4: 'Jerome found his Latin style lacking' is harsher than the sources. Wikipedia says only that the works were more remarkable for matter than style, and Santi e Beati (Butler) calls the Latin plain with sublime meaning. Changed to 'plain' and 'meaning'.",
+   "display_name used the abbreviation 'St.'. Changed to 'Saint'.",
+   "Story para 2: 'One tradition of the sources has him born in Roman Greece' wrongly implies a tradition or legend. Wikipedia only says 'probably'. Reworded.",
+   "Story para 2: 'All agree that Greek was his first language, and that he spoke it better than Latin' overstates the sources. Only Wikipedia says he spoke Greek better than Latin; the others say Greek was his native tongue. Reworded.",
+   "Story para 7: 'Jerome's esteem for his work never faded' is unsupported. Jerome also criticized the millenarian tendency. Removed.",
+   "Story para 8: 'Diocleziano, known in English as Diocletian' is an awkward Italian leftover in an English text. Fixed to 'Emperor Diocletian'."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Spoken beats total about 140 words. Victorinus's martyrdom is attested only by Jerome, and his passio is lost, so the script correctly gives no details. Please confirm you are comfortable with 'in the third century' when he died c. 303/304."
+ },
+ "es": {
+  "name": "San Victorino de Petovio",
+  "display_name": "San Victorino",
+  "region": "Poetovio (Ptuj), Panonia, actual Eslovenia",
+  "dates": "fl. c. 270 – c. 304",
+  "hook": "Enseñó a la Iglesia de habla latina a leer la Escritura, en una lengua que no era la suya materna.",
+  "summary": "San Victorino de Petovio, obispo de Poetovio, fue el primer teólogo que escribió un comentario bíblico en latín, y murió mártir bajo Diocleciano.",
+  "story": [
+   "San Victorino fue obispo de Poetovio, una ciudad romana de guarnición en la provincia de Panonia. Hoy es Ptuj, en Eslovenia, y en alemán se llamaba Pettau. Su nombre es latino y significa «el vencedor». Sabemos muy poco de su vida. Su relato del martirio, la passio, se ha perdido. Lo que conocemos proviene de menciones dispersas en Jerónimo, Optato de Milevi y Casiodoro, y de sus propios escritos.",
+   "Sus orígenes son inciertos. Wikipedia dice que probablemente nació en la Grecia romana, en la frontera entre el Imperio de Oriente y el de Occidente, o en la propia Poetovio, una ciudad de pueblos mezclados por su carácter militar. El Ökumenisches Heiligenlexikon sitúa su nacimiento hacia el año 230, en algún lugar de Panonia. Las fuentes apuntan a que su primera lengua fue el griego, y Wikipedia añade que lo hablaba mejor que el latín. Las fuentes no nos dicen nada de su familia. Santi e Beati señala que, antes de ser obispo, había sido retórico, maestro de oratoria.",
+   "Vivió en el siglo III, cuando la Iglesia en el mundo romano había conocido la persecución y volvería a conocerla. En aquella época Victorino hizo algo nuevo. Se le considera el primer teólogo que explicó las Escrituras en latín. Se apoyó en autores griegos, sobre todo en Orígenes, cuya obra abrió a la Iglesia de Occidente. También admiró a maestros anteriores como Papías de Hierápolis e Ireneo de Lyon.",
+   "Jerónimo nos dice que Victorino escribió comentarios sobre el Génesis, el Éxodo y el Levítico, sobre Isaías, Ezequiel y Habacuc, sobre el Eclesiastés y el Cantar de los Cantares, y sobre el Evangelio de Mateo. Jerónimo le dio un lugar honroso entre los escritores de la Iglesia. Juzgó que el latín de Victorino era sencillo, ya que el griego era su lengua materna, pero que su pensamiento era sublime. Jerónimo lo citó en varias ocasiones.",
+   "La mayor parte de estas obras no sobrevivió a la antigüedad. Sí se conservó su comentario al Libro del Apocalipsis, escrito hacia el año 260, poco después de la persecución de Valeriano. Jerónimo lo publicó más tarde en una forma revisada. El texto original salió a la luz en un manuscrito hallado en 1918. El Heiligenlexikon añade que se conserva su lectura del relato de la creación en el Génesis, junto con una lectura de la parábola de las diez vírgenes en Mateo. Wikipedia menciona solo el comentario al Apocalipsis y una breve obra, Sobre la creación del mundo.",
+   "En su comentario lee el Apocalipsis como un maestro fiel de su tiempo. Ve a los cuatro seres vivientes que alaban a Dios como los cuatro Evangelios. Ve la espada de dos filos que sale de la boca de Cristo como las Escrituras, con un filo para el Antiguo Testamento y otro para el Nuevo. Entiende que la gran ciudad embriagada con la sangre de los santos es Roma y sus persecuciones. Todo esto muestra cómo un obispo del siglo III leyó el libro, y por qué todavía interesa a los estudiosos.",
+   "Su interpretación no estuvo exenta de cuestionamientos. Jerónimo pensó que Victorino había sido influido por el milenarismo, la creencia de que Cristo volvería a reinar en la tierra durante mil años. Esta idea estaba extendida en aquellas tierras en ese tiempo. Siglos después, el Decreto Gelasiano, una lista del siglo VI, incluyó sus escritos entre los que debían evitarse. Aun así, la Iglesia conservó su memoria.",
+   "Victorino murió mártir en la persecución del emperador Diocleciano, hacia el año 303 o 304. Jerónimo dice que murió mártir. Santi e Beati, basándose en las referencias que se conservan, señala que parece haber muerto por la fe en aquella violenta persecución. No tenemos un relato fiable de cómo ocurrió, y no lo necesitamos para honrarlo. Enseñó la Escritura a una Iglesia amenazada y, al final, dio testimonio con su vida.",
+   "Su memoria sobrevivió a las adversidades que golpearon su región a lo largo de los siglos. Durante un tiempo se pensó erróneamente que había sido el primer obispo de Poitiers, y hasta el siglo XVII a veces se le confundió con otro escritor, Víctorino Afer. La Iglesia lo conmemora el 2 de noviembre, tanto en la tradición católica latina como en la ortodoxa oriental. En Ptuj, un monumento erigido en 2003 recuerda al obispo que allí enseñó en otro tiempo."
+  ],
+  "prayer": "San Victorino, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Ptuj",
+   "Panonia"
+  ]
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 612,
+   "cache_write": 5405,
+   "cache_read": 0,
+   "out": 2840,
+   "thinking": 1407
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4418,
+   "cache_write": 0,
+   "cache_read": 5405,
+   "out": 6927,
+   "thinking": 4008
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1880,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3127,
+   "thinking": 1018
+  }
+ ]
 }

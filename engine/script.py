@@ -50,6 +50,11 @@ SCHEMA = """{
 }"""
 
 
+STORY_RULES = """- "story" (for the website, read not heard): 600-800 words in 5-8 paragraphs telling the saint's whole life from the same SOURCES, in the same reverent voice, with more context than the minute allows (family, era, what the Church was facing, what remains today). Keep history and tradition clearly apart ("tradition holds..."), no invented quotes or details, abbreviations and numerals are fine here. Don't end with the prayer line; the page adds it.
+- "patronages": only patronages the SOURCES state; [] if none. "places": 2-5 places tied to their life, most specific first.
+  Both become website topic pages, so give bare names as a reader would search them ("Parma", "Shanghai", "sailors"): no country after the city, no notes in parentheses."""
+
+
 def schema():
     """art_hint (Commons search terms) is only read when art comes from Commons; don't pay to generate it otherwise."""
     if load_config().get("art_source", "illustrated") == "commons":
@@ -84,8 +89,7 @@ Requirements:
 - Every factual claim must appear in "claims" with its source index; label legendary material kind "tradition" and phrase it that way in the script.
 - 8-14 hashtags, lowercase: first the saint's name tag (e.g. #saintfrumentius), next the most specific place or patronage tag, then others.
 - "share_cta": one gentle caption line inviting a share, only if it is natural: by name ("Know someone named Winifred? Send them their saint.") when the saint's name is still given today, or by patronage ("Send this to a nurse who could use a patron today.") only if the sources state the patronage. Otherwise "". Never pushy, no "comment Amen".
-- "story" (for the website, read not heard): 600-800 words in 5-8 paragraphs telling the saint's whole life from the same SOURCES, in the same reverent voice, with more context than the minute allows (family, era, what the Church was facing, what remains today). Keep history and tradition clearly apart ("tradition holds..."), no invented quotes or details, abbreviations and numerals are fine here. Don't end with the prayer line; the page adds it.
-- "patronages": only patronages the SOURCES state; [] if none. "places": 2-5 places tied to their life, most specific first.
+{STORY_RULES}
 - "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
     ctx = sources_context(sources)
     task = prompt
@@ -100,6 +104,19 @@ Requirements:
                 "Revise it to that length, keeping everything else that works. Previous draft:\n"
                 + json.dumps(s, ensure_ascii=False))
     return s
+
+
+def write_story(script, sources):
+    """The website fields alone, for an episode whose video was made before they existed (pipeline backfill-story)."""
+    narration = "\n".join(b["text"] for b in script["beats"])
+    prompt = f"""This episode's video is already made. Its narration:
+{narration}
+
+Write the website fields for {script['saint']['name']} from the SOURCES above. Where the sources contradict the narration, follow the sources.
+
+Return ONLY JSON: {{"story": ["paragraph", "..."], "patronages": [], "places": []}}
+{STORY_RULES}"""
+    return claude_json(prompt, system=SYSTEM, context=sources_context(sources), label="story")
 
 
 def fact_check(script, sources):

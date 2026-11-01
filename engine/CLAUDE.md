@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|compilation|yt-auth|yt-whoami|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -37,6 +37,9 @@ poll (every 10 min): telegram.process_updates → publish_due
 ## Secrets (GitHub → Environments → **Production**; locally `.env`)
 `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`.
 
+## Backfill
+`pipeline.py backfill-story <ep_id|all>`: for episodes made before the website story/Spanish existed (10-29…11-04, done 2026-11-01). Fresh sources → `script.write_story` → fact-check of the whole script; only story fixes apply (the video is made), beat problems go in `ep.recheck` (`beats_need_fixing`) for Luis to judge (🔁 Redo if serious).
+
 ## Workflows
 `generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below), `site.yml` (website build check: on pushes touching site/state/brand, and called by poll after a commit that rebuilds the site; a failure sends Telegram ⚠️ — bot pushes use GITHUB_TOKEN, which starts no push workflows, hence the call). `scripts/commit-state.sh` commits state with rebase retries.
 
@@ -67,4 +70,5 @@ Instagram: 5 hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint 
 
 ## Cost
 - Model auto-picks the newest Sonnet; sources sent once as a cached context block shared by script and fact-check; per-call usage stored in `ep.usage`. Output/thinking tokens dominate cost.
+- `pipeline.py cost`: Claude $ per episode from `ep.usage` (prices in `pipeline.PRICES`; Gemini not included). 2026-11-01: ~$0.17/episode, ~$5 per 30 days (script ~9¢, fact-check ~7¢, select ~1.4¢).
 - Haiku tier exists (`claude_json(..., tier="haiku")`, used by translate_es). `select_saint` stays on Sonnet: tested 2026-10-30 on Nov 7–10, Haiku matched or was fine on 3 dates but picked Herodion of Patras for Nov 10 (mostly legend, main feast April 8; Sonnet chose Justus of Canterbury). It would save ~1.3¢/episode (~$0.40/mo), and one bad pick costs a fact-check reject plus a new script (~15¢). Not built: effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.

@@ -232,6 +232,59 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         return ep
 
 
+def backfill_story(ep):
+    """Website story + Spanish for an episode made before they existed, from today's sources. The fact-check
+    reruns on the whole script; only story fixes are applied (the video is made), the rest goes in ep.recheck."""
+    import common, research, script as scriptmod
+    start = len(common.USAGE)
+    s = ep["script"]
+    sources = research.gather_sources(ep["saint_pick"])
+    draft = {**s, **scriptmod.write_story(s, sources)}
+    fc = scriptmod.fact_check(draft, sources)
+    checked = fc.get("script") or draft
+    for k in ("story", "patronages", "places"):
+        s[k] = checked.get(k) or draft.get(k) or []
+    ep["sources"] = [{"title": x["title"], "url": x["url"]} for x in sources]
+    ep["recheck"] = {"date": today().isoformat(), "beats_need_fixing": bool(fc.get("script")),
+                     **{k: fc.get(k) for k in ("verdict", "issues", "confidence", "reviewer_note")}}
+    try:
+        ep["es"] = {**scriptmod.translate_es(s), **({"slug": ep["es"]["slug"]} if ep.get("es", {}).get("slug") else {})}
+    except Exception as e:
+        log("Spanish translation failed:", e)
+    if ep.get("status") == "published":
+        assign_slugs(ep)  # the new Spanish page's address
+    ep["usage"] = (ep.get("usage") or []) + common.USAGE[start:]
+    save_episode(ep)
+    return ep
+
+
+# $ per million tokens (input, output); cache writes bill 1.25x input, cache reads 0.1x. Thinking is in "out".
+PRICES = {"sonnet": (2.00, 10.00), "haiku": (0.10, 0.50), "opus": (4.00, 20.00)}
+
+
+def call_cost(row):
+    p_in, p_out = next((v for k, v in PRICES.items() if k in row.get("model", "")), PRICES["sonnet"])
+    return (row.get("in", 0) * p_in + row.get("cache_write", 0) * p_in * 1.25
+            + row.get("cache_read", 0) * p_in * 0.1 + row.get("out", 0) * p_out) / 1e6
+
+
+def cmd_cost(a):
+    """Claude cost per episode from ep.usage (Gemini art/voice not included), and what a month of them costs."""
+    eps = sorted((e for e in load_episodes().values() if e.get("usage")), key=lambda e: e["id"])
+    steps, totals = {}, []
+    for ep in eps:
+        total = sum(call_cost(r) for r in ep["usage"])
+        totals.append(total)
+        for r in ep["usage"]:
+            steps.setdefault(r["step"], []).append(call_cost(r))
+        print(f"{ep['id']}  ${total:.3f}  {ep['saint']['name']}  ({len(ep['usage'])} calls)")
+    if not totals:
+        return print("No episodes with usage yet")
+    avg = sum(totals) / len(totals)
+    print(f"\nAverage ${avg:.3f}/episode -> ${avg * 30:.2f} per 30 days of Claude")
+    print("By step (average per call): " + ", ".join(f"{k} ${sum(v) / len(v):.3f}" for k, v in steps.items()))
+
+
 def dates_needing_work():
     cfg = load_config()
     eps = load_episodes()
@@ -457,6 +510,9 @@ def main():
     lp.add_argument("episode", nargs="?", default="all")
     bp = sub.add_parser("books", help="look up books about the saint for the website (backfill / redo)")
     bp.add_argument("episode", nargs="?", default="all")
+    sub.add_parser("cost", help="Claude cost per episode (from ep.usage) and per month")
+    sp = sub.add_parser("backfill-story", help="website story + Spanish for episodes made before they existed, with a fresh fact-check")
+    sp.add_argument("episode", help="episode id, or 'all' for every episode without a story")
     cp = sub.add_parser("compilation", help="the month's Shorts as one video, uploaded private (default: the month ending today)")
     cp.add_argument("month", nargs="?", help="YYYY-MM")
     cp.add_argument("--force", action="store_true", help="redo even if uploaded / before compilation_from")
@@ -505,6 +561,20 @@ def main():
                 ep["books"] = books.find(ep["saint"])
                 save_episode(ep)
                 print(ep["id"], ep["saint"]["name"], [b["title"] for b in ep["books"]])
+    elif a.cmd == "cost":
+        cmd_cost(a)
+    elif a.cmd == "backfill-story":
+        eps = [load_episode(a.episode)] if a.episode != "all" else [
+            e for e in load_episodes().values() if e.get("saint_pick") and e.get("status") in ("approved", "published")
+            and not e["script"].get("story")]  # saint_pick: daily saints only, not the channel intro
+        for ep in sorted(eps, key=lambda e: e["id"]):
+            backfill_story(ep)
+            r = ep["recheck"]
+            print(f"{ep['id']} {ep['saint']['name']}: {len(ep['script']['story'])} paragraphs, sources: "
+                  f"{', '.join(x['title'].split(':')[0] for x in ep['sources'])}\n  recheck {r['verdict']} ({r['confidence']})"
+                  f"{' BEATS NEED FIXING' if r['beats_need_fixing'] else ''}: {r['reviewer_note']}")
+            for i in r.get("issues") or []:
+                print("   -", i)
     elif a.cmd == "compilation":
         import compilation
         compilation.make(a.month, force=a.force, upload=not a.no_upload)

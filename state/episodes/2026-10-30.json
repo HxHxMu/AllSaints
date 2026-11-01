@@ -2,7 +2,7 @@
  "id": "2026-10-30",
  "date": "2026-10-30",
  "status": "published",
- "updated": "2026-11-01T17:06:50+00:00",
+ "updated": "2026-11-01T20:24:44+00:00",
  "saint": {
   "qid": "Q16509164",
   "name": "Saint Marcellus of Tangier",
@@ -168,6 +168,22 @@
     "source": 0,
     "kind": "history"
    }
+  ],
+  "story": [
+   "Marcellus the Centurion, also called Marcellus of Tangier, is a martyr-soldier whose interrogations were recorded in an early account of his trial. His name comes from Latin and means \"dedicated to Mars,\" the Roman god of war. He served as an ordinary centurion, stationed at Tingis, the city we now call Tangier. The Roman Martyrology places him there, in Mauretania, in what is today Morocco.",
+   "The story begins on 21 July in the year 298. The account of his trial, called the passio, says the army was gathered to celebrate the feast of the emperors, when sacrifices were offered to the Roman gods. The Roman Martyrology says that while everyone else sacrificed, Marcellus threw down his military belt and his weapons before the standards. Another source adds that he laid down the insignia of his rank. He declared that he was a Christian. He said he could no longer keep the soldier's oath as it was meant to be kept, because he owed obedience to Jesus Christ alone. According to the passio, he renounced military service in order to serve in the army of Christ.",
+   "The matter did not end in the camp. On 28 July, Marcellus was questioned by the governor, Fortunatus. Fortunatus saw how serious the offense was and sent the case to his superior, Aurelius Agricolanus, at Tangier. One source adds that Fortunatus first meant to take the matter to the emperors, including Constantius, who was said to be friendly to Christians. In the end it was Agricolanus who heard it. Marcellus did not change his position. He was questioned a second time on 30 October, and he was sentenced to death. He died by beheading.",
+   "Scholars regard the heart of this account as trustworthy. The Catholic reference in our sources says the original core of the passio is recognized as authentic. It consists of two interrogation records, made before two different courts in two different places, three months apart. We can follow a real man through the months between his act and his death. We see that he held to his confession from the first day to the last.",
+   "Later stories grew around him. Tradition holds that Cassian, the court's recorder, was converted after the execution and was himself put to death for it. Around the eleventh century, other writers added more. They made Marcellus the husband of Saint Nona and the father of twelve sons, among them Claudius, Lupercus and Victorius, who are venerated in León as martyrs. The scholarship summarized in our Catholic reference treats these additions as later interpolations, not as part of the original record. The same study shows that Marcellus was a genuine African martyr. Spanish writers later made him a citizen of León, on the mistaken claim that he belonged to the legion said to have founded that city. By tradition, a house near the Cauriense Gate was pointed out as his, and the chapel of the Cristo de la Victoria now stands there.",
+   "The people of León loved him all the same, and that love is real history. His devotion there grew while his body still lay in Tangier. A church in his name stood outside the city walls, and a document records that King Ramiro I restored it between 842 and 850. A monastery grew up beside it, where the theologian Saint Martin lived. In the twelfth century a hospital of the same name was added. After Tangier was freed by the king of Portugal, León asked for the relics of its martyr. Jerez and Seville also disputed the claim. On 29 March 1493, King Ferdinand the Catholic himself brought the relics into León, and the city received them with a welcome described as better than any before. They were placed in the church of San Marcelo.",
+   "Today the relics rest in a silver urn on the high altar of that church. Beside them are the letters about their transfer, including letters of Isabella the Catholic to Pope Sixtus IV. In times of great public calamity they were carried in procession alongside those of Saint Froilan. Each year the cathedral chapter and the city council walk together to the church for a solemn Mass. Canons and councillors sit in alternating places, a sign of the equal right of patronage they long shared over the church. For centuries the mayor held one of the keys to the urn. Marcellus is patron of León. His feast is kept on 30 October, and in the diocese of León it is celebrated on 29 October."
+  ],
+  "patronages": [
+   "León"
+  ],
+  "places": [
+   "Tangier",
+   "León"
   ]
  },
  "factcheck": {
@@ -185,6 +201,18 @@
   {
    "title": "Wikipedia: Marcellus of Tangier",
    "url": "https://en.wikipedia.org/wiki/Marcellus_of_Tangier"
+  },
+  {
+   "title": "Santi e Beati: Marcellus of Tangier",
+   "url": "https://www.santiebeati.it/dettaglio/75700"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Marcellus of Tangier",
+   "url": "https://nominis.cef.fr/contenus/saint/2105/Saint-Marcel-le-Centurion.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Marcellus of Tangier",
+   "url": "https://www.heiligenlexikon.de/BiographienM/Marcellus_Soldat.html"
   }
  ],
  "art_credits": [
@@ -216,5 +244,80 @@
  },
  "continent": "Africa",
  "books": [],
- "slug": "marcellus-of-tangier"
+ "slug": "marcellus-of-tangier",
+ "recheck": {
+  "date": "2026-11-01",
+  "beats_need_fixing": true,
+  "verdict": "fixed",
+  "issues": [
+   "Cassian beat followed Wikipedia (angry, refused to record the trial). The Catholic reference (Heiligenlexikon) says legend holds he converted and was executed, which is also what the story text says. Beat rewritten to match, still marked as legend; scene and art hint adjusted.",
+   "Relics beat said he 'became' patron after the relics arrived. The Catholic reference (Santi e Beati) says devotion and patronage grew while his body was still in Tangier. Changed 'became' to 'is'.",
+   "The beats never say why he acted. The Roman Martyrology says he declared himself a Christian and could obey only Jesus Christ. Turn line changed to 'to serve Christ alone', which also keeps the loyalty line.",
+   "Hook scene and caption_hook invented a banquet or table. Sources say the troops were gathered before the standards on the emperor's feast day. Hook visual, art hint and caption_hook corrected.",
+   "Relics scene showed a 'martyr's cross'. Changed to a martyr's palm.",
+   "Story: 'one of the few martyr-soldiers whose own words survive' is an unsupported comparison. Reworded to what the source says: the passio preserves two interrogation records.",
+   "Story: 'a commander of roughly a hundred men' and 'on the northwest coast of Africa' are not in the sources. Removed.",
+   "Story: 'standards of the legion' goes beyond the Martyrology's 'standards'. Trimmed.",
+   "Story: 'That is rare for a saint of this age' is unsupported. Removed.",
+   "Story: the interval between the two interrogations (21 July to 30 October) is about three months, not 'weeks'. Corrected.",
+   "Claims list: Cassian claim updated to the Heiligenlexikon version (source 3). Added a claim for Marcellus's declaration of Christian faith (source 1)."
+  ],
+  "confidence": 82,
+  "reviewer_note": "Sources differ on the occasion (Maximian's birthday per Wikipedia and Nominis, the emperors' feast per Santi e Beati) and on Cassian (angry scribe per Wikipedia, convert per Heiligenlexikon). I followed the Catholic reference on Cassian and kept 'birthday' as the beat wording; please confirm. Revised beats come to about 141 words."
+ },
+ "es": {
+  "name": "San Marcelo de Tánger",
+  "display_name": "San Marcelo",
+  "region": "Tingis (Tánger), África del Norte romana",
+  "dates": "c. 250 – 298",
+  "hook": "Depuso su rango ante la mesa del emperador, y conservó su fe.",
+  "summary": "Según la tradición, San Marcelo, centurión romano en Tingis, en el norte de África, se despojó de su cinturón, sus armas y su bastón de vid antes que sacrificar a los dioses, y fue martirizado a espada.",
+  "story": [
+   "Marcelo el Centurión, también llamado Marcelo de Tánger, es un mártir soldado cuyos interrogatorios quedaron registrados en un antiguo relato de su juicio. Su nombre procede del latín y significa «consagrado a Marte», el dios romano de la guerra. Sirvió como centurión ordinario, destinado en Tingis, la ciudad que hoy llamamos Tánger. El Martirologio Romano lo sitúa allí, en Mauritania, en lo que hoy es Marruecos.",
+   "La historia comienza el 21 de julio del año 298. La passio, relato de su juicio, dice que el ejército se había reunido para celebrar la fiesta de los emperadores, cuando se ofrecían sacrificios a los dioses romanos. El Martirologio Romano afirma que, mientras todos los demás sacrificaban, Marcelo arrojó su cinturón militar y sus armas ante los estandartes. Otra fuente añade que depuso las insignias de su rango. Declaró que era cristiano. Dijo que ya no podía guardar el juramento de soldado tal como debía guardarse, porque debía obediencia a Jesucristo solamente. Según la passio, renunció al servicio militar para servir en el ejército de Cristo.",
+   "El asunto no terminó en el campamento. El 28 de julio, Marcelo fue interrogado por el gobernador, Fortunato. Fortunato comprendió la gravedad de la falta y envió la causa a su superior, Aurelio Agricolano, en Tánger. Una fuente añade que Fortunato pensó primero llevar el asunto ante los emperadores, entre ellos Constancio, que se decía favorable a los cristianos. Al final fue Agricolano quien lo juzgó. Marcelo no cambió de postura. Fue interrogado por segunda vez el 30 de octubre y fue condenado a muerte. Murió decapitado.",
+   "Los estudiosos consideran fidedigno el núcleo de este relato. La referencia católica que citamos afirma que el núcleo original de la passio es reconocido como auténtico. Consiste en dos actas de interrogatorio, levantadas ante dos tribunales distintos, en dos lugares diferentes, con tres meses de separación. Podemos seguir a un hombre real a lo largo de los meses que transcurren entre su acto y su muerte. Vemos que mantuvo su confesión desde el primer día hasta el último.",
+   "Con el tiempo se formaron relatos posteriores en torno a él. Según la tradición, Casiano, el escribano del tribunal, se convirtió después de la ejecución y fue también condenado a muerte por ello. Hacia el siglo XI, otros autores añadieron más. Hicieron de Marcelo esposo de Santa Nona y padre de doce hijos, entre ellos Claudio, Lupercio y Victorio, venerados en León como mártires. La investigación resumida en nuestra referencia católica considera estas adiciones como interpolaciones posteriores, no como parte del registro original. El mismo estudio muestra que Marcelo fue un auténtico mártir africano. Más tarde, los escritores españoles lo hicieron ciudadano de León, por la afirmación errónea de que pertenecía a la legión que se decía fundadora de esa ciudad. Según la tradición, se señaló como suya una casa cerca de la Puerta Cauriense, donde hoy se alza la capilla del Cristo de la Victoria.",
+   "Los leoneses lo amaron de todos modos, y ese amor es historia real. Su devoción en León creció mientras su cuerpo aún yacía en Tánger. Una iglesia con su nombre se levantó fuera de las murallas de la ciudad, y un documento registra que el rey Ramiro I la restauró entre los años 842 y 850. Junto a ella surgió un monasterio, donde vivió el teólogo San Martín. En el siglo XII se añadió un hospital con el mismo nombre. Después de que el rey de Portugal liberara Tánger, León pidió las reliquias de su mártir. Jerez y Sevilla también disputaron el reclamo. El 29 de marzo de 1493, el propio rey Fernando el Católico trajo las reliquias a León, y la ciudad las recibió con un recibimiento que se describe como mejor que cualquier otro anterior. Fueron depositadas en la iglesia de San Marcelo.",
+   "Hoy las reliquias descansan en una urna de plata sobre el altar mayor de esa iglesia. Junto a ellas se conservan las cartas sobre su traslado, incluidas las de Isabel la Católica al papa Sixto IV. En tiempos de grandes calamidades públicas, se llevaban en procesión junto con las de San Froilán. Cada año, el cabildo catedralicio y el ayuntamiento acuden juntos a la iglesia para una misa solemne. Canónigos y concejales ocupan lugares alternos, signo del derecho igual de patronato que compartieron durante mucho tiempo sobre la iglesia. Durante siglos, el alcalde poseyó una de las llaves de la urna. San Marcelo es patrono de León. Su fiesta se celebra el 30 de octubre, y en la diócesis de León se celebra el 29 de octubre."
+  ],
+  "prayer": "San Marcelo, ruega por nosotros.",
+  "patronages": [
+   "León"
+  ],
+  "places": [
+   "Tánger",
+   "León"
+  ],
+  "slug": "marcelo-de-tanger"
+ },
+ "usage": [
+  {
+   "step": "story",
+   "model": "claude-sonnet-5-5",
+   "in": 603,
+   "cache_write": 8790,
+   "cache_read": 0,
+   "out": 4243,
+   "thinking": 2774
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4522,
+   "cache_write": 0,
+   "cache_read": 8790,
+   "out": 14046,
+   "thinking": 10685
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1889,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3618,
+   "thinking": 1479
+  }
+ ]
 }

@@ -20,6 +20,7 @@ const line = (s: (typeof rows)[number]) => s.hook.length > 90 ? s.hook.slice(0, 
 ---
 <Base title={T.litany} description={T.litanyDesc} current="calendar" lang={lang} alt={lang === "en" ? paths.es.calendar : paths.en.calendar}>
   <div class="wrap litany">
+    <p class="label">{T.litanyKicker}</p>
     <h1 class="title">{T.litany}</h1>
     {(hasPatrons || hasPlaces) && (
       <p class="label browse">
