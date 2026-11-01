@@ -54,6 +54,9 @@ poll (every 10 min): telegram.process_updates → publish_due
 - State `state/compilations/YYYY-MM.json` (status rendering → review → published | failed, `attempts` ≤ 3; the 1st–3rd runs retry a failed month). Skipped with fewer than 3 published episodes. First month: `config.compilation_from` ("2026-11").
 - By hand: `pipeline.py compilation 2026-11 [--no-upload] [--force]` (`--no-upload` renders to `work/compilation-YYYY-MM/` only).
 
+## Sung prayers (`sung_video.py`)
+Original music on prayers written by saints (`docs/sung-prayers/`: research catalogue, one lyric master `.md` + video spec `.json` per release). `python engine/sung_video.py docs/sung-prayers/<spec>.json [--frames]` makes a 1920×1080 lyric video from `work/sung/NN/` (audio + icon): icon left, Latin + English per stanza cross-faded on soot, title cards, credits. `--frames` = layout check only. Stanza times come from a faster-whisper pass over the song. Upload is by hand (private first); not part of the daily pipeline.
+
 ## Captions
 Instagram: 5 hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint tags) and one rotating CTA (`caption.ctas` + the script's `share_cta`). CTAs live in captions/descriptions only, never in the narration. Links aren't clickable in IG captions; the Ko-fi link is in the bio.
 

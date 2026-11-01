@@ -1,0 +1,152 @@
+"""Lyric video for a sung prayer (docs/sung-prayers/): the saint's icon on the left, the sung words on soot to the right.
+
+    python engine/sung_video.py docs/sung-prayers/01-veni-redemptor-gentium.json [--frames]
+
+The spec (JSON) names the audio and icon in its work dir, the crop of the icon, and each stanza's Latin, English and
+start time; a stanza stays up until the next one starts (or its "until"). "cards" are spans that show the title
+(intro, interludes); credits close the video. Each text state is a transparent PNG cross-faded over one base frame,
+so the icon never flickers. --frames writes the PNGs and a contact sheet only (fast layout check). No AI involved.
+"""
+import json, subprocess, sys
+from pathlib import Path
+from PIL import Image, ImageDraw
+from common import BRAND, ROOT
+from playlist_cover import _font, _tracked, _width
+from compilation import _monogram, duration
+
+W, H = 1920, 1080
+PANEL = 860                 # icon width on the left
+TX, TW = 960, 860           # text column
+FADE = 0.8
+C = BRAND["colors"]
+ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
+
+
+def base(spec, d):
+    """Icon panel melting into soot, monogram and site on the right. Everything else is overlaid."""
+    art = Image.open(d / spec["art"]).convert("RGB").crop(tuple(spec["art_crop"]))
+    art = art.resize((PANEL, H), Image.LANCZOS)
+    img = Image.new("RGB", (W, H), C["soot"])
+    img.paste(art, (0, 0))
+    fade = Image.new("L", (W, H), 0)
+    fd = ImageDraw.Draw(fade)
+    start = PANEL - 260
+    for x in range(start, PANEL + 1):  # the painting's right edge sinks into the soot
+        fd.line([(x, 0), (x, H)], fill=int(255 * ((x - start) / 260) ** 1.4))
+    img.paste(Image.new("RGB", (W, H), C["soot"]), (0, 0), fade)
+    d2 = ImageDraw.Draw(img)
+    _monogram(d2, TX, 64, 34, C["gilt"])
+    d2.text((TX, H - 84), "allholysaints.com", font=_font("EBGaramond-Medium.ttf", 26), fill=C["ash"])
+    return img
+
+
+def layer():
+    return Image.new("RGBA", (W, H), (0, 0, 0, 0))
+
+
+def stanza(spec, s):
+    img = layer()
+    d = ImageDraw.Draw(img)
+    lat, en = _font("EBGaramond-Medium.ttf", 52), _font("Cormorant-MediumItalic.ttf", 38)
+    block = 4 * 68 + 44 + 4 * 48
+    y = (H - block) // 2 + 10
+    _tracked(d, (TX, y - 92), f"{spec['title'].upper()}  ·  {ROMAN[s['n']]}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.14)
+    d.rectangle([TX, y - 46, TX + 72, y - 43], fill=C["martyr"])
+    for line in s["latin"]:
+        d.text((TX, y), line, font=lat, fill=C["vellum"])
+        y += 68
+    y += 44
+    for line in s["english"]:
+        d.text((TX, y), line, font=en, fill=C["giltLight"])
+        y += 48
+    return img
+
+
+def card(spec):
+    img = layer()
+    d = ImageDraw.Draw(img)
+    y = 360
+    _tracked(d, (TX, y), spec["byline"].upper(), _font("Cinzel-Regular.ttf", 26), C["gilt"], 0.14)
+    y += 70
+    big = _font("Cinzel-SemiBold.ttf", 76)
+    words, lines = spec["title"].upper().split(), [""]
+    for w in words:  # wrap the title to the text column
+        test = f"{lines[-1]} {w}".strip()
+        if _width(d, test, big, 0.04) <= TW or not lines[-1]:
+            lines[-1] = test
+        else:
+            lines.append(w)
+    for l in lines:
+        _tracked(d, (TX - 4, y), l, big, C["vellum"], 0.04)
+        y += 92
+    y += 18
+    d.rectangle([TX, y, TX + 72, y + 3], fill=C["martyr"])
+    d.text((TX, y + 34), spec["title_en"], font=_font("Cormorant-MediumItalic.ttf", 42), fill=C["giltLight"])
+    d.text((TX, y + 96), spec["dates"], font=_font("EBGaramond-Medium.ttf", 30), fill=C["ash"])
+    return img
+
+
+def credits(spec):
+    img = layer()
+    d = ImageDraw.Draw(img)
+    y = 380
+    small, body = _font("Cinzel-Regular.ttf", 22), _font("EBGaramond-Medium.ttf", 34)
+    for label, text in spec["credits"]:
+        _tracked(d, (TX, y), label.upper(), small, C["ash"], 0.16)
+        d.text((TX, y + 34), text, font=body, fill=C["vellum"])
+        y += 104
+    d.rectangle([TX, y + 10, TX + 72, y + 13], fill=C["martyr"])
+    d.text((TX, y + 44), spec["closing"], font=_font("Cormorant-MediumItalic.ttf", 46), fill=C["giltLight"])
+    return img
+
+
+def timeline(spec, total):
+    """[(name, layer, start, end)] with every text state, in order."""
+    out = [(f"card{i}", card(spec), a, b) for i, (a, b) in enumerate(spec["cards"])]
+    ss = spec["stanzas"]
+    for i, s in enumerate(ss):
+        end = s.get("until") or (ss[i + 1]["at"] - 0.3 if i + 1 < len(ss) else spec["credits_at"] - 1)
+        out.append((f"st{i:02d}", stanza(spec, s), s["at"] - 1.2, end))
+    out.append(("credits", credits(spec), spec["credits_at"], total))
+    return sorted(out, key=lambda x: x[2])
+
+
+def render(spec_path, frames_only=False):
+    spec = json.loads(Path(spec_path).read_text())
+    d = ROOT / spec["dir"]
+    audio = d / spec["audio"]
+    total = duration(audio)
+    out = d / "frames"
+    out.mkdir(exist_ok=True)
+    bg = base(spec, d)
+    bg.save(out / "base.png")
+    tl = timeline(spec, total)
+    for name, img, a, b in tl:
+        img.save(out / f"{name}.png")
+    if frames_only:  # contact sheet: every state composited at half size
+        sheet = Image.new("RGB", (W, H // 2 * ((len(tl) + 1) // 2)), "black")
+        for i, (name, img, a, b) in enumerate(tl):
+            f = bg.copy()
+            f.paste(img, (0, 0), img)
+            sheet.paste(f.resize((W // 2, H // 2)), ((i % 2) * W // 2, (i // 2) * H // 2))
+        sheet.save(out / "sheet.jpg", quality=85)
+        return out / "sheet.jpg"
+    args = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "24", "-i", str(out / "base.png")]
+    chain, last = [], "[0:v]"
+    for i, (name, img, a, b) in enumerate(tl, start=1):
+        args += ["-loop", "1", "-framerate", "24", "-i", str(out / f"{name}.png")]
+        chain.append(f"[{i}:v]format=rgba,fade=t=in:st={max(0, a):.2f}:d={FADE}:alpha=1,"
+                     f"fade=t=out:st={max(0, b - FADE):.2f}:d={FADE}:alpha=1[t{i}]")
+        chain.append(f"{last}[t{i}]overlay=0:0[v{i}]")
+        last = f"[v{i}]"
+    chain.append(f"{last}fade=t=in:d=1.5,fade=t=out:st={total - 2.5:.2f}:d=2.5,format=yuv420p[v]")
+    video = d / (Path(spec_path).stem + ".mp4")
+    args += ["-i", str(audio), "-filter_complex", ";".join(chain), "-map", "[v]", "-map", f"{len(tl) + 1}:a",
+             "-t", f"{total:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-tune", "stillimage",
+             "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", str(video)]
+    subprocess.run(args, check=True)
+    return video
+
+
+if __name__ == "__main__":
+    print(render(sys.argv[1], frames_only="--frames" in sys.argv))

@@ -238,3 +238,12 @@ AI vocals: disclose plainly in the description (see credit). Keep the final prod
 - [ ] On-screen text matches this sheet exactly
 - [ ] Credit reflects how the vocal was actually made
 - [ ] Keep: this file, the session/project files, the Suno generation record
+
+## Video art (Nano Banana, run by Luis)
+
+Portrait **3:4**, highest resolution offered. Save as `work/sung/01/art.png`. The video puts the icon on the left of a 16:9 frame and the sung words on soot to the right, so a calm, upright figure works best.
+
+```
+St. Ambrose of Milan (c. 339–397), bishop and Doctor of the Church, writing his Advent hymn at night. A standing, frontal bishop of the late 4th century: thin ascetic face, short dark beard touched with grey, large calm eyes, the early Christian pallium over a dark chasuble-like paenula and white tunic (no mitre: mitres are later), holding an open scroll in his left hand and raising his right hand in blessing. Behind him, simplified late-Roman Milan: a basilica with a round apse and a small domed baptistery. Above, a single star in the gold. Near his feet a small beehive with a few bees (the tradition that bees settled on his mouth as an infant, foretelling his eloquence). Painted as a traditional Byzantine icon: egg tempera on a wooden panel, burnished gold-leaf background, flat stylized figures with bold dark outlines, elongated proportions, inverse perspective, symbolic simplified architecture and landscape, solemn non-naturalistic faces with large calm eyes, deep reds, ultramarine and ochre, subtle craquelure and aged patina. Reverent and devotional. Vertical composition. The painting fills the entire image edge to edge: no panel edge, no border, no frame. No text, no letters, no inscriptions.
+```
+Description credit line: "Icon of St. Ambrose in the Byzantine style, AI-generated (Google Gemini)."
