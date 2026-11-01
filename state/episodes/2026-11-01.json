@@ -1,8 +1,8 @@
 {
  "id": "2026-11-01",
  "date": "2026-11-01",
- "status": "approved",
- "updated": "2026-10-31T04:19:19+00:00",
+ "status": "published",
+ "updated": "2026-11-01T12:33:40+00:00",
  "saint": {
   "qid": "Q714835",
   "name": "Saint Marcellus of Paris",
@@ -196,5 +196,27 @@
  },
  "review_sends": 1,
  "review_message_id": 19,
- "books": []
+ "books": [],
+ "published": {
+  "media_id": "18088916630298294",
+  "permalink": "https://www.instagram.com/reel/DfMvOi5E1if/"
+ },
+ "published_at": "2026-11-01T07:30-05:00",
+ "facebook": {
+  "id": "1434298668210609",
+  "url": "https://www.facebook.com/reel/1434298668210609/",
+  "published_at": "2026-11-01T07:33-05:00"
+ },
+ "youtube": {
+  "id": "eegoXwayJWM",
+  "url": "https://youtube.com/shorts/eegoXwayJWM",
+  "privacy": "public",
+  "published_at": "2026-11-01T07:33-05:00",
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
