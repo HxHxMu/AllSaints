@@ -215,7 +215,7 @@ def set_privacy(video_id, privacy):
     """videos.update replaces the whole status part, so the other fields are sent again."""
     token = _access_token()
     _check_channel(token)
-    status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False, "embeddable": True}
+    status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False, "embeddable": True, "publicStatsViewable": True}
     if BRAND.get("youtube", {}).get("synthetic_media"):
         status["containsSyntheticMedia"] = True
     r = session.put(f"{API}/videos", params={"part": "status"}, headers={"Authorization": f"Bearer {token}"},
