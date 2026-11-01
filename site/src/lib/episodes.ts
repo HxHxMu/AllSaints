@@ -17,7 +17,7 @@ const visible = new Set(showAll ? ["published", "approved", "review", "publishin
 
 export type Lang = "en" | "es";
 export type Text = {
-  slug: string; name: string; display: string; dates: string; region: string;
+  slug: string; fixed: boolean; name: string; display: string; dates: string; region: string;
   hook: string; summary: string; story: string[]; prayer: string; patronages: string[]; places: string[];
 };
 export type Saint = Text & {
@@ -57,14 +57,15 @@ function toSaint(ep: any): Saint {
   const close = beats.find((b) => b.role === "close")?.text || `${saint.name}, pray for us.`;
   const es = ep.es?.story?.length ? ep.es : null;
   return {
-    id: ep.id, date: ep.date, slug: slugify(saint.name), name: saint.name,
+    // the address the pipeline saved at publish (ep.slug); unpublished previews work one out
+    id: ep.id, date: ep.date, slug: ep.slug || slugify(saint.name), name: saint.name, fixed: !!ep.slug,
     display: saint.display_name || saint.name, dates: saint.dates || "", region: saint.region || "",
     martyr: !!saint.martyr, hook: s.caption_hook || beats[0]?.text || "", summary: s.summary || "",
     // the long-form story (script.story) replaces the narration beats; older episodes don't have it
     story: s.story?.length ? s.story : beats.filter((b) => !["hook", "close"].includes(b.role)).map((b) => b.text),
     prayer: close, patronages: s.patronages || [], places: s.places || [],
     es: es && {
-      slug: slugify(es.name), name: es.name, display: es.display_name || es.name, dates: es.dates || "",
+      slug: es.slug || slugify(es.name), fixed: !!es.slug, name: es.name, display: es.display_name || es.name, dates: es.dates || "",
       region: es.region || "", hook: es.hook || "", summary: es.summary || "", story: es.story,
       prayer: es.prayer || "", patronages: es.patronages || [], places: es.places || [],
     },
@@ -80,11 +81,17 @@ const all: Saint[] = Object.values(files)
   .map(toSaint)
   .sort((a, b) => a.date.localeCompare(b.date));
 
-// two different saints with the same name get the date appended
+// Saved addresses never change. A preview whose worked-out address is already taken gets its date
+// (the pipeline picks its real one at publish: common.assign_slugs).
 for (const pick of [(s: Saint) => s as Text, (s: Saint) => s.es] as ((s: Saint) => Text | null)[]) {
-  const seen = new Map<string, number>();
-  for (const s of all) { const t = pick(s); if (t) seen.set(t.slug, (seen.get(t.slug) || 0) + 1); }
-  for (const s of all) { const t = pick(s); if (t && (seen.get(t.slug) || 0) > 1) t.slug = `${t.slug}-${s.date.slice(0, 4)}`; }
+  const seen = new Set<string>();
+  for (const s of all) { const t = pick(s); if (t?.fixed) seen.add(t.slug); }
+  for (const s of all) {
+    const t = pick(s);
+    if (!t || t.fixed) continue;
+    if (seen.has(t.slug)) t.slug = `${t.slug}-${s.date}`;
+    seen.add(t.slug);
+  }
 }
 
 export const saints = all;

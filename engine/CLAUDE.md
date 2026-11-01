@@ -28,7 +28,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 ## State (`state/`, committed by the bot)
 - `config.json` (post_time — change via Telegram `/time`, timezone, youtube_channel, youtube_privacy, support_url, art_source…), `episodes/<id>.json`, `telegram.json`, `ig_token.enc`.
 - Status flow: `generating → review → approved → publishing → published`; side states `redo_requested`, `failed` (≤3 retries, `attempts`).
-- Episode extras: `youtube` {id, url, privacy | attempts, error}; `usage` (Claude tokens per call); `narrator` (`gemini:Riko` or `elevenlabs`); `rejected` (saints the fact-check turned down).
+- Episode extras: `slug` / `es.slug` (the web page address, fixed at publish by `common.assign_slugs`, never changed: a name another episode owns gets `-YYYY`, then `-YYYY-MM-DD`; the site and YouTube links read it); `youtube` {id, url, privacy | attempts, error}; `usage` (Claude tokens per call); `narrator` (`gemini:Riko` or `elevenlabs`); `rejected` (saints the fact-check turned down).
 - Fact-check rejects: max 3 saints per date (`MAX_REJECTS`), then the episode fails without auto-retry (`GiveUp`); Telegram `/generate` resets `attempts`. ElevenLabs-narrated episodes get a ⚠️ in the review: free-tier audio isn't licensed for commercial use, redo them.
 
 ## Secrets (GitHub → Environments → **Production**; locally `.env`)

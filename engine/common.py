@@ -103,6 +103,36 @@ def save_episode(ep):
     (EP_DIR / f"{ep['id']}.json").write_text(json.dumps(ep, indent=1, ensure_ascii=False) + "\n")
 
 
+def site_slug(name):
+    """Same rule as site/src/lib/episodes.ts slugify: the page address for a saint's name."""
+    import unicodedata
+    name = re.sub(r"^(Saints?|Sts?\.|San|Santos?|Santas?)\s+", "", name, flags=re.I)
+    name = unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
+
+
+def assign_slugs(ep):
+    """Fix the saint's web address (ep.slug, ep.es.slug) the first time it's needed; never changes after.
+    A name another episode already owns gets the feast year, then the full date, so older pages keep theirs."""
+    def own(e, lang):
+        t = e.get("es") if lang == "es" else e
+        if not t or (lang == "es" and not t.get("name")):
+            return None
+        if t.get("slug"):
+            return t["slug"]
+        # published before addresses were stored: the site used the plain name
+        return site_slug(t["name"] if lang == "es" else e["script"]["saint"]["name"]) if e.get("status") == "published" else None
+    others = [e for i, e in load_episodes().items() if i != ep["id"] and e.get("script")]
+    for lang in ("en", "es"):
+        t = ep.get("es") if lang == "es" else ep
+        if not t or t.get("slug") or (lang == "es" and not t.get("name")):
+            continue
+        taken = {own(e, lang) for e in others} - {None}
+        base = site_slug(t["name"] if lang == "es" else ep["script"]["saint"]["name"])
+        t["slug"] = next(s for s in (base, f"{base}-{ep['id'][:4]}", f"{base}-{ep['id']}") if s not in taken)
+    return ep
+
+
 def load_json(name, default):
     p = STATE / name
     return json.loads(p.read_text()) if p.exists() else default

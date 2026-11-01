@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Poster from "./Poster.astro";
 import EmailBand from "./EmailBand.astro";
-import { neighbors, manuscriptDate, minutes, monthName, shareCard, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
+import { saints, neighbors, manuscriptDate, minutes, monthName, shareCard, SUPPORT_URL, disclosure, credit, type Saint, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 import { booksFor, bookUrl } from "../lib/books";
 import { topicSlug } from "../lib/topics";
@@ -14,7 +14,8 @@ const { prev, next } = neighbors(saint, lang);
 const day = (iso: string) => lang === "es" ? `${Number(iso.slice(8, 10))} de ${monthName(iso, lang)}` : `${monthName(iso)} ${Number(iso.slice(8, 10))}`;
 const feast = day(saint.date);
 const books = booksFor(saint);
-const alt = lang === "en" ? (saint.es ? paths.es.saint(saint.es.slug) : null) : paths.en.saint(saint.slug);
+// on a Spanish page saint.slug is the Spanish one (inLang), so look up the English address
+const alt = lang === "en" ? (saint.es ? paths.es.saint(saint.es.slug) : null) : paths.en.saint(saints.find((s) => s.id === saint.id)!.slug);
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const jsonld = {
   "@context": "https://schema.org",

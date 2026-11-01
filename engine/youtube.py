@@ -7,7 +7,7 @@ Uploads from unverified API projects are no longer forced private (Google, 2026-
 import http.server, json, re, secrets, shutil, subprocess, time, urllib.parse, webbrowser
 from pathlib import Path
 import datetime as dt
-from common import BRAND, ROOT, claude_json, env, http as session, load_config, log
+from common import BRAND, ROOT, assign_slugs, claude_json, env, http as session, load_config, log
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
@@ -81,18 +81,11 @@ SITE = "https://allholysaints.com"
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
 
-def site_slug(name):
-    """Same rule as site/src/lib/episodes.ts slugify: the page address for a saint's name."""
-    import unicodedata
-    name = re.sub(r"^(Saints?|Sts?\.|San|Santos?|Santas?)\s+", "", name, flags=re.I)
-    name = unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
-
-
 def page_url(ep, lang="en"):
+    assign_slugs(ep)  # the saved address (common.assign_slugs); the caller saves the episode
     if lang == "es":
-        return f"{SITE}/es/santos/{site_slug(ep['es']['name'])}/"
-    return f"{SITE}/saints/{site_slug(ep['script']['saint']['name'])}/"
+        return f"{SITE}/es/santos/{ep['es']['slug']}/"
+    return f"{SITE}/saints/{ep['slug']}/"
 
 
 def _short_title(name, text):

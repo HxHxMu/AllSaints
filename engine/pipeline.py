@@ -10,7 +10,7 @@
 """
 import argparse, datetime as dt, json, re, shutil, sys, traceback, unicodedata
 from pathlib import Path
-from common import (BRAND, STATE, WORK, log, load_config, load_episodes, load_episode, save_episode, today, tz, month_day_label)
+from common import (BRAND, STATE, WORK, assign_slugs, log, load_config, load_episodes, load_episode, save_episode, today, tz, month_day_label)
 
 CAP = BRAND["caption"]
 
@@ -288,6 +288,7 @@ def publish_episode(ep):
     import instagram, storage, telegram
     now = dt.datetime.now(tz())
     log("Publishing", ep["id"])
+    assign_slugs(ep)  # the web page's address is fixed from here on
     ep["status"] = "publishing"
     save_episode(ep)
     try:

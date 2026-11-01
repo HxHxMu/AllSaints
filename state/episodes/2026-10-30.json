@@ -2,7 +2,7 @@
  "id": "2026-10-30",
  "date": "2026-10-30",
  "status": "published",
- "updated": "2026-10-31T04:19:18+00:00",
+ "updated": "2026-11-01T17:06:50+00:00",
  "saint": {
   "qid": "Q16509164",
   "name": "Saint Marcellus of Tangier",
@@ -215,5 +215,6 @@
   "playlists_done": true
  },
  "continent": "Africa",
- "books": []
+ "books": [],
+ "slug": "marcellus-of-tangier"
 }
