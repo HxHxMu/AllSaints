@@ -1,0 +1,330 @@
+{
+ "id": "2026-11-09",
+ "date": "2026-11-09",
+ "status": "review",
+ "updated": "2026-11-02T10:33:46+00:00",
+ "saint": {
+  "qid": "Q260046",
+  "name": "Saint Elizabeth of the Trinity",
+  "display_name": "St. Elizabeth of the Trinity",
+  "dates": "1880 – 1906",
+  "region": "Dijon, France",
+  "feast": "November 9",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q260046",
+  "name": "Elizabeth of the Trinity",
+  "links": 24,
+  "enwiki": "Elizabeth_of_the_Trinity",
+  "images": [
+   "Portrait%20am%C3%A9ricain%20d%27Elisabeth%20de%20la%20Trinit%C3%A9.jpg",
+   "Visage%20d%27Elisabeth%20de%20la%20Trinit%C3%A9.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Élisabeth de La Trinité",
+  "birth": 1880,
+  "death": 1906,
+  "lon": 5.041944444,
+  "lat": 47.323055555,
+  "selection_reason": "Elizabeth of the Trinity, a gifted young pianist who became a Carmelite, wrote her 'Praise of Glory' spirituality and died at 26 on 9 November 1906, is the best-documented and most moving story here (her letters survive, and she was canonized in 2016). She is also lesser-known than a household name, and she is neither ancient nor Italian, which breaks up the recent run of early saints.",
+  "catholic_veneration": "Canonized by Pope Francis in 2016. She is commemorated in the Discalced Carmelite calendar on November 8, because November 9 is the Lateran Basilica feast, and her death date of November 9 is noted in the Roman Martyrology."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Elizabeth of the Trinity",
+   "display_name": "St. Elizabeth of the Trinity",
+   "dates": "1880 – 1906",
+   "region": "Dijon, France",
+   "feast": "November 9",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A gifted pianist, she chose a convent two hundred meters from home.",
+    "visual": "art",
+    "scene": "A young woman in a late nineteenth-century French dress sits at an upright piano in a modest bourgeois parlor in Dijon, her hands on the keys and her face lifted toward a window. Warm lamplight falls on the wooden floor and the curtains."
+   },
+   {
+    "role": "who",
+    "text": "Saint Elizabeth of the Trinity, born Élisabeth Catez in eighteen eighty, lived in Dijon.",
+    "visual": "map",
+    "lat": 47.322,
+    "lon": 5.041,
+    "place": "Dijon · France"
+   },
+   {
+    "role": "story",
+    "text": "As a child, she had a fierce temper. After her First Communion, she gained more self-control.",
+    "visual": "art",
+    "scene": "A girl in a white First Communion dress and veil kneels with folded hands before the altar of a French Gothic parish church in 1891. Candles burn on the altar and soft light falls through the windows."
+   },
+   {
+    "role": "story",
+    "text": "She visited the sick and taught religion to children who worked in factories. Men asked to marry her. She said no.",
+    "visual": "art",
+    "scene": "A young woman in a plain dark dress sits in a humble room beside a group of poor children in worn clothes and caps, teaching them from a small book. Through the window are the rooftops and chimneys of a nineteenth-century French town."
+   },
+   {
+    "role": "story",
+    "text": "In nineteen oh one, she entered Dijon's Carmel. She said, \"I find Him everywhere while doing the wash as well as while praying.\"",
+    "visual": "art",
+    "scene": "A young Discalced Carmelite nun in a brown habit, white mantle and black veil washes linen in a stone basin in a quiet cloister garden. Her face is peaceful, and the cloister arches and a plain wooden cross are visible behind her."
+   },
+   {
+    "role": "story",
+    "text": "A grave illness came. She died at twenty-six, accepting her suffering as a gift from God.",
+    "visual": "art",
+    "scene": "A young Carmelite nun lies in a simple bed in a monastery infirmary, her hands folded and her face serene. Two sisters in brown habits watch beside her, and a crucifix hangs on the whitewashed wall."
+   },
+   {
+    "role": "turn",
+    "text": "At the end, she called herself Praise of Glory. Her last words were, \"I am going to Light, to Love, to Life!\" Holiness can be as ordinary as the wash, when God is there.",
+    "visual": "art",
+    "scene": "A Carmelite nun kneels alone in a bare monastery cell, her hands joined and her eyes raised. Golden light streams through a small arched window onto her veil and the plain wooden floor."
+   },
+   {
+    "role": "close",
+    "text": "Saint Elizabeth of the Trinity, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Élisabeth": "Ay-lee-zah-BET",
+   "Catez": "Kah-TEZ",
+   "Dijon": "Dee-ZHOHN"
+  },
+  "caption_hook": "Marriage proposals, a prize at the piano, and a Carmel just down the street.",
+  "summary": "Élisabeth Catez, a gifted young pianist from Dijon, entered the Carmel near her home, found God in the wash as in prayer, and died at twenty-six, canonized in 2016.",
+  "youtube_title": "St. Elizabeth of the Trinity: The Pianist Who Chose Carmel",
+  "hashtags": [
+   "#saintelizabethofthetrinity",
+   "#dijon",
+   "#carmelite",
+   "#discalcedcarmelites",
+   "#elizabethofthetrinity",
+   "#praiseofglory",
+   "#catholicsaints",
+   "#frenchsaints",
+   "#catholicmystics",
+   "#saintsoftheday",
+   "#allsaints",
+   "#catholic"
+  ],
+  "share_cta": "Know someone named Elizabeth? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Elizabeth Catez was a gifted pianist.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She won first prize in piano.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Carmelite monastery she entered was about 200 meters from her home.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Men asked for her hand in marriage and she declined, because her dream was to enter the Carmelite monastery.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She was born Élisabeth Catez in 1880 and lived in Dijon.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She had a terrible temper as a child; after her First Communion in 1891 she gained more self-control.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She visited the sick, sang in the church choir and taught religion to children who worked in factories.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She entered the Dijon Carmel on 2 August 1901.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She said: 'I find Him everywhere while doing the wash as well as while praying.'",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "A grave illness soon afflicted her and took her at age 26; it had no cure.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She gratefully accepted her suffering as a gift from God.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "At the end of her life she began to call herself Laudem Gloriae, 'praise of glory'.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Her last words were: 'I am going to Light, to Love, to Life!'",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She was canonized by Pope Francis on 16 October 2016.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "sick people",
+   "illness",
+   "loss of parents"
+  ],
+  "places": [
+   "Dijon",
+   "Flavignerot"
+  ],
+  "story": [
+   "Élisabeth Catez was born on 18 July 1880 at a military camp in the Berry region of central France, the first child of Captain Joseph Catez and Marie Rolland. Sources name the camp's village differently, but all agree on the soldier's household. She was baptized in the camp chapel four days after her birth.",
+   "In 1887, when she was seven, her father died unexpectedly, and Dijon became her home for the rest of her short life. The little girl was lively and passionate, and she had a terrible temper. Her First Communion, on 19 April 1891 at Saint-Michel, marked a change. She gained more self-control and a deeper understanding of God, and she developed an ardent devotion to the Holy Trinity. She was confirmed at Notre-Dame that June.",
+   "She grew into a talented young woman. She began piano lessons at eight, studied at the conservatory in Dijon, and won first prize. She visited the sick, sang in the church choir, and taught religion to children who worked in factories. Men from respectable families asked for her hand. She declined them all, because her heart was set on the Discalced Carmelite monastery, only about two hundred meters from her home. Her mother, who was very attached to her, strongly advised against it.",
+   "Elizabeth entered the Carmel of Dijon on 2 August 1901. The monastery had been newly opened in 1870, after the older Dijon Carmel, founded in 1605, was dissolved during the French Revolution. She took the religious name Elizabeth of the Trinity and made her vows in 1903. In a letter she wrote of her joy: \"I can't find words to express my happiness. Here there is no longer anything but God. He is All; He suffices and we live by Him alone.\" She also said, \"I find Him everywhere while doing the wash as well as while praying.\" For her, prayer was not confined to the chapel. God was present in the heart, so a life of continual prayer was possible in any task.",
+   "Her years in Carmel were not all consolation. She had bright seasons and very low ones, and at times those around her wondered whether her calling was sure. She held on to what she believed was God's will. Three names she felt she had received from God shaped her spirituality: House of God, Praise of Glory, and Host of Praise. Near the end she began to call herself Laudem Gloriae, Latin for praise of glory. Her best-known prayer, \"Holy Trinity Whom I Adore,\" grew out of her love of the Blessed Trinity.",
+   "Within a few years, a grave illness took hold of her. Sources name Addison's disease, which had no cure in her day, and one also mentions tuberculosis. They also speak of deep inner suffering in her last months. She accepted her pain as a gift from God. She hoped her mission in Heaven would be to help souls go out of themselves and cling to God in great silence. She died in Dijon on 9 November 1906, at twenty-six. Her last words were: \"I am going to Light, to Love, to Life!\" Her spirit is often compared to that of her contemporary Thérèse of Lisieux, another young Carmelite who loved contemplation and the salvation of souls.",
+   "The Church's recognition came slowly. Her cause opened in Dijon in 1931. She was declared Venerable on 12 July 1982, and Pope John Paul II beatified her in Paris on 25 November 1984. Pope Francis approved a second miracle in 2016 and canonized her on 16 October 2016 in Saint Peter's Square. Her relics are venerated in the church of Saint-Michel in Dijon, where she made her First Communion. The Carmelite community moved in 1979 to Flavignerot, near Dijon, where visitors can still see her former cell and a small museum of her belongings. Her feast is kept on 9 November, but because that day is also the feast of the Lateran Basilica, the Carmelite Order celebrates her on 8 November. She is invoked against illness and by the sick, and by those who have lost their parents."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Word count: the spoken beats ran to about 146 words, over the 145 limit. Cut 'Soon' and shortened 'the Carmel of Dijon' to 'Dijon's Carmel', for about 144 words.",
+   "Beat 'gained self-control' overstated the source, which says 'more self-control'. Changed to 'gained more self-control'.",
+   "Scene for the First Communion beat added an unsourced detail, the mother kneeling behind her. Removed it.",
+   "The claim and story said the family moved to Dijon after her father died (Wikipedia). Nominis says her soldier father had been posted to Dijon. Neutralized the wording to say Dijon became her home.",
+   "Story said she began to 'sign herself' Laudem Gloriae. The source says 'call herself'. Fixed.",
+   "Story named only Addison's disease. The Heiligenlexikon also mentions tuberculosis from 1905. Added that.",
+   "Claim about the illness having no cure cited source 1, but 'no cure' comes from source 0. Corrected the source number. Claim about Dijon residence reworded to match the neutral wording."
+  ],
+  "confidence": 85,
+  "reviewer_note": "Check the word count with your TTS pacing (about 144 words). Sources disagree on her birthplace (Avord vs Farges-en-Septaine) and on whether the family moved to Dijon after her father's death; the script avoids both. The story still names the village question only in general terms."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2536,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1063,
+   "thinking": 821
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1848,
+   "cache_write": 9066,
+   "cache_read": 0,
+   "out": 10251,
+   "thinking": 6769
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4180,
+   "cache_write": 0,
+   "cache_read": 9066,
+   "out": 9938,
+   "thinking": 7244
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1803,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3399,
+   "thinking": 1250
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Elizabeth of the Trinity",
+   "url": "https://en.wikipedia.org/wiki/Elizabeth_of_the_Trinity"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Elizabeth of the Trinity",
+   "url": "https://nominis.cef.fr/contenus/saint/71/Sainte-Elisabeth-de-la-Trinite.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Elizabeth of the Trinity",
+   "url": "https://www.heiligenlexikon.de/BiographienE/Elisabeth_Catez.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 69.7,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "Santa Isabel",
+  "name": "Santa Isabel de la Trinidad",
+  "region": "Dijon, Francia",
+  "dates": "1880 – 1906",
+  "hook": "Propuestas de matrimonio, un premio al piano y un Carmelo a pocos pasos de su casa.",
+  "summary": "Élisabeth Catez, una joven pianista dotada de Dijon, ingresó en el Carmelo cercano a su hogar, halló a Dios tanto en los quehaceres de la casa como en la oración, y murió a los veintiséis años. Fue canonizada en 2016.",
+  "story": [
+   "Élisabeth Catez nació el 18 de julio de 1880 en un campamento militar de la región de Berry, en el centro de Francia, como primera hija del capitán Joseph Catez y de Marie Rolland. Las fuentes no coinciden en el nombre de la aldea del campamento, pero todas coinciden en el hogar del soldado. Fue bautizada en la capilla del campamento cuatro días después de nacer.",
+   "En 1887, cuando tenía siete años, su padre murió inesperadamente, y Dijon se convirtió en su hogar por el resto de su breve vida. La niña era vivaz y apasionada, y tenía un carácter muy fuerte. Su Primera Comunión, el 19 de abril de 1891 en Saint-Michel, marcó un cambio. Adquirió mayor dominio de sí misma y una comprensión más profunda de Dios, y desarrolló una devoción ardiente a la Santísima Trinidad. Fue confirmada en Notre-Dame ese mismo junio.",
+   "Se convirtió en una joven de gran talento. Comenzó las clases de piano a los ocho años, estudió en el conservatorio de Dijon y obtuvo el primer premio. Visitaba a los enfermos, cantaba en el coro de la iglesia y enseñaba catecismo a los niños que trabajaban en las fábricas. Hombres de familias respetables le pidieron su mano. Los rechazó a todos, porque su corazón estaba puesto en el monasterio de las Carmelitas Descalzas, a unos doscientos metros de su casa. Su madre, que la quería mucho, le aconsejó con firmeza que no lo hiciera.",
+   "Isabel ingresó en el Carmelo de Dijon el 2 de agosto de 1901. El monasterio había sido reabierto en 1870, después de que el antiguo Carmelo de Dijon, fundado en 1605, fuera disuelto durante la Revolución Francesa. Tomó el nombre religioso de Isabel de la Trinidad y pronunció sus votos en 1903. En una carta escribió con alegría: «No encuentro palabras para expresar mi felicidad. Aquí ya no hay nada sino Dios. Él lo es todo; Él basta, y vivimos solo por Él». También dijo: «Lo encuentro en todas partes, tanto cuando lavo la ropa como cuando rezo». Para ella, la oración no se limitaba a la capilla. Dios estaba presente en el corazón, de modo que una vida de oración continua era posible en cualquier tarea.",
+   "Sus años en el Carmelo no fueron solo consuelo. Tuvo temporadas luminosas y otras muy oscuras, y en ocasiones quienes la rodeaban se preguntaban si su vocación era firme. Se aferró a lo que creía que era la voluntad de Dios. Tres nombres que sentía haber recibido de Dios dieron forma a su espiritualidad: Casa de Dios, Alabanza de gloria y Víctima de alabanza. Hacia el final comenzó a llamarse Laudem Gloriae, que en latín significa «alabanza de gloria». Su oración más conocida, «Trinidad Santa, a quien adoro», nació de su amor a la Santísima Trinidad.",
+   "Pocos años después, una grave enfermedad se apoderó de ella. Las fuentes señalan la enfermedad de Addison, que en su época no tenía cura, y una de ellas menciona también la tuberculosis. Asimismo, hablan de un profundo sufrimiento interior en sus últimos meses. Aceptó su dolor como un don de Dios. Esperaba que su misión en el cielo fuera ayudar a las almas a salir de sí mismas y a aferrarse a Dios en un gran silencio. Murió en Dijon el 9 de noviembre de 1906, a los veintiséis años. Sus últimas palabras fueron: «¡Voy a la Luz, al Amor, a la Vida!». Su espíritu suele compararse con el de su contemporánea Santa Teresa de Lisieux, otra joven carmelita que amó la contemplación y la salvación de las almas.",
+   "El reconocimiento de la Iglesia llegó poco a poco. Su causa de beatificación se abrió en Dijon en 1931. Fue declarada Venerable el 12 de julio de 1982, y el papa Juan Pablo II la beatificó en París el 25 de noviembre de 1984. El papa Francisco aprobó un segundo milagro en 2016 y la canonizó el 16 de octubre de 2016 en la plaza de San Pedro. Sus reliquias se veneran en la iglesia de Saint-Michel de Dijon, donde hizo su Primera Comunión. En 1979 la comunidad carmelita se trasladó a Flavignerot, cerca de Dijon, donde los visitantes aún pueden ver su antigua celda y un pequeño museo con sus pertenencias. Su fiesta se celebra el 9 de noviembre, pero como ese día es también la fiesta de la Basílica de San Juan de Letrán, la Orden Carmelita la celebra el 8 de noviembre. Se la invoca contra la enfermedad y por los enfermos, y por quienes han perdido a sus padres."
+  ],
+  "prayer": "Santa Isabel de la Trinidad, ruega por nosotros.",
+  "patronages": [
+   "enfermos",
+   "enfermedad",
+   "pérdida de los padres"
+  ],
+  "places": [
+   "Dijon",
+   "Flavignerot"
+  ]
+ },
+ "books": [
+  {
+   "title": "Elizabeth of the Trinity Complete Works, Volume I",
+   "author": "Elizabeth of the Trinity",
+   "isbn": "9781939272294",
+   "year": 2014
+  },
+  {
+   "title": "Elizabeth of the Trinity",
+   "author": "Elizabeth of the Trinity",
+   "isbn": "9781565483132",
+   "year": 2008
+  }
+ ],
+ "caption": "Marriage proposals, a prize at the piano, and a Carmel just down the street.\n\nSaint Elizabeth of the Trinity · Feast day: November 9\nÉlisabeth Catez, a gifted young pianist from Dijon, entered the Carmel near her home, found God in the wash as in prayer, and died at twenty-six, canonized in 2016.\n\nSaint Elizabeth of the Trinity, pray for us. 🕯\n\nSave this to pray with again next November 9.\n\n—\nSources: Wikipedia · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintelizabethofthetrinity #dijon",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/art.jpg"
+ },
+ "review_message_id": 64
+}
