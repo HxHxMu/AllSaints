@@ -11,6 +11,7 @@ import opentype from "opentype.js";
 const EPISODES = new URL("../../state/episodes/", import.meta.url);
 const ART = new URL("../src/assets/art/", import.meta.url);
 const OUT = new URL("../public/og/", import.meta.url);
+const PIN = new URL("../public/pin/", import.meta.url);
 const brand = JSON.parse(readFileSync(new URL("../../brand/brand.json", import.meta.url), "utf8"));
 const C = brand.colors;
 const load = (f) => { const b = readFileSync(new URL(`../../brand/fonts/${f}`, import.meta.url)); return opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength)); };
@@ -21,8 +22,7 @@ const F = {
 // same rule as src/lib/episodes.ts: upcoming saints stay private until they're published
 const VISIBLE = new Set(process.env.SITE_ALL === "1" ? ["published", "approved", "review", "publishing"] : ["published"]);
 const W = 1200, H = 630, ART_W = 600, X = 660, TEXT_W = W - X - 56;
-rmSync(OUT, { recursive: true, force: true });
-mkdirSync(OUT, { recursive: true });
+for (const d of [OUT, PIN]) { rmSync(d, { recursive: true, force: true }); mkdirSync(d, { recursive: true }); }
 
 const MONTHS = {
   en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -113,6 +113,39 @@ async function card({ art, eyebrow, name, meta, foot, out }) {
     .jpeg({ quality: 86, mozjpeg: true }).toFile(fileURLToPath(new URL(out, OUT)));
 }
 
+// Pinterest pin (public/pin/<id>.jpg, 1000×1500, attached to the RSS feed Pinterest auto-publishes from):
+// the icon full width on top sinking into soot, name, feast and dates centred below.
+const PW = 1000, PH = 1500, PART = 1060;
+const centred = (font, str, size, top, color, tracking = 0, leading = 1.12, width = PW - 140) => {
+  const lines = wrap(font, str, size, width, tracking);
+  const cap = ((font.tables.os2?.sCapHeight || font.ascender * 0.7) / font.unitsPerEm) * size;
+  const base = (i) => top + cap + i * size * leading;
+  const d = lines.map((l, i) => linePath(font, l, (PW - measure(font, l, size, tracking)) / 2, base(i), size, tracking)).join("");
+  return { svg: `<path d="${d}" fill="${color}"/>`, bottom: base(lines.length - 1) };
+};
+async function pin({ id, eyebrow, name, meta, out }) {
+  const src = new URL(`${id}.jpg`, ART);
+  if (!existsSync(src)) return;
+  const art = await sharp(fileURLToPath(src)).resize(PW, PART, { fit: "cover", position: "top" }).toBuffer();
+  const parts = [];
+  let y = PART - 70;
+  const e = centred(F.caps, eyebrow.toUpperCase(), 26, y, C.gilt, 0.16); parts.push(e.svg); y = e.bottom + 34;
+  for (const size of [70, 60, 52, 44]) {
+    if (wrap(F.title, name, size, PW - 140, 0.02).length <= 2 || size === 44) {
+      const n = centred(F.title, name, size, y, C.vellum, 0.02, 1.1); parts.push(n.svg); y = n.bottom + 30; break;
+    }
+  }
+  if (meta) { const m = centred(F.italic, meta, 36, y, C.giltLight); parts.push(m.svg); y = m.bottom + 34; }
+  parts.push(`<rect x="${(PW - 72) / 2}" y="${Math.min(y, PH - 110)}" width="72" height="3" fill="${C.martyr}"/>`);
+  parts.push(centred(F.body, "allholysaints.com", 28, PH - 70, C.ash).svg);
+  const fade = `<defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0.6" stop-color="${C.soot}" stop-opacity="0"/>`
+    + `<stop offset="1" stop-color="${C.soot}"/></linearGradient></defs><rect width="${PW}" height="${PART}" fill="url(#g)"/>`;
+  const svg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${PW}" height="${PH}">${fade}${parts.join("")}</svg>`);
+  await sharp({ create: { width: PW, height: PH, channels: 3, background: C.soot } })
+    .composite([{ input: art, left: 0, top: 0 }, { input: svg, left: 0, top: 0 }])
+    .jpeg({ quality: 86, mozjpeg: true }).toFile(fileURLToPath(new URL(out, PIN)));
+}
+
 const day = (iso, lang) => `${roman(Number(iso.slice(8, 10)))} · ${MONTHS[lang][Number(iso.slice(5, 7)) - 1]}`;
 const meta = (x) => [x.dates, x.region].filter(Boolean).join(" · ");
 let n = 0;
@@ -121,6 +154,7 @@ for (const f of readdirSync(EPISODES).filter((x) => x.endsWith(".json") && !x.st
   const s = ep.script?.saint;
   if (!s || !/^\d{4}-\d{2}-\d{2}$/.test(ep.id) || !VISIBLE.has(ep.status)) continue;
   const art = await artPanel(ep.id);
+  await pin({ id: ep.id, eyebrow: day(ep.date, "en"), name: s.name, meta: meta(s), out: `${ep.id}.jpg` });
   await card({ art, eyebrow: day(ep.date, "en"), name: s.name, meta: meta(s), foot: `allholysaints.com\n${brand.tagline}`, out: `${ep.id}.jpg` });
   if (ep.es?.name) {
     await card({ art, eyebrow: day(ep.date, "es"), name: ep.es.name, meta: meta({ dates: ep.es.dates || s.dates, region: ep.es.region }),
