@@ -1,8 +1,8 @@
 {
  "id": "2026-11-02",
  "date": "2026-11-02",
- "status": "approved",
- "updated": "2026-11-01T20:24:44+00:00",
+ "status": "published",
+ "updated": "2026-11-02T12:33:03+00:00",
  "saint": {
   "qid": "Q469199",
   "name": "Saint Victorinus of Pettau",
@@ -271,7 +271,8 @@
   "places": [
    "Ptuj",
    "Panonia"
-  ]
+  ],
+  "slug": "victorino-de-petovio"
  },
  "usage": [
   {
@@ -301,5 +302,28 @@
    "out": 3127,
    "thinking": 1018
   }
- ]
+ ],
+ "slug": "victorinus-of-pettau",
+ "published": {
+  "media_id": "18087278480319158",
+  "permalink": "https://www.instagram.com/reel/DfPT8vEgjYs/"
+ },
+ "published_at": "2026-11-02T07:30-05:00",
+ "facebook": {
+  "id": "1428754975498562",
+  "url": "https://www.facebook.com/reel/1428754975498562/",
+  "published_at": "2026-11-02T07:32-05:00"
+ },
+ "youtube": {
+  "id": "p2z_N5GcVEc",
+  "url": "https://youtube.com/shorts/p2z_N5GcVEc",
+  "privacy": "public",
+  "published_at": "2026-11-02T07:32-05:00",
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
