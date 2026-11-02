@@ -29,6 +29,21 @@ const item = (s: Saint & Text, lang: Lang, site: URL) => ({
   enclosure: pin(lang, s.id, site),
 });
 
+// Pinterest is search: the Pin title and description carry the words people type ("Catholic saint", "feast day",
+// patronages, the region). Plain facts from the episode, no AI. Pinterest caps titles at 100, descriptions at 500.
+const clip = (x: string, n: number) => (x.length <= n ? x : `${x.slice(0, n - 1).replace(/\s+\S*$/, "")}…`);
+function pinItem(s: Saint & Text, site: URL) {
+  const feast = `Feast Day ${monthName(s.date)} ${Number(s.date.slice(8, 10))}`;
+  const lead = [s.patronages.length ? `Patron of ${s.patronages.slice(0, 4).join(", ")}.` : "", s.region ? `${s.region}${s.dates ? `, ${s.dates}` : ""}.` : ""];
+  const tail = "Read the full story at allholysaints.com. Catholic saints, feast days and lives of the saints.";
+  const body = clip(s.summary || s.hook, 500 - tail.length - lead.join(" ").length - 6);
+  return {
+    ...item(s, "en", site),
+    title: clip(`${s.name} · Catholic Saint · ${feast}`, 100),
+    description: [`${feast}.`, body, ...lead, tail].filter(Boolean).join(" ").slice(0, 500),
+  };
+}
+
 // every saint on one board, newest first (Pinterest pins each item once, only items with a pin image)
 export function boardFeed(slug: string, site: URL) {
   const b = boards.find((x) => x.slug === slug)!;
@@ -37,7 +52,7 @@ export function boardFeed(slug: string, site: URL) {
     description: PL.description.replace("{title}", b.title),
     site,
     customData: "<language>en</language>",
-    items: [...saintsIn("en")].reverse().filter((s) => b.has(s) && pin("en", s.id, site)).map((s) => item(s, "en", site)),
+    items: [...saintsIn("en")].reverse().filter((s) => b.has(s) && pin("en", s.id, site)).map((s) => pinItem(s, site)),
   });
 }
 
