@@ -10,7 +10,7 @@
 """
 import argparse, datetime as dt, json, re, shutil, sys, traceback, unicodedata
 from pathlib import Path
-from common import (BRAND, STATE, WORK, assign_slugs, log, load_config, load_episodes, load_episode, save_episode, today, tz, month_day_label)
+from common import (BRAND, STATE, WORK, assign_slugs, log, load_config, load_json, save_json, load_episodes, load_episode, save_episode, today, tz, month_day_label)
 
 CAP = BRAND["caption"]
 
@@ -335,6 +335,7 @@ def publish_due():
         publish_youtube(ep)  # retries a Short that failed after the Reel went out
         youtube_playlists(ep)
         publish_facebook(ep)
+        pinterest_boards(ep)
         return
     if ep["status"] != "approved" or now < due_time:
         return
@@ -453,6 +454,28 @@ def youtube_playlists(ep):
                 traceback.print_exc()
     ep["youtube"] = yt
     save_episode(ep)
+
+
+def pinterest_boards(ep):
+    """Pinterest won't take an empty RSS feed, so each board's feed (site: /pin/<board>.xml) is connected by hand the day
+    its first saint publishes: Telegram tells Luis which. Boards already announced/connected: state/pinterest.json."""
+    import telegram
+    st = load_json("pinterest.json", {"announced": []})
+    month = dt.date.fromisoformat(ep["date"]).strftime("%B")
+    names = [month] + ([ep["continent"]] if ep.get("continent") else [])
+    new = [n for n in names if re.sub(r"\s+", "-", re.sub(r"^the ", "", n.lower())) not in st["announced"]]
+    for n in new:
+        slug = re.sub(r"\s+", "-", re.sub(r"^the ", "", n.lower()))
+        title = BRAND["youtube"]["playlists"]["region" if n != month else "month"].replace("{name}", n)
+        try:
+            telegram.send(f"📌 Pinterest board ready: {title}\nIts first saint is out. In ~10 min (site update): create the board "
+                          f"\"{title}\" (description in docs/pinterest-boards.md), then Settings → Bulk create Pins → Auto-publish "
+                          f"→ Connect RSS feed:\nhttps://allholysaints.com/pin/{slug}.xml")
+        except Exception:
+            traceback.print_exc()
+            return
+        st["announced"].append(slug)
+        save_json("pinterest.json", st)
 
 
 def cmd_poll(a):
