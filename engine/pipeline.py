@@ -260,6 +260,7 @@ def backfill_story(ep):
 
 # $ per million tokens (input, output); cache writes bill 1.25x input, cache reads 0.1x. Thinking is in "out".
 PRICES = {"sonnet": (2.00, 10.00), "haiku": (0.10, 0.50), "opus": (4.00, 20.00)}
+GEMINI_PER_EPISODE = 0.22  # art + narration, from Google Cloud billing (Oct 29-31 2026, one episode a day, after savings)
 
 
 def call_cost(row):
@@ -269,7 +270,7 @@ def call_cost(row):
 
 
 def cmd_cost(a):
-    """Claude cost per episode from ep.usage (Gemini art/voice not included), and what a month of them costs."""
+    """Claude cost per episode from ep.usage, plus Gemini art/voice (a measured flat rate), and what a month costs."""
     eps = sorted((e for e in load_episodes().values() if e.get("usage")), key=lambda e: e["id"])
     steps, totals = {}, []
     for ep in eps:
@@ -282,6 +283,8 @@ def cmd_cost(a):
         return print("No episodes with usage yet")
     avg = sum(totals) / len(totals)
     print(f"\nAverage ${avg:.3f}/episode -> ${avg * 30:.2f} per 30 days of Claude")
+    both = avg + GEMINI_PER_EPISODE
+    print(f"With Gemini (~${GEMINI_PER_EPISODE:.2f}/episode): ${both:.2f}/episode -> ${both * 30:.2f} per 30 days")
     print("By step (average per call): " + ", ".join(f"{k} ${sum(v) / len(v):.3f}" for k, v in steps.items()))
 
 
