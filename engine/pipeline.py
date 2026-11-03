@@ -392,7 +392,8 @@ def publish_facebook(ep, video=None):
     if not facebook.configured() or fb.get("id") or fb.get("attempts", 0) >= 3 or ep.get("status") != "published":
         return
     try:
-        res = facebook.publish_reel(ep["caption"], video_url=storage.resolve_direct(ep["assets"]["video.mp4"]), video_path=video)
+        res = facebook.publish_reel(ep["caption"], video_url=storage.resolve_direct(ep["assets"]["video.mp4"]), video_path=video,
+                                    cover_url=storage.resolve_direct(ep["assets"]["cover.jpg"]) if ep["assets"].get("cover.jpg") else None)
         ep["facebook"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
         save_episode(ep)
         _notify(f"📘 On Facebook: {ep['saint']['display_name']}\n{res['url']}")
@@ -530,6 +531,8 @@ def main():
     sub.add_parser("fb-whoami")
     fp = sub.add_parser("facebook", help="post one published episode's Reel to the Facebook Page now")
     fp.add_argument("episode")
+    fc = sub.add_parser("fb-cover", help="set the cover on Facebook Reels already posted (backfill)")
+    fc.add_argument("episodes", nargs="+")
     yp = sub.add_parser("yt-playlists", help="add published Shorts to their playlists (backfill / retry)")
     yp.add_argument("episode", nargs="?", default="all")
     lp = sub.add_parser("yt-localize", help="add the Spanish title/description to uploaded Shorts")
@@ -614,6 +617,11 @@ def main():
         ep = load_episode(a.episode)
         (ep.get("facebook") or {}).pop("attempts", None)
         publish_facebook(ep)
+    elif a.cmd == "fb-cover":
+        import facebook, storage
+        for ep_id in a.episodes:
+            ep = load_episode(ep_id)
+            facebook.set_cover(ep["facebook"]["id"], storage.resolve_direct(ep["assets"]["cover.jpg"]))
     elif a.cmd == "post":
         cmd_post(a.post_id)
     elif a.cmd == "yt-whoami":

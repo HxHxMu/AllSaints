@@ -41,8 +41,19 @@ def _wait(vid, tok, max_wait=600):
     raise RuntimeError(f"Facebook Reel not published after {max_wait}s: {st}")
 
 
-def publish_reel(description, video_url=None, video_path: Path = None):
-    """Upload the video by URL (falls back to sending the local file), publish it, return {id, url}."""
+def set_cover(vid, cover_url):
+    """Make the episode's cover.jpg the Reel's thumbnail (the API publishes Reels with a frame Facebook picks, often
+    mid-video with a subtitle on it). Instagram gets the cover at publish time; Facebook only takes it afterwards."""
+    tok = env("FB_PAGE_TOKEN", required=True)
+    img = http.get(cover_url, timeout=60)
+    img.raise_for_status()
+    _check(http.post(f"{GRAPH}/{vid}/thumbnails", data={"is_preferred": "true", "access_token": tok},
+                     files={"source": ("cover.jpg", img.content, "image/jpeg")}, timeout=120), "cover")
+    log("Facebook Reel cover set:", vid)
+
+
+def publish_reel(description, video_url=None, video_path: Path = None, cover_url=None):
+    """Upload the video by URL (falls back to sending the local file), publish it, set the cover, return {id, url}."""
     page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
     vid = _check(http.post(f"{GRAPH}/{page}/video_reels", data={"upload_phase": "start", "access_token": tok}, timeout=60),
                  "upload start")["video_id"]
@@ -62,6 +73,11 @@ def publish_reel(description, video_url=None, video_path: Path = None):
         "upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED", "description": description,
         "access_token": tok}), "publish")
     _wait(vid, tok)
+    if cover_url:
+        try:
+            set_cover(vid, cover_url)
+        except Exception as e:  # the Reel is up; a missing cover only costs looks
+            log("Facebook cover failed:", str(e)[:200])
     link = http.get(f"{GRAPH}/{vid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
     url = f"https://www.facebook.com{link}" if link.startswith("/") else (link or f"https://www.facebook.com/reel/{vid}")
     log("Facebook Reel:", vid)
