@@ -5,6 +5,9 @@ import config from "../../../state/config.json";
 import data from "../../../brand/books.json";
 
 export type Book = { title: string; author: string; isbn: string };
+// covers downloaded at build time (scripts/fetch-covers.mjs); null = no cover anywhere, the page typesets one
+const covers = import.meta.glob<{ default: ImageMetadata }>("../assets/books/*.jpg", { eager: true });
+export const coverOf = (b: Book) => covers[`../assets/books/${b.isbn}.jpg`]?.default || null;
 export const AFFILIATE: string = (config as any).bookshop_affiliate_id || "";
 export const bookUrl = (b: Book) => `https://bookshop.org/a/${AFFILIATE}/${b.isbn}`;
 const SHELF = (data as any).shelf as (Book & { tags: string[] })[];

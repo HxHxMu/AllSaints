@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 src/assets/art/
+src/assets/books/
 ._*
 public/og/
 public/pin/

@@ -192,3 +192,4 @@ Nearly square: rubrics 3px, inputs 0px (an underline only), play button round. N
 | 2026-10-29 | Dark throughout; light vellum story page declined | Use scene (phone, morning/night, from Instagram); keeps the chapel feeling |
 | 2026-10-29 | Text never over the icon; poster image doubles as the video player | From Codex's proposal: protects the face and readability |
 | 2026-10-29 | Junicode 2 added for numerals | From the Claude agent's proposal: manuscript dates replace UI labels |
+| 2026-11-02 | "Go deeper" books show their covers (three across, like books on a shelf; cover + title one link; a typeset umber cover when none exists) | Luis: plain title links read like more sources; covers from Bookshop.org (Open Library fallback), fetched at build (`site/scripts/fetch-covers.mjs`). Covers are images, not cards: no frame, shadow or chip |

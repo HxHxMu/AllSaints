@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/check-episodes.mjs && node scripts/fetch-art.mjs && node scripts/share-cards.mjs",
-    "predev": "node scripts/check-episodes.mjs && node scripts/fetch-art.mjs && node scripts/share-cards.mjs",
+    "prebuild": "node scripts/check-episodes.mjs && node scripts/fetch-art.mjs && node scripts/fetch-covers.mjs && node scripts/share-cards.mjs",
+    "predev": "node scripts/check-episodes.mjs && node scripts/fetch-art.mjs && node scripts/fetch-covers.mjs && node scripts/share-cards.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
