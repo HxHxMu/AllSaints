@@ -127,5 +127,23 @@
     "uploaded": "2026-11-03",
     "category": "10 (Music)",
     "publish_at": "2026-12-24T07:30 America/New_York (YouTube scheduled)"
+  },
+  "teaser": {
+    "from": 206.5,
+    "to": 229.8,
+    "stanzas": [
+      1
+    ],
+    "intro": [
+      "Christmas Eve.",
+      "A hymn of St. Romanos the Melodist,",
+      "fifteen centuries old, sung in Greek."
+    ],
+    "intro_for": 3.8,
+    "end": 3.0,
+    "end_text": [
+      "The whole hymn,",
+      "on YouTube."
+    ]
   }
 }

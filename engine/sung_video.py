@@ -137,7 +137,7 @@ def render(spec_path, frames_only=False):
             sheet.paste(f.resize((W // 2, H // 2)), ((i % 2) * W // 2, (i // 2) * H // 2))
         sheet.save(out / "sheet.jpg", quality=85)
         return out / "sheet.jpg"
-    args = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "24", "-i", str(out / "base.png")]
+    args = ["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "24", "-i", str(out / "base.png")]
     chain, last = [], "[0:v]"
     for i, (name, img, a, b) in enumerate(tl, start=1):
         args += ["-loop", "1", "-framerate", "24", "-i", str(out / f"{name}.png")]
@@ -239,7 +239,7 @@ def teaser(spec_path):
     tl.append(("end", teaser_end(*[t["end_text"]] if t.get("end_text") else []), a1 - a0, total))
     for name, img, *_ in tl:
         img.save(out / f"{name}.png")
-    args = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(out / "base.png")]
+    args = ["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(out / "base.png")]
     chain, last = [], "[0:v]"
     for i, (name, img, a, b) in enumerate(tl, start=1):
         args += ["-loop", "1", "-framerate", "30", "-i", str(out / f"{name}.png")]
