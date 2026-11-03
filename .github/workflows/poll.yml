@@ -46,6 +46,11 @@ jobs:
         id: state
         if: always()
         run: bash scripts/commit-state.sh "poll"
+      - name: Tell Telegram
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/notify-failure.sh "The 10-minute poll job (posting, Telegram buttons, Stories) failed." poll.yml
   site:
     # the website build check, only after a commit that rebuilds the site (a publish or a new Short)
     needs: poll

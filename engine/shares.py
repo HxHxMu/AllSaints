@@ -7,7 +7,7 @@ Reel with "message" as the caption ("link" is only checked, since Instagram capt
 and a private video would show "Video unavailable"); max 3 failed attempts, each reported to Telegram.
 Entries are added by hand (Luis approves the text in chat before it's queued).
 """
-import re, datetime as dt
+import re, traceback, datetime as dt
 from common import load_json, save_json, log
 
 FILE = "shares.json"
@@ -53,13 +53,18 @@ def run_due(now=None):
                 log("Share waiting for the video to go public:", s["id"])
                 continue
             where, res, url = _post(s)
-            s.update(status="posted", posted=res, posted_at=now.isoformat(timespec="minutes"))
-            telegram.send(f"📣 Shared on {where}: {s['id']}\n{url}")
         except Exception as e:
             s["attempts"] = s.get("attempts", 0) + 1
             s["error"] = str(e)[:300]
             telegram.send(f"❌ {s['platform'].title()} share failed ({s['attempts']}x): {s['id']}\n{str(e)[:200]}"
                           + ("\nWill retry." if s["attempts"] < 3 else ""))
+            changed = True
+            continue
+        s.update(status="posted", posted=res, posted_at=now.isoformat(timespec="minutes"))  # live: never retried
         changed = True
+        try:
+            telegram.send(f"📣 Shared on {where}: {s['id']}\n{url}")
+        except Exception:
+            traceback.print_exc()
     if changed:
         save_json(FILE, shares)

@@ -3,7 +3,7 @@
 Run occasionally (e.g. monthly). Popularity proxy = number of Wikipedia sitelinks;
 lesser-known saints sit roughly in the 2-45 range.
 """
-import json, re, collections
+import time, json, re, collections
 from common import http, DATA, log
 
 SPARQL = "https://query.wikidata.org/sparql"
@@ -53,9 +53,14 @@ def year(v):
 
 
 def main():
-    log("Querying Wikidata…")
-    r = http.get(SPARQL, params={"query": QUERY, "format": "json"}, timeout=300,
-                 headers={"Accept": "application/sparql-results+json"})
+    for attempt in range(4):  # Wikidata's query service has bad minutes (a 500 sank the 2026-11-01 rebuild)
+        log("Querying Wikidata…")
+        r = http.get(SPARQL, params={"query": QUERY, "format": "json"}, timeout=300,
+                     headers={"Accept": "application/sparql-results+json"})
+        if r.ok or attempt == 3:
+            break
+        log("Wikidata", r.status_code, "- trying again in 2 min")
+        time.sleep(120)
     r.raise_for_status()
     rows = r.json()["results"]["bindings"]
     log(len(rows), "rows")

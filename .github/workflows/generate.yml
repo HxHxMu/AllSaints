@@ -56,3 +56,8 @@ jobs:
       - name: Save state
         if: always()
         run: bash scripts/commit-state.sh "generate"
+      - name: Tell Telegram
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/notify-failure.sh "The daily episode generation job failed." generate.yml

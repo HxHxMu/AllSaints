@@ -15,6 +15,7 @@ on:
         default: false
 permissions:
   contents: write
+  actions: read   # notify-failure.sh looks at the previous run
 concurrency:
   group: compilation
   cancel-in-progress: false
@@ -44,3 +45,8 @@ jobs:
       - name: Save state
         if: always()
         run: bash scripts/commit-state.sh "compilation"
+      - name: Tell Telegram
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/notify-failure.sh "The monthly compilation job failed." compilation.yml

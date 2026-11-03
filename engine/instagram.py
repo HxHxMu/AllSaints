@@ -70,7 +70,11 @@ def _publish(container, tok):
     r = http.post(f"{GRAPH}/{_uid()}/media_publish", data={"creation_id": container, "access_token": tok}, timeout=60)
     r.raise_for_status()
     mid = r.json()["id"]
-    pl = http.get(f"{GRAPH}/{mid}", params={"fields": "permalink", "access_token": tok}, timeout=30).json().get("permalink")
+    try:  # the post is live from here: a failed lookup must not look like a failed post (a retry would double-post)
+        pl = http.get(f"{GRAPH}/{mid}", params={"fields": "permalink", "access_token": tok}, timeout=30).json().get("permalink")
+    except Exception as e:
+        log("Permalink lookup failed:", e)
+        pl = None
     return {"media_id": mid, "permalink": pl}
 
 

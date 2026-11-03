@@ -195,12 +195,15 @@ def upload_video(meta, video_path: Path, parts=None, thumbnail: Path = None):
         raise RuntimeError(f"YouTube upload failed {r.status_code}: {r.text[:400]}")
     vid = r.json()
     log("YouTube upload:", vid["id"], vid.get("status", {}).get("uploadStatus"), vid.get("status", {}).get("privacyStatus"))
-    if thumbnail:  # custom thumbnails need a phone-verified channel; a failure only logs
-        t = session.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": vid["id"]},
-                         headers={"Authorization": f"Bearer {token}", "Content-Type": "image/jpeg"},
-                         data=thumbnail.read_bytes(), timeout=120)
-        if t.status_code != 200:
-            log("Thumbnail not set:", t.status_code, t.text[:200])
+    if thumbnail:  # custom thumbnails need a phone-verified channel; a failure only logs (the video is up)
+        try:
+            t = session.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": vid["id"]},
+                             headers={"Authorization": f"Bearer {token}", "Content-Type": "image/jpeg"},
+                             data=thumbnail.read_bytes(), timeout=120)
+            if t.status_code != 200:
+                log("Thumbnail not set:", t.status_code, t.text[:200])
+        except Exception as e:
+            log("Thumbnail not set:", e)
     return vid
 
 

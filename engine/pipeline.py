@@ -359,10 +359,6 @@ def publish_episode(ep):
         video_url = storage.resolve_direct(ep["assets"]["video.mp4"])
         cover_url = storage.resolve_direct(ep["assets"]["cover.jpg"])
         res = instagram.publish_reel(ep["caption"], video_url=video_url, cover_url=cover_url, video_path=vid)
-        ep.update(status="published", published=res, published_at=now.isoformat(timespec="minutes"))
-        save_episode(ep)
-        telegram.send(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink', '')}")
-        publish_facebook(ep, vid)
     except Exception as e:
         traceback.print_exc()
         publish_youtube(ep)  # a Reel failure shouldn't hold the Short back
@@ -373,6 +369,11 @@ def publish_episode(ep):
         if ep["publish_attempts"] in (1, 3):
             telegram.send(f"❌ Publishing failed ({ep['publish_attempts']}x): {str(e)[:300]}\nWill retry.")
         raise
+    # the Reel is live: record it before anything else can fail (a retry from "approved" would post it twice)
+    ep.update(status="published", published=res, published_at=now.isoformat(timespec="minutes"))
+    save_episode(ep)
+    _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}")
+    publish_facebook(ep, vid)
     publish_youtube(ep, vid)
 
 
@@ -417,11 +418,6 @@ def publish_youtube(ep, video=None):
         if not video:
             video = storage.download(ep["assets"]["video.mp4"], WORK / f"{ep['id']}-video.mp4")
         res = youtube.upload_short(ep, video)
-        ep["youtube"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
-        save_episode(ep)
-        note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
-        _notify(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
-        youtube_playlists(ep)
     except Exception as e:
         traceback.print_exc()
         yt["attempts"] = yt.get("attempts", 0) + 1
@@ -430,6 +426,16 @@ def publish_youtube(ep, video=None):
         save_episode(ep)
         if yt["attempts"] in (1, 3):
             telegram.send(f"❌ YouTube upload failed ({yt['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if yt["attempts"] < 3 else ""))
+        return
+    # uploaded: record the id first, so nothing after this can lead to a second upload
+    ep["youtube"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
+    save_episode(ep)
+    note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
+    _notify(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
+    try:
+        youtube_playlists(ep)
+    except Exception:
+        traceback.print_exc()
 
 
 def youtube_playlists(ep):
@@ -479,6 +485,43 @@ def pinterest_boards(ep):
         save_json("pinterest.json", st)
 
 
+def check_queue(now=None):
+    """Once a day after config "check_time" (default 20:00): tells Telegram if tomorrow isn't ready (missing, failed,
+    or waiting for approval), if the next days have no episode yet (generation stuck), or if yesterday's saint
+    never posted. Silent when all is well. State: state/checks.json {"evening": last date checked}."""
+    import telegram
+    cfg = load_config()
+    now = now or dt.datetime.now(tz())
+    hh, mm = map(int, cfg.get("check_time", "20:00").split(":"))
+    st = load_json("checks.json", {})
+    if (now.hour, now.minute) < (hh, mm) or st.get("evening") == now.date().isoformat() or cfg.get("paused"):
+        return
+    if not cfg.get("launch_date") or now.date() < dt.date.fromisoformat(cfg["launch_date"]) - dt.timedelta(days=1):
+        return
+    day = lambda n: now.date() + dt.timedelta(days=n)
+    label = lambda d: f"{d.strftime('%b')} {d.day}"
+    notes = []
+    tom = load_episode(day(1).isoformat())
+    if not tom:
+        notes.append(f"⚠️ Nothing is ready for tomorrow ({label(day(1))}). Tap /generate.")
+    elif tom["status"] == "review":
+        notes.append(f"⏰ Tomorrow's saint ({tom['saint']['display_name']}) still needs your approval. It posts at {cfg['post_time']}.")
+    elif tom["status"] in ("failed", "redo_requested", "generating"):
+        notes.append(f"⚠️ Tomorrow's episode ({label(day(1))}) isn't ready: {tom['status']}"
+                     + (f" ({tom.get('error', '')[:150]})" if tom["status"] == "failed" else "") + ".")
+    empty = [label(day(n)) for n in (2, 3, 4) if not load_episode(day(n).isoformat())]
+    if len(empty) >= 2:
+        notes.append(f"⚠️ No episode made yet for {', '.join(empty)}. Generation may be stuck: tap /generate.")
+    yest = load_episode(day(-1).isoformat())
+    if yest and yest["status"] != "published" and day(-1) >= dt.date.fromisoformat(cfg["launch_date"]):
+        notes.append(f"⚠️ Yesterday's saint ({yest['saint']['display_name']}) never posted (status: {yest['status']}). "
+                     "It won't post a day late on its own.")
+    if notes:
+        telegram.send("\n\n".join(notes))
+    st["evening"] = now.date().isoformat()
+    save_json("checks.json", st)
+
+
 def cmd_poll(a):
     import telegram, storage
     actions = telegram.process_updates()
@@ -496,6 +539,10 @@ def cmd_poll(a):
         stories.run_due()  # nightly prayer card + seasonal Stories (state/stories.json)
     except Exception:
         traceback.print_exc()
+    try:
+        check_queue()  # evening heads-up about tomorrow
+    except Exception:
+        traceback.print_exc()
 
 
 def cmd_post(post_id):
@@ -505,16 +552,16 @@ def cmd_post(post_id):
     post = json.loads(p.read_text())
     save = lambda: p.write_text(json.dumps(post, indent=1, ensure_ascii=False) + "\n")
     ig, fb = post.get("instagram"), post.get("facebook")
-    if ig and not ig.get("permalink"):
+    if ig and not ig.get("media_id"):
         ig.update(instagram.publish_carousel(ig["caption"], [storage.resolve_direct(u) for u in post["images"]]))
         save()
-        telegram.send(f"📣 Instagram carousel posted: {post['title']}\n{ig['permalink']}")
+        _notify(f"📣 Instagram carousel posted: {post['title']}\n{ig.get('permalink') or ''}")
     if fb and not fb.get("url") and facebook.configured():
         WORK.mkdir(exist_ok=True)
         files = [storage.download(u, WORK / f"post-{post_id}-{i}.jpg") for i, u in enumerate(post["images"])]
         fb.update(facebook.post_photos(fb["message"], files))
         save()
-        telegram.send(f"📣 Facebook post: {post['title']}\n{fb['url']}")
+        _notify(f"📣 Facebook post: {post['title']}\n{fb['url']}")
 
 
 def main():

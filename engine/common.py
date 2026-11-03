@@ -24,6 +24,14 @@ if (ROOT / ".env").exists():
 UA = "AllSaintsBot/1.0 (https://github.com/HxHxMu/AllSaints; educational Catholic saints Reels) python-requests"
 http = requests.Session()
 http.headers.update({"User-Agent": UA})
+# Retries for network blips. A connection that never opened is retried for any request (nothing was sent);
+# errors after sending, and 5xx answers, only for GET/HEAD. A POST is never resent: it could post twice.
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+_retry = Retry(total=3, connect=3, read=2, status=3, backoff_factor=2, status_forcelist=(500, 502, 503, 504),
+               allowed_methods=frozenset({"GET", "HEAD"}), raise_on_status=False)
+http.mount("https://", HTTPAdapter(max_retries=_retry))
+http.mount("http://", HTTPAdapter(max_retries=_retry))
 
 
 def get_json(url, params=None, timeout=40, tries=8):

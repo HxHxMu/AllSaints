@@ -29,7 +29,7 @@ def me():
 
 
 def _wait(vid, tok, max_wait=600):
-    """Until Facebook has processed and published the Reel; returns its status."""
+    """Until Facebook has processed and published the Reel; returns its status. Raises only if processing failed."""
     st = {}
     for _ in range(max_wait // 10):
         st = _check(http.get(f"{GRAPH}/{vid}", params={"fields": "status", "access_token": tok}, timeout=30), "status")["status"]
@@ -38,7 +38,9 @@ def _wait(vid, tok, max_wait=600):
         if (st.get("publishing_phase") or {}).get("status") == "complete":
             return st
         time.sleep(10)
-    raise RuntimeError(f"Facebook Reel not published after {max_wait}s: {st}")
+    # still processing: it was accepted and will publish on its own, so it counts as posted (raising would re-upload it)
+    log(f"Facebook Reel still processing after {max_wait}s:", st)
+    return st
 
 
 def set_cover(vid, cover_url):
@@ -78,7 +80,10 @@ def publish_reel(description, video_url=None, video_path: Path = None, cover_url
             set_cover(vid, cover_url)
         except Exception as e:  # the Reel is up; a missing cover only costs looks
             log("Facebook cover failed:", str(e)[:200])
-    link = http.get(f"{GRAPH}/{vid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    try:
+        link = http.get(f"{GRAPH}/{vid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    except Exception:
+        link = ""
     url = f"https://www.facebook.com{link}" if link.startswith("/") else (link or f"https://www.facebook.com/reel/{vid}")
     log("Facebook Reel:", vid)
     return {"id": vid, "url": url}
@@ -89,7 +94,10 @@ def post_link(message, link):
     page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
     pid = _check(http.post(f"{GRAPH}/{page}/feed", data={"message": message, "link": link, "access_token": tok}, timeout=60),
                  "link post")["id"]
-    url = http.get(f"{GRAPH}/{pid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    try:  # posted already: a failed lookup only loses the nice link
+        url = http.get(f"{GRAPH}/{pid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    except Exception:
+        url = ""
     log("Facebook post:", pid)
     return {"id": pid, "url": url or f"https://www.facebook.com/{pid}"}
 
@@ -105,7 +113,10 @@ def post_photos(message, paths):
         media[f"attached_media[{i}]"] = f'{{"media_fbid":"{pid}"}}'
     post = _check(http.post(f"{GRAPH}/{page}/feed", data={"message": message, "access_token": tok, **media}, timeout=60),
                   "photo post")["id"]
-    url = http.get(f"{GRAPH}/{post}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    try:  # posted already: a failed lookup only loses the nice link
+        url = http.get(f"{GRAPH}/{post}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    except Exception:
+        url = ""
     log("Facebook photo post:", post)
     return {"id": post, "url": url or f"https://www.facebook.com/{post}"}
 
