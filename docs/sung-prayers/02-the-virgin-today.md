@@ -2,7 +2,7 @@
 
 **Lyric master** · release 2 · planned **Thursday, Dec 24, 2026** (Christmas Eve)
 Status: **DRAFT, not locked.** Greek typed from the standard liturgical text; check it word for word against a printed edition before Nov 26.
-Music done 2026-11-03 (Suno + Luis); lyric video rendered (`work/sung/02/02-the-virgin-today.mp4`, 4:40) from [02-the-virgin-today.json](02-the-virgin-today.json), timed from the Suno vocal stems. On-screen title is **The Virgin Today** (the brand fonts have no ē for *Hē Parthenos sēmeron*); Greek uses `brand/fonts/EBGaramond-Medium-Greek.ttf`.
+Music done 2026-11-03 (Suno + Luis); lyric video rendered (`work/sung/02/02-the-virgin-today.mp4`, 4:20: the exported file had extra audio after the song ends, so `audio.wav` is the export cut at 260 s with a 2 s fade; the untrimmed file is `audio-full.wav`) from [02-the-virgin-today.json](02-the-virgin-today.json), timed from the Suno vocal stems. On-screen title is **The Virgin Today** (the brand fonts have no ē for *Hē Parthenos sēmeron*); Greek uses `brand/fonts/EBGaramond-Medium-Greek.ttf`.
 
 | | |
 |---|---|
