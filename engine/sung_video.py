@@ -53,8 +53,8 @@ def layer():
 def stanza(spec, s):
     img = layer()
     d = ImageDraw.Draw(img)
-    lat, en = _font("EBGaramond-Medium.ttf", 52), _font("Cormorant-MediumItalic.ttf", 38)
-    block = 4 * 68 + 44 + 4 * 48
+    lat, en = _font(spec.get("text_font", "EBGaramond-Medium.ttf"), 52), _font("Cormorant-MediumItalic.ttf", 38)
+    block = len(s["latin"]) * 68 + 44 + len(s["english"]) * 48
     y = (H - block) // 2 + 10
     _tracked(d, (TX, y - 92), f"{spec['title'].upper()}  ·  {ROMAN[s['n']]}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.14)
     d.rectangle([TX, y - 46, TX + 72, y - 43], fill=C["martyr"])
@@ -180,10 +180,10 @@ def teaser_base(spec, d):
     return img
 
 
-def teaser_stanza(s):
+def teaser_stanza(spec, s):
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    lat, en = _font("EBGaramond-Medium.ttf", 44), _font("Cormorant-MediumItalic.ttf", 34)
+    lat, en = _font(spec.get("text_font", "EBGaramond-Medium.ttf"), 44), _font("Cormorant-MediumItalic.ttf", 34)
     y = ICON_H + 184
     for line in s["latin"]:
         d.text((VX, y), line, font=lat, fill=C["vellum"])
@@ -206,13 +206,15 @@ def teaser_intro(lines):
     return img
 
 
-def teaser_end():
+def teaser_end(lines=("The whole hymn, all eight stanzas,", "on YouTube.")):
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     f = _font("Cormorant-MediumItalic.ttf", 46)
-    d.text((VX, ICON_H + 200), "The whole hymn, all eight stanzas,", font=f, fill=C["giltLight"])
-    d.text((VX, ICON_H + 260), "on YouTube.", font=f, fill=C["giltLight"])
-    d.text((VX, ICON_H + 350), "allholysaints.com", font=_font("EBGaramond-Medium.ttf", 30), fill=C["ash"])
+    y = ICON_H + 200
+    for line in lines:
+        d.text((VX, y), line, font=f, fill=C["giltLight"])
+        y += 60
+    d.text((VX, y + 30), "allholysaints.com", font=_font("EBGaramond-Medium.ttf", 30), fill=C["ash"])
     return img
 
 
@@ -233,8 +235,8 @@ def teaser(spec_path):
     for i, s in enumerate(ss):
         end = ss[i + 1]["at"] - a0 - 0.3 if i + 1 < len(ss) else a1 - a0
         start = max(0, s["at"] - a0 - 1.2, intro_for if i == 0 and tl else 0)  # intro out, then stanza in
-        tl.append((f"st{i}", teaser_stanza(s), start, end))
-    tl.append(("end", teaser_end(), a1 - a0, total))
+        tl.append((f"st{i}", teaser_stanza(spec, s), start, end))
+    tl.append(("end", teaser_end(*[t["end_text"]] if t.get("end_text") else []), a1 - a0, total))
     for name, img, *_ in tl:
         img.save(out / f"{name}.png")
     args = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-i", str(out / "base.png")]

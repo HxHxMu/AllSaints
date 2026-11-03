@@ -1,0 +1,123 @@
+{
+  "_note": "Spec for engine/sung_video.py. Times in seconds of work/sung/02/audio.wav, from the Suno vocal stems (same start as the mix) + a prompted faster-whisper pass, 2026-11-03. \"latin\" holds the Greek. The one stanza is shown as three screens, sung twice. Text must match 02-the-virgin-today.md exactly.",
+  "dir": "work/sung/02",
+  "audio": "audio.wav",
+  "art": "art.jpg",
+  "art_crop": [
+    300,
+    0,
+    1494,
+    1500
+  ],
+  "text_font": "EBGaramond-Medium-Greek.ttf",
+  "title": "The Virgin Today",
+  "title_en": "A kontakion for the Nativity",
+  "byline": "A Christmas hymn of St. Romanos the Melodist",
+  "dates": "c. 490–556",
+  "cards": [
+    [
+      0,
+      28
+    ],
+    [
+      96,
+      156
+    ]
+  ],
+  "stanzas": [
+    {
+      "n": 1,
+      "at": 30.0,
+      "latin": [
+        "Ἡ Παρθένος σήμερον",
+        "τὸν ὑπερούσιον τίκτει,",
+        "καὶ ἡ γῆ τὸ σπήλαιον",
+        "τῷ ἀπροσίτῳ προσάγει·"
+      ],
+      "english": [
+        "Today the Virgin gives birth to the One beyond all being,",
+        "and the earth offers a cave to the One no one can approach."
+      ]
+    },
+    {
+      "n": 1,
+      "at": 61.3,
+      "latin": [
+        "Ἄγγελοι μετὰ ποιμένων δοξολογοῦσι,",
+        "Μάγοι δὲ μετὰ ἀστέρος ὁδοιποροῦσι·"
+      ],
+      "english": [
+        "Angels with shepherds give glory,",
+        "and Magi journey with a star;"
+      ]
+    },
+    {
+      "n": 1,
+      "at": 77.6,
+      "latin": [
+        "δι᾽ ἡμᾶς γὰρ ἐγεννήθη",
+        "Παιδίον νέον, ὁ πρὸ αἰώνων Θεός."
+      ],
+      "english": [
+        "for our sake is born",
+        "a little Child, God before the ages."
+      ],
+      "until": 94.0
+    },
+    {
+      "n": 1,
+      "at": 159.3,
+      "latin": [
+        "Ἡ Παρθένος σήμερον",
+        "τὸν ὑπερούσιον τίκτει,",
+        "καὶ ἡ γῆ τὸ σπήλαιον",
+        "τῷ ἀπροσίτῳ προσάγει·"
+      ],
+      "english": [
+        "Today the Virgin gives birth to the One beyond all being,",
+        "and the earth offers a cave to the One no one can approach."
+      ]
+    },
+    {
+      "n": 1,
+      "at": 192.3,
+      "latin": [
+        "Ἄγγελοι μετὰ ποιμένων δοξολογοῦσι,",
+        "Μάγοι δὲ μετὰ ἀστέρος ὁδοιποροῦσι·"
+      ],
+      "english": [
+        "Angels with shepherds give glory,",
+        "and Magi journey with a star;"
+      ]
+    },
+    {
+      "n": 1,
+      "at": 207.4,
+      "latin": [
+        "δι᾽ ἡμᾶς γὰρ ἐγεννήθη",
+        "Παιδίον νέον, ὁ πρὸ αἰώνων Θεός."
+      ],
+      "english": [
+        "for our sake is born",
+        "a little Child, God before the ages."
+      ],
+      "until": 235.5
+    }
+  ],
+  "credits_at": 238,
+  "credits": [
+    [
+      "Words",
+      "St. Romanos the Melodist (c. 490–556)"
+    ],
+    [
+      "English",
+      "All Saints"
+    ],
+    [
+      "Music",
+      "All Saints"
+    ]
+  ],
+  "closing": "Saint Romanos, pray for us."
+}
