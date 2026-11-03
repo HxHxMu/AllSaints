@@ -3,7 +3,7 @@
     python engine/sung_video.py docs/sung-prayers/01-veni-redemptor-gentium.json [--frames]
     python engine/sung_video.py docs/sung-prayers/01-veni-redemptor-gentium.json --teaser
 
---teaser cuts the spec's "teaser" span ({"from", "to", "stanzas", "intro"}) as a 1080x1920 Instagram Reel: the icon on
+--teaser cuts the spec's "teaser" span ({"from", "to", "stanzas", "intro", "intro_for", "end"}) as a 1080x1920 Instagram Reel: the icon on
 top, the title, an opening card ("intro": [headline, line, ...]) already up on the first frame so a scrolling viewer
 sees at once that it's a sung hymn, the stanzas as they're sung, then a card pointing to the full hymn on YouTube. Text stays inside the Reel's
 safe area (clear of the top bar and the caption at the bottom).
@@ -157,7 +157,7 @@ def render(spec_path, frames_only=False):
 VW, VH = 1080, 1920
 VX = 72                     # text margin in the teaser
 ICON_H = 900                # icon band at the top of the teaser
-END = 4.0                   # closing card, while the music fades
+END = 4.0                   # closing card, while the music fades (spec "end" overrides)
 
 
 def teaser_base(spec, d):
@@ -221,15 +221,19 @@ def teaser(spec_path):
     d = ROOT / spec["dir"]
     t = spec["teaser"]
     a0, a1 = t["from"], t["to"]
-    total = a1 - a0 + END
+    end_for = t.get("end", END)
+    total = a1 - a0 + end_for
     out = d / "teaser"
     out.mkdir(exist_ok=True)
     teaser_base(spec, d).save(out / "base.png")
     ss = [s for s in spec["stanzas"] if s["n"] in t["stanzas"] and a0 <= s["at"] < a1]
-    tl = [("intro", teaser_intro(t["intro"]), 0, ss[0]["at"] - a0 - 1.2)] if t.get("intro") else []
+    # the intro holds for "intro_for" s (default: until the first stanza is due) and fades out before the stanza fades in
+    intro_for = t.get("intro_for", ss[0]["at"] - a0 - 1.2)
+    tl = [("intro", teaser_intro(t["intro"]), 0, intro_for)] if t.get("intro") else []
     for i, s in enumerate(ss):
         end = ss[i + 1]["at"] - a0 - 0.3 if i + 1 < len(ss) else a1 - a0
-        tl.append((f"st{i}", teaser_stanza(s), max(0, s["at"] - a0 - 1.2), end))
+        start = max(0, s["at"] - a0 - 1.2, intro_for if i == 0 and tl else 0)  # intro out, then stanza in
+        tl.append((f"st{i}", teaser_stanza(s), start, end))
     tl.append(("end", teaser_end(), a1 - a0, total))
     for name, img, *_ in tl:
         img.save(out / f"{name}.png")
@@ -243,7 +247,7 @@ def teaser(spec_path):
         chain.append(f"{last}[t{i}]overlay=0:0[v{i}]")
         last = f"[v{i}]"
     chain.append(f"{last}fade=t=out:st={total - 1:.2f}:d=1,format=yuv420p[v]")  # no fade-in: frame 1 is the hook
-    chain.append(f"[{len(tl) + 1}:a]afade=t=in:d=0.25,afade=t=out:st={a1 - a0 - 0.5:.2f}:d={END:.2f}[a]")
+    chain.append(f"[{len(tl) + 1}:a]afade=t=in:d=0.25,afade=t=out:st={a1 - a0 - 0.5:.2f}:d={end_for:.2f}[a]")
     video = d / (Path(spec_path).stem + "-teaser.mp4")
     args += ["-ss", f"{a0:.2f}", "-t", f"{total:.2f}", "-i", str(d / spec["audio"]), "-filter_complex", ";".join(chain),
              "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
