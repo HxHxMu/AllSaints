@@ -3,8 +3,9 @@
     python engine/sung_video.py docs/sung-prayers/01-veni-redemptor-gentium.json [--frames]
     python engine/sung_video.py docs/sung-prayers/01-veni-redemptor-gentium.json --teaser
 
---teaser cuts the spec's "teaser" span ({"from", "to", "stanzas"}) as a 1080x1920 Instagram Reel: the icon on top, the
-title, the stanzas as they're sung, then a card pointing to the full hymn on YouTube. Text stays inside the Reel's
+--teaser cuts the spec's "teaser" span ({"from", "to", "stanzas", "intro"}) as a 1080x1920 Instagram Reel: the icon on
+top, the title, an opening card ("intro": [headline, line, ...]) already up on the first frame so a scrolling viewer
+sees at once that it's a sung hymn, the stanzas as they're sung, then a card pointing to the full hymn on YouTube. Text stays inside the Reel's
 safe area (clear of the top bar and the caption at the bottom).
 
 The spec (JSON) names the audio and icon in its work dir, the crop of the icon, and each stanza's Latin, English and
@@ -194,6 +195,17 @@ def teaser_stanza(s):
     return img
 
 
+def teaser_intro(lines):
+    img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.text((VX, ICON_H + 196), lines[0], font=_font("Cormorant-MediumItalic.ttf", 64), fill=C["giltLight"])
+    y = ICON_H + 300
+    for line in lines[1:]:
+        d.text((VX, y), line, font=_font("EBGaramond-Medium.ttf", 42), fill=C["vellum"])
+        y += 56
+    return img
+
+
 def teaser_end():
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -214,7 +226,7 @@ def teaser(spec_path):
     out.mkdir(exist_ok=True)
     teaser_base(spec, d).save(out / "base.png")
     ss = [s for s in spec["stanzas"] if s["n"] in t["stanzas"] and a0 <= s["at"] < a1]
-    tl = []
+    tl = [("intro", teaser_intro(t["intro"]), 0, ss[0]["at"] - a0 - 1.2)] if t.get("intro") else []
     for i, s in enumerate(ss):
         end = ss[i + 1]["at"] - a0 - 0.3 if i + 1 < len(ss) else a1 - a0
         tl.append((f"st{i}", teaser_stanza(s), max(0, s["at"] - a0 - 1.2), end))
@@ -230,8 +242,8 @@ def teaser(spec_path):
         chain.append(f"[{i}:v]format=rgba,{fin}format=rgba{fout}[t{i}]")
         chain.append(f"{last}[t{i}]overlay=0:0[v{i}]")
         last = f"[v{i}]"
-    chain.append(f"{last}fade=t=in:d=0.6,fade=t=out:st={total - 1:.2f}:d=1,format=yuv420p[v]")
-    chain.append(f"[{len(tl) + 1}:a]afade=t=in:d=0.4,afade=t=out:st={a1 - a0 - 0.5:.2f}:d={END:.2f}[a]")
+    chain.append(f"{last}fade=t=out:st={total - 1:.2f}:d=1,format=yuv420p[v]")  # no fade-in: frame 1 is the hook
+    chain.append(f"[{len(tl) + 1}:a]afade=t=in:d=0.25,afade=t=out:st={a1 - a0 - 0.5:.2f}:d={END:.2f}[a]")
     video = d / (Path(spec_path).stem + "-teaser.mp4")
     args += ["-ss", f"{a0:.2f}", "-t", f"{total:.2f}", "-i", str(d / spec["audio"]), "-filter_complex", ";".join(chain),
              "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",

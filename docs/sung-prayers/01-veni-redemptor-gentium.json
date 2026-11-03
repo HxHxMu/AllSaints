@@ -196,11 +196,16 @@
     "publish_at": "2026-11-29T07:30 America/New_York (YouTube scheduled)"
   },
   "teaser": {
-    "from": 50.4,
+    "from": 44.5,
     "to": 96.4,
     "stanzas": [
       2,
       3
+    ],
+    "intro": [
+      "Advent begins today.",
+      "A hymn of St. Ambrose of Milan,",
+      "sixteen centuries old, sung in Latin."
     ]
   }
 }
