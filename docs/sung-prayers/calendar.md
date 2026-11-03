@@ -17,7 +17,7 @@ Draft, 2026-11-03. Pieces come from [catalogue.md](catalogue.md) (numbers in **#
 | # | Release (R) | Occasion | Piece | Saint | Translation work | Lyrics locked by | Music by |
 |---|---|---|---|---|---|---|---|
 | 01 | **Sun Nov 29** | First Sunday of Advent | *Veni, redemptor gentium* (cat. 1) | Ambrose | Done (Neale 1851 + our st. I) | ✅ | ✅ queued |
-| 02 | **Thu Dec 24** | Christmas Eve | *The Virgin today* (Nativity kontakion, cat. 7) | Romanos the Melodist | **Ours, from the Greek** (no PD English cleared) | **Nov 26** ⚠️ | Dec 10 |
+| 02 | **Thu Dec 24** | Christmas Eve | *The Virgin today* (Nativity kontakion, cat. 7) | Romanos the Melodist | Ours, from the Greek | ✅ | ✅ scheduled (Evh8c2Td6P8) |
 | 03 | **Mon Jan 4** | Her feast | *A Prayer to Jesus* (cat. 31) | Elizabeth Ann Seton | None: her own English | Dec 7 | Dec 21 |
 | 04 | **Wed Feb 10** | Ash Wednesday | *Sero te amavi* (cat. 3) | Augustine | Pusey 1838 (PD) | Jan 13 | Jan 27 |
 | 05 | **Wed Mar 17** | His feast | Prayer for perseverance, *Confessio* §58 (cat. 5) | Patrick | Check Stokes's 19th-c. text; else ours | Feb 17 | Mar 3 |
