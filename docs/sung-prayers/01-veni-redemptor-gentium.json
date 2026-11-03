@@ -194,5 +194,13 @@
     "uploaded": "2026-11-01",
     "category": "10 (Music)",
     "publish_at": "2026-11-29T07:30 America/New_York (YouTube scheduled)"
+  },
+  "teaser": {
+    "from": 50.4,
+    "to": 96.4,
+    "stanzas": [
+      2,
+      3
+    ]
   }
 }

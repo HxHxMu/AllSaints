@@ -6,5 +6,15 @@
   "message": "Advent begins today. St. Ambrose wrote this hymn for his people in Milan sixteen centuries ago: all eight of his stanzas, in Latin, with English on screen. Veni, redemptor gentium. 🕯",
   "link": "https://youtu.be/GDp51tse34g",
   "status": "pending"
+ },
+ {
+  "id": "veni-redemptor-gentium-instagram",
+  "at": "2026-11-29T07:45:00-05:00",
+  "platform": "instagram",
+  "message": "Advent begins today. St. Ambrose of Milan wrote this hymn for his people sixteen centuries ago. Here are two of its eight stanzas, sung in Latin with J. M. Neale's English. The whole hymn is on YouTube: @AllHolySaints, link in bio.\n\nVeni, redemptor gentium. 🕯\n\nWords: St. Ambrose of Milan (c. 339–397). Music and production: All Saints, created with AI assistance (Suno); icon AI-generated in the Byzantine style.\n\n#Advent #StAmbrose #VeniRedemptorGentium #CatholicSaints",
+  "link": "https://youtu.be/GDp51tse34g",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser-cover.jpg",
+  "status": "pending"
  }
 ]
