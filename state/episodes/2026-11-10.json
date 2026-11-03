@@ -1,0 +1,335 @@
+{
+ "id": "2026-11-10",
+ "date": "2026-11-10",
+ "status": "review",
+ "updated": "2026-11-03T10:25:44+00:00",
+ "saint": {
+  "qid": "Q453924",
+  "name": "Saint Justus",
+  "display_name": "St. Justus",
+  "dates": "d. c. 627",
+  "region": "Canterbury, England",
+  "feast": "November 10",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q453924",
+  "name": "Justus",
+  "links": 27,
+  "enwiki": "Justus",
+  "images": [
+   "Justusdetail.JPG"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Saint Justus of Canterbury",
+  "birth": 600,
+  "death": null,
+  "lon": 1.0775,
+  "lat": 51.278333333,
+  "selection_reason": "Justus has a vivid story well documented in Bede and checkable against the Catholic Encyclopedia and Santi e Beati: a Gregorian missionary who fled to Gaul when the pagan reaction followed King Æthelberht's death, was recalled, and became fourth Archbishop of Canterbury. He is also a fresher choice for the series than another Italian saint.",
+  "catholic_veneration": "Saint in the Roman Martyrology, with his feast on November 10; historically venerated at his shrine in St Augustine's Abbey, Canterbury, as one of the Gregorian missionary bishops."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Justus",
+   "display_name": "St. Justus",
+   "dates": "d. c. 627",
+   "region": "Canterbury, England",
+   "feast": "November 10",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A bishop forced to flee England was called home after a year.",
+    "visual": "art",
+    "scene": "A bishop in seventh-century clerical vestments stands on a windswept Kentish shore at dusk, looking back at a small stone church while a wooden sailing boat waits at the water's edge."
+   },
+   {
+    "role": "who",
+    "text": "Saint Justus reached England in six hundred and one, sent by Pope Gregory the Great to help Augustine.",
+    "visual": "map",
+    "lat": 51.28,
+    "lon": 1.08,
+    "place": "Canterbury · England"
+   },
+   {
+    "role": "story",
+    "text": "In six hundred and four, he became the first bishop of Rochester.",
+    "visual": "art",
+    "scene": "Saint Augustine of Canterbury lays his hands on the kneeling Justus inside a small Anglo-Saxon stone church in the walled town of Rochester, with clergy looking on."
+   },
+   {
+    "role": "story",
+    "text": "Then Ethelbert died, and a pagan reaction rose against the faith. Justus was driven out, and took refuge in Gaul for a year.",
+    "visual": "art",
+    "scene": "Justus and a companion cleric cross the sea in a small wooden boat under a grey sky, cloaked and carrying a book and a simple cross, the Kentish coast fading behind them."
+   },
+   {
+    "role": "story",
+    "text": "Then Eadbald, the new king, who had been converted by Saint Laurence, recalled him.",
+    "visual": "art",
+    "scene": "Inside a timber Anglo-Saxon royal hall, King Eadbald in a tunic and cloak with a gold circlet welcomes Justus, who stands in bishop's vestments with hands open in greeting."
+   },
+   {
+    "role": "story",
+    "text": "In six hundred and twenty-four, he became the fourth Archbishop of Canterbury.",
+    "visual": "art",
+    "scene": "An elderly Justus with white hair, in bishop's vestments with a pallium over his shoulders, holds a pastoral staff before the altar of the early church of Canterbury, flanked by clergy."
+   },
+   {
+    "role": "turn",
+    "text": "He was already an old man. Yet he consecrated Romanus as bishop of Rochester, and Paulinus as bishop for the north. He returned, and he handed the work on.",
+    "visual": "art",
+    "scene": "The aged archbishop Justus lays his hands on the bowed head of the kneeling Paulinus in a stone church, with a few clergy standing quietly by."
+   },
+   {
+    "role": "close",
+    "text": "Some holiness is simply returning, and carrying on. Saint Justus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Eadbald": "ED-bald",
+   "Romanus": "roh-MAH-nus",
+   "Paulinus": "paw-LYE-nus",
+   "Gaul": "Gawl",
+   "Ethelbert": "ETH-el-bert",
+   "Augustine": "aw-GUS-tin"
+  },
+  "caption_hook": "Exiled in a pagan backlash, he came back to lead the Church of Canterbury.",
+  "summary": "Saint Justus, a missionary sent by Pope Gregory the Great, fled to Gaul when pagan reaction followed King Ethelbert's death, was recalled a year later, and became the fourth Archbishop of Canterbury.",
+  "youtube_title": "St. Justus: The Exiled Bishop Who Became Archbishop",
+  "hashtags": [
+   "#saintjustus",
+   "#canterbury",
+   "#rochester",
+   "#archbishopofcanterbury",
+   "#gregorianmission",
+   "#anglosaxon",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#novemberfeast",
+   "#saintoftheday",
+   "#catholicreels",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Justus? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Justus was sent by Pope Gregory the Great as part of the second band of missionaries to help Augustine in England.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "That second band arrived in 601.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 604 Augustine consecrated Justus as the first bishop of Rochester.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "During the pagan reaction after King Ethelbert's death, Justus was expelled from his see and took refuge in Gaul for a year.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was recalled by Eadbald, who had been converted by Saint Laurence.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Justus became the fourth Archbishop of Canterbury in 624, after the death of Mellitus.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was already an old man when he became archbishop.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "As archbishop he consecrated Romanus as Bishop of Rochester and Paulinus as bishop for the north.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His feast is kept on November 10; the year of his death is uncertain, with 627 the commonly received date.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Almost everything known of Justus comes from Bede.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Boniface V sent Justus the pallium, the symbol of an archbishop's jurisdiction.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was buried at Saint Augustine's Abbey, Canterbury, and his remains were moved in the 1090s to a shrine beside the high altar.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Paulinus went north with Æthelburg of Kent for her marriage to King Edwin of Northumbria.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Justus attended the Council of Paris in 614.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The name Justus means 'the just one' in Latin.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Whether Justus was a monk or a secular priest is uncertain; Bede is silent on the point.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Justus joined Laurence and Mellitus in writing to the British bishops, without effect.",
+    "source": 1,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Canterbury",
+   "Rochester",
+   "Kent",
+   "Gaul"
+  ],
+  "story": [
+   "Almost everything we know about Saint Justus comes from one source, the Venerable Bede, who wrote the history of the English Church about a century later. It is a short record, but it follows a man through every kind of season: arrival, promotion, exile, return, and a long service that ended in old age.",
+   "Justus was one of the missionaries sent by Pope Gregory the Great to England. Augustine had landed in Kent with the first company, and he asked for help. In 601 a second band came, bringing books, sacred vessels and other gifts from the pope. Justus was among them. Nothing is known of his life before that voyage. Later writers at Canterbury claimed him as a monk, but the Catholic Encyclopedia notes that Bede is silent on the point, and it remains uncertain whether he was a monk or a secular priest. His name is Latin and means the just one.",
+   "In 604 Augustine consecrated him as the first bishop of Rochester, a small walled town in Kent. King Ethelbert, who had received the faith, gave the new church land by charter. Justus served there as a bishop and joined his fellow missionaries in common work. With Archbishop Laurence and Mellitus, the bishop of London, he addressed letters to the bishops of the Britons, though without effect. In 614 he also attended a council at Paris.",
+   "Then came the hardest years. When King Ethelbert died in 616, the pagan reaction swept Kent. Justus was driven from his see and took refuge in Gaul, as did Mellitus. For about a year he lived as an exile, far from the church the king had built him. The young Church in England seemed close to collapse.",
+   "It did not collapse. Eadbald, Ethelbert's son, was converted by Saint Laurence, and he recalled Justus. The bishop returned to Rochester. Mellitus returned too, though the mood in London did not allow him to go back to his own city. The work went on, slowly, with the same few men.",
+   "When Mellitus died in 624, Justus was chosen as the fourth Archbishop of Canterbury. Pope Boniface V sent him the pallium, the sign of an archbishop's authority, and a letter that Bede preserved. Justus was by then an old man, and little is recorded of his time as archbishop. What Bede does record is telling. Justus consecrated Romanus to succeed him as bishop of Rochester. He also consecrated Paulinus as bishop for the north, before Paulinus travelled with Æthelburg of Kent to Northumbria for her marriage to King Edwin. From Canterbury, the faith was carried into a new kingdom.",
+   "Bede gives November 10 as the day of his death. The year is uncertain, though 627 is the commonly accepted date. He was buried at Saint Augustine's Abbey in Canterbury with his predecessors, and he was soon venerated as a saint. A ninth-century missal commemorates his feast alongside Mellitus and Laurence. In the 1090s his remains were moved to a shrine beside the high altar of the abbey, and a Life of him was written around the same time. The Church keeps his feast on November 10.",
+   "Justus did not leave miracles or famous sayings. He left a cathedral city, a see, and two bishops he had consecrated to carry on the work. Having been driven out once, he came back and went on serving, and that is the shape of his holiness."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Close beat had no line of meaning before the invocation, which the structure requires. Added one short reflective line (not a factual claim), taking the script from 125 to about 133 spoken words.",
+   "Scene for the Rochester consecration put King Ethelbert in the church. No source places him at the ceremony, and the Rochester charter is of doubtful authenticity. Removed him and kept Augustine, Justus and clergy.",
+   "Scene for Paulinus placed Romanus beside him as if both were consecrated at one ceremony. The sources only say Justus consecrated both men, and Romanus was bishop for Rochester. Removed Romanus from the image.",
+   "Pronunciation guide lacked Ethelbert and Augustine, both spoken in the beats. Added them.",
+   "Spoken beats and story otherwise stay within the sources. Where Wikipedia and the Catholic Encyclopedia disagree, the script follows the Catholic Encyclopedia: letters to the British bishops, and Eadbald converted by Saint Laurence. Both are consistent with that choice.",
+   "Map pin (51.28, 1.08) is correctly Canterbury."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The new close line ('Some holiness is simply returning, and carrying on') is a reflection, not a sourced fact. The script follows the Catholic Encyclopedia where it differs from Wikipedia (letters to the British bishops, Eadbald converted by Laurence). Source 2 calls Justus a Roman Benedictine, but the script treats his monastic status as uncertain, as the Catholic Encyclopedia does."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2465,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 606,
+   "thinking": 392
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1811,
+   "cache_write": 8635,
+   "cache_read": 0,
+   "out": 8344,
+   "thinking": 4965
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4098,
+   "cache_write": 0,
+   "cache_read": 8635,
+   "out": 8112,
+   "thinking": 4931
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1598,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2829,
+   "thinking": 1082
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Justus",
+   "url": "https://en.wikipedia.org/wiki/Justus"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Justus",
+   "url": "https://www.newadvent.org/cathen/08586a.htm"
+  },
+  {
+   "title": "Santi e Beati: Justus",
+   "url": "https://www.santiebeati.it/dettaglio/90430"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Justus",
+   "url": "https://www.heiligenlexikon.de/BiographienJ/Justus_von_Rochester.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 65.0,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Justo",
+  "display_name": "San Justo",
+  "region": "Cantorbery, Inglaterra",
+  "dates": "m. c. 627",
+  "hook": "Desterrado en una reacción pagana, regresó para dirigir la Iglesia de Cantorbery.",
+  "summary": "San Justo, misionero enviado por el papa san Gregorio Magno, huyó a la Galia cuando la reacción pagana siguió a la muerte del rey Etelberto, fue llamado de vuelta un año después y llegó a ser el cuarto arzobispo de Cantorbery.",
+  "story": [
+   "Casi todo lo que sabemos de San Justo procede de una sola fuente, el Venerable Beda, que escribió la historia de la Iglesia inglesa cerca de un siglo después. Es un relato breve, pero acompaña a un hombre a través de todas las etapas: la llegada, el ascenso, el destierro, el regreso y un largo servicio que terminó en la vejez.",
+   "Justo fue uno de los misioneros que el papa san Gregorio Magno envió a Inglaterra. Agustín había desembarcado en Kent con el primer grupo y había pedido ayuda. En el año 601 llegó un segundo grupo, que traía libros, vasos sagrados y otros regalos del papa. Justo se contaba entre ellos. No se sabe nada de su vida anterior a aquel viaje. Escritores posteriores de Cantorbery lo presentaron como monje, pero la Enciclopedia Católica señala que Beda guarda silencio sobre este punto, y sigue siendo incierto si fue monje o sacerdote secular. Su nombre es latino y significa el justo.",
+   "En el año 604 Agustín lo consagró como primer obispo de Rochester, una pequeña ciudad amurallada en Kent. El rey Etelberto, que había recibido la fe, dio a la nueva iglesia tierras mediante un documento. Justo sirvió allí como obispo y se unió a sus compañeros misioneros en la labor común. Junto con el arzobispo Lorenzo y con Melito, obispo de Londres, escribió cartas a los obispos de los britanos, aunque sin resultado. En el año 614 asistió también a un concilio en París.",
+   "Llegaron entonces los años más difíciles. Cuando el rey Etelberto murió en el año 616, la reacción pagana se extendió por Kent. Justo fue expulsado de su sede y se refugió en la Galia, como también hizo Melito. Durante aproximadamente un año vivió como desterrado, lejos de la iglesia que el rey le había levantado. La joven Iglesia en Inglaterra parecía estar al borde del colapso.",
+   "Pero no colapsó. Eadbaldo, hijo de Etelberto, se convirtió por obra de San Lorenzo y llamó de nuevo a Justo. El obispo regresó a Rochester. Melito también volvió, aunque el ambiente de Londres no le permitió regresar a su propia ciudad. La obra continuó, despacio, con el mismo puñado de hombres.",
+   "Cuando Melito murió en el año 624, Justo fue elegido cuarto arzobispo de Cantorbery. El papa Bonifacio V le envió el palio, signo de la autoridad de un arzobispo, y una carta que Beda conservó. Justo era ya un anciano, y se registra poco de su tiempo como arzobispo. Lo que Beda sí registra es revelador. Justo consagró a Romano para sucederle como obispo de Rochester. También consagró a Paulino como obispo para el norte, antes de que Paulino viajara con Etelburga de Kent a Northumbria para su matrimonio con el rey Edwin. Desde Cantorbery, la fe llegó a un nuevo reino.",
+   "Beda señala el 10 de noviembre como el día de su muerte. El año es incierto, aunque 627 es la fecha comúnmente aceptada. Fue enterrado en la abadía de San Agustín en Cantorbery, junto a sus predecesores, y pronto fue venerado como santo. Un misal del siglo IX conmemora su fiesta junto con Melito y Lorenzo. En la década de 1090 sus restos fueron trasladados a un relicario junto al altar mayor de la abadía, y se escribió una Vida suya por la misma época. La Iglesia celebra su fiesta el 10 de noviembre.",
+   "San Justo no dejó milagros ni dichos famosos. Dejó una ciudad episcopal, una sede y dos obispos que había consagrado para continuar la obra. Tras haber sido expulsado una vez, regresó y siguió sirviendo, y en eso consiste la forma de su santidad."
+  ],
+  "prayer": "Hay una santidad que consiste simplemente en regresar y seguir adelante. San Justo, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Cantorbery",
+   "Rochester",
+   "Kent",
+   "Galia"
+  ]
+ },
+ "books": [],
+ "caption": "Exiled in a pagan backlash, he came back to lead the Church of Canterbury.\n\nSaint Justus · Feast day: November 10\nSaint Justus, a missionary sent by Pope Gregory the Great, fled to Gaul when pagan reaction followed King Ethelbert's death, was recalled a year later, and became the fourth Archbishop of Canterbury.\n\nSome holiness is simply returning, and carrying on. Saint Justus, pray for us. 🕯\n\nFollow for tomorrow's forgotten saint, every morning.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintjustus #canterbury",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-10/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-10/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-10/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-10/art.jpg"
+ },
+ "review_message_id": 70
+}
