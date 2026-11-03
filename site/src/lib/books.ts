@@ -3,6 +3,7 @@
 // "bookshop_affiliate_id"); without it the section isn't rendered.
 import config from "../../../state/config.json";
 import data from "../../../brand/books.json";
+import { saintsIn, type Saint, type Text } from "./episodes";
 
 export type Book = { title: string; author: string; isbn: string };
 // covers downloaded at build time (scripts/fetch-covers.mjs); null = no cover anywhere, the page typesets one
@@ -41,4 +42,30 @@ export function booksFor(s: { id: string; dates: string; martyr: boolean; contin
     .sort((x, y) => y.score - x.score || x.tie - y.tie)
     .map((x) => x.b);
   return [...own, ...picks].slice(0, 3);
+}
+
+// The library (/library/): every book on the shelf plus each saint's own books, grouped by theme, each with the
+// saints whose "Go deeper" recommends it. A book sits in the first section whose test it passes.
+export type Shelved = Book & { saints: (Saint & Text)[] };
+const SECTIONS: { title: string; test: (b: Book & { tags?: string[] }) => boolean }[] = [
+  { title: "Lives of the saints", test: (b) => !!b.tags?.some((t) => t === "general" || t === "legend") },
+  { title: "The early Church and the desert", test: (b) => !!b.tags?.includes("early") },
+  { title: "Saints of the world", test: (b) => !!b.tags?.length },
+  { title: "On a single saint", test: () => true },
+];
+
+export function library(): { title: string; books: Shelved[] }[] {
+  if (!AFFILIATE) return [];
+  const by = new Map<string, Shelved & { tags?: string[] }>();
+  for (const b of SHELF) by.set(b.isbn, { ...b, saints: [] });
+  for (const s of saintsIn("en")) {
+    for (const b of s.books) if (!by.has(b.isbn)) by.set(b.isbn, { ...b, saints: [] });
+    for (const b of booksFor(s)) by.get(b.isbn)?.saints.push(s);
+  }
+  const left = [...by.values()];
+  return SECTIONS.map((sec) => {
+    const books = left.filter((b) => sec.test(b));
+    for (const b of books) left.splice(left.indexOf(b), 1);
+    return { title: sec.title, books };
+  }).filter((sec) => sec.books.length > 0);
 }

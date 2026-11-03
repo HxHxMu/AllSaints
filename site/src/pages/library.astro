@@ -1,0 +1,36 @@
+---
+// The library: every book the saint pages recommend, by theme, each with the saints it goes deeper on.
+// English only (the books are English); not indexed while the affiliate id is missing and the shelf is empty.
+import Base from "../layouts/Base.astro";
+import BookShelf from "../components/BookShelf.astro";
+import { library } from "../lib/books";
+import { t } from "../lib/i18n";
+
+const T = t.en;
+const sections = library();
+const count = sections.reduce((n, s) => n + s.books.length, 0);
+const description = "Books on the lives of the Catholic saints: the early Church, the desert fathers, martyrs and saints of every continent, each linked to the saints it tells about.";
+---
+<Base title="The library" description={description} noindex={count === 0}>
+  <div class="wrap library">
+    <p class="label">{T.deeper}</p>
+    <h1 class="title">The library</h1>
+    <p class="muted intro">Books for going deeper into the lives of the saints. Under each, the saints whose stories it helps tell.</p>
+    {sections.map((s) => (
+      <section aria-label={s.title}>
+        <h2 class="label">{s.title}</h2>
+        <BookShelf books={s.books} lang="en" />
+      </section>
+    ))}
+    <p class="muted small">{T.booksFine}</p>
+  </div>
+</Base>
+
+<style>
+  .library { max-width: var(--measure); padding-top: 8px; display: grid; gap: 12px; align-content: start; }
+  .title { font-family: var(--display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 1.5rem; }
+  .intro { margin-bottom: 16px; }
+  section { display: grid; gap: 16px; margin-top: 32px; }
+  h2 { font-weight: 400; }
+  .small { margin-top: 40px; font-size: .9375rem; }
+</style>

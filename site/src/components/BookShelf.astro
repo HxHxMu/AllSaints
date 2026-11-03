@@ -1,0 +1,48 @@
+---
+// Book covers stood side by side, three across: the cover and the title are one link to Bookshop.org.
+// Used by "Go deeper" on saint pages and by the library, which also lists the saints that recommend each book.
+import { Picture } from "astro:assets";
+import { bookUrl, coverOf, type Book } from "../lib/books";
+import { paths } from "../lib/i18n";
+import type { Lang, Saint, Text } from "../lib/episodes";
+
+interface Props { books: (Book & { saints?: (Saint & Text)[] })[]; lang: Lang }
+const { books, lang } = Astro.props;
+const P = paths[lang];
+const SHOWN = 3;
+---
+<ul class="shelf">
+  {books.map((b) => {
+    const cover = coverOf(b);
+    const more = (b.saints?.length || 0) - SHOWN;
+    return (
+      <li>
+        <a href={bookUrl(b)} rel="noopener sponsored">
+          {cover
+            ? <Picture src={cover} alt="" formats={["avif", "webp"]} widths={[160, 320]} sizes="(min-width: 1024px) 160px, 30vw" loading="lazy" class="cover" />
+            : <span class="cover typeset" aria-hidden="true"><span>{b.title}</span></span>}
+          <cite>{b.title}</cite>
+        </a>
+        <span class="muted">{b.author}</span>
+        {b.saints && b.saints.length > 0 && (
+          <span class="for">{b.saints.slice(0, SHOWN).map((s, i) => <>{i > 0 && " · "}<a href={P.saint(s.slug)}>{s.display}</a></>)}{more > 0 && ` · +${more}`}</span>
+        )}
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 160px)); gap: 16px; align-items: start; }
+  li { display: grid; gap: 4px; font-size: 1rem; line-height: 1.3; }
+  li > a { display: grid; gap: 10px; text-decoration: none; color: var(--vellum); }
+  li > a:hover cite, li > a:focus-visible cite { color: var(--gilt-light); }
+  .shelf :global(.cover) { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 2px; background: var(--umber); transition: opacity 100ms var(--ease-out); }
+  li > a:hover :global(.cover) { opacity: .88; }
+  .typeset { display: grid; place-items: center; padding: 12px; border: 1px solid var(--rule); font-family: var(--devotional); font-style: italic; font-size: .95rem; line-height: 1.25; text-align: center; color: var(--gilt-light); }
+  cite { font-style: italic; }
+  li .muted, .for { font-size: .9375rem; }
+  .for { color: var(--ash); }
+  .for a { color: var(--ash); }
+  .for a:hover { color: var(--gilt-light); }
+</style>
