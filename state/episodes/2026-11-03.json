@@ -1,8 +1,8 @@
 {
  "id": "2026-11-03",
  "date": "2026-11-03",
- "status": "approved",
- "updated": "2026-11-01T20:24:44+00:00",
+ "status": "published",
+ "updated": "2026-11-03T12:32:30+00:00",
  "saint": {
   "qid": "Q2575112",
   "name": "Saint Winifred",
@@ -273,7 +273,8 @@
    "Gwytherin",
    "Shrewsbury",
    "Gales"
-  ]
+  ],
+  "slug": "winifreda"
  },
  "usage": [
   {
@@ -303,5 +304,28 @@
    "out": 3596,
    "thinking": 1072
   }
- ]
+ ],
+ "slug": "winifred",
+ "published": {
+  "media_id": "18397865395207339",
+  "permalink": "https://www.instagram.com/reel/DfR4uDogKHg/"
+ },
+ "published_at": "2026-11-03T07:30-05:00",
+ "facebook": {
+  "id": "2079221072734681",
+  "url": "https://www.facebook.com/reel/2079221072734681/",
+  "published_at": "2026-11-03T07:32-05:00"
+ },
+ "youtube": {
+  "id": "TFecxt6Wso4",
+  "url": "https://youtube.com/shorts/TFecxt6Wso4",
+  "privacy": "public",
+  "published_at": "2026-11-03T07:32-05:00",
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
