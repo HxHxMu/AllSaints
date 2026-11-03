@@ -491,6 +491,11 @@ def cmd_poll(a):
         shares.run_due()  # one-off scheduled posts (state/shares.json); never blocks the daily post
     except Exception:
         traceback.print_exc()
+    try:
+        import stories
+        stories.run_due()  # nightly prayer card + seasonal Stories (state/stories.json)
+    except Exception:
+        traceback.print_exc()
 
 
 def cmd_post(post_id):

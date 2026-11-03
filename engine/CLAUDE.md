@@ -26,6 +26,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
    → instagram.publish_reel → youtube.upload_short + facebook.publish_reel (each independent; ≤3 retries; never re-posts the Reel)
+   → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, seasonal Stories)
 ```
 
 ## State (`state/`, committed by the bot)
@@ -55,6 +56,11 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Setup: Meta app (the Instagram one) → add Facebook Login; Graph API Explorer → user token with `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, tick the Page → `pipeline.py fb-auth` (hidden prompts: App ID, secret, token; exchanges for a never-expiring Page token, writes `.env` + gh secrets). Check: `fb-whoami`. Retry/backfill one: `pipeline.py facebook <ep_id>`. The cover: Facebook ignores it at publish, so `facebook.set_cover` uploads `cover.jpg` as the preferred thumbnail right after (failure only logs); backfill with `pipeline.py fb-cover <ep_id> …` (Reels before 2026-11-03 got a frame Facebook picked).
 - One-off carousels: `state/posts/<id>.json` (image URLs on a GitHub release `post-<id>`, IG caption, FB message), published by `pipeline.py post <id>` (Instagram `publish_carousel`, Facebook `post_photos`; reruns skip a platform already done). Instagram's token exists only in GitHub secrets, so run it as Maintenance → task `post <id>`. Only after Luis approves the slides and text in chat.
 - One-off scheduled posts: `state/shares.json` (`shares.py`, run by `poll`): Page link posts at a set time, e.g. a sung-prayer video on release day. A YouTube link waits until the video is public (FB builds the preview at posting time); ≤3 attempts; Telegram reports each result. Entries are added by hand once Luis approves the text.
+
+## Instagram Stories (`stories.py`, run by `poll`, no AI)
+- Nightly card from `config.story_time` (default 20:30): the painted band of today's `cover.jpg`, the manuscript date, the episode's close beat ("Saint X, pray for us."), and "Tomorrow: St. Y" + region when tomorrow's episode is approved. Only once today's Reel is published; hosted as `story.jpg` on the episode release; `instagram.publish_story` (image Story, no caption, no link stickers via the API). State `ep.story` {media_id | attempts, error}, ≤3 attempts, failures to Telegram. Render one locally: `python engine/stories.py night <ep_id>`.
+- Seasonal cards: `state/stories.json` entries {id, at, image, status}; `draft` waits for Luis's OK in chat (flip to `pending`). O Antiphons Dec 17–23 at 12:30: `stories.py o-antiphons <year> [--upload]` (typeset on soot; Latin from the Roman Office, English is All Saints' own literal translation since ICEL's is copyrighted; images on release `stories-o-antiphons-<year>`). Uploading locally needs `GITHUB_REPOSITORY=HxHxMu/AllSaints GITHUB_TOKEN=$(gh auth token)`.
+- Instagram's top ~150 px (progress bar, name) and bottom ~250 px (reply bar) are covered: text stays between `TOP` and `SAFE_BOTTOM`.
 
 ## Monthly compilation (`compilation.py`)
 - On a month's last day (after the 7:30 post) the month's **published** Shorts become one 16:9 video: each Short centred on its own blurred icon, saint name/feast on the left, monogram on the right; a "Saints of <Month>" title card and an end card (tagline + `youtube.footer`) over `assets/music/allsaints-2.mp3`. Chapters per saint, links to each saint's page, the disclosure, Spanish `localizations` when every episode has `es`. Custom thumbnail (five icons + month). No AI, ~1 min of runner time per saint.

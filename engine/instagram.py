@@ -115,6 +115,18 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
     raise RuntimeError(" | ".join(errors))
 
 
+def publish_story(image_url):
+    """A one-image Story (stories.py). Stories take no caption; the image is the whole post."""
+    tok = get_token()
+    r = http.post(f"{GRAPH}/{_uid()}/media", data={"media_type": "STORIES", "image_url": image_url, "access_token": tok}, timeout=60)
+    if not r.ok:
+        raise RuntimeError(f"Story create failed: {r.text[:300]}")
+    ok, st = _wait(r.json()["id"], tok)
+    if not ok:
+        raise RuntimeError(f"Story container failed: {st}")
+    return _publish(r.json()["id"], tok)
+
+
 def publish_carousel(caption, image_urls):
     """A feed carousel of 2-10 JPEGs at public URLs (Instagram fetches them). Returns {media_id, permalink}."""
     tok, uid = get_token(), _uid()
