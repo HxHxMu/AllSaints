@@ -26,7 +26,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
    → instagram.publish_reel → youtube.upload_short + facebook.publish_reel (each independent; ≤3 retries; never re-posts the Reel)
-   → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, seasonal Stories)
+   → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, weekly music card from data/music.json, seasonal Stories)
    → check_queue (once a day after 20:00: Telegram if tomorrow is missing/failed/unapproved, the next days are empty, or yesterday never posted)
 ```
 
@@ -37,7 +37,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Missed days are reported, never posted late (a feast-day post a day late is wrong): the evening check says so.
 
 ## State (`state/`, committed by the bot)
-- `checks.json` (date of the last evening check). `config.json` (post_time — change via Telegram `/time`, check_time (default 20:00), story_time (default 20:30), timezone, youtube_channel, youtube_privacy, support_url, art_source…), `episodes/<id>.json`, `telegram.json`, `ig_token.enc`.
+- `checks.json` (date of the last evening check). `config.json` (post_time — change via Telegram `/time`, check_time (default 20:00), story_time (default 20:30), music_story (default "Sun 15:00", "" = off), timezone, youtube_channel, youtube_privacy, support_url, art_source…), `episodes/<id>.json`, `telegram.json`, `ig_token.enc`.
 - Status flow: `generating → review → approved → publishing → published`; side states `redo_requested`, `failed` (≤3 retries, `attempts`).
 - Episode extras: `slug` / `es.slug` (the web page address, fixed at publish by `common.assign_slugs`, never changed: a name another episode owns gets `-YYYY`, then `-YYYY-MM-DD`; the site and YouTube links read it); `youtube` {id, url, privacy | attempts, error}; `usage` (Claude tokens per call); `narrator` (`gemini:Riko` or `elevenlabs`); `rejected` (saints the fact-check turned down).
 - Fact-check rejects: max 3 saints per date (`MAX_REJECTS`), then the episode fails without auto-retry (`GiveUp`); Telegram `/generate` resets `attempts`. ElevenLabs-narrated episodes get a ⚠️ in the review: free-tier audio isn't licensed for commercial use, redo them.
