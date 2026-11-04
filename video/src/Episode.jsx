@@ -1,11 +1,15 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ArtScene, MapScene, TitleCard, CloseScene, Captions, Atmosphere, Credit, C, src} from './components';
+import {Cover} from './Cover';
 import {loadFonts} from './fonts';
 
 loadFonts();
 
 export const OVERLAP = 18;
+// The video opens on the cover (held, then dissolving into the first scene as the narration starts), so the first
+// frame, which feeds show while a Short loads, is the icon and the name rather than black.
+const OPEN_HOLD = 9, OPEN_FADE = 15;
 
 export const episodeDuration = (props, fps = 30) => Math.ceil(((props.voiceDuration || 58) + 0.8 + (props.outro || 3)) * fps);
 
@@ -53,6 +57,12 @@ export const Episode = (props) => {
 			)}
 
 			<Captions words={words} hideAfter={closeStart} />
+
+			<Sequence from={0} durationInFrames={OPEN_HOLD + OPEN_FADE} layout="none">
+				<AbsoluteFill style={{opacity: interpolate(frame, [OPEN_HOLD, OPEN_HOLD + OPEN_FADE], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
+					<Cover saint={saint} cover={props.cover} />
+				</AbsoluteFill>
+			</Sequence>
 
 			{voice && <Audio src={src(voice)} />}
 			{music && (
