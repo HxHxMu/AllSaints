@@ -1,4 +1,4 @@
-"""Facebook Page Reels (Graph API video_reels). Reels the bot posts to Instagram through the API are not
+"""Facebook Page Reels (Graph API video_reels) and Stories. Reels the bot posts to Instagram through the API are not
 cross-posted by Instagram's "share to Facebook" setting, so the Page gets its own upload of the same video.
 
 Secrets: FB_PAGE_ID, FB_PAGE_TOKEN (a Page token made from a long-lived user token never expires;
@@ -87,6 +87,19 @@ def publish_reel(description, video_url=None, video_path: Path = None, cover_url
     url = f"https://www.facebook.com{link}" if link.startswith("/") else (link or f"https://www.facebook.com/reel/{vid}")
     log("Facebook Reel:", vid)
     return {"id": vid, "url": url}
+
+
+def publish_story(image_url):
+    """A Page photo Story (Instagram's "share story to Facebook" skips API posts, like Reels). The image goes up as an
+    unpublished photo, then becomes the Story. Returns {id}."""
+    page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
+    photo = _check(http.post(f"{GRAPH}/{page}/photos", data={"url": image_url, "published": "false", "access_token": tok},
+                             timeout=120), "story photo upload")["id"]
+    res = _check(http.post(f"{GRAPH}/{page}/photo_stories", data={"photo_id": photo, "access_token": tok}, timeout=60),
+                 "story")
+    sid = res.get("post_id") or photo
+    log("Facebook Story:", sid)
+    return {"id": sid}
 
 
 def post_link(message, link):

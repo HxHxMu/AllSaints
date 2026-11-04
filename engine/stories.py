@@ -2,7 +2,9 @@
 
 - Nightly card (config "story_time", default 20:30): today's saint's icon and the episode's closing line
   ("Saint X, pray for us."), and tomorrow's saint when that episode is already approved. Only after today's Reel is
-  published; state ep["story"] {id, permalink | attempts, error}, max 3 attempts, failures to Telegram.
+  published; state ep["story"] {media_id, permalink, image | attempts, error}, max 3 attempts, failures to Telegram.
+- Every card also goes to the Facebook Page as a Story once it is on Instagram (Instagram's "share to Facebook" skips
+  API posts): state ep["story_fb"] / the entry's "facebook", {id | attempts, error}, independent of Instagram.
 - Seasonal series (state/stories.json): prerendered cards on a GitHub release, each {"id", "at", "image",
   "status"}. "draft" entries wait for Luis's OK in chat (then "pending"); poll posts pending ones once due.
   The O Antiphons (Dec 17-23) are made by `stories.py o-antiphons`.
@@ -124,8 +126,29 @@ def post_night(ep):
     out.mkdir(parents=True, exist_ok=True)
     jpg = out / "story.jpg"
     night_card(ep, _tomorrow(ep), _cover(ep)).save(jpg, quality=92)
-    url = storage.upload(f"ep-{ep['id']}", {"story.jpg": jpg})["story.jpg"]
-    return instagram.publish_story(storage.resolve_direct(url))
+    url = storage.resolve_direct(storage.upload(f"ep-{ep['id']}", {"story.jpg": jpg})["story.jpg"])
+    return {**instagram.publish_story(url), "image": url}
+
+
+def _facebook(st, image_url, what):
+    """Post a card that is already on Instagram to the Facebook Page as a Story. `st` is its state dict ({id | attempts,
+    error}), updated in place; returns True when it changed. Skips what's done, given up, or has no image."""
+    import facebook, telegram
+    if not image_url or st.get("id") or st.get("attempts", 0) >= 3 or not facebook.configured():
+        return False
+    try:
+        st.update(facebook.publish_story(image_url))
+        st.pop("error", None)
+    except Exception as e:
+        traceback.print_exc()
+        st["attempts"] = st.get("attempts", 0) + 1
+        st["error"] = str(e)[:300]
+        try:
+            telegram.send(f"❌ Facebook Story failed ({st['attempts']}x): {what}\n{str(e)[:200]}"
+                          + ("\nWill retry." if st["attempts"] < 3 else ""))
+        except Exception:
+            traceback.print_exc()
+    return True
 
 
 def run_due(now=None):
@@ -151,6 +174,11 @@ def run_due(now=None):
                 telegram.send(f"❌ Night Story failed ({st['attempts']}x): {str(e)[:200]}"
                               + ("\nWill retry." if st["attempts"] < 3 else ""))
             save_episode(ep)
+        if ep and ep.get("story", {}).get("media_id"):
+            fb = ep.get("story_fb") or {}
+            if _facebook(fb, ep["story"].get("image"), f"night card {ep['id']}"):
+                ep["story_fb"] = fb
+                save_episode(ep)
     run_seasonal(now)
 
 
@@ -169,6 +197,12 @@ def run_seasonal(now):
             s["error"] = str(e)[:300]
             telegram.send(f"❌ Story failed ({s['attempts']}x): {s['id']}\n{str(e)[:200]}")
         changed = True
+    for s in items:
+        if s.get("status") == "posted":
+            fb = s.get("facebook") or {}
+            if _facebook(fb, storage.resolve_direct(s["image"]), s["id"]):
+                s["facebook"] = fb
+                changed = True
     if changed:
         save_json(FILE, items)
 
