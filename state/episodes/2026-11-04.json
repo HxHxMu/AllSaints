@@ -1,8 +1,8 @@
 {
  "id": "2026-11-04",
  "date": "2026-11-04",
- "status": "approved",
- "updated": "2026-11-02T13:25:37+00:00",
+ "status": "published",
+ "updated": "2026-11-04T12:33:43+00:00",
  "saint": {
   "qid": "Q203177",
   "name": "Saints Vitalis and Agricola",
@@ -328,7 +328,8 @@
    "Bolonia",
    "Florencia",
    "Milán"
-  ]
+  ],
+  "slug": "vital-y-san-agricola"
  },
  "usage": [
   {
@@ -359,5 +360,29 @@
    "thinking": 2898
   }
  ],
- "narrator": "gemini:Riko"
+ "narrator": "gemini:Riko",
+ "slug": "vitalis-and-agricola",
+ "published": {
+  "media_id": "18111346388525497",
+  "permalink": "https://www.instagram.com/reel/DfUdmaljMb7/"
+ },
+ "published_at": "2026-11-04T07:30-05:00",
+ "facebook": {
+  "id": "1049971604730296",
+  "url": "https://www.facebook.com/reel/1049971604730296/",
+  "published_at": "2026-11-04T07:33-05:00"
+ },
+ "youtube": {
+  "id": "XTgEFh0Lezw",
+  "url": "https://youtube.com/shorts/XTgEFh0Lezw",
+  "privacy": "public",
+  "published_at": "2026-11-04T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
