@@ -139,7 +139,7 @@ def run_due(now=None):
         except Exception:
             ep = None
         st = (ep or {}).get("story") or {}
-        if ep and ep.get("status") == "published" and not st.get("id") and st.get("attempts", 0) < 3:
+        if ep and ep.get("status") == "published" and not st.get("media_id") and st.get("attempts", 0) < 3:
             try:
                 ep["story"] = {**post_night(ep), "posted_at": now.isoformat(timespec="minutes")}
                 log("Night Story:", ep["id"])
