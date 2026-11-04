@@ -1,0 +1,47 @@
+---
+import Base from "../layouts/Base.astro";
+import { SUPPORT_URL, disclosure, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+
+interface Props { lang?: Lang }
+const { lang = "en" } = Astro.props;
+const T = t[lang];
+const other: Lang = lang === "en" ? "es" : "en";
+const copy = {
+  en: {
+    title: "About", description: "All Saints tells the story of one lesser-known saint each day, on their feast day.",
+    heading: "About All Saints",
+    story: "Every morning, All Saints tells the story of one lesser-known Catholic saint on their feast day: a bishop, a martyr, a doorkeeper, a slave who died beside his master. Each story is a one-minute video on Instagram and YouTube, and a longer page here with its sources.",
+    truth: "We separate what history records from what tradition holds, and we never invent a saint's words. Each story ends the way the Church has always ended them: Saint ___, pray for us.",
+    made: "How it's made", follow: "Follow", music: "Music: Blue Chant",
+    candle: "🕯 Light a candle", candleSub: "Help keep the forgotten remembered.",
+  },
+  es: {
+    title: "Acerca de", description: "All Saints cuenta cada día la historia de un santo poco conocido, en su fiesta.",
+    heading: "Acerca de All Saints",
+    story: "Cada mañana, All Saints cuenta la historia de un santo católico poco conocido en su fiesta: un obispo, un mártir, un portero, un esclavo que murió junto a su amo. Cada historia es un video de un minuto en Instagram y YouTube, y una página más extensa aquí, con sus fuentes.",
+    truth: "Distinguimos lo que registra la historia de lo que sostiene la tradición, y nunca inventamos las palabras de un santo. Cada historia termina como la Iglesia siempre las ha terminado: San ___, ruega por nosotros.",
+    made: "Cómo se hace", follow: "Síguenos", music: "Música: Blue Chant",
+    candle: "🕯 Enciende una vela", candleSub: "Ayúdanos a que los olvidados sean recordados.",
+  },
+}[lang];
+---
+<Base title={copy.title} description={copy.description} lang={lang} alt={paths[other].about}>
+  <article class="wrap about">
+    <h1 class="name">{copy.heading}</h1>
+    <p class="devotional lead">{T.tagline}</p>
+    <p>{copy.story}</p>
+    <p>{copy.truth}</p>
+    <h2 class="label">{copy.made}</h2>
+    <p>{disclosure(lang)}</p>
+    <h2 class="label">{copy.follow}</h2>
+    <p><a href="https://www.instagram.com/all.holy.saints/">Instagram @all.holy.saints</a> · <a href="https://www.youtube.com/@AllHolySaints">YouTube @AllHolySaints</a> · <a href="/music/">{copy.music}</a> · <a href="mailto:hello@allholysaints.com">hello@allholysaints.com</a></p>
+    {SUPPORT_URL && <a class="rubric support" href={SUPPORT_URL} rel="noopener"><span>{copy.candle}<small>{copy.candleSub}</small></span><span aria-hidden="true">›</span></a>}
+  </article>
+</Base>
+<style>
+  .about { max-width: 42rem; display: grid; gap: 16px; padding-top: 16px; }
+  .lead { font-size: 1.4375rem; color: var(--gilt-light); }
+  h2 { color: var(--gilt); font-weight: 400; margin-top: 20px; }
+  .support { margin-top: 24px; max-width: 30rem; }
+</style>

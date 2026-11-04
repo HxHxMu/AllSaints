@@ -5,9 +5,9 @@ import brand from "../../../brand/brand.json";
 
 export const paths = {
   en: { home: "/", calendar: "/calendar/", saint: (slug: string) => `/saints/${slug}/`,
-        patrons: "/patrons/", patron: (slug: string) => `/patrons/${slug}/`, places: "/places/", place: (slug: string) => `/places/${slug}/` },
+        patrons: "/patrons/", patron: (slug: string) => `/patrons/${slug}/`, places: "/places/", place: (slug: string) => `/places/${slug}/`, about: "/about/" },
   es: { home: "/es/", calendar: "/es/calendario/", saint: (slug: string) => `/es/santos/${slug}/`,
-        patrons: "/es/patronos/", patron: (slug: string) => `/es/patronos/${slug}/`, places: "/es/lugares/", place: (slug: string) => `/es/lugares/${slug}/` },
+        patrons: "/es/patronos/", patron: (slug: string) => `/es/patronos/${slug}/`, places: "/es/lugares/", place: (slug: string) => `/es/lugares/${slug}/`, about: "/es/acerca/" },
 };
 
 export const t = {
