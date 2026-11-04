@@ -433,9 +433,28 @@ def publish_youtube(ep, video=None):
     note = "" if res["privacy"] == "public" else f" ({res['privacy']}: publish it in YouTube Studio)"
     _notify(f"▶️ On YouTube{note}: {ep['saint']['display_name']}\n{res['url']}")
     try:
+        youtube_cover(ep)
+    except Exception:
+        traceback.print_exc()
+    try:
         youtube_playlists(ep)
     except Exception:
         traceback.print_exc()
+
+
+def youtube_cover(ep):
+    """The episode's cover.jpg as the Short's thumbnail (YouTube otherwise picks a frame). Raises; callers log."""
+    import youtube, storage
+    from common import http
+    yt = ep.get("youtube") or {}
+    if not yt.get("id") or yt.get("cover") or "cover.jpg" not in (ep.get("assets") or {}):
+        return
+    r = http.get(storage.resolve_direct(ep["assets"]["cover.jpg"]), timeout=60)
+    r.raise_for_status()
+    youtube.set_thumbnail(yt["id"], r.content)
+    yt["cover"] = True
+    ep["youtube"] = yt
+    save_episode(ep)
 
 
 def youtube_playlists(ep):
@@ -585,6 +604,8 @@ def main():
     fp.add_argument("episode")
     fc = sub.add_parser("fb-cover", help="set the cover on Facebook Reels already posted (backfill)")
     fc.add_argument("episodes", nargs="+")
+    yc = sub.add_parser("yt-cover", help="set cover.jpg as the thumbnail on Shorts already uploaded (backfill)")
+    yc.add_argument("episodes", nargs="+")
     yp = sub.add_parser("yt-playlists", help="add published Shorts to their playlists (backfill / retry)")
     yp.add_argument("episode", nargs="?", default="all")
     lp = sub.add_parser("yt-localize", help="add the Spanish title/description to uploaded Shorts")
@@ -674,6 +695,9 @@ def main():
         for ep_id in a.episodes:
             ep = load_episode(ep_id)
             facebook.set_cover(ep["facebook"]["id"], storage.resolve_direct(ep["assets"]["cover.jpg"]))
+    elif a.cmd == "yt-cover":
+        for ep_id in a.episodes:
+            youtube_cover(load_episode(ep_id))
     elif a.cmd == "post":
         cmd_post(a.post_id)
     elif a.cmd == "yt-whoami":

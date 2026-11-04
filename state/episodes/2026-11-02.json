@@ -2,7 +2,7 @@
  "id": "2026-11-02",
  "date": "2026-11-02",
  "status": "published",
- "updated": "2026-11-02T12:33:03+00:00",
+ "updated": "2026-11-04T02:24:13+00:00",
  "saint": {
   "qid": "Q469199",
   "name": "Saint Victorinus of Pettau",
@@ -323,7 +323,8 @@
    "Saints of November",
    "Saints of Europe"
   ],
-  "playlists_done": true
+  "playlists_done": true,
+  "cover": true
  },
  "continent": "Europe"
 }

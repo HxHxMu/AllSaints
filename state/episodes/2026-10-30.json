@@ -2,7 +2,7 @@
  "id": "2026-10-30",
  "date": "2026-10-30",
  "status": "published",
- "updated": "2026-11-01T20:24:44+00:00",
+ "updated": "2026-11-04T02:23:57+00:00",
  "saint": {
   "qid": "Q16509164",
   "name": "Saint Marcellus of Tangier",
@@ -240,7 +240,8 @@
    "Saints of October",
    "Saints of Africa"
   ],
-  "playlists_done": true
+  "playlists_done": true,
+  "cover": true
  },
  "continent": "Africa",
  "books": [],

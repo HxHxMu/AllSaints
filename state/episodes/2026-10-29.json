@@ -2,7 +2,7 @@
  "id": "2026-10-29",
  "date": "2026-10-29",
  "status": "published",
- "updated": "2026-11-01T20:24:44+00:00",
+ "updated": "2026-11-04T02:23:53+00:00",
  "saint": {
   "qid": "Q947675",
   "name": "Saint Narcissus of Jerusalem",
@@ -230,7 +230,8 @@
    "Saints of October",
    "Saints of the Middle East"
   ],
-  "playlists_done": true
+  "playlists_done": true,
+  "cover": true
  },
  "continent": "the Middle East",
  "books": [],

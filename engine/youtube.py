@@ -197,14 +197,20 @@ def upload_video(meta, video_path: Path, parts=None, thumbnail: Path = None):
     log("YouTube upload:", vid["id"], vid.get("status", {}).get("uploadStatus"), vid.get("status", {}).get("privacyStatus"))
     if thumbnail:  # custom thumbnails need a phone-verified channel; a failure only logs (the video is up)
         try:
-            t = session.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": vid["id"]},
-                             headers={"Authorization": f"Bearer {token}", "Content-Type": "image/jpeg"},
-                             data=thumbnail.read_bytes(), timeout=120)
-            if t.status_code != 200:
-                log("Thumbnail not set:", t.status_code, t.text[:200])
+            set_thumbnail(vid["id"], thumbnail.read_bytes(), token)
         except Exception as e:
             log("Thumbnail not set:", e)
     return vid
+
+
+def set_thumbnail(video_id, jpg: bytes, token=None):
+    """Custom thumbnail (the episode's cover.jpg for Shorts: without it YouTube shows a frame it picks). Raises on failure."""
+    token = token or _access_token()
+    t = session.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": video_id},
+                     headers={"Authorization": f"Bearer {token}", "Content-Type": "image/jpeg"}, data=jpg, timeout=120)
+    if t.status_code != 200:
+        raise RuntimeError(f"YouTube thumbnail failed {t.status_code}: {t.text[:300]}")
+    log("YouTube thumbnail set:", video_id)
 
 
 def set_privacy(video_id, privacy):
