@@ -1,0 +1,333 @@
+{
+ "id": "2026-11-11",
+ "date": "2026-11-11",
+ "status": "review",
+ "updated": "2026-11-04T10:25:26+00:00",
+ "saint": {
+  "qid": "Q3293239",
+  "name": "Saint Marina of Omura",
+  "display_name": "St. Marina of Omura",
+  "dates": "d. 1634",
+  "region": "Omura and Nagasaki, Japan",
+  "feast": "November 11",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q3293239",
+  "name": "Marina of Omura",
+  "links": 9,
+  "enwiki": "Marina_of_Omura",
+  "images": [],
+  "religions": [],
+  "birth": 1501,
+  "death": 1634,
+  "lon": 129.879638888,
+  "lat": 32.749527777,
+  "selection_reason": "Marina of Omura, a canonized Dominican tertiary (Lawrence Ruiz and Companions, 1987) who hid missionaries and died under torture on 11 November 1634, is a moving, checkable story that falls on her actual feast day and breaks the run of European subjects; Kotowska is only beatified, and Bartholomew would add another Italian saint.",
+  "catholic_veneration": "Canonized in 1987 by Pope John Paul II as one of the Martyrs of Japan (St. Lawrence Ruiz and Companions); she is commemorated in the Roman Martyrology and the Dominican calendar, with sources in Santi e Beati and Nominis."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Marina of Omura",
+   "display_name": "St. Marina of Omura",
+   "dates": "d. 1634",
+   "region": "Omura and Nagasaki, Japan",
+   "feast": "November 11",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "She served hunted missionaries when Japan had banished them.",
+    "visual": "art",
+    "scene": "A young Japanese woman in a plain kimono of the early Edo period kneels in a dim back room of a wooden house with sliding paper screens, offering a bowl of rice to a Dominican friar in a white habit and black cloak."
+   },
+   {
+    "role": "who",
+    "text": "Marina of Omura, a Japanese woman from near Nagasaki, in the seventeenth century.",
+    "visual": "map",
+    "lat": 32.75,
+    "lon": 129.88,
+    "place": "Nagasaki · Japan"
+   },
+   {
+    "role": "story",
+    "text": "Very young, she became a Dominican tertiary and made private religious vows. Her homeland was crossed again and again by fierce persecution.",
+    "visual": "art",
+    "scene": "A young Japanese woman in a simple kimono kneels in prayer before a small wooden crucifix on a low shelf in a modest room with paper screens, her hands folded, soft lamplight on her face."
+   },
+   {
+    "role": "story",
+    "text": "Even so, she served the Dominican missionaries in hiding, with great charity and courage.",
+    "visual": "art",
+    "scene": "The same young woman carries a small tray of food through a narrow wooden corridor toward a hidden room where a Dominican friar waits, in a seventeenth-century Japanese village house."
+   },
+   {
+    "role": "story",
+    "text": "In sixteen thirty-four, she was accused of helping them. She was arrested and bound in chains.",
+    "visual": "art",
+    "scene": "Officials in seventeenth-century Japanese samurai dress lead the young woman, in a plain kimono with chains at her wrists, down a village street of wooden houses with tiled roofs. She walks upright and calm."
+   },
+   {
+    "role": "story",
+    "text": "She was mocked in public for her chastity. On the eleventh of November, she was burned at the stake on the holy hill of Nagasaki.",
+    "visual": "art",
+    "scene": "On a hill above Nagasaki bay, the young woman stands bound to a wooden post, her face calm and lifted. Officials and townspeople watch from a distance, and the sea and mountains lie behind. The scene is solemn, with no graphic detail."
+   },
+   {
+    "role": "turn",
+    "text": "Her holiness was plain service, kept up when service became dangerous. In nineteen eighty-seven, Pope John Paul the Second canonized her, with Lawrence Ruiz and fifteen companions. Fortitude is love that stays when staying costs everything.",
+    "visual": "art",
+    "scene": "A devotional icon of Marina in a kimono holding a martyr's palm, a soft golden light around her. Dominican martyrs in white habits and black cloaks stand beside her, and the hill and bay of Nagasaki lie below."
+   },
+   {
+    "role": "close",
+    "text": "Saint Marina of Omura, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Omura": "Oh-MOO-rah",
+   "Nagasaki": "Nah-gah-SAH-kee",
+   "Marina": "Mah-REE-nah",
+   "Ruiz": "Roo-EES"
+  },
+  "caption_hook": "A young Japanese Dominican tertiary was condemned in Nagasaki on November 11, 1634, for serving missionaries the government had banished.",
+  "summary": "Marina of Omura, a Japanese Dominican tertiary, served banished missionaries and was burned at the stake in Nagasaki in 1634; she was canonized in 1987 with Lawrence Ruiz and his companions.",
+  "youtube_title": "St. Marina of Omura: Martyr Who Served Hunted Missionaries",
+  "hashtags": [
+   "#saintmarinaofomura",
+   "#nagasaki",
+   "#martyrsofjapan",
+   "#japan",
+   "#dominicantertiary",
+   "#lawrenceruiz",
+   "#catholicmartyrs",
+   "#fortitude",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Marina? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Japan had issued an order banishing the Catholic missionaries, who were in hiding.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Marina served the persecuted missionaries with great charity and great courage.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Marina came from Omura, near Nagasaki in Japan, and was Japanese by birth.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She died in 1634, so she lived in the seventeenth century.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Very young, she became a Dominican tertiary and made private religious vows.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her homeland was repeatedly swept by fierce persecutions of Christians.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She served Dominican missionaries.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1634 she was found to be a Christian who had assisted the missionaries, and was arrested and put in chains.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She was publicly mocked for her chastity.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She was burned at the stake on the holy hill of Nagasaki on 11 November 1634.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her execution took place under the supreme ruler Tokugawa Iemitsu.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "She was canonized by Pope John Paul II on 18 October 1987 in Rome, with Lawrence Ruiz and fifteen companions.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The group was beatified by John Paul II on 18 February 1981 in Manila.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Lawrence Ruiz, leader of the group, was the first saint of Filipino origin.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The sixteen martyrs were Dominicans of various nationalities, all killed in Japan.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her individual feast is 11 November in the Roman Martyrology; the group's feast is 28 September.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her emblem is the palm.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She is venerated as the advocate of fortitude and is counted among the first Japanese female saints.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 2015 statues of the martyrs were placed in the Japanese garden beside Nakamachi Church.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "story": [
+   "Marina of Omura is one of the quieter names among the saints. The records of her life are few and short, but what they say is clear. She was Japanese by birth, from Omura, a place near Nagasaki, and she lived in the first half of the seventeenth century. She died in 1634, and she is remembered for one thing above all: she served the missionaries when it had become dangerous to do so.",
+   "The sources tell us that while still very young she became a tertiary of the Order of Saint Dominic, making religious vows privately. Whether she lived in a house of her own or among her family, they do not say, and we should not guess. What they do give us is her direction. Her life was turned toward God, and it was bound up with the Dominican missionaries who had come to her country from the West.",
+   "Those were hard years for Christians in Japan. Her homeland, as one source puts it, was crossed again and again by fierce persecution. An order had gone out banishing the missionaries from the country, and those who stayed did so in hiding. Marina served them anyway. The Church's reference sources speak of her great charity and great courage. One source calls her a guest of the Dominican missionaries, and another says she sheltered them. Either way, she took the side of the hunted priests, in a place and time where doing so could cost her life.",
+   "In 1634 she was found out. She was accused of collaborating with the missionaries, which meant that she was known to be a Christian who had helped them. She was arrested and put in chains. The Roman Martyrology records that she was thrown into prison and publicly exposed to mockery for her chastity. It is a quiet line, and it tells us that she was shamed before others for the very purity she had vowed to God.",
+   "On 11 November 1634, under the rule of the shogun Tokugawa Iemitsu, Marina was burned at the stake on the holy hill of Nagasaki. The sources describe a slow death, and we will not dwell on it. The Church names it with dignity: she died a virgin and a martyr, and her emblem is the palm, the ancient sign of victory in faith.",
+   "Her cause was joined to that of a larger group. Sixteen Dominican martyrs of various nationalities, all killed in Japan, were considered together, led by Lawrence Ruiz of Manila, the first saint of Filipino origin. Pope John Paul II beatified them in Manila on 18 February 1981 and canonized them in Rome on 18 October 1987. Marina is counted among the first Japanese women to be named saints. The group's shared feast is kept on 28 September. Marina's own memorial, in the Roman Martyrology, falls on the day she died, 11 November. She is venerated as an advocate of fortitude.",
+   "Her memory is kept alive in Nagasaki itself. In 2015, statues of the martyrs were placed in the Japanese garden beside Nakamachi Church. The sources record nothing of her preaching or writing. Her holiness was in practice: she sheltered and served those the world had turned away. When serving became dangerous, she did not stop. Fortitude, in her life, was nothing more than love that stayed when staying cost everything."
+  ],
+  "patronages": [
+   "fortitude"
+  ],
+  "places": [
+   "Nagasaki",
+   "Omura",
+   "Japan",
+   "Nakamachi Church"
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Spoken beats: every sentence checks out against the sources. That covers the banishment order, Dominican tertiary at a young age, private vows, repeated persecution, service with charity and courage, the 1634 arrest and chains, public mockery of her chastity, burning on the holy hill of Nagasaki on 11 November, and canonization in 1987 with Lawrence Ruiz and fifteen companions. Word count is about 141, within range. No legend is presented as history, and the martyrdom is described with dignity. The map point (Nagasaki, 32.75, 129.88) is correct, and the feast date follows the Roman Martyrology (11 November) rather than Wikipedia. No beat changes are needed.",
+   "Story paragraph 7: 'Marina did not preach to crowds, and she left no writings that we know of' is not in the sources, which are silent on her preaching or writing. Reworded to say only what the sources record.",
+   "Story paragraph 7: 'took in, fed and served' adds 'fed', which no source states. Changed to 'sheltered and served', which matches the sources."
+  ],
+  "confidence": 90,
+  "reviewer_note": "Beats are clean. Wikipedia gives 28 September as her feast and 1626 as the year she entered the Third Order; the script follows the Catholic references instead ('very young', 11 November). display_name and youtube_title use 'St.' as an on-screen label. Spoken text uses 'Saint'."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2567,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 641,
+   "thinking": 404
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1840,
+   "cache_write": 3107,
+   "cache_read": 0,
+   "out": 10010,
+   "thinking": 6503
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4253,
+   "cache_write": 0,
+   "cache_read": 3107,
+   "out": 3951,
+   "thinking": 3313
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1535,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2665,
+   "thinking": 980
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Marina of Omura",
+   "url": "https://en.wikipedia.org/wiki/Marina_of_Omura"
+  },
+  {
+   "title": "Santi e Beati: Marina of Omura",
+   "url": "https://www.santiebeati.it/dettaglio/90885"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Marina of Omura",
+   "url": "https://nominis.cef.fr/contenus/saint/9043/Sainte-Marine-de-Nagasaki.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.9,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "Santa Marina de Omura",
+  "display_name": "Santa Marina",
+  "region": "Omura y Nagasaki, Japón",
+  "dates": "m. 1634",
+  "hook": "Una joven terciaria dominica japonesa fue condenada en Nagasaki el 11 de noviembre de 1634 por atender a misioneros a los que el gobierno había desterrado.",
+  "summary": "Marina de Omura, terciaria dominica japonesa, sirvió a misioneros desterrados y fue quemada en la hoguera en Nagasaki en 1634. Fue canonizada en 1987 junto con Lorenzo Ruiz y sus compañeros.",
+  "story": [
+   "Marina de Omura es uno de los nombres más silenciosos entre los santos. Los registros de su vida son escasos y breves, pero lo que dicen es claro. Era japonesa de nacimiento, de Omura, un lugar cercano a Nagasaki, y vivió en la primera mitad del siglo XVII. Murió en 1634, y se la recuerda sobre todo por una cosa: sirvió a los misioneros cuando hacerlo se había vuelto peligroso.",
+   "Las fuentes nos cuentan que, siendo todavía muy joven, se hizo terciaria de la Orden de Santo Domingo, y que emitió votos religiosos en privado. No dicen si vivió en una casa propia o junto a su familia, y no conviene adivinarlo. Lo que sí nos transmiten es su orientación: su vida estaba vuelta hacia Dios y unida a los misioneros dominicos que habían llegado a su país desde Occidente.",
+   "Aquellos fueron años difíciles para los cristianos en Japón. Su tierra natal, como dice una fuente, fue azotada una y otra vez por una persecución feroz. Se había dictado una orden que desterraba a los misioneros del país, y quienes se quedaban vivían escondidos. Marina los servía de todos modos. Las fuentes de referencia de la Iglesia hablan de su gran caridad y de su gran valentía. Una fuente la llama huésped de los misioneros dominicos, y otra dice que les dio refugio. En cualquier caso, se puso del lado de los sacerdotes perseguidos, en un lugar y una época en los que hacerlo podía costarle la vida.",
+   "En 1634 fue descubierta. Se la acusó de colaborar con los misioneros, lo que significaba que se sabía que era una cristiana que los había ayudado. Fue arrestada y encadenada. El Martirologio Romano registra que fue encarcelada y expuesta públicamente a la burla por su castidad. Es una frase sobria, y nos dice que fue humillada ante otros por la misma pureza que había prometido a Dios.",
+   "El 11 de noviembre de 1634, bajo el gobierno del shogún Tokugawa Iemitsu, Marina fue quemada en la hoguera en la colina sagrada de Nagasaki. Las fuentes describen una muerte lenta, y no nos detendremos en ello. La Iglesia la recuerda con dignidad: murió virgen y mártir, y su emblema es la palma, antiguo signo de victoria en la fe.",
+   "Su causa quedó unida a la de un grupo más numeroso. Dieciséis mártires dominicos de distintas nacionalidades, todos muertos en Japón, fueron considerados en conjunto, encabezados por Lorenzo Ruiz de Manila, el primer santo de origen filipino. El papa Juan Pablo II los beatificó en Manila el 18 de febrero de 1981 y los canonizó en Roma el 18 de octubre de 1987. Marina figura entre las primeras mujeres japonesas proclamadas santas. La fiesta común del grupo se celebra el 28 de septiembre. La memoria propia de Marina, en el Martirologio Romano, cae el día de su muerte, el 11 de noviembre. Es venerada como intercesora de la fortaleza.",
+   "Su memoria se conserva en la propia Nagasaki. En 2015 se colocaron estatuas de los mártires en el jardín japonés junto a la Iglesia de Nakamachi. Las fuentes no registran nada de su predicación ni de sus escritos. Su santidad se vivió en lo concreto: dio refugio y servicio a quienes el mundo había dado la espalda. Cuando servir se volvió peligroso, no dejó de hacerlo. La fortaleza, en su vida, no fue sino un amor que permaneció cuando quedarse lo costaba todo."
+  ],
+  "prayer": "Santa Marina de Omura, ruega por nosotros.",
+  "patronages": [
+   "fortaleza"
+  ],
+  "places": [
+   "Nagasaki",
+   "Omura",
+   "Japón",
+   "Iglesia de Nakamachi"
+  ]
+ },
+ "books": [],
+ "caption": "A young Japanese Dominican tertiary was condemned in Nagasaki on November 11, 1634, for serving missionaries the government had banished.\n\nSaint Marina of Omura · Feast day: November 11\nMarina of Omura, a Japanese Dominican tertiary, served banished missionaries and was burned at the stake in Nagasaki in 1634; she was canonized in 1987 with Lawrence Ruiz and his companions.\n\nSaint Marina of Omura, pray for us. 🕯\n\nHad you ever heard of St. Marina of Omura before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmarinaofomura #nagasaki",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/art.jpg"
+ },
+ "review_message_id": 75
+}
