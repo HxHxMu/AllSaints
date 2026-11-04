@@ -22,7 +22,7 @@ export type Text = {
 };
 export type Saint = Text & {
   id: string; date: string; martyr: boolean; es: Text | null;
-  youtubeId: string | null; duration: number | null; sources: { title: string; url?: string }[];
+  youtubeId: string | null; uploaded: string | null; duration: number | null; sources: { title: string; url?: string }[];
   credits: string[]; cover: string | null; art: ImageMetadata | null;
   continent: string | null; books: { title: string; author: string; isbn: string }[];
 };
@@ -70,6 +70,8 @@ function toSaint(ep: any): Saint {
       prayer: es.prayer || "", patronages: es.patronages || [], places: es.places || [],
     },
     youtubeId: ep.youtube?.id || null,
+    // full ISO 8601 with seconds and zone (stored as "2026-11-04T07:33-05:00"); Google rejects a bare date
+    uploaded: ep.youtube?.id ? new Date(ep.youtube.published_at || `${ep.date}T12:30:00Z`).toISOString() : null,
     duration: ep.duration || null, sources: (ep.sources || []).map(readableSource), credits: [...new Set<string>(ep.art_credits || [])],
     cover: ep.assets?.["cover.jpg"] || null, art: art[`../assets/art/${ep.id}.jpg`]?.default || null,
     continent: ep.continent || null, books: ep.books || [],

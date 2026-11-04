@@ -33,7 +33,7 @@ const jsonld = {
   ...(saint.youtubeId && {
     video: {
       "@type": "VideoObject", name: `${saint.name} in one minute`, description: saint.hook,
-      thumbnailUrl: saint.cover ? [saint.cover] : undefined, uploadDate: saint.date,
+      thumbnailUrl: saint.cover ? [saint.cover] : undefined, uploadDate: saint.uploaded,
       embedUrl: `https://www.youtube-nocookie.com/embed/${saint.youtubeId}`,
       contentUrl: `https://www.youtube.com/shorts/${saint.youtubeId}`,
     },
