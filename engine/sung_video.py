@@ -206,15 +206,20 @@ def teaser_intro(lines):
     return img
 
 
-def teaser_end(lines=("The whole hymn, all eight stanzas,", "on YouTube.")):
+def teaser_end(where=("The whole hymn on YouTube · @AllHolySaints",)):
+    """Closing card: the mark, why to follow (the channel's promise), then where the full piece lives."""
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    f = _font("Cormorant-MediumItalic.ttf", 46)
-    y = ICON_H + 200
-    for line in lines:
+    _monogram(d, VX, ICON_H + 196, 40, C["gilt"])
+    f = _font("Cormorant-MediumItalic.ttf", 50)
+    y = ICON_H + 290
+    for line in ("A forgotten saint every morning,", "and the prayers they wrote, sung."):
         d.text((VX, y), line, font=f, fill=C["giltLight"])
-        y += 60
-    d.text((VX, y + 30), "allholysaints.com", font=_font("EBGaramond-Medium.ttf", 30), fill=C["ash"])
+        y += 64
+    y += 40
+    for line in where:
+        d.text((VX, y), line, font=_font("EBGaramond-Medium.ttf", 34), fill=C["vellum"])
+        y += 46
     return img
 
 
