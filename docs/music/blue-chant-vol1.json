@@ -1,0 +1,75 @@
+{
+ "album": "Blue Chant",
+ "volume": "Volume I",
+ "dir": "work/blue-chant",
+ "audio": "album.wav",
+ "art": "art.jpg",
+ "full_hour": "https://youtu.be/x-H1HoczgAo",
+ "clip": 25.0,
+ "end": 3.0,
+ "intro": [
+  "Gregorian chant,",
+  "played as jazz."
+ ],
+ "under": [
+  "For prayer, study",
+  "and the quiet hours."
+ ],
+ "tracks": [
+  {
+   "n": 1,
+   "title": "Ave Maria",
+   "at": 0,
+   "length": 220.76,
+   "from": 129.0
+  },
+  {
+   "n": 2,
+   "title": "Benedicta in Mulieribus",
+   "at": 220.76,
+   "length": 299.96
+  },
+  {
+   "n": 3,
+   "title": "Veritatis",
+   "at": 520.72,
+   "length": 252.0
+  },
+  {
+   "n": 4,
+   "title": "Trinitas",
+   "at": 772.72,
+   "length": 300.96
+  },
+  {
+   "n": 5,
+   "title": "Rosa Mystica",
+   "at": 1073.68,
+   "length": 271.4
+  },
+  {
+   "n": 6,
+   "title": "Mysterium Fidei",
+   "at": 1345.08,
+   "length": 264.76
+  },
+  {
+   "n": 7,
+   "title": "Domine, lux in tenebris",
+   "at": 1609.84,
+   "length": 295.2
+  },
+  {
+   "n": 8,
+   "title": "Lux Eterna",
+   "at": 1905.04,
+   "length": 257.0
+  },
+  {
+   "n": 9,
+   "title": "De Profundo Cordis",
+   "at": 2162.04,
+   "length": 307.96
+  }
+ ]
+}
