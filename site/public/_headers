@@ -10,3 +10,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+/dash/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, no-store
+/dash/
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, no-store

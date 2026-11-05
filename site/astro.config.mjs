@@ -17,7 +17,7 @@ export default defineConfig({
   site: "https://allholysaints.com",
   trailingSlash: "always",
   integrations: [sitemap({
-    filter: (page) => !/\/(check-email|subscribed)\/$/.test(page) && !empty.some((p) => new URL(page).pathname === p),
+    filter: (page) => !/\/(check-email|subscribed|dash)\/$/.test(page) && !empty.some((p) => new URL(page).pathname === p),
   })],
   build: { inlineStylesheets: "always" },
   vite: { server: { fs: { allow: [".."] } } },

@@ -4,8 +4,30 @@
     {
       "name": "site",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "site", "run", "preview", "--", "--port", "4321"],
+      "runtimeArgs": [
+        "--prefix",
+        "site",
+        "run",
+        "preview",
+        "--",
+        "--port",
+        "4321"
+      ],
       "port": 4321
+    },
+    {
+      "name": "dash",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "site",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "4330"
+      ],
+      "port": 4330
     }
   ]
 }

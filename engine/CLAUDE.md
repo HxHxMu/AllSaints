@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|gsc-auth|metrics|dash-key|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -43,13 +43,13 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Fact-check rejects: max 3 saints per date (`MAX_REJECTS`), then the episode fails without auto-retry (`GiveUp`); Telegram `/generate` resets `attempts`. ElevenLabs-narrated episodes get a ⚠️ in the review: free-tier audio isn't licensed for commercial use, redo them.
 
 ## Secrets (GitHub → Environments → **Production**; locally `.env`)
-`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`.
+`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`. Dashboard: `DASH_INGEST_KEY` (also in Cloudflare Pages; `pipeline.py dash-key`), `GSC_REFRESH_TOKEN` (`pipeline.py gsc-auth`).
 
 ## Backfill
 `pipeline.py backfill-story <ep_id|all>`: for episodes made before the website story/Spanish existed (10-29…11-04, done 2026-11-01). Fresh sources → `script.write_story` → fact-check of the whole script; only story fixes apply (the video is made), beat problems go in `ep.recheck` (`beats_need_fixing`) for Luis to judge (🔁 Redo if serious).
 
 ## Workflows
-`generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below), `site.yml` (website build check: on pushes touching site/state/brand, and called by poll after a commit that rebuilds the site; a failure sends Telegram ⚠️ — bot pushes use GITHUB_TOKEN, which starts no push workflows, hence the call). `scripts/commit-state.sh` commits state with rebase retries.
+`generate.yml` (daily 09:17 UTC + dispatch), `poll.yml` (odd minutes + extra runs at post time), `maintenance.yml` (weekly IG token refresh, monthly calendar, nightly 10:17 UTC dashboard `metrics`; tasks `whoami`, `yt-whoami`), `compilation.yml` (15:07 UTC on the 28th–31st and 1st–3rd; see below), `site.yml` (website build check: on pushes touching site/state/brand, and called by poll after a commit that rebuilds the site; a failure sends Telegram ⚠️ — bot pushes use GITHUB_TOKEN, which starts no push workflows, hence the call). `scripts/commit-state.sh` commits state with rebase retries.
 
 ## YouTube
 - Google Cloud project "All Saints"; OAuth app External, In production, unverified (fine, 100-user cap). Don't add a logo on Branding (forces verification); ignore the github.com home-page verification failure.
@@ -87,3 +87,6 @@ Instagram: 5 hashtags max (`#AllHolySaints` + `caption.hashtags_base` + 2 saint 
 - Model auto-picks the newest Sonnet; sources sent once as a cached context block shared by script and fact-check; per-call usage stored in `ep.usage`. Output/thinking tokens dominate cost.
 - `pipeline.py cost`: Claude $ per episode from `ep.usage` (prices in `pipeline.PRICES`) plus Gemini as a flat `GEMINI_PER_EPISODE` (~$0.22: Nano Banana 2 Lite art + 3.8 Flash TTS, measured in Google Cloud billing Oct 29–31; a 7-episode batch day costs ~$1.80 and can hit Tier 1 429s). 2026-11-01: ~$0.17/episode Claude + ~$0.22 Gemini ≈ $0.39/episode, ~$12 per 30 days all in (script ~9¢, fact-check ~7¢, select ~1.4¢).
 - Haiku tier exists (`claude_json(..., tier="haiku")`, used by translate_es). `select_saint` stays on Sonnet: tested 2026-10-30 on Nov 7–10, Haiku matched or was fine on 3 dates but picked Herodion of Patras for Nov 10 (mostly legend, main feast April 8; Sonnet chose Justus of Canterbury). It would save ~1.3¢/episode (~$0.40/mo), and one bad pick costs a fact-check reject plus a new script (~15¢). Not built: effort medium vs high comparison (needs a paid side-by-side, quote cost first); Batch API.
+
+## Dashboard (`metrics.py`, nightly via Maintenance, no AI)
+Private page at allholysaints.com/dash/ (code `site/src/pages/dash/`, `site/functions/api/dash-*.ts`, `kofi.ts`; setup in `docs/website.md`). `metrics.collect` gathers the queue (next 8 days, problems), cost (`call_cost` + `GEMINI_PER_EPISODE`), per-Short numbers (YouTube Data API views/likes; Analytics API avg % viewed, shares, subscribers, views per day, countries; Instagram Reel insights; WHO-line word counts for the retention question) and Search Console (28 days: daily, queries, pages, countries), then POSTs it to `/api/dash-ingest` (bearer `DASH_INGEST_KEY`) → Cloudflare KV `DASH`. **Never written to `state/`: the repo is public.** Each source fails on its own and shows as a note on the page. YouTube Analytics needs the `yt-analytics.readonly` scope (added 2026-11-05: rerun `yt-auth` once); Search Console uses Luis's own Google account (`gsc-auth`, same OAuth client, `GSC_REFRESH_TOKEN`). Local check: `pipeline.py metrics --out work/metrics.json`.

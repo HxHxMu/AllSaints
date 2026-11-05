@@ -602,6 +602,11 @@ def main():
     ya = sub.add_parser("yt-auth")
     ya.add_argument("client_secret", help="OAuth client JSON downloaded from Google Cloud (Desktop app)")
     sub.add_parser("yt-whoami")
+    ga = sub.add_parser("gsc-auth", help="one-time: Search Console access for the dashboard (pick Luis's own Google account)")
+    ga.add_argument("client_secret")
+    mp = sub.add_parser("metrics", help="collect the dashboard's numbers and send them to allholysaints.com/dash/")
+    mp.add_argument("--out", help="write the JSON to this file instead of sending it")
+    sub.add_parser("dash-key", help="one-time: make the dashboard's ingest key (.env, GitHub, Cloudflare Pages)")
     sub.add_parser("fb-auth", help="one-time: store a never-expiring Facebook Page token (FB_PAGE_ID/FB_PAGE_TOKEN)")
     sub.add_parser("fb-whoami")
     fp = sub.add_parser("facebook", help="post one published episode's Reel to the Facebook Page now")
@@ -647,6 +652,15 @@ def main():
     elif a.cmd == "yt-auth":
         import youtube
         youtube.authorize(a.client_secret)
+    elif a.cmd == "gsc-auth":
+        import youtube
+        youtube.authorize(a.client_secret, scopes=youtube.GSC_SCOPE, refresh_key="GSC_REFRESH_TOKEN")
+    elif a.cmd == "metrics":
+        import metrics
+        metrics.run(a.out)
+    elif a.cmd == "dash-key":
+        import metrics
+        metrics.setup_key()
     elif a.cmd == "yt-playlists":
         eps = [load_episode(a.episode)] if a.episode != "all" else load_episodes().values()
         for ep in eps:

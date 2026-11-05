@@ -3,10 +3,11 @@ on:
   schedule:
     - cron: "41 11 * * 1"   # weekly: refresh Instagram token
     - cron: "23 12 1 * *"   # monthly: rebuild saints calendar
+    - cron: "17 10 * * *"   # nightly: dashboard numbers (allholysaints.com/dash/)
   workflow_dispatch:
     inputs:
       task:
-        description: "refresh-token | build-calendar | whoami | yt-whoami | fb-whoami | post <id>"
+        description: "refresh-token | build-calendar | metrics | whoami | yt-whoami | fb-whoami | post <id>"
         required: true
         default: whoami
 permissions:
@@ -25,6 +26,8 @@ jobs:
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      GSC_REFRESH_TOKEN: ${{ secrets.GSC_REFRESH_TOKEN }}
+      DASH_INGEST_KEY: ${{ secrets.DASH_INGEST_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,7 +37,8 @@ jobs:
       - name: Run
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then T="${{ github.event.inputs.task }}";
-          elif [ "${{ github.event.schedule }}" = "41 11 * * 1" ]; then T=refresh-token; else T=build-calendar; fi
+          elif [ "${{ github.event.schedule }}" = "41 11 * * 1" ]; then T=refresh-token;
+          elif [ "${{ github.event.schedule }}" = "17 10 * * *" ]; then T=metrics; else T=build-calendar; fi
           python engine/pipeline.py $T
       - name: Save state
         if: always()
@@ -43,4 +47,4 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash scripts/notify-failure.sh "A maintenance job failed (weekly Instagram token refresh or monthly saints calendar). If it's the token, Instagram stops posting once it expires." maintenance.yml
+        run: bash scripts/notify-failure.sh "A maintenance job failed (weekly Instagram token refresh, monthly saints calendar or nightly dashboard numbers). If it's the token, Instagram stops posting once it expires." maintenance.yml

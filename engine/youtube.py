@@ -13,9 +13,11 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
 UPLOAD_URL = "https://www.googleapis.com/upload/youtube/v3/videos"
 API = "https://www.googleapis.com/youtube/v3"
-# youtube.force-ssl = manage playlists (added 2026-10-30; older refresh tokens lack it until `yt-auth` is rerun)
+# youtube.force-ssl = manage playlists (added 2026-10-30); yt-analytics.readonly = the dashboard's retention/shares
+# (added 2026-11-05). Older refresh tokens lack them until `yt-auth` is rerun.
 SCOPES = ("https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly "
-          "https://www.googleapis.com/auth/youtube.force-ssl")
+          "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/yt-analytics.readonly")
+GSC_SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 CATEGORY_EDUCATION = "27"
 
 
@@ -378,16 +380,17 @@ def me(token=None):
             "subscribers": items[0]["statistics"].get("subscriberCount")} if items else "No channel on this Google account"
 
 
-def authorize(client_secret_file):
+def authorize(client_secret_file, scopes=SCOPES, refresh_key="YT_REFRESH_TOKEN"):
     """One-time local OAuth: opens the browser, catches the redirect on localhost, and stores the three
     YT_* values in .env and (if `gh` is installed) as GitHub secrets in the Production environment.
-    Use a "Desktop app" OAuth client, and pick the channel's Brand Account when Google asks."""
+    Use a "Desktop app" OAuth client, and pick the channel's Brand Account when Google asks.
+    Search Console (`gsc-auth`) reuses this with GSC_SCOPE / GSC_REFRESH_TOKEN and Luis's own account."""
     c = json.loads(Path(client_secret_file).read_text())
     c = c.get("installed") or c.get("web") or c
     port, state = 8765, secrets.token_urlsafe(16)
     redirect = f"http://127.0.0.1:{port}"
     url = AUTH_URL + "?" + urllib.parse.urlencode({"client_id": c["client_id"], "redirect_uri": redirect, "response_type": "code",
-                                                   "scope": SCOPES, "access_type": "offline", "prompt": "select_account consent", "state": state})
+                                                   "scope": scopes, "access_type": "offline", "prompt": "select_account consent", "state": state})
     got = {}
 
     class H(http.server.BaseHTTPRequestHandler):
@@ -396,7 +399,7 @@ def authorize(client_secret_file):
             got.update({k: v[0] for k, v in q.items()})
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(b"All Saints: YouTube authorized. You can close this tab.")
+            self.wfile.write(b"All Saints: Google access authorized. You can close this tab.")
 
         def log_message(self, *a):
             pass
@@ -414,14 +417,14 @@ def authorize(client_secret_file):
     refresh = r.json().get("refresh_token")
     if not refresh:
         raise SystemExit("Google returned no refresh token; remove the app at myaccount.google.com/permissions and retry.")
-    vals = {"YT_CLIENT_ID": c["client_id"], "YT_CLIENT_SECRET": c["client_secret"], "YT_REFRESH_TOKEN": refresh}
+    vals = {"YT_CLIENT_ID": c["client_id"], "YT_CLIENT_SECRET": c["client_secret"], refresh_key: refresh}
     envf = ROOT / ".env"
     lines = [l for l in (envf.read_text().splitlines() if envf.exists() else []) if l.split("=", 1)[0].strip() not in vals]
     envf.write_text("\n".join(lines + [f"{k}={v}" for k, v in vals.items()]) + "\n")
-    print("Saved YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN to .env")
+    print(f"Saved {' / '.join(vals)} to .env")
     if shutil.which("gh"):
         for k, v in vals.items():
             subprocess.run(["gh", "secret", "set", k, "--env", "Production"], input=v, text=True, check=True, cwd=ROOT)
-        print("Set the same three as GitHub secrets (environment: Production).")
+        print(f"Set the same as GitHub secrets (environment: Production): {', '.join(vals)}")
     else:
-        print("`gh` not found: add the three values as GitHub secrets in the Production environment by hand.")
+        print(f"`gh` not found: add {', '.join(vals)} as GitHub secrets in the Production environment by hand.")
