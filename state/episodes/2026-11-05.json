@@ -1,8 +1,8 @@
 {
  "id": "2026-11-05",
  "date": "2026-11-05",
- "status": "approved",
- "updated": "2026-10-31T04:19:20+00:00",
+ "status": "published",
+ "updated": "2026-11-05T12:32:50+00:00",
  "saint": {
   "qid": "Q204891",
   "name": "Saint Guido Maria Conforti",
@@ -248,7 +248,8 @@
    "Casalora di Ravadese",
    "Rávena",
    "Shanghái"
-  ]
+  ],
+  "slug": "guido-maria-conforti"
  },
  "usage": [
   {
@@ -279,5 +280,29 @@
    "thinking": 1141
   }
  ],
- "books": []
+ "books": [],
+ "slug": "guido-maria-conforti",
+ "published": {
+  "media_id": "18079134827773662",
+  "permalink": "https://www.instagram.com/reel/DfXCTQXD_6I/"
+ },
+ "published_at": "2026-11-05T07:30-05:00",
+ "facebook": {
+  "id": "2075566283157514",
+  "url": "https://www.facebook.com/reel/2075566283157514/",
+  "published_at": "2026-11-05T07:32-05:00"
+ },
+ "youtube": {
+  "id": "QZIP-ewWVvo",
+  "url": "https://youtube.com/shorts/QZIP-ewWVvo",
+  "privacy": "public",
+  "published_at": "2026-11-05T07:32-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe"
 }
