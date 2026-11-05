@@ -1,0 +1,133 @@
+{
+  "_note": "Spec for engine/sung_video.py. Times in seconds of work/sung/03/audio.wav, from a prompted faster-whisper pass over the mix, 2026-11-04. English-only: the words go in \"latin\", \"english\" stays empty. Text must match 03-a-prayer-to-jesus.md exactly.",
+  "dir": "work/sung/03",
+  "audio": "audio.wav",
+  "art": "art.jpg",
+  "art_crop": [
+    362,
+    135,
+    1656,
+    1760
+  ],
+  "title": "A Prayer to Jesus",
+  "title_en": "In her own words",
+  "byline": "A prayer of St. Elizabeth Ann Seton",
+  "dates": "1774–1821",
+  "cards": [
+    [
+      0,
+      12.5
+    ],
+    [
+      131,
+      170
+    ]
+  ],
+  "stanzas": [
+    {
+      "n": 1,
+      "at": 14.1,
+      "latin": [
+        "O Blessed Jesus, my tender Redeemer,",
+        "My Merciful Lord, I flee for succour,",
+        "I acknowledge and adore thee",
+        "as true God."
+      ],
+      "english": []
+    },
+    {
+      "n": 2,
+      "at": 41.6,
+      "latin": [
+        "My faith, My Hope, and all my desires",
+        "are fixed on thee alone",
+        "not as I would indeed;"
+      ],
+      "english": []
+    },
+    {
+      "n": 3,
+      "at": 62.9,
+      "latin": [
+        "for Alas! my faith is imperfect,",
+        "my Hope feeble,",
+        "my desires still cold and lukewarm,",
+        "and My Heart yet filled",
+        "with earthly affections—"
+      ],
+      "english": []
+    },
+    {
+      "n": 4,
+      "at": 93.3,
+      "latin": [
+        "But oh!—do thou strengthen",
+        "my weakness, supply my defects,",
+        "inflame my zeal,",
+        "and where I cannot attain",
+        "to what I ought, accept what I do",
+        "for what I would do if I were able."
+      ],
+      "english": [],
+      "until": 128.5
+    },
+    {
+      "n": 5,
+      "at": 172.6,
+      "latin": [
+        "Oh! how plentiful is thy Goodness,",
+        "O how transporting sweet is thy mercy,",
+        "Dearest Lord Jesus,",
+        "to every soul that seeks",
+        "and thirsts after thee."
+      ],
+      "english": []
+    },
+    {
+      "n": 6,
+      "at": 206.6,
+      "latin": [
+        "JESUS, thou release of them",
+        "that are in captivity,",
+        "thou restorer of them that are lost,",
+        "thou Hope of them that are in exile,",
+        "thou strength of them that are weak,"
+      ],
+      "english": []
+    },
+    {
+      "n": 7,
+      "at": 236.8,
+      "latin": [
+        "thou refreshment of them",
+        "who languishing faint,",
+        "thou comfort of every sorrowful soul—"
+      ],
+      "english": []
+    },
+    {
+      "n": 8,
+      "at": 266.9,
+      "latin": [
+        "O JESUS sure joy of my soul",
+        "give me but a true love of thee",
+        "let me seek thee as my only good.",
+        "My Dear my Amiable JESUS"
+      ],
+      "english": [],
+      "until": 314.0
+    }
+  ],
+  "credits_at": 316,
+  "credits": [
+    [
+      "Words",
+      "St. Elizabeth Ann Seton (1774–1821)"
+    ],
+    [
+      "Music",
+      "Luis E. Bonilla"
+    ]
+  ],
+  "closing": "Saint Elizabeth Ann Seton, pray for us."
+}

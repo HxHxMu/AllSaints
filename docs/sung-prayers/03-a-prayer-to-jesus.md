@@ -2,6 +2,7 @@
 
 **Lyric master** · release 3 · planned **Monday, Jan 4, 2027** (her feast)
 Status: **text in hand, not yet locked.** Typed from the DePaul PDF of *Collected Writings* (copied by Luis, 2026-11-04); the OCR slips below are corrected. Check once against the page image before Dec 7.
+Music done 2026-11-04 (Suno + Luis; sung words checked by Luis). Lyric video rendered (`work/sung/03/03-a-prayer-to-jesus.mp4`, 6:00, full export) from [03-a-prayer-to-jesus.json](03-a-prayer-to-jesus.json), timed with a prompted Whisper pass over the mix (no stems needed for English).
 
 | | |
 |---|---|
@@ -28,7 +29,7 @@ English only, so the screen can carry the words large. Line breaks follow the su
 1. O Blessed Jesus, my tender Redeemer, / My Merciful Lord, I flee for succour, / I acknowledge and adore thee as true God.
 2. My faith, My Hope, and all my desires / are fixed on thee alone / not as I would indeed;
 3. for Alas! my faith is imperfect, my Hope feeble, / my desires still cold and lukewarm, / and My Heart yet filled with earthly affections—
-4. But oh!—do thou strengthen my weakness, / supply my defects, inflame my zeal, / and where I cannot attain to what I ought, / accept what I do for what I would do if I were able.
+4. But oh!—do thou strengthen / my weakness, supply my defects, / inflame my zeal, / and where I cannot attain / to what I ought, accept what I do / for what I would do if I were able.
 5. Oh! how plentiful is thy Goodness, / O how transporting sweet is thy mercy, / Dearest Lord Jesus, / to every soul that seeks and thirsts after thee.
 6. JESUS, thou release of them that are in captivity, / thou restorer of them that are lost, / thou Hope of them that are in exile, / thou strength of them that are weak,
 7. thou refreshment of them who languishing faint, / thou comfort of every sorrowful soul—
