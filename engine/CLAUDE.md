@@ -20,7 +20,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → illustrate.illustrate   Gemini image per beat (brand.json → illustration); overrides from art/<ep_id>/
    (art.collect_candidates / assign_art only when config art_source = "commons")
  → tts.synthesize          Gemini TTS per beat + faster-whisper timings (fallback ElevenLabs), paced, loudnorm −16 LUFS
- → music.pick_bed        Luis's beds from assets/music/ (auto-prepared by music.py)
+ → music.pick_bed        Luis's beds from assets/music/, rotated by date (neighbours differ; auto-prepared by music.py)
  → render.build_props/render  Remotion → video.mp4 (1080×1920 h264) + cover.jpg + preview.mp4
  → storage.upload          GitHub Release `ep-YYYY-MM-DD`
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint

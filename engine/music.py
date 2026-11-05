@@ -1,5 +1,6 @@
 """Music bed selection (Luis's beds in assets/music) with a generated placeholder fallback."""
 import subprocess, hashlib
+from datetime import date
 import numpy as np
 from scipy.io import wavfile
 from scipy.signal import fftconvolve, butter, sosfilt
@@ -12,7 +13,10 @@ def pick_bed(seed: str):
     beds = sorted([p for p in MUSIC.iterdir() if p.suffix.lower() in (".mp3", ".wav", ".m4a", ".aac") and not p.name.startswith(("placeholder", "._"))]) if MUSIC.exists() else []
     if not beds:
         beds = sorted(MUSIC.glob("placeholder*.mp3")) or [make_placeholder()]
-    i = int(hashlib.md5(seed.encode()).hexdigest(), 16) % len(beds)
+    try:  # episode ids are dates: rotate by day so neighbouring Shorts (back to back in the compilation) never share a bed
+        i = date.fromisoformat(seed[:10]).toordinal() % len(beds)
+    except ValueError:
+        i = int(hashlib.md5(seed.encode()).hexdigest(), 16) % len(beds)
     return prepare(beds[i])
 
 
