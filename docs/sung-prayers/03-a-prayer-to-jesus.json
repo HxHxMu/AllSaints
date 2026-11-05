@@ -137,5 +137,23 @@
     "uploaded": "2026-11-04",
     "category": "10 (Music)",
     "publish_at": "2027-01-04T07:30 America/New_York (YouTube scheduled)"
+  },
+  "teaser": {
+    "from": 14.0,
+    "to": 40.9,
+    "stanzas": [
+      1
+    ],
+    "intro": [
+      "Her feast day.",
+      "A prayer St. Elizabeth Ann Seton",
+      "wrote in her own hand, sung."
+    ],
+    "intro_for": 3.8,
+    "end": 3.0,
+    "end_text": [
+      "The whole prayer,",
+      "on YouTube."
+    ]
   }
 }

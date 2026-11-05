@@ -34,5 +34,23 @@
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser.mp4",
   "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser-cover.jpg",
   "status": "pending"
+ },
+ {
+  "id": "a-prayer-to-jesus-facebook",
+  "at": "2027-01-04T07:45:00-05:00",
+  "platform": "facebook",
+  "message": "Today is the feast of St. Elizabeth Ann Seton. She wrote this prayer in her own hand, confessing a faith she felt was imperfect and asking Jesus to \"accept what I do for what I would do if I were able.\" Every word sung is hers. 🕯",
+  "link": "https://youtu.be/KEyQwebQy18",
+  "status": "pending"
+ },
+ {
+  "id": "a-prayer-to-jesus-instagram",
+  "at": "2027-01-04T07:45:00-05:00",
+  "platform": "instagram",
+  "message": "Her feast day. St. Elizabeth Ann Seton, widow, mother of five and the first person born in the United States to be canonized, wrote this prayer in her own hand. Here is how it begins, sung in her own words. The whole prayer is on YouTube: @AllHolySaints, link in bio.\n\n\"Accept what I do for what I would do if I were able.\" 🕯\n\nWords: St. Elizabeth Ann Seton (1774–1821). Composed and produced by Luis E. Bonilla for All Saints, made with AI tools (Suno); icon AI-generated in the Byzantine style.\n\n#StElizabethAnnSeton #MotherSeton #CatholicSaints #Prayer",
+  "link": "https://youtu.be/KEyQwebQy18",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser-cover.jpg",
+  "status": "pending"
  }
 ]
