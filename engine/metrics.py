@@ -110,7 +110,7 @@ def youtube(rows, notes):
     def report(**p):
         r = http.get(YTA_API, params={"ids": "channel==MINE", "startDate": start, "endDate": end, **p}, headers=h, timeout=60)
         if r.status_code == 403:
-            raise PermissionError
+            raise PermissionError("api off" if "has not been used" in r.text or "disabled" in r.text else "scope")
         r.raise_for_status()
         js = r.json()
         cols = [c["name"] for c in js.get("columnHeaders", [])]
@@ -129,8 +129,10 @@ def youtube(rows, notes):
                  for r in report(dimensions="day", metrics="views,subscribersGained,subscribersLost", sort="day")]
         countries = report(dimensions="country", metrics="views", sort="-views", maxResults=10)
         channel["countries"] = [{"country": r["country"], "views": r["views"]} for r in countries]
-    except PermissionError:
-        notes.append("YouTube retention, shares and subscribers need one more permission: run `pipeline.py yt-auth` again.")
+    except PermissionError as e:
+        notes.append("YouTube retention needs the YouTube Analytics API switched on in Google Cloud (project All Saints → APIs → Enable)."
+                     if str(e) == "api off" else
+                     "YouTube retention, shares and subscribers need one more permission: run `pipeline.py yt-auth` again.")
     channel["daily"] = daily
     return channel
 
@@ -204,6 +206,8 @@ def search(notes):
     start, end = (today() - dt.timedelta(days=DAYS)).isoformat(), today().isoformat()
     def q(dims, limit=1000):
         r = http.post(url, json={"startDate": start, "endDate": end, "dimensions": dims, "rowLimit": limit}, headers=h, timeout=60)
+        if r.status_code == 403 and ("has not been used" in r.text or "disabled" in r.text):
+            raise RuntimeError("the Google Search Console API is off in Google Cloud (project All Saints → APIs → Enable)")
         r.raise_for_status()
         return r.json().get("rows", [])
     out = {"daily": [{"date": x["keys"][0], "clicks": x["clicks"], "impressions": x["impressions"]} for x in q(["date"])]}
