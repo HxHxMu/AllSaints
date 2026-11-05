@@ -1,0 +1,454 @@
+{
+ "id": "2026-11-12",
+ "date": "2026-11-12",
+ "status": "review",
+ "updated": "2026-11-05T10:25:28+00:00",
+ "saint": {
+  "qid": "Q355884",
+  "name": "Saint Josaphat Kuntsevych",
+  "display_name": "St. Josaphat Kuntsevych",
+  "dates": "c. 1580 – 1623",
+  "region": "Polotsk, Belarus",
+  "feast": "November 12",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q355884",
+  "name": "Josaphat Kuntsevych",
+  "links": 31,
+  "enwiki": "Josaphat_Kuntsevych",
+  "images": [
+   "JKuncewicz.jpg"
+  ],
+  "religions": [
+   "Catholic Church",
+   "Ukrainian Greek Catholic Church"
+  ],
+  "commonscat": "Josaphat Kuntsevych",
+  "birth": 1580,
+  "death": 1623,
+  "lon": 30.166666666,
+  "lat": 55.183333333,
+  "selection_reason": "Josaphat Kuntsevych has the most vivid, well-documented story of the group (a Basilian archbishop of Polotsk martyred with an axe in Vitebsk in 1623, his body thrown into the Dvina), strong Catholic sources (Dicastery for the Causes of Saints, Catholic Encyclopedia, Santi e Beati), and a fresh Eastern Catholic, 17th-century, Belarus/Poland setting that avoids the recent run of Western European medieval missionaries and bishops such as Willehad and Justus (Lebuinus would sit too close to Willehad).",
+  "catholic_veneration": "Roman Martyrology and General Roman Calendar (feast on 12 November, as a bishop and martyr, canonized by Pius IX in 1867 as the first Eastern Catholic saint formally canonized in Rome); also venerated in the Ukrainian, Belarusian and other Eastern Catholic calendars, with relics in St. Peter's Basilica."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Josaphat Kuntsevych",
+   "display_name": "St. Josaphat Kuntsevych",
+   "dates": "c. 1580 – 1623",
+   "region": "Polotsk, Belarus",
+   "feast": "November 12",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "His enemies painted him as a devil, and he prayed for them.",
+    "visual": "art",
+    "scene": "An icon of Saint Josaphat as a young Basilian bishop-monk in dark Eastern vestments, gentle and unafraid, standing before the vestibule wall of a wooden seventeenth-century Ruthenian church where a painted Last Judgement hangs behind him."
+   },
+   {
+    "role": "who",
+    "text": "Josaphat Kuntsevych, born around fifteen eighty in Volodymyr, became a monk, then Archbishop of Polotsk.",
+    "visual": "map",
+    "lat": 55.49,
+    "lon": 28.79,
+    "place": "Polotsk · Belarus"
+   },
+   {
+    "role": "story",
+    "text": "Sent to Vilnius to learn a merchant's trade, he was offered his master's fortune and his daughter's hand. He chose the monastery of the Holy Trinity.",
+    "visual": "art",
+    "scene": "An icon-style scene in early seventeenth-century Vilnius: a merchant in a long coat offers a purse to the young Josaphat in a shop, while Josaphat gently turns toward the open door and the domed monastery church of the Holy Trinity beyond."
+   },
+   {
+    "role": "story",
+    "text": "He prayed the Jesus Prayer so constantly, he murmured it in his sleep. His critics called him the Soul-Snatcher. He would answer, \"God grant me the grace to snatch all your souls and lead them to Heaven.\"",
+    "visual": "art",
+    "scene": "Brother Josaphat in the black habit of a Basilian monk, bowing low in prayer before an iconostasis in a candlelit monastery church, with a few young men kneeling behind him."
+   },
+   {
+    "role": "story",
+    "text": "As archbishop, he restored churches and gave his priests a catechism. In sixteen twenty-three, a mob in Vitebsk killed him. The Church honors him as a martyr for unity.",
+    "visual": "art",
+    "scene": "Archbishop Josaphat in Eastern episcopal vestments with omophorion and mitre, holding a book and a pastoral staff before a cathedral in Polotsk, with stonemasons repairing its walls on wooden scaffolds."
+   },
+   {
+    "role": "turn",
+    "text": "He gave alms to orphans and walked with condemned prisoners to the end. Mercy outlasts every unkind name.",
+    "visual": "art",
+    "scene": "Archbishop Josaphat at the door of his residence handing bread and coins to poor widows and orphans, while in the background a monk walks beside a prisoner along a snowy town road."
+   },
+   {
+    "role": "close",
+    "text": "Saint Josaphat, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Josaphat": "JOSS-uh-fat",
+   "Kuntsevych": "KOONT-seh-vich",
+   "Volodymyr": "vuh-LOH-dih-meer",
+   "Polotsk": "POH-lotsk",
+   "Vitebsk": "VEE-tebsk",
+   "Vilnius": "VIL-nee-us"
+  },
+  "caption_hook": "They called him the Soul-Snatcher. He took it as a prayer.",
+  "summary": "Josaphat Kuntsevych, a merchant's apprentice turned Basilian monk and Archbishop of Polotsk, answered the name \"Soul-Snatcher\" with prayer and mercy, and was killed in a riot at Vitebsk in 1623 as a martyr for Church unity.",
+  "youtube_title": "St. Josaphat Kuntsevych: The Archbishop Called Soul-Snatcher",
+  "hashtags": [
+   "#saintjosaphat",
+   "#polotsk",
+   "#vitebsk",
+   "#easterncatholic",
+   "#basilian",
+   "#belarus",
+   "#ukraine",
+   "#martyr",
+   "#churchunity",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#allsaints",
+   "#saintoftheday"
+  ],
+  "share_cta": "Know someone named Josaphat? Send them their saint.",
+  "claims": [
+   {
+    "claim": "At Josaphat's beatification inquiry, Father Gennadius Khmelnytsky testified that his opponents painted a Last Judgement for the vestibule of an Orthodox church showing Josaphat as a devil dragging souls to Hell, labeled 'Soul-snatcher'.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Josaphat was recorded as praying for the unity of the Church and the conversion of the Dissidents.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Josaphat was born in Volodymyr, in Volhynia, around 1580 (some say 1584).",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He became a monk and Archbishop of Polotsk.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Because of his parents' poverty he was apprenticed to a merchant in Vilnius.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The merchant offered him his entire fortune and his daughter's hand, but Josaphat's love for the religious life never wavered.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1604 he entered the Basilian monastery of the Holy Trinity at Vilnius and took the name Josaphat.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He repeated the Jesus Prayer so constantly that he was heard murmuring it in his sleep.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His opponents called him 'The Soul-Snatcher'.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is recorded as chuckling and answering, when called Soul-Snatcher, 'God grant me the grace to snatch all your souls and lead them to Heaven.'",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "As archbishop he restored the churches and issued a catechism to the clergy, to be memorized.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "On 12 November 1623 he was killed in a riot at Vitebsk.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The Church honors him as a martyr who died for the unity of the Church.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Witnesses at his beatification testified that he gave alms to the poor, widows and orphans.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He cared for condemned prisoners to their last hour and accompanied them to the place of execution.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was born into an Orthodox family and baptized John.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His father, of noble Ruthenian stock, was a merchant and town councillor; both parents encouraged piety.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He studied Church Slavonic and learned almost the entire breviary, which he began to read daily.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In Vilnius he met men such as Josyf Veliamyn Rutsky, a former Calvinist, who supported union with Rome.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He never ate meat, fasted much, and slept on the bare floor; the Jesuits urged him to moderate his austerities.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His reputation for holiness drew visitors and many young men to a monastery that had been near closing.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1609, after private study under the Jesuit Fabricius, he was ordained a priest, and later became superior of several monasteries.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Witnesses said parents who complained of the 'Soul-snatcher' later thanked him when their sons returned from their studies.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was consecrated bishop on 12 November 1617, reluctantly, as coadjutor of Polotsk, and became archbishop in 1618.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "During his episcopacy Saint Sophia Cathedral in Polotsk was rebuilt, 1618–1620.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He kept the Slavonic liturgy and the Byzantine rite while holding to fidelity to the see of Peter.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded the monasteries of Byten and Zyrowice.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He composed rules for priestly life, assembled synods, and opposed Chancellor Sapieha's concessions to the schismatics.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He preached and heard confessions in fields, hospitals and prisons.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Witnesses said the archbishop's palace was like a market place for beggars, who wept when he left the office of hegumen.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1620 a rival Orthodox hierarchy was set up, with Meletius Smotrytsky as Orthodox archbishop of Polotsk; he claimed Josaphat was preparing a Latinization of the Church.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Historian Norman Davies alleged Josaphat was involved in oppressions, including refusing burial of Orthodox in consecrated ground.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Santi e Beati notes the conflict involved jurisdiction, religious identity and power, and that Catholic and Orthodox accounts cannot be taken as neutral chronicles.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Accounts of the attack differ, mentioning blows from edged and fire weapons; according to the tradition kept in church biographies, his body was thrown into the Dvina river.",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He awaited death with yearning and refused an opportunity to flee.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1628 Urban VIII appointed a commission that examined 116 witnesses; the Catholic Encyclopedia records that his body was still incorrupt after five years.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified on 16 May 1643 by Urban VIII and canonized on 29 June 1867 by Pius IX.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the first saint of the Eastern Catholic (Uniate) Churches to be canonized in Rome.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "His relics lie under the altar of Saint Basil in Saint Peter's Basilica.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "His feast is kept on November 12; he is listed as patron of ecumenists.",
+    "source": 3,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "ecumenists"
+  ],
+  "places": [
+   "Polotsk",
+   "Vitebsk",
+   "Vilnius",
+   "Volodymyr"
+  ],
+  "story": [
+   "Josaphat Kuntsevych was born in Volodymyr, in Volhynia, around 1580, though some writers say 1584. He was baptized John. His family belonged to the Eastern Orthodox tradition of the Ruthenian lands, then part of the Polish–Lithuanian Commonwealth. His father came from Ruthenian nobility but had turned to trade and served as a town councillor. Both parents encouraged his piety. At school he showed unusual talent, studied Church Slavonic, and learned almost the whole of the prayer book he began to read each day. Much of his early religious education came from it.",
+   "He was still an adolescent when the Union of Brest was made in 1596. In that union, most of the bishops of the Kyiv Metropolitanate entered communion with the pope while keeping their own liturgy and discipline. The union did not unite the Ruthenian Church; it divided it into two contending parties, each with its own hierarchy, and the quarrel reached into families, parishes and town councils.",
+   "Because his parents were poor, John was apprenticed to a merchant in Vilnius, a city marked by the contentions of many religious groups. There he met men such as Josyf Veliamyn Rutsky, a former Calvinist who supported the union. The Catholic Encyclopedia tells us he gave every spare hour to prayer and study. His master at first disliked this, but came to esteem him so much that he offered him his whole fortune and his daughter's hand. John's love for the religious life never wavered. In 1604, at about twenty-four, he entered the Basilian monastery of the Holy Trinity and took the name Josaphat.",
+   "In the monastery he prayed the Jesus Prayer so constantly that his brothers heard him murmuring it in his sleep. He never ate meat, fasted often, and slept on the bare floor. The Jesuits urged him to moderate these austerities. His holiness drew visitors seeking counsel, and young men began to join a house that had recently been near closing. According to testimony at his beatification, he prayed: \"Lord, God, grant unity to the Holy Church and the conversion of the Dissidents.\" He studied the Fathers of the Church and the liturgical books, and wrote in defense of the union. After study with a Jesuit teacher he was ordained a priest in 1609, and he later became superior of several monasteries. Rutsky joined the order too, and together they helped renew Ruthenian monastic life.",
+   "His success in winning converts earned him a nickname from his opponents: the Soul-Snatcher. A witness at the beatification inquiry testified that they painted a Last Judgement for the entrance of an Orthodox church, showing Josaphat as a devil dragging souls away with a hook. Another witness said that parents who had complained of him publicly later thanked him when their sons came home from their studies. When he was called the name himself, we are told, he would chuckle and answer: \"God grant me the grace to snatch all your souls and lead them to Heaven.\"",
+   "In 1617 he was reluctantly consecrated bishop as coadjutor of Polotsk, and in 1618 he became its archbishop. He restored churches, issued a catechism that his priests were to learn by heart, wrote rules for priestly life, and gathered synods. Saint Sophia Cathedral in Polotsk was rebuilt during these years. He kept the Slavonic liturgy and the Byzantine rite, resting his teaching on loyalty to the See of Peter and the tradition of the Fathers. He preached and heard confessions in churches, fields, hospitals and prisons. Witnesses recalled that he gave alms to the poor, widows and orphans, and that his residence was like a market place for beggars. He accompanied condemned prisoners to their last hour, going, one said, as gladly as if it were a feast day.",
+   "The history around him is not simple, and honesty asks us to say so. In 1620 a rival Orthodox hierarchy was established, and Meletius Smotrytsky became the Orthodox archbishop of Polotsk. He publicly claimed that Josaphat intended to Latinize the Church. A modern historian, Norman Davies, has accused him of harsh measures against the Orthodox. Catholic sources describe a pastor who defended unity, while the quarrels of that time also involved church buildings, authority and power. Accounts from either side cannot be taken as neutral chronicles.",
+   "On 12 November 1623, during a visit to Vitebsk, a riot broke out against him and he was killed. Accounts differ on how he was struck, and tradition holds that his body was thrown into the Dvina river. The Catholic Encyclopedia says he awaited death with a certain yearning and refused a chance to flee. The Church honors him as a martyr who died for the unity of the Church. A commission under Urban VIII examined 116 witnesses in 1628, and the Catholic Encyclopedia records that his body was found incorrupt. He was beatified in 1643 and canonized by Pius IX in 1867, the first saint of the Eastern Catholic Churches canonized in Rome. His relics rest under the altar of Saint Basil in Saint Peter's Basilica, and the Church keeps his memory on November 12."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Spoken beat 'who': 'became a monk, Archbishop of Polotsk' is ungrammatical and blurs the sequence. Changed to 'became a monk, then Archbishop of Polotsk'.",
+   "Spoken beat 3: 'Witnesses heard him answer' claims eyewitness testimony for the 'snatch all your souls' reply. The source gives it without attribution (the beatification testimony is cited for other lines). Changed to 'He would answer'. The matching claim entry is reworded.",
+   "Story: 'the witnesses say, he would chuckle and answer' has the same over-attribution. Changed to 'we are told'.",
+   "Story: 'still a boy' in 1596 is imprecise. He was about sixteen if born in 1580, and Nominis calls him an adolescent. Changed to 'still an adolescent'.",
+   "Story: 'His Jesuit friends urged him' adds 'friends', which the Catholic Encyclopedia does not say. Changed to 'The Jesuits urged him'.",
+   "Checked and correct: the Polotsk map coordinates, the dates (1604, 1609, 1617, 1618, 1623, 1643, 1867), the Saint and martyr titles, and the legend/history wording. The Dvina detail is already marked as tradition, and the attack details are already marked as differing. Spoken length is about 142 words."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Spoken beats now total about 142 words. The 'Soul-Snatcher' reply is unattributed in the Wikipedia source, so it is no longer credited to witnesses. The caption 'He took it as a prayer' is a mild interpretation of that reply. Source [3] is partly truncated, so the Dvina detail rests on a cut-off passage; it is already worded as tradition."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 3676,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 794,
+   "thinking": 449
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1952,
+   "cache_write": 15965,
+   "cache_read": 0,
+   "out": 13986,
+   "thinking": 8288
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 6603,
+   "cache_write": 0,
+   "cache_read": 15965,
+   "out": 9805,
+   "thinking": 5386
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 2251,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3953,
+   "thinking": 1408
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Josaphat Kuntsevych",
+   "url": "https://en.wikipedia.org/wiki/Josaphat_Kuntsevych"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Josaphat Kuntsevych",
+   "url": "https://www.newadvent.org/cathen/08503b.htm"
+  },
+  {
+   "title": "Dicastery for the Causes of Saints: Josaphat Kuntsevych",
+   "url": "https://www.causesanti.va/it/santi-e-beati/giosafat-kuncewycz.html"
+  },
+  {
+   "title": "Santi e Beati: Josaphat Kuntsevych",
+   "url": "https://www.santiebeati.it/dettaglio/25100"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Josaphat Kuntsevych",
+   "url": "https://nominis.cef.fr/contenus/saint/14/Saint-Josaphat-Kuntsevych.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.4,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Josafat Kuntsevych",
+  "display_name": "San Josafat",
+  "region": "Polotsk, Bielorrusia",
+  "dates": "c. 1580 – 1623",
+  "hook": "Lo llamaban el Arrebatador de almas. Él lo tomó como una oración.",
+  "summary": "Josafat Kuntsevych, aprendiz de comerciante convertido en monje basiliano y arzobispo de Polotsk, respondió al apodo de «Arrebatador de almas» con oración y misericordia, y fue asesinado en un motín en Vítebsk en 1623 como mártir por la unidad de la Iglesia.",
+  "story": [
+   "Josafat Kuntsevych nació en Volodímir, en Volinia, hacia 1580, aunque según algunos autores fue en 1584. Lo bautizaron con el nombre de Juan. Su familia pertenecía a la tradición ortodoxa oriental de las tierras rutenas, entonces parte de la Mancomunidad polaco-lituana. Su padre procedía de la nobleza rutena, pero se había dedicado al comercio y ejerció como concejal de la ciudad. Ambos padres fomentaron su piedad. En la escuela mostró un talento poco común, estudió el eslavón eclesiástico y aprendió casi de memoria todo el libro de oraciones que comenzó a leer cada día. Gran parte de su formación religiosa temprana provino de ese libro.",
+   "Todavía era adolescente cuando se firmó la Unión de Brest en 1596. En esa unión, la mayoría de los obispos de la Metropolia de Kiev entraron en comunión con el papa, conservando su propia liturgia y disciplina. La unión no unificó la Iglesia rutena; la dividió en dos bandos enfrentados, cada uno con su propia jerarquía, y la disputa llegó hasta las familias, las parroquias y los concejos municipales.",
+   "Como sus padres eran pobres, Juan entró de aprendiz con un comerciante en Vilna, una ciudad marcada por las disputas de numerosos grupos religiosos. Allí conoció a hombres como Josyf Veliamyn Rutsky, un antiguo calvinista que apoyaba la unión. La Catholic Encyclopedia nos dice que dedicaba cada hora libre a la oración y al estudio. Al principio su amo no lo veía con buenos ojos, pero llegó a estimarlo tanto que le ofreció toda su fortuna y la mano de su hija. El amor de Juan por la vida religiosa nunca flaqueó. En 1604, a los veinticuatro años aproximadamente, ingresó en el monasterio basiliano de la Santísima Trinidad y tomó el nombre de Josafat.",
+   "En el monasterio rezaba la Oración de Jesús con tanta constancia que sus hermanos lo oían murmurarla en sueños. Nunca comía carne, ayunaba con frecuencia y dormía sobre el suelo desnudo. Los jesuitas le pidieron que moderara estas austeridades. Su santidad atraía a visitantes que buscaban consejo, y jóvenes comenzaron a unirse a una casa que poco antes había estado a punto de cerrar. Según el testimonio de su beatificación, oraba así: «Señor Dios, concede la unidad a la Santa Iglesia y la conversión de los disidentes». Estudió a los Padres de la Iglesia y los libros litúrgicos, y escribió en defensa de la unión. Tras estudiar con un profesor jesuita, fue ordenado sacerdote en 1609, y más tarde llegó a ser superior de varios monasterios. Rutsky también ingresó en la orden, y juntos contribuyeron a renovar la vida monástica rutena.",
+   "Su éxito en la conversión de fieles le valió un apodo de sus adversarios: el Arrebatador de almas. Un testigo en el proceso de beatificación declaró que pintaron un Juicio Final en la entrada de una iglesia ortodoxa, en el que aparecía Josafat como un demonio que arrastraba almas con un gancho. Otro testigo afirmó que padres que se habían quejado públicamente de él le dieron después las gracias cuando sus hijos regresaron de estudiar. Cuando él mismo se oía llamar así, según se cuenta, sonreía y respondía: «Que Dios me conceda la gracia de arrebatar todas vuestras almas y conducirlas al Cielo».",
+   "En 1617 fue consagrado obispo, con reticencia, como coadjutor de Polotsk, y en 1618 se convirtió en su arzobispo. Restauró iglesias, publicó un catecismo que sus sacerdotes debían aprender de memoria, redactó normas para la vida sacerdotal y convocó sínodos. La catedral de Santa Sofía de Polotsk fue reconstruida en esos años. Mantuvo la liturgia eslava y el rito bizantino, fundando su enseñanza en la lealtad a la Sede de Pedro y en la tradición de los Padres. Predicaba y confesaba en iglesias, campos, hospitales y prisiones. Los testigos recordaban que daba limosna a los pobres, a las viudas y a los huérfanos, y que su residencia parecía un mercado de mendigos. Acompañaba a los presos condenados hasta su última hora, yendo, según dijo uno de ellos, tan gustoso como si fuera día de fiesta.",
+   "El contexto histórico no es sencillo, y la honestidad exige decirlo. En 1620 se estableció una jerarquía ortodoxa rival, y Meletio Smotrytsky fue nombrado arzobispo ortodoxo de Polotsk. Este afirmó públicamente que Josafat pretendía latinizar la Iglesia. El historiador moderno Norman Davies lo ha acusado de medidas duras contra los ortodoxos. Las fuentes católicas describen a un pastor que defendía la unidad, mientras que las disputas de aquella época también involucraban templos, autoridad y poder. Los relatos de cualquiera de los dos bandos no pueden tomarse como crónicas neutrales.",
+   "El 12 de noviembre de 1623, durante una visita a Vítebsk, estalló un motín contra él y fue asesinado. Los relatos difieren sobre cómo fue herido, y según la tradición su cuerpo fue arrojado al río Dvina. La Catholic Encyclopedia dice que esperó la muerte con cierto anhelo y rechazó la oportunidad de huir. La Iglesia lo venera como mártir que murió por la unidad de la Iglesia. En 1628, una comisión bajo Urbano VIII examinó a 116 testigos, y la Catholic Encyclopedia registra que su cuerpo fue hallado incorrupto. Fue beatificado en 1643 y canonizado por Pío IX en 1867, el primer santo de las Iglesias católicas orientales canonizado en Roma. Sus reliquias reposan bajo el altar de San Basilio en la Basílica de San Pedro, y la Iglesia conserva su memoria el 12 de noviembre."
+  ],
+  "prayer": "San Josafat, ruega por nosotros.",
+  "patronages": [
+   "ecumenistas"
+  ],
+  "places": [
+   "Polotsk",
+   "Vítebsk",
+   "Vilna",
+   "Volodímir"
+  ]
+ },
+ "books": [],
+ "caption": "They called him the Soul-Snatcher. He took it as a prayer.\n\nSaint Josaphat Kuntsevych · Feast day: November 12\nJosaphat Kuntsevych, a merchant's apprentice turned Basilian monk and Archbishop of Polotsk, answered the name \"Soul-Snatcher\" with prayer and mercy, and was killed in a riot at Vitebsk in 1623 as a martyr for Church unity.\n\nSaint Josaphat, pray for us. 🕯\n\nKnow someone named Josaphat? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintjosaphat #polotsk",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/art.jpg"
+ },
+ "review_message_id": 80
+}
