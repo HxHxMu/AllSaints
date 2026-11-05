@@ -58,6 +58,10 @@ def build_caption(ep):
     else:
         body = f"{s.get('caption_hook', '').strip()}\n\n{saint['name']} · Feast day: {saint.get('feast', '')}\n{s.get('summary', '').strip()}\n\n{prayer} 🕯"
     # source names without the article ("Santi e Beati: San X" → "Santi e Beati"; old "Catholic Encyclopedia (1913)/St. X" too)
+    # follow line right under the hook, above Instagram's "more" fold
+    if CAP.get("follow_line"):
+        hook, _, rest = body.partition("\n")
+        body = f"{hook}\n{CAP['follow_line']}" + (f"\n{rest}" if rest else "")
     srcs = " · ".join(dict.fromkeys(re.split(r"[:/]", x["title"])[0].strip() for x in ep.get("sources", [])))
     credits = "; ".join(dict.fromkeys(ep.get("art_credits", [])))
     cap = f"{body}\n\n{pick_cta(ep)}\n\n—\nSources: {srcs}\nArt: {credits or 'public domain'}\n\n{' '.join(tags)}"

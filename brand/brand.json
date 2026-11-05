@@ -76,13 +76,13 @@
     ]
   },
   "caption": {
-    "template": "{hook_line}\n\n{name} · Feast day: {feast}\n{one_line_summary}\n\n{prayer}\n\n{cta}\n\n—\nSources: {sources}\nArt: {art_credits}\n\n{hashtags}",
+    "template": "{hook_line}\n{follow_line}\n\n{name} · Feast day: {feast}\n{one_line_summary}\n\n{prayer}\n\n{cta}\n\n—\nSources: {sources}\nArt: {art_credits}\n\n{hashtags}",
     "hashtag_brand": "#AllHolySaints",
     "hashtags_base": ["#saintoftheday", "#catholicsaints"],
     "hashtags_max": 5,
+    "follow_line": "✝ A forgotten saint, every morning. Follow along.",
     "ctas": [
       "Save this to pray with again next {feast}.",
-      "Follow for tomorrow's forgotten saint, every morning.",
       "Had you ever heard of {display_name} before today?"
     ]
   },

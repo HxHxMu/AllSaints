@@ -172,6 +172,8 @@ export const CloseScene = ({scene, saint, durationInFrames, outroFrames}) => {
 						{saint.feast && (
 							<div style={{fontFamily: TEXT, fontStyle: 'italic', fontWeight: 500, fontSize: 50, color: C.vellum, marginTop: 30, textShadow: '0 2px 16px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.9)', ...rise(o, 14, 18)}}>Feast day · {saint.feast}</div>
 						)}
+						{/* the channel's promise for new viewers; no "follow"/"subscribe" since one render serves both platforms */}
+						<div style={{fontFamily: TEXT, fontWeight: 600, fontSize: 40, color: C.giltLight, marginTop: 44, textShadow: '0 2px 16px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.9)', ...rise(o, 22, 18)}}>A forgotten saint, every morning.</div>
 					</AbsoluteFill>
 				</>
 			)}
