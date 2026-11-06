@@ -34,6 +34,7 @@ jobs:
       TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
       TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
       TT_TOKEN_KEY: ${{ secrets.TT_TOKEN_KEY }}
+      TH_TOKEN_KEY: ${{ secrets.TH_TOKEN_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
