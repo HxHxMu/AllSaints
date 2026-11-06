@@ -135,10 +135,19 @@ def authorize():
     print("\nOpen this, log in as @allholysaints and allow access:\n")
     print(AUTHORIZE + "?" + urllib.parse.urlencode({"client_key": key, "scope": SCOPES, "response_type": "code",
                                                    "redirect_uri": REDIRECT, "state": state}))
-    back = getpass.getpass("\nPaste the full address TikTok sent you to (hidden): ").strip()
+    handoff = ROOT / "work" / "tiktok" / "redirect.txt"  # lets the address come from a browser without an address bar
+    back = getpass.getpass(f"\nPaste the full address TikTok sent you to, or press Enter to read {handoff.relative_to(ROOT)} (hidden): ").strip()
+    if not back and handoff.exists():
+        back = handoff.read_text().strip()
+        handoff.unlink()
     q = urllib.parse.parse_qs(urllib.parse.urlparse(back).query)
-    if q.get("state", [""])[0] != state or not q.get("code"):
-        raise SystemExit(f"No valid code in that address ({q.get('error_description') or q.get('error') or 'state mismatch'}).")
+    if q.get("error"):
+        raise SystemExit(f"TikTok refused: {q.get('error_description', q['error'])[0]}")
+    if not q.get("code"):
+        raise SystemExit(f"No code in that address (it had: {', '.join(q) or 'nothing'}). Paste the allholysaints.com "
+                         "address TikTok opens after you tap Authorize, not the tiktok.com link.")
+    if q.get("state", [""])[0] != state:  # a local one-off, so a code from an earlier run's link is fine if still fresh
+        print("(That address is from an earlier tt-auth link; trying its code anyway.)")
     _store(_token_call(grant_type="authorization_code", code=q["code"][0], redirect_uri=REDIRECT))
     print("Connected as:", me().get("display_name"))
     envf = ROOT / ".env"
