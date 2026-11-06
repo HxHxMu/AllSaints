@@ -2,7 +2,7 @@
  "id": "2026-11-06",
  "date": "2026-11-06",
  "status": "published",
- "updated": "2026-11-06T12:40:33+00:00",
+ "updated": "2026-11-06T12:51:14+00:00",
  "saint": {
   "qid": "Q374056",
   "name": "Saint Nuno Álvares Pereira",
@@ -316,8 +316,9 @@
  },
  "published_at": "2026-11-06T07:30-05:00",
  "facebook": {
-  "attempts": 2,
-  "error": "Facebook status failed 400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '2200183173925189' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https:\\/\\/developers.facebook.com\\/docs\\/graph-api\",\"type\":\"GraphMethodException"
+  "id": "1625856342357986",
+  "url": "https://www.facebook.com/reel/1625856342357986/",
+  "published_at": "2026-11-06T07:51-05:00"
  },
  "youtube": {
   "id": "FZ7fr4FvCyQ",
