@@ -1,8 +1,8 @@
 {
  "id": "2026-11-06",
  "date": "2026-11-06",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-06T12:32:22+00:00",
  "saint": {
   "qid": "Q374056",
   "name": "Saint Nuno Álvares Pereira",
@@ -296,7 +296,8 @@
    "Lisboa",
    "Aljubarrota",
    "Portugal"
-  ]
+  ],
+  "slug": "nuno-alvares-pereira"
  },
  "caption": "A commander who never lost a battle chose to be the least in the house.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Nuno Álvares Pereira · Feast day: November 6\nNuno Álvares Pereira, the undefeated Portuguese constable who helped win Aljubarrota, gave away his fortune and ended his days as a Carmelite lay brother.\n\nSaint Nuno, pray for us. 🕯\n\nKnow someone named Nuno? Send them their saint.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintnunoalvarespereira #aljubarrota",
  "attempts": 0,
@@ -307,5 +308,33 @@
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-06/art.jpg"
  },
  "review_message_id": 41,
- "books": []
+ "books": [],
+ "slug": "nuno-alvares-pereira",
+ "published": {
+  "media_id": "18204366844328321",
+  "permalink": "https://www.instagram.com/reel/DfZnGTQk1ds/"
+ },
+ "published_at": "2026-11-06T07:30-05:00",
+ "facebook": {
+  "attempts": 1,
+  "error": "Facebook status failed 400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '4842777602602294' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https:\\/\\/developers.facebook.com\\/docs\\/graph-api\",\"type\":\"GraphMethodException"
+ },
+ "youtube": {
+  "id": "FZ7fr4FvCyQ",
+  "url": "https://youtube.com/shorts/FZ7fr4FvCyQ",
+  "privacy": "public",
+  "published_at": "2026-11-06T07:31-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7705035019454531597",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-06T07:32-05:00"
+ }
 }
