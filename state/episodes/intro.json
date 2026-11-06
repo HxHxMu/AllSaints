@@ -80,7 +80,7 @@
   "Illustration in the Byzantine style, AI-generated (Google Gemini)"
  ],
  "duration": 34.5,
- "updated": "2026-10-28T06:16:07+00:00",
+ "updated": "2026-11-06T06:46:14+00:00",
  "assets": {
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/video.mp4",
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-intro/cover.jpg"
@@ -89,5 +89,10 @@
   "media_id": "17986789761064929",
   "permalink": "https://www.instagram.com/reel/DfBxBInDaZv/"
  },
- "published_at": "2026-10-28T02:14-04:00"
+ "published_at": "2026-10-28T02:14-04:00",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7704945510683625486",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-06T01:46-05:00"
+ }
 }
