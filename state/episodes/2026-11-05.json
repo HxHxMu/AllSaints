@@ -2,7 +2,7 @@
  "id": "2026-11-05",
  "date": "2026-11-05",
  "status": "published",
- "updated": "2026-11-05T12:32:50+00:00",
+ "updated": "2026-11-06T01:31:00+00:00",
  "saint": {
   "qid": "Q204891",
   "name": "Saint Guido Maria Conforti",
@@ -304,5 +304,14 @@
   ],
   "playlists_done": true
  },
- "continent": "Europe"
+ "continent": "Europe",
+ "story": {
+  "media_id": "18134896219783165",
+  "permalink": "https://www.instagram.com/stories/all.holy.saints/4024087469876826005",
+  "image": "https://release-assets.githubusercontent.com/github-production-release-asset/1436396220/035631fd-64bf-4fc5-9d21-84f03b9a804b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-06T02%3A06%3A03Z&rscd=attachment%3B+filename%3Dstory.jpg&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-06T01%3A05%3A09Z&ske=2026-11-06T02%3A06%3A03Z&sks=b&skv=2018-11-09&sig=TAur2ICguBO2mXtLf27BfLuJ%2FZY7xnxeFWFNkiupNmQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzkyODkyOCwibmJmIjoxNzkzOTI4NjI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.kFcKMDL-wYd7DZCkc4Ecf-aEKxMgc9Ol8pnSJa-YAFI&response-content-disposition=attachment%3B%20filename%3Dstory.jpg&response-content-type=application%2Foctet-stream",
+  "posted_at": "2026-11-05T20:30-05:00"
+ },
+ "story_fb": {
+  "id": "3054693371372283"
+ }
 }
