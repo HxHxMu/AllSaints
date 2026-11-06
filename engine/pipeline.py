@@ -805,8 +805,10 @@ def main():
         import youtube
         print(youtube.me())
     elif a.cmd == "refresh-token":
-        import instagram
+        import instagram, threads
         instagram.refresh_token()
+        if threads.configured():
+            threads.keep_alive()
     elif a.cmd == "build-calendar":
         import calendar_build
         calendar_build.main()

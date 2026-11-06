@@ -1,7 +1,7 @@
 name: Maintenance
 on:
   schedule:
-    - cron: "41 11 * * 1"   # weekly: refresh Instagram token
+    - cron: "41 11 * * 1"   # weekly: refresh Instagram + Threads tokens
     - cron: "23 12 1 * *"   # monthly: rebuild saints calendar
     - cron: "17 10 * * *"   # nightly: dashboard numbers (allholysaints.com/dash/)
   workflow_dispatch:
@@ -51,4 +51,4 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash scripts/notify-failure.sh "A maintenance job failed (weekly Instagram token refresh, monthly saints calendar or nightly dashboard numbers). If it's the token, Instagram stops posting once it expires." maintenance.yml
+        run: bash scripts/notify-failure.sh "A maintenance job failed (weekly Instagram / Threads token refresh, monthly saints calendar or nightly dashboard numbers). If it's the token, Instagram stops posting once it expires." maintenance.yml

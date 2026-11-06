@@ -64,6 +64,18 @@ def access_token():
     return tok["access_token"]
 
 
+def keep_alive():
+    """Weekly (Maintenance, with the Instagram refresh): renew the token whatever its age, so it never nears expiry
+    even when nothing posts, and raise on failure so the job's ❌ reaches Telegram."""
+    tok = _load()
+    if time.time() - tok.get("issued", 0) < 86400:  # Threads only renews tokens at least a day old
+        return
+    js = _check(http.get("https://graph.threads.net/refresh_access_token", timeout=30,
+                         params={"grant_type": "th_refresh_token", "access_token": tok["access_token"]}), "token refresh")
+    _store(js["access_token"], js.get("expires_in"))
+    log(f"Threads token renewed; valid {int(js.get('expires_in', 0)) // 86400} days")
+
+
 def me():
     return _check(http.get(f"{GRAPH}/me", params={"fields": "id,username", "access_token": access_token()}, timeout=30), "me")
 
