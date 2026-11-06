@@ -438,7 +438,7 @@ def publish_tiktok(ep, video=None):
     ep["tiktok"] = {**res, "sent_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
     save_episode(ep)
     _notify(f"🎵 TikTok draft ready: {ep['saint']['display_name']}\nTap TikTok's notification, paste the caption below, "
-            "turn on \"AI-generated content\" (More options) and post.")
+            "tap Edit cover and pick a frame with the saint, turn on \"AI-generated content\" (More options) and post.")
     _notify(ep["caption"])
 
 
