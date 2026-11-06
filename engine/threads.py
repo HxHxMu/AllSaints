@@ -1,8 +1,8 @@
 """Threads posts (Threads API, graph.threads.net). Instagram's "share to Threads" switch skips posts made through the
 API (like its Facebook switch), so the bot posts the day's video to @all.holy.saints's Threads itself.
 
-Secrets: TH_APP_ID, TH_APP_SECRET (Meta app → use case "Access the Threads API" → Settings: the *Threads* app id and
-secret, not the Facebook ones), TH_TOKEN_KEY. The long-lived token (60 days, renewed by every run once it is under
+Secrets: TH_TOKEN_KEY; TH_APP_ID, TH_APP_SECRET only if th-auth signed in (the *Threads* app id and secret, not the
+Facebook ones; renewing never needs them). The long-lived token (60 days, renewed by every run once it is under
 15 days from expiry, and only renewable once it is a day old) lives encrypted in state/th_token.enc, so the bot can
 store the renewed one; poll/maintenance commit it. Set up once with `pipeline.py th-auth`; check with `th-whoami`.
 """
@@ -115,12 +115,42 @@ def publish_video(text, video_url):
     return {"id": pid, "url": url or "https://www.threads.net/@all.holy.saints"}
 
 
+def _save_secrets(vals):
+    envf = ROOT / ".env"
+    lines = [l for l in (envf.read_text().splitlines() if envf.exists() else []) if l.split("=", 1)[0].strip() not in vals]
+    envf.write_text("\n".join(lines + [f"{k}={v}" for k, v in vals.items()]) + "\n")
+    names = " / ".join(vals)
+    print(f"Saved {names} to .env and the token to state/th_token.enc (commit it).")
+    if shutil.which("gh"):
+        for k, v in vals.items():
+            subprocess.run(["gh", "secret", "set", k, "--env", "Production"], input=v, text=True, check=True, cwd=ROOT)
+        print(f"Set {names} as GitHub secrets (environment: Production).")
+    else:
+        print(f"`gh` not found: add {names} as GitHub secrets in the Production environment by hand.")
+
+
 def authorize():
-    """One-time local setup: opens Threads' consent page, trades the code for a 60-day token, writes state/th_token.enc
-    and stores TH_APP_ID / TH_APP_SECRET / TH_TOKEN_KEY in .env and (with `gh`) the Production secrets."""
+    """One-time local setup, writes state/th_token.enc and stores TH_TOKEN_KEY (plus TH_APP_ID / TH_APP_SECRET when
+    signing in) in .env and (with `gh`) the Production secrets. Two ways in: paste a token from the use case's
+    Settings → User Token Generator (already long-lived; renewing needs no app secret), or press Enter to sign in
+    through Threads' consent page with the app id and secret."""
+    vals = {"TH_TOKEN_KEY": env("TH_TOKEN_KEY") or secrets.token_urlsafe(32)}
+    os.environ.update(vals)
+    pasted = getpass.getpass("Token from the User Token Generator, or Enter to sign in instead (hidden): ").strip()
+    if pasted:
+        _store(pasted, 60 * 86400)  # the generator's tokens are long-lived (60 days); the first renewal stores the real expiry
+        try:
+            who = me()
+        except RuntimeError as e:
+            TOKEN_FILE.unlink()
+            raise SystemExit(f"That token didn't work: {str(e)[:200]}")
+        _store(pasted, 60 * 86400, str(who.get("id", "")))
+        print("Connected as:", who.get("username"))
+        return _save_secrets(vals)
     app_id = getpass.getpass("Threads app ID (hidden): ").strip()
     secret = getpass.getpass("Threads app secret (hidden): ").strip()
-    vals = {"TH_APP_ID": app_id, "TH_APP_SECRET": secret, "TH_TOKEN_KEY": env("TH_TOKEN_KEY") or secrets.token_urlsafe(32)}
+    print(f"(secret is {len(secret)} characters; a Threads app secret is 32)")
+    vals.update({"TH_APP_ID": app_id, "TH_APP_SECRET": secret})
     os.environ.update(vals)
     state = secrets.token_urlsafe(16)
     print("\nOpen this, log in as @all.holy.saints and allow access:\n")
@@ -138,20 +168,15 @@ def authorize():
     if not q.get("code"):
         raise SystemExit("No code in that address. Paste the allholysaints.com address Threads opens after you allow access.")
     code = q["code"][0].split("#")[0]  # Threads appends "#_"
-    short = _check(http.post("https://graph.threads.net/oauth/access_token", timeout=30, data={
-        "client_id": app_id, "client_secret": secret, "grant_type": "authorization_code", "redirect_uri": REDIRECT,
-        "code": code}), "code exchange")
-    long = _check(http.get("https://graph.threads.net/access_token", timeout=30, params={
-        "grant_type": "th_exchange_token", "client_secret": secret, "access_token": short["access_token"]}), "long-lived token")
+    try:
+        short = _check(http.post("https://graph.threads.net/oauth/access_token", timeout=30, data={
+            "client_id": app_id, "client_secret": secret, "grant_type": "authorization_code", "redirect_uri": REDIRECT,
+            "code": code}), "code exchange")
+        long = _check(http.get("https://graph.threads.net/access_token", timeout=30, params={
+            "grant_type": "th_exchange_token", "client_secret": secret, "access_token": short["access_token"]}), "long-lived token")
+    except RuntimeError as e:  # Threads echoes a wrong secret back in its error: keep it off the screen
+        raise SystemExit(str(e).replace(secret, "<secret>") + "\nCheck the Threads app secret (use case → Settings → Show), "
+                         "or rerun th-auth and paste a User Token Generator token instead.")
     _store(long["access_token"], long.get("expires_in"), str(short.get("user_id", "")))
     print("Connected as:", me().get("username"))
-    envf = ROOT / ".env"
-    lines = [l for l in (envf.read_text().splitlines() if envf.exists() else []) if l.split("=", 1)[0].strip() not in vals]
-    envf.write_text("\n".join(lines + [f"{k}={v}" for k, v in vals.items()]) + "\n")
-    print("Saved TH_APP_ID / TH_APP_SECRET / TH_TOKEN_KEY to .env and the token to state/th_token.enc (commit it).")
-    if shutil.which("gh"):
-        for k, v in vals.items():
-            subprocess.run(["gh", "secret", "set", k, "--env", "Production"], input=v, text=True, check=True, cwd=ROOT)
-        print("Set the same three as GitHub secrets (environment: Production).")
-    else:
-        print("`gh` not found: add the three as GitHub secrets in the Production environment by hand.")
+    _save_secrets(vals)
