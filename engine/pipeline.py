@@ -339,6 +339,7 @@ def publish_due():
         publish_youtube(ep)  # retries a Short that failed after the Reel went out
         youtube_playlists(ep)
         publish_facebook(ep)
+        publish_tiktok(ep)
         pinterest_boards(ep)
         return
     if ep["status"] != "approved" or now < due_time:
@@ -379,6 +380,7 @@ def publish_episode(ep):
     _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}")
     publish_facebook(ep, vid)
     publish_youtube(ep, vid)
+    publish_tiktok(ep, vid)
 
 
 def _notify(text):
@@ -410,6 +412,34 @@ def publish_facebook(ep, video=None):
         save_episode(ep)
         if fb["attempts"] in (1, 3):
             telegram.send(f"❌ Facebook post failed ({fb['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if fb["attempts"] < 3 else ""))
+
+
+def publish_tiktok(ep, video=None):
+    """Send the video to the TikTok inbox as a draft once, after it's on Instagram (TikTok won't let our app post publicly),
+    then Telegram the caption for Luis to paste when he posts it. Independent, max 3 attempts."""
+    import tiktok, storage, telegram
+    tt = ep.get("tiktok") or {}
+    if not tiktok.configured() or tt.get("publish_id") or tt.get("attempts", 0) >= 3 or ep.get("status") != "published":
+        return
+    try:
+        if not video:
+            video = storage.download(ep["assets"]["video.mp4"], WORK / f"{ep['id']}-video.mp4")
+        res = tiktok.upload_draft(video)
+    except Exception as e:
+        traceback.print_exc()
+        tt["attempts"] = tt.get("attempts", 0) + 1
+        tt["error"] = str(e)[:500]
+        ep["tiktok"] = tt
+        save_episode(ep)
+        if tt["attempts"] in (1, 3):
+            telegram.send(f"❌ TikTok draft failed ({tt['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if tt["attempts"] < 3 else ""))
+        return
+    # in the inbox: record it first, so nothing after this can send a second draft
+    ep["tiktok"] = {**res, "sent_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
+    save_episode(ep)
+    _notify(f"🎵 TikTok draft ready: {ep['saint']['display_name']}\nTap TikTok's notification, paste the caption below, "
+            "turn on \"AI-generated content\" (More options) and post.")
+    _notify(ep["caption"])
 
 
 def publish_youtube(ep, video=None):
@@ -611,6 +641,10 @@ def main():
     sub.add_parser("fb-whoami")
     fp = sub.add_parser("facebook", help="post one published episode's Reel to the Facebook Page now")
     fp.add_argument("episode")
+    sub.add_parser("tt-auth", help="one-time: connect the TikTok account (TT_CLIENT_KEY/SECRET/TOKEN_KEY, state/tt_token.enc)")
+    sub.add_parser("tt-whoami")
+    tp = sub.add_parser("tiktok", help="send one published episode's video to the TikTok inbox now")
+    tp.add_argument("episode")
     fc = sub.add_parser("fb-cover", help="set the cover on Facebook Reels already posted (backfill)")
     fc.add_argument("episodes", nargs="+")
     yc = sub.add_parser("yt-cover", help="set cover.jpg as the thumbnail on Shorts already uploaded (backfill)")
@@ -708,6 +742,16 @@ def main():
         ep = load_episode(a.episode)
         (ep.get("facebook") or {}).pop("attempts", None)
         publish_facebook(ep)
+    elif a.cmd == "tt-auth":
+        import tiktok
+        tiktok.authorize()
+    elif a.cmd == "tt-whoami":
+        import tiktok
+        print(tiktok.me())
+    elif a.cmd == "tiktok":
+        ep = load_episode(a.episode)
+        (ep.get("tiktok") or {}).pop("attempts", None)
+        publish_tiktok(ep)
     elif a.cmd == "fb-cover":
         import facebook, storage
         for ep_id in a.episodes:

@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|gsc-auth|metrics|dash-key|facebook|fb-auth|fb-whoami|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|gsc-auth|metrics|dash-key|facebook|fb-auth|fb-whoami|tt-auth|tt-whoami|tiktok|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -25,7 +25,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → storage.upload          GitHub Release `ep-YYYY-MM-DD`
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
-   → instagram.publish_reel → youtube.upload_short + facebook.publish_reel (each independent; ≤3 retries; never re-posts the Reel)
+   → instagram.publish_reel → youtube.upload_short + facebook.publish_reel + tiktok.upload_draft (each independent; ≤3 retries; never re-posts the Reel)
    → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, weekly music card from data/music.json, seasonal Stories)
    → check_queue (once a day after 20:00: Telegram if tomorrow is missing/failed/unapproved, the next days are empty, or yesterday never posted)
 ```
@@ -43,7 +43,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Fact-check rejects: max 3 saints per date (`MAX_REJECTS`), then the episode fails without auto-retry (`GiveUp`); Telegram `/generate` resets `attempts`. ElevenLabs-narrated episodes get a ⚠️ in the review: free-tier audio isn't licensed for commercial use, redo them.
 
 ## Secrets (GitHub → Environments → **Production**; locally `.env`)
-`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`. Dashboard: `DASH_INGEST_KEY` (also in Cloudflare Pages; `pipeline.py dash-key`), `GSC_REFRESH_TOKEN` (`pipeline.py gsc-auth`).
+`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `ELEVENLABS_API_KEY`, `TELEGRAM_BOT_TOKEN`, `IG_ACCESS_TOKEN`, `IG_TOKEN_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`, `TT_CLIENT_KEY`, `TT_CLIENT_SECRET`, `TT_TOKEN_KEY`. Optional: `ELEVENLABS_VOICE_ID`, `ANTHROPIC_MODEL`. Dashboard: `DASH_INGEST_KEY` (also in Cloudflare Pages; `pipeline.py dash-key`), `GSC_REFRESH_TOKEN` (`pipeline.py gsc-auth`).
 
 ## Backfill
 `pipeline.py backfill-story <ep_id|all>`: for episodes made before the website story/Spanish existed (10-29…11-04, done 2026-11-01). Fresh sources → `script.write_story` → fact-check of the whole script; only story fixes apply (the video is made), beat problems go in `ep.recheck` (`beats_need_fixing`) for Luis to judge (🔁 Redo if serious).
@@ -64,6 +64,12 @@ poll (every 10 min): telegram.process_updates → publish_due
 - Setup: Meta app (the Instagram one) → add Facebook Login; Graph API Explorer → user token with `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, tick the Page → `pipeline.py fb-auth` (hidden prompts: App ID, secret, token; exchanges for a never-expiring Page token, writes `.env` + gh secrets). Check: `fb-whoami`. Retry/backfill one: `pipeline.py facebook <ep_id>`. The cover: Facebook ignores it at publish, so `facebook.set_cover` uploads `cover.jpg` as the preferred thumbnail right after (failure only logs); backfill with `pipeline.py fb-cover <ep_id> …` (Reels before 2026-11-03 got a frame Facebook picked).
 - One-off carousels: `state/posts/<id>.json` (image URLs on a GitHub release `post-<id>`, IG caption, FB message), published by `pipeline.py post <id>` (Instagram `publish_carousel`, Facebook `post_photos`; reruns skip a platform already done). Instagram's token exists only in GitHub secrets, so run it as Maintenance → task `post <id>`. Only after Luis approves the slides and text in chat.
 - One-off scheduled posts: `state/shares.json` (`shares.py`, run by `poll`): Page link posts at a set time, e.g. a sung-prayer video on release day. A YouTube link waits until the video is public (FB builds the preview at posting time); ≤3 attempts; Telegram reports each result. Entries are added by hand once Luis approves the text.
+
+## TikTok (`tiktok.py`)
+- TikTok only lets audited apps post publicly and won't audit a tool that posts to its owner's own account ("A utility tool to help upload contents to the account(s) you or your team manages" is listed as unacceptable), so the bot uses **upload to inbox** (scope `video.upload`): after the Reel is on Instagram, `upload_draft` sends `video.mp4` (FILE_UPLOAD, 10 MB chunks) to @allholysaints's TikTok inbox; Telegram then sends the caption to paste. Luis taps TikTok's notification, pastes it, turns on "AI-generated content" and posts. The API can't send a caption or the AI label with a draft. Max 5 pending drafts per 24 h.
+- State `ep.tiktok` {publish_id, status, sent_at | attempts, error}; ≤3 attempts; never blocks the others. Skipped until the three secrets and `state/tt_token.enc` exist.
+- Tokens: access 2 h, refresh 180 days and **replaced on every refresh**, so they live encrypted (`TT_TOKEN_KEY`) in `state/tt_token.enc`, rewritten by whichever job refreshes; poll/maintenance commit it. Don't refresh from a local run without committing the file (Actions would hold a dead token). Daily use keeps it alive; after 180 days idle, rerun `tt-auth`.
+- Setup: developers.tiktok.com app with Login Kit (redirect URI exactly `https://allholysaints.com/`) + Content Posting API (upload only, no Direct Post), scopes `user.info.basic`, `video.upload`; `pipeline.py tt-auth` (hidden prompts: client key, secret, then the address TikTok redirects to), then commit `state/tt_token.enc`. Check: `tt-whoami` (Maintenance task, so the refreshed token gets committed). Retry/backfill one: `pipeline.py tiktok <ep_id>`.
 
 ## Instagram Stories (`stories.py`, run by `poll`, no AI)
 - Nightly card from `config.story_time` (default 20:30): the painted band of today's `cover.jpg`, the manuscript date, the episode's close beat ("Saint X, pray for us."), and "Tomorrow: St. Y" + region when tomorrow's episode is approved. Only once today's Reel is published; hosted as `story.jpg` on the episode release; `instagram.publish_story` (image Story, no caption, no link stickers via the API). State `ep.story` {media_id | attempts, error}, ≤3 attempts, failures to Telegram. Render one locally: `python engine/stories.py night <ep_id>`.

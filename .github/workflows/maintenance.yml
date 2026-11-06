@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "refresh-token | build-calendar | metrics | whoami | yt-whoami | fb-whoami | post <id>"
+        description: "refresh-token | build-calendar | metrics | whoami | yt-whoami | fb-whoami | tt-whoami | post <id>"
         required: true
         default: whoami
 permissions:
@@ -22,6 +22,9 @@ jobs:
       IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
       FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
       FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      TT_CLIENT_KEY: ${{ secrets.TT_CLIENT_KEY }}
+      TT_CLIENT_SECRET: ${{ secrets.TT_CLIENT_SECRET }}
+      TT_TOKEN_KEY: ${{ secrets.TT_TOKEN_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
