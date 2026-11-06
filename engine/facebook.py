@@ -29,10 +29,18 @@ def me():
 
 
 def _wait(vid, tok, max_wait=600):
-    """Until Facebook has processed and published the Reel; returns its status. Raises only if processing failed."""
+    """Until Facebook has processed and published the Reel; returns its status. Raises only if processing failed.
+    Runs after "finish" was accepted, so the Reel is already posted: a failed status lookup must never raise
+    (2026-11-06: right after finish the new id answered 400 "does not exist" twice, each counted as a failure and
+    the retries posted the Reel three times)."""
     st = {}
     for _ in range(max_wait // 10):
-        st = _check(http.get(f"{GRAPH}/{vid}", params={"fields": "status", "access_token": tok}, timeout=30), "status")["status"]
+        r = http.get(f"{GRAPH}/{vid}", params={"fields": "status", "access_token": tok}, timeout=30)
+        if not r.ok:
+            log("Facebook status lookup failed (Reel already posted, still waiting):", r.status_code, r.text[:160])
+            time.sleep(10)
+            continue
+        st = r.json().get("status") or {}
         if st.get("video_status") == "error" or (st.get("processing_phase") or {}).get("status") == "error":
             raise RuntimeError(f"Facebook processing failed: {st}")
         if (st.get("publishing_phase") or {}).get("status") == "complete":
