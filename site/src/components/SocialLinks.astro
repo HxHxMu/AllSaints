@@ -1,0 +1,20 @@
+---
+/** The channel's social profiles as one row of monochrome brand marks (footer). */
+import { SOCIALS } from "../lib/socials";
+interface Props { label: string }
+const { label } = Astro.props;
+---
+<ul class="social" aria-label={label}>
+  {SOCIALS.map((s) => (
+    <li><a href={s.href} rel="me noopener" aria-label={`All Saints on ${s.name}`} title={s.name}>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d={s.d} /></svg>
+    </a></li>
+  ))}
+</ul>
+<style>
+  .social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; margin-inline: -11px; }
+  /* 44px tap targets around a 22px mark */
+  .social a { display: grid; place-items: center; width: 44px; height: 44px; color: var(--gilt); transition: color .2s; }
+  .social a:hover { color: var(--gilt-light); }
+  @media (prefers-reduced-motion: reduce) { .social a { transition: none; } }
+</style>

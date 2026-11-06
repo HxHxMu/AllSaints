@@ -7,6 +7,8 @@ import "@fontsource/cormorant-garamond/500-italic.css";
 import "../styles/global.css";
 import { saintsIn, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
+import SocialLinks from "../components/SocialLinks.astro";
+import { SOCIALS } from "../lib/socials";
 
 interface Props {
   title: string;
@@ -26,6 +28,10 @@ const T = t[lang], P = paths[lang];
 const other: Lang = lang === "en" ? "es" : "en";
 const hasEs = lang === "es" || saintsIn("es").length > 0;  // no ES switch until the first translation exists
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// who publishes the site and where else it lives: Google uses sameAs to tie the accounts to allholysaints.com
+const org = { "@context": "https://schema.org", "@type": "Organization", name: "All Saints", alternateName: "A.S.†",
+  url: "https://allholysaints.com/", logo: new URL("/apple-touch-icon.png", Astro.site).href, email: "hello@allholysaints.com",
+  sameAs: SOCIALS.map((s) => s.href) };
 // link previews: a page's own share card (scripts/share-cards.mjs, 1200×630), else the channel's
 const card = new URL(image || "/og/default.jpg", Astro.site).href;
 const here = Astro.url.pathname;
@@ -62,6 +68,7 @@ const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${tit
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content={title}>
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json" set:html={JSON.stringify(org)} />
   {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 </head>
 <body>
@@ -90,9 +97,10 @@ const fullTitle = title === "All Saints" ? `All Saints · ${T.tagline}` : `${tit
   <footer class="foot wrap">
     <p class="devotional tag">{T.tagline}</p>
     <p class="label links">
-      <a href={P.calendar}>{T.calendar}</a> · <a href={P.about}>{T.about}</a> · <a href="/music/">{T.music}</a> · <a href="/library/">{T.library}</a> · <a href="https://www.instagram.com/all.holy.saints/">Instagram</a> ·
-      <a href="https://www.youtube.com/@AllHolySaints">YouTube</a> · <a href="https://www.facebook.com/61595996340757">Facebook</a> · <a href="/privacy/">{T.privacy}</a> · <a href="/terms/">{T.terms}</a>
+      <a href={P.calendar}>{T.calendar}</a> · <a href={P.about}>{T.about}</a> · <a href="/music/">{T.music}</a> · <a href="/library/">{T.library}</a> ·
+      <a href="/privacy/">{T.privacy}</a> · <a href="/terms/">{T.terms}</a>
     </p>
+    <SocialLinks label={lang === "es" ? "Síguenos" : "Follow All Saints"} />
     <p class="label">hello@allholysaints.com</p>
   </footer>
   <script>

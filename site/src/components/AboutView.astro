@@ -1,4 +1,5 @@
 ---
+import { SOCIALS } from "../lib/socials";
 import Base from "../layouts/Base.astro";
 import { SUPPORT_URL, disclosure, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
@@ -35,7 +36,7 @@ const copy = {
     <h2 class="label">{copy.made}</h2>
     <p>{disclosure(lang)}</p>
     <h2 class="label">{copy.follow}</h2>
-    <p><a href="https://www.instagram.com/all.holy.saints/">Instagram @all.holy.saints</a> · <a href="https://www.youtube.com/@AllHolySaints">YouTube @AllHolySaints</a> · <a href="/music/">{copy.music}</a> · <a href="mailto:hello@allholysaints.com">hello@allholysaints.com</a></p>
+    <p>{SOCIALS.map((s) => <><a href={s.href} rel="me noopener">{s.name} {s.handle}</a> · </>)}<a href="/music/">{copy.music}</a> · <a href="mailto:hello@allholysaints.com">hello@allholysaints.com</a></p>
     {SUPPORT_URL && <a class="rubric support" href={SUPPORT_URL} rel="noopener"><span>{copy.candle}<small>{copy.candleSub}</small></span><span aria-hidden="true">›</span></a>}
   </article>
 </Base>
