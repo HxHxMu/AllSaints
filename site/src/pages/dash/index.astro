@@ -53,7 +53,7 @@ import "../../styles/global.css";
           <thead><tr>
             <th scope="col">Feast</th><th scope="col">Saint</th>
             <th scope="col" class="n">YT views</th><th scope="col" class="n">Avg viewed</th><th scope="col" class="n">YT shares</th><th scope="col" class="n">Subs</th>
-            <th scope="col" class="n">IG views</th><th scope="col" class="n">FB plays</th><th scope="col" class="n">IG shares</th><th scope="col" class="n">Saved</th>
+            <th scope="col" class="n">IG views</th><th scope="col" class="n">FB plays</th><th scope="col" class="n">TikTok views</th><th scope="col" class="n">Threads views</th><th scope="col" class="n">IG shares</th><th scope="col" class="n">Saved</th>
             <th scope="col" class="n">Length</th><th scope="col" class="n">WHO words</th>
           </tr></thead>
           <tbody></tbody>
@@ -218,7 +218,7 @@ import "../../styles/global.css";
         review: ["awaiting your Approve", "wait"], generating: ["being made", ""], redo_requested: ["redo requested", "wait"], failed: ["failed", "bad"], missing: ["not made yet", "bad"] };
       $("upcoming").innerHTML = P.upcoming.slice(0, 8).map((r: Any) => {
         const [word, cls] = ST[r.status] || [r.status, ""];
-        const plat = r.status === "published" ? ["instagram", "youtube", "facebook", "story"].map((k) => `${r[k] ? "✓" : "·"} ${k === "story" ? "story" : k}`).join("  ") : "";
+        const plat = r.status === "published" ? ["instagram", "youtube", "facebook", "threads", "tiktok", "story"].map((k) => `${r[k] ? "✓" : "·"} ${k === "tiktok" ? "tiktok draft" : k}`).join("  ") : "";
         return `<li class="${r.date === today ? "today" : ""}"><span class="d">${dLabel(r.date)}</span><span class="who">${esc(r.saint || "—")}</span><span class="st ${cls}">${word}</span><span class="plat">${plat}</span></li>`;
       }).join("");
       if (P.problems.length) {
@@ -239,7 +239,11 @@ import "../../styles/global.css";
         pcts.length ? tile(`${Math.round(pcts.reduce((a: number, b: number) => a + b, 0) / pcts.length)}%`, "average viewed (YouTube)") : "",
         tile(num(ig.followers), "Instagram followers"),
         tile(num(m.facebook?.followers), "Facebook Page followers"),
+        tile(num(m.tiktok?.followers), "TikTok followers"),
+        tile(num(m.threads?.followers), "Threads followers"),
         eps.some((e: Any) => e.ig?.views != null) ? tile(num(sum((e) => e.ig?.views)), "Instagram Reel views") : "",
+        eps.some((e: Any) => e.tt?.views != null) ? tile(num(sum((e) => e.tt?.views)), "TikTok views") : "",
+        eps.some((e: Any) => e.th?.views != null) ? tile(num(sum((e) => e.th?.views)), "Threads views") : "",
         tile(all.email && !all.email.error ? num(all.email.subscribers) : "—", "email subscribers"),
       ].join("");
       if (yt.daily?.length) {
@@ -254,7 +258,7 @@ import "../../styles/global.css";
         <td>${e.slug ? `<a href="/saints/${esc(e.slug)}/">${esc(e.saint)}</a>` : esc(e.saint)}</td>
         <td class="n">${num(e.yt?.views)}</td><td class="n ${e.yt?.avg_pct === best ? "best" : ""}">${e.yt?.avg_pct != null ? e.yt.avg_pct + "%" : "—"}</td>
         <td class="n">${num(e.yt?.shares)}</td><td class="n">${num(e.yt?.subs)}</td>
-        <td class="n">${num(e.ig?.views)}</td><td class="n">${num(e.fb?.plays)}</td><td class="n">${num(e.ig?.shares)}</td><td class="n">${num(e.ig?.saved)}</td>
+        <td class="n">${num(e.ig?.views)}</td><td class="n">${num(e.fb?.plays)}</td><td class="n">${num(e.tt?.views)}</td><td class="n">${num(e.th?.views)}</td><td class="n">${num(e.ig?.shares)}</td><td class="n">${num(e.ig?.saved)}</td>
         <td class="n">${e.duration ? Math.round(e.duration) + " s" : "—"}</td><td class="n">${e.who_words}</td></tr>`).join("");
       if (yt.countries?.length) {
         const tot = yt.countries.reduce((a: number, c: Any) => a + c.views, 0);

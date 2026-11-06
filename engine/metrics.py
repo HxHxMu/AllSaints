@@ -8,6 +8,10 @@ Each source is optional and fails on its own: a missing permission shows as a no
 - YouTube: views/likes/comments from the Data API (existing token); retention, shares and subscribers
   from the Analytics API, which needs the yt-analytics.readonly scope (rerun `pipeline.py yt-auth` once).
 - Instagram: Reel insights (needs instagram_business_manage_insights on the token), followers.
+- Threads: post views/likes/replies/reposts and followers; needs threads_manage_insights on the token (add it to the
+  use case, regenerate in User Token Generator, rerun `pipeline.py th-auth`).
+- TikTok: followers and video views; needs the user.info.stats and video.list scopes (add them in the TikTok app, rerun
+  `pipeline.py tt-auth`). Luis posts the drafts by hand, so videos are matched to saints by name, else by posting date.
 - Search Console: GSC_REFRESH_TOKEN from `pipeline.py gsc-auth <client_secret.json>` (Luis's own Google
   account, the one that owns the allholysaints.com property).
 Secrets: DASH_INGEST_KEY (same value in GitHub Production and Cloudflare Pages). Optional DASH_INGEST_URL.
@@ -46,8 +50,10 @@ def pipeline(eps):
         yt, fb, ig = ep.get("youtube") or {}, ep.get("facebook") or {}, ep.get("published") or {}
         row = {"date": ep["date"], "saint": ep["saint"]["name"], "status": ep["status"], "attempts": ep.get("attempts", 0),
                "instagram": bool(ig.get("media_id")), "youtube": bool(yt.get("id")), "facebook": bool(fb.get("id")),
+               "threads": bool((ep.get("threads") or {}).get("id")), "tiktok": bool((ep.get("tiktok") or {}).get("publish_id")),
                "story": bool((ep.get("story") or {}).get("media_id")),
-               "errors": [f"{k}: {v['error'][:160]}" for k, v in (("youtube", yt), ("facebook", fb)) if v.get("error")]}
+               "errors": [f"{k}: {v['error'][:160]}" for k, v in (("youtube", yt), ("facebook", fb), ("threads", ep.get("threads") or {}),
+                                                                ("tiktok", ep.get("tiktok") or {})) if v.get("error")]}
         if t <= d <= t + dt.timedelta(days=13):
             rows.append(row)
         if ep["status"] == "failed" or (d < t and ep["status"] != "published") or row["errors"] and d >= t - dt.timedelta(days=7):
@@ -79,7 +85,7 @@ def episode_rows(eps):
                      "close_words": sum(_words(b["text"]) for b in beats if b.get("role") in ("turn", "close")),
                      "spanish": bool(ep.get("es")),
                      "yt_id": (ep.get("youtube") or {}).get("id"), "ig_id": (ep.get("published") or {}).get("media_id"),
-                     "fb_id": (ep.get("facebook") or {}).get("id")})
+                     "fb_id": (ep.get("facebook") or {}).get("id"), "th_id": (ep.get("threads") or {}).get("id")})
     return rows
 
 
@@ -191,6 +197,78 @@ def facebook(rows, notes):
     return {"followers": js.get("followers_count")}
 
 
+# --- Threads ----------------------------------------------------------------------------------
+
+TH_METRICS = "views,likes,replies,reposts,quotes,shares"
+
+
+def threads(rows, notes):
+    import threads as th
+    if not th.configured():
+        return notes.append("Threads: not connected here.") or None
+    tok = th.access_token()
+    def get(path, **p):
+        return http.get(f"{th.GRAPH}/{path}", params={**p, "access_token": tok}, timeout=30).json()
+    js = get("me/threads_insights", metric="followers_count")
+    if "error" in js:
+        notes.append("Threads views and followers need the threads_manage_insights permission: add it to the Threads use case, "
+                     "generate a new token (User Token Generator) and run `pipeline.py th-auth`.")
+        return {"followers": None}
+    followers = next((m.get("total_value", {}).get("value") for m in js.get("data", []) if m["name"] == "followers_count"), None)
+    for r in rows:
+        if not r["th_id"]:
+            continue
+        v = get(f"{r['th_id']}/insights", metric=TH_METRICS)
+        if "error" not in v:
+            r["th"] = {m["name"]: (m.get("values") or [{}])[0].get("value") for m in v.get("data", [])}
+    return {"followers": followers}
+
+
+# --- TikTok ------------------------------------------------------------------------------------
+
+TT_FIELDS = "id,title,video_description,create_time,view_count,like_count,comment_count,share_count"
+
+
+def tiktok(rows, notes):
+    import tiktok as tt
+    if not tt.configured():
+        return notes.append("TikTok: not connected here.") or None
+    tok = tt.access_token()
+    h = {"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8"}
+    try:
+        user = tt._check(http.get(f"{tt.API}/user/info/", params={"fields": "follower_count,likes_count,video_count"},
+                                  headers=h, timeout=30), "user stats").get("user", {})
+        vids, cursor = [], None
+        for _ in range(10):  # 20 a page, newest first
+            body = {"max_count": 20, **({"cursor": cursor} if cursor else {})}
+            js = tt._check(http.post(f"{tt.API}/video/list/", params={"fields": TT_FIELDS}, json=body, headers=h, timeout=30), "video list")
+            vids += js.get("videos", [])
+            if not js.get("has_more"):
+                break
+            cursor = js.get("cursor")
+    except RuntimeError as e:
+        if "scope" not in str(e):
+            raise
+        notes.append("TikTok followers and views need two more scopes, user.info.stats and video.list: add them in the TikTok "
+                     "developer app (Sandbox), then run `pipeline.py tt-auth` again.")
+        return {"followers": None}
+    used = set()
+    def day(v):
+        return dt.datetime.fromtimestamp(v["create_time"], tz()).date().isoformat()
+    for by_name in (True, False):  # the saint's name in the caption first, then a video posted on the feast day
+        for r in rows:
+            if "tt" in r:
+                continue
+            name = r["saint"].lower()
+            v = next((v for v in vids if v["id"] not in used and (
+                name in f"{v.get('title', '')} {v.get('video_description', '')}".lower() if by_name else day(v) == r["date"])), None)
+            if v:
+                used.add(v["id"])
+                r["tt"] = {"views": v.get("view_count"), "likes": v.get("like_count"), "comments": v.get("comment_count"),
+                           "shares": v.get("share_count")}
+    return {"followers": user.get("follower_count"), "likes": user.get("likes_count"), "videos": user.get("video_count")}
+
+
 # --- Search Console ----------------------------------------------------------------------------
 
 def search(notes):
@@ -225,7 +303,8 @@ def collect():
     data = {"generated_at": dt.datetime.now(tz()).isoformat(timespec="minutes"), "timezone": load_config().get("timezone"),
             "pipeline": pipeline(eps), "episodes": rows, "notes": notes}
     for key, fn in (("youtube", lambda: youtube(rows, notes)), ("instagram", lambda: instagram(rows, notes)),
-                     ("facebook", lambda: facebook(rows, notes)), ("search", lambda: search(notes))):
+                     ("facebook", lambda: facebook(rows, notes)), ("threads", lambda: threads(rows, notes)),
+                     ("tiktok", lambda: tiktok(rows, notes)), ("search", lambda: search(notes))):
         try:
             data[key] = fn()
         except Exception as e:  # one broken source never hides the others
@@ -233,7 +312,7 @@ def collect():
             notes.append(f"{key.title()}: {str(e)[:160]}")
             data[key] = None
     for r in rows:
-        r.pop("ig_id", None), r.pop("fb_id", None)
+        r.pop("ig_id", None), r.pop("fb_id", None), r.pop("th_id", None)
     return data
 
 
