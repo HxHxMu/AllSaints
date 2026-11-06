@@ -13,7 +13,7 @@ from common import ROOT, STATE, env, http, log
 
 API = "https://open.tiktokapis.com/v2"
 AUTHORIZE = "https://www.tiktok.com/v2/auth/authorize/"
-SCOPES = "user.info.basic,video.upload"
+SCOPES = "user.info.basic,user.info.stats,video.list,video.upload"  # stats + list: dashboard numbers
 REDIRECT = "https://allholysaints.com/"  # must match the app's Login Kit redirect URI exactly
 TOKEN_FILE = STATE / "tt_token.enc"
 CHUNK = 10 * 1024 * 1024  # 5–64 MB per chunk; the last one takes the remainder (up to 128 MB)
