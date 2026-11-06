@@ -1,0 +1,352 @@
+{
+ "id": "2026-11-13",
+ "date": "2026-11-13",
+ "status": "review",
+ "updated": "2026-11-06T10:25:54+00:00",
+ "saint": {
+  "qid": "Q580603",
+  "name": "Saint Homobonus",
+  "display_name": "St. Homobonus",
+  "dates": "c. 1150 – 1197",
+  "region": "Cremona, Italy",
+  "feast": "November 13",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q580603",
+  "name": "Saint Homobonus",
+  "links": 19,
+  "enwiki": "Saint_Homobonus",
+  "images": [
+   "Omobono%20lianori.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Saint Homobonus",
+  "birth": 1117,
+  "death": 1197,
+  "lon": 10.024722222,
+  "lat": 45.133333333,
+  "selection_reason": "Homobonus of Cremona was a married layman and cloth merchant who gave his profits to the poor and reportedly died in 1197 during Mass with arms outstretched in prayer. Pope Innocent III canonized him within two years, and the surviving canonization record documents his life. His story is moving and surprising, he is little known, and he falls on November 13, so he breaks the recent run of bishops and clerics.",
+  "catholic_veneration": "Canonized by Pope Innocent III in 1199; listed in the Roman Martyrology on 13 November and venerated as patron of Cremona, tailors, and business people."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Homobonus",
+   "display_name": "St. Homobonus",
+   "dates": "c. 1150 – 1197",
+   "region": "Cremona, Italy",
+   "feast": "November 13",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition holds he died praying at Mass, and no one noticed.",
+    "visual": "art",
+    "scene": "Inside a twelfth-century Romanesque church in northern Italy, a kneeling layman in a plain merchant's tunic has slumped forward in prayer before the altar. A priest celebrates Mass while a few townspeople stand in the nave, unaware, in soft dawn light through a small round window."
+   },
+   {
+    "role": "who",
+    "text": "Saint Homobonus was a married cloth merchant of Cremona, in northern Italy, in the twelfth century.",
+    "visual": "map",
+    "lat": 45.1333,
+    "lon": 10.0422,
+    "place": "Cremona · Italy"
+   },
+   {
+    "role": "story",
+    "text": "He traded with scrupulous honesty, and gave much of his money away. Though well off, he and his wife lived simply.",
+    "visual": "art",
+    "scene": "A medieval Italian cloth merchant's shop opening onto a Cremona street, with bolts of woollen cloth on shelves. Homobonus, in a modest tunic and cap, measures cloth fairly for a customer, then presses coins into the hands of a poor woman and child at the doorway."
+   },
+   {
+    "role": "story",
+    "text": "He buried the dead no one claimed. He gathered abandoned children and saw to their education. He brought peace to quarreling families.",
+    "visual": "art",
+    "scene": "Homobonus in a plain tunic stands in a twelfth-century Lombard town square among a small group of ragged children, one hand on a child's shoulder. Behind him, two quarreling families are drawing together, and a simple shrouded burial procession passes by."
+   },
+   {
+    "role": "story",
+    "text": "According to legend, he once gave a beggar all his food and drink. When he refilled his flask at a stream, the water had turned to wine.",
+    "visual": "art",
+    "scene": "On a country road in the Po valley, a traveling merchant in a plain tunic kneels at a stream, holding up a leather flask. Poplars and fields stretch behind him, and a ragged beggar sits nearby with the bread he has just been given."
+   },
+   {
+    "role": "story",
+    "text": "Each night he prayed at the church of Saint Giles. There he died, during Mass.",
+    "visual": "art",
+    "scene": "A candlelit Romanesque church in Cremona before dawn. Homobonus kneels alone in the dark nave, hands joined, before a simple crucifix above the altar."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was honest work and daily mercy. Pope Innocent the Third called him father of the poor. Holiness can be lived in the marketplace.",
+    "visual": "art",
+    "scene": "Pope Innocent the Third in papal vestments, seated in a Roman hall around the year 1199, receives a bishop and a small delegation of Cremona citizens. A document with a hanging lead seal lies before him."
+   },
+   {
+    "role": "close",
+    "text": "Saint Homobonus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Homobonus": "Hoh-moh-BOH-nus",
+   "Cremona": "Kreh-MOH-nah"
+  },
+  "caption_hook": "He sold cloth in Cremona. Heaven was counting something else.",
+  "summary": "Saint Homobonus was a married cloth merchant of twelfth-century Cremona who gave much of his money to the poor, restored peace in quarreling families, and was canonized within two years of his death.",
+  "youtube_title": "St. Homobonus: The Merchant Saint of Cremona",
+  "hashtags": [
+   "#sainthomobonus",
+   "#cremona",
+   "#patronofmerchants",
+   "#patronoftailors",
+   "#santomobono",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#laysaints",
+   "#catholicreels",
+   "#allsaints",
+   "#november13",
+   "#saintsoftheworld"
+  ],
+  "share_cta": "Send this to a tailor or a business owner who could use a patron today.",
+  "claims": [
+   {
+    "claim": "Homobonus was a cloth merchant of Cremona in northern Italy in the twelfth century.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was a married layman.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He practiced his business with scrupulous honesty.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Though he and his wife were well off, they lived and dressed simply, and he gave much of their money away.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He attended to the burial of the abandoned dead.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology says he gathered and educated abandoned children and restored peace in families.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "According to legend, while traveling he gave all his food and drink to a beggar, and when he refilled his flask at a stream the water turned to wine.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "It was his custom every night to go to the church of Saint Giles a little before midnight and stay until the morning Mass.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died on November 13, 1197, in the church of Sant'Egidio (Saint Giles) in Cremona, during the liturgy.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The best-known tradition says he collapsed in an attitude of prayer and those present realized he had died only later in the liturgy.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Pope Innocent III canonized him with the bull Quia pietas, dated 12 January 1199 in the most followed tradition; the bull calls him father of the poor.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Innocent III called him 'father of the poor', 'consoler of the afflicted', and 'man of peace and peacemaker'.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Bishop Sicardo went to Rome in 1198 with the priest Osberto and a delegation of citizens to ask for his canonization.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The canonization showed that commerce and family life could be places where Christian virtue is practiced.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Later biographies present him as the son of a textile artisan; this is hagiographic memory rather than contemporary documentary proof.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Healings and other wonders were reported at his tomb.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "After his death, brotherhoods of merchants and craftsmen formed to serve the poor and sick, and his veneration spread only slowly.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His relics rest in the crypt of Cremona Cathedral, where they were brought in 1357; the city council made him patron in 1643.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1575 the church of San Salvatore in Portico was given to the tailors' association and dedicated to him; a comune in Italy, Sant'Omobono Terme, bears his name.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is patron of Cremona, business people, tailors, shoemakers, and clothworkers.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Cremona",
+   "business people",
+   "tailors",
+   "shoemakers",
+   "clothworkers"
+  ],
+  "places": [
+   "Cremona",
+   "Cremona Cathedral",
+   "Rome",
+   "Italy"
+  ],
+  "story": [
+   "Cremona in the twelfth century was a busy city of the Po plain. Merchants and craftsmen filled its streets, and the city was often at odds with its neighbors and divided within itself. Into this world of cloth, credit and rivalry was born Homobonus, whose Latin name means \"good man\". The family name remembered for him is Tucenghi. His exact birth date is not known, though he is usually placed around the middle of the century.",
+   "Later biographies describe him as the son of a tailor and cloth dealer, and as a married man. Santi e Beati notes that these details fit his station but come from the memory of the saints' lives rather than from documents of his own day. What is solid is this: he was a cloth merchant, a layman and a husband, and he never left that state to enter a religious order. His holiness grew out of the ordinary work of a Cremona shop.",
+   "Those who remembered him said he did business with scrupulous honesty. He and his wife were comfortably off, yet they lived and dressed simply, because he gave so much away. Wikipedia's account says he believed God had allowed him to work so that he could support people living in poverty. He also tended to the burial of the abandoned dead. The Roman Martyrology adds that he gathered and educated abandoned children and restored peace within families. In a city without public systems of care like those of today, he made himself a steady, personal help to the vulnerable.",
+   "Prayer was the root of it. Each night, a little before midnight, he went to the church of Saint Giles, Sant'Egidio, and took part in matins, staying on until the morning Mass. One story told about him belongs to legend. According to legend, he was traveling and gave all his food and drink to a beggar. When he went to refill his flask at a stream, the water was found to have turned into wine. It is a devotional memory, not a documented event.",
+   "Homobonus died on November 13, 1197, in that same church of Saint Giles, during the liturgy. The best-known tradition holds that he sank down in an attitude of prayer, and that those around him realized only later that he had died. Details such as the singing of the Gloria or the reading of the Gospel come from that tradition. The date, the place and the link to prayer at Mass are firmly attested. Healings and other wonders were soon reported at his tomb.",
+   "His bishop, Sicardo, moved quickly. In 1198 he traveled to Rome with a priest named Osberto and a delegation of Cremona's citizens to ask Pope Innocent III to recognize their neighbor as a saint. The pope heard the testimony and, in the bull Quia pietas, dated January 12, 1199 in the most widely followed record, he canonized Homobonus. The bull calls him father of the poor, consoler of the afflicted, a man of peace and peacemaker, and a man good in name and deed. It likens him to a tree planted by streams of water, still bearing fruit.",
+   "It was a notable choice. Homobonus was not a bishop, a monk or a prince. His canonization showed that trade and family life could be places where Christian virtue is lived out. His veneration spread only slowly, but after his death brotherhoods of merchants and craftsmen formed to serve the poor and sick and to promote religious teaching, especially within the family. His relics were brought to Cremona Cathedral in 1357 and rest today in its crypt. In 1643 the city council chose him as patron of Cremona. He is also honored as patron of merchants, tailors, shoemakers and clothworkers. A church in Rome and a town in Italy bear his name."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Summary said he 'gave his wealth to the poor'. The sources say he gave much of his money away, and Santi e Beati stresses he kept his lay state. Reworded to 'gave much of his money'.",
+   "Summary said he 'made peace among neighbors'. The Roman Martyrology says he restored peace in families. Reworded.",
+   "Story paragraph 1: 'moneylenders' is not in the sources. Removed.",
+   "Story paragraph 3: Wikipedia says he believed God allowed him 'to work' so he could support the poor, not 'to prosper'. Fixed.",
+   "Story paragraph 3: 'no public systems of care' overstates the source, which says there was no protection comparable to modern systems. Fixed.",
+   "Story paragraph 4: 'the Church does not ask us to treat it as a documented event' is a theological claim not in the sources. Replaced with a plain statement that the wine story is legend."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Spoken beats total about 143 words and are sound. Heiligenlexikon gives the canonization as 13 January 1199 and says he gave up his work. I followed Santi e Beati (12 January, no abandonment of lay state). The title and display_name still use 'St.'; change them if on-screen text should say 'Saint'."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 3335,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 933,
+   "thinking": 720
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1815,
+   "cache_write": 7799,
+   "cache_read": 0,
+   "out": 10802,
+   "thinking": 6939
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4615,
+   "cache_write": 0,
+   "cache_read": 7799,
+   "out": 7205,
+   "thinking": 4060
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1657,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2891,
+   "thinking": 1066
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Saint Homobonus",
+   "url": "https://en.wikipedia.org/wiki/Saint_Homobonus"
+  },
+  {
+   "title": "Santi e Beati: Saint Homobonus",
+   "url": "https://www.santiebeati.it/dettaglio/35350"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Saint Homobonus",
+   "url": "https://www.heiligenlexikon.de/BiographienH/Homobonus_von_Cremona.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.8,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Homobono",
+  "name": "San Homobono",
+  "region": "Cremona, Italia",
+  "dates": "c. 1150 – 1197",
+  "hook": "Vendía telas en Cremona. El cielo llevaba la cuenta de otra cosa.",
+  "summary": "San Homobono fue un comerciante de telas casado en la Cremona del siglo XII, que entregó gran parte de su dinero a los pobres, restauró la paz en familias enfrentadas y fue canonizado dentro de los dos años posteriores a su muerte.",
+  "story": [
+   "La Cremona del siglo XII era una ciudad activa de la llanura del Po. Sus calles estaban llenas de mercaderes y artesanos, y la ciudad a menudo chocaba con sus vecinos y estaba dividida en su interior. En este mundo de telas, crédito y rivalidades nació Homobono, cuyo nombre latino significa \"buen hombre\". El apellido con el que se le recuerda es Tucenghi. Se desconoce su fecha exacta de nacimiento, aunque suele situarse hacia mediados de siglo.",
+   "Biografías posteriores lo describen como hijo de un sastre y comerciante de telas, y como hombre casado. Santi e Beati señala que estos detalles encajan con su condición social, pero proceden de la memoria de las vidas de los santos y no de documentos de su propia época. Lo seguro es lo siguiente: fue comerciante de telas, laico y esposo, y nunca dejó ese estado para ingresar en una orden religiosa. Su santidad creció a partir del trabajo ordinario de un taller de Cremona.",
+   "Quienes lo recordaban decían que hacía negocios con escrupulosa honradez. Él y su esposa vivían holgadamente, pero vivían y vestían con sencillez, porque daba mucho en limosna. El relato de Wikipedia afirma que creía que Dios le había permitido trabajar para poder sostener a las personas que vivían en la pobreza. También se ocupaba del entierro de los muertos abandonados. El Martirologio Romano añade que reunía y educaba a niños abandonados y restauraba la paz dentro de las familias. En una ciudad sin sistemas públicos de atención como los de hoy, se convirtió en una ayuda constante y personal para los más vulnerables.",
+   "La oración era la raíz de todo. Cada noche, poco antes de medianoche, acudía a la iglesia de San Egidio (Sant'Egidio) y participaba en maitines, quedándose hasta la misa de la mañana. Un relato sobre él pertenece a la leyenda. Según la leyenda, viajaba y dio toda su comida y bebida a un mendigo. Cuando fue a llenar su cantimplora en un arroyo, se dice que el agua se había convertido en vino. Es un recuerdo devocional, no un hecho documentado.",
+   "Homobono murió el 13 de noviembre de 1197 en esa misma iglesia de San Egidio, durante la liturgia. Según la tradición más conocida, se desplomó en actitud de oración, y quienes lo rodeaban comprendieron después que había muerto. Detalles como el canto del Gloria o la lectura del Evangelio proceden de esa tradición. La fecha, el lugar y la relación con la oración en la misa están firmemente atestiguados. Pronto se informó de curaciones y otros prodigios en su tumba.",
+   "Su obispo, Sicardo, actuó con rapidez. En 1198 viajó a Roma con un sacerdote llamado Osberto y una delegación de ciudadanos de Cremona para pedir al papa Inocencio III que reconociera a su vecino como santo. El papa escuchó los testimonios y, en la bula Quia pietas, fechada el 12 de enero de 1199 según el registro más difundido, canonizó a Homobono. La bula lo llama padre de los pobres, consuelo de los afligidos, hombre de paz y pacificador, y hombre bueno de palabra y de obra. Lo compara con un árbol plantado junto a corrientes de agua, que aún da fruto.",
+   "Fue una elección notable. Homobono no era obispo, monje ni príncipe. Su canonización mostró que el comercio y la vida familiar podían ser lugares donde se vive la virtud cristiana. Su veneración se extendió solo lentamente, pero tras su muerte se formaron cofradías de comerciantes y artesanos para servir a pobres y enfermos y para promover la enseñanza religiosa, especialmente en la familia. Sus reliquias fueron llevadas a la catedral de Cremona en 1357 y hoy descansan en su cripta. En 1643 el concejo de la ciudad lo eligió patrón de Cremona. También es honrado como patrón de los comerciantes, sastres, zapateros y pañeros. Una iglesia en Roma y una localidad en Italia llevan su nombre."
+  ],
+  "prayer": "San Homobono, ruega por nosotros.",
+  "patronages": [
+   "Cremona",
+   "empresarios",
+   "sastres",
+   "zapateros",
+   "pañeros"
+  ],
+  "places": [
+   "Cremona",
+   "Catedral de Cremona",
+   "Roma",
+   "Italia"
+  ]
+ },
+ "books": [],
+ "caption": "He sold cloth in Cremona. Heaven was counting something else.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Homobonus · Feast day: November 13\nSaint Homobonus was a married cloth merchant of twelfth-century Cremona who gave much of his money to the poor, restored peace in quarreling families, and was canonized within two years of his death.\n\nSaint Homobonus, pray for us. 🕯\n\nSave this to pray with again next November 13.\n\n—\nSources: Wikipedia · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #sainthomobonus #cremona",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/art.jpg"
+ },
+ "review_message_id": 85
+}
