@@ -1,0 +1,402 @@
+{
+ "id": "2026-11-14",
+ "date": "2026-11-14",
+ "status": "review",
+ "updated": "2026-11-07T10:25:28+00:00",
+ "saint": {
+  "qid": "Q2419830",
+  "name": "Saint Laurence O'Toole",
+  "display_name": "St. Laurence O'Toole",
+  "dates": "c. 1128 – 1180",
+  "region": "Dublin, Ireland",
+  "feast": "November 14",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q2419830",
+  "name": "Lorcán Ua Tuathail",
+  "links": 13,
+  "enwiki": "Lorc%C3%A1n_Ua_Tuathail",
+  "images": [
+   "Wexford%20Church%20of%20the%20Immaculate%20Conception%20South%20Aisle%20Window%20Saint%20Laurentius%20O%20Toole%20Detail%202010%2009%2029.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Lorcán Ua Tuathail",
+  "birth": 1128,
+  "death": 1180,
+  "lon": 1.419722222,
+  "lat": 50.047222222,
+  "selection_reason": "Laurence O'Toole has the strongest Catholic sourcing (Catholic Encyclopedia, Santi e Beati, Ökumenisches Heiligenlexikon) and a vivid, well-documented life: a hostage boy, an abbot who fed the starving, the archbishop of Dublin who tried to broker peace during the Norman invasion and died in exile at Eu, and a heart relic that was stolen and then recovered. It also gives Ireland and the 12th century, which breaks the run of Italian and Central European saints.",
+  "catholic_veneration": "Canonized by Pope Honorius III in 1225; listed in the Roman Martyrology on November 14, his dies natalis, and kept as a feast in the liturgical calendars of Ireland, including the Archdiocese of Dublin."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Laurence O'Toole",
+   "display_name": "St. Laurence O'Toole",
+   "dates": "c. 1128 – 1180",
+   "region": "Dublin, Ireland",
+   "feast": "November 14",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A ten-year-old boy was taken hostage by the King of Leinster.",
+    "visual": "art",
+    "scene": "A small boy in a plain tunic is led by armed retainers toward a king seated in a timber-and-wattle hall in twelfth-century Ireland. The men wear woven cloaks fastened with brooches, and firelight falls on the earthen floor."
+   },
+   {
+    "role": "who",
+    "text": "Saint Laurence O'Toole, born in Kildare, Ireland, about eleven twenty-eight: a monk who became archbishop of Dublin.",
+    "visual": "map",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "place": "Dublin · Ireland"
+   },
+   {
+    "role": "story",
+    "text": "He entered the monastery school at Glendalough and studied there for thirteen years. When the abbot died, the monks chose him unanimously.",
+    "visual": "art",
+    "scene": "A young monk bends over a manuscript in a stone-walled cell in the valley of Glendalough. Through the doorway are a tall round tower, a small stone church, a lake and green hills."
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds that in a famine he gave away the monastery's goods to feed the hungry.",
+    "visual": "art",
+    "scene": "At the gate of a medieval Irish monastery, a young abbot in a dark habit hands bread to a crowd of thin, ragged villagers. Monks carry baskets behind him, and a round tower rises in the background."
+   },
+   {
+    "role": "story",
+    "text": "In eleven sixty-two he became archbishop of Dublin, the first Irishman to hold that see.",
+    "visual": "art",
+    "scene": "Inside the Romanesque stone cathedral of Christ Church, Dublin, bishops in vestments lay hands on a kneeling man. The altar is lit by candles, and clergy and townspeople stand under rounded arches."
+   },
+   {
+    "role": "story",
+    "text": "When Dublin was besieged in eleven seventy, he ministered to its people.",
+    "visual": "art",
+    "scene": "An archbishop in mitre and cloak kneels among frightened townspeople and the wounded inside the timber-and-stone walls of twelfth-century Dublin. Smoke rises beyond the ramparts."
+   },
+   {
+    "role": "turn",
+    "text": "At the end of his life he followed England's king to Normandy to plead for King Roderic of Connacht. He fell ill at Eu and died there, having learned the king had agreed. Holiness can be a long road walked for peace.",
+    "visual": "art",
+    "scene": "In a Norman abbey infirmary, an aged archbishop lies on a simple bed while an abbot and Augustinian canons in dark habits tend him. A candle burns, and the arched stone windows show a gray northern sky."
+   },
+   {
+    "role": "close",
+    "text": "Saint Laurence, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Laurence": "LOR-ence",
+   "O'Toole": "oh-TOO-ul",
+   "Leinster": "LEN-ster",
+   "Kildare": "kil-DAIR",
+   "Glendalough": "GLEN-da-lock",
+   "Connacht": "KON-akt",
+   "Eu": "UH",
+   "Lorcán": "LOR-kawn",
+   "Tuathail": "TOO-hal"
+  },
+  "caption_hook": "He was a child hostage who grew up to be the archbishop of Dublin.",
+  "summary": "Saint Laurence O'Toole, a boy hostage turned abbot of Glendalough and archbishop of Dublin, spent his last years seeking peace between Irish kings and the English crown, and died at Eu in Normandy in 1180.",
+  "youtube_title": "St. Laurence O'Toole: The Hostage Boy Who Led Dublin",
+  "hashtags": [
+   "#saintlaurenceotoole",
+   "#dublin",
+   "#glendalough",
+   "#ireland",
+   "#lorcanuatuathail",
+   "#archbishopofdublin",
+   "#peacemaker",
+   "#medievalsaints",
+   "#catholicsaints",
+   "#saintoftheday",
+   "#allsaints",
+   "#catholic"
+  ],
+  "share_cta": "Know someone named Laurence, Lawrence or Lorcán? Send them their saint.",
+  "claims": [
+   {
+    "claim": "At the age of ten he was taken as a hostage by Dermot McMurrogh, King of Leinster.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was born about 1128 in what is now County Kildare.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He became a monk who later became archbishop of Dublin.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He entered the monastic school of Glendalough and studied there for thirteen years.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "On the death of Abbot Dunlaing in early 1154 he was unanimously called to preside over the abbey.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Glendalough was linked to the memory of its founder, Saint Kevin.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "In a famine he is said to have distributed the monastery's resources to relieve the hungry; this comes from the Lives.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was consecrated archbishop of Dublin in 1162, as the first Irish-born archbishop of the see.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His appointment as a native-born Irishman marked the passing of Scandinavian supremacy in the Irish capital.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "At the second siege of Dublin in 1170 he was active in ministration.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He wore a hair shirt under his episcopal dress and made an annual forty-day retreat at Saint Kevin's cave near Glendalough.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He converted the secular canons of Christ Church cathedral into Aroasian canons in 1163.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He showed deference to Henry II during the king's stay in Dublin.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He entertained the papal legate, Cardinal Vivian, who presided at the Synod of Dublin in April 1178.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He negotiated the Treaty of Windsor and secured good terms for Roderic, King of Connacht.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Treaty of Windsor was in 1175, and his role should be understood within a wider negotiation, not as sole author of the agreements.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He attended the Third Lateran Council in 1179 and returned as legate for Ireland.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In September 1179 he crossed to England to see Henry II, impelled by charity for King Roderic's cause, and was detained three weeks at Abingdon Abbey.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He followed the English king to Normandy and was taken ill at the Augustinian abbey of Eu, where Abbot Osbert and the canons tended him.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Before he died, on 14 November 1180, he learned that King Henry had acceded to his request.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology records that he died at Eu while traveling to King Henry, working to restore harmony among princes.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was canonized by Honorius III in 1225, on 11 December in the cathedral at Rieti.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Devotion grew early at his tomb and in Ireland.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His father was a chief of the Uí Muiredaig, and his mother was of the O'Byrne clan.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His sister Mor married Dermot, King of Leinster.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His feast is on 14 November, and he is patron of the city and archdiocese of Dublin.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He is said to have been given as a hostage as a child; the harshness of his custody rests largely on hagiographic tradition.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Sources describe his care for abandoned children, the poor and the sick.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Dublin"
+  ],
+  "places": [
+   "Dublin",
+   "Glendalough",
+   "Kildare",
+   "Eu"
+  ],
+  "story": [
+   "Lorcán Ua Tuathail, known in English as Laurence or Lawrence O'Toole, was born about 1128 in what is now County Kildare, in the Irish kingdom of Leinster. His father was a chief of the Uí Muiredaig, and his mother came from the O'Byrne clan. He grew up among Ireland's ruling families, in a world where honor and rivalry were bound up with kinship.",
+   "That world reached him early. At the age of ten he was taken as a hostage by Dermot McMurrogh, King of Leinster. Hostages were not unusual in medieval Irish politics, since they helped guarantee agreements between rival chiefs. One Italian source notes that the harshness of the boy's custody rests largely on the tradition of the saints' Lives. After his release, according to the Catholic Encyclopedia, he obtained permission to enter the monastic school of Glendalough.",
+   "Glendalough, in County Wicklow, was the valley of Saint Kevin, an old center of prayer, teaching and monastic life. Laurence studied there for thirteen years and was known for his piety and learning. When the abbot, Dunlaing, died in early 1154, the community unanimously called the young man to lead them. Tradition, as told in his Lives, remembers him as an abbot who joined authority to charity. During a famine he is said to have given away the monastery's goods to relieve the hungry. Scholars note that such details come from the Lives, and the stories are best read as witness to the reputation he earned.",
+   "In 1161 the archbishop of Dublin, Gregory, died, and Laurence was chosen to succeed him. He had humbly declined the see of Glendalough a year earlier. He was consecrated in Christ Church cathedral early in 1162 by Gelasius, Primate of Armagh. He was the first Irish-born archbishop of Dublin, and his appointment marked the end of the old Scandinavian hold on the city's church. He reformed Christ Church by converting its secular canons into canons of the Arroasian order, who lived a common life under rule. His sources also stress his care for abandoned children, the poor and the sick.",
+   "His own life was severe. He wore a hair shirt beneath his episcopal robes. Each year he withdrew for forty days to Saint Kevin's cave near Glendalough, the place where his monastic life had begun.",
+   "He governed in a time of upheaval. From 1169 Anglo-Norman forces entered Ireland, and in 1170 Dublin was besieged and taken. The Catholic Encyclopedia records that during the siege Laurence was active in ministering to his people. In 1171 Henry II of England came to Ireland, and Laurence showed him due deference. In 1175 the Treaty of Windsor tried to settle the spheres of Henry and the Irish king Roderic of Connacht. Laurence helped negotiate it and secured good terms for Roderic. Modern accounts caution that he should be seen as one voice in a larger negotiation, and that he did not hold a national policy in the modern sense. In 1178 he welcomed Cardinal Vivian, who presided over the Synod of Dublin. In 1179 he attended the Third Lateran Council and returned to Ireland as papal legate.",
+   "Soon afterward he felt bound to see Henry again, moved by what the Catholic Encyclopedia calls a burning charity for the cause of King Roderic. He crossed to England in September 1179 and was detained for three weeks at Abingdon Abbey. He then followed the king to Normandy. There he fell ill at the Augustinian abbey of Eu, where Abbot Osbert and the canons tended him. Before he died on 14 November 1180, he learned that Henry had granted his request. The Roman Martyrology says he passed to the joy of eternal peace while on his way to the king, working to restore harmony among princes.",
+   "Devotion to him grew early, at his tomb and in Ireland. Pope Honorius III canonized him in 1225. The Church keeps his feast on 14 November, and he is honored as patron of the city and archdiocese of Dublin. His life shows a holiness that was hidden in prayer and open in service: a hostage who learned stillness, and a bishop who spent his last strength on a road toward peace."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Turn beat: 'In eleven eighty he followed England's king to Normandy' conflicts with the Catholic Encyclopedia, which has him crossing to England in September 1179, then following the king to Normandy. Sources 1 and 3 do not agree on the year, so I replaced the date with 'At the end of his life'. The beat is now about 140 words.",
+   "Story paragraph 2: 'The Italian sources note' overstates the evidence, since only one Italian source (Santi e Beati) is given. Changed to 'One Italian source notes'.",
+   "Story paragraph 2: 'What the sources do agree on is what came next: he obtained permission' overstates agreement. Only the Catholic Encyclopedia gives the permission to enter Glendalough; the other sources say only that he was freed or released. Reworded to attribute it to the Catholic Encyclopedia.",
+   "Checked and left unchanged: the famine story is correctly marked 'Tradition holds'. The map pin matches Dublin. 'Saint' is correct for a canonized saint, and he is not described as a martyr. The Windsor, Lateran, Eu and Honorius III details match the sources. The first-Irishman claim is supported by source 2 and implied by source 1."
+  ],
+  "confidence": 86,
+  "reviewer_note": "The sources disagree on his age as a hostage (ten in the Catholic Encyclopedia, about thirteen in the Heiligenlexikon) and on how the hostage-taking ended. I followed the Catholic Encyclopedia, but you may want to soften the hook. Source 2 calls the hostage account tradition. The 1179 and 1180 timing of the last journey is also inconsistent across sources."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2687,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 670,
+   "thinking": 391
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1887,
+   "cache_write": 8114,
+   "cache_read": 0,
+   "out": 10502,
+   "thinking": 5958
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 5367,
+   "cache_write": 0,
+   "cache_read": 8114,
+   "out": 8679,
+   "thinking": 5104
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1909,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2884,
+   "thinking": 733
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Lorcán Ua Tuathail",
+   "url": "https://en.wikipedia.org/wiki/Lorc%C3%A1n_Ua_Tuathail"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Lorcán Ua Tuathail",
+   "url": "https://www.newadvent.org/cathen/09091b.htm"
+  },
+  {
+   "title": "Santi e Beati: Lorcán Ua Tuathail",
+   "url": "https://www.santiebeati.it/dettaglio/90998"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Lorcán Ua Tuathail",
+   "url": "https://www.heiligenlexikon.de/BiographienL/Laurentius_von_Dublin.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.0,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Lorenzo",
+  "name": "San Lorenzo O'Toole",
+  "region": "Dublín, Irlanda",
+  "dates": "c. 1128 – 1180",
+  "hook": "Fue un niño rehén que llegó a ser arzobispo de Dublín.",
+  "summary": "San Lorenzo O'Toole, un niño rehén que llegó a ser abad de Glendalough y arzobispo de Dublín, pasó sus últimos años buscando la paz entre los reyes irlandeses y la corona inglesa, y murió en Eu, en Normandía, en 1180.",
+  "story": [
+   "Lorcán Ua Tuathail, conocido en inglés como Laurence o Lawrence O'Toole, nació alrededor de 1128 en lo que hoy es el condado de Kildare, en el reino irlandés de Leinster. Su padre era un jefe de los Uí Muiredaig, y su madre pertenecía al clan O'Byrne. Creció entre las familias gobernantes de Irlanda, en un mundo donde el honor y la rivalidad estaban unidos al parentesco.",
+   "Ese mundo lo alcanzó muy pronto. A los diez años fue tomado como rehén por Dermot McMurrogh, rey de Leinster. Los rehenes no eran infrecuentes en la política medieval irlandesa, pues ayudaban a garantizar los acuerdos entre jefes rivales. Una fuente italiana señala que la dureza de la custodia del niño se apoya en gran medida en la tradición de las Vidas de los santos. Después de su liberación, según la Enciclopedia Católica, obtuvo permiso para ingresar en la escuela monástica de Glendalough.",
+   "Glendalough, en el condado de Wicklow, era el valle de San Kevin, un antiguo centro de oración, enseñanza y vida monástica. Lorenzo estudió allí durante trece años y era conocido por su piedad y su saber. Cuando el abad Dunlaing murió a comienzos de 1154, la comunidad llamó unánimemente al joven para que los guiara. La tradición, tal como se narra en sus Vidas, lo recuerda como un abad que unía la autoridad con la caridad. Durante una hambruna, se dice que entregó los bienes del monasterio para aliviar a los hambrientos. Los estudiosos señalan que tales detalles proceden de las Vidas, y que los relatos se entienden mejor como testimonio de la reputación que se ganó.",
+   "En 1161 murió el arzobispo de Dublín, Gregorio, y Lorenzo fue elegido para sucederlo. Un año antes había declinado humildemente la sede de Glendalough. Fue consagrado en la catedral de Christ Church a comienzos de 1162 por Gelasio, primado de Armagh. Fue el primer arzobispo de Dublín nacido en Irlanda, y su nombramiento marcó el fin del antiguo dominio escandinavo sobre la Iglesia de la ciudad. Reformó Christ Church convirtiendo a sus canónigos seculares en canónigos de la orden de los arroasianos, que vivían en comunidad bajo una regla. Sus fuentes también destacan su cuidado de los niños abandonados, los pobres y los enfermos.",
+   "Su propia vida era austera. Llevaba un cilicio bajo sus vestiduras episcopales. Cada año se retiraba durante cuarenta días a la cueva de San Kevin, cerca de Glendalough, el lugar donde había comenzado su vida monástica.",
+   "Gobernó en una época de agitación. Desde 1169 las fuerzas anglonormandas entraron en Irlanda, y en 1170 Dublín fue sitiada y tomada. La Enciclopedia Católica registra que, durante el asedio, Lorenzo se dedicó activamente a atender a su pueblo. En 1171 Enrique II de Inglaterra llegó a Irlanda, y Lorenzo le mostró la deferencia debida. En 1175 el Tratado de Windsor intentó fijar las zonas de influencia de Enrique y del rey irlandés Roderic de Connacht. Lorenzo ayudó a negociarlo y logró condiciones favorables para Roderic. Los relatos modernos advierten que debe verse como una voz dentro de una negociación más amplia, y que no tenía una política nacional en el sentido moderno. En 1178 recibió al cardenal Vivian, quien presidió el Sínodo de Dublín. En 1179 asistió al Tercer Concilio de Letrán y regresó a Irlanda como legado pontificio.",
+   "Poco después se sintió obligado a volver a ver a Enrique, movido por lo que la Enciclopedia Católica llama una ardiente caridad por la causa del rey Roderic. Cruzó a Inglaterra en septiembre de 1179 y permaneció retenido durante tres semanas en la abadía de Abingdon. Luego siguió al rey hasta Normandía. Allí enfermó en la abadía agustiniana de Eu, donde el abad Osberto y los canónigos lo atendieron. Antes de morir el 14 de noviembre de 1180, supo que Enrique había concedido su petición. El Martirologio Romano dice que pasó a la alegría de la paz eterna mientras se dirigía al encuentro del rey, trabajando por restaurar la armonía entre los príncipes.",
+   "La devoción hacia él creció pronto, junto a su tumba y en Irlanda. El papa Honorio III lo canonizó en 1225. La Iglesia celebra su fiesta el 14 de noviembre, y es venerado como patrono de la ciudad y de la archidiócesis de Dublín. Su vida muestra una santidad escondida en la oración y abierta al servicio: un rehén que aprendió la quietud, y un obispo que gastó sus últimas fuerzas en un camino hacia la paz."
+  ],
+  "prayer": "San Lorenzo, ruega por nosotros.",
+  "patronages": [
+   "Dublín"
+  ],
+  "places": [
+   "Dublín",
+   "Glendalough",
+   "Kildare",
+   "Eu"
+  ]
+ },
+ "books": [
+  {
+   "title": "St. Laurence O'Toole And His Contemporaries",
+   "author": "Eblana",
+   "isbn": "9781019099117",
+   "year": 2022
+  }
+ ],
+ "caption": "He was a child hostage who grew up to be the archbishop of Dublin.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Laurence O'Toole · Feast day: November 14\nSaint Laurence O'Toole, a boy hostage turned abbot of Glendalough and archbishop of Dublin, spent his last years seeking peace between Irish kings and the English crown, and died at Eu in Normandy in 1180.\n\nSaint Laurence, pray for us. 🕯\n\nHad you ever heard of St. Laurence O'Toole before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintlaurenceotoole #dublin",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/art.jpg"
+ },
+ "review_message_id": 93
+}
