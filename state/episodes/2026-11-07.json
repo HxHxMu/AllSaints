@@ -1,8 +1,8 @@
 {
  "id": "2026-11-07",
  "date": "2026-11-07",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-07T12:34:04+00:00",
  "saint": {
   "qid": "Q980830",
   "name": "Saint Herculanus of Perugia",
@@ -275,7 +275,8 @@
    "Umbría",
    "Cisterna",
    "Italia"
-  ]
+  ],
+  "slug": "herculano-de-perugia"
  },
  "books": [],
  "caption": "When Perugia was under siege, tradition says its bishop fed the last grain to a lamb.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Herculanus of Perugia · Feast day: November 7\nSaint Herculanus, bishop of Perugia, is said to have tried to save his besieged city by feeding its last grain to a lamb, and he died a martyr when King Totila took the city in 549.\n\nSaint Herculanus, pray for us. 🕯\n\nSave this to pray with again next November 7.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintherculanus #umbria",
@@ -286,5 +287,38 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-07/art.jpg"
  },
- "review_message_id": 46
+ "review_message_id": 46,
+ "slug": "herculanus-of-perugia",
+ "published": {
+  "media_id": "18499879084097843",
+  "permalink": "https://www.instagram.com/reel/DfcL9w4k11D/"
+ },
+ "published_at": "2026-11-07T07:30-05:00",
+ "facebook": {
+  "id": "1172063749067098",
+  "url": "https://www.facebook.com/reel/1172063749067098/",
+  "published_at": "2026-11-07T07:32-05:00"
+ },
+ "threads": {
+  "id": "18111870751899539",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfcMKpfKY_a",
+  "published_at": "2026-11-07T07:33-05:00"
+ },
+ "youtube": {
+  "id": "an46hKm3YMQ",
+  "url": "https://youtube.com/shorts/an46hKm3YMQ",
+  "privacy": "public",
+  "published_at": "2026-11-07T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "attempts": 1,
+  "error": "TikTok upload start failed 500: {\"data\":{},\"error\":{\"code\":\"internal_error\",\"message\":\"Something went wrong. Please try again later.\",\"log_id\":\"202611071234030696456129E5756B7F5A\"}}"
+ }
 }
