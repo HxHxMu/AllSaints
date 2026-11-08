@@ -1,8 +1,8 @@
 {
  "id": "2026-11-08",
  "date": "2026-11-08",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-08T12:34:02+00:00",
  "saint": {
   "qid": "Q499836",
   "name": "Saint Willehad",
@@ -300,7 +300,8 @@
    "Dokkum",
    "Echternach",
    "Northumbria"
-  ]
+  ],
+  "slug": "willehad"
  },
  "books": [],
  "caption": "He lost friends, fled for his life, and still went back to the work.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Willehad · Feast day: November 8\nSaint Willehad, a Northumbrian missionary, survived threats and a Saxon revolt, then rebuilt his mission and became Bishop of Bremen.\n\nMay we, too, begin again. Saint Willehad, pray for us. 🕯\n\nSave this to pray with again next November 8.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintwillehad #bremen",
@@ -311,5 +312,39 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-08/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-08/art.jpg"
  },
- "review_message_id": 51
+ "review_message_id": 51,
+ "slug": "willehad",
+ "published": {
+  "media_id": "17922574086452288",
+  "permalink": "https://www.instagram.com/reel/DfewrvMDNgI/"
+ },
+ "published_at": "2026-11-08T07:30-05:00",
+ "facebook": {
+  "id": "1159378906657045",
+  "url": "https://www.facebook.com/reel/1159378906657045/",
+  "published_at": "2026-11-08T07:32-05:00"
+ },
+ "threads": {
+  "id": "18110418680627373",
+  "url": "https://www.threads.com/@all.holy.saints/post/Dfew5ObhcRq",
+  "published_at": "2026-11-08T07:33-05:00"
+ },
+ "youtube": {
+  "id": "vW1IukNwBHc",
+  "url": "https://youtube.com/shorts/vW1IukNwBHc",
+  "privacy": "public",
+  "published_at": "2026-11-08T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7705777554409506829",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-08T07:34-05:00"
+ }
 }
