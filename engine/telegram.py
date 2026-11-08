@@ -138,6 +138,20 @@ def _fetch_updates(offset):
         return []
 
 
+# Buttons that change an episode. Once it is posting or posted they do nothing: Undo then Approve would post the
+# Reel again, and Redo / New saint would regenerate a live episode (the old messages keep their buttons).
+EP_BUTTONS = ("approve", "unapprove", "redo", "caption", "newsaint")
+
+
+def _posted(cq, ep):
+    text = f"📣 {ep['saint']['display_name']} is already posted, so that button does nothing now."
+    _answer(cq, text="Already posted")
+    if cq.get("_answered"):  # the relay already showed its own toast ("Approved ✅…"), so say it in the chat
+        send(text)
+    api("editMessageReplyMarkup", chat_id=cq["message"]["chat"]["id"], message_id=cq["message"]["message_id"],
+        reply_markup={"inline_keyboard": [[{"text": f"📣 Posted {ep['date']}", "callback_data": f"noop:{ep['id']}"}]]})
+
+
 def _answer(cq, **kw):
     if not cq.get("_answered"):  # the relay already answered it the moment it was tapped
         api("answerCallbackQuery", callback_query_id=cq["id"], **kw)
@@ -173,6 +187,9 @@ def process_updates():
             ep = load_episode(ep_id)
             if not ep:
                 _answer(cq, text="Episode not found")
+                continue
+            if kind in EP_BUTTONS and ep.get("status") in ("publishing", "published"):
+                _posted(cq, ep)
                 continue
             if kind == "approve":
                 ep["status"] = "approved"
@@ -264,6 +281,9 @@ def process_updates():
             ep = load_episode(p["ep"])
             st["pending"] = None
             if not ep:
+                continue
+            if ep.get("status") in ("publishing", "published"):
+                send(f"📣 {ep['saint']['display_name']} is already posted, so nothing was changed.")
                 continue
             if p["kind"] == "caption":
                 ep["caption_hook_override"] = text

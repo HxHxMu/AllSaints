@@ -369,7 +369,15 @@ def publish_episode(ep):
         storage.download(ep["assets"]["video.mp4"], vid)
         video_url = storage.resolve_direct(ep["assets"]["video.mp4"])
         cover_url = storage.resolve_direct(ep["assets"]["cover.jpg"])
-        res = instagram.publish_reel(ep["caption"], video_url=video_url, cover_url=cover_url, video_path=vid)
+        try:
+            res = instagram.find_reel(ep["caption"])
+        except Exception as e:  # can't ask: post anyway, since a missed day is worse than a rare double
+            log("Instagram check for an earlier post failed:", str(e)[:200])
+            res = None
+        if res:
+            log("Already on Instagram (earlier attempt), recording it:", res["media_id"])
+        else:
+            res = instagram.publish_reel(ep["caption"], video_url=video_url, cover_url=cover_url, video_path=vid)
     except Exception as e:
         traceback.print_exc()
         publish_youtube(ep)  # a Reel failure shouldn't hold the Short back

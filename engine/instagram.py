@@ -1,5 +1,5 @@
 """Publish Reels (and the odd carousel) with the Instagram API (Instagram Login, graph.instagram.com)."""
-import base64, hashlib, os, time
+import base64, hashlib, os, re, time, datetime as dt
 from pathlib import Path
 from cryptography.fernet import Fernet
 from common import env, http, log, STATE, load_config, save_config
@@ -76,6 +76,23 @@ def _publish(container, tok):
         log("Permalink lookup failed:", e)
         pl = None
     return {"media_id": mid, "permalink": pl}
+
+
+def find_reel(caption, hours=36):
+    """The account's Reel with this caption from the last `hours`, as {media_id, permalink}, else None. Asked before
+    every daily post: a publish that timed out after Instagram took it, or a post whose saved state never reached the
+    repo, would otherwise be posted again on the next poll. Raises if Instagram can't be asked."""
+    norm = lambda t: re.sub(r"\s+", " ", t or "").strip()[:300]
+    want = norm(caption)
+    r = http.get(f"{GRAPH}/{_uid()}/media", timeout=30, params={
+        "fields": "id,caption,permalink,timestamp", "limit": 10, "access_token": get_token()})
+    r.raise_for_status()
+    cutoff = time.time() - hours * 3600
+    for m in r.json().get("data", []):
+        ts = dt.datetime.strptime(m.get("timestamp") or "1970-01-01T00:00:00+0000", "%Y-%m-%dT%H:%M:%S%z").timestamp()
+        if ts >= cutoff and want and norm(m.get("caption")) == want:
+            return {"media_id": m["id"], "permalink": m.get("permalink")}
+    return None
 
 
 def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = None):
