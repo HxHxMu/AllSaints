@@ -1,8 +1,8 @@
 {
  "id": "2026-11-14",
  "date": "2026-11-14",
- "status": "review",
- "updated": "2026-11-07T10:25:28+00:00",
+ "status": "redo_requested",
+ "updated": "2026-11-08T04:00:11+00:00",
  "saint": {
   "qid": "Q2419830",
   "name": "Saint Laurence O'Toole",
@@ -398,5 +398,9 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/art.jpg"
  },
- "review_message_id": 93
+ "review_message_id": 93,
+ "redo": {
+  "new_saint": false,
+  "note": "Around the 00:40 mark a word cuts off"
+ }
 }
