@@ -97,6 +97,14 @@
       "description": "{title}. Lesser-known Catholic saints, one short story each, posted on their feast day."
     }
   },
+  "angles": {
+    "miracle": {
+      "label": "Miracle-led test",
+      "select": "This date tests miracle-led episodes. Strongly prefer a candidate whose life includes one specific, well-documented miracle: one the Church examined (for example, approved for their beatification or canonization) or one recorded by early sources close to the events. Skip candidates whose miracles are only vague or generic.",
+      "write": "Tell this life through ONE miracle. HOOK: the miracle's most arresting concrete detail. STORY: who the saint was, what happened, who witnessed or examined it, and what the Church concluded. State its status exactly as the sources do ('approved by the Church as the miracle for her canonization', 'witnesses testified', 'tradition holds'). Never call anything approved, inexplicable or proven unless a source says so. TURN: the miracle points to the saint's holiness and to God, not the other way around. Keep the WHO line, the CLOSE and every other rule.",
+      "check": "This episode is told through a miracle: check that its approval status (examined by the Church, testified by witnesses, or tradition) is stated exactly as the sources give it, and never overstated."
+    }
+  },
   "illustration": {
     "model": "gemini-3.1-flash-lite-image",
     "style": "Painted as a traditional Byzantine icon: egg tempera on a wooden panel, burnished gold-leaf background, flat stylized figures with bold dark outlines, elongated proportions, inverse perspective, symbolic simplified architecture and landscape, solemn non-naturalistic faces with large calm eyes, deep reds, ultramarine and ochre, subtle craquelure and aged patina. Reverent and devotional. Vertical composition. The painting fills the entire image edge to edge: no panel edge, no border, no frame. No text, no letters, no inscriptions.",

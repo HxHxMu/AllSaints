@@ -66,7 +66,7 @@ def word_count(script):
     return sum(len(b["text"].split()) for b in script["beats"])
 
 
-def write_script(saint, sources, date, note=None):
+def write_script(saint, sources, date, note=None, angle=None):
     feast = month_day_label(date)
     prompt = f"""Write today's episode.
 
@@ -74,6 +74,7 @@ Saint: {saint['name']} (Wikidata {saint['qid']}); feast day {feast}.
 Why chosen: {saint.get('selection_reason', '')}
 Catholic veneration: {saint.get('catholic_veneration', '')}
 {('Reviewer feedback to apply: ' + note) if note else ''}
+{('Angle for this episode: ' + angle['write']) if angle else ''}
 
 Use only the facts in the SOURCES above.
 
@@ -119,7 +120,7 @@ Return ONLY JSON: {{"story": ["paragraph", "..."], "patronages": [], "places": [
     return claude_json(prompt, system=SYSTEM, context=sources_context(sources), label="story")
 
 
-def fact_check(script, sources):
+def fact_check(script, sources, angle=None):
     prompt = f"""You are a careful Catholic historian and fact-checker for a reverent saints series. Check this script against the SOURCES above only.
 
 SCRIPT JSON:
@@ -127,6 +128,7 @@ SCRIPT JSON:
 
 Check both the spoken beats and the website "story" paragraphs.
 For every sentence: is it supported by the sources? Is legend presented as history? Are dates, places, titles (Saint/Blessed, martyr, bishop, etc.) right? Is anything theologically careless or irreverent? Is the map location right?
+{angle['check'] if angle else ''}
 Fix problems with the smallest possible edits, keeping the same beats, roles and length (125-145 words).
 Story problems are fixed as find/replace pairs, never by rewriting the story.
 

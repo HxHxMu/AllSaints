@@ -54,6 +54,9 @@ def send_review(ep):
     if ep.get("narrator", "").startswith("elevenlabs"):
         head = ("⚠️ Narrated by the ElevenLabs fallback (Gemini TTS failed). Free-tier audio isn't licensed "
                 "for commercial use: tap 🔁 Redo to re-voice it with Gemini.\n\n" + head)
+    if ep.get("angle"):
+        from common import BRAND
+        head = f"🧪 {BRAND.get('angles', {}).get(ep['angle'], {}).get('label', ep['angle'])}\n" + head
     assets = ep.get("assets", {})
     kw = dict(chat_id=cid, caption=head[:1024], supports_streaming="true", width=720, height=1280, reply_markup=buttons(ep["id"]))
     msg = None

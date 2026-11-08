@@ -128,6 +128,9 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
     note = redo.get("note")
     exclude = [ep["saint"]["qid"]] if redo.get("new_saint") and ep.get("saint", {}).get("qid") else []
     exclude += [r["qid"] for r in ep.get("rejected", [])]  # saints the fact-check turned down for this date
+    # a format test for this date (config "angles": {"2026-11-15": "miracle"}); the text lives in brand.json
+    angle_key = ep.get("angle") or load_config().get("angles", {}).get(ep_id)
+    angle = BRAND.get("angles", {}).get(angle_key)
     prev_status = ep.get("status")
     ep["status"] = "generating"
     save_episode(ep)
@@ -139,10 +142,10 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         if ep.get("saint_pick") and not redo.get("new_saint") and prev_status == "redo_requested":
             saint = ep["saint_pick"]
         else:
-            saint = research.select_saint(date, exclude=exclude)
+            saint = research.select_saint(date, exclude=exclude, angle=angle)
         sources = research.gather_sources(saint)
-        draft = scriptmod.write_script(saint, sources, date, note=note)
-        fc = scriptmod.fact_check(draft, sources)
+        draft = scriptmod.write_script(saint, sources, date, note=note, angle=angle)
+        fc = scriptmod.fact_check(draft, sources, angle=angle)
         if research.wikipedia_only(sources) and fc.get("verdict") != "reject":
             # nothing independent to check against: say so where Luis approves, and cap the score
             fc["confidence"] = min(fc.get("confidence") or 0, 70)
@@ -198,6 +201,8 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         })
         if es:
             ep["es"] = es
+        if angle:
+            ep["angle"] = angle_key
         ep["books"] = found_books
         ep["caption"] = build_caption(ep)
         ep.pop("redo", None)

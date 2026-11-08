@@ -154,7 +154,7 @@ def recent_summary(n=10):
     return "\n".join(f"- {e['date']}: {e.get('saint', {}).get('name')} ({e.get('saint', {}).get('region', '')})" for e in eps) or "(none yet)"
 
 
-def select_saint(date, exclude=()):
+def select_saint(date, exclude=(), angle=None):
     cal = json.loads((DATA / "calendar.json").read_text())
     key = date.strftime("%m-%d")
     used = used_qids() | set(exclude)
@@ -186,7 +186,7 @@ def select_saint(date, exclude=()):
 
 Feast day: {month_day_label(date)}
 Editorial scope: {cfg['scope']}
-
+{(angle['select'] + chr(10)) if angle else ''}
 Recently published (avoid repeating the same region/era/type back-to-back):
 {recent_summary()}
 
