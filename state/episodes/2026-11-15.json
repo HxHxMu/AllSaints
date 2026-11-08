@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15",
  "date": "2026-11-15",
- "status": "review",
+ "status": "redo_requested",
  "updated": "2026-11-08T10:33:33+00:00",
  "saint": {
   "qid": "Q245621",
@@ -293,5 +293,9 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/art.jpg"
  },
- "review_message_id": 106
+ "review_message_id": 106,
+ "redo": {
+  "new_saint": false,
+  "note": "Around the 0:55 mark a word is cut off. Make every word complete."
+ }
 }
