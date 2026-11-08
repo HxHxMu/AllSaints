@@ -344,7 +344,6 @@ def publish_due():
         publish_youtube(ep)  # retries a Short that failed after the Reel went out
         youtube_playlists(ep)
         publish_facebook(ep)
-        publish_fb_feed(ep)
         publish_threads(ep)
         publish_tiktok(ep)
         pinterest_boards(ep)
@@ -386,7 +385,6 @@ def publish_episode(ep):
     save_episode(ep)
     _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}")
     publish_facebook(ep, vid)
-    publish_fb_feed(ep)
     publish_threads(ep)
     publish_youtube(ep, vid)
     publish_tiktok(ep, vid)
@@ -421,30 +419,6 @@ def publish_facebook(ep, video=None):
         save_episode(ep)
         if fb["attempts"] in (1, 3):
             telegram.send(f"❌ Facebook post failed ({fb['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if fb["attempts"] < 3 else ""))
-
-
-def publish_fb_feed(ep):
-    """A Page post linking the day's Facebook Reel, once: Reels posted through the API only show in the Page's Reels
-    tab, so without it the Posts timeline looks idle. Independent, max 3 attempts."""
-    import facebook, telegram, threads, youtube
-    fb = ep.get("facebook") or {}
-    feed = fb.get("feed") or {}
-    if not facebook.configured() or not fb.get("url") or feed.get("id") or feed.get("attempts", 0) >= 3:
-        return
-    try:
-        res = facebook.post_link(threads.build_text(ep, youtube.page_url(ep)), fb["url"])
-    except Exception as e:
-        traceback.print_exc()
-        feed["attempts"] = feed.get("attempts", 0) + 1
-        feed["error"] = str(e)[:500]
-        fb["feed"] = feed
-        save_episode(ep)
-        if feed["attempts"] in (1, 3):
-            telegram.send(f"❌ Facebook feed post failed ({feed['attempts']}x): {str(e)[:300]}" + ("\nWill retry." if feed["attempts"] < 3 else ""))
-        return
-    # posted: record it first, so nothing after this can post it again
-    fb["feed"] = {**res, "published_at": dt.datetime.now(tz()).isoformat(timespec="minutes")}
-    save_episode(ep)
 
 
 def publish_threads(ep):
@@ -697,8 +671,6 @@ def main():
     sub.add_parser("fb-whoami")
     fp = sub.add_parser("facebook", help="post one published episode's Reel to the Facebook Page now")
     fp.add_argument("episode")
-    ff = sub.add_parser("fb-feed", help="post the Page feed post linking one episode's Facebook Reel now")
-    ff.add_argument("episode")
     sub.add_parser("tt-auth", help="one-time: connect the TikTok account (TT_CLIENT_KEY/SECRET/TOKEN_KEY, state/tt_token.enc)")
     sub.add_parser("tt-whoami")
     sub.add_parser("th-auth", help="one-time: connect Threads (TH_APP_ID/SECRET/TOKEN_KEY, state/th_token.enc)")
@@ -804,10 +776,6 @@ def main():
         ep = load_episode(a.episode)
         (ep.get("facebook") or {}).pop("attempts", None)
         publish_facebook(ep)
-    elif a.cmd == "fb-feed":
-        ep = load_episode(a.episode)
-        ((ep.get("facebook") or {}).get("feed") or {}).pop("attempts", None)
-        publish_fb_feed(ep)
     elif a.cmd == "th-auth":
         import threads
         threads.authorize()
