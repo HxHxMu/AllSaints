@@ -1,0 +1,131 @@
+{
+  "_note": "Spec for engine/sung_video.py. Times in seconds of work/sung/04/audio.wav, from a prompted faster-whisper pass (language la), 2026-11-08. Text must match 04-sero-te-amavi.md exactly.",
+  "dir": "work/sung/04",
+  "audio": "audio.wav",
+  "art": "art.jpg",
+  "art_crop": [
+    100,
+    0,
+    915,
+    1024
+  ],
+  "title": "Sero te amavi",
+  "title_en": "Too late loved I Thee",
+  "byline": "From the Confessions of St. Augustine",
+  "dates": "354–430",
+  "cards": [
+    [
+      0,
+      21
+    ],
+    [
+      123,
+      152
+    ]
+  ],
+  "stanzas": [
+    {
+      "n": 1,
+      "at": 23.0,
+      "latin": [
+        "Sero te amavi,",
+        "pulchritudo tam antiqua et tam nova,",
+        "sero te amavi!"
+      ],
+      "english": [
+        "Too late loved I Thee, O Thou Beauty of ancient days,",
+        "yet ever new! too late I loved Thee!"
+      ]
+    },
+    {
+      "n": 2,
+      "at": 54.5,
+      "latin": [
+        "Et ecce intus eras et ego foris,",
+        "et ibi te quaerebam,",
+        "et in ista formosa quae fecisti",
+        "deformis inruebam."
+      ],
+      "english": [
+        "And behold, Thou wert within, and I abroad,",
+        "and there I searched for Thee; deformed I,",
+        "plunging amid those fair forms which Thou hadst made."
+      ],
+      "until": 88.5
+    },
+    {
+      "n": 3,
+      "at": 90.3,
+      "latin": [
+        "Mecum eras, et tecum non eram.",
+        "Ea me tenebant longe a te,",
+        "quae si in te non essent, non essent."
+      ],
+      "english": [
+        "Thou wert with me, but I was not with Thee.",
+        "Things held me far from Thee, which,",
+        "unless they were in Thee, were not at all."
+      ],
+      "until": 120.5
+    },
+    {
+      "n": 4,
+      "at": 155.0,
+      "latin": [
+        "Vocasti et clamasti",
+        "et rupisti surditatem meam;",
+        "coruscasti, splenduisti",
+        "et fugasti caecitatem meam;"
+      ],
+      "english": [
+        "Thou calledst, and shoutedst, and burstest my deafness.",
+        "Thou flashedst, shonest, and scatteredst my blindness."
+      ]
+    },
+    {
+      "n": 5,
+      "at": 188.5,
+      "latin": [
+        "fragrasti, et duxi spiritum et anhelo tibi;",
+        "gustavi et esurio et sitio;",
+        "tetigisti me, et exarsi in pacem tuam."
+      ],
+      "english": [
+        "Thou breathedst odours, and I drew in breath",
+        "and panted for Thee. I tasted, and hunger and thirst.",
+        "Thou touchedst me, and I burned for Thy peace."
+      ],
+      "until": 221.0
+    },
+    {
+      "n": 1,
+      "at": 226.3,
+      "until": 253.5,
+      "latin": [
+        "Sero te amavi,",
+        "pulchritudo tam antiqua et tam nova,",
+        "sero te amavi!"
+      ],
+      "english": [
+        "Too late loved I Thee, O Thou Beauty of ancient days,",
+        "yet ever new! too late I loved Thee!"
+      ]
+    }
+  ],
+  "credits_at": 256,
+  "credits": [
+    [
+      "Words",
+      "St. Augustine of Hippo (354–430)"
+    ],
+    [
+      "English",
+      "E. B. Pusey (1838)"
+    ],
+    [
+      "Music",
+      "Luis E. Bonilla"
+    ]
+  ],
+  "closing": "Saint Augustine, pray for us."
+}

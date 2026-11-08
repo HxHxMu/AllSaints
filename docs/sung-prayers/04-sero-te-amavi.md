@@ -1,7 +1,7 @@
 # 04 · Sero te amavi — St. Augustine of Hippo
 
 **Lyric master** · release 4 · planned **Wednesday, Feb 10, 2027** (Ash Wednesday)
-Status: **text locked from the sources below** (2026-11-07); music not started.
+Status: **text locked from the sources below** (2026-11-07). Music done 2026-11-08 (Suno + Luis); lyric video rendered (`work/sung/04/04-sero-te-amavi.mp4`, 4:35) from [04-sero-te-amavi.json](04-sero-te-amavi.json), timed with a prompted Whisper pass (Latin).
 
 | | |
 |---|---|
