@@ -2,7 +2,7 @@
  "id": "2026-11-14",
  "date": "2026-11-14",
  "status": "review",
- "updated": "2026-11-08T10:25:28+00:00",
+ "updated": "2026-11-08T16:13:13+00:00",
  "saint": {
   "qid": "Q2419830",
   "name": "Saint Laurence O'Toole",
@@ -318,5 +318,7 @@
   "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/cover.jpg",
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-14/art.jpg"
- }
+ },
+ "review_sends": 1,
+ "review_message_id": 114
 }
