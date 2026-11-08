@@ -158,7 +158,17 @@ def select_saint(date, exclude=(), angle=None):
     cal = json.loads((DATA / "calendar.json").read_text())
     key = date.strftime("%m-%d")
     used = used_qids() | set(exclude)
-    cands = [c for c in cal.get(key, []) if c["qid"] not in used and 2 <= c["links"] <= 45]
+    # Luis's pins (config "pins": {"2026-12-17": "Q470597"}) skip the editor pick; the saint may sit on any calendar day
+    pin = load_config().get("pins", {}).get(date.strftime("%Y-%m-%d"))
+    if pin and pin not in used:
+        pick = next((dict(c) for day in cal.values() for c in day if c["qid"] == pin), None)
+        if pick:
+            pick["selection_reason"] = "Pinned by the editor for this date."
+            pick["catholic_veneration"] = ""
+            log(f"Pinned {pick['name']} for {key}")
+            return pick
+        log(f"Pin {pin} not in calendar.json; choosing as usual")
+    cands =[c for c in cal.get(key, []) if c["qid"] not in used and 2 <= c["links"] <= 45]
     if not cands:
         cands = [c for c in cal.get(key, []) if c["qid"] not in used]
     if not cands:
