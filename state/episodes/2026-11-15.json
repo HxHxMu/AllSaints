@@ -1,14 +1,14 @@
 {
  "id": "2026-11-15",
  "date": "2026-11-15",
- "status": "redo_requested",
- "updated": "2026-11-08T10:33:33+00:00",
+ "status": "review",
+ "updated": "2026-11-08T16:27:48+00:00",
  "saint": {
   "qid": "Q245621",
   "name": "Saint Roque González de Santa Cruz",
-  "display_name": "St. Roque González de Santa Cruz",
+  "display_name": "St. Roque González",
   "dates": "1576 – 1628",
-  "region": "Paraguay and the Río de la Plata",
+  "region": "Paraguay",
   "feast": "November 15",
   "martyr": true
  },
@@ -34,18 +34,18 @@
  "script": {
   "saint": {
    "name": "Saint Roque González de Santa Cruz",
-   "display_name": "St. Roque González de Santa Cruz",
+   "display_name": "St. Roque González",
    "dates": "1576 – 1628",
-   "region": "Paraguay and the Río de la Plata",
+   "region": "Paraguay",
    "feast": "November 15",
    "martyr": true
   },
   "beats": [
    {
     "role": "hook",
-    "text": "Fire consumed his body, tradition holds, but it could not consume his heart.",
+    "text": "Fire consumed his body, but not his heart.",
     "visual": "art",
-    "scene": "A devotional icon of a single unharmed heart resting among the embers of a burned timber chapel, with Guaraní villagers standing at a respectful distance in a red-earth clearing ringed by subtropical forest, seventeenth-century South America."
+    "scene": "A devotional icon of the smoking ruins of a small wooden chapel at dusk, with a Jesuit priest's black cassock and a bell among the embers, and a heart resting whole and untouched in the ashes. Dark forest and a red sky behind, in the colonial frontier of seventeenth-century South America."
    },
    {
     "role": "who",
@@ -57,181 +57,227 @@
    },
    {
     "role": "story",
-    "text": "He refused high office and joined the Jesuits. Then he founded villages for the Guaraní, and laboured there as carpenter and builder.",
+    "text": "At thirty-two he was offered high office in the diocese. He refused, feeling unworthy, and joined the Jesuits instead.",
     "visual": "art",
-    "scene": "A Jesuit priest in a black cassock with sleeves rolled, lifting a timber beam beside Guaraní villagers raising a wooden chapel frame in a forest clearing, oxen and a plough nearby, early seventeenth century."
+    "scene": "A young priest in a plain black cassock kneeling before a bishop in a whitewashed Spanish colonial church in Asunción, with wooden beams and an altar with candles. He bows his head in humility, gently declining a document held out to him."
    },
    {
     "role": "story",
-    "text": "On the fifteenth of November, sixteen twenty-eight, he said Mass at Caaró, then went to build a new village. A sorcerer's hired killer struck him down.",
+    "text": "He founded villages for the Guaraní people, and worked there as carpenter, builder, and plowman.",
     "visual": "art",
-    "scene": "A Jesuit priest in a black cassock at a simple outdoor altar of rough timber at dawn, Guaraní villagers kneeling in the clearing, an unfinished wooden chapel with a bell waiting beside it, forest behind."
+    "scene": "The Jesuit priest, sleeves rolled up, guiding a yoke of oxen with a wooden plough beside Guaraní men and women. A thatched village and a half-built wooden chapel stand against green subtropical hills."
    },
    {
     "role": "story",
-    "text": "The bodies of the two priests were burned with the wooden chapel. Tradition holds that the flames spared his heart. Today it is venerated in his native Asunción.",
+    "text": "On the fifteenth of November, sixteen twenty-eight, he said Mass at Caaró. Then, as he worked on the chapel bell, a man sent by a sorcerer killed him.",
     "visual": "art",
-    "scene": "Guaraní villagers gathered before the smoking ruins of a timber chapel, a small unharmed heart glowing in the ashes; at the edge, a distant sign of a Spanish colonial city chapel awaiting it."
+    "scene": "The priest stooping to hang a bell in the timber frame of a new chapel in a forest clearing, with a simple altar still set up nearby. A shadowy figure approaches behind him, shown with dignity and without any gore."
+   },
+   {
+    "role": "story",
+    "text": "The fire burned his body and the wooden chapel, but not his heart.",
+    "visual": "art",
+    "scene": "Smoking ruins of a wooden chapel at dusk, with Guaraní villagers standing in a circle looking on in awe. In the ashes lies a single unburned heart, glowing with a soft golden light."
    },
    {
     "role": "turn",
-    "text": "Pope Saint John Paul the Second called his incorrupt heart an eloquent image of Christian love, able to overcome every human limit.",
+    "text": "He became Paraguay's first saint in nineteen eighty-eight. Saint John Paul the Second called his incorrupt heart an image of Christian love that overcomes every human limit. Love given for others, as Christ gave, is never lost.",
     "visual": "art",
-    "scene": "The saint in a black Jesuit cassock holding a martyr's palm in one hand and a heart in the other, an image of Mary Immaculate behind him, inside a red-stone Jesuit mission church of the Río de la Plata with Guaraní worshippers."
+    "scene": "A reliquary holding a heart, set on an altar in a chapel and lit by candles. Behind it, a Jesuit saint in black cassock holds a palm of martyrdom, and the Virgin Immaculate shines above him."
    },
    {
     "role": "close",
-    "text": "Love given for others is never lost. Saint Roque, pray for us.",
+    "text": "Saint Roque González, pray for us.",
     "visual": "close"
    }
   ],
   "pronunciations": {
-   "Roque": "ROH-kay",
-   "González": "gon-SAH-less",
-   "Asunción": "ah-soon-SYOHN",
+   "Roque": "ROH-keh",
+   "González": "gon-SAH-lez",
+   "Asunción": "ah-soon-see-OHN",
    "Caaró": "kah-ah-ROH",
    "Guaraní": "gwah-rah-NEE"
   },
-  "caption_hook": "The first saint of Paraguay, and the heart that tradition says fire could not take.",
-  "summary": "Saint Roque González, a Jesuit priest from Asunción who built villages with the Guaraní, was martyred at Caaró in 1628, and his heart, tradition holds, survived the fire and is venerated today.",
-  "youtube_title": "St. Roque González: The Heart the Fire Spared",
+  "caption_hook": "The wooden chapel burned to ash. One thing in the ashes did not.",
+  "summary": "Saint Roque González, a Jesuit who built villages with the Guaraní people, was martyred at Caaró in 1628. The account says fire consumed his body but not his heart, which Saint John Paul the Second called incorrupt. He was canonized in 1988 as Paraguay's first saint.",
+  "youtube_title": "St. Roque González: The Heart the Fire Did Not Consume",
   "hashtags": [
    "#saintroquegonzalez",
    "#paraguay",
    "#asuncion",
-   "#guarani",
    "#jesuits",
-   "#jesuitmissions",
-   "#catholicsaints",
    "#martyrs",
+   "#guarani",
+   "#catholicsaints",
+   "#lesserknownsaints",
    "#allsaints",
-   "#saintoftheday",
    "#catholicreels",
-   "#novemberfifteenth"
+   "#firstsaintofparaguay",
+   "#saints"
   ],
   "share_cta": "Know someone named Roque? Send them their saint.",
   "claims": [
    {
-    "claim": "Roque González was born in Asunción in 1576, of Spanish parents.",
+    "claim": "Roque González was born in Asunción, Paraguay, in 1576, to Spanish parents.",
     "source": 2,
     "kind": "history"
    },
    {
-    "claim": "He was a Jesuit priest and the first saint born in Paraguay.",
+    "claim": "He was a Jesuit priest, and the first saint of Paraguay.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "He was named vicar general of the diocese, refused the post, and entered the Society of Jesus on 9 May 1609.",
+    "claim": "At age 32, after ten years as parish priest of the Asunción cathedral, he was named vicar general of the diocese and refused, not feeling worthy.",
     "source": 2,
     "kind": "history"
    },
    {
-    "claim": "He founded the reducciones, villages where evangelization went together with human advancement, among the Guaraní and other indigenous peoples.",
+    "claim": "He asked his bishop for leave to join the Society of Jesus and was accepted on 9 May 1609.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded the villages called reductions, where work and social life joined freely with Christian values.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "He worked personally as carpenter, joiner, architect and mason on the buildings, and yoked oxen to the plough.",
+    "claim": "He worked as carpenter, architect and mason and yoked oxen to the plough; he also worked the plough himself teaching farming.",
     "source": 2,
     "kind": "history"
    },
    {
-    "claim": "On 15 November 1628 at Caaró he celebrated Mass and then directed the building of a new village.",
+    "claim": "He defended the native peoples against the greed of the encomenderos, who took their lands.",
     "source": 2,
     "kind": "history"
    },
    {
-    "claim": "He was killed by a hired assassin of a sorcerer; Alonso Rodríguez died with him, and Juan del Castillo two days later.",
-    "source": 1,
+    "claim": "He worked among the Guaraní, and translated the catechism of the Third Council of Lima into Guaraní.",
+    "source": 3,
     "kind": "history"
    },
    {
-    "claim": "The bodies of Roque and Alonso were burned with the wooden chapel; the fire consumed the bodies entirely but, as the biography relates, not Roque's heart.",
+    "claim": "On 15 November 1628, at Caaró, after celebrating Mass, he was directing the building of a new village.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "While bent over fixing the clapper to the chapel bell, a hired killer struck him on the head with an axe and he died; the Roman Martyrology says the killer was sent by a sorcerer.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Alonso Rodríguez died the same day, and Juan del Castillo two days later, on 17 November.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The bodies of Roque and Alonso were burned with the wooden chapel; the fire consumed the bodies entirely but not Roque's heart.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that the villagers gathered before the smoking remains heard his voice promising spiritual help, and that the chief Caarupé then ordered his chest opened and his heart pierced with an arrow.",
     "source": 2,
     "kind": "tradition"
    },
    {
-    "claim": "His heart was taken to Italy, then Argentina, and is now venerated in the Chapel of the Holy Martyrs at the parish of Christ the King in Asunción.",
-    "source": 2,
-    "kind": "history"
-   },
-   {
-    "claim": "Pope John Paul II called his incorrupt heart an eloquent image of Christian love, able to overcome all human limits, even unto death.",
+    "claim": "Pope John Paul II described his incorrupt heart as an eloquent image of Christian love, able to overcome every human limit, even unto death.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "He was beatified by Pius XI on 28 January 1934 and canonized by John Paul II on 16 May 1988.",
+    "claim": "His heart was carried to Italy, then to Argentina, and is now venerated in the Chapel of the Holy Martyrs at Christ the King parish, Asunción.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified by Pius XI on 28 January 1934 and canonized by John Paul II on 16 May 1988 in Asunción, with Alonso Rodríguez and Juan del Castillo.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the youngest of ten children of Spanish colonists of noble origin and was ordained priest at twenty-two on 25 March 1599.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "A suspension bridge linking Argentina and Paraguay since 1990 is named after him.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Francis mentioned the three Jesuit martyrs in Gaudete et exsultate, paragraph 141.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "For canonization an alleged miracle was investigated; the medical board of the Congregation for the Causes of Saints ruled on 16 December 1987 in favor of its scientific inexplicability.",
     "source": 2,
     "kind": "history"
    }
-  ],
-  "story": [
-   "Roque González de Santa Cruz was born in 1576 in Asunción, today the capital of Paraguay. He was the youngest of ten children of Bartolomé González Vilaverde and María de Santa Cruz, Spanish colonists of noble family. Guaraní was spoken in his family's home, though he knew it only roughly. Already at fourteen, the sources tell us, he persuaded some companions to withdraw to lonely places to do penance.",
-   "In 1588 Jesuit fathers arrived in Asunción and opened a college, and Roque entered as a student, learning Latin and the studies that prepared him for the priesthood. Ten years later the diocese was without a bishop. The bishop of Córdoba, brother of the governor Hernandarias, came to Asunción to confirm and to ordain some seminarians. Roque was among them, and on 25 March 1599, at twenty-two, he became a priest.",
-   "His first ministry was among the indigenous people scattered along the Paraguay River. He worked to perfect his Guaraní, and he gave special care to the Guaycurú, whom he helped to leave a nomadic life. He taught them farming, working the plough himself. He later served ten years as parish priest of the cathedral in Asunción. At thirty-two, an exceptional honor, he was named vicar general of the great diocese. He refused it, not feeling worthy, and asked instead to enter the Society of Jesus. He was received on 9 May 1609.",
-   "In the lands of the Río de la Plata the Jesuits were gathering indigenous families into villages called reducciones, where they could farm settled land, receive the faith and live a common life. From 1611 Roque led and improved the reducciones begun two years earlier by the Jesuit Father Marcial de Lorenzana. From 1614 he pressed into the unexplored lands of Uruguay and along the Paraná. Over the years he founded Itapúa, Concepción, Yapeyú, San Nicolás, San Javier and others, and in 1627 he became superior of the reducciones. The Ökumenisches Heiligenlexikon adds that he translated the catechism of the Third Council of Lima into Guaraní.",
-   "He was present in every task. He built the church, worked as carpenter and mason, and yoked the oxen. He defended the indigenous people against the greed of the encomenderos, who seized their lands. In a letter to his brother Francisco in 1614, as the Heiligenlexikon reports it, he wrote that God does not command the Gospel to be preached with the noise of arms and plunder, but by the example of a good life and holy teaching. He was also devoted to Mary Immaculate, whom he called \"the conquistadora\", and the sources say that when he showed her image, the indigenous people, struck by its beauty, gave signs of conversion.",
-   "Some indigenous sorcerers disliked the missions. One of them, named Ñezú, pretended to agree with the missionaries while plotting to destroy the villages. On the morning of 15 November 1628, at Caaró, now in Brazil, Roque celebrated Mass at an improvised altar and then began directing the building of a new village. As he bent to fix the clapper to the bell of the unfinished chapel, a hired killer struck him down. Father Alonso Rodríguez, who ran to see what was happening, died in the same way. Two days later Father Juan del Castillo, whom Roque had placed over the last village he founded, was also killed.",
-   "The bodies of Roque and Alonso were burned along with the wooden chapel. The biography on Santi e Beati relates that the fire consumed the bodies entirely but not Roque's heart. It also tells, as a story handed down, that the indigenous people gathered before the smoking remains heard his voice promising spiritual help. After the military authorities arrived, the heart was taken to Italy, then to Argentina. It is now venerated in the Chapel of the Holy Martyrs at the parish of Christ the King in Asunción. Pope John Paul II called it an eloquent image of Christian love, able to overcome all human limits, even unto death.",
-   "The cause of the three Jesuits, known as the martyrs of the Río de la Plata, began in Buenos Aires. They were beatified by Pius XI on 28 January 1934, and canonized by John Paul II in Asunción on 16 May 1988, making Roque the first saint of Paraguay. The canonization rested on a separate alleged miracle, which a medical board of the Congregation for the Causes of Saints judged scientifically unexplained in December 1987. In 2018 Pope Francis named the three martyrs in Gaudete et Exsultate among those who lived the Gospel heroically. A suspension bridge linking Argentina and Paraguay carries Roque's name. His memorial is 15 November."
   ],
   "patronages": [],
   "places": [
    "Asunción",
    "Caaró",
    "Paraguay",
-   "Río de la Plata"
+   "Encarnación"
+  ],
+  "story": [
+   "Roque González de Santa Cruz was born in 1576 in Asunción, today the capital of Paraguay. He was the youngest of ten children of Bartolomé González Vilaverde and María de Santa Cruz, Spanish colonists of noble origin. Even at fourteen, the sources tell us, he persuaded some of his companions to withdraw to lonely places to do penance.",
+   "In 1588 Jesuit fathers arrived in Asunción and opened a school. Roque entered as a pupil and studied Latin and the subjects that prepared him for religious life. Ten years later the diocese had no bishop. The bishop of Córdoba, brother of the governor Hernandarias, came to Asunción to confirm and to ordain several seminarians. Roque was among them, and on 25 March 1599, at twenty-two, he became a priest.",
+   "His first ministry was among the native peoples scattered along the Paraguay River. He had known Guaraní only roughly, since it was spoken in his family, so he worked to master it. He turned especially to the Guaycurú people, whom he helped to give up a wandering life, and he taught them farming, working the plough himself. He then served ten years as a parish priest of the cathedral. At thirty-two, which was exceptional, he was named vicar general of the large diocese. He refused, feeling unworthy, and asked his bishop for leave to enter the Society of Jesus. He was accepted on 9 May 1609.",
+   "Across the vast region of the River Plate the Jesuits were founding reductions: villages where missionaries gathered native families to teach them settled work, the Christian faith and civil life. In 1611, before he had even taken his first vows, Roque took charge of the reductions begun two years earlier by Father Marcial de Lorenzana. From 1614 he carried his mission into unexplored country along the Paraná River. He founded Itapúa, today Encarnación, in 1618, and Concepción in 1620. In 1626 came Yapeyú, San Nicolás and San Javier. In 1627 he was made superior of the reductions, and in 1628 he opened Candelaria, All Saints in the Caaró region, and Our Lady of the Assumption near Ijuí. He is also said to have translated the catechism of the Third Council of Lima into Guaraní.",
+   "The sources describe a man who was present in every task. He thought of nothing but his church, yoked the oxen, worked as carpenter, architect and mason, and sought, as they put it, to become all things to all people. He defended the native peoples against the encomenderos, who seized their lands. In a letter to his brother in 1614 he wrote that the Gospel is not to be spread by the noise of weapons and plunder, but by the example of a good life and holy teaching. He was also devoted to Mary Immaculate, whom he called the conqueror. It is said that simply showing her image led the native people to show signs of conversion.",
+   "Not everyone welcomed the missions. Some native sorcerers saw them as a threat. One of them, named Ñezú, pretended to agree with the missionaries while planning to destroy the reductions. On the morning of 15 November 1628, at Caaró, Roque celebrated Mass at a makeshift altar and then went to direct the building of a new village. As he bent to fix the clapper to the bell of the chapel then under construction, a hired killer struck him with an axe, and he died. Father Alonso Rodríguez, who ran to see what was happening, died in the same way. Two days later Father Juan del Castillo, whom Roque had placed in charge of the last reduction he founded, was also killed. The Roman Martyrology says Roque and Alonso died in an ambush by an agent of a sorcerer, because of their work among the native peoples.",
+   "The bodies of Roque and Alonso were burned along with the wooden chapel. The fire consumed the bodies entirely, but not Roque's heart. Tradition holds that the villagers, gathered before the smoking remains, heard his voice promising spiritual help, and that the chief Caarupé then ordered his chest opened and the heart pierced with an arrow. After the military authorities arrived, the heart was taken to Italy, then to Argentina. Today it is venerated in the Chapel of the Holy Martyrs in the parish of Christ the King in Asunción.",
+   "The cause of the three Jesuits, known as the martyrs of the River Plate, began in Buenos Aires. Pope Pius XI beatified them on 28 January 1934. For their canonization an alleged miracle was examined, and the medical board of the Congregation for the Causes of Saints ruled in December 1987 in favor of its scientific inexplicability. Pope John Paul II canonized them in Asunción on 16 May 1988, and Roque became the first saint of Paraguay. Pope John Paul II is quoted as calling his incorrupt heart an eloquent image of Christian love, able to overcome every human limit, even unto death. Pope Francis later named the three martyrs among the entire communities who have lived the Gospel heroically. A suspension bridge between Argentina and Paraguay now bears Roque's name. The Church keeps his memorial on 15 November."
   ]
  },
  "factcheck": {
   "verdict": "fixed",
   "issues": [
-   "Story paragraph 1: 'as a boy' is not in the sources. They say only that Guaraní was spoken in his family and that he knew it roughly, so I removed it.",
-   "Story paragraph 4: 'the first of these' is not supported. Santi e Beati says that in 1611 he took over and improved the reducciones begun two years earlier by Father Marcial de Lorenzana. Corrected.",
-   "Story paragraph 5: 'moved many to conversion' overstates the source, which says the indigenous people, struck by the image's beauty, 'gave signs of conversion'. Corrected.",
-   "Spoken beats checked: about 137 words, and the hook is 13 words. Dates, places, titles and the map pin (Asunción, about -25.28, -57.64) are correct. The heart's survival is framed as 'tradition holds', which is cautious but acceptable, since Santi e Beati gives it as fact and John Paul II called the heart incorrupt. No miracle approval status is overstated, and the story paragraphs correctly keep the canonization miracle separate. No spoken-beat changes were needed."
+   "Spoken beats: every sentence checks out against the sources. The map location for Asunción is correct. The killing is correctly attributed to a man sent by a sorcerer, following the Roman Martyrology and not the Heiligenlexikon's account of arrows and a chief. The word count is 141. No spoken text needed changing.",
+   "Hook scene: showed the priest's body lying before the ruins, which contradicts the narration that fire consumed the body entirely. The scene was changed to show the ruins and the heart, without the body.",
+   "Summary: said John Paul II called the heart incorrupt 'when he canonized him'. The sources attribute the quote to him but do not place it at the canonization, so the sentence was reworded.",
+   "Story, Marian devotion: said showing her image 'moved the people to conversion'. The source says the native people gave signs of conversion. Fixed.",
+   "Story, daily work: 'He built churches' is not in the source. The source says he thought of nothing but his church and worked as carpenter, architect and mason. Fixed.",
+   "Story, Martyrology: 'they died in an ambush' follows the mention of Juan del Castillo, but the Martyrology entry names only Roque and Alfonso. Fixed.",
+   "Story, canonization: 'In that setting' placed the quote in the canonization homily, but the Dicastery page only attributes the quote to John Paul II. Reworded to 'is quoted as calling'.",
+   "Story, Pope Francis: the source says 'entire communities who lived the Gospel heroically'. The story's wording lost the 'communities' point. Fixed."
   ],
-  "confidence": 88,
-  "reviewer_note": "Optional polish: the beat 4 image prompt shows the heart 'glowing', which is not in the sources, and the 'conquistadora' quote in the story is a translation of the Italian 'la conquistatrice'. The heart's survival is tradition, not a Church-examined miracle. Sources 2 and 3 disagree on his ordination year (1599 vs 1598) and on how he was killed (axe vs arrows), and I followed the Catholic reference (source 2)."
+  "confidence": 86,
+  "reviewer_note": "The heart surviving the fire is told as plain fact by the Catholic biography and called 'incorrupt' in the Pope's quoted words. The sources do not show a formal Church declaration of a miracle about it. The alleged miracle examined for canonization is a separate, unspecified event. Check that the Dicastery quote is from the 1988 homily, and decide whether you want 'tradition holds' added to the hook."
  },
  "usage": [
   {
-   "step": "select",
-   "model": "claude-sonnet-5-5",
-   "in": 2897,
-   "cache_write": 0,
-   "cache_read": 0,
-   "out": 865,
-   "thinking": 600
-  },
-  {
    "step": "script",
    "model": "claude-sonnet-5-5",
-   "in": 2067,
-   "cache_write": 11055,
+   "in": 2104,
+   "cache_write": 11061,
    "cache_read": 0,
-   "out": 11934,
-   "thinking": 8255
+   "out": 12984,
+   "thinking": 8439
   },
   {
    "step": "factcheck",
    "model": "claude-sonnet-5-5",
-   "in": 4405,
+   "in": 5353,
    "cache_write": 0,
-   "cache_read": 11055,
-   "out": 5696,
-   "thinking": 4963
+   "cache_read": 11061,
+   "out": 11603,
+   "thinking": 7894
   },
   {
    "step": "translate_es",
    "model": "claude-haiku-5-5",
-   "in": 2088,
+   "in": 2213,
    "cache_write": 0,
    "cache_read": 0,
-   "out": 3217,
-   "thinking": 856
+   "out": 3324,
+   "thinking": 833
   }
  ],
  "sources": [
@@ -255,37 +301,37 @@
  "art_credits": [
   "Illustration in the Byzantine style, AI-generated (Google Gemini)"
  ],
- "duration": 66.3,
+ "duration": 69.0,
  "narrator": "gemini:Riko",
  "es": {
+  "display_name": "San Roque",
   "name": "San Roque González de Santa Cruz",
-  "display_name": "San Roque González",
-  "region": "Paraguay y el Río de la Plata",
+  "region": "Paraguay",
   "dates": "1576 – 1628",
-  "hook": "El primer santo de Paraguay, y el corazón que, según la tradición, el fuego no pudo consumir.",
-  "summary": "San Roque González, sacerdote jesuita de Asunción que fundó pueblos con los guaraníes, fue martirizado en Caaró en 1628; su corazón, según la tradición, sobrevivió al fuego y hoy es venerado.",
+  "hook": "La capilla de madera quedó reducida a cenizas. Una sola cosa entre las cenizas no se consumió.",
+  "summary": "San Roque González, jesuita que fundó pueblos con el pueblo guaraní, fue martirizado en Caaró en 1628. Según el relato, el fuego consumió su cuerpo, pero no su corazón, que San Juan Pablo II calificó de incorrupto. Fue canonizado en 1988 como el primer santo del Paraguay.",
   "story": [
-   "Roque González de Santa Cruz nació en 1576 en Asunción, hoy capital de Paraguay. Fue el menor de diez hijos de Bartolomé González Vilaverde y María de Santa Cruz, colonos españoles de familia noble. En el hogar familiar se hablaba guaraní, aunque él lo conocía solo de manera rudimentaria. Ya a los catorce años, según las fuentes, persuadió a algunos compañeros para retirarse a lugares solitarios a hacer penitencia.",
-   "En 1588 llegaron a Asunción los padres jesuitas, que abrieron un colegio, y Roque ingresó como estudiante, aprendiendo latín y los estudios que lo preparaban para el sacerdocio. Diez años después la diócesis carecía de obispo. El obispo de Córdoba, hermano del gobernador Hernandarias, llegó a Asunción para confirmar y ordenar a algunos seminaristas. Roque estuvo entre ellos y, el 25 de marzo de 1599, a los veintidós años, fue ordenado sacerdote.",
-   "Su primer ministerio fue entre los pueblos indígenas dispersos a lo largo del río Paraguay. Se esforzó por perfeccionar su guaraní y dedicó una atención especial a los guaycurúes, a quienes ayudó a dejar la vida nómada. Les enseñó la agricultura, trabajando él mismo con el arado. Más tarde sirvió durante diez años como párroco de la catedral de Asunción. A los treinta y dos años, un honor excepcional, fue nombrado vicario general de la gran diócesis. Lo rechazó, por no sentirse digno, y pidió en cambio ingresar en la Compañía de Jesús. Fue admitido el 9 de mayo de 1609.",
-   "En las tierras del Río de la Plata, los jesuitas reunían a las familias indígenas en pueblos llamados reducciones, donde podían cultivar tierras estables, recibir la fe y vivir en comunidad. Desde 1611, Roque dirigió y mejoró las reducciones iniciadas dos años antes por el padre jesuita Marcial de Lorenzana. Desde 1614 se adentró en las tierras inexploradas de Uruguay y a lo largo del Paraná. Con los años fundó Itapúa, Concepción, Yapeyú, San Nicolás, San Javier y otros, y en 1627 se convirtió en superior de las reducciones. El Ökumenisches Heiligenlexikon añade que tradujo al guaraní el catecismo del Tercer Concilio de Lima.",
-   "Estaba presente en cada tarea. Construyó la iglesia, trabajó como carpintero y albañil, y uncía los bueyes. Defendió a los indígenas contra la codicia de los encomenderos, que se apoderaban de sus tierras. En una carta a su hermano Francisco, en 1614, tal como lo relata el Heiligenlexikon, escribió que Dios no manda predicar el Evangelio con el ruido de las armas y el saqueo, sino con el ejemplo de una vida buena y con la enseñanza santa. Fue también devoto de María Inmaculada, a quien llamaba «la conquistadora», y las fuentes dicen que, cuando le mostraba su imagen, los indígenas, impresionados por su belleza, daban señales de conversión.",
-   "Algunos hechiceros indígenas se oponían a las misiones. Uno de ellos, llamado Ñezú, fingía estar de acuerdo con los misioneros mientras tramaba la destrucción de los pueblos. La mañana del 15 de noviembre de 1628, en Caaró, hoy en Brasil, Roque celebró la misa en un altar improvisado y luego comenzó a dirigir la construcción de un nuevo pueblo. Mientras se inclinaba para colocar el badajo en la campana de la capilla inacabada, un asesino a sueldo lo derribó. El padre Alonso Rodríguez, que acudió a ver qué sucedía, murió de la misma manera. Dos días después, también fue asesinado el padre Juan del Castillo, a quien Roque había puesto al frente del último pueblo que había fundado.",
-   "Los cuerpos de Roque y de Alonso fueron quemados junto con la capilla de madera. La biografía publicada en Santi e Beati relata que el fuego consumió los cuerpos por completo, pero no el corazón de Roque. También narra, como relato transmitido, que los indígenas reunidos ante los restos humeantes oyeron su voz prometiendo ayuda espiritual. Cuando llegaron las autoridades militares, el corazón fue llevado a Italia y luego a Argentina. Hoy se venera en la Capilla de los Santos Mártires de la parroquia de Cristo Rey en Asunción. El papa Juan Pablo II lo llamó una imagen elocuente del amor cristiano, capaz de superar todos los límites humanos, incluso hasta la muerte.",
-   "La causa de los tres jesuitas, conocidos como los mártires del Río de la Plata, comenzó en Buenos Aires. Fueron beatificados por Pío XI el 28 de enero de 1934 y canonizados por Juan Pablo II en Asunción el 16 de mayo de 1988, lo que convirtió a Roque en el primer santo de Paraguay. La canonización se basó en un supuesto milagro distinto, que una comisión médica de la Congregación para las Causas de los Santos consideró científicamente inexplicable en diciembre de 1987. En 2018, el papa Francisco incluyó a los tres mártires en la exhortación Gaudete et Exsultate entre quienes vivieron heroicamente el Evangelio. Un puente colgante que une Argentina y Paraguay lleva el nombre de Roque. Su memoria litúrgica se celebra el 15 de noviembre."
+   "Roque González de Santa Cruz nació en 1576 en Asunción, hoy capital del Paraguay. Era el menor de diez hijos de Bartolomé González Vilaverde y María de Santa Cruz, colonos españoles de origen noble. Según las fuentes, ya a los catorce años persuadió a algunos de sus compañeros para que se retiraran a lugares solitarios a hacer penitencia.",
+   "En 1588 llegaron a Asunción los padres jesuitas, que abrieron una escuela. Roque ingresó como alumno y estudió latín y las materias que lo prepararon para la vida religiosa. Diez años después, la diócesis no tenía obispo. El obispo de Córdoba, hermano del gobernador Hernandarias, llegó a Asunción para confirmar y ordenar a varios seminaristas. Roque fue uno de ellos y, el 25 de marzo de 1599, a los veintidós años, se hizo sacerdote.",
+   "Su primer ministerio fue entre los pueblos indígenas dispersos a lo largo del río Paraguay. Conocía el guaraní solo de manera superficial, pues se hablaba en su familia, así que se dedicó a dominarlo. Se acercó especialmente al pueblo guaycurú, al que ayudó a dejar la vida errante, y les enseñó la agricultura, trabajando él mismo con el arado. Después sirvió durante diez años como párroco de la catedral. A los treinta y dos años, lo que era excepcional, fue nombrado vicario general de la extensa diócesis. Él lo rechazó, sintiéndose indigno, y pidió a su obispo permiso para ingresar en la Compañía de Jesús. Fue aceptado el 9 de mayo de 1609.",
+   "En la vasta región del Río de la Plata, los jesuitas fundaban reducciones: pueblos donde los misioneros reunían a las familias indígenas para enseñarles el trabajo sedentario, la fe cristiana y la vida civil. En 1611, antes incluso de haber pronunciado sus primeros votos, Roque se hizo cargo de las reducciones iniciadas dos años antes por el padre Marcial de Lorenzana. Desde 1614 llevó su misión a territorios inexplorados a lo largo del río Paraná. Fundó Itapúa, hoy Encarnación, en 1618, y Concepción en 1620. En 1626 surgieron Yapeyú, San Nicolás y San Javier. En 1627 fue nombrado superior de las reducciones y, en 1628, inauguró Candelaria, Todos los Santos en la región de Caaró, y Nuestra Señora de la Asunción cerca de Ijuí. Se dice también que tradujo al guaraní el catecismo del Tercer Concilio de Lima.",
+   "Las fuentes describen a un hombre presente en cada tarea. No pensaba en otra cosa que en su iglesia, uncía los bueyes, trabajaba como carpintero, arquitecto y albañil, y procuraba, como se decía, hacerse todo para todos. Defendió a los pueblos indígenas frente a los encomenderos, que se apoderaban de sus tierras. En una carta a su hermano, en 1614, escribió que el Evangelio no se propaga con el ruido de las armas ni con el saqueo, sino con el ejemplo de una vida buena y con la enseñanza santa. Fue también devoto de la Inmaculada Virgen María, a quien llamaba la conquistadora. Se dice que basta con mostrar su imagen para que los indígenas den señales de conversión.",
+   "No todos recibían bien a las misiones. Algunos hechiceros indígenas las veían como una amenaza. Uno de ellos, llamado Ñezú, fingía estar de acuerdo con los misioneros mientras planeaba destruir las reducciones. La mañana del 15 de noviembre de 1628, en Caaró, Roque celebró la misa en un altar improvisado y luego fue a dirigir la construcción de un nuevo pueblo. Mientras se inclinaba para colocar el badajo en la campana de la capilla que estaba en construcción, un asesino a sueldo lo golpeó con un hacha, y murió. El padre Alonso Rodríguez, que acudió a ver qué sucedía, murió de la misma manera. Dos días después, el padre Juan del Castillo, a quien Roque había puesto al frente de la última reducción que había fundado, también fue asesinado. El Martirologio Romano dice que Roque y Alonso murieron en una emboscada tendida por un agente de un hechicero, a causa de su labor entre los pueblos indígenas.",
+   "Los cuerpos de Roque y de Alonso fueron quemados junto con la capilla de madera. El fuego consumió los cuerpos por completo, pero no el corazón de Roque. Según la tradición, los pobladores, reunidos ante los restos humeantes, oyeron su voz que prometía auxilio espiritual, y el jefe Caarupé ordenó entonces abrirle el pecho y atravesar el corazón con una flecha. Cuando llegaron las autoridades militares, el corazón fue llevado a Italia y después a la Argentina. Hoy se venera en la Capilla de los Santos Mártires, en la parroquia de Cristo Rey, en Asunción.",
+   "La causa de los tres jesuitas, conocidos como los mártires del Río de la Plata, comenzó en Buenos Aires. El papa Pío XI los beatificó el 28 de enero de 1934. Para su canonización se examinó un presunto milagro, y la junta médica de la Congregación para las Causas de los Santos determinó en diciembre de 1987 que era científicamente inexplicable. El papa Juan Pablo II los canonizó en Asunción el 16 de mayo de 1988, y Roque se convirtió en el primer santo del Paraguay. Según se cita, Juan Pablo II llamó a su corazón incorrupto una imagen elocuente del amor cristiano, capaz de superar todo límite humano, incluso el de la muerte. Más tarde, el papa Francisco incluyó a los tres mártires entre las comunidades enteras que han vivido heroicamente el Evangelio. Hoy un puente colgante entre la Argentina y el Paraguay lleva el nombre de Roque. La Iglesia celebra su memoria el 15 de noviembre."
   ],
-  "prayer": "El amor entregado por los demás nunca se pierde. San Roque, ruega por nosotros.",
+  "prayer": "San Roque González, ruega por nosotros.",
   "patronages": [],
   "places": [
    "Asunción",
    "Caaró",
    "Paraguay",
-   "Río de la Plata"
+   "Encarnación"
   ]
  },
  "angle": "miracle",
  "books": [],
- "caption": "The first saint of Paraguay, and the heart that tradition says fire could not take.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Roque González de Santa Cruz · Feast day: November 15\nSaint Roque González, a Jesuit priest from Asunción who built villages with the Guaraní, was martyred at Caaró in 1628, and his heart, tradition holds, survived the fire and is venerated today.\n\nLove given for others is never lost. Saint Roque, pray for us. 🕯\n\nKnow someone named Roque? Send them their saint.\n\n—\nSources: Wikipedia · Dicastery for the Causes of Saints · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintroquegonzalez #paraguay",
+ "caption": "The wooden chapel burned to ash. One thing in the ashes did not.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Roque González de Santa Cruz · Feast day: November 15\nSaint Roque González, a Jesuit who built villages with the Guaraní people, was martyred at Caaró in 1628. The account says fire consumed his body but not his heart, which Saint John Paul the Second called incorrupt. He was canonized in 1988 as Paraguay's first saint.\n\nSaint Roque González, pray for us. 🕯\n\nKnow someone named Roque? Send them their saint.\n\n—\nSources: Wikipedia · Dicastery for the Causes of Saints · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintroquegonzalez #paraguay",
  "attempts": 0,
  "assets": {
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/video.mp4",
@@ -293,9 +339,5 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/art.jpg"
  },
- "review_message_id": 106,
- "redo": {
-  "new_saint": false,
-  "note": "Around the 0:55 mark a word is cut off. Make every word complete."
- }
+ "review_message_id": 117
 }
