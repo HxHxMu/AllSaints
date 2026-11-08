@@ -40,5 +40,21 @@
   "at": "2026-12-23T12:30:00-05:00",
   "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/23-emmanuel.jpg",
   "status": "pending"
+ },
+ {
+  "id": "music-2026-11-08",
+  "at": "2026-11-08T15:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-08.jpg",
+  "status": "posted",
+  "album": "Blue Chant",
+  "track": "Benedicta in Mulieribus",
+  "posted": {
+   "media_id": "18113524141879848",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4026095691776355109"
+  },
+  "posted_at": "2026-11-08T15:00-05:00",
+  "facebook": {
+   "id": "1483173813913265"
+  }
  }
 ]
