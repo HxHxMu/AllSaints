@@ -50,6 +50,12 @@ jobs:
         id: state
         if: always()
         run: bash scripts/commit-state.sh "poll"
+      - name: Start generation
+        # after the state commit, so generate sees the redo / new saint / launch the poll just saved
+        if: always() && hashFiles('work/dispatch-generate') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run generate.yml --ref main
       - name: Tell Telegram
         if: failure()
         env:

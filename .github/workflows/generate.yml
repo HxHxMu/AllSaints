@@ -30,6 +30,8 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # latest state, not the commit at trigger time
       - uses: actions/setup-node@v4
         with:
           node-version: 22

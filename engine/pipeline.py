@@ -209,6 +209,8 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         ep.pop("error", None)
         ep["attempts"] = 0
         ep.pop("caption_hook_override", None)
+        ep.pop("review_message_id", None)  # a new version needs its own review; a failed send is retried by the poll
+        ep.pop("review_sends", None)
         if upload:
             import storage, telegram
             urls = storage.upload(f"ep-{ep_id}", {"video.mp4": out["video"], "cover.jpg": out["cover"], "preview.mp4": out["preview"],
@@ -614,11 +616,13 @@ def check_queue(now=None):
 
 
 def cmd_poll(a):
-    import telegram, storage
+    import telegram
     actions = telegram.process_updates()
     telegram.resend_missing_reviews()
-    if "generate" in actions:
-        storage.dispatch_workflow("generate.yml")
+    if "generate" in actions:  # poll.yml starts generate.yml after its state commit: started from here, generate
+        # checked out the commit before this poll's (no redo_requested yet) and found nothing to do (2026-11-08)
+        WORK.mkdir(exist_ok=True)
+        (WORK / "dispatch-generate").touch()
     publish_due()
     try:
         import shares
