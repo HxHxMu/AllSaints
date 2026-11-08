@@ -19,7 +19,7 @@ Draft, 2026-11-03. Pieces come from [catalogue.md](catalogue.md) (numbers in **#
 | 01 | **Sun Nov 29** | First Sunday of Advent | *Veni, redemptor gentium* (cat. 1) | Ambrose | Done (Neale 1851 + our st. I) | ✅ | ✅ queued |
 | 02 | **Thu Dec 24** | Christmas Eve | *The Virgin today* (Nativity kontakion, cat. 7) | Romanos the Melodist | Ours, from the Greek | ✅ | ✅ scheduled (Evh8c2Td6P8) |
 | 03 | **Mon Jan 4** | Her feast | *A Prayer to Jesus* (cat. 31) | Elizabeth Ann Seton | None: her own English | Dec 7 (sheet ✅, check page image) | ✅ scheduled (KEyQwebQy18) |
-| 04 | **Wed Feb 10** | Ash Wednesday | *Sero te amavi* (cat. 3) | Augustine | Pusey 1838 (PD) | Jan 13 | Jan 27 |
+| 04 | **Wed Feb 10** | Ash Wednesday | *Sero te amavi* (cat. 3) | Augustine | Pusey 1838 (PD) | ✅ (sheet locked Nov 7) | Jan 27 |
 | 05 | **Wed Mar 17** | His feast | Prayer for perseverance, *Confessio* §58 (cat. 5) | Patrick | Check Stokes's 19th-c. text; else ours | Feb 17 | Mar 3 |
 | 06 | **Thu Mar 25** | Holy Thursday | *Pange lingua gloriosi* (cat. 18) | Thomas Aquinas | Caswall 1849 (PD) | Feb 25 | Mar 11 |
 | 07 | **Sun Mar 28** | Easter Sunday | Paschal Canon, Ode 1, *Anastaseos imera* (cat. 8) | John of Damascus | Neale 1862 (PD paraphrase; say so) | Feb 28 | Mar 14 |
@@ -38,7 +38,7 @@ Base sound for all of them: contemplative "Gregorian jazz", free-rhythm chant vo
 | 01 | Latin | ✅ in [01 sheet](01-veni-redemptor-gentium.md) |
 | 02 | Greek (transliterated) | ✅ in [02 sheet](02-the-virgin-today.md) |
 | 03 | English | ✅ in [03 sheet](03-a-prayer-to-jesus.md) |
-| 04 | Latin | `contemplative gregorian jazz, solo male chant vocal in latin, free-rhythm plainchant phrasing, aeolian mode, low drone, upright bass, sparse piano, muted trumpet answering the voice, dark cathedral reverb, longing, penitential, lent, slow building to quiet radiance, no drum groove, no pop chorus` |
+| 04 | Latin | ✅ in [04 sheet](04-sero-te-amavi.md) |
 | 05 | Latin | `contemplative gregorian jazz, solo male chant vocal in latin, plainchant phrasing, dorian mode, low drone, upright bass, soft rhodes, low whistle answering the voice, stone church reverb, steadfast, quiet courage, lent, slow and spacious, no drum groove, no pop chorus` |
 | 06 | Latin | `contemplative gregorian jazz, male chant vocal in latin with low male choir on the last stanzas, measured syllabic phrasing, phrygian mode, organ-like drone, upright bass, soft rhodes, tenor saxophone answering the voice, vast cathedral reverb, solemn, eucharistic wonder, holy thursday, slow, no drum groove, no pop chorus` |
 | 07 | Greek (transliterated) | `bright gregorian jazz, byzantine chant, solo male chant vocal in greek, melismatic phrasing over an ison drone, lydian mode, upright bass, rhodes, brushed cymbals swelling, flugelhorn answering the voice, wide church reverb, joyful, radiant, easter morning, unhurried, no drum groove, no pop chorus` |
