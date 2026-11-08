@@ -9,7 +9,7 @@
 
 ## 1. Executive Context & Mental Model
 
-A.S.† is not merely a video generator; it is an **autonomous, self-scheduling, multi-platform liturgical broadcast network** running on a micro-budget (~$12–$15/mo) with zero permanent servers. 
+A.S.† is not merely a video generator; it is an **autonomous, self-scheduling, multi-platform liturgical broadcast network** running on a micro-budget (~$20–60/mo, Anthropic + Gemini) with zero permanent servers. 
 
 The entire stack is anchored on three immutable non-negotiables:
 1. **Sacred Reverence & Truth:** Never invent quotes, never blur legend into fact without "tradition holds", never use sensational clickbait, never paywall prayers.
@@ -32,7 +32,7 @@ The entire stack is anchored on three immutable non-negotiables:
                            ├──────────────────────────────┬──────────────────────────────┐
                            ▼                              ▼                              ▼
                  script.translate_es              books.find                    illustrate.illustrate
-                 (Claude Haiku)                  (OpenLibrary API)              (Gemini Imagen)
+                 (Claude Haiku)                  (OpenLibrary API)              (Gemini image model)
                            │                              │                              │
                            └──────────────────────────────┼──────────────────────────────┘
                                                           ▼
@@ -54,7 +54,7 @@ The entire stack is anchored on three immutable non-negotiables:
 [Action / Webhook] ───────► Cloudflare Worker (relay/worker.js + Durable Object SQLite queue)
                            │
                            ▼
-[Publishing (poll.yml)] ──► 07:30 ET: Instagram Reel ──► FB Reel ──► YT Short ──► Threads ──► TikTok draft
+[Publishing (poll.yml)] ──► 07:30 ET: Instagram Reel ──► FB Reel ──► Threads ──► YT Short ──► TikTok draft
 ```
 
 ---
@@ -70,11 +70,11 @@ git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main
 - **The Risk:** While `state/episodes/<id>.json` is sharded per date, shared files—specifically [`state/telegram.json`](file:///Volumes/lebe/Dev/AllSaints/state/telegram.json), [`state/config.json`](file:///Volumes/lebe/Dev/AllSaints/state/config.json), and [`state/checks.json`](file:///Volumes/lebe/Dev/AllSaints/state/checks.json)—are touched by multiple workflows (`poll.yml`, `generate.yml`, `maintenance.yml`).
 - **Claude's Rule:** When editing workflow or commit logic, **never** allow two jobs to write to shared state files without checking offsets. If you refactor state handling, preserve the sharded nature of `state/episodes/`.
 
-### 3.2. S3 Pre-signed URL Expiration on Social Ingest
-*Location:* [`engine/storage.py#L55-L58`](file:///Volumes/lebe/Dev/AllSaints/engine/storage.py#L55-L58), [`engine/pipeline.py#L372-L373`](file:///Volumes/lebe/Dev/AllSaints/engine/pipeline.py#L372-L373)
-- **The Mechanism:** Video and cover assets are hosted on GitHub Releases (`ep-YYYY-MM-DD`). `storage.resolve_direct()` follows the HTTP redirect from GitHub to AWS S3 (`github-releases.githubusercontent.com`).
-- **The Risk:** GitHub's AWS S3 pre-signed URLs carry short expiration lifetimes (typically 300 to 900 seconds). Meta's Graph API (`video_url`) and other social platforms download asynchronously. If Meta's container ingestion queue delays beyond 5 minutes, Meta gets an `HTTP 403 Request has expired`.
-- **Claude's Rule:** If social publishing fails with cryptic container download errors, check if the pre-signed S3 URL expired before Meta retrieved it. The long-term architectural remedy is migrating binary media to **Cloudflare R2** with persistent, vanity public URLs.
+### 3.2. Release-Asset URLs Handed to the Platforms
+*Location:* [`engine/storage.py`](file:///Volumes/lebe/Dev/AllSaints/engine/storage.py) `resolve_direct()`, [`engine/pipeline.py`](file:///Volumes/lebe/Dev/AllSaints/engine/pipeline.py) `publish_episode` / `publish_facebook` / `publish_threads`
+- **The Mechanism:** Videos and covers are GitHub Release assets (`ep-YYYY-MM-DD`). `storage.resolve_direct()` follows GitHub's redirect to a signed `release-assets.githubusercontent.com` URL, which the platforms fetch.
+- **The Risk (low):** The signed URL expires, but after roughly 45–60 minutes (checked 2026-11-08), not 5. Instagram and Facebook fall back to uploading the local file if the URL fetch fails; Threads has no fallback but gives up after 5 minutes of processing, well inside the window. No failure from this has been seen.
+- **Claude's Rule:** If a platform reports a download error on a container, resolve the URL again at that moment rather than reusing an old one. Moving media to Cloudflare R2 is optional, not needed for this.
 
 ### 3.3. Token Encryption Key Derivation in Public Repository
 *Location:* [`engine/instagram.py#L11-L14`](file:///Volumes/lebe/Dev/AllSaints/engine/instagram.py#L11-L14), [`engine/threads.py#L25-L27`](file:///Volumes/lebe/Dev/AllSaints/engine/threads.py#L25-L27), [`engine/tiktok.py#L27-L29`](file:///Volumes/lebe/Dev/AllSaints/engine/tiktok.py#L27-L29)
@@ -84,13 +84,13 @@ git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main
       k = env("IG_TOKEN_KEY", required=True)
       return Fernet(base64.urlsafe_b64encode(hashlib.sha256(k.encode()).digest()))
   ```
-- **The Risk:** The encrypted files (`ig_token.enc`, `th_token.enc`, `tt_token.enc`) are committed to a **public** repository. Using single-iteration un-salted `SHA-256` means offline dictionary and GPU rainbow-table attacks are trivially fast if the passphrase `k` lacks 128+ bits of true cryptographic entropy.
-- **Claude's Rule:** When modifying token routines, propose or implement salted PBKDF2 (`hashlib.pbkdf2_hmac` with ≥600,000 iterations) or Argon2id.
+- **The Risk (low):** The encrypted files (`ig_token.enc`, `th_token.enc`, `tt_token.enc`) are in a **public** repository, and the key is a single unsalted SHA-256 of the secret. That is only weak if the secret is a guessable passphrase. `th-auth` and `tt-auth` generate `TH_TOKEN_KEY` / `TT_TOKEN_KEY` with `secrets.token_urlsafe(32)` (256 random bits), where a slow KDF adds nothing. `IG_TOKEN_KEY` predates that code; it should also be a long random string.
+- **Claude's Rule:** Keep new token keys machine-generated (`secrets.token_urlsafe(32)`). PBKDF2/Argon2 is only worth adding if a key is ever a human-chosen passphrase.
 
 ### 3.4. Remotion Chromium Headless Resource Limits
 *Location:* [`.github/workflows/generate.yml#L22-L25`](file:///Volumes/lebe/Dev/AllSaints/.github/workflows/generate.yml#L22-L25), [`engine/render.py#L66-L68`](file:///Volumes/lebe/Dev/AllSaints/engine/render.py#L66-L68)
 - **The Mechanism:** Remotion runs Chrome in headless mode on standard 2-core GitHub Actions runners.
-- **The Risk:** High concurrency or complex SVG/canvas blending (like maps and multi-layer icon animations) can trigger Linux OOMs or GPU rasterization hangs.
+- **The Risk (theoretical, never observed):** High concurrency or complex SVG/canvas blending (like maps and multi-layer icon animations) can trigger Linux OOMs or GPU rasterization hangs.
 - **Claude's Rule:** When modifying [`video/src/Episode.jsx`](file:///Volumes/lebe/Dev/AllSaints/video/src/Episode.jsx) or [`video/src/components.jsx`](file:///Volumes/lebe/Dev/AllSaints/video/src/components.jsx), avoid heavy canvas shaders, uncontrolled texture sizes, or unbounded React render loops. Keep render memory deterministic.
 
 ---
@@ -110,8 +110,8 @@ When working on this repository, strictly adhere to the following rules:
 3. **Maintain Episode State Invariants:**
    - Status transitions strictly flow: `generating` ──► `review` ──► `approved` ──► `publishing` ──► `published`.
    - Side states: `redo_requested`, `failed` (capped at 3 attempts).
-   - Once an episode is `publishing` or `published`, never revert it to `approved` or `review` (doing so causes duplicate social posts).
-   - The Telegram buttons in `EP_BUTTONS` must remain inert for any episode with status `published`.
+   - Users and buttons never move an episode out of `publishing` or `published` (Undo → Approve would re-post the Reel): the Telegram buttons in `EP_BUTTONS` are inert for both states.
+   - The one deliberate exception: `publish_due` resets a `publishing` episode stuck for 30+ minutes to `approved` so a crashed post is retried. That is safe only because `publish_episode` first asks Instagram (`instagram.find_reel`) whether the Reel already went up. Keep that check if you touch this path.
 
 4. **Preserve External Drive Cleanliness (`/Volumes/lebe`):**
    - The workspace resides on an external drive where macOS generates `._*` AppleDouble resource forks.
@@ -130,7 +130,7 @@ When working on this repository, strictly adhere to the following rules:
 
 ### Priority 2: Security & Storage Hardening
 - [ ] **Salted Key Derivation for Tokens:** Refactor `_fernet()` in `instagram.py`, `threads.py`, and `tiktok.py` to use PBKDF2-HMAC-SHA256 with an explicit salt.
-- [ ] **Cloudflare R2 Asset Storage:** Evaluate migrating video/image hosting from GitHub Releases to a Cloudflare R2 bucket (`media.allholysaints.com`) with permanent public URLs.
+- [ ] **Cloudflare R2 Asset Storage (optional; the URL-expiry reason in 3.2 doesn't hold):** Evaluate migrating video/image hosting from GitHub Releases to a Cloudflare R2 bucket (`media.allholysaints.com`) with permanent public URLs.
 
 ### Priority 3: Codebase Modularization
 - [ ] **Modularize `pipeline.py`:** Split the 838-line procedural script into dedicated domain packages: `engine/cli.py`, `engine/orchestration/`, and `engine/syndication/`.
