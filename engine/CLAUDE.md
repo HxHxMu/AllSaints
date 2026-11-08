@@ -1,6 +1,6 @@
 # engine/ — Python pipeline
 
-Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|gsc-auth|metrics|dash-key|facebook|fb-auth|fb-whoami|tt-auth|tt-whoami|tiktok|th-auth|th-whoami|threads|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
+Entry: `pipeline.py {generate|poll|publish|youtube|yt-playlists|yt-localize|books|backfill-story|cost|compilation|yt-auth|yt-whoami|gsc-auth|metrics|dash-key|facebook|fb-feed|fb-auth|fb-whoami|tt-auth|tt-whoami|tiktok|th-auth|th-whoami|threads|refresh-token|build-calendar|whoami}`. Run from the repo root with `.venv/bin/python engine/pipeline.py …`; one-off `python -c` imports need `cd engine` first.
 Shared: `common.py` (config, Claude helper with model auto-pick and `USAGE` logging, state I/O).
 
 ## Flow
@@ -26,7 +26,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → storage.upload          GitHub Release `ep-YYYY-MM-DD`
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
-   → instagram.publish_reel → youtube.upload_short + facebook.publish_reel + tiktok.upload_draft + threads.publish_video (each independent; ≤3 retries; never re-posts the Reel)
+   → instagram.publish_reel → youtube.upload_short + facebook.publish_reel (+ publish_fb_feed) + tiktok.upload_draft + threads.publish_video (each independent; ≤3 retries; never re-posts the Reel)
    → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, weekly music card from data/music.json, seasonal Stories)
    → check_queue (once a day after 20:00: Telegram if tomorrow is missing/failed/unapproved, the next days are empty, or yesterday never posted)
 ```
@@ -62,6 +62,7 @@ poll (every 10 min): telegram.process_updates → publish_due
 
 ## Facebook Page
 - Instagram's "share to Facebook" setting doesn't apply to API-published Reels, so `facebook.publish_reel` posts the same video to the Page (Graph `video_reels`: start → upload by `file_url`, falling back to the file → finish PUBLISHED with the IG caption). Runs only after the Reel is on Instagram; state `ep.facebook` {id, url | attempts, error}; ≤3 attempts; never blocks Instagram/YouTube. Skipped until `FB_PAGE_ID`/`FB_PAGE_TOKEN` exist.
+- API Reels only show in the Page's Reels tab, not its Posts timeline (noticed 2026-11-08), so `publish_fb_feed` then makes one Page feed post (`facebook.post_link`: Threads' `build_text`, link = the Reel, which Facebook attaches as an inline video). State `ep.facebook.feed` {id, url, published_at | attempts, error}; ≤3 attempts; needs the Reel's `url`. Retry/backfill one: `pipeline.py fb-feed <ep_id>`.
 - Setup: Meta app (the Instagram one) → add Facebook Login; Graph API Explorer → user token with `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, tick the Page → `pipeline.py fb-auth` (hidden prompts: App ID, secret, token; exchanges for a never-expiring Page token, writes `.env` + gh secrets). Check: `fb-whoami`. Retry/backfill one: `pipeline.py facebook <ep_id>`. The cover: Facebook ignores it at publish, so `facebook.set_cover` uploads `cover.jpg` as the preferred thumbnail right after (failure only logs); backfill with `pipeline.py fb-cover <ep_id> …` (Reels before 2026-11-03 got a frame Facebook picked).
 - One-off carousels: `state/posts/<id>.json` (image URLs on a GitHub release `post-<id>`, IG caption, FB message), published by `pipeline.py post <id>` (Instagram `publish_carousel`, Facebook `post_photos`; reruns skip a platform already done). Instagram's token exists only in GitHub secrets, so run it as Maintenance → task `post <id>`. Only after Luis approves the slides and text in chat.
 - One-off scheduled posts: `state/shares.json` (`shares.py`, run by `poll`): Page link posts at a set time, e.g. a sung-prayer video on release day. A YouTube link waits until the video is public (FB builds the preview at posting time); ≤3 attempts; Telegram reports each result. Entries are added by hand once Luis approves the text.
