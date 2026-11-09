@@ -25,6 +25,7 @@ export type Saint = Text & {
   youtubeId: string | null; uploaded: string | null; duration: number | null; sources: { title: string; url?: string }[];
   credits: string[]; cover: string | null; art: ImageMetadata | null;
   continent: string | null; books: { title: string; author: string; isbn: string }[];
+  sameAs: string[];
 };
 
 // the Spanish edition: only saints the pipeline translated (ep.es)
@@ -75,6 +76,11 @@ function toSaint(ep: any): Saint {
     duration: ep.duration || null, sources: (ep.sources || []).map(readableSource), credits: [...new Set<string>(ep.art_credits || [])],
     cover: ep.assets?.["cover.jpg"] || null, art: art[`../assets/art/${ep.id}.jpg`]?.default || null,
     continent: ep.continent || null, books: ep.books || [],
+    // the saint's Wikidata and Wikipedia entries: tells search engines which saint the page is about
+    sameAs: [
+      ep.saint?.qid && `https://www.wikidata.org/wiki/${ep.saint.qid}`,
+      ep.saint_pick?.enwiki && `https://en.wikipedia.org/wiki/${encodeURIComponent(ep.saint_pick.enwiki.replace(/ /g, "_"))}`,
+    ].filter(Boolean),
   };
 }
 

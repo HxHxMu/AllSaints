@@ -29,7 +29,8 @@ const jsonld = {
   url,
   author: { "@type": "Organization", name: "All Saints", url: "https://allholysaints.com/" },
   publisher: { "@type": "Organization", name: "All Saints" },
-  about: { "@type": "Person", name: saint.name, description: [saint.dates, saint.region].filter(Boolean).join(", ") },
+  about: { "@type": "Person", name: saint.name, description: [saint.dates, saint.region].filter(Boolean).join(", "),
+    sameAs: saint.sameAs.length ? saint.sameAs : undefined },
   ...(saint.youtubeId && {
     video: {
       "@type": "VideoObject", name: `${saint.name} in one minute`, description: saint.hook,
