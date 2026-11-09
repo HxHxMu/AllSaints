@@ -11,6 +11,13 @@
   "posted_at": "2026-11-08T21:48-05:00"
  },
  {
+  "id": "blue-chant-1-story-2",
+  "at": "2026-11-08T22:00:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-story.mp4",
+  "status": "pending",
+  "note": "re-post: the first one showed as a still with no sound; re-encoded to AAC 128k / 6 Mbps"
+ },
+ {
   "id": "o-antiphons-2026-17",
   "at": "2026-12-17T12:30:00-05:00",
   "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/17-sapientia.jpg",
