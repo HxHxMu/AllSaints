@@ -79,11 +79,14 @@ def illustrate(saint, script, work, skip=()):
     setting = ILL["setting_rule"].format(region=s.get("region") or "the saint's homeland", dates=s.get("dates") or "their lifetime")
     beats = [(i, b) for i, b in enumerate(script["beats"]) if b.get("visual") == "art" and i not in skip]
 
+    first = min((i for i, b in enumerate(script["beats"]) if b.get("visual") == "art"), default=None)
+
     def paint(item):
         i, b = item
         p = work / f"icon{i}.jpg"
+        framing = f" {ILL['cover_framing']}" if i == first and ILL.get("cover_framing") else ""  # the first art beat becomes the cover
         # style leads: with the scene first, long descriptions pull Gemini toward naturalistic painting
-        _save(_generate(f"{ILL['style']}\n\nScene: {_scene(b)}\n\n{setting} {ILL['consistency']}"), p)
+        _save(_generate(f"{ILL['style']}\n\nScene: {_scene(b)}\n\n{setting} {ILL['consistency']}{framing}"), p)
         return i, p
 
     art_map = {}

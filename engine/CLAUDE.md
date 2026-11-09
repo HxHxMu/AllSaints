@@ -18,7 +18,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
                            beats need fixing, story fixes as find/replace pairs (applied in fact_check); may "reject"
  → script.translate_es     Haiku (common tier="haiku") → ep.es (Spanish name, hook, story, prayer…); failure never blocks
  → books.find              Open Library books whose title names the saint → ep.books (website; /nobooks in Telegram drops them)
- → illustrate.illustrate   Gemini image per beat (brand.json → illustration); overrides from art/<ep_id>/
+ → illustrate.illustrate   Gemini image per beat (brand.json → illustration; the first art beat, which becomes the cover, also gets `cover_framing`: plain gold top fifth, head in the upper third, so grid crops keep the head); overrides from art/<ep_id>/
    (art.collect_candidates / assign_art only when config art_source = "commons")
  → tts.synthesize          Gemini TTS per beat + faster-whisper timings (fallback ElevenLabs), paced, loudnorm −16 LUFS
  → music.pick_bed        Luis's beds from assets/music/, rotated by date (neighbours differ; auto-prepared by music.py)
