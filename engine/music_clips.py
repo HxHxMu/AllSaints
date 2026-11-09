@@ -123,8 +123,8 @@ def render(spec_path, n):
     video = out / f"{n}.mp4"
     args += ["-ss", f"{track['at'] + track['from']:.2f}", "-t", f"{total:.2f}", "-i", str(d / spec["audio"]),
              "-filter_complex", ";".join(chain), "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}",
-             "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-r", "30",
-             "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", str(video)]
+             "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-r", "30", "-g", "60",   # Story-safe: Instagram showed a
+             "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-movflags", "+faststart", str(video)]  # 256k/48k Story as a silent still
     subprocess.run(args, check=True)
     subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-i", str(video), "-frames:v", "1", "-q:v", "2",
                     str(out / f"{n}-cover.jpg")], check=True)

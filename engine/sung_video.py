@@ -271,7 +271,8 @@ def teaser(spec_path):
     video = d / (Path(spec_path).stem + "-teaser.mp4")
     args += ["-ss", f"{a0:.2f}", "-t", f"{total:.2f}", "-i", str(d / spec["audio"]), "-filter_complex", ";".join(chain),
              "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
-             "-r", "30", "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", str(video)]
+             "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "128k", "-ar", "44100",  # Story-safe (see music_clips)
+             "-movflags", "+faststart", str(video)]
     subprocess.run(args, check=True)
     return video
 
