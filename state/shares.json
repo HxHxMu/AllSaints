@@ -7,7 +7,12 @@
   "link": "https://youtu.be/x-H1HoczgAo",
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1.mp4",
   "cover": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-cover.jpg",
-  "status": "pending"
+  "status": "posted",
+  "posted": {
+   "media_id": "17910142407330146",
+   "permalink": "https://www.instagram.com/reel/DfgJ8L3E6sw/"
+  },
+  "posted_at": "2026-11-09T01:30+00:00"
  },
  {
   "id": "veni-redemptor-gentium-facebook",
