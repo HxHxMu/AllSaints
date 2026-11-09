@@ -713,6 +713,7 @@ def main():
     sub.add_parser("refresh-token")
     sub.add_parser("build-calendar")
     sub.add_parser("whoami")
+    sub.add_parser("ig-media", help="what Instagram holds for a media id (type, product, status)").add_argument("media_id")
     a = p.parse_args()
     if a.cmd == "generate":
         cmd_generate(a)
@@ -832,6 +833,12 @@ def main():
     elif a.cmd == "whoami":
         import instagram
         print(instagram.me())
+    elif a.cmd == "ig-media":
+        import instagram
+        from common import http
+        r = http.get(f"{instagram.GRAPH}/{a.media_id}", timeout=30, params={"access_token": instagram.get_token(),
+                     "fields": "media_type,media_product_type,timestamp,permalink,thumbnail_url"})
+        print(r.status_code, r.text[:600])
 
 
 if __name__ == "__main__":
