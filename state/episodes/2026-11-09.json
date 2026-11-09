@@ -1,8 +1,8 @@
 {
  "id": "2026-11-09",
  "date": "2026-11-09",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-09T12:34:26+00:00",
  "saint": {
   "qid": "Q260046",
   "name": "Saint Elizabeth of the Trinity",
@@ -302,7 +302,8 @@
   "places": [
    "Dijon",
    "Flavignerot"
-  ]
+  ],
+  "slug": "isabel-de-la-trinidad"
  },
  "books": [
   {
@@ -326,5 +327,39 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-09/art.jpg"
  },
- "review_message_id": 64
+ "review_message_id": 64,
+ "slug": "elizabeth-of-the-trinity",
+ "published": {
+  "media_id": "18151692907522115",
+  "permalink": "https://www.instagram.com/reel/DfhVe2HD76O/"
+ },
+ "published_at": "2026-11-09T07:30-05:00",
+ "facebook": {
+  "id": "3593719767454435",
+  "url": "https://www.facebook.com/reel/3593719767454435/",
+  "published_at": "2026-11-09T07:32-05:00"
+ },
+ "threads": {
+  "id": "17958343338270641",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfhVtY3JP1m",
+  "published_at": "2026-11-09T07:33-05:00"
+ },
+ "youtube": {
+  "id": "VZJnKpESX-8",
+  "url": "https://youtube.com/shorts/VZJnKpESX-8",
+  "privacy": "public",
+  "published_at": "2026-11-09T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7706148725944551437",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-09T07:34-05:00"
+ }
 }
