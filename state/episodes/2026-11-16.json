@@ -1,0 +1,354 @@
+{
+ "id": "2026-11-16",
+ "date": "2026-11-16",
+ "status": "review",
+ "updated": "2026-11-09T10:27:16+00:00",
+ "saint": {
+  "qid": "Q394693",
+  "name": "Saint Agnes of Assisi",
+  "display_name": "St. Agnes of Assisi",
+  "dates": "c. 1197 – 1253",
+  "region": "Assisi, Italy",
+  "feast": "November 16",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q394693",
+  "name": "Agnes of Assisi",
+  "links": 19,
+  "enwiki": "Agnes_of_Assisi",
+  "images": [
+   "AgneseAssisi.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Agnes of Assisi",
+  "birth": 1197,
+  "death": 1253,
+  "lon": 12.618056,
+  "lat": 43.061667,
+  "selection_reason": "Agnes of Assisi has a vivid, well-sourced story: at about 15 she fled home to join her sister Clare, her kinsmen tried to drag her back, and her body was said to grow too heavy to lift. She later founded Poor Clare houses across northern Italy and, on her deathbed, foretold Clare's passing. Her feast falls on Nov 16, she is a woman and a Franciscan, and she is not a household name.",
+  "catholic_veneration": "Venerated as a saint in the Roman Martyrology (Nov 16) and in the Franciscan and Poor Clare calendars; she is a pre-congregation saint with a confirmed cult."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Agnes of Assisi",
+   "display_name": "St. Agnes of Assisi",
+   "dates": "c. 1197 – 1253",
+   "region": "Assisi, Italy",
+   "feast": "November 16",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition holds that armed men could not lift a fifteen-year-old girl.",
+    "visual": "art",
+    "scene": "A devotional icon of a young girl in a plain dress, lying immovable on the ground in a field beside a small stone monastery. Armed men in thirteenth-century Umbrian mail and tunics strain around her and cannot raise her. The hills of Umbria rise behind."
+   },
+   {
+    "role": "who",
+    "text": "Agnes was a count's daughter, born in Assisi, Italy, in the late twelfth century.",
+    "visual": "map",
+    "lat": 43.0707,
+    "lon": 12.6196,
+    "place": "Assisi · Italy"
+   },
+   {
+    "role": "story",
+    "text": "In March of twelve twelve, her sister Clare left home to follow Francis. Sixteen days later, Agnes joined her, choosing poverty.",
+    "visual": "art",
+    "scene": "A devotional icon of a young noblewoman in a fine medieval gown hurrying down a stone road from the walled hill town of Assisi toward a small Romanesque monastery. Benedictine nuns in black habits wait at the door beside her older sister Clare."
+   },
+   {
+    "role": "story",
+    "text": "Her furious father sent her uncle Monaldo and armed men to bring her home. Tradition holds that Monaldo drew his sword, and his arm dropped, withered, at his side.",
+    "visual": "art",
+    "scene": "A devotional icon inside a plain stone monastery church. A richly dressed nobleman with a drawn sword stands frozen, his sword arm hanging limp and withered at his side. The young Agnes kneels calmly before a simple altar, and armed men look on, astonished."
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds that when others tried to carry her off, her body grew too heavy to move. Her kinsmen withdrew, and she stayed.",
+    "visual": "art",
+    "scene": "A devotional icon of Agnes resting on the ground in a field near the monastery while armed men step back with bowed heads. Clare hurries toward her in a simple habit, and the monastery's stone walls stand behind."
+   },
+   {
+    "role": "turn",
+    "text": "Francis chose her to lead a community near Florence. She ruled with loving kindness and founded houses across northern Italy. A letter attributed to her tells of missing her sister. Sometimes holiness is faithfulness, kept for a lifetime.",
+    "visual": "art",
+    "scene": "A devotional icon of Agnes as abbess in a brown Poor Clare habit and veil, standing in a quiet stone cloister near Florence with a few sisters gathered around her. She holds a folded letter, and a cypress and a simple well stand in the garden."
+   },
+   {
+    "role": "close",
+    "text": "Saint Agnes of Assisi, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Assisi": "Ah-SEE-zee",
+   "Monaldo": "Mo-NAL-doh"
+  },
+  "caption_hook": "She left her father's home at fifteen, and tradition holds no one could carry her back.",
+  "summary": "Agnes of Assisi, younger sister of Saint Clare, followed her sister into poverty at fifteen, and tradition holds that her family's armed men could not carry her home; she went on to lead Poor Clare communities and found houses across northern Italy.",
+  "youtube_title": "St. Agnes of Assisi: Clare's Sister Who Would Not Be Moved",
+  "hashtags": [
+   "#saintagnesofassisi",
+   "#assisi",
+   "#poorclares",
+   "#franciscan",
+   "#saintclare",
+   "#saintfrancis",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saintoftheday",
+   "#november16",
+   "#womensaints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Agnes? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Agnes was born in Assisi in 1197 or 1198, the younger daughter of Count Favorino Scifi.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her childhood was spent between her father's palace in Assisi and his castle of Sasso Rosso on Mount Subasio.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She was about fifteen when she followed her sister Clare.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "On 18 March 1212 Clare left her father's home to follow Francis; sixteen days later Agnes joined her at the monastery of Sant'Angelo in Panso, where Benedictine nuns had sheltered Clare.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Count Favorino was furious and sent his brother Monaldo, with relatives and armed followers, to bring Agnes home by force if persuasion failed.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that Monaldo drew his sword to strike her, but his arm dropped withered and useless at his side.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Tradition holds that when the men tried in vain to carry Agnes away, her body became so heavy that they dropped her in a field near the monastery.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Her relatives withdrew and allowed her to remain with Clare.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Francis cut her hair and gave her the habit, then established the sisters at San Damiano, where other noblewomen of Assisi joined them and the Poor Ladies, later called Poor Clares, began.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her name was changed to Agnes from the Latin agnus, lamb; she was born Caterina.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Francis chose Agnes, despite her youth, to found and govern the Poor Ladies community at Monticelli near Florence, in 1219.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "As abbess she ruled with loving kindness and made the practice of virtue bright and attractive to her sisters.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "From Monticelli she founded monasteries in northern Italy, including Mantua, Venice and Padua.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "A letter from Agnes to Clare survives, speaking of her sorrow at their separation; its authenticity is doubted by some.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Agnes was summoned to San Damiano during Clare's last illness in 1253 and died on 16 November of the same year.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She is buried near Clare, her mother and her sisters in the church of Saint Clare in Assisi.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her mother Hortulana (Ortolana), a Blessed, and her sister Beatrice also entered the Order.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Benedict XIV confirmed her long-standing veneration; her feast is kept on 16 November, and the Franciscans, Poor Clares and Assisi keep it on 19 November.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Agnes is said to have worn a hair shirt and lived on bread and water.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The former Monticelli convent was suppressed in 1810; the church of San Pietro a Monticelli and the old convent remain in Florence, now a center of diocesan charity.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "The Poor Clare house at Padua stood at Arcella, where the Santuario dell'Arcella now stands.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "Her cousin Rufino was one of the Three Companions of Saint Francis.",
+    "source": 1,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Assisi",
+   "San Damiano",
+   "Florence",
+   "Padua"
+  ],
+  "story": [
+   "Agnes was born in Assisi in 1197 or 1198, the younger daughter of Count Favorino Scifi. Her mother, the Blessed Hortulana, came from the noble family of the Fiumi, and a cousin, Rufino, became one of the celebrated Three Companions of Saint Francis. Agnes's childhood passed between her father's palace in the city and his castle of Sasso Rosso on Mount Subasio. She was born Caterina. Her elder sister was Clare.",
+   "It was a restless age. Italy was a patchwork of independent city-states, and Assisi itself was at war with neighboring Perugia. Many people were uneasy with the state of the Church, and many looked for a more direct way of following Christ. Into this world came Francis of Assisi, preaching poverty and the Gospel.",
+   "On 18 March 1212, Clare, moved by the preaching and example of Francis, left her father's home to follow him. Sixteen days later, Agnes, about fifteen years old, went to the monastery of Sant'Angelo in Panso, where Benedictine nuns had given Clare shelter. She meant to share her sister's life of poverty and penance.",
+   "Her father's fury knew no bounds. He sent his brother Monaldo, with relatives and armed followers, to bring Agnes home by force if persuasion failed. What followed is told in the old Franciscan chronicles, and it belongs to tradition rather than to documented history. Tradition holds that Monaldo, beside himself with rage, drew his sword to strike the girl, and that his arm dropped withered and useless at his side. Others dragged Agnes out of the monastery. Then Clare came to her aid, and tradition holds that Agnes's body suddenly became so heavy that the men could not carry her away and left her in a field near the monastery. Her relatives, overcome, withdrew and let her stay. Whatever we make of the details, the affair surely scandalized the good society of Assisi, and the two sisters did not give way.",
+   "Francis, who was glad of her courage, cut her hair and gave her the habit of poverty. Her name, Agnes, comes from the Latin word for lamb. He soon settled the sisters at San Damiano, the small chapel he had helped to rebuild with his own hands. Other noblewomen of Assisi joined them, and so began the Order of Poor Ladies, later called the Poor Clares. Agnes's mother and her younger sister Beatrice joined them as well. Her companions said she seemed to have found a new road to perfection known only to herself.",
+   "In 1219, though still young, Agnes was chosen by Francis to found and lead a community of Poor Ladies at Monticelli, near Florence. She ruled with loving kindness and knew how to make the practice of virtue bright and attractive. She was hard on herself: she is said to have lived on bread and water and worn a rough hair shirt. From Monticelli she founded houses in northern Italy, including Mantua, Venice and Padua. Yet she was torn by the separation from her sister. A letter to Clare survives, though some doubt its authenticity. In it she asks what she can say, since she cannot hope to see her sisters again in this world.",
+   "In 1253, Agnes was summoned back to San Damiano during Clare's last illness and was with her at her death. On 16 November of that same year, Agnes followed her. She was buried near Clare, their mother and their sister in the church of Saint Clare in Assisi. Her tomb was said to be glorified by many miracles, and Pope Benedict XIV later confirmed the veneration the faithful had long given her. Her feast is kept on 16 November, and the Franciscans, the Poor Clares and Assisi keep it on 19 November.",
+   "Today the convent at Monticelli, suppressed in 1810 under Napoleonic rule, is gone as a monastery, but its church of San Pietro a Monticelli still stands in Florence, and the old convent is now a center of diocesan charity. At Padua, the Santuario dell'Arcella stands where her sisters once prayed. Agnes lived in her sister's shadow, and her name is seldom spoken without Clare's. The sources describe a woman of firm will and tender heart who stayed faithful to Clare's ideals for the whole of her life."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Caption hook stated the legend as fact ('no one could move her back'). It now carries 'tradition holds'.",
+   "Story paragraph 4 said 'the fact itself is certain: the great families of Assisi were scandalized'. Source [2] says only that the affair 'must have' caused a great scandal in the good society of Assisi. Softened.",
+   "Story paragraph 5 said Francis 'rebuilt' San Damiano with his own hands. Source [1] says he 'helped to rebuild' it. Corrected.",
+   "Story paragraph 2 added 'in plain words' to Francis's preaching, which no source says. Removed.",
+   "The scene for the Monaldo beat showed a drawn sword in one hand and the 'other' arm limp. The source says the sword arm withered. Scene corrected, with no change to the spoken text.",
+   "Spoken beats checked: 144 words, hook 11 words. Legend beats are hedged with 'tradition holds'. The order of events follows the Catholic Encyclopedia. The map pin for Assisi is correct."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Source [4] gives a different death date (27 August, with a question mark) and Wikipedia gives canonization as 1753 versus 1751 in Santi e Beati. The script follows the Catholic Encyclopedia (16 November 1253) and avoids the canonization year. The spoken beats total 144 words, so any additions risk going over 145."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2793,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1229,
+   "thinking": 998
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1834,
+   "cache_write": 12746,
+   "cache_read": 0,
+   "out": 11806,
+   "thinking": 7528
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 5023,
+   "cache_write": 0,
+   "cache_read": 12746,
+   "out": 8664,
+   "thinking": 5318
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1913,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3193,
+   "thinking": 1045
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Agnes of Assisi",
+   "url": "https://en.wikipedia.org/wiki/Agnes_of_Assisi"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Agnes of Assisi",
+   "url": "https://www.newadvent.org/cathen/01213a.htm"
+  },
+  {
+   "title": "Santi e Beati: Agnes of Assisi",
+   "url": "https://www.santiebeati.it/dettaglio/90359"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Agnes of Assisi",
+   "url": "https://nominis.cef.fr/contenus/saint/149/Sainte-Agnes-d-Assise.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Agnes of Assisi",
+   "url": "https://www.heiligenlexikon.de/BiographienA/Agnes_von_Assisi.htm"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 68.8,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "Santa Inés de Asís",
+  "display_name": "Santa Inés",
+  "region": "Asís, Italia",
+  "dates": "c. 1197 – 1253",
+  "hook": "Salió de la casa de su padre a los quince años, y según la tradición, nadie pudo llevarla de vuelta.",
+  "summary": "Inés de Asís, hermana menor de santa Clara, siguió a su hermana en la pobreza a los quince años. Según la tradición, los hombres armados de su familia no pudieron llevarla de regreso a casa. Más tarde dirigió comunidades de Clarisas Pobres y fundó casas en el norte de Italia.",
+  "story": [
+   "Inés nació en Asís en 1197 o 1198, hija menor del conde Favorino Scifi. Su madre, la beata Hortulana, pertenecía a la noble familia de los Fiumi, y un primo suyo, Rufino, llegó a ser uno de los célebres Tres Compañeros de san Francisco. La infancia de Inés transcurrió entre el palacio de su padre en la ciudad y su castillo de Sasso Rosso, en el monte Subasio. Su nombre de nacimiento era Caterina. Su hermana mayor era Clara.",
+   "Era una época inquieta. Italia era un mosaico de ciudades-Estado independientes, y la propia Asís estaba en guerra con la vecina Perugia. Muchos se sentían inquietos por el estado de la Iglesia, y muchos buscaban una forma más directa de seguir a Cristo. En ese mundo apareció Francisco de Asís, que predicaba la pobreza y el Evangelio.",
+   "El 18 de marzo de 1212, Clara, conmovida por la predicación y el ejemplo de Francisco, dejó la casa de su padre para seguirlo. Dieciséis días después, Inés, de unos quince años, fue al monasterio de Sant'Angelo in Panso, donde monjas benedictinas habían dado refugio a Clara. Tenía la intención de compartir la vida de pobreza y penitencia de su hermana.",
+   "La ira de su padre no tuvo límites. Envió a su hermano Monaldo, acompañado de parientes y hombres armados, para llevar a Inés de vuelta a la fuerza si la persuasión fracasaba. Lo que sucedió se narra en las antiguas crónicas franciscanas y pertenece a la tradición más que a la historia documentada. Según la tradición, Monaldo, fuera de sí de rabia, desenvainó la espada para golpear a la muchacha, y su brazo quedó seco e inútil a un costado. Otros arrastraron a Inés fuera del monasterio. Entonces Clara acudió en su ayuda, y según la tradición, el cuerpo de Inés se volvió de pronto tan pesado que los hombres no pudieron llevársela y la dejaron en un campo cerca del monasterio. Sus parientes, vencidos, se retiraron y la dejaron quedarse. Sean cuales sean los detalles, el episodio sin duda escandalizó a la buena sociedad de Asís, y las dos hermanas no cedieron.",
+   "Francisco, contento por su valentía, le cortó el cabello y le dio el hábito de la pobreza. Su nombre, Inés, procede de la palabra latina para «cordero». Pronto instaló a las hermanas en San Damiano, la pequeña capilla que él mismo había ayudado a reconstruir con sus propias manos. Otras nobles de Asís se unieron a ellas, y así comenzó la Orden de las Damas Pobres, más tarde llamada de las Clarisas Pobres. También se unieron la madre de Inés y su hermana menor Beatriz. Sus compañeras decían que parecía haber encontrado un nuevo camino hacia la perfección, conocido solo por ella.",
+   "En 1219, aunque todavía joven, Inés fue elegida por Francisco para fundar y dirigir una comunidad de Damas Pobres en Monticelli, cerca de Florencia. Gobernaba con bondad y sabía hacer atractiva y luminosa la práctica de la virtud. Era severa consigo misma: se dice que vivía de pan y agua y que llevaba un áspero cilicio de crin. Desde Monticelli fundó casas en el norte de Italia, entre ellas las de Mantua, Venecia y Padua. Sin embargo, sufría por la separación de su hermana. Se conserva una carta dirigida a Clara, aunque algunos dudan de su autenticidad. En ella pregunta qué puede decir, pues no puede esperar volver a ver a sus hermanas en este mundo.",
+   "En 1253, durante la última enfermedad de Clara, Inés fue llamada de nuevo a San Damiano y estuvo con ella en su muerte. El 16 de noviembre de ese mismo año, Inés la siguió. Fue enterrada junto a Clara, a su madre y a su hermana en la iglesia de Santa Clara de Asís. Se decía que su tumba era glorificada por muchos milagros, y más tarde el papa Benedicto XIV confirmó la veneración que los fieles le habían tributado durante mucho tiempo. Su fiesta se celebra el 16 de noviembre, y los franciscanos, las Clarisas Pobres y Asís la celebran el 19 de noviembre.",
+   "Hoy el convento de Monticelli, suprimido en 1810 bajo el dominio napoleónico, ya no funciona como monasterio, pero su iglesia de San Pietro a Monticelli sigue en pie en Florencia, y el antiguo convento es ahora un centro de caridad diocesana. En Padua, el Santuario dell'Arcella se alza en el lugar donde antes oraron sus hermanas. Inés vivió a la sombra de su hermana, y su nombre rara vez se pronuncia sin el de Clara. Las fuentes describen a una mujer de voluntad firme y corazón tierno, que se mantuvo fiel a los ideales de Clara durante toda su vida."
+  ],
+  "prayer": "Santa Inés de Asís, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Asís",
+   "San Damiano",
+   "Florencia",
+   "Padua"
+  ]
+ },
+ "books": [],
+ "caption": "She left her father's home at fifteen, and tradition holds no one could carry her back.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Agnes of Assisi · Feast day: November 16\nAgnes of Assisi, younger sister of Saint Clare, followed her sister into poverty at fifteen, and tradition holds that her family's armed men could not carry her home; she went on to lead Poor Clare communities and found houses across northern Italy.\n\nSaint Agnes of Assisi, pray for us. 🕯\n\nSave this to pray with again next November 16.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintagnesofassisi #poorclares",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/art.jpg"
+ },
+ "review_message_id": 123
+}
