@@ -160,6 +160,16 @@ ICON_H = 900                # icon band at the top of the teaser
 END = 4.0                   # closing card, while the music fades (spec "end" overrides)
 
 
+def _fit(lines, name, size, tracking=0):
+    """The font at `size`, or smaller until the widest line fits between the margins (type sized to read on a phone)."""
+    d = ImageDraw.Draw(Image.new("L", (1, 1)))
+    f = _font(name, size)
+    while size > 24 and max(_width(d, l, f, tracking) for l in lines) > VW - 2 * VX:
+        size -= 2
+        f = _font(name, size)
+    return f
+
+
 def teaser_base(spec, d):
     """Icon band (top of the crop, where the face is) sinking into soot; title and byline under it."""
     x0, y0, x1, _ = spec["art_crop"]
@@ -174,35 +184,36 @@ def teaser_base(spec, d):
     fd.rectangle([0, ICON_H, VW, VH], fill=255)
     img.paste(Image.new("RGB", (VW, VH), C["soot"]), (0, 0), fade)
     d2 = ImageDraw.Draw(img)
-    _tracked(d2, (VX, ICON_H + 20), spec["byline"].upper(), _font("Cinzel-Regular.ttf", 22), C["gilt"], 0.14)
-    _tracked(d2, (VX - 2, ICON_H + 62), spec["title"].upper(), _font("Cinzel-SemiBold.ttf", 50), C["vellum"], 0.04)
-    d2.rectangle([VX, ICON_H + 146, VX + 72, ICON_H + 149], fill=C["martyr"])
+    _tracked(d2, (VX, ICON_H + 20), spec["byline"].upper(), _fit([spec["byline"].upper()], "Cinzel-Regular.ttf", 32, 0.14), C["gilt"], 0.14)
+    _tracked(d2, (VX - 3, ICON_H + 66), spec["title"].upper(), _fit([spec["title"].upper()], "Cinzel-SemiBold.ttf", 72, 0.04), C["vellum"], 0.04)
+    d2.rectangle([VX, ICON_H + 172, VX + 90, ICON_H + 176], fill=C["martyr"])
     return img
 
 
 def teaser_stanza(spec, s):
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    lat, en = _font(spec.get("text_font", "EBGaramond-Medium.ttf"), 44), _font("Cormorant-MediumItalic.ttf", 34)
-    y = ICON_H + 184
+    lat, en = _fit(s["latin"], spec.get("text_font", "EBGaramond-Medium.ttf"), 56), _fit(s["english"], "Cormorant-MediumItalic.ttf", 46)
+    y = ICON_H + 214
     for line in s["latin"]:
         d.text((VX, y), line, font=lat, fill=C["vellum"])
-        y += 56
+        y += round(lat.size * 1.25)
     y += 26
     for line in s["english"]:
         d.text((VX, y), line, font=en, fill=C["giltLight"])
-        y += 44
+        y += round(en.size * 1.25)
     return img
 
 
 def teaser_intro(lines):
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.text((VX, ICON_H + 196), lines[0], font=_font("Cormorant-MediumItalic.ttf", 64), fill=C["giltLight"])
-    y = ICON_H + 300
+    d.text((VX, ICON_H + 220), lines[0], font=_fit(lines[:1], "Cormorant-MediumItalic.ttf", 84), fill=C["giltLight"])
+    y = ICON_H + 340
+    f = _fit(lines[1:] or [""], "EBGaramond-Medium.ttf", 54)
     for line in lines[1:]:
-        d.text((VX, y), line, font=_font("EBGaramond-Medium.ttf", 42), fill=C["vellum"])
-        y += 56
+        d.text((VX, y), line, font=f, fill=C["vellum"])
+        y += 70
     return img
 
 
@@ -210,16 +221,18 @@ def teaser_end(where=("The whole hymn on YouTube · @AllHolySaints",)):
     """Closing card: the mark, why to follow (the channel's promise), then where the full piece lives."""
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    _monogram(d, VX, ICON_H + 196, 40, C["gilt"])
-    f = _font("Cormorant-MediumItalic.ttf", 50)
-    y = ICON_H + 290
-    for line in ("A forgotten saint every morning,", "and the prayers they wrote, sung."):
+    _monogram(d, VX, ICON_H + 220, 48, C["gilt"])
+    promise = ("A forgotten saint every morning,", "and the prayers they wrote, sung.")
+    f = _fit(promise, "Cormorant-MediumItalic.ttf", 68)
+    y = ICON_H + 320
+    for line in promise:
         d.text((VX, y), line, font=f, fill=C["giltLight"])
-        y += 64
+        y += 84
     y += 40
+    fw = _fit(where, "EBGaramond-Medium.ttf", 46)
     for line in where:
-        d.text((VX, y), line, font=_font("EBGaramond-Medium.ttf", 34), fill=C["vellum"])
-        y += 46
+        d.text((VX, y), line, font=fw, fill=C["vellum"])
+        y += 60
     return img
 
 

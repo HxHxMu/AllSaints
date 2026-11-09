@@ -20,6 +20,7 @@ from compilation import _monogram
 VW, VH = 1080, 1920
 VX = 72                     # text margin
 ART = 1080                  # square art band at the top
+TOP = 140                   # night sky above the art: headroom for the halo in grid crops (the art's floor sinks into the title fade)
 NIGHT = (11, 20, 36)        # the album's night blue (its cover and long-form video)
 FADE = 0.8
 INTRO = 4.0                 # opening card, then "under"
@@ -47,24 +48,26 @@ def base(spec, track):
     img = Image.new("RGBA", (VW, VH), NIGHT + (255,))
     fade = Image.new("L", (VW, VH), 255)
     fd = ImageDraw.Draw(fade)
-    fd.rectangle([0, 0, VW, ART - 260], fill=0)
+    fd.rectangle([0, TOP, VW, ART - 260], fill=0)
+    for y in range(TOP, TOP + 40):  # the art's top edge melts into the sky above it
+        fd.line([(0, y), (VW, y)], fill=int(255 * (1 - (y - TOP) / 40)))
     for y in range(ART - 260, ART + 1):
         fd.line([(0, y), (VW, y)], fill=int(255 * ((y - ART + 260) / 260) ** 1.4))
     img.putalpha(fade)
     d = ImageDraw.Draw(img)
-    _tracked(d, (VX, ART + 10), f"{spec['album']} · {spec['volume']}".upper(), _font("Cinzel-Regular.ttf", 22), C["gilt"], 0.14)
-    _tracked(d, (VX - 2, ART + 52), f"{ROMAN[track['n']]}. {track['title']}".upper(), _font("Cinzel-SemiBold.ttf", 50), C["vellum"], 0.04)
-    d.rectangle([VX, ART + 136, VX + 72, ART + 139], fill=C["martyr"])
+    _tracked(d, (VX, ART + 10), f"{spec['album']} · {spec['volume']}".upper(), _font("Cinzel-Regular.ttf", 32), C["gilt"], 0.14)
+    _tracked(d, (VX - 3, ART + 62), f"{ROMAN[track['n']]}. {track['title']}".upper(), _font("Cinzel-SemiBold.ttf", 72), C["vellum"], 0.04)
+    d.rectangle([VX, ART + 170, VX + 90, ART + 174], fill=C["martyr"])
     return img
 
 
 def lines_card(lines, first_big=True):
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    y = ART + 186
+    y = ART + 220
     for line in lines:
-        d.text((VX, y), line, font=_font("Cormorant-MediumItalic.ttf", 64 if first_big else 50), fill=C["giltLight"])
-        y += 80 if first_big else 64
+        d.text((VX, y), line, font=_font("Cormorant-MediumItalic.ttf", 84 if first_big else 68), fill=C["giltLight"])
+        y += 100 if first_big else 84
     return img
 
 
@@ -72,12 +75,12 @@ def end_card(spec):
     """The mark, why to follow, then where the whole album is."""
     img = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    _monogram(d, VX, ART + 186, 40, C["gilt"])
-    y = ART + 280
+    _monogram(d, VX, ART + 220, 48, C["gilt"])
+    y = ART + 320
     for line in ("A forgotten saint every morning,", "and music for the quiet hours."):
-        d.text((VX, y), line, font=_font("Cormorant-MediumItalic.ttf", 50), fill=C["giltLight"])
-        y += 64
-    d.text((VX, y + 40), "The full hour on YouTube · @AllHolySaints", font=_font("EBGaramond-Medium.ttf", 34), fill=C["vellum"])
+        d.text((VX, y), line, font=_font("Cormorant-MediumItalic.ttf", 68), fill=C["giltLight"])
+        y += 84
+    d.text((VX, y + 40), "The full hour on YouTube · @AllHolySaints", font=_font("EBGaramond-Medium.ttf", 46), fill=C["vellum"])
     return img
 
 
@@ -104,8 +107,8 @@ def render(spec_path, n):
         img.save(work / f"{name}.png")
     frames = round(total * 30)
     z = f"1+{ZOOM}*on/{frames}"
-    chain = [f"[0:v]zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2.4-(ih/zoom/2.4)':d={frames}:s={ART}x{ART}:fps=30,"
-             f"pad={VW}:{VH}:0:0:color=0x{''.join(f'{c:02x}' for c in NIGHT)}[bg]"]
+    chain = [f"[0:v]zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/4-(ih/zoom/4)':d={frames}:s={ART}x{ART}:fps=30,"
+             f"pad={VW}:{VH}:0:{TOP}:color=0x{''.join(f'{c:02x}' for c in NIGHT)}[bg]"]
     args = ["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "30", "-t", f"{total:.2f}", "-i", str(work / "art.png")]
     last = "[bg]"
     for i, (name, _, a, b) in enumerate(layers, start=1):
