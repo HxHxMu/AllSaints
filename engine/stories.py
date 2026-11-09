@@ -5,7 +5,7 @@
   published; state ep["story"] {media_id, permalink, image | attempts, error}, max 3 attempts, failures to Telegram.
 - Every card also goes to the Facebook Page as a Story once it is on Instagram (Instagram's "share to Facebook" skips
   API posts): state ep["story_fb"] / the entry's "facebook", {id | attempts, error}, independent of Instagram.
-- Seasonal series (state/stories.json): prerendered cards on a GitHub release, each {"id", "at", "image",
+- Seasonal series (state/stories.json): prerendered cards on a GitHub release, each {"id", "at", "image" (or "video": Instagram only),
   "status"}. "draft" entries wait for Luis's OK in chat (then "pending"); poll posts pending ones once due.
   The O Antiphons (Dec 17-23) are made by `stories.py o-antiphons`.
 - Weekly music card (config "music_story", default "Sun 15:00"; "" turns it off): an album from data/music.json and
@@ -196,7 +196,8 @@ def run_seasonal(now):
         if s.get("status") != "pending" or dt.datetime.fromisoformat(s["at"]) > now or s.get("attempts", 0) >= 3:
             continue
         try:
-            s.update(status="posted", posted=instagram.publish_story(storage.resolve_direct(s["image"])),
+            media = {"video_url": storage.resolve_direct(s["video"])} if s.get("video") else {"image_url": storage.resolve_direct(s["image"])}
+            s.update(status="posted", posted=instagram.publish_story(**media),
                      posted_at=now.isoformat(timespec="minutes"))
         except Exception as e:
             s["attempts"] = s.get("attempts", 0) + 1
@@ -204,7 +205,7 @@ def run_seasonal(now):
             telegram.send(f"❌ Story failed ({s['attempts']}x): {s['id']}\n{str(e)[:200]}")
         changed = True
     for s in items:
-        if s.get("status") == "posted":
+        if s.get("status") == "posted" and s.get("image"):  # video Stories are Instagram-only
             fb = s.get("facebook") or {}
             if _facebook(fb, storage.resolve_direct(s["image"]), s["id"]):
                 s["facebook"] = fb

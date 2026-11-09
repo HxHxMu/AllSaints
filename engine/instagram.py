@@ -136,10 +136,11 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
     raise RuntimeError(" | ".join(errors))
 
 
-def publish_story(image_url):
-    """A one-image Story (stories.py). Stories take no caption; the image is the whole post."""
+def publish_story(image_url=None, video_url=None):
+    """A one-image (stories.py) or one-video Story. Stories take no caption; the media is the whole post."""
     tok = get_token()
-    r = http.post(f"{GRAPH}/{_uid()}/media", data={"media_type": "STORIES", "image_url": image_url, "access_token": tok}, timeout=60)
+    media = {"video_url": video_url} if video_url else {"image_url": image_url}
+    r = http.post(f"{GRAPH}/{_uid()}/media", data={"media_type": "STORIES", **media, "access_token": tok}, timeout=60)
     if not r.ok:
         raise RuntimeError(f"Story create failed: {r.text[:300]}")
     ok, st = _wait(r.json()["id"], tok)
