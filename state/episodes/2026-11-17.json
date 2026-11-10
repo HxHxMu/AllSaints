@@ -1,0 +1,342 @@
+{
+ "id": "2026-11-17",
+ "date": "2026-11-17",
+ "status": "review",
+ "updated": "2026-11-10T10:36:36+00:00",
+ "saint": {
+  "qid": "Q257500",
+  "name": "Saint Hilda",
+  "display_name": "St. Hilda of Whitby",
+  "dates": "c. 614 – 680",
+  "region": "Whitby, England",
+  "feast": "November 17",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q257500",
+  "name": "Hilda",
+  "links": 22,
+  "enwiki": "Hilda_of_Whitby",
+  "images": [
+   "%D0%A5%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0%20%D0%A3%D0%B8%D1%82%D0%B1%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F%20%28%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%29.jpg"
+  ],
+  "religions": [
+   "Christianity"
+  ],
+  "commonscat": "Saint Hilda of Whitby",
+  "birth": 614,
+  "death": 680,
+  "lon": -0.607508,
+  "lat": 54.488,
+  "selection_reason": "Hilda of Whitby has the best-documented life of the group, since Bede wrote of her within living memory, and the story is vivid and surprising: the abbess who hosted the Synod of Whitby and encouraged the herdsman Caedmon to become England's first Christian poet.",
+  "catholic_veneration": "Saint in the Roman Martyrology, commemorated on 17 November; also on the Catholic liturgical calendar for England, with Catholic Encyclopedia (1913) and Santi e Beati entries."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Hilda",
+   "display_name": "St. Hilda of Whitby",
+   "dates": "c. 614 – 680",
+   "region": "Whitby, England",
+   "feast": "November 17",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Kings sought her counsel, yet she recognized a herdsman's gift.",
+    "visual": "art",
+    "scene": "An abbess in a dark veil and plain habit sits in a simple Anglo-Saxon timber hall. A crowned king and a bishop stand respectfully on one side, and on the other a humble herdsman with a staff stands with folded hands."
+   },
+   {
+    "role": "who",
+    "text": "Saint Hilda was born into Northumbria's royal family in the early seventh century.",
+    "visual": "map",
+    "lat": 54.488,
+    "lon": -0.608,
+    "place": "Whitby · England"
+   },
+   {
+    "role": "story",
+    "text": "At thirty-three, she planned to follow her sister to a convent in Gaul. Bishop Aidan called her home to live as a nun.",
+    "visual": "art",
+    "scene": "A young noblewoman in a plain cloak stands on a windswept northern English shore, listening to Bishop Aidan in a simple monastic robe. Wooden huts and a small timber church stand behind them, and a river runs to the sea."
+   },
+   {
+    "role": "story",
+    "text": "In six fifty-seven, she founded Whitby Abbey, where men and women lived apart but worshipped together. Five of its men became bishops.",
+    "visual": "art",
+    "scene": "A grassy headland above the North Sea holds small wooden houses and a timber church. Monks and nuns in simple habits walk separately toward the church door, and Hilda, with a pastoral staff, watches over them."
+   },
+   {
+    "role": "story",
+    "text": "In six sixty-four, King Oswiu chose her abbey for a synod of churchmen from as far as Wessex.",
+    "visual": "art",
+    "scene": "Churchmen in robes sit in a large timber hall of the seventh century, with a king enthroned at its head. Hilda, veiled and in an abbess's habit, sits among them, and light falls through the open doorway."
+   },
+   {
+    "role": "story",
+    "text": "Bede tells of a herdsman there, Caedmon, moved in a dream to sing verses in praise of God. Hilda recognized his gift, and encouraged him.",
+    "visual": "art",
+    "scene": "In the yard of a Northumbrian monastery with cattle nearby, a humble herdsman stands singing with open hands. Hilda, veiled and with a pastoral staff, listens kindly, and monks and nuns gather behind her."
+   },
+   {
+    "role": "turn",
+    "text": "All who knew her called her mother, Bede says. Fever weighed on her last seven years, yet she worked on. True wisdom makes room for the humble.",
+    "visual": "art",
+    "scene": "An older abbess in a dark veil stands among kneeling monks, nuns and farm workers outside a timber church, her hand raised in blessing. Her face is tired but gentle, and the sea shows beyond the cliffs."
+   },
+   {
+    "role": "close",
+    "text": "Saint Hilda, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Oswiu": "OSS-wee-oo",
+   "Caedmon": "KAD-mon",
+   "Aidan": "AY-dun",
+   "Wessex": "WESS-ex",
+   "Northumbria": "nor-THUM-bree-ah"
+  },
+  "caption_hook": "She was called mother by all who knew her, and kings came to her for advice.",
+  "summary": "Saint Hilda of Whitby, abbess of the seventh century, ruled a great monastery, hosted the Synod of Whitby, and encouraged the herdsman Caedmon in his gift of song.",
+  "youtube_title": "St. Hilda of Whitby: The Abbess Kings Came to Ask",
+  "hashtags": [
+   "#sainthilda",
+   "#whitby",
+   "#whitbyabbey",
+   "#hildaofwhitby",
+   "#northumbria",
+   "#abbess",
+   "#caedmon",
+   "#bede",
+   "#anglosaxon",
+   "#catholicsaints",
+   "#saintsoftheday",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Hilda? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Hilda was born around 614 into the Northumbrian royal household, a great-niece of King Edwin.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Hilda was baptized at about thirteen, around 627, in the time of King Edwin and Paulinus.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Hilda's sister Hereswith became a nun at Chelles in Gaul, and Hilda at thirty-three meant to join her.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Bishop Aidan of Lindisfarne called Hilda home, and she lived as a nun in Northumbria.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 657 Hilda founded Whitby Abbey, a double monastery where men and women lived separately but worshipped together.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Five men from Whitby later became bishops.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 664 King Oswiu chose Hilda's monastery for the Synod of Whitby and invited churchmen from as far as Wessex.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "According to Bede, Caedmon, a herdsman at the monastery, was inspired in a dream to sing verses in praise of God, and Hilda recognized and encouraged his gift.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Bede writes that all who knew her called her mother because of her devotion and grace.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Hilda suffered a fever for her last seven years yet kept to her duties until she died on 17 November 680.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Kings, princes and churchmen sought her advice for her wisdom.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Her name means warrior in Old High German.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Santi e Beati records that justice was the first thing she urged on those who sought her counsel.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that at her death the monastery bell was heard at Hackness and the nun Begu saw her soul borne to heaven by angels.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Local legend holds that Hilda turned a plague of snakes to stone, explaining the ammonite fossils on the shore.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Whitby Abbey was destroyed by Danish invaders in 867, refounded as a Benedictine house after 1066, and dissolved in 1539.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Hilda is considered a patron of learning and culture, including poetry.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "learning",
+   "culture",
+   "poetry"
+  ],
+  "places": [
+   "Whitby",
+   "Hartlepool",
+   "Northumbria",
+   "Hackness",
+   "York"
+  ],
+  "story": [
+   "Hilda, also called Hild, was born around 614 into the royal household of Deira, one of the Anglo-Saxon kingdoms of northern England. Her father, Hereric, was a nephew of King Edwin. While she was still an infant, he was poisoned during exile. Edwin went on to unite the region as the kingdom of Northumbria, and Hilda grew up at his court. Her name, from Old High German, means warrior. Nearly everything we know of her comes from Bede, who finished his Ecclesiastical History of the English People in 731, not long after her time.",
+   "In 625, Edwin married Æthelburh, a Christian princess of Kent, who came north with her chaplain, Paulinus. Two years later, on Easter Day, Edwin was baptized with his whole court in a small wooden church built for the occasion near the site of York Minster. Hilda was thirteen. In 633 Northumbria was overrun and Edwin fell in battle. Paulinus brought the queen and her companions back to Kent, and Hilda is assumed to have gone with them.",
+   "Her elder sister, Hereswith, had become a nun at Chelles, in Gaul. Hilda set out to join her. At thirty-three, however, she heeded the call of Bishop Aidan of Lindisfarne and returned to Northumbria. She lived as a nun on the north bank of the River Wear with a few companions, learning the Celtic monastic tradition that Aidan had brought from Iona. After about a year, Aidan made her abbess of Hartlepool, a double monastery for monks and nuns.",
+   "In 657 she founded Whitby Abbey, then called Streoneshalh, on the cliffs above the North Sea. Its members lived in small houses, each shared by two or three people. Men and women lived apart but prayed together in church. According to Bede, everything was held in common, and peace and charity were practised above all. Everyone was expected to study Scripture and do good works. Five men from Whitby went on to become bishops, among them Saint John of Beverley and Saint Wilfrid of York. Bede describes Hilda as energetic, a skilled administrator and a teacher. She also oversaw the farmland, the flocks and the woodcutting that supported the community. Her reputation for wisdom was such that kings and princes came to her for advice. A later Italian account adds that the first thing she urged on all who consulted her was justice.",
+   "In 664, King Oswiu chose her monastery as the setting for the Synod of Whitby, the first synod of the Church in his kingdom. Churchmen came from as far as Wessex. The question was how to calculate the date of Easter. The king decided to follow the practice of Rome. Most of those present, Hilda among them, accepted his decision. The monks of Lindisfarne could not, and withdrew to Iona and later to Ireland. Hilda had been formed in the Celtic tradition, and the German reference work records that she nevertheless introduced the Roman usage in her own monastery.",
+   "Bede also tells of Caedmon, a herdsman at the monastery. He was inspired in a dream to sing verses in praise of God. Hilda recognized the gift and encouraged him to develop it. The Catholic Encyclopedia adds that she admitted him to monastic vows in her community. This is why Hilda is counted among the patrons of learning and culture, including poetry. Bede says that all who knew her called her mother, because of her outstanding devotion and grace.",
+   "For the last seven years of her life, Hilda suffered from a fever, yet she neglected none of her duties. In her last year she set up another monastery at Hackness, some miles from Whitby. She died on 17 November 680, at about sixty-six, after receiving viaticum. Tradition holds that at the moment of her death the bell was heard at Hackness, where a nun named Begu saw Hilda's soul carried to heaven by angels.",
+   "Whitby Abbey was destroyed by Danish invaders in 867. Monks refounded it as a Benedictine house after the Norman conquest, and it lasted until 1539. Its ruins still stand above the sea. Local legend says Hilda turned a plague of snakes to stone, which would explain the ammonite fossils found on the shore. Another tradition says that sea birds dip their wings as they fly over the abbey. Her name appears in the calendar of Saint Willibrord, written at the start of the eighth century, which shows how early her veneration began. Her feast is kept on 17 November, and she is usually shown with a pastoral staff, an abbey church and ammonites at her feet."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Caedmon beat: the dream inspiration is Bede's account of a miraculous gift, but it was told as plain fact. Fixed by attributing it: 'Bede tells of a herdsman there, Caedmon, moved in a dream to sing verses in praise of God.'",
+   "Turn beat: reworded to 'All who knew her called her mother, Bede says' so Bede is not named twice in a row after the Caedmon fix. The word count is unchanged.",
+   "Story paragraph 1: 'the Venerable Bede' could be mistaken for the Church title 'Venerable', and the sources never use it. Changed to plain 'Bede'.",
+   "Everything else checked out against the sources: dates, places, the 657 foundation, the 664 synod, the five bishops, the seven-year fever, the Hackness bell and Begu (marked as tradition), and the snake legend (marked as local legend). The map location for Whitby is right. The beats now total about 143 spoken words, within the 125-145 range."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The sources conflict on Hilda's father (Wikipedia and the Catholic Encyclopedia say nephew of Edwin; the German lexicon says king of Deira), so the script follows the Catholic Encyclopedia. They also tell the snake legend differently (turned to stone vs. heads cut off, and the Italian wild-ducks version). Only the Wikipedia 'turned to stone' version is used, and only in the website story, not the beats."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2820,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 843,
+   "thinking": 660
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1781,
+   "cache_write": 11532,
+   "cache_read": 0,
+   "out": 11642,
+   "thinking": 7634
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4740,
+   "cache_write": 0,
+   "cache_read": 11532,
+   "out": 10066,
+   "thinking": 7181
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1994,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 6107,
+   "thinking": 3879
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Hilda of Whitby",
+   "url": "https://en.wikipedia.org/wiki/Hilda_of_Whitby"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Hilda",
+   "url": "https://www.newadvent.org/cathen/07350a.htm"
+  },
+  {
+   "title": "Santi e Beati: Hilda",
+   "url": "https://www.santiebeati.it/dettaglio/90435"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Hilda",
+   "url": "https://www.heiligenlexikon.de/BiographienH/Hilda_von_Whitby.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 69.3,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "Santa Hilda",
+  "name": "Santa Hilda de Whitby",
+  "region": "Whitby, Inglaterra",
+  "dates": "c. 614 – 680",
+  "hook": "Todos los que la conocieron la llamaban madre, y los reyes acudían a ella en busca de consejo.",
+  "summary": "Santa Hilda de Whitby, abadesa del siglo VII, gobernó un gran monasterio, acogió el Sínodo de Whitby y animó al pastor Cædmon en su don para el canto.",
+  "story": [
+   "Hilda, también llamada Hild, nació hacia el 614 en la casa real de Deira, uno de los reinos anglosajones del norte de Inglaterra. Su padre, Hereric, era sobrino del rey Edwin. Cuando ella todavía era una bebé, él fue envenenado durante el exilio. Edwin llegó a unir la región en el reino de Northumbria, y Hilda creció en su corte. Su nombre, de origen altoalemán antiguo, significa guerrera. Casi todo lo que sabemos de ella procede de Beda, que concluyó su Historia eclesiástica del pueblo inglés en el 731, poco después de su época.",
+   "En el 625, Edwin se casó con Æthelburh, una princesa cristiana de Kent, que llegó al norte acompañada de su capellán, Paulino. Dos años después, el día de Pascua, Edwin fue bautizado junto con toda su corte en una pequeña iglesia de madera construida para la ocasión, cerca del lugar donde hoy se alza York Minster. Hilda tenía trece años. En el 633 Northumbria fue invadida y Edwin murió en batalla. Paulino llevó de regreso a Kent a la reina y a sus acompañantes, y se supone que Hilda fue con ellos.",
+   "Su hermana mayor, Hereswith, se había hecho monja en Chelles, en la Galia. Hilda se dispuso a reunirse con ella. Sin embargo, a los treinta y tres años, atendió la llamada del obispo Aidán de Lindisfarne y regresó a Northumbria. Vivió como monja en la orilla norte del río Wear, con algunas compañeras, y aprendió la tradición monástica celta que Aidán había traído desde Iona. Tras un año aproximadamente, Aidán la nombró abadesa de Hartlepool, un monasterio doble para monjes y monjas.",
+   "En el 657 fundó la abadía de Whitby, entonces llamada Streoneshalh, sobre los acantilados frente al mar del Norte. Sus miembros vivían en pequeñas casas, cada una compartida por dos o tres personas. Hombres y mujeres vivían separados, pero rezaban juntos en la iglesia. Según Beda, todo se tenía en común, y sobre todo se practicaban la paz y la caridad. Se esperaba que todos estudiaran las Escrituras y realizaran obras buenas. Cinco hombres de Whitby llegaron a ser obispos, entre ellos san Juan de Beverley y san Wilfrido de York. Beda describe a Hilda como una mujer enérgica, una administradora hábil y una maestra. También supervisaba las tierras de cultivo, los rebaños y la tala de madera que sostenían a la comunidad. Su fama de sabiduría era tal que reyes y príncipes acudían a ella en busca de consejo. Un relato italiano posterior añade que lo primero que exhortaba a quienes la consultaban era a practicar la justicia.",
+   "En el 664, el rey Oswiu eligió su monasterio como sede del Sínodo de Whitby, el primer sínodo de la Iglesia en su reino. Acudieron eclesiásticos desde tan lejos como Wessex. La cuestión era cómo calcular la fecha de la Pascua. El rey decidió seguir la práctica de Roma, y la mayoría de los presentes, entre ellos Hilda, aceptó su decisión. Los monjes de Lindisfarne no pudieron hacerlo y se retiraron a Iona y, más tarde, a Irlanda. Hilda se había formado en la tradición celta, y la obra de referencia alemana registra que, sin embargo, introdujo el uso romano en su propio monasterio.",
+   "Beda también habla de Cædmon, un pastor de ganado del monasterio. En un sueño recibió la inspiración para cantar versos en alabanza de Dios. Hilda reconoció ese don y lo animó a desarrollarlo. La Enciclopedia Católica añade que ella lo admitió a los votos monásticos en su comunidad. Por eso Hilda figura entre las patronas del saber y de la cultura, incluida la poesía. Beda dice que todos los que la conocieron la llamaban madre, por su excepcional devoción y gracia.",
+   "Durante los últimos siete años de su vida, Hilda padeció una fiebre, pero no descuidó ninguno de sus deberes. En su último año fundó otro monasterio en Hackness, a varias millas de Whitby. Murió el 17 de noviembre del 680, a los sesenta y seis años aproximadamente, tras recibir el viático. Según la tradición, en el momento de su muerte se oyó la campana en Hackness, donde una monja llamada Begu vio cómo ángeles llevaban al cielo el alma de Hilda.",
+   "La abadía de Whitby fue destruida por invasores daneses en el 867. Tras la conquista normanda, los monjes la refundaron como casa benedictina, y funcionó hasta 1539. Sus ruinas aún se alzan sobre el mar. Una leyenda local cuenta que Hilda convirtió en piedra una plaga de serpientes, lo que explicaría los fósiles de amonites hallados en la playa. Otra tradición dice que las aves marinas inclinan sus alas al volar sobre la abadía. Su nombre aparece en el calendario de san Willibrordo, escrito a comienzos del siglo VIII, lo que muestra lo temprano que comenzó su veneración. Su fiesta se celebra el 17 de noviembre, y suele representársela con un báculo pastoral, una iglesia abacial y amonites a sus pies."
+  ],
+  "prayer": "Santa Hilda, ruega por nosotros.",
+  "patronages": [
+   "el saber",
+   "la cultura",
+   "la poesía"
+  ],
+  "places": [
+   "Whitby",
+   "Hartlepool",
+   "Northumbria",
+   "Hackness",
+   "York"
+  ]
+ },
+ "books": [],
+ "caption": "She was called mother by all who knew her, and kings came to her for advice.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Hilda · Feast day: November 17\nSaint Hilda of Whitby, abbess of the seventh century, ruled a great monastery, hosted the Synod of Whitby, and encouraged the herdsman Caedmon in his gift of song.\n\nSaint Hilda, pray for us. 🕯\n\nHad you ever heard of St. Hilda of Whitby before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #sainthilda #whitby",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-17/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-17/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-17/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-17/art.jpg"
+ },
+ "review_message_id": 131
+}
