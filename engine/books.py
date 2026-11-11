@@ -59,3 +59,13 @@ def find(saint):
             break
     log(f"Books about {name}: {len(out)}")
     return out
+
+
+def backfill(eps, only_missing=True):
+    """`pipeline.py books [ep_id|all]`: look the books up again (all = only daily episodes that have none yet)."""
+    from common import save_episode
+    for ep in eps:
+        if ep and re.fullmatch(r"\d{4}-\d{2}-\d{2}", ep["id"]) and (not only_missing or "books" not in ep):
+            ep["books"] = find(ep["saint"])
+            save_episode(ep)
+            print(ep["id"], ep["saint"]["name"], [b["title"] for b in ep["books"]])

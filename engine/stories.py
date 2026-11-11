@@ -21,36 +21,25 @@ import datetime as dt, io, json, sys, traceback
 from pathlib import Path
 from PIL import Image, ImageDraw
 from common import BRAND, DATA, ROOT, http, load_config, load_episode, load_json, log, save_episode, save_json, tz
-from playlist_cover import _font, _tracked, _width
-from compilation import _monogram
+from cards import font as _font, monogram as _monogram, roman, tracked as _tracked, wrap
 
 W, H = 1080, 1920
 X = 80                      # text margin
 TOP = 170                   # Instagram's progress bar and name sit over the top ~150 px
 SAFE_BOTTOM = H - 270       # Instagram's reply bar covers the bottom ~250 px
 C = BRAND["colors"]
-ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI",
-         "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX",
-         "XXX", "XXXI"]
 MONTHS = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
           "November", "December"]
 FILE = "stories.json"
 
 
 def _lines(d, text, font, width, tracking=0.0):
-    out = [""]
-    for w in text.split():
-        test = f"{out[-1]} {w}".strip()
-        if not out[-1] or _width(d, test, font, tracking) <= width:
-            out[-1] = test
-        else:
-            out.append(w)
-    return out
+    return wrap(d, text, font, width, tracking) or [""]
 
 
 def _manuscript(iso):
     y, m, d = map(int, iso.split("-"))
-    return f"{ROMAN[d]} · {MONTHS[m]}".upper()
+    return f"{roman(d)} · {MONTHS[m]}".upper()
 
 
 def _painted_band(cover: Image.Image):
@@ -276,7 +265,7 @@ def music_card(album, track):
     y += 26
     d.rectangle([X, y, X + 72, y + 3], fill=C["martyr"])
     y += 40
-    _tracked(d, (X, y), f"THIS WEEK  ·  {ROMAN[track]}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.16)
+    _tracked(d, (X, y), f"THIS WEEK  ·  {roman(track)}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.16)
     y += 44
     d.text((X, y), album["tracks"][track - 1], font=_font("EBGaramond-Medium.ttf", 50), fill=C["vellum"])
     d.text((X, SAFE_BOTTOM - 96), f"Listen at {album['url']}", font=_font("EBGaramond-Medium.ttf", 32), fill=C["vellum"])
@@ -377,9 +366,9 @@ def antiphon_card(i, title, latin, english, day):
                   _lines(d, english, en, W - 2 * X))
     block = 46 + 80 + 104 * len(tl) + 16 + 46 + 60 * len(ll) + 36 + 54 * len(el)
     y = max(TOP + 60, (TOP + SAFE_BOTTOM - 120 - block) // 2)  # centred between the top bar and the footnote
-    _tracked(d, (X, y), f"THE O ANTIPHONS  ·  {ROMAN[i + 1]} OF VII", _font("Cinzel-Regular.ttf", 24), C["gilt"], 0.16)
+    _tracked(d, (X, y), f"THE O ANTIPHONS  ·  {roman(i + 1)} OF VII", _font("Cinzel-Regular.ttf", 24), C["gilt"], 0.16)
     y += 46
-    _tracked(d, (X, y), f"{ROMAN[day]} · DECEMBER", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.16)
+    _tracked(d, (X, y), f"{roman(day)} · DECEMBER", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.16)
     y += 80
     for line in tl:
         _tracked(d, (X - 3, y), line, big, C["vellum"], 0.04)
@@ -434,7 +423,7 @@ if __name__ == "__main__":
         album, track = _music_pick(day)
         img, end = music_card(album, track)
         img.save(out, quality=92)
-        print(out, f"{album['title']} {ROMAN[track]}. {album['tracks'][track - 1]}", "skip: " + str(_music_skip(day)),
+        print(out, f"{album['title']} {roman(track)}. {album['tracks'][track - 1]}", "skip: " + str(_music_skip(day)),
               "text ends", end, "footer at", SAFE_BOTTOM - 96)
     elif sys.argv[1] == "o-antiphons":
         print(make_o_antiphons(sys.argv[2], upload="--upload" in sys.argv))

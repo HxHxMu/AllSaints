@@ -3,31 +3,14 @@ bottom, and the playlist name inscribed across it in Cinzel. Built from art the 
 The API only takes square images (playlistImages, type "hero", 1:1) and YouTube shows the whole
 square inside its 16:9 card, so the square is designed to be read whole and small: big words, no fine print."""
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
-from common import BRAND, ROOT, claude_json
+from PIL import Image, ImageDraw
+from common import BRAND, claude_json
+from cards import font as _font, tracked as _tracked, width as _width
 
 W = H = 1080
-FONTS = ROOT / "brand" / "fonts"
 C = BRAND["colors"]
 MARGIN = 76
 TEXT_W = W - 2 * MARGIN
-
-
-def _font(name, size):
-    return ImageFont.truetype(str(FONTS / name), size)
-
-
-def _tracked(draw, xy, text, font, fill, tracking=0.12):
-    """Draw text with letter-spacing (Cinzel is set at +0.12em); returns the drawn width."""
-    x, y = xy
-    for i, ch in enumerate(text):
-        draw.text((x, y), ch, font=font, fill=fill)
-        x += draw.textlength(ch, font=font) + (font.size * tracking if i < len(text) - 1 else 0)
-    return x - xy[0]
-
-
-def _width(draw, text, font, tracking=0.12):
-    return sum(draw.textlength(ch, font=font) for ch in text) + font.size * tracking * max(len(text) - 1, 0)
 
 
 def _icon_square(art: Path, cover_crop: bool, focus=0.5, face_y=None, zoom=1.0):

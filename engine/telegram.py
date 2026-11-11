@@ -287,7 +287,7 @@ def process_updates():
                 continue
             if p["kind"] == "caption":
                 ep["caption_hook_override"] = text
-                from pipeline import build_caption
+                from captions import build_caption
                 ep["caption"] = build_caption(ep)
                 save_episode(ep)
                 send("✏️ Caption updated:\n\n" + ep["caption"], reply_markup=buttons(ep["id"]))

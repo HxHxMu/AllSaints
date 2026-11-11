@@ -108,7 +108,7 @@ def about():
         x += d.textlength(ch, font=f) + size * 0.04
     x += size * 0.15 - size * 0.04
     top, bottom = y + f.getbbox("A")[1] - size * 0.12, y + f.getbbox("A")[3] + size * 0.12
-    stem = max(2, size // 18)  # Cinzel has no dagger: draw the cross, as compilation._monogram does
+    stem = max(2, size // 18)  # Cinzel has no dagger: draw the cross, as cards.monogram does
     d.rectangle([x + (arm - stem) / 2, top, x + (arm + stem) / 2, bottom], fill=C["giltLight"])
     bar = top + (bottom - top) * 0.3
     d.rectangle([x, bar, x + arm, bar + stem], fill=C["giltLight"])

@@ -17,15 +17,13 @@ import json, subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageDraw
 from common import BRAND, ROOT
-from playlist_cover import _font, _tracked, _width
-from compilation import _monogram, duration
+from cards import duration, font as _font, monogram as _monogram, roman, tracked as _tracked, width as _width
 
 W, H = 1920, 1080
 PANEL = 860                 # icon width on the left
 TX, TW = 960, 860           # text column
 FADE = 0.8
 C = BRAND["colors"]
-ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
 
 def base(spec, d):
@@ -56,7 +54,7 @@ def stanza(spec, s):
     lat, en = _font(spec.get("text_font", "EBGaramond-Medium.ttf"), 52), _font("Cormorant-MediumItalic.ttf", 38)
     block = len(s["latin"]) * 68 + 44 + len(s["english"]) * 48
     y = (H - block) // 2 + 10
-    _tracked(d, (TX, y - 92), f"{spec['title'].upper()}  ·  {ROMAN[s['n']]}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.14)
+    _tracked(d, (TX, y - 92), f"{spec['title'].upper()}  ·  {roman(s['n'])}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.14)
     d.rectangle([TX, y - 46, TX + 72, y - 43], fill=C["martyr"])
     for line in s["latin"]:
         d.text((TX, y), line, font=lat, fill=C["vellum"])

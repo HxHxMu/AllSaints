@@ -1,0 +1,644 @@
+[
+ {
+  "episode": {
+   "id": "2026-11-01",
+   "date": "2026-11-01",
+   "script": {
+    "saint": {
+     "name": "Saint Marcellus of Paris",
+     "display_name": "St. Marcellus of Paris",
+     "dates": "d. c. 436",
+     "region": "Lutetia (Paris), Roman Gaul",
+     "feast": "November 1",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "Tradition says a bishop of Paris turned the Seine's water into wine.",
+      "visual": "art",
+      "scene": "A devotional icon of a bishop in fifth-century vestments standing on the bank of a broad river. He raises his hand in blessing over a vessel of water, as townspeople in late Roman Gallic dress look on, with a small walled Roman town behind them.",
+      "art_hint": "Medieval illumination or painting of Saint Marcellus of Paris blessing; search: Saint Marcel Paris, Marcellus bishop Paris, Saint Marcel Seine"
+     },
+     {
+      "role": "who",
+      "text": "Saint Marcellus was born in Lutetia, Roman Gaul, the town we now call Paris, and died there in the fifth century.",
+      "visual": "map",
+      "lat": 48.8554,
+      "lon": 2.347,
+      "place": "Lutetia · Paris, France"
+     },
+     {
+      "role": "story",
+      "text": "He gave himself to virtue and to prayer. That is why he was recommended to Prudentius, the bishop of Paris. Prudentius ordained him a Reader.",
+      "visual": "art",
+      "scene": "A devotional icon of an older bishop in Roman-era liturgical dress laying a hand on a kneeling young man's head inside a plain Gallo-Roman basilica with round arches. A few clergy stand by, holding a book.",
+      "art_hint": "Ordination of a young cleric by a bishop, early medieval painting; search: Saint Marcel ordination, ordination clerc évêque enluminure, Saint Marcel Paris stained glass"
+     },
+     {
+      "role": "story",
+      "text": "Then he was raised to the priesthood. When Prudentius died, Marcellus became the ninth bishop of Paris.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus enthroned as bishop in a modest Gallo-Roman church, wearing a mitre-less bishop's vestments of the fifth century. Clergy and laity gather around him in a warm, candlelit interior.",
+      "art_hint": "Saint Marcel bishop of Paris enthroned or portrait; search: Saint Marcel évêque de Paris, Marcellus of Paris painting, Saint Marcel statue"
+     },
+     {
+      "role": "story",
+      "text": "His preaching brought many pagans to the faith. Tradition adds that Seine water became wine and balsam. According to legend, he faced a great serpent that terrified the town, laid his stole on it and led it away, commanding it never to return, a story told of Christianity's victory over evil. The Roman Martyrology keeps his feast on November 1; because that is All Saints' Day, Paris has also kept his memory on November 3.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus in bishop's vestments standing over a subdued dragon at the edge of a river outside the Roman town, one hand raised in blessing. Townspeople in Gallic dress watch from a distance.",
+      "art_hint": "Saint Marcel and the dragon, medieval art; search: Saint Marcel dragon, Saint Marcellus dragon Paris, Saint Marcel Notre-Dame sculpture"
+     },
+     {
+      "role": "turn",
+      "text": "Beyond the wonders, his story is one of prayer and preaching. A bell of Notre-Dame still bears his name. Quiet faithfulness is never forgotten by heaven.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus kneeling in prayer before an altar in a simple church, with the towers of a medieval Notre-Dame de Paris rising beyond the window and a great bell hanging in a tower.",
+      "art_hint": "Notre-Dame de Paris bells or Saint Marcel prayer; search: Notre-Dame de Paris bell, Saint Marcel Notre-Dame, Saint Marcel Paris painting"
+     },
+     {
+      "role": "close",
+      "text": "Saint Marcellus, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Marcellus": "mar-SEL-us",
+     "Lutetia": "loo-TEE-shuh",
+     "Prudentius": "proo-DEN-shus",
+     "Seine": "SEN"
+    },
+    "caption_hook": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.",
+    "summary": "Saint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.",
+    "hashtags": [
+     "#saintmarcellus",
+     "#saintmarcel",
+     "#marcellusofparis",
+     "#paris",
+     "#notredame",
+     "#lutetia",
+     "#romangaul",
+     "#france",
+     "#catholicsaints",
+     "#allsaints",
+     "#novemberfirst",
+     "#lesserknownsaints",
+     "#catholicreels"
+    ],
+    "claims": [
+     {
+      "claim": "Marcellus of Paris was the ninth bishop of Paris.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "A bell of Notre-Dame de Paris is named after him.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was born in Lutetia, now Paris, in Roman Gaul.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He died in Paris on 1 November; the year is uncertain (410 or 436).",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "His dedication to virtue and prayer led to his recommendation to Prudentius, bishop of Paris.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Prudentius ordained him a Reader.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was promoted to the priesthood and succeeded Prudentius after his death.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "His preaching led to the conversion of many pagans.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He is said to have turned water from the Seine into wine and balsam.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "He is said to have subdued a great serpent with his stole and led it away from the town.",
+      "source": 1,
+      "kind": "tradition"
+     },
+     {
+      "claim": "His feast is 1 November in the Roman Martyrology; Paris also celebrated him on 3 November.",
+      "source": 1,
+      "kind": "history"
+     }
+    ],
+    "story": [
+     "Saint Marcellus was the ninth bishop of Paris, which in his day was still the Roman town of Lutetia, on the Île de la Cité in Gaul. He lived at the turn of the fifth century, in the years when the old Roman world was growing unsteady. We know him less through documents than through memory. Even the year of his death is uncertain.",
+     "Tradition holds that he was born into a modest family near the Petit-Pont, not far from where Notre-Dame stands today. Some accounts name the rue de la Calandre. These details belong to later tradition, because no records from his own time survive to confirm his childhood, his ordinations or the length of his ministry. What the sources describe is his character. He gave himself to prayer and to the practice of virtue, and he was serious and studious, especially in theology. That drew the notice of Prudentius, then bishop of Paris, who gave him the order of Reader and made him his archdeacon.",
+     "When Prudentius died and the see fell vacant, the people acclaimed Marcellus as his successor. He became bishop in a hard season. Roman administration had almost vanished, shaken by invasions from beyond the frontier. The sources describe a bishop who stepped into the gap. He stood against armed bands and defended his people, and he is said to have drained the marshes along the Bièvre river. He stayed close to ordinary folk, most of whom were still pagan. Preaching brought many of them to the faith.",
+     "His biography was written about the year 570, roughly a century and a half later. The poet Venantius Fortunatus composed it at the request of Germanus, bishop of Paris, working from oral tradition. Fortunatus admitted the limits of what he had received: most of the saint's deeds, he wrote, had been stolen away by the jealousy of time. Yet he left a picture of a bishop who gave himself fully to his duties. He worked for the conversion of sinners, the teaching of the ignorant, the visiting of the sick and the help of prisoners, and he laboured to keep friendship among all the faithful.",
+     "The Life is filled with wonders. It tells of healings, of water changed into wine, and of a contact with red-hot iron. Some accounts place the water miracle at the Seine and add balsam. These stories show the kind of holiness the sixth century admired. They are not independent proof that the events occurred, and they should be read as tradition.",
+     "The most famous tradition concerns a great serpent. According to legend, a woman of poor reputation was buried with great ceremony, and a huge serpent from the Bièvre marsh came and devoured her body. The townspeople were terrified. Marcellus confronted the creature, laid his stole upon it like a halter, and led it out of the city, commanding it never to return. The sources say we cannot tell whether this happened, and the animal cannot be matched to any real species. The story reached far beyond the tale itself, however. It shaped the public image of their bishop: a pastor at the head of his people, freeing them from fear, with the evil he drove out shown as a serpent or dragon at his feet.",
+     "Tradition gives November 1 as the day of his death, but the year is unknown. Many books give 436, though others suggest 410, and neither date is certain. According to Nominis, he himself chose his burial place, on the left bank of the Seine, south of the ancient city beside the Roman road toward Lyon and Italy. Archaeology confirms a late Roman burial ground there, in what is now the faubourg Saint-Marcel, though it has not identified his tomb. His grave soon became a place of pilgrimage. Gregory of Tours speaks of a small chapel in the area, a sign of how early the devotion began. The faithful of Lutetia used to say, simply, \"We are going to Saint-Marcel.\"",
+     "In time the church over the tomb grew into a collegiate church, and a district took his name. Tradition holds that his relics were carried to the cathedral at the time of the Norman raids, though other accounts place the move in the tenth century. The French Revolution destroyed much of this heritage, including relics attributed to him. Yet his memory remained in the name of a Paris quarter, in medieval images of the bishop and the serpent, including those at Notre-Dame, and in a bell of the cathedral that bears his name. The Roman Martyrology keeps his feast on November 1. Because that day is All Saints, the Church in Paris has also honoured him on November 3. Parishioners count him with Saint Denis and Saint Geneviève among the protectors of ancient Paris. His holiness lay in unglamorous work: prayer, teaching, the care of the poor and sick, and the steady defence of his flock."
+    ],
+    "patronages": [
+     "Paris"
+    ],
+    "places": [
+     "Paris",
+     "Notre-Dame de Paris",
+     "Faubourg Saint-Marcel"
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Marcellus of Paris",
+     "url": "https://en.wikipedia.org/wiki/Marcellus_of_Paris"
+    },
+    {
+     "title": "Santi e Beati: Marcellus of Paris",
+     "url": "https://www.santiebeati.it/dettaglio/93122"
+    },
+    {
+     "title": "Nominis (Église catholique en France): Marcellus of Paris",
+     "url": "https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html"
+    },
+    {
+     "title": "Ökumenisches Heiligenlexikon: Marcellus of Paris",
+     "url": "https://www.heiligenlexikon.de/BiographienM/Marcellus.html"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ]
+  },
+  "caption": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Marcellus of Paris · Feast day: November 1\nSaint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.\n\nSaint Marcellus, pray for us. 🕯\n\nHad you ever heard of St. Marcellus of Paris before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmarcellus #saintmarcel"
+ },
+ {
+  "episode": {
+   "id": "2026-11-07",
+   "date": "2026-11-07",
+   "script": {
+    "saint": {
+     "name": "Saint Herculanus of Perugia",
+     "display_name": "St. Herculanus of Perugia",
+     "dates": "died 549",
+     "region": "Perugia, Umbria, Italy",
+     "feast": "November 7",
+     "martyr": true
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "Tradition says a bishop fed his city's last grain to a lamb.",
+      "visual": "art",
+      "scene": "A devotional icon of a bishop in sixth-century Italian vestments, kneeling beside a small white lamb and holding out the last of a nearly empty sack of grain, inside a stone hill town."
+     },
+     {
+      "role": "who",
+      "text": "Saint Herculanus was bishop of Perugia, in Umbria, in the sixth century. Today he is its patron saint.",
+      "visual": "map",
+      "lat": 43.1107,
+      "lon": 12.3908,
+      "place": "Perugia · Umbria · Italy"
+     },
+     {
+      "role": "story",
+      "text": "In the year five hundred forty-nine, the Ostrogoths under King Totila besieged Perugia.",
+      "visual": "art",
+      "scene": "An icon of a walled hill town in Umbria, with towers and stone gates, ringed by a Gothic army in sixth-century mail and round shields with banners and tents on the plain below."
+     },
+     {
+      "role": "story",
+      "text": "Tradition holds that Herculanus fed the last sack of grain to the last lamb. The Goths, he hoped, would think the city had food to spare.",
+      "visual": "art",
+      "scene": "An icon of the bishop on the city wall, gesturing toward a lamb eating grain from a sack while townspeople look on in sixth-century Italian tunics and cloaks and Gothic soldiers watch from beyond the walls."
+     },
+     {
+      "role": "story",
+      "text": "But Totila was not fooled. He took the city, and Herculanus was martyred.",
+      "visual": "art",
+      "scene": "An icon of the bishop in vestments standing calmly and with dignity inside the captured city's stone gate, with armed Gothic soldiers nearby and King Totila, crowned in Gothic dress, in the background."
+     },
+     {
+      "role": "story",
+      "text": "Pope Gregory the Great wrote of his martyrdom in his Dialogues. He writes that forty days later, the bishop's head was found miraculously reunited with his body.",
+      "visual": "art",
+      "scene": "An icon of the bishop lying on a funeral bier in vestments, his body whole and peaceful, with a halo and a ring of mourning Perugian clergy and townspeople holding candles in a stone church."
+     },
+     {
+      "role": "turn",
+      "text": "His plan failed, yet he spent their last grain hoping to save his people. Love like that is never wasted.",
+      "visual": "art",
+      "scene": "An icon of Saint Herculanus in bishop's vestments with a halo, holding a martyr's palm and a small lamb in his arms, the hill town of Perugia rising behind him."
+     },
+     {
+      "role": "close",
+      "text": "Saint Herculanus, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Herculanus": "Her-kyoo-LAY-nus",
+     "Perugia": "Peh-ROO-jah",
+     "Ostrogoths": "OSS-troh-goths",
+     "Totila": "TOT-ih-lah",
+     "Umbria": "UM-bree-ah"
+    },
+    "caption_hook": "When Perugia was under siege, tradition says its bishop fed the last grain to a lamb.",
+    "summary": "Saint Herculanus, bishop of Perugia, is said to have tried to save his besieged city by feeding its last grain to a lamb, and he died a martyr when King Totila took the city in 549.",
+    "youtube_title": "St. Herculanus: The Bishop Who Fed Grain to a Lamb",
+    "hashtags": [
+     "#saintherculanus",
+     "#perugia",
+     "#umbria",
+     "#patronsaintofperugia",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#martyr",
+     "#popegregorythegreat",
+     "#saintoftheday",
+     "#allsaints",
+     "#catholicreels",
+     "#italy"
+    ],
+    "share_cta": "Know someone from Perugia? Send them their patron saint.",
+    "claims": [
+     {
+      "claim": "Herculanus of Perugia died in 549 AD and was bishop of Perugia.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was canonized by the Catholic Church and is recognised as patron saint of Perugia.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "His main feast day is November 7; his second feast is March 1.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "According to Pope Gregory the Great in his Dialogues, Herculanus suffered martyrdom when Totila, king of the Ostrogoths, captured Perugia in 549.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Before the city was captured, Herculanus is said to have fed the last sack of grain to the last lamb.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "The lamb was meant to give the Ostrogoths the impression that the Perugians had food to spare and could withstand the siege.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "Totila was not fooled by the trick and captured the city just the same.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "Totila is said to have ordered a cruel death for Herculanus; the soldier charged with it took pity and beheaded him before it was completed.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "Gregory writes that forty days after his head was cut off, it was found miraculously reunited to his body.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "The inhabitants of the castle of Cisterna in Umbria, above the River Puglia, were under Perugian rule and obliged to send three pounds of wax to Perugia for the feast of Saint Herculanus.",
+      "source": 0,
+      "kind": "history"
+     }
+    ],
+    "patronages": [
+     "Perugia"
+    ],
+    "places": [
+     "Perugia",
+     "Umbria",
+     "Cisterna",
+     "Italy"
+    ],
+    "story": [
+     "Herculanus of Perugia, known in Italian as Ercolano, was a bishop who died in the year 549. His city, Perugia, sits in the region of Umbria, and it is still his city: the Catholic Church recognises him as a saint and as the patron saint of Perugia. His main feast is kept on November 7, and a second feast follows on March 1. He is not among the famous names of the calendar. There is no long biography to read, and nothing we can responsibly say about his childhood or his family. What survives is smaller, and in its way sturdier: the witness of a pope, and a city's long memory.",
+     "The witness is Pope Gregory the Great, who wrote about Herculanus in his Dialogues. According to Gregory, Herculanus suffered martyrdom when Totila, king of the Ostrogoths, captured Perugia in 549. That is the firm center of the story: a bishop, a besieged city, a conquering king, and a man who died a martyr. Everything else comes to us with the careful words the Church uses for what has been handed down: it is said, tradition holds.",
+     "Before the city fell, Herculanus is said to have tried to save it with a clever and tender plan. Tradition holds that he took the last sack of grain in Perugia and fed it to the last lamb. The purpose was to give the Ostrogoth forces the impression that the Perugians had food to spare, so much that they could pour their precious grain into a weak lamb. If the plan worked, the city would be able to withstand the siege. We can picture the scene without adding to it: a bishop beside a lamb, a nearly empty sack, and a whole city holding its breath.",
+     "It did not work. Totila was not fooled, and he captured the city just the same. Tradition holds that the king ordered a cruel death for the bishop, but that the soldier charged with carrying it out took pity on him and ended his life before the cruelty was finished. We will not dwell on the details. It is enough to say what the Church says: Herculanus died as a martyr, and the one man sent to harm him showed, in that moment, a little mercy.",
+     "Gregory adds one more thing. He writes that forty days after the head of Herculanus had been cut off, it was found miraculously reunited to his body. This is the pope's account, and it belongs to the tradition handed down about this bishop. Whatever we make of the detail, it speaks of a bishop remembered not as lost, but as kept.",
+     "His memory was carried in ordinary ways, too. The inhabitants of the castle of Cisterna in Umbria, above the River Puglia, were under Perugian rule, and they were obliged to send three pounds of wax to Perugia for the feast of Saint Herculanus. It is a small duty, the kind written down among the obligations of a village. But it shows how the feast of a bishop became part of the life of a wider countryside, reaching beyond the walls of the city he tried to save.",
+     "The plan of Herculanus failed. The lamb did not save Perugia, and the grain did not turn the king. Yet the Church does not remember him for the success of a plan. Tradition remembers a shepherd who is said to have spent the last of what his people had in the hope of keeping them safe, and who gave his life when that hope failed. Holiness is not always measured by what works. Sometimes it is measured by what we are willing to spend for others, and that kind of love, as the story of this forgotten bishop shows, is never wasted."
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Herculanus of Perugia",
+     "url": "https://en.wikipedia.org/wiki/Herculanus_of_Perugia"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ]
+  },
+  "caption": "When Perugia was under siege, tradition says its bishop fed the last grain to a lamb.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Herculanus of Perugia · Feast day: November 7\nSaint Herculanus, bishop of Perugia, is said to have tried to save his besieged city by feeding its last grain to a lamb, and he died a martyr when King Totila took the city in 549.\n\nSaint Herculanus, pray for us. 🕯\n\nSave this to pray with again next November 7.\n\n—\nSources: Wikipedia\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintherculanus #umbria"
+ },
+ {
+  "episode": {
+   "id": "2026-11-14",
+   "date": "2026-11-14",
+   "script": {
+    "saint": {
+     "name": "Saint Laurence O'Toole",
+     "display_name": "St. Laurence O'Toole",
+     "dates": "c. 1128 – 1180",
+     "region": "Dublin, Ireland",
+     "feast": "November 14",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "At ten years old, he was taken hostage by a king.",
+      "visual": "art",
+      "scene": "A young Irish boy in a plain tunic stands before a seated king in a timber hall with a thatched roof, surrounded by armed men in twelfth-century Irish cloaks, while the boy's family looks on from the doorway."
+     },
+     {
+      "role": "who",
+      "text": "Laurence O'Toole was born around eleven twenty-eight in Leinster, Ireland, a chieftain's son.",
+      "visual": "map",
+      "lat": 53.3498,
+      "lon": -6.2603,
+      "place": "Dublin · Ireland"
+     },
+     {
+      "role": "story",
+      "text": "He entered the monastic school at Glendalough and studied there thirteen years. Then the monks unanimously chose him as abbot.",
+      "visual": "art",
+      "scene": "A young monk in a dark habit stands among his brothers in the green Glendalough valley, with a tall stone round tower, a small stone church and wooded hills behind them, as the community gathers around him."
+     },
+     {
+      "role": "story",
+      "text": "The old Lives say that in a famine, he gave the monastery's goods to the hungry.",
+      "visual": "art",
+      "scene": "An abbot in a monastic habit stands at a monastery gate handing loaves from baskets to a crowd of thin, ragged men, women and children in medieval Irish dress, with stone monastery buildings behind him."
+     },
+     {
+      "role": "story",
+      "text": "In eleven sixty-two he became Archbishop of Dublin, the first Irishman in that see. Beneath his robes he wore a hair shirt. Each year he withdrew forty days to Saint Kevin's cave.",
+      "visual": "art",
+      "scene": "A bishop in a mitre and rich vestments, holding a crozier, stands in the Romanesque stone Christ Church cathedral of Dublin, with clergy in white around him and candlelight on the arches."
+     },
+     {
+      "role": "turn",
+      "text": "When King Henry the Second came, Laurence worked for peace between the kings. He followed Henry across the sea to plead for King Roderic. He died in Normandy in eleven eighty, far from home.",
+      "visual": "art",
+      "scene": "An aged bishop lies on a simple bed in a stone abbey infirmary in Normandy, while Augustinian canons in black habits kneel and tend him by candlelight."
+     },
+     {
+      "role": "close",
+      "text": "Peace is worth the long road. Saint Laurence O'Toole, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Glendalough": "GLEN-da-lock",
+     "Leinster": "LEN-ster",
+     "Roderic": "ROD-er-ick",
+     "Laurence": "LOR-ens"
+    },
+    "caption_hook": "A boy given up as a hostage grew into the shepherd of Dublin, and spent his last strength on peace.",
+    "summary": "Saint Laurence O'Toole, a twelfth-century Irish abbot and Archbishop of Dublin, was a hostage as a boy and later gave his life to reform, charity and peacemaking.",
+    "youtube_title": "St. Laurence O'Toole: Hostage Boy Turned Peacemaker",
+    "hashtags": [
+     "#saintlaurenceotoole",
+     "#dublin",
+     "#glendalough",
+     "#ireland",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#irishsaints",
+     "#saintoftheday",
+     "#catholic",
+     "#peacemaker",
+     "#novemberfourteenth",
+     "#allsaints"
+    ],
+    "share_cta": "Know someone named Laurence or Lawrence? Send them their saint.",
+    "claims": [
+     {
+      "claim": "As a boy of about ten he was taken as a hostage by Dermot McMurrogh, King of Leinster.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He was born about 1128 in what is now County Kildare, the son of a chieftain of Hy Murray, and his mother was of the O'Byrne clan.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He entered the monastic school at Glendalough and studied there for thirteen years.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "On the death of Abbot Dunlaing in early 1154, the community unanimously called him to be abbot.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Biographical Lives say that during a famine he gave away the monastery's goods to relieve the hungry.",
+      "source": 2,
+      "kind": "tradition"
+     },
+     {
+      "claim": "He was chosen Archbishop of Dublin after Gregory's death in 1161 and was consecrated early in 1162; he was a native-born Irishman, the first Irish-born archbishop of the see.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He wore a hair shirt under his episcopal dress and made an annual forty-day retreat to Saint Kevin's cave near Glendalough.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He converted the secular canons of Christ Church cathedral into Aroasian canons in 1163.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He worked to mediate between the Irish rulers and King Henry II of England, and took part in the Treaty of Windsor in 1175 on behalf of King Roderic of Connacht.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He attended the Third Lateran Council in 1179 and returned as papal legate for Ireland.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "In 1179 he crossed to England and then followed King Henry to Normandy to plead the cause of King Roderic.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He died on 14 November 1180 at Eu in Normandy, tended by Abbot Osbert and the canons.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "The Roman Martyrology commemorates him on 14 November as a bishop who promoted Church discipline and died while travelling to King Henry.",
+      "source": 2,
+      "kind": "history"
+     },
+     {
+      "claim": "Pope Honorius III canonized him in 1225.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "He is venerated as patron of the city and archdiocese of Dublin.",
+      "source": 2,
+      "kind": "history"
+     },
+     {
+      "claim": "According to one account, Dermot took him hostage after killing his grandfather, and he was released after his father captured twelve men of the king's retinue.",
+      "source": 3,
+      "kind": "tradition"
+     }
+    ],
+    "story": [
+     "Lorcán Ua Tuathail, known in English as Laurence O'Toole, was born around 1128 in what is now County Kildare, in the kingdom of Leinster. His father was a chieftain of Hy Murray, and his mother belonged to the O'Byrne clan. He was born into a noble family in a restless age, when Irish kings and lineages struggled for power.",
+     "When he was about ten, Dermot McMurrogh, King of Leinster, took him as a hostage. Hostages were a common feature of medieval Irish politics, a way of guaranteeing agreements between rival chiefs. One later account says the king had killed the boy's grandfather and that the boy was freed only after his father captured twelve men from the king's company. The details come mostly from the old biographical tradition, but the hostage childhood itself is part of every account.",
+     "In 1140 the boy obtained permission to enter the monastic school of Glendalough, in the Wicklow hills. The valley was a sanctuary, founded long before by Saint Kevin, a center of worship, teaching and monastic life. Laurence studied there for thirteen years and became known for his piety and learning. When Abbot Dunlaing died in early 1154, the community called him unanimously to take his place. He was still a young man.",
+     "The old Lives remember him as an abbot of both authority and charity. Tradition holds that during a famine he gave away the monastery's goods to feed the hungry. We cannot verify every detail of such stories, but they show what people remembered of him: a man who treated the goods of the Church as belonging to the poor. He declined the bishopric of Glendalough in 1160 out of humility.",
+     "In 1161 Gregory, Archbishop of Dublin, died, and Laurence was chosen to succeed him. He was consecrated early in 1162 at Christ Church cathedral by Gilla Isu, Primate of Armagh. He was the first native Irishman to hold the see. The city had been a Scandinavian port, and its bishops had looked to Canterbury. His appointment marked a new chapter. He set about reform, turning the canons of Christ Church into a community living under a common rule in 1163. He supported the foundation of All Hallows priory a few years later.",
+     "He did not ask of others what he would not do himself. Beneath his episcopal vestments he wore a hair shirt, and every year he retired for forty days to Saint Kevin's cave near Glendalough. The Lives also remember his care for the poor, the sick and children left without support. Any numbers handed down cannot be treated as figures from a register, but they speak of a bishop whose charity was well known.",
+     "His years in Dublin coincided with the Norman arrival. From 1169 warriors from the Anglo-Norman world came to Leinster, and Dublin was taken in 1170. Laurence was an Irish nobleman and also the shepherd of a contested city. Tradition says he tried to negotiate peace before the city fell and helped the victims afterward. When Henry II came to Ireland, Laurence treated him with due respect and worked as a go-between. He took part in the Treaty of Windsor in 1175, which sought to define the spheres of Henry and Roderic, King of Connacht. In 1178 he received Cardinal Vivian, the papal legate, at the Synod of Dublin. In 1179 he attended the Third Lateran Council, where he was named papal legate for Ireland.",
+     "His last journey was made for the sake of peace. Moved, as the Catholic Encyclopedia says, by burning charity for King Roderic's cause, he crossed to England in September 1179. He was detained for three weeks at Abingdon Abbey, then followed King Henry to Normandy. At the Augustinian abbey of Eu he fell ill. Abbot Osbert and the canons tended him, and he died there on 14 November 1180. The Roman Martyrology records that he died on the way to King Henry, still working to restore concord among princes.",
+     "Devotion grew at his tomb at Eu and in Ireland. Pope Honorius III canonized him in 1225, and his feast is kept on November 14. He is honored as patron of the city and archdiocese of Dublin."
+    ],
+    "patronages": [
+     "Dublin"
+    ],
+    "places": [
+     "Glendalough",
+     "Dublin",
+     "Leinster",
+     "Eu"
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Lorcán Ua Tuathail",
+     "url": "https://en.wikipedia.org/wiki/Lorc%C3%A1n_Ua_Tuathail"
+    },
+    {
+     "title": "Catholic Encyclopedia (1913): Lorcán Ua Tuathail",
+     "url": "https://www.newadvent.org/cathen/09091b.htm"
+    },
+    {
+     "title": "Santi e Beati: Lorcán Ua Tuathail",
+     "url": "https://www.santiebeati.it/dettaglio/90998"
+    },
+    {
+     "title": "Ökumenisches Heiligenlexikon: Lorcán Ua Tuathail",
+     "url": "https://www.heiligenlexikon.de/BiographienL/Laurentius_von_Dublin.html"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ]
+  },
+  "caption": "A boy given up as a hostage grew into the shepherd of Dublin, and spent his last strength on peace.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Laurence O'Toole · Feast day: November 14\nSaint Laurence O'Toole, a twelfth-century Irish abbot and Archbishop of Dublin, was a hostage as a boy and later gave his life to reform, charity and peacemaking.\n\nPeace is worth the long road. Saint Laurence O'Toole, pray for us. 🕯\n\nHad you ever heard of St. Laurence O'Toole before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintlaurenceotoole #dublin"
+ },
+ {
+  "episode": {
+   "id": "intro",
+   "date": "2026-10-28",
+   "script": {
+    "saint": {
+     "name": "All Saints",
+     "display_name": "All Saints",
+     "dates": "",
+     "region": "One saint · every feast day",
+     "feast": "",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "visual": "art",
+      "text": "Every day, the Church remembers a saint. Most of them, the world has forgotten.",
+      "scene": "A long procession of saints of every era and land (martyrs with palms, desert monks, nuns, bishops, missionaries from Africa, Asia, Europe and the Americas) walking toward Christ enthroned in glory."
+     },
+     {
+      "role": "who",
+      "visual": "map",
+      "lat": 30.0,
+      "lon": 25.0,
+      "place": "East · West",
+      "text": "Martyrs of Rome. Monks of the desert. Missionaries who crossed oceans and never came home."
+     },
+     {
+      "role": "story",
+      "visual": "art",
+      "text": "Each day here, one of them. A true story, told in a minute, on their feast day.",
+      "scene": "An old monk-scribe at a lectern by candlelight, illuminating a great open book of the lives of the saints, small painted saints visible on its pages."
+     },
+     {
+      "role": "story",
+      "visual": "art",
+      "text": "History where we know it. Tradition where we don't. Always with reverence.",
+      "scene": "Desert hermits in a rocky wilderness beside a small chapel, and far off on the sea a wooden mission ship under sail carrying friars to distant lands."
+     },
+     {
+      "role": "turn",
+      "visual": "art",
+      "text": "The saints the world forgot. Heaven didn't.",
+      "scene": "The court of Heaven: countless haloed saints gathered in rows on gold around the Lamb, rays of light descending, angels holding crowns."
+     },
+     {
+      "role": "close",
+      "visual": "close",
+      "text": "All Saints, pray for us."
+     }
+    ],
+    "pronunciations": {},
+    "caption_hook": "Welcome to All Saints. ✝",
+    "summary": "",
+    "hashtags": [
+     "#catholic",
+     "#saints",
+     "#saintoftheday",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#feastday",
+     "#catholicfaith",
+     "#byzantineicon",
+     "#iconography",
+     "#prayforus",
+     "#allsaints"
+    ]
+   },
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ]
+  },
+  "caption": "Welcome to All Saints. ✝\n✝ A forgotten saint, every morning. Follow along.\n\nAll Saints · Feast day: \n\n\nAll Saints, pray for us. 🕯\n\nHad you ever heard of All Saints before today?\n\n—\nSources: \nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #catholic #saints"
+ }
+]

@@ -12,6 +12,7 @@ config "compilation_from" (YYYY-MM) is the first month made.
 import json, subprocess, datetime as dt
 from pathlib import Path
 from common import BRAND, ROOT, STATE, WORK, load_config, load_episodes, log, tz
+from cards import duration, font as _font, monogram as _monogram, roman, tracked as _tracked, width as _width, wrap as _wrap
 
 W, H = 1920, 1080
 VW = 608                      # the vertical Short scaled to full height (1080 × 9/16)
@@ -20,17 +21,6 @@ PANEL = VX - 2 * 72           # text width of the left panel
 CARD_S = 6                    # title / end card length
 DIR = STATE / "compilations"
 C = BRAND["colors"]
-ROMAN = [(10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
-
-
-def roman(n):
-    out = ""
-    for v, r in ROMAN:
-        while n >= v:
-            out, n = out + r, n - v
-    return out
-
-
 def load(month):
     p = DIR / f"{month}.json"
     return json.loads(p.read_text()) if p.exists() else None
@@ -80,31 +70,8 @@ def _backdrop(art):
     return Image.blend(im, Image.new("RGB", (W, H), C["soot"]), 0.72)
 
 
-def _monogram(d, x, y, size, fill):
-    from playlist_cover import _font, _tracked
-    f = _font("Cinzel-SemiBold.ttf", size)
-    x += _tracked(d, (x, y), "A.S.", f, fill, tracking=0.04) + size * 0.15
-    top, bottom = y + f.getbbox("A")[1] - size * 0.12, y + f.getbbox("A")[3] + size * 0.12
-    stem, arm = max(2, size // 18), size * 0.45
-    d.rectangle([x + (arm - stem) / 2, top, x + (arm + stem) / 2, bottom], fill=fill)  # Cinzel has no dagger
-    bar = top + (bottom - top) * 0.3
-    d.rectangle([x, bar, x + arm, bar + stem], fill=fill)
-
-
-def _wrap(d, text, font, width, tracking=0.02):
-    from playlist_cover import _width
-    lines = []
-    for word in text.split():
-        if lines and _width(d, f"{lines[-1]} {word}", font, tracking) <= width:
-            lines[-1] += f" {word}"
-        else:
-            lines.append(word)
-    return lines
-
-
 def saint_frame(ep, art, out):
     from PIL import ImageDraw
-    from playlist_cover import _font, _tracked
     s = ep["script"]["saint"]
     img = _backdrop(art)
     d = ImageDraw.Draw(img)
@@ -134,7 +101,6 @@ def saint_frame(ep, art, out):
 
 def title_frame(month, eps, art, out, end=False):
     from PIL import ImageDraw
-    from playlist_cover import _font, _tracked, _width
     img = _backdrop(art)
     d = ImageDraw.Draw(img)
 
@@ -163,7 +129,6 @@ def title_frame(month, eps, art, out, end=False):
 def thumbnail(month, arts, out):
     """1280×720: up to five icons side by side, soot rising from the bottom, the month in big Cinzel."""
     from PIL import Image, ImageDraw
-    from playlist_cover import _font, _tracked, _width
     TW, TH = 1280, 720
     img = Image.new("RGB", (TW, TH), C["soot"])
     picks = arts[:: max(1, len(arts) // 5)][:5] or arts[:1]
@@ -199,11 +164,6 @@ ENC = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-r", "30", "-pix
 
 def _ff(*args):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *args], check=True)
-
-
-def duration(p):
-    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
-                                capture_output=True, text=True, check=True).stdout.strip())
 
 
 def card_clip(png, out, start=0.0):

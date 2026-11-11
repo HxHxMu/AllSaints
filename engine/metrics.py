@@ -20,7 +20,7 @@ Run: `pipeline.py metrics` (posts) or `pipeline.py metrics --out work/metrics.js
 """
 import datetime as dt, json, urllib.parse
 from common import env, http, load_config, load_episodes, log, today, tz
-from pipeline import GEMINI_PER_EPISODE, call_cost
+from costs import GEMINI_PER_EPISODE, call_cost
 
 INGEST_URL = "https://allholysaints.com/api/dash-ingest"
 YT_API = "https://www.googleapis.com/youtube/v3"

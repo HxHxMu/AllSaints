@@ -169,3 +169,10 @@ def publish_carousel(caption, image_urls):
     if not ok:
         raise RuntimeError(f"Carousel not ready: {st}")
     return _publish(r.json()["id"], tok)
+
+
+def media_info(media_id):
+    """`pipeline.py ig-media <id>`: what Instagram holds for a media id. Returns (HTTP status, body excerpt)."""
+    r = http.get(f"{GRAPH}/{media_id}", timeout=30, params={"access_token": get_token(),
+                 "fields": "media_type,media_product_type,timestamp,permalink,thumbnail_url"})
+    return r.status_code, r.text[:600]

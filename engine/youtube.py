@@ -51,7 +51,7 @@ def build_description(ep):
     prayer = next((b["text"] for b in s["beats"] if b["role"] == "close"), f"{saint['name']}, pray for us.")
     srcs = "\n".join(f"• {urllib.parse.unquote(x['title'])}: {x['url']}" if x.get("url") else f"• {urllib.parse.unquote(x['title'])}" for x in ep.get("sources", []))
     credits = "; ".join(dict.fromkeys(ep.get("art_credits", []))) or "public domain"
-    from pipeline import saint_tags, CAP
+    from captions import saint_tags, CAP
     tags = " ".join(dict.fromkeys(saint_tags(s, 1) + CAP["hashtags_base"]))  # YouTube shows the first 3 above the title
     share = (s.get("share_cta") or "").strip()
     yt = BRAND.get("youtube", {})

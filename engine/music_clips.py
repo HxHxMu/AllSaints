@@ -14,8 +14,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 from common import BRAND, ROOT
-from playlist_cover import _font, _tracked
-from compilation import _monogram
+from cards import font as _font, monogram as _monogram, roman, tracked as _tracked
 
 VW, VH = 1080, 1920
 VX = 72                     # text margin
@@ -26,7 +25,6 @@ FADE = 0.8
 INTRO = 4.0                 # opening card, then "under"
 ZOOM = 0.10                 # push-in over the whole clip
 C = BRAND["colors"]
-ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
 
 def loudest(audio, at, length, clip, sr=8000):
@@ -56,7 +54,7 @@ def base(spec, track):
     img.putalpha(fade)
     d = ImageDraw.Draw(img)
     _tracked(d, (VX, ART + 10), f"{spec['album']} · {spec['volume']}".upper(), _font("Cinzel-Regular.ttf", 32), C["gilt"], 0.14)
-    _tracked(d, (VX - 3, ART + 62), f"{ROMAN[track['n']]}. {track['title']}".upper(), _font("Cinzel-SemiBold.ttf", 72), C["vellum"], 0.04)
+    _tracked(d, (VX - 3, ART + 62), f"{roman(track['n'])}. {track['title']}".upper(), _font("Cinzel-SemiBold.ttf", 72), C["vellum"], 0.04)
     d.rectangle([VX, ART + 170, VX + 90, ART + 174], fill=C["martyr"])
     return img
 
