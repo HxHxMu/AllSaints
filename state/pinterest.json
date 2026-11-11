@@ -1,4 +1,11 @@
 {
-  "_note": "Pinterest board feeds already connected (or announced to Luis by Telegram); pipeline.pinterest_boards announces the rest when their first saint publishes.",
-  "announced": ["october", "november", "europe", "africa", "middle-east"]
+ "_note": "Pinterest board feeds already connected (or announced to Luis by Telegram); pipeline.pinterest_boards announces the rest when their first saint publishes.",
+ "announced": [
+  "october",
+  "november",
+  "europe",
+  "africa",
+  "middle-east",
+  "asia"
+ ]
 }
