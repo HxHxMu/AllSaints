@@ -28,8 +28,9 @@ const jsonld = {
   datePublished: saint.date,
   image: saint.cover ? [saint.cover] : undefined,
   url,
-  author: { "@type": "Organization", name: "All Saints", url: "https://allholysaints.com/" },
-  publisher: { "@type": "Organization", name: "All Saints" },
+  // the site-wide Organization (Base.astro), by its @id
+  author: { "@type": "Organization", "@id": "https://allholysaints.com/#organization", name: "All Holy Saints", url: "https://allholysaints.com/" },
+  publisher: { "@type": "Organization", "@id": "https://allholysaints.com/#organization", name: "All Holy Saints", logo: "https://allholysaints.com/logo.jpg" },
   about: { "@type": "Person", name: saint.name, description: [saint.dates, saint.region].filter(Boolean).join(", "),
     sameAs: saint.sameAs.length ? saint.sameAs : undefined },
   ...(saint.youtubeId && {

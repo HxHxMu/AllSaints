@@ -29,8 +29,10 @@ const other: Lang = lang === "en" ? "es" : "en";
 const hasEs = lang === "es" || saintsIn("es").length > 0;  // no ES switch until the first translation exists
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // who publishes the site and where else it lives: Google uses sameAs to tie the accounts to allholysaints.com
-const org = { "@context": "https://schema.org", "@type": "Organization", name: "All Saints", alternateName: "A.S.†",
-  url: "https://allholysaints.com/", logo: new URL("/apple-touch-icon.png", Astro.site).href, email: "hello@allholysaints.com",
+// named as the handles are (All Holy Saints): "All Saints" alone is a feast, many churches and a band, so search can't place it
+const org = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://allholysaints.com/#organization",
+  name: "All Holy Saints", alternateName: ["All Saints", "A.S.†"],
+  url: "https://allholysaints.com/", logo: new URL("/logo.jpg", Astro.site).href, email: "hello@allholysaints.com",
   sameAs: SOCIALS.map((s) => s.href) };
 // link previews: a page's own share card (scripts/share-cards.mjs, 1200×630), else the channel's
 const card = new URL(image || "/og/default.jpg", Astro.site).href;
