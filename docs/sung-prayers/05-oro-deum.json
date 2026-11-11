@@ -1,0 +1,162 @@
+{
+  "_note": "Spec for engine/sung_video.py. Times in seconds of work/sung/05/audio.wav, from a prompted faster-whisper pass (language la), 2026-11-11. Latin: N. J. D. White 1918, as printed; English: White 1920. audio.wav is the export trimmed at 354 s with a 4 s fade (audio-full.wav is the original; its last 14 s restart the prayer and fade mid-sentence). Text must match 05-oro-deum.md exactly.",
+  "dir": "work/sung/05",
+  "audio": "audio.wav",
+  "art": "art.jpg",
+  "art_crop": [
+    220,
+    110,
+    1279,
+    1440
+  ],
+  "title": "Oro Deum",
+  "title_en": "A Prayer for Perseverance",
+  "byline": "From the Confession of St. Patrick",
+  "dates": "5th century",
+  "cards": [
+    [
+      0,
+      14.5
+    ],
+    [
+      121,
+      145.5
+    ],
+    [
+      194,
+      262
+    ]
+  ],
+  "stanzas": [
+    {
+      "n": 1,
+      "at": 16.0,
+      "latin": [
+        "Unde autem retribuam illi",
+        "pro omnibus quae retribuit mihi."
+      ],
+      "english": [
+        "Wherefore then, I shall render unto him",
+        "for all his benefits towards me."
+      ],
+      "until": 36.5
+    },
+    {
+      "n": 2,
+      "at": 38.6,
+      "latin": [
+        "Sed quid dicam uel quid promittam",
+        "Domino meo?",
+        "Quia nihil ualeo",
+        "nisi ipse mihi dederit."
+      ],
+      "english": [
+        "But what shall I say, or what shall I promise to my Lord?",
+        "For I am only worth what he himself has given to me."
+      ],
+      "until": 62.0
+    },
+    {
+      "n": 3,
+      "at": 86.8,
+      "latin": [
+        "Oro Deum ut det mihi perseuerantiam,",
+        "et dignetur ut reddam illi",
+        "testimonium fidele",
+        "usque ad transitum meum",
+        "propter Deum meum."
+      ],
+      "english": [
+        "I pray God to give me perseverance,",
+        "and to vouchsafe that I bear to him faithful witness,",
+        "until my passing hence, for the sake of my God."
+      ],
+      "until": 118.5
+    },
+    {
+      "n": 3,
+      "at": 147.8,
+      "latin": [
+        "Oro Deum ut det mihi perseuerantiam,",
+        "et dignetur ut reddam illi",
+        "testimonium fidele",
+        "usque ad transitum meum",
+        "propter Deum meum."
+      ],
+      "english": [
+        "I pray God to give me perseverance,",
+        "and to vouchsafe that I bear to him faithful witness,",
+        "until my passing hence, for the sake of my God."
+      ],
+      "until": 191.5
+    },
+    {
+      "n": 1,
+      "at": 265.8,
+      "latin": [
+        "Unde autem retribuam illi",
+        "pro omnibus quae retribuit mihi."
+      ],
+      "english": [
+        "Wherefore then, I shall render unto him",
+        "for all his benefits towards me."
+      ]
+    },
+    {
+      "n": 2,
+      "at": 281.2,
+      "latin": [
+        "Sed quid dicam uel quid promittam",
+        "Domino meo?",
+        "Quia nihil ualeo",
+        "nisi ipse mihi dederit."
+      ],
+      "english": [
+        "But what shall I say, or what shall I promise to my Lord?",
+        "For I am only worth what he himself has given to me."
+      ],
+      "until": 300.5
+    },
+    {
+      "n": 3,
+      "at": 303.0,
+      "latin": [
+        "Oro Deum ut det mihi perseuerantiam,",
+        "et dignetur ut reddam illi",
+        "testimonium fidele",
+        "usque ad transitum meum",
+        "propter Deum meum."
+      ],
+      "english": [
+        "I pray God to give me perseverance,",
+        "and to vouchsafe that I bear to him faithful witness,",
+        "until my passing hence, for the sake of my God."
+      ],
+      "until": 334.5
+    }
+  ],
+  "credits_at": 337,
+  "credits": [
+    [
+      "Words",
+      "St. Patrick (5th century)"
+    ],
+    [
+      "English",
+      "N. J. D. White (1920)"
+    ],
+    [
+      "Music",
+      "Luis E. Bonilla"
+    ]
+  ],
+  "closing": "Saint Patrick, pray for us.",
+  "youtube": {
+    "id": "IbmwJHNl9_U",
+    "url": "https://youtu.be/IbmwJHNl9_U",
+    "privacy": "private",
+    "uploaded": "2026-11-11",
+    "category": "10 (Music)",
+    "publish_at": "2027-03-17T07:30 America/New_York (YouTube scheduled)"
+  }
+}

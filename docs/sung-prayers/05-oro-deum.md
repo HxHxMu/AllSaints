@@ -1,7 +1,7 @@
 # 05 · Oro Deum (A Prayer for Perseverance) — St. Patrick
 
 **Lyric master** · release 5 · planned **Wednesday, Mar 17, 2027** (his feast; Lent week 4)
-Status: **draft sheet** (2026-11-11). Text taken from the two sources below; lock by **Feb 17** after a page-image check of both.
+Status: **draft sheet** (2026-11-11). Text taken from the two sources below; lock by **Feb 17** after a page-image check of both. Music done 2026-11-11 (Suno + Luis); lyric video rendered (`work/sung/05/05-oro-deum.mp4`, 5:54, export trimmed at 354 s) from [05-oro-deum.json](05-oro-deum.json); uploaded private, scheduled Mar 17 7:30 ET (IbmwJHNl9_U).
 
 | | |
 |---|---|
