@@ -1,0 +1,107 @@
+---
+// One day of the year: the saints All Saints told on this date (litany rows to their pages), then the
+// other Catholic saints of the feast as plain lines (name to Wikipedia, the Catholic source beside it).
+import Base from "../layouts/Base.astro";
+import { roman, monthName, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+import { day, dayLabel, daySlug, lifespan, wiki } from "../lib/feasts";
+
+interface Props { dayKey: string; lang: Lang }
+const { dayKey, lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+const d = day(dayKey, lang);
+const label = dayLabel(dayKey, lang);
+const name = (f: (typeof d.others)[number]) => (lang === "es" ? f.name_es : f.name);
+const desc = (f: (typeof d.others)[number]) => (lang === "es" ? f.desc_es : f.desc);
+const line = (h: string) => h.length > 90 ? h.slice(0, 88).replace(/\s+\S*$/, "") + "…" : h;
+const names = [...d.ours.map((s) => s.name), ...d.others.map(name)];
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const jsonld = {
+  "@context": "https://schema.org", "@type": "CollectionPage", inLanguage: lang, name: T.daySaints(label), url,
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: [
+      ...d.ours.map((s) => ({ "@type": "Person", name: s.name, url: new URL(P.saint(s.slug), Astro.site).href, sameAs: s.sameAs.length ? s.sameAs : undefined })),
+      ...d.others.map((f) => ({ "@type": "Person", name: name(f), sameAs: [`https://www.wikidata.org/wiki/${f.qid}`, wiki(f, lang)].filter(Boolean) })),
+    ].map((item, i) => ({ "@type": "ListItem", position: i + 1, item })),
+  },
+};
+---
+<Base title={T.dayTitle(label)} description={T.dayDesc(label, names.slice(0, 8).join(", "))} jsonld={jsonld} current="calendar" lang={lang}
+      alt={lang === "en" ? paths.es.day(daySlug(dayKey, "es")) : paths.en.day(daySlug(dayKey, "en"))}>
+  <div class="wrap dayp">
+    <p class="label crumb"><a href={P.calendar}>{T.litany}</a></p>
+    <p class="numeral date">{roman(Number(dayKey.slice(3)))} · {monthName(`2024-${dayKey}`, lang)}</p>
+    <h1 class="title">{T.daySaints(label)}</h1>
+
+    {d.ours.length > 0 && (
+      <section>
+        <h2 class="label">{T.dayOurs}</h2>
+        <ol class="ours">
+          {d.ours.map((s) => (
+            <li>
+              <a href={P.saint(s.slug)}>
+                <span class="numeral d">{s.date.slice(0, 4)}</span>
+                <span class="n">{s.display}<span class="l devotional">{line(s.hook)}</span></span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {d.others.length > 0 && (
+      <section>
+        <h2 class="label">{T.dayOthers}</h2>
+        <ul class="others">
+          {d.others.map((f) => {
+            const w = wiki(f, lang), life = lifespan(f, lang);
+            return (
+              <li>
+                {w ? <a class="n" href={w}>{name(f)}</a> : <span class="n">{name(f)}</span>}
+                <span class="m muted">
+                  {life && <span class="numeral plain">{life}</span>}
+                  {life && desc(f) && " · "}
+                  {desc(f)}
+                  {" · "}<a class="src" href={f.ref.url}>{f.ref.title}</a>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+
+    <p class="note muted">{T.dayNote}</p>
+
+    <nav class="pager" aria-label={T.otherDays}>
+      <a href={P.day(daySlug(d.prev, lang))}><span class="label">‹ {dayLabel(d.prev, lang)}</span></a>
+      <a class="r" href={P.day(daySlug(d.next, lang))}><span class="label">{dayLabel(d.next, lang)} ›</span></a>
+    </nav>
+  </div>
+</Base>
+
+<style>
+  .dayp { max-width: 46rem; padding-top: 8px; }
+  .crumb a { color: var(--ash); }
+  .date { margin: 14px 0 0; font-size: 1.1875rem; }
+  .title { font-family: var(--display); font-weight: 600; letter-spacing: .06em; font-size: 1.75rem; line-height: 1.2; margin: 6px 0 12px; }
+  section h2 { color: var(--gilt); font-weight: 400; margin: 32px 0 4px; letter-spacing: .08em; }
+  ol, ul { list-style: none; margin: 0; padding: 0; }
+  .ours a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--divider); text-decoration: none; color: var(--vellum); }
+  .ours a:hover .n { color: var(--gilt-light); }
+  .d { font-size: 1.1875rem; }
+  .n { font-size: 1.25rem; line-height: 1.25; }
+  .l { display: block; font-size: 1.125rem; color: var(--ash); margin-top: 2px; }
+  .others li { padding: 12px 0; border-bottom: 1px solid var(--divider); }
+  .others .n { display: block; color: var(--vellum); text-decoration-color: var(--rule); }
+  .others a.n:hover { color: var(--gilt-light); }
+  .m { display: block; font-size: 1.0625rem; margin-top: 2px; }
+  .m .plain { color: inherit; }
+  .src { color: inherit; text-decoration-color: var(--rule); display: inline-block; padding: 10px 0; margin: -10px 0; }
+  .src:hover { color: var(--gilt-light); }
+  .note { font-size: 1rem; margin-top: 28px; }
+  .pager { display: flex; justify-content: space-between; gap: 16px; margin: 32px 0 8px; }
+  .pager a { color: var(--ash); text-decoration: none; padding: 12px 0; }
+  .pager a:hover .label { color: var(--vellum); }
+</style>

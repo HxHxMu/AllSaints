@@ -198,6 +198,8 @@ def main():
     elif a.cmd == "build-calendar":
         import calendar_build
         calendar_build.main()
+        import feasts_build  # the website's day pages read it
+        feasts_build.main()
     elif a.cmd == "ig-media":
         import instagram
         print(*instagram.media_info(a.media_id))

@@ -5,9 +5,9 @@ import brand from "../../../brand/brand.json";
 
 export const paths = {
   en: { home: "/", calendar: "/calendar/", saint: (slug: string) => `/saints/${slug}/`,
-        patrons: "/patrons/", patron: (slug: string) => `/patrons/${slug}/`, places: "/places/", place: (slug: string) => `/places/${slug}/`, about: "/about/" },
+        patrons: "/patrons/", patron: (slug: string) => `/patrons/${slug}/`, places: "/places/", place: (slug: string) => `/places/${slug}/`, about: "/about/", day: (slug: string) => `/calendar/${slug}/`, today: "/today/" },
   es: { home: "/es/", calendar: "/es/calendario/", saint: (slug: string) => `/es/santos/${slug}/`,
-        patrons: "/es/patronos/", patron: (slug: string) => `/es/patronos/${slug}/`, places: "/es/lugares/", place: (slug: string) => `/es/lugares/${slug}/`, about: "/es/acerca/" },
+        patrons: "/es/patronos/", patron: (slug: string) => `/es/patronos/${slug}/`, places: "/es/lugares/", place: (slug: string) => `/es/lugares/${slug}/`, about: "/es/acerca/", day: (slug: string) => `/es/calendario/${slug}/`, today: "/es/hoy/" },
 };
 
 export const t = {
@@ -33,6 +33,11 @@ export const t = {
     about: "About", music: "Music", library: "Library", privacy: "Privacy", terms: "Terms", skip: "Skip to content", homeLabel: "All Saints, home",
     tagline: (brand as any).tagline as string,
     bandLine: "A week of saints, in one quiet email.", bandEmail: "Your email", bandButton: "Subscribe",
+    daySaints: (d: string) => `Saints of ${d}`, dayTitle: (d: string) => `Saints of ${d} · Catholic Feast Days`,
+    dayDesc: (d: string, names: string) => `Catholic saints whose feast day is ${d}: ${names}.`,
+    dayOurs: "Told by All Saints", dayOthers: "Also remembered on this day", dayYear: (y: string) => `The story, ${y}`,
+    dayNote: "Feast days from the Church's calendars as recorded on Wikidata, each saint checked against a Catholic hagiography (Santi e Beati, the Dicastery for the Causes of Saints or Nominis). Only the saints told by All Saints have a checked story here; a local calendar may keep a saint on another day.",
+    yearDays: "Every day of the year", today: "Today's saints", todayGo: "Going to today's saints…",
     bandFine: "Sundays. Confirm by email; unsubscribe anytime.", bandError: "That didn't go through. Check the address and try again.",
   },
   es: {
@@ -57,6 +62,11 @@ export const t = {
     about: "Acerca de", music: "Música", library: "Biblioteca", privacy: "Privacidad", terms: "Términos", skip: "Ir al contenido", homeLabel: "All Saints, inicio",
     tagline: (brand as any).site_es.tagline as string,
     bandLine: "Una semana de santos, en un correo tranquilo.", bandEmail: "Tu correo", bandButton: "Suscribirme",
+    daySaints: (d: string) => `Santos del ${d}`, dayTitle: (d: string) => `Santos del ${d} · Santoral católico`,
+    dayDesc: (d: string, names: string) => `Santos católicos cuya fiesta es el ${d}: ${names}.`,
+    dayOurs: "Contados por All Saints", dayOthers: "También se recuerdan este día", dayYear: (y: string) => `La historia, ${y}`,
+    dayNote: "Fiestas de los calendarios de la Iglesia tal como figuran en Wikidata; cada santo se comprobó en un santoral católico (Santi e Beati, el Dicasterio de las Causas de los Santos o Nominis). Solo los santos contados por All Saints tienen aquí una historia verificada; un calendario local puede celebrar a un santo otro día.",
+    yearDays: "Todos los días del año", today: "Los santos de hoy", todayGo: "Abriendo los santos de hoy…",
     bandFine: "Los domingos. Confirma por correo; puedes darte de baja cuando quieras.", bandError: "No se pudo completar. Revisa el correo e inténtalo de nuevo.",
   },
 } satisfies Record<Lang, Record<string, unknown>>;

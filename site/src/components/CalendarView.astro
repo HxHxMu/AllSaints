@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import { saintsIn, roman, monthName, type Lang } from "../lib/episodes";
 import { paths, t } from "../lib/i18n";
 import { topics } from "../lib/topics";
+import { days, daySlug } from "../lib/feasts";
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -16,19 +17,21 @@ for (const s of rows) {
   months.at(-1)!.items.push(s);
 }
 const hasPatrons = topics(lang, "patron").length > 0, hasPlaces = topics(lang, "place").length > 0;
+// every day of the year, by month, for the day pages
+const year = Array.from({ length: 12 }, (_, i) => days.filter((k) => Number(k.slice(0, 2)) === i + 1));
 const line = (s: (typeof rows)[number]) => s.hook.length > 90 ? s.hook.slice(0, 88).replace(/\s+\S*$/, "") + "…" : s.hook;
 ---
 <Base title={T.litany} description={T.litanyDesc} current="calendar" lang={lang} alt={lang === "en" ? paths.es.calendar : paths.en.calendar}>
   <div class="wrap litany">
     <p class="label">{T.litanyKicker}</p>
     <h1 class="title">{T.litany}</h1>
-    {(hasPatrons || hasPlaces) && (
-      <p class="label browse">
-        {hasPatrons && <a href={P.patrons}>{T.byPatron}</a>}
-        {hasPatrons && hasPlaces && <span aria-hidden="true"> · </span>}
-        {hasPlaces && <a href={P.places}>{T.byPlace}</a>}
-      </p>
-    )}
+    <p class="label browse">
+      <a href={P.today}>{T.today}</a>
+      {(hasPatrons || hasPlaces) && <span aria-hidden="true"> · </span>}
+      {hasPatrons && <a href={P.patrons}>{T.byPatron}</a>}
+      {hasPatrons && hasPlaces && <span aria-hidden="true"> · </span>}
+      {hasPlaces && <a href={P.places}>{T.byPlace}</a>}
+    </p>
     <label class="search">
       <span class="visually-hidden">{T.findLabel}</span>
       <input type="search" placeholder={T.find} autocomplete="off" data-filter>
@@ -50,6 +53,15 @@ const line = (s: (typeof rows)[number]) => s.hook.length > 90 ? s.hook.slice(0, 
     ))}
     <p class="none muted" hidden data-none>{T.none}</p>
     <p class="visually-hidden" role="status" data-count></p>
+    <section class="year" aria-labelledby="year-h">
+      <h2 class="label" id="year-h">{T.yearDays}</h2>
+      {year.map((keys) => (
+        <div class="ym">
+          <h3 class="label">{monthName(`2024-${keys[0]}`, lang)}</h3>
+          <p>{keys.map((k) => <a class="numeral" href={P.day(daySlug(k, lang))} aria-label={`${monthName(`2024-${k}`, lang)} ${Number(k.slice(3))}`}>{Number(k.slice(3))}</a>)}</p>
+        </div>
+      ))}
+    </section>
   </div>
 </Base>
 
@@ -102,4 +114,11 @@ const line = (s: (typeof rows)[number]) => s.hook.length > 90 ? s.hook.slice(0, 
   .browse { margin-top: 6px; }
   .browse a { color: var(--ash); display: inline-block; padding: 11px 0; margin: -11px 0; }
   .browse a:hover { color: var(--vellum); }
+  .year { margin-top: 56px; }
+  .year > h2 { color: var(--gilt); font-weight: 400; letter-spacing: .08em; margin: 0 0 4px; }
+  .ym { padding: 10px 0; border-bottom: 1px solid var(--divider); }
+  .ym h3 { font-weight: 400; margin: 0 0 2px; color: var(--vellum); }
+  .ym p { display: flex; flex-wrap: wrap; margin: 0; }
+  .ym a { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; text-decoration: none; font-size: 1.125rem; }
+  .ym a:hover { color: var(--gilt-light); }
 </style>

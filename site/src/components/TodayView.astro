@@ -1,0 +1,25 @@
+---
+// /today/ and /es/hoy/: a static page that sends the visitor to today's day page (New York time, like the
+// daily post). Without JavaScript it is a link to the calendar.
+import Base from "../layouts/Base.astro";
+import { monthName, type Lang } from "../lib/episodes";
+import { paths, t } from "../lib/i18n";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const T = t[lang], P = paths[lang];
+const months = Array.from({ length: 12 }, (_, i) => monthName(`2024-${String(i + 1).padStart(2, "0")}-01`, lang));
+const base = lang === "es" ? "/es/calendario/" : "/calendar/";
+---
+<Base title={T.today} description={T.homeDesc} current="calendar" lang={lang} alt={lang === "en" ? paths.es.today : paths.en.today} noindex>
+  <div class="wrap">
+    <p class="muted" data-go>{T.todayGo}</p>
+    <p><a href={P.calendar}>{T.litany}</a></p>
+  </div>
+  <script is:inline define:vars={{ months, base, es: lang === "es" }}>
+    const [m, d] = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", month: "numeric", day: "numeric" })
+      .format(new Date()).split("/").map(Number);
+    const name = months[m - 1];
+    location.replace(base + (es ? `${d}-de-${name}` : `${name.toLowerCase()}-${d}`) + "/");
+  </script>
+</Base>

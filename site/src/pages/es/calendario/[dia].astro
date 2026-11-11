@@ -1,0 +1,9 @@
+---
+import DayView from "../../../components/DayView.astro";
+import { days, daySlug } from "../../../lib/feasts";
+
+export function getStaticPaths() {
+  return days.map((key) => ({ params: { dia: daySlug(key, "es") }, props: { key } }));
+}
+---
+<DayView dayKey={Astro.props.key} lang="es" />

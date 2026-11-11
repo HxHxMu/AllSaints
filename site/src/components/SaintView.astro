@@ -7,6 +7,7 @@ import { paths, t } from "../lib/i18n";
 import { booksFor } from "../lib/books";
 import BookShelf from "./BookShelf.astro";
 import { topicSlug } from "../lib/topics";
+import { daySlug } from "../lib/feasts";
 
 interface Props { saint: Saint; lang: Lang }
 const { saint, lang } = Astro.props;
@@ -104,7 +105,7 @@ const jsonld = {
         {next ? <a class="r" href={P.saint(next.slug)}><span class="label">{day(next.date)} ›</span><b>{next.display}</b></a>
               : <a class="r" href={P.calendar}><span class="label">{T.allSaints}</span><b>{T.theCalendar}</b></a>}
       </nav>
-      <p class="feast muted">{T.feast}: {feast}</p>
+      <p class="feast muted">{T.feast}: <a href={P.day(daySlug(saint.date.slice(5), lang))}>{feast}</a></p>
     </div>
   </article>
   <EmailBand lang={lang} />
@@ -168,6 +169,8 @@ const jsonld = {
   .days b { font-weight: 400; font-size: 1.125rem; }
   .days .r { text-align: right; }
   .feast { margin-top: 18px; font-size: 1rem; }
+  .feast a { color: inherit; text-decoration-color: var(--rule); }
+  .feast a:hover { color: var(--gilt-light); }
   @media (min-width: 1024px) {
     .saint { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; max-width: 1200px; margin-inline: auto; padding-inline: var(--gutter); align-items: start; }
     .art { position: sticky; top: calc(var(--bar-h) + 24px); }

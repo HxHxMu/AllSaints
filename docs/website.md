@@ -14,6 +14,8 @@
 **Build check (2026-11-01):** `site/scripts/check-episodes.mjs` runs first in every build and stops it with a clear message ("state/episodes/X.json can't be shown on the site: script.saint.name: Required") when a shown episode lacks a field the site reads. `.github/workflows/site.yml` runs the same build on GitHub and sends Telegram a ⚠️ if it fails (Cloudflare would otherwise keep the last good version silently).
 **Not built yet:** the Sunday digest email, RSS, backfill of story/Spanish for episodes made before 2026-10-29.
 
+**Day pages (2026-11-11):** one page per day of the year, `/calendar/<november-11>/` and `/es/calendario/<11-de-noviembre>/` (366 each, `components/DayView.astro`, `lib/feasts.ts`): the saints All Saints told on that date (any year), then the day's other Catholic saints as plain lines (name → Wikipedia, plus the Catholic source). Data: `data/feasts.json`, built by `engine/feasts_build.py` after `build-calendar` (monthly) from `data/calendar.json`: kept only with a Santi e Beati, causesanti.va or Nominis ID; feast dates Wikidata ties only to a non-Catholic church are dropped (Philip the Apostle's Orthodox Nov 14); anyone tagged blessed/venerable/servant of God is kept only if the source page's title isn't "Beato/Beata/Bienheureux…" (Wikidata calls some Blesseds saints). `/today/` and `/es/hoy/` (noindex) send the visitor to today's page (New York time) by script. The calendar page links "Today's saints" and an "Every day of the year" index; a saint page's feast line links to its day.
+
 ## Original plan (decisions 2026-10-29)
 
 - **Hosting:** Cloudflare Pages; GitHub branch previews, merge to main = production. Code in `/site` of this repo.
