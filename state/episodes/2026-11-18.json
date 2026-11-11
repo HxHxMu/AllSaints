@@ -1,0 +1,309 @@
+{
+ "id": "2026-11-18",
+ "date": "2026-11-18",
+ "status": "review",
+ "updated": "2026-11-11T10:25:45+00:00",
+ "saint": {
+  "qid": "Q1274242",
+  "name": "Saint Romanus of Caesarea",
+  "display_name": "St. Romanus of Caesarea",
+  "dates": "died c. 303",
+  "region": "Antioch, Syria",
+  "feast": "November 18",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q1274242",
+  "name": "Romanus of Caesarea",
+  "links": 17,
+  "enwiki": "Romanus_of_Caesarea",
+  "images": [
+   "Francisco%20de%20Zurbar%C3%A1n%20048.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Romanus of Caesarea",
+  "birth": 201,
+  "death": 303,
+  "lon": 36.15,
+  "lat": 36.2,
+  "selection_reason": "Romanus of Caesarea, a deacon martyred at Antioch in 303, is an early martyr whose story was recorded close to the events (Eusebius, then Prudentius and John Chrysostom). The best-known account is that he kept speaking after his tongue was cut out. This also gives a fresh era and region after a run of medieval and modern European, Asian and American saints.",
+  "catholic_veneration": "Saint and martyr in the Roman Martyrology, commemorated on November 18 (feast of Romanus, deacon and martyr of Caesarea/Antioch), with Catholic reference entries in Nominis and the Ökumenisches Heiligenlexikon."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Romanus of Caesarea",
+   "display_name": "St. Romanus of Caesarea",
+   "dates": "died c. 303",
+   "region": "Antioch, Syria",
+   "feast": "November 18",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "The emperor had his tongue removed, yet tradition holds Romanus kept speaking.",
+    "visual": "art",
+    "scene": "An icon of a deacon in a long dalmatic standing before a Roman emperor enthroned in a columned marble hall in Antioch. The deacon raises one hand in speech, calm and steady, while guards in Roman armor stand to either side."
+   },
+   {
+    "role": "who",
+    "text": "Romanus was a deacon of Caesarea in Palestine, who died at Antioch around the year three hundred and three.",
+    "visual": "map",
+    "lat": 36.2,
+    "lon": 36.16,
+    "place": "Antioch · Antakya, Turkey"
+   },
+   {
+    "role": "story",
+    "text": "The persecution of Christians had begun. In Antioch, Romanus saw believers growing weak, ready to offer sacrifice to idols. He urged them to stand firm.",
+    "visual": "art",
+    "scene": "An icon of the deacon Romanus in a colonnaded street of fourth-century Antioch, speaking to a small group of anxious Christians in tunics and cloaks. A pagan altar with a statue stands in the background, and Romanus gestures gently toward heaven."
+   },
+   {
+    "role": "story",
+    "text": "He was arrested and condemned to the fire. Then he was brought before the emperor, who ordered his tongue cut out.",
+    "visual": "art",
+    "scene": "An icon of Romanus, hands bound, led by Roman soldiers up the steps of a stately imperial hall in Antioch. The emperor sits on a raised throne under a canopy, with officials in togas and tunics behind him."
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds that this did not take his speech. Eusebius wrote of his death, and later writers added to the story. In prison, he was finally strangled.",
+    "visual": "art",
+    "scene": "An icon of Romanus kneeling in prayer in a dim stone prison cell, a narrow barred window letting in a shaft of golden light. His face is serene, his hands open, and his dalmatic is plain."
+   },
+   {
+    "role": "turn",
+    "text": "The wonder points beyond him, to God. What the sources show is a deacon who spent his voice steadying the frightened. When others fall silent, a faithful word still matters.",
+    "visual": "art",
+    "scene": "An icon of Saint Romanus as a deacon with a halo, holding a martyr's palm and a small cross. Behind him is the walled city of Antioch with its mountain ridge, and a few Christians stand gathered at his side."
+   },
+   {
+    "role": "close",
+    "text": "Saint Romanus, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Romanus": "roh-MAY-nus",
+   "Caesarea": "Sess-uh-REE-uh",
+   "Antioch": "AN-tee-ock",
+   "Eusebius": "yoo-SEE-bee-us"
+  },
+  "caption_hook": "What do you say when an empire commands you to be silent?",
+  "summary": "Romanus, a deacon of Caesarea, urged the frightened Christians of Antioch to stand firm and was martyred around 303, while tradition holds that he kept speaking even after his tongue was cut out.",
+  "youtube_title": "St. Romanus: The Deacon Who Kept Speaking",
+  "hashtags": [
+   "#saintromanus",
+   "#antioch",
+   "#romanusofcaesarea",
+   "#deacon",
+   "#martyr",
+   "#earlychurch",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saintsoftheday",
+   "#november18",
+   "#catholic",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Romanus or Romain? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Romanus was a deacon of Caesarea in Palestine",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He died a martyr at Antioch around 303 (303 or 304), at the beginning of the Diocletian persecution",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "In Antioch he saw Christians weakening and willing to offer sacrifice to idols, and called them to stand firm",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was arrested and condemned to death by fire",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He was brought before the emperor, who ordered his tongue cut out",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "The tongue's removal did not rob him of speech (reported in the Heiligenlexikon as part of a story that grew in the telling)",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Eusebius wrote of his martyrdom in On the Martyrs of Palestine",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "His passion was embellished over time by later writers",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "After torture in prison he was finally strangled",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Prudentius added a companion named Barulas, a connection probably arbitrary",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "His feast is November 18",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "His veneration spread across the West through Prudentius, whose account was widely copied in the Middle Ages",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The sources differ on which emperor was in Antioch: Galerius in the Catholic Encyclopedia, Diocletian in the Heiligenlexikon",
+    "source": 3,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Antioch",
+   "Caesarea",
+   "Palestine",
+   "Seville"
+  ],
+  "story": [
+   "Romanus is one of the early martyrs of the Church in the East, and his story begins in a time of great trial. In the years around 303, the Emperor Diocletian issued edicts against the Christians, and the Church in the eastern Roman provinces entered the Diocletianic Persecution. Believers were ordered to take part in pagan sacrifice. Some, understandably frightened, began to give way.",
+   "Romanus came from Caesarea in Palestine, the city of the historian Eusebius. The Catholic Encyclopedia calls him a deacon of its church. The Ökumenisches Heiligenlexikon adds that he may have been a deacon, or an exorcist, in a village near Caesarea. His name, from the Greek, simply means \"the Roman.\" Beyond this, we know little of his family or his early years. The sources give us his office, his city and his death, and that is where they are most reliable.",
+   "In the first days of the persecution he was in Antioch, the great city of Syria. There he saw some of the faithful weakening. They were prepared to obey the imperial order and offer sacrifice to idols. Romanus did not stay silent. He went among them and urged them to stand firm. One French Catholic reference tells the scene slightly differently: it says he saw an official entering a church to destroy it and called on the Christians to resist. The sources agree on the heart of it. A deacon saw his brothers and sisters wavering, and he used his voice to strengthen them.",
+   "For this he was arrested. He was condemned to be burned, and the Catholic Encyclopedia says he was bound to the stake. Because the emperor himself was in Antioch at the time, Romanus was brought before him. The Catholic Encyclopedia names the emperor as Galerius, while the Heiligenlexikon names Diocletian, so the sources do not agree on this detail. Both say that the emperor commanded that the deacon's tongue be cut out.",
+   "Here the story passes from history into tradition. The Heiligenlexikon reports that this did not rob Romanus of his speech. That is how the account has been handed down. The sources give no sign that the Church has examined or declared it, and the same entry notes that his story was embellished more and more over the centuries. What the sources hold with confidence is that he was tortured in prison and finally strangled, in 303 or 304, with the Heiligenlexikon giving November 17 or 18, 303. Eusebius recorded his martyrdom in his work On the Martyrs of Palestine.",
+   "The poet Prudentius later wrote a long hymn in his honor, the tenth poem of the Peristephanon. He added a young boy named Barulas as a companion in martyrdom. The Catholic Encyclopedia judges that Prudentius brought legendary features into his account and that this link is probably arbitrary, and the Heiligenlexikon suggests Barulas may be a confusion with another martyr, Barlaam. We therefore tell the story of Romanus alone. Still, it was Prudentius's account, copied and translated through the Middle Ages, that carried the veneration of Romanus across the Christian West.",
+   "That veneration left real marks. The church of San Román in Seville is dedicated to him, and an altar figure once stood in the former church of San Román in Toledo. In 1638 the painter Francisco de Zurbarán painted Romanus, and that picture is now in the Art Institute of Chicago. His feast is kept on November 18, and the Orthodox Church keeps it on the same day.",
+   "If the sources leave us uncertain about the wonder, they leave us sure of the man. He saw frightened people near him and spoke to them. Whatever the tradition about his voice means, it points beyond him to the God who gave him courage. His holiness was a very ordinary thing, done at great cost: to say a faithful word when others were falling silent."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Hook scene calls Romanus a 'young deacon'. No source gives his age. Removed 'young'.",
+   "Story p1: 'what we now call the Great Persecution' and 'Many refused' are not in the sources, which say only that the Diocletianic persecution began and some Christians weakened. Reworded to the sourced wording.",
+   "Story p2: 'the city on the coast where the historian Eusebius would later write' adds details the sources do not give. Simplified.",
+   "Story p3: the remark that Antioch was where believers were first called Christians is not in the sources. Removed.",
+   "Story p4: 'All of them say the emperor commanded the tongue be cut out' overstates the sources. Nominis does not name the emperor and says only that a judge was involved. Now attributed to the Catholic Encyclopedia and the Heiligenlexikon.",
+   "Story p5, miracle status: 'It is not a miracle the Church has examined or declared' asserted more than the sources say. Reworded to 'the sources give no sign that the Church has examined or declared it'. The beat correctly says 'tradition holds'.",
+   "Story p5, date: 'November 17 or 18 of the year 303' passed over the Catholic Encyclopedia's '303 or 304', and the Heiligenlexikon alone gives the day. Both are now attributed.",
+   "Story p5: 'within living memory of the events' is not in the sources. Replaced with the sourced title of Eusebius's work.",
+   "Story p8: 'Romanus did not seek a stage' speculates about his inner motive and is unsourced. Removed."
+  ],
+  "confidence": 86,
+  "reviewer_note": "The speech-after-tongue-removal rests only on the Heiligenlexikon, with no Church approval stated. The beats call it 'tradition holds', and the emperor is left unnamed because the sources disagree (Galerius in the Catholic Encyclopedia, Diocletian in the Heiligenlexikon). The map pin at Antakya is correct."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2827,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 757,
+   "thinking": 523
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2034,
+   "cache_write": 7725,
+   "cache_read": 0,
+   "out": 8144,
+   "thinking": 4824
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4046,
+   "cache_write": 0,
+   "cache_read": 7725,
+   "out": 9314,
+   "thinking": 6348
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1723,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 4799,
+   "thinking": 2861
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Romanus of Caesarea",
+   "url": "https://en.wikipedia.org/wiki/Romanus_of_Caesarea"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Romanus of Caesarea",
+   "url": "https://nominis.cef.fr/contenus/saint/165/Saint-Romain-d-Antioche.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Romanus of Caesarea",
+   "url": "https://www.heiligenlexikon.de/BiographienR/Romanus_von_Caesarea.html"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913)/Sts. Romanus",
+   "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Sts._Romanus"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 67.1,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Romano",
+  "name": "San Romano de Cesarea",
+  "region": "Antioquía, Siria",
+  "dates": "murió c. 303",
+  "hook": "¿Qué se dice cuando un imperio ordena guardar silencio?",
+  "summary": "Romano, diácono de Cesarea, exhortó a los cristianos atemorizados de Antioquía a mantenerse firmes y fue martirizado hacia el año 303, mientras que, según la tradición, siguió hablando incluso después de que le cortaron la lengua.",
+  "story": [
+   "Romano es uno de los primeros mártires de la Iglesia en Oriente, y su historia comienza en una época de gran prueba. Hacia el año 303, el emperador Diocleciano promulgó edictos contra los cristianos, y la Iglesia en las provincias orientales del Imperio romano entró en la persecución diocleciana. Se ordenó a los creyentes participar en sacrificios paganos. Algunos, comprensiblemente atemorizados, comenzaron a ceder.",
+   "Romano procedía de Cesarea de Palestina, la ciudad del historiador Eusebio. La Enciclopedia Católica lo llama diácono de su iglesia. El Ökumenisches Heiligenlexikon añade que pudo haber sido diácono, o exorcista, en una aldea cercana a Cesarea. Su nombre, de origen griego, significa simplemente «el romano». Más allá de esto, sabemos poco de su familia o de sus primeros años. Las fuentes nos dan su oficio, su ciudad y su muerte, y ahí es donde son más fiables.",
+   "En los primeros días de la persecución se encontraba en Antioquía, la gran ciudad de Siria. Allí vio que algunos de los fieles flaqueaban. Estaban dispuestos a obedecer la orden imperial y ofrecer sacrificio a los ídolos. Romano no guardó silencio. Recorrió la comunidad, los exhortó a mantenerse firmes y les habló con ánimo. Una referencia católica francesa cuenta la escena de manera algo distinta: dice que vio a un funcionario entrar en una iglesia para destruirla y llamó a los cristianos a resistir. Las fuentes coinciden en lo esencial. Un diácono vio a sus hermanos y hermanas vacilar, y usó su voz para fortalecerlos.",
+   "Por ello fue arrestado. Fue condenado a ser quemado, y la Enciclopedia Católica dice que fue atado a la estaca. Como el propio emperador se encontraba entonces en Antioquía, Romano fue llevado ante él. La Enciclopedia Católica identifica al emperador como Galerio, mientras que el Ökumenisches Heiligenlexikon menciona a Diocleciano, de modo que las fuentes no coinciden en este detalle. Ambas afirman que el emperador ordenó que le cortaran la lengua al diácono.",
+   "Aquí la historia pasa del terreno de los hechos documentados al de la tradición. El Ökumenisches Heiligenlexikon informa que esto no le quitó el habla a Romano. Así es como se ha transmitido el relato. Las fuentes no muestran señal de que la Iglesia lo haya examinado o declarado, y la misma entrada señala que el relato fue adornado cada vez más a lo largo de los siglos. Lo que las fuentes sostienen con seguridad es que fue torturado en prisión y finalmente estrangulado, en 303 o 304; el Heiligenlexikon da como fecha el 17 o el 18 de noviembre de 303. Eusebio registró su martirio en su obra Sobre los mártires de Palestina.",
+   "El poeta Prudencio escribió después un largo himno en su honor, el décimo poema del Peristephanon. Añadió como compañero de martirio a un niño llamado Barulas. La Enciclopedia Católica juzga que Prudencio introdujo rasgos legendarios en su relato y que este vínculo es probablemente arbitrario, y el Heiligenlexikon sugiere que Barulas podría confundirse con otro mártir, Barlaam. Por eso contamos la historia de Romano solo. Aun así, fue el relato de Prudencio, copiado y traducido a lo largo de la Edad Media, el que llevó la veneración de Romano por el Occidente cristiano.",
+   "Esa veneración dejó huellas reales. La iglesia de San Román en Sevilla le está dedicada, y una figura de altar estuvo en otro tiempo en la antigua iglesia de San Román en Toledo. En 1638 el pintor Francisco de Zurbarán pintó a Romano, y ese cuadro se encuentra hoy en el Instituto de Arte de Chicago. Su fiesta se celebra el 18 de noviembre, y la Iglesia ortodoxa la celebra en el mismo día.",
+   "Si las fuentes nos dejan inciertos sobre el prodigio, nos dejan seguros sobre el hombre. Vio a personas atemorizadas cerca de él y les habló. Sea cual sea el sentido de la tradición sobre su voz, apunta más allá de él, hacia el Dios que le dio valor. Su santidad fue algo muy sencillo, vivido a gran costo: decir una palabra fiel cuando otros callaban."
+  ],
+  "prayer": "San Romano, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Antioquía",
+   "Cesarea",
+   "Palestina",
+   "Sevilla"
+  ]
+ },
+ "angle": "miracle",
+ "books": [],
+ "caption": "What do you say when an empire commands you to be silent?\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Romanus of Caesarea · Feast day: November 18\nRomanus, a deacon of Caesarea, urged the frightened Christians of Antioch to stand firm and was martyred around 303, while tradition holds that he kept speaking even after his tongue was cut out.\n\nSaint Romanus, pray for us. 🕯\n\nKnow someone named Romanus or Romain? Send them their saint.\n\n—\nSources: Wikipedia · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon · Catholic Encyclopedia (1913)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintromanus #antioch",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/art.jpg"
+ },
+ "review_message_id": 139
+}
