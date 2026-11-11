@@ -95,7 +95,7 @@ def find_reel(caption, hours=36):
     return None
 
 
-def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = None):
+def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = None, location_id=None):
     tok = get_token()
     uid = _uid()
     errors = []
@@ -103,11 +103,19 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
         data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true", "access_token": tok}
         if cover_url:
             data["cover_url"] = cover_url
+        if location_id:
+            data["location_id"] = location_id
         r = http.post(f"{GRAPH}/{uid}/media", data=data, timeout=60)
+        if not r.ok and location_id:  # a bad place ID fails the container, not the post: drop the tag and try again
+            log("Location rejected, posting without it:", r.text[:300])
+            errors.append(f"location {location_id} rejected")
+            data.pop("location_id")
+            location_id = None
+            r = http.post(f"{GRAPH}/{uid}/media", data=data, timeout=60)
         if r.ok:
             ok, st = _wait(r.json()["id"], tok)
             if ok:
-                return _publish(r.json()["id"], tok)
+                return {**_publish(r.json()["id"], tok), "location_id": location_id}
             errors.append(f"video_url container failed: {st}")
         else:
             errors.append(f"video_url create failed: {r.text[:300]}")
@@ -117,7 +125,14 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
         data = {"media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true", "access_token": tok}
         if cover_url:
             data["cover_url"] = cover_url
+        if location_id:
+            data["location_id"] = location_id
         r = http.post(f"{GRAPH}/{uid}/media", data=data, timeout=60)
+        if not r.ok and location_id:
+            log("Location rejected, posting without it:", r.text[:300])
+            data.pop("location_id")
+            location_id = None
+            r = http.post(f"{GRAPH}/{uid}/media", data=data, timeout=60)
         if r.ok:
             js = r.json()
             uri = js.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{js['id']}"
@@ -127,7 +142,7 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
             if up.ok:
                 ok, st = _wait(js["id"], tok)
                 if ok:
-                    return _publish(js["id"], tok)
+                    return {**_publish(js["id"], tok), "location_id": location_id}
                 errors.append(f"resumable container failed: {st}")
             else:
                 errors.append(f"rupload failed: {up.status_code} {up.text[:300]}")

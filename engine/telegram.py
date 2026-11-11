@@ -40,7 +40,7 @@ def send_review(ep):
     """Video review with Approve/Redo/Edit/New-saint buttons, sent as the ~5 MB 720p preview
     (uploading the ~50 MB master timed out from GitHub's runners; Telegram can't fetch GitHub
     release URLs itself). Falls back to a text message with a link and the same buttons."""
-    import storage
+    import locations, storage
     from common import WORK
     cid = chat_id()
     if not cid:
@@ -50,7 +50,8 @@ def send_review(ep):
     head = (f"🕯 {ep['saint']['display_name']} · {ep['saint'].get('feast', '')}\n"
             f"Scheduled: {ep['date']} at {cfg['post_time']} ({cfg['timezone'].split('/')[-1].replace('_', ' ')})\n"
             f"Fact-check: {fc.get('verdict', '?')} · confidence {fc.get('confidence', '?')}%\n"
-            f"Note: {fc.get('reviewer_note', '—')}")
+            f"Note: {fc.get('reviewer_note', '—')}\n"
+            f"{locations.review_line(ep)}")
     if ep.get("narrator", "").startswith("elevenlabs"):
         head = ("⚠️ Narrated by the ElevenLabs fallback (Gemini TTS failed). Free-tier audio isn't licensed "
                 "for commercial use: tap 🔁 Redo to re-voice it with Gemini.\n\n" + head)
@@ -106,10 +107,36 @@ HELP = """A.S.† Studio commands
 /time HH:MM – daily post time
 /pause · /resume – stop/start publishing
 /generate – make missing episodes now
-/nobooks YYYY-MM-DD – drop the suggested books from that saint's web page"""
+/nobooks YYYY-MM-DD – drop the suggested books from that saint's web page
+/loc YYYY-MM-DD <Page ID> – Instagram location for that day's Reel (the Facebook Page ID of the place; remembered
+  for later saints of the same place). /loc YYYY-MM-DD <Page ID> <place> names the place; /loc YYYY-MM-DD off = no tag"""
+
+
+def _set_location(text):
+    import locations
+    m = re.match(r"/loc\S*\s+(\d{4}-\d{2}-\d{2})\s+(.*)", text.strip(), re.S)
+    ep = load_episode(m.group(1)) if m else None
+    if not ep:
+        return "Usage: /loc 2026-11-12 <Facebook Page ID of the place> [place name]"
+    if ep.get("status") in ("publishing", "published"):
+        return f"📣 {ep['saint']['display_name']} is already posted; add the location in the Instagram app."
+    rest = m.group(2).strip()
+    if rest.lower() == "off":
+        ep["location"] = {}
+        save_episode(ep)
+        return f"📍 No location on {ep['saint']['display_name']}'s Reel."
+    pid = locations.page_id(rest)
+    if not pid:
+        return "That doesn't look like a Page ID (digits, e.g. 108143175870935)."
+    name = re.sub(r"(https?://\S+|\d{6,20})", "", rest).strip(" ,·-") or (locations.places(ep) or ["?"])[0]
+    ep["location"] = {"name": name, "id": pid}
+    save_episode(ep)
+    locations.remember(name, pid)
+    return f"📍 {ep['saint']['display_name']}'s Reel will be tagged at {name} (ID {pid}); saved for later saints of {name}."
 
 
 def _status_text():
+    import locations
     cfg = load_config()
     eps = [e for e in load_episodes().values() if e["date"] >= today().isoformat()]
     eps.sort(key=lambda e: e["date"])
@@ -118,6 +145,8 @@ def _status_text():
     for e in eps[:14]:
         yt = " · ▶️" if (e.get("youtube") or {}).get("id") else (" · ▶️❌" if (e.get("youtube") or {}).get("error") else "")
         yt += " · 📘" if (e.get("facebook") or {}).get("id") else (" · 📘❌" if (e.get("facebook") or {}).get("error") else "")
+        if e["status"] not in ("published", "publishing"):
+            yt += " · 📍" if locations.for_episode(e) else " · no 📍"
         lines.append(f"{icon.get(e['status'], '•')} {e['date']} {e.get('saint', {}).get('display_name', '…')} – {e['status']}{yt}")
     return "\n".join(lines)
 
@@ -269,6 +298,8 @@ def process_updates():
                 send(f"📚 Books removed from {ep['saint'].get('display_name', ep['id'])}'s page. The general shelf stays.")
             else:
                 send("Usage: /nobooks 2026-11-05")
+        elif text.startswith("/loc"):
+            send(_set_location(text))
         elif text.startswith("/generate"):
             for e in load_episodes().values():  # failed episodes that gave up get a fresh set of retries
                 if e.get("status") == "failed" and e["date"] >= today().isoformat():

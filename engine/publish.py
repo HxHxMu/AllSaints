@@ -43,7 +43,7 @@ def publish_due():
 
 def publish_episode(ep):
     """Post one episode's Reel now, then its YouTube Short (used by the daily schedule and `pipeline.py publish <id>`)."""
-    import instagram, storage, telegram
+    import instagram, locations, storage, telegram
     now = dt.datetime.now(tz())
     log("Publishing", ep["id"])
     assign_slugs(ep)  # the web page's address is fixed from here on
@@ -62,7 +62,11 @@ def publish_episode(ep):
         if res:
             log("Already on Instagram (earlier attempt), recording it:", res["media_id"])
         else:
-            res = instagram.publish_reel(ep["caption"], video_url=video_url, cover_url=cover_url, video_path=vid)
+            loc = locations.for_episode(ep)
+            res = instagram.publish_reel(ep["caption"], video_url=video_url, cover_url=cover_url, video_path=vid,
+                                         location_id=loc and loc["id"])
+            if loc:
+                res["location"] = loc["name"] if res.get("location_id") else f"{loc['name']} (rejected, posted untagged)"
     except Exception as e:
         traceback.print_exc()
         publish_youtube(ep)  # a Reel failure shouldn't hold the Short back
@@ -76,7 +80,8 @@ def publish_episode(ep):
     # the Reel is live: record it before anything else can fail (a retry from "approved" would post it twice)
     ep.update(status="published", published=res, published_at=now.isoformat(timespec="minutes"))
     save_episode(ep)
-    _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}")
+    _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}"
+            + (f"\n📍 {res['location']}" if res.get("location") else ""))
     publish_facebook(ep, vid)
     publish_threads(ep)
     publish_youtube(ep, vid)

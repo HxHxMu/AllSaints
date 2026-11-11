@@ -2,6 +2,12 @@
 
 *Moved out of `engine/CLAUDE.md` (2026-11-10) so it loads only when needed. Reliability rules stay in `engine/CLAUDE.md`.*
 
+## Instagram location tags (`locations.py`)
+- The daily Reel is tagged at upload with `location_id` (the ID of a Facebook Page that has a location). Searching for one needs Meta's "Page Public Metadata Access" review (our token gets "Authorization Error" on `/pages/search`, tested 2026-11-11), so IDs are kept by hand in `state/locations.json` {place slug: {name, id}}.
+- Pick: the episode's `location` {name, id} if set (`{}` = no tag), else the first of `script.places` (most specific first) found in the map. The Telegram review shows `📍 Location: X` or how to add one; `/status` marks each upcoming day `📍` / `no 📍`.
+- Telegram `/loc YYYY-MM-DD <Page ID> [place name]` sets that episode's tag and remembers it for later saints of the same place (name defaults to the first script place); `/loc YYYY-MM-DD off` = untagged. The ID is on the place's Facebook page → About → Page transparency (or `profile.php?id=` in its link).
+- A rejected ID fails only the container: `publish_reel` retries once without it, the Reel posts untagged and the 📣 note says "(rejected, posted untagged)". `ep.published.location` records what was used. Facebook Reels, Threads, YouTube and TikTok aren't tagged.
+
 ## Facebook Page
 - Instagram's "share to Facebook" setting doesn't apply to API-published Reels, so `facebook.publish_reel` posts the same video to the Page (Graph `video_reels`: start → upload by `file_url`, falling back to the file → finish PUBLISHED with the IG caption). Runs only after the Reel is on Instagram; state `ep.facebook` {id, url | attempts, error}; ≤3 attempts; never blocks Instagram/YouTube. Skipped until `FB_PAGE_ID`/`FB_PAGE_TOKEN` exist.
 - Setup: Meta app (the Instagram one) → add Facebook Login; Graph API Explorer → user token with `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, tick the Page → `pipeline.py fb-auth` (hidden prompts: App ID, secret, token; exchanges for a never-expiring Page token, writes `.env` + gh secrets). Check: `fb-whoami`. Retry/backfill one: `pipeline.py facebook <ep_id>`. The cover: Facebook ignores it at publish, so `facebook.set_cover` uploads `cover.jpg` as the preferred thumbnail right after (failure only logs); backfill with `pipeline.py fb-cover <ep_id> …` (Reels before 2026-11-03 got a frame Facebook picked).
