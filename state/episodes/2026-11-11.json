@@ -1,8 +1,8 @@
 {
  "id": "2026-11-11",
  "date": "2026-11-11",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-11T12:34:12+00:00",
  "saint": {
   "qid": "Q3293239",
   "name": "Saint Marina of Omura",
@@ -318,7 +318,8 @@
    "Omura",
    "Japón",
    "Iglesia de Nakamachi"
-  ]
+  ],
+  "slug": "marina-de-omura"
  },
  "books": [],
  "caption": "A young Japanese Dominican tertiary was condemned in Nagasaki on November 11, 1634, for serving missionaries the government had banished.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Marina of Omura · Feast day: November 11\nMarina of Omura, a Japanese Dominican tertiary, served banished missionaries and was burned at the stake in Nagasaki in 1634; she was canonized in 1987 with Lawrence Ruiz and his companions.\n\nSaint Marina of Omura, pray for us. 🕯\n\nHad you ever heard of St. Marina of Omura before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmarinaofomura #nagasaki",
@@ -329,5 +330,39 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-11/art.jpg"
  },
- "review_message_id": 75
+ "review_message_id": 75,
+ "slug": "marina-of-omura",
+ "published": {
+  "media_id": "17893429884458591",
+  "permalink": "https://www.instagram.com/reel/DfmfEW4jfzg/"
+ },
+ "published_at": "2026-11-11T07:30-05:00",
+ "facebook": {
+  "id": "3529410357220021",
+  "url": "https://www.facebook.com/reel/3529410357220021/",
+  "published_at": "2026-11-11T07:32-05:00"
+ },
+ "threads": {
+  "id": "18675851935020103",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfmfRdABOYa",
+  "published_at": "2026-11-11T07:33-05:00"
+ },
+ "youtube": {
+  "id": "9ZaCOS6RiTk",
+  "url": "https://youtube.com/shorts/9ZaCOS6RiTk",
+  "privacy": "public",
+  "published_at": "2026-11-11T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Asia"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Asia",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7706890969068668942",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-11T07:34-05:00"
+ }
 }
