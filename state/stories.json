@@ -1,97 +1,97 @@
 [
-  {
-    "id": "blue-chant-1-story",
-    "at": "2026-11-08T18:50:00-05:00",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1.mp4",
-    "status": "posted",
-    "posted": {
-      "media_id": "17980710453132703",
-      "permalink": "https://www.instagram.com/stories/all.holy.saints/4026300851743241600"
-    },
-    "posted_at": "2026-11-08T21:48-05:00"
+ {
+  "id": "blue-chant-1-story",
+  "at": "2026-11-08T18:50:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1.mp4",
+  "status": "posted",
+  "posted": {
+   "media_id": "17980710453132703",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4026300851743241600"
   },
-  {
-    "id": "blue-chant-1-story-2",
-    "at": "2026-11-08T21:50:00-05:00",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-story.mp4",
-    "status": "posted",
-    "note": "re-post: the first one showed as a still with no sound; re-encoded to AAC 128k / 6 Mbps",
-    "posted": {
-      "media_id": "17916753150550339",
-      "permalink": "https://www.instagram.com/stories/all.holy.saints/4026305211538534348"
-    },
-    "posted_at": "2026-11-08T21:56-05:00"
+  "posted_at": "2026-11-08T21:48-05:00"
+ },
+ {
+  "id": "blue-chant-1-story-2",
+  "at": "2026-11-08T21:50:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-story.mp4",
+  "status": "posted",
+  "note": "re-post: the first one showed as a still with no sound; re-encoded to AAC 128k / 6 Mbps",
+  "posted": {
+   "media_id": "17916753150550339",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4026305211538534348"
   },
-  {
-    "id": "o-antiphons-2026-17",
-    "at": "2026-12-17T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/17-sapientia.jpg",
-    "status": "pending"
+  "posted_at": "2026-11-08T21:56-05:00"
+ },
+ {
+  "id": "o-antiphons-2026-17",
+  "at": "2026-12-17T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/17-sapientia.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-18",
+  "at": "2026-12-18T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/18-adonai.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-19",
+  "at": "2026-12-19T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/19-radix.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-20",
+  "at": "2026-12-20T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/20-clavis.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-21",
+  "at": "2026-12-21T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/21-oriens.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-22",
+  "at": "2026-12-22T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/22-rex.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "o-antiphons-2026-23",
+  "at": "2026-12-23T12:30:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/23-emmanuel.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "music-2026-11-08",
+  "at": "2026-11-08T15:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-08.jpg",
+  "status": "posted",
+  "album": "Blue Chant",
+  "track": "Benedicta in Mulieribus",
+  "posted": {
+   "media_id": "18113524141879848",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4026095691776355109"
   },
-  {
-    "id": "o-antiphons-2026-18",
-    "at": "2026-12-18T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/18-adonai.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "o-antiphons-2026-19",
-    "at": "2026-12-19T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/19-radix.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "o-antiphons-2026-20",
-    "at": "2026-12-20T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/20-clavis.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "o-antiphons-2026-21",
-    "at": "2026-12-21T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/21-oriens.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "o-antiphons-2026-22",
-    "at": "2026-12-22T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/22-rex.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "o-antiphons-2026-23",
-    "at": "2026-12-23T12:30:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-o-antiphons-2026/23-emmanuel.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "music-2026-11-08",
-    "at": "2026-11-08T15:00-05:00",
-    "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-08.jpg",
-    "status": "posted",
-    "album": "Blue Chant",
-    "track": "Benedicta in Mulieribus",
-    "posted": {
-      "media_id": "18113524141879848",
-      "permalink": "https://www.instagram.com/stories/all.holy.saints/4026095691776355109"
-    },
-    "posted_at": "2026-11-08T15:00-05:00",
-    "facebook": {
-      "id": "1483173813913265"
-    }
-  },
-  {
-    "id": "sero-te-amavi-story",
-    "at": "2027-02-10T07:45:00-05:00",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-sero-te-amavi/teaser-story.mp4",
-    "status": "pending",
-    "note": "Sung-prayer teaser (Ash Wednesday). Add to the Music highlight within 24 h."
-  },
-  {
-    "id": "oro-deum-story",
-    "at": "2027-03-17T07:45:00-04:00",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-oro-deum/teaser-story.mp4",
-    "status": "pending",
-    "note": "Sung-prayer teaser (St. Patrick's feast). Add to the Music highlight within 24 h."
+  "posted_at": "2026-11-08T15:00-05:00",
+  "facebook": {
+   "id": "1483173813913265"
   }
+ },
+ {
+  "id": "sero-te-amavi-story",
+  "at": "2027-02-10T07:45:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-sero-te-amavi/teaser-story.mp4",
+  "status": "pending",
+  "note": "Sung-prayer teaser (Ash Wednesday). Add to the Music highlight within 24 h."
+ },
+ {
+  "id": "oro-deum-story",
+  "at": "2027-03-17T07:45:00-04:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-oro-deum/teaser-story.mp4",
+  "status": "pending",
+  "note": "Sung-prayer teaser (St. Patrick's feast). Add to the Music highlight within 24 h."
+ }
 ]

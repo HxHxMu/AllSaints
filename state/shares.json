@@ -1,88 +1,88 @@
 [
-  {
-    "id": "blue-chant-1-instagram",
-    "at": "2026-11-08T20:30:00-05:00",
-    "platform": "instagram",
-    "message": "The Gregorian Ave Maria, sung to Our Lady for centuries, arranged as jazz. Track I of Blue Chant, Volume I.\n✝ A forgotten saint every morning, and music for the quiet hours. Follow along.\n\nGregorian chant and its modes, played as jazz, for prayer, study and the quiet hours. The full hour is on YouTube: @AllHolySaints, link in bio.\n\nArranged and produced by Luis E. Bonilla from the traditional chant, made with AI tools. Cover art: an icon in the Byzantine style, AI-generated.\n\n#GregorianChant #AveMaria #Jazz #SacredMusic #AllHolySaints",
-    "link": "https://youtu.be/x-H1HoczgAo",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1.mp4",
-    "cover": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-cover.jpg",
-    "status": "posted",
-    "posted": {
-      "media_id": "17910142407330146",
-      "permalink": "https://www.instagram.com/reel/DfgJ8L3E6sw/"
-    },
-    "posted_at": "2026-11-09T01:30+00:00",
-    "deleted": "2026-11-08: removed from the grid by Luis; the teaser is a Story (blue-chant-1-story) in the Music highlight"
+ {
+  "id": "blue-chant-1-instagram",
+  "at": "2026-11-08T20:30:00-05:00",
+  "platform": "instagram",
+  "message": "The Gregorian Ave Maria, sung to Our Lady for centuries, arranged as jazz. Track I of Blue Chant, Volume I.\n✝ A forgotten saint every morning, and music for the quiet hours. Follow along.\n\nGregorian chant and its modes, played as jazz, for prayer, study and the quiet hours. The full hour is on YouTube: @AllHolySaints, link in bio.\n\nArranged and produced by Luis E. Bonilla from the traditional chant, made with AI tools. Cover art: an icon in the Byzantine style, AI-generated.\n\n#GregorianChant #AveMaria #Jazz #SacredMusic #AllHolySaints",
+  "link": "https://youtu.be/x-H1HoczgAo",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/track1-cover.jpg",
+  "status": "posted",
+  "posted": {
+   "media_id": "17910142407330146",
+   "permalink": "https://www.instagram.com/reel/DfgJ8L3E6sw/"
   },
-  {
-    "id": "veni-redemptor-gentium-facebook",
-    "at": "2026-11-29T07:45:00-05:00",
-    "platform": "facebook",
-    "message": "Advent begins today. St. Ambrose wrote this hymn for his people in Milan sixteen centuries ago: all eight of his stanzas, in Latin, with English on screen. Veni, redemptor gentium. 🕯",
-    "link": "https://youtu.be/GDp51tse34g",
-    "status": "pending"
-  },
-  {
-    "id": "veni-redemptor-gentium-instagram",
-    "at": "2026-11-29T07:45:00-05:00",
-    "platform": "instagram",
-    "message": "Advent begins today. St. Ambrose of Milan wrote this hymn for his people sixteen centuries ago.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere is the stanza that gives it its name, sung in Latin with J. M. Neale's English. The whole hymn is on YouTube: @AllHolySaints, link in bio.\n\nVeni, redemptor gentium. 🕯\n\nWords: St. Ambrose of Milan (c. 339–397). Music and production: All Saints, created with AI assistance (Suno); icon AI-generated in the Byzantine style.\n\n#Advent #StAmbrose #VeniRedemptorGentium #CatholicSaints",
-    "link": "https://youtu.be/GDp51tse34g",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser.mp4",
-    "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser-cover.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "the-virgin-today-facebook",
-    "at": "2026-12-24T07:45:00-05:00",
-    "platform": "facebook",
-    "message": "Christmas Eve. Fifteen centuries ago St. Romanos the Melodist sang these lines in Constantinople, and the Byzantine churches still sing them every Christmas: \"Today the Virgin gives birth to the One beyond all being.\" Sung in Greek, with English on screen. 🕯",
-    "link": "https://youtu.be/Evh8c2Td6P8",
-    "status": "pending"
-  },
-  {
-    "id": "the-virgin-today-instagram",
-    "at": "2026-12-24T07:45:00-05:00",
-    "platform": "instagram",
-    "message": "Christmas Eve. St. Romanos the Melodist wrote this hymn in Constantinople fifteen centuries ago, and the Byzantine churches still sing it every Christmas.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere are its closing lines, sung in Greek: for our sake is born a little Child, God before the ages. The whole hymn is on YouTube: @AllHolySaints, link in bio.\n\nThe Virgin today. 🕯\n\nWords: St. Romanos the Melodist (c. 490–556). Music and production: All Saints, created with AI assistance (Suno); icon AI-generated in the Byzantine style.\n\n#Christmas #StRomanos #ByzantineChant #CatholicSaints",
-    "link": "https://youtu.be/Evh8c2Td6P8",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser.mp4",
-    "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser-cover.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "a-prayer-to-jesus-facebook",
-    "at": "2027-01-04T07:45:00-05:00",
-    "platform": "facebook",
-    "message": "Today is the feast of St. Elizabeth Ann Seton. She wrote this prayer in her own hand, confessing a faith she felt was imperfect and asking Jesus to \"accept what I do for what I would do if I were able.\" Every word sung is hers. 🕯",
-    "link": "https://youtu.be/KEyQwebQy18",
-    "status": "pending"
-  },
-  {
-    "id": "a-prayer-to-jesus-instagram",
-    "at": "2027-01-04T07:45:00-05:00",
-    "platform": "instagram",
-    "message": "Her feast day. St. Elizabeth Ann Seton, widow, mother of five and the first person born in the United States to be canonized, wrote this prayer in her own hand.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere is how it begins, sung in her own words. The whole prayer is on YouTube: @AllHolySaints, link in bio.\n\n\"Accept what I do for what I would do if I were able.\" 🕯\n\nWords: St. Elizabeth Ann Seton (1774–1821). Composed and produced by Luis E. Bonilla for All Saints, made with AI tools (Suno); icon AI-generated in the Byzantine style.\n\n#StElizabethAnnSeton #MotherSeton #CatholicSaints #Prayer",
-    "link": "https://youtu.be/KEyQwebQy18",
-    "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser.mp4",
-    "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser-cover.jpg",
-    "status": "pending"
-  },
-  {
-    "id": "sero-te-amavi-facebook",
-    "at": "2027-02-10T07:45:00-05:00",
-    "platform": "facebook",
-    "message": "Ash Wednesday. Sixteen centuries ago St. Augustine wrote the prayer at the heart of his Confessions: \"Thou wert with me, but I was not with Thee.\" Sero te amavi, sung in Latin with Pusey's English on screen. 🕯",
-    "link": "https://youtu.be/aibP2Phms5c",
-    "status": "pending"
-  },
-  {
-    "id": "oro-deum-facebook",
-    "at": "2027-03-17T07:45:00-04:00",
-    "platform": "facebook",
-    "message": "St. Patrick's feast. Near the end of his Confession, the old bishop of Ireland asks God for one thing: \"I pray God to give me perseverance.\" Oro Deum, sung in Latin with N. J. D. White's English on screen. 🕯",
-    "link": "https://youtu.be/IbmwJHNl9_U",
-    "status": "pending"
-  }
+  "posted_at": "2026-11-09T01:30+00:00",
+  "deleted": "2026-11-08: removed from the grid by Luis; the teaser is a Story (blue-chant-1-story) in the Music highlight"
+ },
+ {
+  "id": "veni-redemptor-gentium-facebook",
+  "at": "2026-11-29T07:45:00-05:00",
+  "platform": "facebook",
+  "message": "Advent begins today. St. Ambrose wrote this hymn for his people in Milan sixteen centuries ago: all eight of his stanzas, in Latin, with English on screen. Veni, redemptor gentium. 🕯",
+  "link": "https://youtu.be/GDp51tse34g",
+  "status": "pending"
+ },
+ {
+  "id": "veni-redemptor-gentium-instagram",
+  "at": "2026-11-29T07:45:00-05:00",
+  "platform": "instagram",
+  "message": "Advent begins today. St. Ambrose of Milan wrote this hymn for his people sixteen centuries ago.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere is the stanza that gives it its name, sung in Latin with J. M. Neale's English. The whole hymn is on YouTube: @AllHolySaints, link in bio.\n\nVeni, redemptor gentium. 🕯\n\nWords: St. Ambrose of Milan (c. 339–397). Music and production: All Saints, created with AI assistance (Suno); icon AI-generated in the Byzantine style.\n\n#Advent #StAmbrose #VeniRedemptorGentium #CatholicSaints",
+  "link": "https://youtu.be/GDp51tse34g",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-veni-redemptor-gentium/teaser-cover.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "the-virgin-today-facebook",
+  "at": "2026-12-24T07:45:00-05:00",
+  "platform": "facebook",
+  "message": "Christmas Eve. Fifteen centuries ago St. Romanos the Melodist sang these lines in Constantinople, and the Byzantine churches still sing them every Christmas: \"Today the Virgin gives birth to the One beyond all being.\" Sung in Greek, with English on screen. 🕯",
+  "link": "https://youtu.be/Evh8c2Td6P8",
+  "status": "pending"
+ },
+ {
+  "id": "the-virgin-today-instagram",
+  "at": "2026-12-24T07:45:00-05:00",
+  "platform": "instagram",
+  "message": "Christmas Eve. St. Romanos the Melodist wrote this hymn in Constantinople fifteen centuries ago, and the Byzantine churches still sing it every Christmas.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere are its closing lines, sung in Greek: for our sake is born a little Child, God before the ages. The whole hymn is on YouTube: @AllHolySaints, link in bio.\n\nThe Virgin today. 🕯\n\nWords: St. Romanos the Melodist (c. 490–556). Music and production: All Saints, created with AI assistance (Suno); icon AI-generated in the Byzantine style.\n\n#Christmas #StRomanos #ByzantineChant #CatholicSaints",
+  "link": "https://youtu.be/Evh8c2Td6P8",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-the-virgin-today/teaser-cover.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "a-prayer-to-jesus-facebook",
+  "at": "2027-01-04T07:45:00-05:00",
+  "platform": "facebook",
+  "message": "Today is the feast of St. Elizabeth Ann Seton. She wrote this prayer in her own hand, confessing a faith she felt was imperfect and asking Jesus to \"accept what I do for what I would do if I were able.\" Every word sung is hers. 🕯",
+  "link": "https://youtu.be/KEyQwebQy18",
+  "status": "pending"
+ },
+ {
+  "id": "a-prayer-to-jesus-instagram",
+  "at": "2027-01-04T07:45:00-05:00",
+  "platform": "instagram",
+  "message": "Her feast day. St. Elizabeth Ann Seton, widow, mother of five and the first person born in the United States to be canonized, wrote this prayer in her own hand.\n✝ A forgotten saint every morning, and the prayers they wrote, sung. Follow along.\n\nHere is how it begins, sung in her own words. The whole prayer is on YouTube: @AllHolySaints, link in bio.\n\n\"Accept what I do for what I would do if I were able.\" 🕯\n\nWords: St. Elizabeth Ann Seton (1774–1821). Composed and produced by Luis E. Bonilla for All Saints, made with AI tools (Suno); icon AI-generated in the Byzantine style.\n\n#StElizabethAnnSeton #MotherSeton #CatholicSaints #Prayer",
+  "link": "https://youtu.be/KEyQwebQy18",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/sung-a-prayer-to-jesus/teaser-cover.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "sero-te-amavi-facebook",
+  "at": "2027-02-10T07:45:00-05:00",
+  "platform": "facebook",
+  "message": "Ash Wednesday. Sixteen centuries ago St. Augustine wrote the prayer at the heart of his Confessions: \"Thou wert with me, but I was not with Thee.\" Sero te amavi, sung in Latin with Pusey's English on screen. 🕯",
+  "link": "https://youtu.be/aibP2Phms5c",
+  "status": "pending"
+ },
+ {
+  "id": "oro-deum-facebook",
+  "at": "2027-03-17T07:45:00-04:00",
+  "platform": "facebook",
+  "message": "St. Patrick's feast. Near the end of his Confession, the old bishop of Ireland asks God for one thing: \"I pray God to give me perseverance.\" Oro Deum, sung in Latin with N. J. D. White's English on screen. 🕯",
+  "link": "https://youtu.be/IbmwJHNl9_U",
+  "status": "pending"
+ }
 ]
