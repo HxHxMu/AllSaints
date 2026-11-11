@@ -1,0 +1,40 @@
+{
+ "source": "Latin: the Magnificat antiphons of the Roman Office (Dec 17-23). English: All Saints' own literal translation (the ICEL text is under copyright). Used by engine/o_antiphons.py.",
+ "antiphons": [
+  {
+   "title": "O Sapientia",
+   "latin": "O Sapientia, quae ex ore Altissimi prodiisti, attingens a fine usque ad finem, fortiter suaviterque disponens omnia: veni ad docendum nos viam prudentiae.",
+   "english": "O Wisdom, who came forth from the mouth of the Most High, reaching from end to end and ordering all things mightily and sweetly: come, and teach us the way of prudence."
+  },
+  {
+   "title": "O Adonai",
+   "latin": "O Adonai, et Dux domus Israel, qui Moysi in igne flammae rubi apparuisti, et ei in Sina legem dedisti: veni ad redimendum nos in brachio extento.",
+   "english": "O Adonai, and leader of the house of Israel, who appeared to Moses in the flame of the burning bush and gave him the law on Sinai: come, and redeem us with outstretched arm."
+  },
+  {
+   "title": "O Radix Iesse",
+   "latin": "O Radix Iesse, qui stas in signum populorum, super quem continebunt reges os suum, quem gentes deprecabuntur: veni ad liberandum nos, iam noli tardare.",
+   "english": "O Root of Jesse, who stand as a sign for the peoples, before whom kings shall keep silence, whom the nations shall implore: come and set us free, delay no longer."
+  },
+  {
+   "title": "O Clavis David",
+   "latin": "O Clavis David, et sceptrum domus Israel, qui aperis, et nemo claudit, claudis, et nemo aperit: veni, et educ vinctum de domo carceris, sedentem in tenebris et umbra mortis.",
+   "english": "O Key of David, and sceptre of the house of Israel, who open and no one shuts, who shut and no one opens: come, and lead the prisoner out of the prison house, who sits in darkness and the shadow of death."
+  },
+  {
+   "title": "O Oriens",
+   "latin": "O Oriens, splendor lucis aeternae, et sol iustitiae: veni, et illumina sedentes in tenebris et umbra mortis.",
+   "english": "O Dayspring, splendour of eternal light and sun of justice: come, and give light to those who sit in darkness and the shadow of death."
+  },
+  {
+   "title": "O Rex Gentium",
+   "latin": "O Rex Gentium, et desideratus earum, lapisque angularis, qui facis utraque unum: veni, et salva hominem, quem de limo formasti.",
+   "english": "O King of the nations, and their desire, the cornerstone who makes the two one: come, and save man, whom you formed from the clay."
+  },
+  {
+   "title": "O Emmanuel",
+   "latin": "O Emmanuel, Rex et legifer noster, exspectatio gentium, et Salvator earum: veni ad salvandum nos, Domine, Deus noster.",
+   "english": "O Emmanuel, our King and lawgiver, the hope of the nations and their Saviour: come and save us, O Lord our God."
+  }
+ ]
+}

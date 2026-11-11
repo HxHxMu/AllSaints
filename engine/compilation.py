@@ -33,7 +33,7 @@ def save(comp):
 
 
 def month_name(month, lang="en"):
-    from youtube import MESES
+    from yt_meta import MESES
     m = int(month[5:7])
     return MESES[m - 1] if lang == "es" else dt.date(2000, m, 1).strftime("%B")
 
@@ -220,7 +220,7 @@ def title(month, n):
 
 
 def description(month, eps, chapters):
-    from youtube import page_url
+    from yt_meta import page_url
     yt = BRAND.get("youtube", {})
     support = load_config().get("support_url", "").strip()
     support = yt.get("support", "{url}").format(url=support) + "\n\n" if support else ""
@@ -243,7 +243,7 @@ Read each saint's full story, with sources:
 
 
 def localizations(month, eps, chapters):
-    from youtube import page_url
+    from yt_meta import page_url
     if not all(e.get("es") for e in eps):
         return None
     m = month_name(month, "es")
@@ -338,7 +338,7 @@ def buttons(month):
 
 def publish(month):
     """Luis tapped Publish: make the video public and put it at the top of its month's playlist."""
-    import youtube
+    import youtube, yt_playlists
     comp = load(month)
     vid = comp["youtube"]["id"]
     youtube.set_privacy(vid, "public")
@@ -346,7 +346,7 @@ def publish(month):
     comp.update(status="published", published_at=dt.datetime.now(tz()).isoformat(timespec="minutes"))
     save(comp)
     try:
-        youtube.add_video_to_playlist(f"Saints of {month_name(month)}", vid, position=0)
+        yt_playlists.add_video_to_playlist(f"Saints of {month_name(month)}", vid, position=0)
         comp["youtube"]["playlist"] = True
     except Exception as e:
         log("Compilation playlist skipped:", str(e)[:200])

@@ -4,7 +4,7 @@ import copy, json, sys, types, unittest
 from pathlib import Path
 from unittest import mock
 
-PLATFORMS = ("telegram", "storage", "instagram", "facebook", "threads", "tiktok", "youtube")
+PLATFORMS = ("telegram", "storage", "instagram", "facebook", "threads", "tiktok", "youtube", "yt_meta", "yt_playlists")
 TESTDATA = Path(__file__).resolve().parent / "testdata"
 
 
@@ -32,8 +32,8 @@ class Harness(unittest.TestCase):
         st.resolve_direct = lambda url: url + "?signed"
         st.download = lambda url, path: path
         yt = self.stubs["youtube"]
-        yt.page_url = lambda ep, lang="en": "https://allholysaints.com/x/"
-        yt.add_to_playlists = lambda ep, done=(): ["Saints of November"]
+        self.stubs["yt_meta"].page_url = lambda ep, lang="en": "https://allholysaints.com/x/"
+        self.stubs["yt_playlists"].add_to_playlists = lambda ep, done=(): ["Saints of November"]
         yt.set_thumbnail = lambda vid, jpg: None
         self.stubs["threads"].build_text = lambda ep, url: "text"
         patch = mock.patch.dict(sys.modules, self.stubs)
@@ -226,6 +226,41 @@ class Captions(unittest.TestCase):
             tags = ig_hashtags(case["episode"]["script"])
             self.assertLessEqual(len(tags), CAP.get("hashtags_max", 5))
             self.assertEqual(tags[0], CAP["hashtag_brand"])
+
+
+class YouTubeText(unittest.TestCase):
+    def test_title_description_tags_localizations_match_snapshot(self):
+        import yt_meta
+        with mock.patch.object(yt_meta, "load_config", return_value={"support_url": "https://ko-fi.com/example"}):
+            for case in json.loads((TESTDATA / "youtube.json").read_text()):
+                ep = case["episode"]
+                with self.subTest(ep["id"]):
+                    self.assertEqual(yt_meta.build_title(ep), case["title"])
+                    self.assertEqual(yt_meta.build_description(ep), case["description"])
+                    self.assertEqual(yt_meta.localizations(ep), case["localizations"])
+                    self.assertEqual(yt_meta.build_tags(ep), case["tags"])
+                    self.assertLessEqual(len(case["title"]), 100)
+
+
+class Stories(unittest.TestCase):
+    def test_music_card_stands_aside(self):
+        import datetime as dt
+        from story_music import _music_skip
+        self.assertEqual(_music_skip(dt.date(2026, 11, 22)), "Christ the King")
+        self.assertEqual(_music_skip(dt.date(2027, 3, 28)), "Easter")
+        self.assertEqual(_music_skip(dt.date(2026, 12, 20)), "O Antiphons / Christmas octave")
+        self.assertIsNone(_music_skip(dt.date(2026, 11, 15)))
+
+    def test_run_due_before_story_time_posts_nothing(self):
+        import datetime as dt
+        import stories, story_music
+        cfg = {"story_time": "23:59", "music_story": ""}
+        with mock.patch.object(stories, "load_config", return_value=cfg), \
+                mock.patch.object(story_music, "load_config", return_value=cfg), \
+                mock.patch.object(stories, "load_json", return_value=[]), \
+                mock.patch.object(stories, "save_json") as save:
+            stories.run_due(dt.datetime(2026, 11, 15, 10, 0, tzinfo=stories.tz()))
+        save.assert_not_called()
 
 
 class Cost(unittest.TestCase):

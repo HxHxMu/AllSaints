@@ -1,0 +1,1055 @@
+[
+ {
+  "episode": {
+   "id": "2026-11-01",
+   "date": "2026-11-01",
+   "status": "published",
+   "script": {
+    "saint": {
+     "name": "Saint Marcellus of Paris",
+     "display_name": "St. Marcellus of Paris",
+     "dates": "d. c. 436",
+     "region": "Lutetia (Paris), Roman Gaul",
+     "feast": "November 1",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "Tradition says a bishop of Paris turned the Seine's water into wine.",
+      "visual": "art",
+      "scene": "A devotional icon of a bishop in fifth-century vestments standing on the bank of a broad river. He raises his hand in blessing over a vessel of water, as townspeople in late Roman Gallic dress look on, with a small walled Roman town behind them.",
+      "art_hint": "Medieval illumination or painting of Saint Marcellus of Paris blessing; search: Saint Marcel Paris, Marcellus bishop Paris, Saint Marcel Seine"
+     },
+     {
+      "role": "who",
+      "text": "Saint Marcellus was born in Lutetia, Roman Gaul, the town we now call Paris, and died there in the fifth century.",
+      "visual": "map",
+      "lat": 48.8554,
+      "lon": 2.347,
+      "place": "Lutetia · Paris, France"
+     },
+     {
+      "role": "story",
+      "text": "He gave himself to virtue and to prayer. That is why he was recommended to Prudentius, the bishop of Paris. Prudentius ordained him a Reader.",
+      "visual": "art",
+      "scene": "A devotional icon of an older bishop in Roman-era liturgical dress laying a hand on a kneeling young man's head inside a plain Gallo-Roman basilica with round arches. A few clergy stand by, holding a book.",
+      "art_hint": "Ordination of a young cleric by a bishop, early medieval painting; search: Saint Marcel ordination, ordination clerc évêque enluminure, Saint Marcel Paris stained glass"
+     },
+     {
+      "role": "story",
+      "text": "Then he was raised to the priesthood. When Prudentius died, Marcellus became the ninth bishop of Paris.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus enthroned as bishop in a modest Gallo-Roman church, wearing a mitre-less bishop's vestments of the fifth century. Clergy and laity gather around him in a warm, candlelit interior.",
+      "art_hint": "Saint Marcel bishop of Paris enthroned or portrait; search: Saint Marcel évêque de Paris, Marcellus of Paris painting, Saint Marcel statue"
+     },
+     {
+      "role": "story",
+      "text": "His preaching brought many pagans to the faith. Tradition adds that Seine water became wine and balsam. According to legend, he faced a great serpent that terrified the town, laid his stole on it and led it away, commanding it never to return, a story told of Christianity's victory over evil. The Roman Martyrology keeps his feast on November 1; because that is All Saints' Day, Paris has also kept his memory on November 3.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus in bishop's vestments standing over a subdued dragon at the edge of a river outside the Roman town, one hand raised in blessing. Townspeople in Gallic dress watch from a distance.",
+      "art_hint": "Saint Marcel and the dragon, medieval art; search: Saint Marcel dragon, Saint Marcellus dragon Paris, Saint Marcel Notre-Dame sculpture"
+     },
+     {
+      "role": "turn",
+      "text": "Beyond the wonders, his story is one of prayer and preaching. A bell of Notre-Dame still bears his name. Quiet faithfulness is never forgotten by heaven.",
+      "visual": "art",
+      "scene": "A devotional icon of Marcellus kneeling in prayer before an altar in a simple church, with the towers of a medieval Notre-Dame de Paris rising beyond the window and a great bell hanging in a tower.",
+      "art_hint": "Notre-Dame de Paris bells or Saint Marcel prayer; search: Notre-Dame de Paris bell, Saint Marcel Notre-Dame, Saint Marcel Paris painting"
+     },
+     {
+      "role": "close",
+      "text": "Saint Marcellus, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Marcellus": "mar-SEL-us",
+     "Lutetia": "loo-TEE-shuh",
+     "Prudentius": "proo-DEN-shus",
+     "Seine": "SEN"
+    },
+    "caption_hook": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.",
+    "summary": "Saint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.",
+    "hashtags": [
+     "#saintmarcellus",
+     "#saintmarcel",
+     "#marcellusofparis",
+     "#paris",
+     "#notredame",
+     "#lutetia",
+     "#romangaul",
+     "#france",
+     "#catholicsaints",
+     "#allsaints",
+     "#novemberfirst",
+     "#lesserknownsaints",
+     "#catholicreels"
+    ],
+    "claims": [
+     {
+      "claim": "Marcellus of Paris was the ninth bishop of Paris.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "A bell of Notre-Dame de Paris is named after him.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was born in Lutetia, now Paris, in Roman Gaul.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He died in Paris on 1 November; the year is uncertain (410 or 436).",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "His dedication to virtue and prayer led to his recommendation to Prudentius, bishop of Paris.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Prudentius ordained him a Reader.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was promoted to the priesthood and succeeded Prudentius after his death.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "His preaching led to the conversion of many pagans.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He is said to have turned water from the Seine into wine and balsam.",
+      "source": 0,
+      "kind": "tradition"
+     },
+     {
+      "claim": "He is said to have subdued a great serpent with his stole and led it away from the town.",
+      "source": 1,
+      "kind": "tradition"
+     },
+     {
+      "claim": "His feast is 1 November in the Roman Martyrology; Paris also celebrated him on 3 November.",
+      "source": 1,
+      "kind": "history"
+     }
+    ],
+    "story": [
+     "Saint Marcellus was the ninth bishop of Paris, which in his day was still the Roman town of Lutetia, on the Île de la Cité in Gaul. He lived at the turn of the fifth century, in the years when the old Roman world was growing unsteady. We know him less through documents than through memory. Even the year of his death is uncertain.",
+     "Tradition holds that he was born into a modest family near the Petit-Pont, not far from where Notre-Dame stands today. Some accounts name the rue de la Calandre. These details belong to later tradition, because no records from his own time survive to confirm his childhood, his ordinations or the length of his ministry. What the sources describe is his character. He gave himself to prayer and to the practice of virtue, and he was serious and studious, especially in theology. That drew the notice of Prudentius, then bishop of Paris, who gave him the order of Reader and made him his archdeacon.",
+     "When Prudentius died and the see fell vacant, the people acclaimed Marcellus as his successor. He became bishop in a hard season. Roman administration had almost vanished, shaken by invasions from beyond the frontier. The sources describe a bishop who stepped into the gap. He stood against armed bands and defended his people, and he is said to have drained the marshes along the Bièvre river. He stayed close to ordinary folk, most of whom were still pagan. Preaching brought many of them to the faith.",
+     "His biography was written about the year 570, roughly a century and a half later. The poet Venantius Fortunatus composed it at the request of Germanus, bishop of Paris, working from oral tradition. Fortunatus admitted the limits of what he had received: most of the saint's deeds, he wrote, had been stolen away by the jealousy of time. Yet he left a picture of a bishop who gave himself fully to his duties. He worked for the conversion of sinners, the teaching of the ignorant, the visiting of the sick and the help of prisoners, and he laboured to keep friendship among all the faithful.",
+     "The Life is filled with wonders. It tells of healings, of water changed into wine, and of a contact with red-hot iron. Some accounts place the water miracle at the Seine and add balsam. These stories show the kind of holiness the sixth century admired. They are not independent proof that the events occurred, and they should be read as tradition.",
+     "The most famous tradition concerns a great serpent. According to legend, a woman of poor reputation was buried with great ceremony, and a huge serpent from the Bièvre marsh came and devoured her body. The townspeople were terrified. Marcellus confronted the creature, laid his stole upon it like a halter, and led it out of the city, commanding it never to return. The sources say we cannot tell whether this happened, and the animal cannot be matched to any real species. The story reached far beyond the tale itself, however. It shaped the public image of their bishop: a pastor at the head of his people, freeing them from fear, with the evil he drove out shown as a serpent or dragon at his feet.",
+     "Tradition gives November 1 as the day of his death, but the year is unknown. Many books give 436, though others suggest 410, and neither date is certain. According to Nominis, he himself chose his burial place, on the left bank of the Seine, south of the ancient city beside the Roman road toward Lyon and Italy. Archaeology confirms a late Roman burial ground there, in what is now the faubourg Saint-Marcel, though it has not identified his tomb. His grave soon became a place of pilgrimage. Gregory of Tours speaks of a small chapel in the area, a sign of how early the devotion began. The faithful of Lutetia used to say, simply, \"We are going to Saint-Marcel.\"",
+     "In time the church over the tomb grew into a collegiate church, and a district took his name. Tradition holds that his relics were carried to the cathedral at the time of the Norman raids, though other accounts place the move in the tenth century. The French Revolution destroyed much of this heritage, including relics attributed to him. Yet his memory remained in the name of a Paris quarter, in medieval images of the bishop and the serpent, including those at Notre-Dame, and in a bell of the cathedral that bears his name. The Roman Martyrology keeps his feast on November 1. Because that day is All Saints, the Church in Paris has also honoured him on November 3. Parishioners count him with Saint Denis and Saint Geneviève among the protectors of ancient Paris. His holiness lay in unglamorous work: prayer, teaching, the care of the poor and sick, and the steady defence of his flock."
+    ],
+    "patronages": [
+     "Paris"
+    ],
+    "places": [
+     "Paris",
+     "Notre-Dame de Paris",
+     "Faubourg Saint-Marcel"
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Marcellus of Paris",
+     "url": "https://en.wikipedia.org/wiki/Marcellus_of_Paris"
+    },
+    {
+     "title": "Santi e Beati: Marcellus of Paris",
+     "url": "https://www.santiebeati.it/dettaglio/93122"
+    },
+    {
+     "title": "Nominis (Église catholique en France): Marcellus of Paris",
+     "url": "https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html"
+    },
+    {
+     "title": "Ökumenisches Heiligenlexikon: Marcellus of Paris",
+     "url": "https://www.heiligenlexikon.de/BiographienM/Marcellus.html"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ],
+   "es": {
+    "name": "San Marcelo de París",
+    "display_name": "San Marcelo",
+    "region": "Lutecia (París), Galia romana",
+    "dates": "m. c. 436",
+    "hook": "Una campana de Notre-Dame lleva todavía el nombre de un obispo que la mayor parte del mundo ha olvidado.",
+    "summary": "San Marcelo, noveno obispo de París en el siglo V, es recordado por su oración, su predicación a los paganos y una campana de Notre-Dame que lleva su nombre.",
+    "story": [
+     "San Marcelo fue el noveno obispo de París, que en su tiempo todavía era la ciudad romana de Lutecia, en la isla de la Cité, en la Galia. Vivió hacia el cambio del siglo V, en los años en que el antiguo mundo romano se volvía inestable. Lo conocemos menos por documentos que por la memoria. Ni siquiera se sabe con certeza el año de su muerte.",
+     "Según la tradición, nació en una familia humilde cerca del Petit-Pont, no lejos de donde hoy se alza Notre-Dame. Algunos relatos mencionan la calle de la Calandre. Estos detalles pertenecen a la tradición posterior, pues no se conservan registros de su tiempo que confirmen su infancia, sus ordenaciones ni la duración de su ministerio. Lo que describen las fuentes es su carácter. Se entregó a la oración y a la práctica de la virtud, y fue serio y estudioso, especialmente en teología. Esto atrajo la atención de Prudencio, entonces obispo de París, que le confirió el orden de lector y lo hizo su archidiácono.",
+     "Cuando Prudencio murió y la sede quedó vacante, el pueblo aclamó a Marcelo como su sucesor. Llegó al episcopado en una época difícil. La administración romana casi había desaparecido, sacudida por las invasiones que llegaban desde más allá de la frontera. Las fuentes describen a un obispo que ocupó ese vacío. Se enfrentó a bandas armadas y defendió a su pueblo, y se dice que desecó los pantanos a lo largo del río Bièvre. Permaneció cerca de la gente sencilla, la mayoría todavía pagana. La predicación llevó a muchos de ellos a la fe.",
+     "Su biografía fue escrita hacia el año 570, unos siglo y medio después. El poeta Venancio Fortunato la compuso a petición de Germán, obispo de París, basándose en la tradición oral. Fortunato reconoció los límites de lo que había recibido: la mayor parte de las obras del santo, escribió, habían sido arrebatadas por la envidia del tiempo. Aun así, dejó el retrato de un obispo que se entregó por completo a sus deberes. Trabajó por la conversión de los pecadores, la enseñanza de los ignorantes, la visita a los enfermos y la ayuda a los presos, y se esforzó por mantener la amistad entre todos los fieles.",
+     "La Vida está llena de prodigios. Narra curaciones, agua convertida en vino y un contacto con hierro al rojo vivo. Algunos relatos sitúan el milagro del agua en el Sena y añaden un bálsamo. Estos relatos muestran el tipo de santidad que admiraba el siglo VI. No son una prueba independiente de que los hechos ocurrieran, y deben leerse como tradición.",
+     "La tradición más famosa se refiere a una gran serpiente. Según la leyenda, una mujer de mala fama fue enterrada con gran ceremonia, y una enorme serpiente surgida del pantano del Bièvre llegó y devoró su cuerpo. Los habitantes de la ciudad se aterrorizaron. Marcelo se enfrentó a la criatura, colocó sobre ella su estola a modo de ronzal y la condujo fuera de la ciudad, ordenándole que nunca regresara. Las fuentes dicen que no podemos saber si esto sucedió, y el animal no puede identificarse con ninguna especie real. Sin embargo, el relato fue mucho más allá del cuento. Dio forma a la imagen pública de su obispo: un pastor al frente de su pueblo, que lo libera del miedo, con el mal que expulsó representado como una serpiente o un dragón a sus pies.",
+     "Según la tradición, su muerte ocurrió el 1 de noviembre, pero el año es desconocido. Muchos libros dan el 436, aunque otros sugieren el 410, y ninguna de las dos fechas es segura. Según Nominis, él mismo eligió su lugar de sepultura, en la orilla izquierda del Sena, al sur de la antigua ciudad, junto a la calzada romana que iba hacia Lyon e Italia. La arqueología confirma un cementerio de época romana tardía en lo que hoy es el faubourg Saint-Marcel, aunque no ha identificado su tumba. Su sepulcro pronto se convirtió en lugar de peregrinación. Gregorio de Tours habla de una pequeña capilla en la zona, señal de lo temprano que surgió esta devoción. Los fieles de Lutecia solían decir sencillamente: «Vamos a Saint-Marcel».",
+     "Con el tiempo, la iglesia construida sobre la tumba se convirtió en colegiata, y un barrio tomó su nombre. Según la tradición, sus reliquias fueron llevadas a la catedral durante las incursiones normandas, aunque otros relatos sitúan el traslado en el siglo X. La Revolución Francesa destruyó gran parte de este patrimonio, incluidas las reliquias que se le atribuían. Sin embargo, su memoria permaneció en el nombre de un barrio de París, en imágenes medievales del obispo y la serpiente, entre ellas las de Notre-Dame, y en una campana de la catedral que lleva su nombre. El Martirologio Romano conserva su fiesta el 1 de noviembre. Como ese día es Todos los Santos, la Iglesia en París también lo ha honrado el 3 de noviembre. Los fieles de la parroquia lo cuentan, junto a San Dionisio y Santa Genoveva, entre los protectores del antiguo París. Su santidad estuvo en una labor poco llamativa: la oración, la enseñanza, el cuidado de pobres y enfermos, y la defensa constante de su grey."
+    ],
+    "prayer": "San Marcelo, ruega por nosotros.",
+    "patronages": [
+     "París"
+    ],
+    "places": [
+     "París",
+     "Notre-Dame de París",
+     "Faubourg Saint-Marcel"
+    ],
+    "slug": "marcelo-de-paris"
+   },
+   "slug": "marcellus-of-paris",
+   "saint": {
+    "qid": "Q714835",
+    "name": "Saint Marcellus of Paris",
+    "display_name": "St. Marcellus of Paris",
+    "dates": "d. c. 436",
+    "region": "Lutetia (Paris), Roman Gaul",
+    "feast": "November 1",
+    "martyr": false
+   }
+  },
+  "title": "St. Marcellus of Paris, Lutetia (Paris), Roman Gaul #Shorts",
+  "description": "A bell in Notre-Dame still carries the name of a bishop most of the world has forgotten.\n\nSaint Marcellus, ninth bishop of Paris in the fifth century, is remembered for his prayer, his preaching to pagans, and a bell of Notre-Dame that bears his name.\n\nSaint Marcellus of Paris · d. c. 436 · Feast day: November 1\n\nSaint Marcellus, pray for us. 🕯\n\nRead the full story: https://allholysaints.com/saints/marcellus-of-paris/\n\n—\nSources:\n• Wikipedia: Marcellus of Paris: https://en.wikipedia.org/wiki/Marcellus_of_Paris\n• Santi e Beati: Marcellus of Paris: https://www.santiebeati.it/dettaglio/93122\n• Nominis (Église catholique en France): Marcellus of Paris: https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html\n• Ökumenisches Heiligenlexikon: Marcellus of Paris: https://www.heiligenlexikon.de/BiographienM/Marcellus.html\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\nResearched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.\n\n🕯 Help keep the forgotten remembered. Light a candle: https://ko-fi.com/example\nSubscribe for a forgotten saint every morning, and pray with us.\n\n#saintmarcellus #saintoftheday #catholicsaints #Shorts",
+  "localizations": {
+   "es": {
+    "title": "San Marcelo: Una campana de Notre-Dame lleva todavía el nombre de un obispo que la mayor… #Shorts",
+    "description": "Una campana de Notre-Dame lleva todavía el nombre de un obispo que la mayor parte del mundo ha olvidado.\n\nSan Marcelo, noveno obispo de París en el siglo V, es recordado por su oración, su predicación a los paganos y una campana de Notre-Dame que lleva su nombre.\n\nSan Marcelo de París · m. c. 436 · Fiesta: 1 de noviembre\n\nSan Marcelo, ruega por nosotros. 🕯\n\nLee su historia completa: https://allholysaints.com/es/santos/marcelo-de-paris/\n\n—\nFuentes:\n• Wikipedia: Marcellus of Paris: https://en.wikipedia.org/wiki/Marcellus_of_Paris\n• Santi e Beati: Marcellus of Paris: https://www.santiebeati.it/dettaglio/93122\n• Nominis (Église catholique en France): Marcellus of Paris: https://nominis.cef.fr/contenus/saint/8928/Saint-Marcel-de-Paris.html\n• Ökumenisches Heiligenlexikon: Marcellus of Paris: https://www.heiligenlexikon.de/BiographienM/Marcellus.html\nArte: Ilustración al estilo bizantino, generada por IA (Google Gemini)\nInvestigado y escrito con ayuda de IA, verificado con las fuentes indicadas arriba y aprobado por una persona antes de publicarse. La narración es una voz de IA; los iconos son arte generado por IA al estilo bizantino.\n\n#santos #catolico #Shorts"
+   }
+  },
+  "tags": [
+   "Saint Marcellus of Paris",
+   "St. Marcellus of Paris",
+   "Lutetia (Paris), Roman Gaul",
+   "Catholic saints",
+   "saint of the day",
+   "lives of the saints",
+   "saintmarcellus",
+   "saintmarcel",
+   "marcellusofparis",
+   "paris",
+   "notredame",
+   "lutetia",
+   "romangaul",
+   "france",
+   "catholicsaints",
+   "allsaints",
+   "novemberfirst",
+   "lesserknownsaints",
+   "catholicreels"
+  ]
+ },
+ {
+  "episode": {
+   "id": "2026-11-05",
+   "date": "2026-11-05",
+   "status": "published",
+   "script": {
+    "saint": {
+     "name": "Saint Guido Maria Conforti",
+     "display_name": "St. Guido Maria Conforti",
+     "dates": "1865 – 1931",
+     "region": "Parma, Italy",
+     "feast": "November 5",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "He longed to be a missionary, but two religious orders turned him away.",
+      "visual": "art",
+      "scene": "A young Italian seminarian in a black cassock stands before the closed wooden door of a stone religious house, his hands folded and his head slightly bowed. The setting is a late nineteenth-century Italian town street at dusk.",
+      "art_hint": "a young priest at a closed door, a longing for mission. Search: Guido Maria Conforti, Conforti young, seminarian Parma, Xaverian founder"
+     },
+     {
+      "role": "who",
+      "text": "Saint Guido Maria Conforti, born in eighteen sixty-five, near Parma, Italy.",
+      "visual": "map",
+      "lat": 44.8,
+      "lon": 10.33,
+      "place": "Parma · Italy"
+     },
+     {
+      "role": "story",
+      "text": "On his way to school, he stopped each day at church to speak with Christ crucified. He recalled, \"I looked at Him and He looked at me and seemed to say so many things.\"",
+      "visual": "art",
+      "scene": "A small boy in plain nineteenth-century Italian village clothes kneels alone before a large crucifix in a modest parish church, his school satchel set beside him. Soft light falls through a window onto the cross.",
+      "art_hint": "a boy praying before a crucifix in a village church. Search: Guido Conforti boy, Santa Maria della Pace Ravadese, child praying crucifix, Conforti"
+     },
+     {
+      "role": "story",
+      "text": "In seminary, he read Francis Xavier and longed to be a missionary. So in eighteen ninety-five, he founded the Xaverian Missionaries.",
+      "visual": "art",
+      "scene": "A priest in a black cassock sits at a desk in a Parma seminary study with an open book. Beside him a small group of young men in cassocks gather as the first members of his new missionary society.",
+      "art_hint": "a priest founding a missionary society with young followers. Search: Xaverian Missionaries founder, Conforti founder, Saint Francis Xavier portrait, Parma seminary"
+     },
+     {
+      "role": "story",
+      "text": "In eighteen ninety-nine, he sent the first of them to China.",
+      "visual": "art",
+      "scene": "Young European missionaries in black cassocks, with small bundles, stand on a harbor quay in China as a steamship waits. Qing-dynasty buildings with curved tiled roofs and local people in period dress are behind them.",
+      "art_hint": "missionaries arriving in China around 1900. Search: Xaverian missionaries China, Qing dynasty harbor, missionaries China 1899, Xaverian China"
+     },
+     {
+      "role": "story",
+      "text": "Poor health led him from Ravenna to Parma, where he visited every parish.",
+      "visual": "art",
+      "scene": "A bishop in a purple cassock and simple cap rides a horse along a rural road in Emilia, Italy, toward a village with a brick bell tower. Farm fields and poplars lie around him.",
+      "art_hint": "a bishop on horseback visiting country parishes in Italy. Search: Guido Conforti bishop Parma, Conforti archbishop, Parma countryside, Duomo di Parma"
+     },
+     {
+      "role": "turn",
+      "text": "Turned away himself, he opened the road for others. In nineteen twenty-eight, he traveled to China to visit them. A refused dream can still reach the world.",
+      "visual": "art",
+      "scene": "An archbishop in his sixties, in a purple cassock, is greeted by Xaverian missionaries in black cassocks in Shanghai in the 1920s. City rooftops are visible behind them.",
+      "art_hint": "an archbishop greeting missionaries in China. Search: Guido Maria Conforti China 1928, Conforti Shanghai, Xaverian mission China, Saint Guido Conforti"
+     },
+     {
+      "role": "close",
+      "text": "Saint Guido Maria Conforti, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Guido": "GWEE-doh",
+     "Conforti": "kon-FOR-tee",
+     "Xaverian": "ZAY-veer-ee-an",
+     "Xavier": "ZAY-vee-er",
+     "Ravenna": "rah-VEN-nah",
+     "Parma": "PAR-mah"
+    },
+    "caption_hook": "Rejected by the Jesuits and the Salesians, he founded his own mission and sent it to China.",
+    "summary": "Saint Guido Maria Conforti, turned away from the missionary orders he sought, founded the Xaverian Missionaries and sent them to China.",
+    "youtube_title": "St. Guido Conforti: Refused as a Missionary, He Founded One",
+    "hashtags": [
+     "#saintguidomariaconforti",
+     "#parma",
+     "#xaverianmissionaries",
+     "#guidoconforti",
+     "#italy",
+     "#catholicmissions",
+     "#missionaries",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#saintoftheday",
+     "#catholic",
+     "#allsaints"
+    ],
+    "share_cta": "Know someone named Guido? Send them their saint.",
+    "claims": [
+     {
+      "claim": "Conforti's requests to join the Society of Jesus and the Salesians of Saint John Bosco were denied.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He felt a desire to be a missionary after reading the works of Francis Xavier in seminary.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was born in 1865 in Casalora di Ravadese, in the diocese and province of Parma, Italy.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "As a schoolboy, he stopped each day at his parish church and conversed with the crucified Christ.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He later recalled: \"I looked at Him and He looked at me and seemed to say so many things.\"",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He founded the Xaverian Missionaries on 3 December 1895.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "In 1899 he sent the order's first missionaries to China.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He became Archbishop of Ravenna in 1902 and resigned in 1904 because of ill health, then became Coadjutor Bishop and later Bishop of Parma.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "As Bishop of Parma he traveled to all parishes by horseback or other means.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He traveled to China in 1928 to visit the Xaverian Missionaries working there, arriving in Shanghai on 26 October 1928.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He died on 5 November 1931, was beatified in 1996 and was canonized in 2011 by Pope Benedict XVI.",
+      "source": 0,
+      "kind": "history"
+     }
+    ],
+    "story": [
+     "Guido Maria Conforti was born in 1865 at Casalora di Ravadese, in the countryside of the diocese of Parma, Italy. He was the eighth of ten children of Rinaldo and Antonia Adorni Conforti. His father hoped that the boy would stay and manage the family farm.",
+     "From 1872 Guido attended an elementary school run by the De La Salle Brothers. Each day on his way there he stopped at Santa Maria della Pace, his parish church, to speak with the crucified Jesus. Those quiet visits are where his vocation first became clear. He later recalled: \"I looked at Him and He looked at me and seemed to say so many things.\"",
+     "In November 1876 he entered the seminary in Parma, despite his father's hopes for the farm. There he began to read the works of Francis Xavier, and the great missionary inspired in him a desire to be a missionary. He asked to join the Society of Jesus or the Salesians of Saint John Bosco, but both requests were denied. The seminary's rector, Andrea Carlo Ferrari, who later became a cardinal and is now Blessed, became his mentor. Conforti was appointed vice-rector.",
+     "He was ordained a priest on 22 September 1888 at Fontanellato and then served as a professor at the local seminary. The missionary calling that two religious families had set aside did not leave him. On 3 December 1895 he founded the Xaverian Missionaries, named for the saint who had first stirred his heart. Pope Leo XIII approved the new community on 3 December 1898, and in 1899 Conforti sent its first missionaries to China. In 1896 he had also become Vicar-General of the Diocese of Parma.",
+     "In May 1902 Leo XIII named him Archbishop of Ravenna, and he was consecrated on 11 June 1902 at the Basilica of Saint Paul Outside the Walls in Rome. His health was poor, and in October 1904 he submitted his resignation. On 14 November of that year he was made Coadjutor Bishop of Parma and Titular Archbishop of Stauropolis. In 1907 he became Bishop of Parma, keeping the personal title of Archbishop. He traveled to the parishes of his diocese on horseback or by other means, and he worked especially for religious education and for the involvement of young people in the life of the Church.",
+     "His concern for the missions reached beyond his own diocese. He is said to have provided the initiative behind Pope Benedict XV's encyclical Maximum illud, issued on 30 November 1919, which is called the Magna Carta of modern Catholic missionary work. In 1928 he traveled to China to see the Xaverian Missionaries at work. He reached Shanghai on 26 October 1928 and met his contacts to inspect their labors. The man who had been refused entry into the missionary orders now stood in the mission field to which he had sent others.",
+     "Conforti returned to Parma and fell ill in October 1931. He died about a month later, on 5 November 1931, and was interred in Parma. His tomb was moved in 1942 and again in 1996. His spiritual writings were approved by theologians in 1946, and his cause was opened in Parma in 1959. Pope John Paul II declared him Venerable on 11 February 1982 and beatified him on 17 March 1996. Pope Benedict XVI approved the decree for a second miracle on 10 December 2010 and canonized him on 23 October 2011."
+    ],
+    "patronages": [],
+    "places": [
+     "Parma",
+     "Casalora di Ravadese",
+     "Ravenna",
+     "Shanghai"
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Guido Maria Conforti",
+     "url": "https://en.wikipedia.org/wiki/Guido_Maria_Conforti"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ],
+   "es": {
+    "display_name": "San Guido",
+    "name": "San Guido María Conforti",
+    "region": "Parma, Italia",
+    "dates": "1865 – 1931",
+    "hook": "Rechazado por los jesuitas y los salesianos, fundó su propia misión y la envió a China.",
+    "summary": "San Guido María Conforti, rechazado por las órdenes misioneras a las que quiso unirse, fundó a los Misioneros Xaverianos y los envió a China.",
+    "story": [
+     "Guido María Conforti nació en 1865 en Casalora di Ravadese, en el campo de la diócesis de Parma, Italia. Era el octavo de diez hijos de Rinaldo y Antonia Adorni Conforti. Su padre esperaba que el muchacho se quedara y administrara la granja familiar.",
+     "Desde 1872 Guido asistió a una escuela primaria dirigida por los Hermanos de La Salle. Cada día, de camino a la escuela, se detenía en Santa María de la Paz, la iglesia de su parroquia, para hablar con Jesús crucificado. Aquellas visitas silenciosas fueron el lugar donde su vocación se hizo clara por primera vez. Más tarde recordó: \"Lo miré y Él me miró y parecía decirme tantas cosas.\"",
+     "En noviembre de 1876 ingresó en el seminario de Parma, a pesar de las esperanzas de su padre respecto a la granja. Allí comenzó a leer las obras de San Francisco Javier, y el gran misionero despertó en él el deseo de ser misionero. Pidió ingresar en la Compañía de Jesús o en los Salesianos de San Juan Bosco, pero ambas solicitudes fueron denegadas. El rector del seminario, Andrés Carlos Ferrari, que más tarde llegó a ser cardenal y hoy es beato, se convirtió en su mentor. Conforti fue nombrado vicerrector.",
+     "Fue ordenado sacerdote el 22 de septiembre de 1888 en Fontanellato, y luego sirvió como profesor en el seminario local. La vocación misionera que dos congregaciones religiosas habían dejado de lado no lo abandonó. El 3 de diciembre de 1895 fundó los Misioneros Xaverianos, que llevan el nombre del santo que primero despertó su corazón. El papa León XIII aprobó la nueva comunidad el 3 de diciembre de 1898, y en 1899 Conforti envió a sus primeros misioneros a China. En 1896 también había sido nombrado vicario general de la diócesis de Parma.",
+     "En mayo de 1902 el papa León XIII lo nombró arzobispo de Rávena, y fue consagrado el 11 de junio de 1902 en la Basílica de San Pablo Extramuros, en Roma. Su salud era frágil, y en octubre de 1904 presentó su renuncia. El 14 de noviembre de ese año fue nombrado obispo coadjutor de Parma y arzobispo titular de Stauropolis. En 1907 se convirtió en obispo de Parma, conservando el título personal de arzobispo. Recorría las parroquias de su diócesis a caballo o por otros medios, y trabajó especialmente por la educación religiosa y por la participación de los jóvenes en la vida de la Iglesia.",
+     "Su preocupación por las misiones fue más allá de su propia diócesis. Se dice que él dio la iniciativa de la encíclica Maximum illud del papa Benedicto XV, publicada el 30 de noviembre de 1919, que es llamada la Magna Carta de la obra misionera católica moderna. En 1928 viajó a China para ver a los Misioneros Xaverianos en plena labor. Llegó a Shanghái el 26 de octubre de 1928 y se reunió con sus contactos para inspeccionar sus trabajos. El hombre al que se le había negado el ingreso en las órdenes misioneras estaba ahora en el campo de misión al que había enviado a otros.",
+     "Conforti regresó a Parma y enfermó en octubre de 1931. Murió alrededor de un mes después, el 5 de noviembre de 1931, y fue sepultado en Parma. Su tumba fue trasladada en 1942 y de nuevo en 1996. Sus escritos espirituales fueron aprobados por teólogos en 1946, y su causa de beatificación se abrió en Parma en 1959. El papa Juan Pablo II lo declaró venerable el 11 de febrero de 1982 y lo beatificó el 17 de marzo de 1996. El papa Benedicto XVI aprobó el decreto de un segundo milagro el 10 de diciembre de 2010 y lo canonizó el 23 de octubre de 2011."
+    ],
+    "prayer": "San Guido María Conforti, ruega por nosotros.",
+    "patronages": [],
+    "places": [
+     "Parma",
+     "Casalora di Ravadese",
+     "Rávena",
+     "Shanghái"
+    ],
+    "slug": "guido-maria-conforti"
+   },
+   "slug": "guido-maria-conforti",
+   "saint": {
+    "qid": "Q204891",
+    "name": "Saint Guido Maria Conforti",
+    "display_name": "St. Guido Maria Conforti",
+    "dates": "1865 – 1931",
+    "region": "Parma, Italy",
+    "feast": "November 5",
+    "martyr": false
+   }
+  },
+  "title": "St. Guido Conforti: Refused as a Missionary, He Founded One #Shorts",
+  "description": "Rejected by the Jesuits and the Salesians, he founded his own mission and sent it to China.\n\nSaint Guido Maria Conforti, turned away from the missionary orders he sought, founded the Xaverian Missionaries and sent them to China.\n\nSaint Guido Maria Conforti · 1865 – 1931 · Feast day: November 5\n\nSaint Guido Maria Conforti, pray for us. 🕯\n\nRead the full story: https://allholysaints.com/saints/guido-maria-conforti/\n\n—\nSources:\n• Wikipedia: Guido Maria Conforti: https://en.wikipedia.org/wiki/Guido_Maria_Conforti\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\nResearched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.\n\nKnow someone named Guido? Send them their saint.\n🕯 Help keep the forgotten remembered. Light a candle: https://ko-fi.com/example\nSubscribe for a forgotten saint every morning, and pray with us.\n\n#saintguidomariaconforti #saintoftheday #catholicsaints #Shorts",
+  "localizations": {
+   "es": {
+    "title": "San Guido: Rechazado por los jesuitas y los salesianos, fundó su propia misión y la envió… #Shorts",
+    "description": "Rechazado por los jesuitas y los salesianos, fundó su propia misión y la envió a China.\n\nSan Guido María Conforti, rechazado por las órdenes misioneras a las que quiso unirse, fundó a los Misioneros Xaverianos y los envió a China.\n\nSan Guido María Conforti · 1865 – 1931 · Fiesta: 5 de noviembre\n\nSan Guido María Conforti, ruega por nosotros. 🕯\n\nLee su historia completa: https://allholysaints.com/es/santos/guido-maria-conforti/\n\n—\nFuentes:\n• Wikipedia: Guido Maria Conforti: https://en.wikipedia.org/wiki/Guido_Maria_Conforti\nArte: Ilustración al estilo bizantino, generada por IA (Google Gemini)\nInvestigado y escrito con ayuda de IA, verificado con las fuentes indicadas arriba y aprobado por una persona antes de publicarse. La narración es una voz de IA; los iconos son arte generado por IA al estilo bizantino.\n\n#santos #catolico #Shorts"
+   }
+  },
+  "tags": [
+   "Saint Guido Maria Conforti",
+   "St. Guido Maria Conforti",
+   "Parma, Italy",
+   "Catholic saints",
+   "saint of the day",
+   "lives of the saints",
+   "saintguidomariaconforti",
+   "parma",
+   "xaverianmissionaries",
+   "guidoconforti",
+   "italy",
+   "catholicmissions",
+   "missionaries",
+   "catholicsaints",
+   "lesserknownsaints",
+   "saintoftheday",
+   "catholic",
+   "allsaints"
+  ]
+ },
+ {
+  "episode": {
+   "id": "2026-11-08",
+   "date": "2026-11-08",
+   "status": "published",
+   "script": {
+    "saint": {
+     "name": "Saint Willehad",
+     "display_name": "St. Willehad",
+     "dates": "c. 745 – 789",
+     "region": "Bremen, Germany",
+     "feast": "November 8",
+     "martyr": false
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "Again and again, people tried to kill him. He kept coming back.",
+      "visual": "art",
+      "scene": "An icon of Saint Willehad as an eighth-century missionary in a plain traveling cloak, standing with a staff at the edge of a northern marshland. Thatched wooden dwellings and a gray sea lie behind him, and his hand is raised in blessing."
+     },
+     {
+      "role": "who",
+      "text": "Willehad was born in Northumbria, in England, and in the eighth century became a missionary to the Frisians and Saxons.",
+      "visual": "map",
+      "lat": 53.08,
+      "lon": 8.8,
+      "place": "Bremen · Germany"
+     },
+     {
+      "role": "story",
+      "text": "About the year seven sixty-six, he went to Frisia to continue the work of Boniface, who had been martyred there.",
+      "visual": "art",
+      "scene": "An icon of Saint Willehad, in a monk's robe, preaching to a small crowd of Frisian villagers in a flat, windswept landscape of low turf-roofed houses and reed-lined waterways under a wide sky."
+     },
+     {
+      "role": "story",
+      "text": "Charlemagne sent him to the Saxons. After two years, they rebelled, and a number of his friends were killed.",
+      "visual": "art",
+      "scene": "An icon of Saint Willehad on a road at the edge of a Saxon forest, a small group of missionaries in dark robes gathered close behind him, under a heavy sky."
+     },
+     {
+      "role": "story",
+      "text": "Willehad fled, and went to Rome to report to the pope. Then he withdrew to the monastery of Echternach. For two years he worked in its scriptorium, and gathered his missionary team.",
+      "visual": "art",
+      "scene": "An icon of Saint Willehad seated at a slanted desk in a Carolingian monastery scriptorium, with parchment and pens before him. Round-arched windows let in soft light, and a few younger monks work beside him."
+     },
+     {
+      "role": "turn",
+      "text": "In seven eighty-seven he became bishop of Bremen, and built its cathedral. It was dedicated in seven eighty-nine, the year he died. His holiness was the patience to begin again.",
+      "visual": "art",
+      "scene": "An icon of Saint Willehad as bishop, in mitre and vestments, holding a small model of his cathedral. A modest northern town and the River Weser lie behind him."
+     },
+     {
+      "role": "close",
+      "text": "May we, too, begin again. Saint Willehad, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Willehad": "WIL-uh-had",
+     "Echternach": "EKH-ter-nahk",
+     "Frisia": "FREE-zhuh",
+     "Frisians": "FREE-zhunz"
+    },
+    "caption_hook": "He lost friends, fled for his life, and still went back to the work.",
+    "summary": "Saint Willehad, a Northumbrian missionary, survived threats and a Saxon revolt, then rebuilt his mission and became Bishop of Bremen.",
+    "youtube_title": "St. Willehad: The Missionary Who Kept Coming Back",
+    "hashtags": [
+     "#saintwillehad",
+     "#bremen",
+     "#frisia",
+     "#saxony",
+     "#northumbria",
+     "#charlemagne",
+     "#missionary",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#saintoftheday",
+     "#allsaints",
+     "#catholic"
+    ],
+    "share_cta": "",
+    "claims": [
+     {
+      "claim": "Willehad was a Christian missionary and became Bishop of Bremen in 787.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was born in Northumbria, and probably educated at York under Ecgbert.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He was a friend of Alcuin.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "About 766 he went to Frisia to continue the missionary work of Boniface, who was martyred by the Frisians in 754.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He preached at Dokkum and in Overijssel.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "At Paderborn in 777 Saxony was divided into missionary zones, and the zone called Wigmodia, between the Weser and the Elbe, was given to Willehad.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "From 780 he preached in the lower Weser region on commission from Charlemagne.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He barely escaped with his life when the Frisians wanted to kill him, and again when local pagans wanted to kill him and his companions for destroying temples.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Charlemagne sent him to evangelize the Saxons; he preached to them for two years.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "In 782 the Saxons under Widukind rebelled against Charlemagne, Willehad fled to Frisia, and a number of his assistants and friends were killed.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He traveled to Rome and reported on his work to Pope Adrian I.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He then retired to the monastery of Echternach, where for two years he worked in the scriptorium and reassembled his missionary team.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "In 787 he was consecrated bishop and chose Bremen as his see.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He built a cathedral at Bremen, dedicated in 789, and a small church at Blexen.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "He died at Blexen on 8 November 789 and is buried in Bremen's cathedral.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Anschar wrote a life of Willehad, whose preface was considered a masterpiece for its age, and praised the cathedral's beauty.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "In 860 a sick girl from Wege traveled to his grave and was reportedly cured.",
+      "source": 0,
+      "kind": "tradition"
+     }
+    ],
+    "patronages": [],
+    "places": [
+     "Bremen",
+     "Blexen",
+     "Dokkum",
+     "Echternach",
+     "Northumbria"
+    ],
+    "story": [
+     "Willehad was born in Northumbria, in the north of England, around the year 745. He probably received his education at York, under Ecgbert, and he counted Alcuin among his friends. Little else is recorded of his early years. After his ordination, he turned to missionary work.",
+     "About the year 766, Willehad went to Frisia, on the North Sea coast of the continent. He came to continue the mission of Boniface, who had been martyred by the Frisians in 754. It was not a place that promised a warm welcome. Willehad preached at Dokkum and in Overijssel, following in the footsteps of a man who had died doing the same work.",
+     "The work was slow and dangerous. At an assembly in Paderborn in 777, the lands of the Saxons were divided into missionary zones, and the region between the Weser and the Elbe, called Wigmodia, was given to Willehad. From 780 he preached in the lower Weser region on commission from Charlemagne. Twice in these years he barely escaped with his life. Once it was the Frisians who wanted to kill him, and he returned to the area around Utrecht. Another time, local pagans wanted to kill him and his fellow missionaries for destroying some of their temples.",
+     "Charlemagne then sent him to evangelize the Saxons, and for two years Willehad preached among them. Then, in 782, the Saxons rose in revolt against Charlemagne under their leader Widukind. Willehad had to flee to Frisia. A number of his assistants and friends were killed. The sources do not describe his grief, and we will not invent it. We can only say that a missionary's life is lived among people, and he had lost some of the people he worked beside.",
+     "What he did next is worth noticing. He did not simply return to the field. He traveled to Rome and reported on his work to Pope Adrian I. Then he retired for a time to the monastery of Echternach, in present-day Luxembourg. For two years he worked in the scriptorium, and he used that quiet time to reassemble his missionary team. It was a season of stillness and preparation, between the failures behind him and the work ahead.",
+     "After Charlemagne's conquest of the Saxons, Willehad went back to preach around the lower Elbe and the lower Weser. In 787 he was consecrated bishop, and the part of Saxony and Friesland near the mouth of the Weser was assigned to him as his diocese. He chose the city of Bremen as his see, and there he built a cathedral. Anschar, who later wrote his life, praised it for its beauty. It was dedicated in 789. Willehad also built a small church at Blexen, on the Weser.",
+     "He died at Blexen on 8 November 789, shortly after the cathedral he had built was consecrated, and he was buried in it. His death was not a martyrdom, but the end of a long labor. Anschar's Life of Willehad survives, and its preface was considered a masterpiece for that age. Tradition adds one more note to his story. In 860, a sick girl from the village of Wege, now Weyhe, traveled to his grave and was reportedly cured. That account is also the first time her village appears in any historical document. Willehad is remembered as a man who was driven out more than once and returned each time, and who left behind a church and a city's cathedral."
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Willehad",
+     "url": "https://en.wikipedia.org/wiki/Willehad"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ],
+   "es": {
+    "display_name": "San Willehad",
+    "name": "San Willehad",
+    "region": "Bremen, Alemania",
+    "dates": "c. 745 – 789",
+    "hook": "Perdió a amigos, huyó para salvar la vida y, aun así, volvió a su labor.",
+    "summary": "San Willehad, misionero northumbrio, sobrevivió a amenazas y a una revuelta sajona, luego reconstruyó su misión y llegó a ser obispo de Bremen.",
+    "story": [
+     "Willehad nació en Northumbria, en el norte de Inglaterra, hacia el año 745. Probablemente recibió su formación en York, bajo Egberto, y contó entre sus amigos a Alcuino. De sus primeros años se conserva poca información más. Después de su ordenación, se dedicó a la labor misionera.",
+     "Hacia el año 766, Willehad fue a Frisia, en la costa del Mar del Norte, en el continente. Llegó para continuar la misión de Bonifacio, quien había sido martirizado por los frisones en el 754. No era un lugar que prometiera una acogida cálida. Willehad predicó en Dokkum y en Overijssel, siguiendo los pasos de un hombre que había muerto realizando la misma labor.",
+     "La obra fue lenta y peligrosa. En una asamblea celebrada en Paderborn en el 777, las tierras de los sajones se dividieron en zonas misionales, y la región entre el Weser y el Elba, llamada Wigmodia, se encomendó a Willehad. Desde el 780 predicó en la zona baja del Weser por encargo de Carlomagno. En esos años estuvo dos veces a punto de perder la vida. Una vez fueron los frisones quienes quisieron matarlo, y regresó a los alrededores de Utrecht. Otra vez, paganos del lugar quisieron matarlo a él y a sus compañeros misioneros por haber destruido algunos de sus templos.",
+     "Carlomagno lo envió después a evangelizar a los sajones, y durante dos años Willehad predicó entre ellos. Luego, en el 782, los sajones se levantaron en revuelta contra Carlomagno bajo su caudillo Widukind. Willehad tuvo que huir a Frisia. Varios de sus auxiliares y amigos fueron asesinados. Las fuentes no describen su dolor, y nosotros no lo vamos a inventar. Solo podemos decir que la vida de un misionero transcurre entre personas, y él había perdido a algunas de las personas con quienes trabajaba codo a codo.",
+     "Lo que hizo a continuación merece atención. No volvió simplemente al campo de misión. Viajó a Roma e informó de su labor al papa Adriano I. Después se retiró durante un tiempo al monasterio de Echternach, en la actual Luxemburgo. Durante dos años trabajó en el scriptorium y aprovechó ese tiempo de quietud para reorganizar su equipo misionero. Fue una época de calma y preparación, entre los fracasos que quedaban atrás y la labor que le esperaba.",
+     "Tras la conquista de los sajones por Carlomagno, Willehad regresó a predicar por la zona baja del Elba y del Weser. En el 787 fue consagrado obispo, y la parte de Sajonia y Frisia cercana a la desembocadura del Weser le fue asignada como diócesis. Eligió la ciudad de Bremen como sede y allí construyó una catedral. Anscario, que más tarde escribió su vida, alabó su belleza. Fue dedicada en el 789. Willehad también construyó una pequeña iglesia en Blexen, junto al Weser.",
+     "Murió en Blexen el 8 de noviembre del 789, poco después de que se consagrara la catedral que había construido, y fue enterrado en ella. Su muerte no fue un martirio, sino el final de una larga labor. Se conserva la Vida de Willehad, escrita por Anscario, cuyo prólogo fue considerado una obra maestra para aquella época. La tradición añade una nota más a su historia. En el 860, una niña enferma de la aldea de Wege, hoy Weyhe, viajó hasta su tumba y, según se relata, quedó curada. Ese relato es también la primera vez que su aldea aparece en un documento histórico. Willehad es recordado como un hombre que fue expulsado en más de una ocasión y que regresó cada vez, y que dejó tras de sí una iglesia y la catedral de una ciudad."
+    ],
+    "prayer": "Que también nosotros volvamos a empezar. San Willehad, ruega por nosotros.",
+    "patronages": [],
+    "places": [
+     "Bremen",
+     "Blexen",
+     "Dokkum",
+     "Echternach",
+     "Northumbria"
+    ],
+    "slug": "willehad"
+   },
+   "slug": "willehad",
+   "saint": {
+    "qid": "Q499836",
+    "name": "Saint Willehad",
+    "display_name": "St. Willehad",
+    "dates": "c. 745 – 789",
+    "region": "Bremen, Germany",
+    "feast": "November 8",
+    "martyr": false
+   }
+  },
+  "title": "St. Willehad: The Missionary Who Kept Coming Back #Shorts",
+  "description": "He lost friends, fled for his life, and still went back to the work.\n\nSaint Willehad, a Northumbrian missionary, survived threats and a Saxon revolt, then rebuilt his mission and became Bishop of Bremen.\n\nSaint Willehad · c. 745 – 789 · Feast day: November 8\n\nMay we, too, begin again. Saint Willehad, pray for us. 🕯\n\nRead the full story: https://allholysaints.com/saints/willehad/\n\n—\nSources:\n• Wikipedia: Willehad: https://en.wikipedia.org/wiki/Willehad\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\nResearched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.\n\n🕯 Help keep the forgotten remembered. Light a candle: https://ko-fi.com/example\nSubscribe for a forgotten saint every morning, and pray with us.\n\n#saintwillehad #saintoftheday #catholicsaints #Shorts",
+  "localizations": {
+   "es": {
+    "title": "San Willehad: Perdió a amigos, huyó para salvar la vida y, aun así, volvió a su labor. #Shorts",
+    "description": "Perdió a amigos, huyó para salvar la vida y, aun así, volvió a su labor.\n\nSan Willehad, misionero northumbrio, sobrevivió a amenazas y a una revuelta sajona, luego reconstruyó su misión y llegó a ser obispo de Bremen.\n\nSan Willehad · c. 745 – 789 · Fiesta: 8 de noviembre\n\nQue también nosotros volvamos a empezar. San Willehad, ruega por nosotros. 🕯\n\nLee su historia completa: https://allholysaints.com/es/santos/willehad/\n\n—\nFuentes:\n• Wikipedia: Willehad: https://en.wikipedia.org/wiki/Willehad\nArte: Ilustración al estilo bizantino, generada por IA (Google Gemini)\nInvestigado y escrito con ayuda de IA, verificado con las fuentes indicadas arriba y aprobado por una persona antes de publicarse. La narración es una voz de IA; los iconos son arte generado por IA al estilo bizantino.\n\n#santos #catolico #Shorts"
+   }
+  },
+  "tags": [
+   "Saint Willehad",
+   "St. Willehad",
+   "Bremen, Germany",
+   "Catholic saints",
+   "saint of the day",
+   "lives of the saints",
+   "saintwillehad",
+   "bremen",
+   "frisia",
+   "saxony",
+   "northumbria",
+   "charlemagne",
+   "missionary",
+   "catholicsaints",
+   "lesserknownsaints",
+   "saintoftheday",
+   "allsaints",
+   "catholic"
+  ]
+ },
+ {
+  "episode": {
+   "id": "2026-11-11",
+   "date": "2026-11-11",
+   "status": "published",
+   "script": {
+    "saint": {
+     "name": "Saint Marina of Omura",
+     "display_name": "St. Marina of Omura",
+     "dates": "d. 1634",
+     "region": "Omura and Nagasaki, Japan",
+     "feast": "November 11",
+     "martyr": true
+    },
+    "beats": [
+     {
+      "role": "hook",
+      "text": "She served hunted missionaries when Japan had banished them.",
+      "visual": "art",
+      "scene": "A young Japanese woman in a plain kimono of the early Edo period kneels in a dim back room of a wooden house with sliding paper screens, offering a bowl of rice to a Dominican friar in a white habit and black cloak."
+     },
+     {
+      "role": "who",
+      "text": "Marina of Omura, a Japanese woman from near Nagasaki, in the seventeenth century.",
+      "visual": "map",
+      "lat": 32.75,
+      "lon": 129.88,
+      "place": "Nagasaki · Japan"
+     },
+     {
+      "role": "story",
+      "text": "Very young, she became a Dominican tertiary and made private religious vows. Her homeland was crossed again and again by fierce persecution.",
+      "visual": "art",
+      "scene": "A young Japanese woman in a simple kimono kneels in prayer before a small wooden crucifix on a low shelf in a modest room with paper screens, her hands folded, soft lamplight on her face."
+     },
+     {
+      "role": "story",
+      "text": "Even so, she served the Dominican missionaries in hiding, with great charity and courage.",
+      "visual": "art",
+      "scene": "The same young woman carries a small tray of food through a narrow wooden corridor toward a hidden room where a Dominican friar waits, in a seventeenth-century Japanese village house."
+     },
+     {
+      "role": "story",
+      "text": "In sixteen thirty-four, she was accused of helping them. She was arrested and bound in chains.",
+      "visual": "art",
+      "scene": "Officials in seventeenth-century Japanese samurai dress lead the young woman, in a plain kimono with chains at her wrists, down a village street of wooden houses with tiled roofs. She walks upright and calm."
+     },
+     {
+      "role": "story",
+      "text": "She was mocked in public for her chastity. On the eleventh of November, she was burned at the stake on the holy hill of Nagasaki.",
+      "visual": "art",
+      "scene": "On a hill above Nagasaki bay, the young woman stands bound to a wooden post, her face calm and lifted. Officials and townspeople watch from a distance, and the sea and mountains lie behind. The scene is solemn, with no graphic detail."
+     },
+     {
+      "role": "turn",
+      "text": "Her holiness was plain service, kept up when service became dangerous. In nineteen eighty-seven, Pope John Paul the Second canonized her, with Lawrence Ruiz and fifteen companions. Fortitude is love that stays when staying costs everything.",
+      "visual": "art",
+      "scene": "A devotional icon of Marina in a kimono holding a martyr's palm, a soft golden light around her. Dominican martyrs in white habits and black cloaks stand beside her, and the hill and bay of Nagasaki lie below."
+     },
+     {
+      "role": "close",
+      "text": "Saint Marina of Omura, pray for us.",
+      "visual": "close"
+     }
+    ],
+    "pronunciations": {
+     "Omura": "Oh-MOO-rah",
+     "Nagasaki": "Nah-gah-SAH-kee",
+     "Marina": "Mah-REE-nah",
+     "Ruiz": "Roo-EES"
+    },
+    "caption_hook": "A young Japanese Dominican tertiary was condemned in Nagasaki on November 11, 1634, for serving missionaries the government had banished.",
+    "summary": "Marina of Omura, a Japanese Dominican tertiary, served banished missionaries and was burned at the stake in Nagasaki in 1634; she was canonized in 1987 with Lawrence Ruiz and his companions.",
+    "youtube_title": "St. Marina of Omura: Martyr Who Served Hunted Missionaries",
+    "hashtags": [
+     "#saintmarinaofomura",
+     "#nagasaki",
+     "#martyrsofjapan",
+     "#japan",
+     "#dominicantertiary",
+     "#lawrenceruiz",
+     "#catholicmartyrs",
+     "#fortitude",
+     "#catholicsaints",
+     "#lesserknownsaints",
+     "#saints",
+     "#allsaints"
+    ],
+    "share_cta": "Know someone named Marina? Send them their saint.",
+    "claims": [
+     {
+      "claim": "Japan had issued an order banishing the Catholic missionaries, who were in hiding.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "Marina served the persecuted missionaries with great charity and great courage.",
+      "source": 2,
+      "kind": "history"
+     },
+     {
+      "claim": "Marina came from Omura, near Nagasaki in Japan, and was Japanese by birth.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "She died in 1634, so she lived in the seventeenth century.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Very young, she became a Dominican tertiary and made private religious vows.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Her homeland was repeatedly swept by fierce persecutions of Christians.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "She served Dominican missionaries.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "In 1634 she was found to be a Christian who had assisted the missionaries, and was arrested and put in chains.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "She was publicly mocked for her chastity.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "She was burned at the stake on the holy hill of Nagasaki on 11 November 1634.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Her execution took place under the supreme ruler Tokugawa Iemitsu.",
+      "source": 2,
+      "kind": "history"
+     },
+     {
+      "claim": "She was canonized by Pope John Paul II on 18 October 1987 in Rome, with Lawrence Ruiz and fifteen companions.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "The group was beatified by John Paul II on 18 February 1981 in Manila.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Lawrence Ruiz, leader of the group, was the first saint of Filipino origin.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "The sixteen martyrs were Dominicans of various nationalities, all killed in Japan.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Her individual feast is 11 November in the Roman Martyrology; the group's feast is 28 September.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "Her emblem is the palm.",
+      "source": 1,
+      "kind": "history"
+     },
+     {
+      "claim": "She is venerated as the advocate of fortitude and is counted among the first Japanese female saints.",
+      "source": 0,
+      "kind": "history"
+     },
+     {
+      "claim": "In 2015 statues of the martyrs were placed in the Japanese garden beside Nakamachi Church.",
+      "source": 0,
+      "kind": "history"
+     }
+    ],
+    "story": [
+     "Marina of Omura is one of the quieter names among the saints. The records of her life are few and short, but what they say is clear. She was Japanese by birth, from Omura, a place near Nagasaki, and she lived in the first half of the seventeenth century. She died in 1634, and she is remembered for one thing above all: she served the missionaries when it had become dangerous to do so.",
+     "The sources tell us that while still very young she became a tertiary of the Order of Saint Dominic, making religious vows privately. Whether she lived in a house of her own or among her family, they do not say, and we should not guess. What they do give us is her direction. Her life was turned toward God, and it was bound up with the Dominican missionaries who had come to her country from the West.",
+     "Those were hard years for Christians in Japan. Her homeland, as one source puts it, was crossed again and again by fierce persecution. An order had gone out banishing the missionaries from the country, and those who stayed did so in hiding. Marina served them anyway. The Church's reference sources speak of her great charity and great courage. One source calls her a guest of the Dominican missionaries, and another says she sheltered them. Either way, she took the side of the hunted priests, in a place and time where doing so could cost her life.",
+     "In 1634 she was found out. She was accused of collaborating with the missionaries, which meant that she was known to be a Christian who had helped them. She was arrested and put in chains. The Roman Martyrology records that she was thrown into prison and publicly exposed to mockery for her chastity. It is a quiet line, and it tells us that she was shamed before others for the very purity she had vowed to God.",
+     "On 11 November 1634, under the rule of the shogun Tokugawa Iemitsu, Marina was burned at the stake on the holy hill of Nagasaki. The sources describe a slow death, and we will not dwell on it. The Church names it with dignity: she died a virgin and a martyr, and her emblem is the palm, the ancient sign of victory in faith.",
+     "Her cause was joined to that of a larger group. Sixteen Dominican martyrs of various nationalities, all killed in Japan, were considered together, led by Lawrence Ruiz of Manila, the first saint of Filipino origin. Pope John Paul II beatified them in Manila on 18 February 1981 and canonized them in Rome on 18 October 1987. Marina is counted among the first Japanese women to be named saints. The group's shared feast is kept on 28 September. Marina's own memorial, in the Roman Martyrology, falls on the day she died, 11 November. She is venerated as an advocate of fortitude.",
+     "Her memory is kept alive in Nagasaki itself. In 2015, statues of the martyrs were placed in the Japanese garden beside Nakamachi Church. The sources record nothing of her preaching or writing. Her holiness was in practice: she sheltered and served those the world had turned away. When serving became dangerous, she did not stop. Fortitude, in her life, was nothing more than love that stayed when staying cost everything."
+    ],
+    "patronages": [
+     "fortitude"
+    ],
+    "places": [
+     "Nagasaki",
+     "Omura",
+     "Japan",
+     "Nakamachi Church"
+    ]
+   },
+   "sources": [
+    {
+     "title": "Wikipedia: Marina of Omura",
+     "url": "https://en.wikipedia.org/wiki/Marina_of_Omura"
+    },
+    {
+     "title": "Santi e Beati: Marina of Omura",
+     "url": "https://www.santiebeati.it/dettaglio/90885"
+    },
+    {
+     "title": "Nominis (Église catholique en France): Marina of Omura",
+     "url": "https://nominis.cef.fr/contenus/saint/9043/Sainte-Marine-de-Nagasaki.html"
+    }
+   ],
+   "art_credits": [
+    "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+   ],
+   "es": {
+    "name": "Santa Marina de Omura",
+    "display_name": "Santa Marina",
+    "region": "Omura y Nagasaki, Japón",
+    "dates": "m. 1634",
+    "hook": "Una joven terciaria dominica japonesa fue condenada en Nagasaki el 11 de noviembre de 1634 por atender a misioneros a los que el gobierno había desterrado.",
+    "summary": "Marina de Omura, terciaria dominica japonesa, sirvió a misioneros desterrados y fue quemada en la hoguera en Nagasaki en 1634. Fue canonizada en 1987 junto con Lorenzo Ruiz y sus compañeros.",
+    "story": [
+     "Marina de Omura es uno de los nombres más silenciosos entre los santos. Los registros de su vida son escasos y breves, pero lo que dicen es claro. Era japonesa de nacimiento, de Omura, un lugar cercano a Nagasaki, y vivió en la primera mitad del siglo XVII. Murió en 1634, y se la recuerda sobre todo por una cosa: sirvió a los misioneros cuando hacerlo se había vuelto peligroso.",
+     "Las fuentes nos cuentan que, siendo todavía muy joven, se hizo terciaria de la Orden de Santo Domingo, y que emitió votos religiosos en privado. No dicen si vivió en una casa propia o junto a su familia, y no conviene adivinarlo. Lo que sí nos transmiten es su orientación: su vida estaba vuelta hacia Dios y unida a los misioneros dominicos que habían llegado a su país desde Occidente.",
+     "Aquellos fueron años difíciles para los cristianos en Japón. Su tierra natal, como dice una fuente, fue azotada una y otra vez por una persecución feroz. Se había dictado una orden que desterraba a los misioneros del país, y quienes se quedaban vivían escondidos. Marina los servía de todos modos. Las fuentes de referencia de la Iglesia hablan de su gran caridad y de su gran valentía. Una fuente la llama huésped de los misioneros dominicos, y otra dice que les dio refugio. En cualquier caso, se puso del lado de los sacerdotes perseguidos, en un lugar y una época en los que hacerlo podía costarle la vida.",
+     "En 1634 fue descubierta. Se la acusó de colaborar con los misioneros, lo que significaba que se sabía que era una cristiana que los había ayudado. Fue arrestada y encadenada. El Martirologio Romano registra que fue encarcelada y expuesta públicamente a la burla por su castidad. Es una frase sobria, y nos dice que fue humillada ante otros por la misma pureza que había prometido a Dios.",
+     "El 11 de noviembre de 1634, bajo el gobierno del shogún Tokugawa Iemitsu, Marina fue quemada en la hoguera en la colina sagrada de Nagasaki. Las fuentes describen una muerte lenta, y no nos detendremos en ello. La Iglesia la recuerda con dignidad: murió virgen y mártir, y su emblema es la palma, antiguo signo de victoria en la fe.",
+     "Su causa quedó unida a la de un grupo más numeroso. Dieciséis mártires dominicos de distintas nacionalidades, todos muertos en Japón, fueron considerados en conjunto, encabezados por Lorenzo Ruiz de Manila, el primer santo de origen filipino. El papa Juan Pablo II los beatificó en Manila el 18 de febrero de 1981 y los canonizó en Roma el 18 de octubre de 1987. Marina figura entre las primeras mujeres japonesas proclamadas santas. La fiesta común del grupo se celebra el 28 de septiembre. La memoria propia de Marina, en el Martirologio Romano, cae el día de su muerte, el 11 de noviembre. Es venerada como intercesora de la fortaleza.",
+     "Su memoria se conserva en la propia Nagasaki. En 2015 se colocaron estatuas de los mártires en el jardín japonés junto a la Iglesia de Nakamachi. Las fuentes no registran nada de su predicación ni de sus escritos. Su santidad se vivió en lo concreto: dio refugio y servicio a quienes el mundo había dado la espalda. Cuando servir se volvió peligroso, no dejó de hacerlo. La fortaleza, en su vida, no fue sino un amor que permaneció cuando quedarse lo costaba todo."
+    ],
+    "prayer": "Santa Marina de Omura, ruega por nosotros.",
+    "patronages": [
+     "fortaleza"
+    ],
+    "places": [
+     "Nagasaki",
+     "Omura",
+     "Japón",
+     "Iglesia de Nakamachi"
+    ],
+    "slug": "marina-de-omura"
+   },
+   "slug": "marina-of-omura",
+   "saint": {
+    "qid": "Q3293239",
+    "name": "Saint Marina of Omura",
+    "display_name": "St. Marina of Omura",
+    "dates": "d. 1634",
+    "region": "Omura and Nagasaki, Japan",
+    "feast": "November 11",
+    "martyr": true
+   }
+  },
+  "title": "St. Marina of Omura: Martyr Who Served Hunted Missionaries #Shorts",
+  "description": "A young Japanese Dominican tertiary was condemned in Nagasaki on November 11, 1634, for serving missionaries the government had banished.\n\nMarina of Omura, a Japanese Dominican tertiary, served banished missionaries and was burned at the stake in Nagasaki in 1634; she was canonized in 1987 with Lawrence Ruiz and his companions.\n\nSaint Marina of Omura · d. 1634 · Feast day: November 11\n\nSaint Marina of Omura, pray for us. 🕯\n\nRead the full story: https://allholysaints.com/saints/marina-of-omura/\n\n—\nSources:\n• Wikipedia: Marina of Omura: https://en.wikipedia.org/wiki/Marina_of_Omura\n• Santi e Beati: Marina of Omura: https://www.santiebeati.it/dettaglio/90885\n• Nominis (Église catholique en France): Marina of Omura: https://nominis.cef.fr/contenus/saint/9043/Sainte-Marine-de-Nagasaki.html\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\nResearched and written with AI assistance, checked against the sources above, and approved by a human before posting. Narration is an AI voice; icon artwork is AI-generated in the Byzantine style.\n\nKnow someone named Marina? Send them their saint.\n🕯 Help keep the forgotten remembered. Light a candle: https://ko-fi.com/example\nSubscribe for a forgotten saint every morning, and pray with us.\n\n#saintmarinaofomura #saintoftheday #catholicsaints #Shorts",
+  "localizations": {
+   "es": {
+    "title": "Santa Marina: Una joven terciaria dominica japonesa fue condenada en Nagasaki el 11 de… #Shorts",
+    "description": "Una joven terciaria dominica japonesa fue condenada en Nagasaki el 11 de noviembre de 1634 por atender a misioneros a los que el gobierno había desterrado.\n\nMarina de Omura, terciaria dominica japonesa, sirvió a misioneros desterrados y fue quemada en la hoguera en Nagasaki en 1634. Fue canonizada en 1987 junto con Lorenzo Ruiz y sus compañeros.\n\nSanta Marina de Omura · m. 1634 · Fiesta: 11 de noviembre\n\nSanta Marina de Omura, ruega por nosotros. 🕯\n\nLee su historia completa: https://allholysaints.com/es/santos/marina-de-omura/\n\n—\nFuentes:\n• Wikipedia: Marina of Omura: https://en.wikipedia.org/wiki/Marina_of_Omura\n• Santi e Beati: Marina of Omura: https://www.santiebeati.it/dettaglio/90885\n• Nominis (Église catholique en France): Marina of Omura: https://nominis.cef.fr/contenus/saint/9043/Sainte-Marine-de-Nagasaki.html\nArte: Ilustración al estilo bizantino, generada por IA (Google Gemini)\nInvestigado y escrito con ayuda de IA, verificado con las fuentes indicadas arriba y aprobado por una persona antes de publicarse. La narración es una voz de IA; los iconos son arte generado por IA al estilo bizantino.\n\n#santos #catolico #Shorts"
+   }
+  },
+  "tags": [
+   "Saint Marina of Omura",
+   "St. Marina of Omura",
+   "Omura and Nagasaki, Japan",
+   "Catholic saints",
+   "saint of the day",
+   "lives of the saints",
+   "saintmarinaofomura",
+   "nagasaki",
+   "martyrsofjapan",
+   "japan",
+   "dominicantertiary",
+   "lawrenceruiz",
+   "catholicmartyrs",
+   "fortitude",
+   "catholicsaints",
+   "lesserknownsaints",
+   "saints",
+   "allsaints"
+  ]
+ }
+]

@@ -137,11 +137,11 @@ def publish_facebook(ep, video=None):
 
 def publish_threads(ep):
     """Post the video to Threads once, after it's on Instagram; independent, max 3 attempts."""
-    import threads, storage, youtube
+    import threads, storage, yt_meta
     if not threads.configured():
         return
     res = publish_once(ep, "threads", "Threads post", lambda: threads.publish_video(
-        threads.build_text(ep, youtube.page_url(ep)), storage.resolve_direct(ep["assets"]["video.mp4"])))
+        threads.build_text(ep, yt_meta.page_url(ep)), storage.resolve_direct(ep["assets"]["video.mp4"])))
     if res:
         _notify(f"🧵 On Threads: {ep['saint']['display_name']}\n{res['url']}")
 
@@ -198,12 +198,12 @@ def youtube_cover(ep):
 
 def youtube_playlists(ep):
     """Put a published Short in its month + continent playlists; max 3 attempts, never blocks anything else."""
-    import youtube, telegram
+    import youtube, yt_playlists, telegram
     yt = ep.get("youtube") or {}
     if not youtube.configured() or not yt.get("id") or yt.get("playlists_done") or yt.get("playlist_attempts", 0) >= 3:
         return
     try:
-        yt["playlists"] = yt.get("playlists", []) + youtube.add_to_playlists(ep, done=yt.get("playlists", []))
+        yt["playlists"] = yt.get("playlists", []) + yt_playlists.add_to_playlists(ep, done=yt.get("playlists", []))
         yt["playlists_done"] = True
         yt.pop("playlist_error", None)
         log("Playlists:", ", ".join(yt["playlists"]))
