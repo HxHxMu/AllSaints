@@ -1,8 +1,8 @@
 {
  "id": "2026-11-12",
  "date": "2026-11-12",
- "status": "approved",
- "updated": "2026-11-05T15:53:47+00:00",
+ "status": "published",
+ "updated": "2026-11-12T12:34:39+00:00",
  "saint": {
   "qid": "Q355884",
   "name": "Saint Josaphat Kuntsevych",
@@ -439,7 +439,8 @@
    "Vítebsk",
    "Vilna",
    "Volodímir"
-  ]
+  ],
+  "slug": "josafat-kuntsevych"
  },
  "books": [],
  "caption": "They called him the Soul-Snatcher. He took it as a prayer.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Josaphat Kuntsevych · Feast day: November 12\nJosaphat Kuntsevych, a merchant's apprentice turned Basilian monk and Archbishop of Polotsk, answered the name \"Soul-Snatcher\" with prayer and mercy, and was killed in a riot at Vitebsk in 1623 as a martyr for Church unity.\n\nSaint Josaphat, pray for us. 🕯\n\nKnow someone named Josaphat? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintjosaphat #polotsk",
@@ -450,5 +451,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-12/art.jpg"
  },
- "review_message_id": 80
+ "review_message_id": 80,
+ "slug": "josaphat-kuntsevych",
+ "published": {
+  "media_id": "18119002127122688",
+  "permalink": "https://www.instagram.com/reel/DfpD7KsjSkF/",
+  "location_id": null
+ },
+ "published_at": "2026-11-12T07:30-05:00",
+ "facebook": {
+  "id": "1143079588262986",
+  "url": "https://www.facebook.com/reel/1143079588262986/",
+  "published_at": "2026-11-12T07:32-05:00"
+ },
+ "threads": {
+  "id": "18139829332725679",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfpEH_uBeVG",
+  "published_at": "2026-11-12T07:33-05:00"
+ },
+ "youtube": {
+  "id": "OmV11BLBh_w",
+  "url": "https://youtube.com/shorts/OmV11BLBh_w",
+  "privacy": "public",
+  "published_at": "2026-11-12T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7707262046676764703",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-12T07:34-05:00"
+ }
 }
