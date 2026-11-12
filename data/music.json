@@ -6,6 +6,7 @@
   "line": "Music for prayer, study and the quiet hours.",
   "about": "Eight original pieces and the Gregorian Ave Maria, played as jazz.",
   "url": "allholysaints.com/music",
+  "story_video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/story-{n}.mp4",
   "tracks": ["Ave Maria", "Benedicta in Mulieribus", "Veritatis", "Trinitas", "Rosa Mystica", "Mysterium Fidei",
              "Domine, lux in tenebris", "Lux Eterna", "De Profundo Cordis"]
  }

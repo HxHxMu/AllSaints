@@ -110,6 +110,8 @@ def run_music(now):
             music_card(album, track)[0].save(jpg, quality=92)
             url = storage.upload(f"stories-music-{day.year}", {jpg.name: jpg}, name=f"Stories: music {day.year}")[jpg.name]
             s.update(image=url, status="pending", album=album["title"], track=album["tracks"][track - 1])
+            if album.get("story_video"):  # Instagram plays the animated art with the track (music_story_video.py);
+                s["video"] = album["story_video"].format(n=track)  # Facebook keeps the still card (image-only there)
             s.pop("error", None)
             log("Music Story queued:", album["title"], album["tracks"][track - 1])
         except Exception as e:
