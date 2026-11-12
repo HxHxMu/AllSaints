@@ -1,0 +1,340 @@
+{
+ "id": "2026-11-19",
+ "date": "2026-11-19",
+ "status": "review",
+ "updated": "2026-11-12T10:24:53+00:00",
+ "saint": {
+  "qid": "Q68598",
+  "name": "Saint Mechtilde of Hackeborn",
+  "display_name": "St. Mechtilde of Hackeborn",
+  "dates": "c. 1240 – 1298",
+  "region": "Helfta, Saxony",
+  "feast": "November 19",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q68598",
+  "name": "Mechtilde",
+  "links": 25,
+  "enwiki": "Mechthild_of_Hackeborn",
+  "images": [
+   "Saint%20Mechtildis%20%28cropped%29.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Mechtilde of Hackeborn",
+  "birth": 1241,
+  "death": 1298,
+  "lon": 11.5795,
+  "lat": 51.5085,
+  "selection_reason": "Mechtilde of Hackeborn, the 'nightingale of Christ' and choir mistress of Helfta, has her feast on November 19 and a well-documented life (the Book of Special Grace, her mid-life crisis, her friendship with Gertrude the Great). She also has the strongest Catholic sourcing of the candidates, and Saxony and the medieval cloister are a fresh region and type after the recent run.",
+  "catholic_veneration": "Venerated as a saint in the Roman Martyrology (Benedictine nun of Helfta, commemorated on 19 November, the day of her death in 1298); her cult is long-approved, and she is listed in Santi e Beati and the Catholic Encyclopedia."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Mechtilde of Hackeborn",
+   "display_name": "St. Mechtilde of Hackeborn",
+   "dates": "c. 1240 – 1298",
+   "region": "Helfta, Saxony",
+   "feast": "November 19",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "In her visions, Christ called one nun his nightingale.",
+    "visual": "art",
+    "scene": "A medieval nun in a dark habit stands in a Romanesque convent choir, singing with her sisters from a large chant book. Above her, Christ appears in a soft golden mandorla, looking down on her with tenderness."
+   },
+   {
+    "role": "who",
+    "text": "Mechtilde of Hackeborn, born to Thuringian nobility around the year twelve forty, lived in the convent of Helfta.",
+    "visual": "map",
+    "lat": 51.52,
+    "lon": 11.53,
+    "place": "Helfta · Saxony"
+   },
+   {
+    "role": "story",
+    "text": "At seven, she visited her sister, a nun, and loved the cloister so much that her parents let her stay.",
+    "visual": "art",
+    "scene": "A small girl in a noble thirteenth-century German gown stands at the arched gate of a stone convent, holding her mother's hand. Her elder sister, in a nun's habit and veil, welcomes her, with other nuns in the cloister garden behind."
+   },
+   {
+    "role": "story",
+    "text": "She trained the choir for the rest of her life and ran the school. In twelve sixty-one, a five-year-old girl was placed in her care: the future Gertrude the Great.",
+    "visual": "art",
+    "scene": "A nun in a black habit stands at a carved choir stall, directing a row of singing sisters from an open chant book. A small girl in a plain gown stands close beside her, looking up. The setting is a Romanesque convent church with round arches and candlelight."
+   },
+   {
+    "role": "story",
+    "text": "At fifty, she learned that two sisters had written down her visions without her knowledge. Troubled, she prayed. In a vision, she saw Christ holding the book, and her worry ceased.",
+    "visual": "art",
+    "scene": "A nun kneels in prayer in a simple stone cell with a narrow arched window. Before her Christ appears in radiant light, holding an open book toward her with a gentle gesture."
+   },
+   {
+    "role": "turn",
+    "text": "Through years of severe pain, she never tired of praising God. Troubled souls and learned Dominicans alike sought her counsel. Praise can rise even from suffering.",
+    "visual": "art",
+    "scene": "A nun sits at the grille of a convent parlor, listening kindly to a troubled woman in a shawl and a Dominican friar in a white habit and black cloak. Behind her, in the choir, a few sisters can be seen at prayer in soft candlelight."
+   },
+   {
+    "role": "close",
+    "text": "Saint Mechtilde, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Mechtilde": "MEK-til-duh",
+   "Hackeborn": "HAK-eh-born",
+   "Helfta": "HELF-tah"
+  },
+  "caption_hook": "A nun who sang through suffering, and whom, in her visions, Christ called his nightingale.",
+  "summary": "Saint Mechtilde of Hackeborn, a thirteenth-century choir mistress and teacher at Helfta, kept praising God through years of pain, and her visions were gathered in the Book of Special Grace.",
+  "youtube_title": "St. Mechtilde: The Nun Christ Called His Nightingale",
+  "hashtags": [
+   "#saintmechtilde",
+   "#helfta",
+   "#saxony",
+   "#benedictine",
+   "#nightingaleofhelfta",
+   "#gertrudethegreat",
+   "#sacredheart",
+   "#medievalsaints",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#choirmistress",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Mechtilde or Matilda? Send them their saint.",
+  "claims": [
+   {
+    "claim": "In her revelations Christ was accustomed to call her his 'nightingale'.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "She was born in 1240 or 1241 into one of the noblest and most powerful Thuringian families, in Saxony.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She lived at the convent of Helfta, near Eisleben, and died there on 19 November 1298.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "At age seven, taken by her mother to visit her elder sister Gertrude, a nun, she became so enamoured of the cloister that her parents allowed her to stay.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1258 she followed her sister, now abbess, to the new monastery at Helfta.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She directed the school (alumnate) and the choir, and held the office of domna cantrix all her life.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1261 a child of five was entrusted to her care, who became known as Saint Gertrude the Great.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In her fiftieth year she learned that two nuns she had confided in had written down the favours granted her.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Troubled, she prayed and had a vision of Christ holding the book of her revelations, after which she ceased to be troubled.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "She never tired of praising God despite continual severe physical suffering.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Souls seeking consolation and learned Dominicans consulted her on spiritual matters.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Her revelations were gathered in the Liber Specialis Gratiae, the Book of Special Grace, which was made public after her death.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that Mary appeared to her, promised to assist her at death, and asked for three Hail Marys daily.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "She and Gertrude the Great are associated with early devotion to the heart of Jesus.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Benedict XVI spoke of her in a catechesis on 29 September 2010, noting her prayer centered on the liturgy and Scripture.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "She is named in the Roman Martyrology, and her feast is November 19.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Her body most probably still rests at Old Helfta, though the exact spot is unknown.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Helfta was first destroyed in 1342, ended in 1525 and was secularized in 1542; a Cistercian convent was re-established there in 1999.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "Some have thought Dante's Matelda in the Purgatorio was inspired by her, though many scholars favour Mechthild of Magdeburg.",
+    "source": 0,
+    "kind": "tradition"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Helfta",
+   "Eisleben",
+   "Saxony",
+   "Thuringia"
+  ],
+  "story": [
+   "Mechtilde of Hackeborn was born in 1240 or 1241 into one of the noblest and most powerful families of Thuringia. Her family, the barons of Hackeborn and lords of Wippra, held lands in northern Thuringia and the Harz Mountains. Her elder sister, Gertrude, would become the abbess of the community of nuns later settled at Helfta.",
+   "Her life as a nun began early. When Mechtilde was seven, her mother took her to visit Gertrude, who was already a nun at the monastery of Rodersdorf. The little girl was so taken with the cloister that her parents, seeing the hand of grace in it, yielded to her pleading and let her stay. There she grew in learning and in virtue, and the sources praise her humility, her warmth and her gentleness, which had marked her since childhood.",
+   "In 1258 the community moved to an estate at Helfta, near Eisleben, given to Abbess Gertrude by her brothers Louis and Albert. Mechtilde followed her sister there. Under Gertrude's long leadership, Helfta became a remarkable center of prayer, study and culture, where women read Scripture, the liturgy and the Fathers of the Church at a high level. Mechtilde was entrusted with the school and with the choir. She held the office of domna cantrix, the mistress of the singers, for the whole of her life, training the sisters with tireless care.",
+   "Her voice was said to be beautiful, and the sacred music she led was the soul of her prayer. In her revelations, Christ was accustomed to call her his nightingale. In 1261 the abbess placed a child of five in her care. That child, Gertrude, grew up to be known as Saint Gertrude the Great. Mechtilde was her teacher, and later helped her to understand that the gifts she was receiving came from God.",
+   "Mechtilde's prayer was rooted in the Mass and the Divine Office. Pope Benedict XVI, speaking of her in 2010, noted that her visions and teachings are written in the language of the liturgy and the Bible, and that Scripture was her daily bread. She is also remembered for devotion to the heart of Jesus, which, in her visions, she knew as a place of refuge. Tradition holds that when she prayed that the Virgin Mary would help her at the hour of death, Mary appeared and promised to do so, asking her to say three Hail Marys each day in honor of the Trinity.",
+   "Throughout her life she suffered continually and severely in body, yet the sources agree that she never tired of praising God. People came to her from inside and outside the monastery, looking for consolation or light, and even learned Dominicans sought her advice. She tried to keep her inner life hidden. Then, in her fiftieth year, she learned that two sisters she had confided in had written down the graces she received, and that Gertrude had nearly finished a book about them. She was deeply troubled and, as always, turned first to prayer. She reported a vision of Christ holding the book in his hand and telling her that it had been written by his will, and that it would be called The Book of Special Grace, because it would prove such to many. Her trouble ended, and she even corrected the manuscript herself.",
+   "Mechtilde died at Helfta on 19 November 1298. Her book was made public right after her death and spread quickly, helped by the Dominican friars. Boccaccio tells that within a few years it had reached Florence, where people were said to repeat its praises each day before their sacred images. Some writers have suggested that Dante's mysterious Matelda in the Purgatorio owes something to her, though many scholars think another Mechthild, of Magdeburg, is the more likely source. Gertrude wrote that no one like her had ever arisen in their monastery.",
+   "Mechtilde is named in the Roman Martyrology and remembered on November 19. The monastery she loved was destroyed in the conflicts of the later Middle Ages and finally dissolved in the sixteenth century. Her body most probably still rests at Old Helfta, though no one knows the exact spot. In 1999 a convent of Cistercian nuns was established there once more, and the singing of the Church has returned to the place where the nightingale of Helfta once led her sisters in praise."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Who beat said 'Saxon nobility'. The Catholic Encyclopedia says she came from one of the noblest Thuringian families, so it now says 'Thuringian'.",
+   "Story beat stated 'She saw Christ holding the book' as plain history. The sources give it as her reported vision (tradition), so it now reads 'In a vision, she saw Christ holding the book'. Total length is now about 139 words.",
+   "caption_hook said flatly that Christ called her his nightingale. The sources place this in her visions, so the caption now says so.",
+   "Story paragraph 1 said Gertrude's community 'whose name would be known across Germany'. This is not in the sources and is vague, so it now names the community as the one later settled at Helfta.",
+   "Story paragraph 5 said she and Gertrude knew the Sacred Heart as 'a place of refuge and rest'. The sources give the 'refuge' vision to Mechtilde alone, so this is now framed as her vision.",
+   "Checked and left unchanged: map coordinates (Helfta, near Eisleben), the 1258 move, the 1261 charge of Gertrude, the age-fifty episode, the three Hail Marys (already marked as tradition), the Dante note (already hedged), the 1342/1525/1542/1999 Helfta history, and the death date 19 November 1298."
+  ],
+  "confidence": 85,
+  "reviewer_note": "Santi e Beati says her cult grew by monastic tradition with no documented formal canonization, but the Roman Martyrology lists her as 'Saint', so I kept 'Saint'. Sources differ on her birthplace and death year (1298 vs 1299), so I followed the Catholic Encyclopedia."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2466,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 985,
+   "thinking": 735
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1851,
+   "cache_write": 18200,
+   "cache_read": 0,
+   "out": 8250,
+   "thinking": 4352
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4627,
+   "cache_write": 0,
+   "cache_read": 18200,
+   "out": 9139,
+   "thinking": 6118
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1880,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 5365,
+   "thinking": 3248
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Mechthild of Hackeborn",
+   "url": "https://en.wikipedia.org/wiki/Mechthild_of_Hackeborn"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Mechtilde",
+   "url": "https://www.newadvent.org/cathen/10105b.htm"
+  },
+  {
+   "title": "Santi e Beati: Mechtilde",
+   "url": "https://www.santiebeati.it/dettaglio/78300"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Mechtilde",
+   "url": "https://nominis.cef.fr/contenus/saint/167/Sainte-Mechtilde-de-Helfta.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Mechtilde",
+   "url": "https://www.heiligenlexikon.de/BiographienM/Mechthild_von_Hackeborn.htm"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 67.1,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "Santa Matilde",
+  "name": "Santa Matilde de Hackeborn",
+  "region": "Helfta, Sajonia",
+  "dates": "c. 1240 – 1298",
+  "hook": "Una monja que cantó en medio del sufrimiento, y a quien Cristo, en sus visiones, llamó su ruiseñor.",
+  "summary": "Santa Matilde de Hackeborn, maestra de canto y de la escuela en Helfta en el siglo XIII, siguió alabando a Dios a lo largo de años de dolor, y sus visiones fueron recogidas en el Libro de la gracia especial.",
+  "story": [
+   "Matilde de Hackeborn nació en 1240 o 1241 en una de las familias más nobles y poderosas de Turingia. Su familia, los barones de Hackeborn y señores de Wippra, poseía tierras en el norte de Turingia y en los montes Harz. Su hermana mayor, Gertrudis, llegaría a ser abadesa de la comunidad de monjas que más tarde se estableció en Helfta.",
+   "Su vida religiosa comenzó muy temprano. Cuando Matilde tenía siete años, su madre la llevó a visitar a Gertrudis, que ya era monja en el monasterio de Rodersdorf. La niña quedó tan cautivada por el claustro que sus padres, viendo en ello la mano de la gracia, cedieron a sus súplicas y la dejaron quedarse. Allí creció en el saber y en la virtud, y las fuentes alaban su humildad, su calidez y su dulzura, que la habían distinguido desde la infancia.",
+   "En 1258 la comunidad se trasladó a una finca en Helfta, cerca de Eisleben, que los hermanos de la abadesa Gertrudis, Luis y Alberto, le habían donado. Matilde siguió a su hermana hasta allí. Bajo el largo gobierno de Gertrudis, Helfta se convirtió en un notable centro de oración, estudio y cultura, donde las mujeres leían la Escritura, la liturgia y los Padres de la Iglesia con gran profundidad. A Matilde se le confió la escuela y el coro. Ocupó durante toda su vida el oficio de domna cantrix, maestra de las cantoras, formando a las hermanas con un cuidado incansable.",
+   "Se decía que su voz era hermosa, y la música sagrada que dirigía era el alma de su oración. En sus revelaciones, Cristo solía llamarla su ruiseñor. En 1261 la abadesa puso a su cuidado a una niña de cinco años. Esa niña, Gertrudis, llegaría a ser conocida como Santa Gertrudis la Magna. Matilde fue su maestra y, más adelante, la ayudó a comprender que los dones que recibía venían de Dios.",
+   "La oración de Matilde estaba arraigada en la Misa y en el Oficio Divino. El papa Benedicto XVI, al hablar de ella en 2010, señaló que sus visiones y enseñanzas están escritas en el lenguaje de la liturgia y de la Biblia, y que la Escritura era su pan de cada día. También se la recuerda por su devoción al Corazón de Jesús, que en sus visiones conocía como un lugar de refugio. Según la tradición, cuando pidió a la Virgen María que la ayudara en la hora de su muerte, María se le apareció, prometió hacerlo y le pidió que rezara tres Avemarías cada día en honor de la Santísima Trinidad.",
+   "A lo largo de su vida sufrió de forma continua y severa en el cuerpo, pero las fuentes coinciden en que nunca se cansó de alabar a Dios. Acudían a ella personas del interior y del exterior del monasterio, en busca de consuelo o de luz, e incluso dominicos instruidos pedían su consejo. Ella procuraba mantener oculta su vida interior. Entonces, en su quincuagésimo año, supo que dos hermanas a quienes se había confiado habían puesto por escrito las gracias que recibía, y que Gertrudis casi había terminado un libro sobre ellas. Se sintió profundamente turbada y, como siempre, acudió primero a la oración. Relató una visión en la que Cristo sostenía el libro en su mano y le decía que había sido escrito por su voluntad, y que se llamaría Libro de la gracia especial, porque sería tal para muchos. Su turbación cesó, e incluso corrigió ella misma el manuscrito.",
+   "Matilde murió en Helfta el 19 de noviembre de 1298. Su libro se dio a conocer poco después de su muerte y se difundió rápidamente, gracias en parte a los frailes dominicos. Boccaccio cuenta que, en pocos años, llegó a Florencia, donde se decía que la gente repetía sus alabanzas cada día ante sus imágenes sagradas. Algunos autores han sugerido que la misteriosa Matelda del Purgatorio de Dante debe algo a ella, aunque muchos estudiosos piensan que la fuente más probable es otra Matilde, la de Magdeburgo. Gertrudis escribió que nadie como ella se había levantado jamás en su monasterio.",
+   "Matilde figura en el Martirologio Romano y se la recuerda el 19 de noviembre. El monasterio que tanto amó fue destruido en los conflictos de la baja Edad Media y finalmente disuelto en el siglo XVI. Su cuerpo probablemente todavía descansa en la antigua Helfta, aunque nadie conoce el lugar exacto. En 1999 se volvió a establecer allí una comunidad de monjas cistercienses, y el canto de la Iglesia ha regresado al lugar donde el ruiseñor de Helfta guio en otro tiempo a sus hermanas en la alabanza."
+  ],
+  "prayer": "Santa Matilde, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Helfta",
+   "Eisleben",
+   "Sajonia",
+   "Turingia"
+  ]
+ },
+ "books": [],
+ "caption": "A nun who sang through suffering, and whom, in her visions, Christ called his nightingale.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Mechtilde of Hackeborn · Feast day: November 19\nSaint Mechtilde of Hackeborn, a thirteenth-century choir mistress and teacher at Helfta, kept praising God through years of pain, and her visions were gathered in the Book of Special Grace.\n\nSaint Mechtilde, pray for us. 🕯\n\nSave this to pray with again next November 19.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmechtilde #helfta",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-19/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-19/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-19/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-19/art.jpg"
+ },
+ "review_message_id": 148
+}
