@@ -1,0 +1,320 @@
+{
+ "id": "2026-11-20",
+ "date": "2026-11-20",
+ "status": "review",
+ "updated": "2026-11-13T10:29:26+00:00",
+ "saint": {
+  "qid": "Q381815",
+  "name": "Saint Edmund the Martyr",
+  "display_name": "St. Edmund the Martyr",
+  "dates": "c. 841 – 869",
+  "region": "East Anglia, England",
+  "feast": "November 20",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q381815",
+  "name": "Edmund the Martyr",
+  "links": 29,
+  "enwiki": "Edmund_the_Martyr",
+  "images": [
+   "Edmundbeingmartyred05.jpg",
+   "Stedmundcrownedbyangelspierpontms736f42.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Edmund the Martyr",
+  "birth": 841,
+  "death": 869,
+  "lon": 1.2,
+  "lat": 52.35,
+  "selection_reason": "Edmund the Martyr offers a vivid, documented martyrdom story of a 9th-century English king killed by Vikings for refusing to renounce his faith, providing strong narrative contrast to the recent contemplative and monastic saints while being lesser-known outside England.",
+  "catholic_veneration": "Listed in the Roman Martyrology and venerated as a martyr in the Catholic Church, with widespread medieval cult and liturgical celebration on November 20."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Edmund the Martyr",
+   "display_name": "St. Edmund the Martyr",
+   "dates": "c. 841 – 869",
+   "region": "East Anglia, England",
+   "feast": "November 20",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "He was a king who could have saved his life with one word.",
+    "visual": "art",
+    "scene": "A young Anglo-Saxon king in royal robes stands bound before Viking warriors in a winter landscape of East Anglia, his face resolute, their weapons drawn."
+   },
+   {
+    "role": "who",
+    "text": "Edmund became king of East Anglia around eight fifty-five, when he was barely fifteen.",
+    "visual": "map",
+    "lat": 52.25,
+    "lon": 0.72,
+    "place": "East Anglia · England"
+   },
+   {
+    "role": "story",
+    "text": "For fourteen years he ruled what is now Norfolk and Suffolk. His people remembered him as just, generous to the poor.",
+    "visual": "art",
+    "scene": "King Edmund in a timber-built Anglo-Saxon hall, seated in counsel, distributing alms to the poor who gather before him, simple wooden architecture around them."
+   },
+   {
+    "role": "story",
+    "text": "In eight sixty-nine, the Great Heathen Army camped at Thetford. Edmund met them in battle. The Vikings won and killed the king.",
+    "visual": "art",
+    "scene": "A winter battlefield near Thetford with bare trees and muddy ground, Anglo-Saxon warriors falling before a larger Viking force, shields splintered, the king's banner toppling."
+   },
+   {
+    "role": "story",
+    "text": "That is all the Chronicle tells us. But tradition holds that Edmund was captured, and the chieftains demanded he renounce Christ.",
+    "visual": "art",
+    "scene": "Edmund in chains before Viking chieftains in a wooden hall, torchlight flickering on their faces, the king's head unbowed despite his bonds."
+   },
+   {
+    "role": "turn",
+    "text": "A passion written over a century later says he refused. They beat him, tied him to a tree, shot him with arrows, then struck off his head.",
+    "visual": "art",
+    "scene": "Edmund bound to an oak tree in a Suffolk woodland, pierced with arrows, Viking archers surrounding him, his face turned upward in prayer as a warrior raises an axe."
+   },
+   {
+    "role": "story",
+    "text": "Within a generation, the same Vikings who conquered his kingdom were minting coins in his honor. The cult of the martyr king had begun.",
+    "visual": "art",
+    "scene": "A monk in a stone scriptorium carefully illuminating a manuscript page showing Edmund crowned and haloed, silver coins bearing the inscription 'Saint Edmund the King' scattered on the writing desk."
+   },
+   {
+    "role": "close",
+    "text": "Saint Edmund the Martyr, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {},
+  "caption_hook": "A king who could have saved his life with one word—but refused.",
+  "summary": "Edmund, King of East Anglia, was killed by Viking invaders in 869 after refusing to renounce his Christian faith.",
+  "youtube_title": "St. Edmund: The King Who Died Rather Than Deny Christ",
+  "hashtags": [
+   "#saintedmund",
+   "#edmundthemartyr",
+   "#eastanglia",
+   "#vikings",
+   "#martyrs",
+   "#catholicmartyrs",
+   "#englishsaints",
+   "#anglosaxon",
+   "#burystedmunds",
+   "#9thcentury",
+   "#allsaints",
+   "#catholicsaints"
+  ],
+  "share_cta": "Know someone named Edmund? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Edmund became king of East Anglia around 855",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Edmund was about fourteen or fifteen when crowned",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Edmund ruled East Anglia, the region now comprising Norfolk and Suffolk",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Edmund was known as just and generous to the poor",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The Great Heathen Army made winter quarters at Thetford in 869",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Anglo-Saxon Chronicle records that Edmund fought the Vikings and was killed",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Edmund died on November 20, 869",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds Edmund was captured and demanded to renounce Christ",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to the passion written by Abbo of Fleury c. 986, Edmund was beaten, tied to a tree, shot with arrows, and beheaded",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Abbo's account was written over a century after Edmund's death",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Memorial coins honoring Saint Edmund were minted from around 890 by moneyers who had minted for the Danish king Guthrum",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Over 1800 St Edmund memorial coins were found in the Cuerdale Hoard",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Bury St Edmunds",
+   "East Anglia",
+   "Thetford",
+   "Hoxne",
+   "Suffolk"
+  ],
+  "story": [
+   "Edmund became king of the East Angles around 855, crowned at barely fifteen years old in a kingdom that covered the lands we now call Norfolk and Suffolk. Few documents from his fourteen-year reign survived the Viking devastation, but coins minted in his name show a smooth succession from the previous king, Æthelweard, and suggest years of stable rule. Medieval writers later invented elaborate genealogies connecting him to continental royal houses and claimed he was born in Nuremberg, but these are pious fictions. What remains certain is that he was remembered as a just ruler who defended the poor and refused to listen to flatterers.",
+   "The relative peace of his reign ended in 865 when the Great Heathen Army—a Viking force numbering perhaps five thousand warriors—landed in East Anglia. Edmund made terms with them, providing horses and supplies, and they moved north to York. But in 869 they returned, making camp at Thetford. The Anglo-Saxon Chronicle, normally silent about East Anglian affairs, records the outcome with stark brevity: 'Here the army rode across Mercia into East Anglia, and took winter-quarters at Thetford; and that winter King Edmund fought against them, and the Danish took the victory, and killed the king and conquered all that land.'",
+   "That bare notice—a battle, a defeat, a death—is the only contemporary account. Where exactly Edmund fell, and whether he died in combat or was executed afterward, the Chronicle does not say. The cult of Edmund as martyr, however, arose with remarkable speed. Within a generation of his death, the same Vikings who had conquered East Anglia were minting silver pennies inscribed 'O Saint Edmund the King.' Over seventy moneyers produced these memorial coins, many of continental origin, and more than 1800 examples were found in a single hoard in Lancashire. The coins prove that Edmund was venerated as a saint before the year 910, but they tell us nothing about how he died.",
+   "The detailed passion narrative came much later. Around 986, the French monk Abbo of Fleury visited England and was commissioned by the monks of Ramsey Abbey to write the Passio Sancti Eadmundi. Abbo claimed that Archbishop Dunstan of Canterbury had heard the story from an elderly man who swore he had been Edmund's armor-bearer. Whether this chain of oral transmission preserved reliable details or whether it belongs, as one historian puts it, 'to the realm of hagiographical fantasy,' cannot be proven. But Abbo's account became the standard version.",
+   "In Abbo's telling, Edmund chose martyrdom over battle. When the Viking chieftain Hinguar—likely Ivar the Boneless—demanded that he share power and renounce Christianity, the king refused to betray his faith or sacrifice his people in hopeless resistance. He disbanded his troops and withdrew toward Framlingham, where he was captured. Brought in chains before Hinguar, Edmund again refused the impious terms. The Vikings beat him with cudgels, tied him to a tree, and used him for target practice, filling his body with arrows. Finally they beheaded him and threw his head into the woods. According to the legend, his followers found it guarded by a wolf, calling out 'Here, here, here' in response to their shouts.",
+   "Edmund's body was first buried near the site of his death, in a wooden chapel. Sometime in the early 10th century—probably during the reign of King Æthelstan, who became king of the Anglo-Saxons in 924—the relics were translated to Beodricsworth, which became Bury St Edmunds. Æthelstan founded a monastery there in 925 to care for the shrine. By 1032 a great stone abbey church stood on the site, and the shrine became one of the wealthiest pilgrimage destinations in medieval England. When the body was exhumed, tradition reported a miracle: the corpse was undecayed, the arrow wounds healed, the severed head rejoined to the neck.",
+   "The cult flourished for centuries. Edmund and Edward the Confessor were regarded as England's patron saints until Saint George replaced them in the 15th century. The Benedictine abbey at Bury grew immensely powerful, receiving jurisdiction over half of Suffolk through the Liberty of Saint Edmund granted by Edward the Confessor in 1044. All of this ended in 1539 when Henry VIII dissolved the monasteries. The shrine was destroyed, its gold and silver stripped away, the abbot and monks expelled. Today only the ruined foundations remain, restored as a monument.",
+   "A curious postscript: in the 17th century, relics said to be Edmund's appeared in Toulouse, France, supposedly brought there by the future Louis VIII after his defeat at Lincoln in 1217. When plague struck Toulouse in the 1620s, the city credited its deliverance to a saint the authorities identified as Edmund. A magnificent silver reliquary was built in 1644. These relics were sent to England in 1901 and remain at Arundel Castle, though their authenticity has been questioned. Edmund's historical legacy rests not on relics but on the witness of a ninth-century king who, according to the earliest and most reliable account, met the Viking invasion and died. Whether he died sword in hand or bound to a tree, the Church honored him as a martyr for the faith."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Spoken script says 'in the winter of eight sixty-nine' but sources are clear the date is 869, sometimes recorded as 870 in medieval annals due to different year-reckoning. Changed to 'in eight sixty-nine' to avoid specifying season incorrectly.",
+   "Spoken script says 'They beat him, tied him to a tree, shot him with arrows, then struck off his head' without clearly marking this as tradition/legend. Fixed to clarify this is from Abbo's passion, written over a century later.",
+   "Story paragraph 2 says 'the winter of 869' but Wikipedia says 'that winter King Edmund fought against them' after noting the army 'took winter-quarters at Thetford' - the Chronicle doesn't specify Edmund fought in winter, just that the army wintered there. Changed to 'In eight sixty-nine' to avoid false precision.",
+   "Story paragraph 5 minor inconsistency: 'Hinguar, likely Ivar the Boneless, and Hubba' - sources name Hinguar as likely Ivar but don't pair him with Hubba in Edmund's story specifically. Removed Hubba to match source accuracy.",
+   "Claim list item 5 says 'winter 869' but should just say '869' to avoid adding seasonal detail not in the Chronicle."
+  ],
+  "confidence": 95,
+  "reviewer_note": "All martyrdom details correctly attributed to Abbo's late passion; Chronicle account kept separate and sober. Date handling now accurate."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-4-5-20250929",
+   "in": 1681,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 122
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-4-5-20250929",
+   "in": 1318,
+   "cache_write": 9597,
+   "cache_read": 0,
+   "out": 2957
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-4-5-20250929",
+   "in": 3949,
+   "cache_write": 0,
+   "cache_read": 9597,
+   "out": 2894
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-4-5-20250929",
+   "in": 3897,
+   "cache_write": 0,
+   "cache_read": 9597,
+   "out": 2863
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-4-5-20250929",
+   "in": 3168,
+   "cache_write": 0,
+   "cache_read": 9597,
+   "out": 2321
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 2257,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 6577,
+   "thinking": 3885
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Edmund the Martyr",
+   "url": "https://en.wikipedia.org/wiki/Edmund_the_Martyr"
+  },
+  {
+   "title": "Santi e Beati: Edmund the Martyr",
+   "url": "https://www.santiebeati.it/dettaglio/78500"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Edmund the Martyr",
+   "url": "https://nominis.cef.fr/contenus/saint/17/Saint-Edmond-le-Martyr.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Edmund the Martyr",
+   "url": "https://www.heiligenlexikon.de/BiographienE/Edmund_von_Ostanglien.html"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913)/St. Edmund the Martyr",
+   "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Edmund_the_Martyr"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 71.8,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Edmundo",
+  "name": "San Edmundo el Mártir",
+  "region": "Anglia Oriental, Inglaterra",
+  "dates": "c. 841 – 869",
+  "hook": "Un rey que podría haber salvado su vida con una sola palabra, pero se negó a pronunciarla.",
+  "summary": "Edmundo, rey de Anglia Oriental, fue asesinado por invasores vikingos en 869 tras negarse a renunciar a su fe cristiana.",
+  "story": [
+   "Edmundo llegó a ser rey de los anglos orientales hacia el año 855, coronado a los apenas quince años en un reino que abarcaba las tierras que hoy llamamos Norfolk y Suffolk. Pocos documentos de sus catorce años de reinado sobrevivieron a la devastación vikinga, pero las monedas acuñadas en su nombre muestran una sucesión sin sobresaltos respecto del rey anterior, Æthelweard, y sugieren años de gobierno estable. Los escritores medievales inventaron después elaboradas genealogías que lo vinculaban con casas reales del continente y afirmaron que había nacido en Núremberg, pero se trata de ficciones piadosas. Lo que sí permanece cierto es que se le recordó como un gobernante justo, que defendía a los pobres y no escuchaba a los aduladores.",
+   "La relativa paz de su reinado terminó en 865, cuando el Gran Ejército Pagano, una fuerza vikinga de quizá cinco mil guerreros, desembarcó en Anglia Oriental. Edmundo pactó con ellos, proporcionándoles caballos y suministros, y los invasores se dirigieron al norte, hacia York. Pero en 869 regresaron y acamparon en Thetford. La Crónica anglosajona, por lo general silenciosa sobre los asuntos de Anglia Oriental, registra el desenlace con escueta sobriedad: «Aquí el ejército cabalgó a través de Mercia hacia Anglia Oriental y tomó sus cuarteles de invierno en Thetford; y aquel invierno el rey Edmundo luchó contra ellos, los daneses obtuvieron la victoria, mataron al rey y conquistaron toda aquella tierra».",
+   "Ese relato escueto, una batalla, una derrota y una muerte, es el único testimonio contemporáneo. Dónde exactamente cayó Edmundo, y si murió en combate o fue ejecutado después, la Crónica no lo dice. Sin embargo, el culto a Edmundo como mártir surgió con notable rapidez. En una generación desde su muerte, los mismos vikingos que habían conquistado Anglia Oriental acuñaban denarios de plata con la inscripción «O Saint Edmund the King». Más de setenta monederos produjeron estas monedas conmemorativas, muchas de origen continental, y más de 1800 ejemplares aparecieron en un solo tesoro hallado en Lancashire. Las monedas prueban que Edmundo era venerado como santo antes del año 910, pero no dicen nada sobre cómo murió.",
+   "El relato detallado de su pasión llegó mucho después. Hacia el 986, el monje francés Abón de Fleury visitó Inglaterra y fue encargado por los monjes de la abadía de Ramsey de escribir la Passio Sancti Eadmundi. Abón afirmó que el arzobispo San Dunstano de Canterbury había oído la historia de un anciano que juraba haber sido el escudero de Edmundo. Si esta cadena de transmisión oral conservó detalles fiables o si pertenece, como dice un historiador, «al terreno de la fantasía hagiográfica», no puede demostrarse. Pero el relato de Abón se convirtió en la versión estándar.",
+   "Según el relato de Abón, Edmundo eligió el martirio antes que la batalla. Cuando el jefe vikingo Hinguar, probablemente Ivar el Sin Huesos, le exigió compartir el poder y renunciar al cristianismo, el rey se negó a traicionar su fe o a sacrificar a su pueblo en una resistencia sin esperanza. Disolvió sus tropas y se retiró hacia Framlingham, donde fue capturado. Llevado encadenado ante Hinguar, Edmundo volvió a rechazar las impías condiciones. Los vikingos lo golpearon con garrotes, lo ataron a un árbol y lo usaron como blanco de tiro, llenando su cuerpo de flechas. Finalmente lo decapitaron y arrojaron su cabeza al bosque. Según la leyenda, sus seguidores la encontraron custodiada por un lobo, que respondía con «¡Aquí, aquí, aquí!» a sus llamadas.",
+   "El cuerpo de Edmundo fue enterrado primero cerca del lugar de su muerte, en una capilla de madera. Hacia comienzos del siglo X, probablemente durante el reinado de Æthelstan, que llegó a ser rey de los anglosajones en 924, las reliquias fueron trasladadas a Beodricsworth, que se convirtió en Bury St Edmunds. Æthelstan fundó allí un monasterio en 925 para custodiar el santuario. Hacia 1032 ya se alzaba en el lugar una gran iglesia abacial de piedra, y el santuario se convirtió en uno de los destinos de peregrinación más ricos de la Inglaterra medieval. Cuando se exhumó el cuerpo, la tradición relata un milagro: el cadáver no se había corrompido, las heridas de flecha habían sanado y la cabeza separada se había unido al cuello.",
+   "El culto floreció durante siglos. Edmundo y Eduardo el Confesor fueron considerados patronos de Inglaterra hasta que San Jorge los reemplazó en el siglo XV. La abadía benedictina de Bury creció enormemente en poder y recibió jurisdicción sobre la mitad de Suffolk mediante la Libertad de San Edmundo, concedida por Eduardo el Confesor en 1044. Todo esto terminó en 1539, cuando Enrique VIII disolvió los monasterios. El santuario fue destruido, se le arrebataron el oro y la plata, y el abad y los monjes fueron expulsados. Hoy solo quedan los cimientos en ruinas, restaurados como monumento.",
+   "Un curioso epílogo: en el siglo XVII aparecieron en Toulouse, Francia, reliquias que se decían de Edmundo, supuestamente llevadas allí por el futuro Luis VIII tras su derrota en Lincoln en 1217. Cuando la peste golpeó Toulouse en la década de 1620, la ciudad atribuyó su liberación a un santo que las autoridades identificaron como Edmundo. En 1644 se construyó un magnífico relicario de plata. Estas reliquias fueron enviadas a Inglaterra en 1901 y permanecen en el castillo de Arundel, aunque su autenticidad ha sido puesta en duda. El legado histórico de Edmundo no descansa en las reliquias, sino en el testimonio de un rey del siglo IX que, según el relato más antiguo y fiable, hizo frente a la invasión vikinga y murió. Ya fuera que muriera con la espada en la mano o atado a un árbol, la Iglesia lo honró como mártir de la fe."
+  ],
+  "prayer": "San Edmundo mártir, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Bury St Edmunds",
+   "Anglia Oriental",
+   "Thetford",
+   "Hoxne",
+   "Suffolk"
+  ]
+ },
+ "books": [],
+ "caption": "A king who could have saved his life with one word—but refused.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Edmund the Martyr · Feast day: November 20\nEdmund, King of East Anglia, was killed by Viking invaders in 869 after refusing to renounce his Christian faith.\n\nSaint Edmund the Martyr, pray for us. 🕯\n\nHad you ever heard of St. Edmund the Martyr before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon · Catholic Encyclopedia (1913)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintedmund #eastanglia",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/art.jpg"
+ },
+ "review_message_id": 156
+}
