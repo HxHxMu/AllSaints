@@ -1,8 +1,8 @@
 {
  "id": "2026-11-13",
  "date": "2026-11-13",
- "status": "approved",
- "updated": "2026-11-06T12:29:05+00:00",
+ "status": "published",
+ "updated": "2026-11-13T12:34:31+00:00",
  "saint": {
   "qid": "Q580603",
   "name": "Saint Homobonus",
@@ -337,7 +337,8 @@
    "Catedral de Cremona",
    "Roma",
    "Italia"
-  ]
+  ],
+  "slug": "homobono"
  },
  "books": [],
  "caption": "He sold cloth in Cremona. Heaven was counting something else.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Homobonus · Feast day: November 13\nSaint Homobonus was a married cloth merchant of twelfth-century Cremona who gave much of his money to the poor, restored peace in quarreling families, and was canonized within two years of his death.\n\nSaint Homobonus, pray for us. 🕯\n\nSave this to pray with again next November 13.\n\n—\nSources: Wikipedia · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #sainthomobonus #cremona",
@@ -348,5 +349,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-13/art.jpg"
  },
- "review_message_id": 85
+ "review_message_id": 85,
+ "slug": "homobonus",
+ "published": {
+  "media_id": "18116713193029754",
+  "permalink": "https://www.instagram.com/reel/Dfroq1nAh0X/",
+  "location_id": null
+ },
+ "published_at": "2026-11-13T07:30-05:00",
+ "facebook": {
+  "id": "1637186927787288",
+  "url": "https://www.facebook.com/reel/1637186927787288/",
+  "published_at": "2026-11-13T07:32-05:00"
+ },
+ "threads": {
+  "id": "17993642132858493",
+  "url": "https://www.threads.com/@all.holy.saints/post/Dfro6GfPjGv",
+  "published_at": "2026-11-13T07:33-05:00"
+ },
+ "youtube": {
+  "id": "Gpk52lPTFOk",
+  "url": "https://youtube.com/shorts/Gpk52lPTFOk",
+  "privacy": "public",
+  "published_at": "2026-11-13T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7707633199429519374",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-13T07:34-05:00"
+ }
 }
