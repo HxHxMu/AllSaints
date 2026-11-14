@@ -1,0 +1,289 @@
+{
+ "id": "2026-11-21",
+ "date": "2026-11-21",
+ "status": "review",
+ "updated": "2026-11-14T10:25:42+00:00",
+ "saint": {
+  "qid": "Q1094869",
+  "name": "Blessed Franciszka Siedliska",
+  "display_name": "Blessed Franciszka Siedliska",
+  "dates": "1842 – 1902",
+  "region": "Poland and Rome",
+  "feast": "November 21",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q1094869",
+  "name": "Franciszka Siedliska",
+  "links": 9,
+  "enwiki": "Franciszka_Siedliska",
+  "images": [
+   "Mother%20Frances%20Siedliska.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Franciszka Siedliska",
+  "birth": 1842,
+  "death": 1902,
+  "lon": 12.482777777,
+  "lat": 41.893055555,
+  "selection_reason": "Franciszka Siedliska has a vivid, well-documented life (a girl indifferent to faith who is converted, waits out her parents' opposition, and founds the Holy Family of Nazareth sisters), and the Church examined a miracle attributed to her for her beatification and canonization; her feast on 21 November is the date she died, and she adds a new era and region (19th-century Poland and Rome) after the recent run of medieval and early saints.",
+  "catholic_veneration": "Canonized by Pope John Paul II in 2003 (beatified 1989); listed in the Roman Martyrology on 21 November and celebrated by the Sisters of the Holy Family of Nazareth (CSFN)."
+ },
+ "script": {
+  "saint": {
+   "name": "Blessed Franciszka Siedliska",
+   "display_name": "Blessed Franciszka Siedliska",
+   "dates": "1842 – 1902",
+   "region": "Poland and Rome",
+   "feast": "November 21",
+   "martyr": false
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "In nineteen eighty-six, the Church examined a miracle credited to a Polish nun.",
+    "visual": "art",
+    "scene": "A devotional icon of a nun in a dark religious habit, hands folded, shown above a Warsaw church interior where bishops in red and black and a few physicians sit at a long table over open documents."
+   },
+   {
+    "role": "who",
+    "text": "Blessed Fran-CHEESH-kah Shed-LEESH-kah was born near Warsaw in eighteen forty-two.",
+    "visual": "map",
+    "lat": 52.23,
+    "lon": 21.01,
+    "place": "Warsaw · Poland"
+   },
+   {
+    "role": "story",
+    "text": "Her home was indifferent to faith, until a Capuchin priest prepared her for First Communion. Her father said he would rather see her dead than a nun.",
+    "visual": "art",
+    "scene": "A young Polish noblewoman in a nineteenth-century long dress stands in the parlor of a country manor beside a Capuchin priest in a brown hooded habit. A stern father in period dress watches from the doorway, and a small altar with a crucifix stands in the corner."
+   },
+   {
+    "role": "story",
+    "text": "When her father died, she was free to follow her calling. In eighteen seventy-five, in Rome, she founded the Holy Family of Nazareth sisters.",
+    "visual": "art",
+    "scene": "A woman in a dark religious habit stands with a small group of the first sisters in a plain room in nineteenth-century Rome. Through the window are terracotta rooftops and the dome of a church, and an image of the Holy Family hangs on the wall."
+   },
+   {
+    "role": "story",
+    "text": "In Warsaw, an inquiry ran from February to June. A medical board approved it, then theologians, then the Congregation for the Causes of Saints.",
+    "visual": "art",
+    "scene": "Clergy in cassocks and a cardinal in red sit with physicians in white coats around a table in a Warsaw church hall, reading and signing documents. A framed image of a nun in a habit stands at the head of the table."
+   },
+   {
+    "role": "story",
+    "text": "Pope John Paul the Second gave final approval, and beatified her in nineteen eighty-nine.",
+    "visual": "art",
+    "scene": "A pope in white vestments blesses a gathered crowd before the facade of a great basilica. A large devotional image of a nun in a dark habit hangs from the loggia, and sisters in habits stand among the faithful."
+   },
+   {
+    "role": "turn",
+    "text": "The sign points past her, to the God she served. She served through letters of encouragement to her sisters.",
+    "visual": "art",
+    "scene": "A nun in a dark habit sits writing at a wooden desk by lamplight in a simple room in Rome. A crucifix hangs on the wall, and a map and sealed letters lie beside her."
+   },
+   {
+    "role": "close",
+    "text": "Blessed Fran-CHEESH-kah Shed-LEESH-kah, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Franciszka": "Fran-CHEESH-kah",
+   "Siedliska": "Shed-LEESH-kah"
+  },
+  "caption_hook": "She waited years for her calling, then built a family of sisters that crossed the world.",
+  "summary": "Blessed Franciszka Siedliska, a Polish noblewoman who waited out her father's opposition, founded the Sisters of the Holy Family of Nazareth, and was beatified in 1989 after the Church examined a miracle attributed to her.",
+  "youtube_title": "Blessed Franciszka Siedliska: A Miracle Examined in Warsaw",
+  "hashtags": [
+   "#blessedfranciszkasiedliska",
+   "#warsaw",
+   "#poland",
+   "#holyfamilyofnazareth",
+   "#catholic",
+   "#catholicsaints",
+   "#blessed",
+   "#foundress",
+   "#sisters",
+   "#religiouslife",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Franciszka? Send them their Blessed.",
+  "claims": [
+   {
+    "claim": "The Church investigated a miracle attributed to Franciszka Siedliska in a diocesan process in Warsaw, overseen by Cardinal Józef Glemp, from 21 February to 9 June 1986.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She was born near Warsaw (Roszkowa Wola) on 12 November 1842 to a noble family.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She was educated at home in a household indifferent to faith until she met the Capuchin priest Leander Lendzian, who prepared her for First Communion on 1 May 1855.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Her parents opposed her religious vocation, and her father said he would rather see her dead than a nun.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Her father died in 1870, which allowed her to pursue her vocation.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She founded the Sisters of the Holy Family of Nazareth in Rome at the beginning of Advent in 1875.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "A medical board approved the miracle process on 18 November 1987, theologians assented on 15 April 1988, and the Congregation for the Causes of Saints approved on 5 July 1988.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope John Paul II gave final approval on 1 September 1988 and beatified her on 23 April 1989.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She wrote letters of encouragement to more than 29 foundations.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "She is called Blessed; her congregation took up charitable, educational and pastoral work, and she served as superior general until her death.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "She died in Rome on 21 November 1902 and her feast is 21 November.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Warsaw",
+   "Rome",
+   "Chicago"
+  ],
+  "story": [
+   "Franciszka Siedliska was born on 12 November 1842 at Roszkowa Wola, near Warsaw, the eldest child of Adolf Adam Siedliski and Cecylia Marianna Morawska. Both belonged to the Polish noble class, the szlachta. Her mother was of Jewish descent. Franciszka was educated at home by governesses, in a household that was indifferent to faith.",
+   "That began to change in Warsaw in November 1854, at an event her grandfather was hosting. There she met a zealous Capuchin priest, Leander Lendzian. He prepared her for her First Communion on 1 May 1855, and she resolved to offer herself to God. She had been a girl who cared little for the faith. From that day she was a girl with a vocation.",
+   "That calling met resistance at home. Around 1860 she wanted to enter religious life, but her parents opposed it. Her father said he would rather see her dead than a nun. The family moved to Switzerland, then Prussia and France. Franciszka's health was frail, and her parents sought treatment for her in Murano and Cannes before the family returned to Poland in 1865. For about ten years she waited, in a house that did not share her hope.",
+   "Her father died in 1870, and she was free to follow her calling. She joined the Third Order of Saint Francis in Lublin that same year. On 12 April 1873, guided by Father Lendzian, she was encouraged to found a new order, in the conviction that it was God's will that she should. On 1 October 1873 Pope Pius IX received her in a private audience and gave her idea his apostolic blessing. At the beginning of Advent in 1875, she founded the Sisters of the Holy Family of Nazareth in Rome. The Ökumenisches Heiligenlexikon adds that the congregation took up charitable, educational and pastoral work, especially in Poland and among Polish emigrants.",
+   "She made her solemn profession on 1 May 1884 and took the name Maria of Jesus the Good Shepherd. The congregation spread quickly across Europe. On 4 July 1885 she arrived in New York Harbor, and on 6 July she was in Chicago to open schools. She led eleven sisters to found a community in Des Plaines, and a decade later, in August 1895, a house opened in Pittsburgh. She traveled to Paris in 1892 and to London in 1895. From Rome she led religious exercises, held conferences, and wrote letters of encouragement to more than twenty-nine foundations. Pope Leo XIII gave the congregation a decree of praise on 1 September 1896, and Pope Pius XI gave definitive approval on 4 June 1923.",
+   "Her travels ended on 16 October 1902, when she returned to Rome in failing health and never left again. She died there on 21 November 1902, after six days of acute peritonitis. She was buried at Campo Verano, and her remains were moved in 1953 to the order's motherhouse and in 1966 to its new generalate on Via Nazareth. Today her sisters serve in places from Israel to Australia. Her order has numbered more than 1,500 religious. In 2005 it counted 152 houses and 1,490 sisters, and in 2015 about 1,300.",
+   "The Church opened her cause in Rome in 1922, and testimonies were gathered from Paris, London and Chicago. Her writings were found to contain nothing contrary to doctrine in 1937. In 1941 Pope Pius XII introduced her cause, and she was called a Servant of God. On 29 April 1980 Pope John Paul II confirmed her heroic virtue and named her Venerable. For her beatification, a miracle attributed to her was examined in a diocesan process in Warsaw, overseen by Cardinal Józef Glemp, from 21 February to 9 June 1986. The Congregation for the Causes of Saints validated the process in November 1986. A medical board approved it in 1987, theologians assented in April 1988, and the Congregation approved it in July 1988. On 1 September 1988 John Paul II gave the final approval needed, and on 23 April 1989 he beatified her. The sources used here do not describe the miracle itself, only the steps the Church took to examine it. In all of this, the sign points beyond her to God, whom she served through her letters and through the sisters she gathered."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Spoken turn beat says she served 'through patience'. No source mentions patience, so it is unsupported. Cut it, leaving the sourced letters of encouragement. Word count stays within range, about 136.",
+   "Website story's final sentence repeats the unsupported 'with patience'. Fixed with a find/replace.",
+   "Beat 6 visual placed the beatification before Saint Peter's Basilica. The sources give no venue, so the scene is now generic.",
+   "Miracle status checked: beats and story say only that the Church examined or approved the process, and the story states that the sources do not describe the miracle. Nothing is overstated.",
+   "Dates, titles (Blessed, Venerable, Servant of God), the Warsaw map point and the 21 November feast all match the sources."
+  ],
+  "confidence": 90,
+  "reviewer_note": "Please confirm the hook is acceptable as a miracle-process hook (sources give no miracle details), and check that the generic basilica image in the beatification scene suits you."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2339,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1001,
+   "thinking": 759
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2040,
+   "cache_write": 3928,
+   "cache_read": 0,
+   "out": 10731,
+   "thinking": 7093
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4361,
+   "cache_write": 0,
+   "cache_read": 3928,
+   "out": 6813,
+   "thinking": 4377
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1935,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3277,
+   "thinking": 1084
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Franciszka Siedliska",
+   "url": "https://en.wikipedia.org/wiki/Franciszka_Siedliska"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Franciszka Siedliska",
+   "url": "https://www.heiligenlexikon.de/BiographienM/Maria_von_Jesus_Siedliska.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 66.6,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "Beata Franciszka Siedliska",
+  "display_name": "Beata Franciszka",
+  "region": "Polonia y Roma",
+  "dates": "1842 – 1902",
+  "hook": "Esperó años a su llamado y luego formó una familia de hermanas que recorrió el mundo.",
+  "summary": "La beata Franciszka Siedliska, noble polaca que esperó a que se superara la oposición de su padre, fundó las Hermanas de la Sagrada Familia de Nazaret, y fue beatificada en 1989, después de que la Iglesia examinara un milagro atribuido a ella.",
+  "story": [
+   "Franciszka Siedliska nació el 12 de noviembre de 1842 en Roszkowa Wola, cerca de Varsovia, la primera hija de Adolf Adam Siedliski y Cecylia Marianna Morawska. Ambos pertenecían a la nobleza polaca, la szlachta. Su madre era de origen judío. Franciszka fue educada en casa por institutrices, en un hogar indiferente a la fe.",
+   "Ese panorama comenzó a cambiar en Varsovia, en noviembre de 1854, en un acto que organizaba su abuelo. Allí conoció a un celoso sacerdote capuchino, Leandro Lendzian. Él la preparó para su Primera Comunión, el 1 de mayo de 1855, y ella resolvió ofrecerse a Dios. Hasta entonces había sido una niña poco interesada en la fe. Desde ese día fue una joven con vocación.",
+   "Esa vocación encontró resistencia en su hogar. Alrededor de 1860 quiso entrar en la vida religiosa, pero sus padres se opusieron. Su padre dijo que preferiría verla muerta antes que monja. La familia se trasladó a Suiza, luego a Prusia y a Francia. La salud de Franciszka era frágil, y sus padres buscaron tratamiento para ella en Murano y en Cannes, antes de que la familia regresara a Polonia en 1865. Durante unos diez años esperó, en una casa que no compartía su esperanza.",
+   "Su padre murió en 1870, y ella quedó libre para seguir su llamado. Ese mismo año ingresó en la Tercera Orden de San Francisco, en Lublin. El 12 de abril de 1873, guiada por el padre Lendzian, fue animada a fundar una nueva congregación, convencida de que era la voluntad de Dios. El 1 de octubre de 1873, el papa Pío IX la recibió en audiencia privada y dio su bendición apostólica a su idea. Al comienzo del Adviento de 1875 fundó en Roma las Hermanas de la Sagrada Familia de Nazaret. El Ökumenisches Heiligenlexikon añade que la congregación se dedicó a obras de caridad, educación y pastoral, especialmente en Polonia y entre los emigrantes polacos.",
+   "Hizo su profesión solemne el 1 de mayo de 1884 y tomó el nombre de María de Jesús Buen Pastor. La congregación se extendió rápidamente por Europa. El 4 de julio de 1885 llegó al puerto de Nueva York, y el 6 de julio ya estaba en Chicago para abrir escuelas. Condujo a once hermanas para fundar una comunidad en Des Plaines, y una década más tarde, en agosto de 1895, se abrió una casa en Pittsburgh. Viajó a París en 1892 y a Londres en 1895. Desde Roma dirigía ejercicios espirituales, daba conferencias y escribía cartas de aliento a más de veintinueve fundaciones. El papa León XIII concedió a la congregación un decreto de alabanza el 1 de septiembre de 1896, y el papa Pío XI le dio la aprobación definitiva el 4 de junio de 1923.",
+   "Sus viajes terminaron el 16 de octubre de 1902, cuando regresó a Roma con la salud quebrantada y nunca más volvió a salir. Murió allí el 21 de noviembre de 1902, tras seis días de peritonitis aguda. Fue sepultada en el Campo Verano, y sus restos fueron trasladados en 1953 a la casa madre de la orden y en 1966 al nuevo generalato de la orden en Via Nazareth. Hoy sus hermanas prestan servicio en lugares que van desde Israel hasta Australia. Su orden ha contado con más de 1.500 religiosos. En 2005 tenía 152 casas y 1.490 hermanas, y en 2015 alrededor de 1.300.",
+   "La Iglesia abrió su causa en Roma en 1922, y se recogieron testimonios en París, Londres y Chicago. En 1937 se comprobó que sus escritos no contenían nada contrario a la doctrina. En 1941 el papa Pío XII introdujo su causa, y fue llamada Sierva de Dios. El 29 de abril de 1980, el papa Juan Pablo II confirmó sus virtudes heroicas y la declaró Venerable. Para su beatificación, un milagro atribuido a ella fue examinado en un proceso diocesano en Varsovia, presidido por el cardenal Józef Glemp, del 21 de febrero al 9 de junio de 1986. La Congregación para las Causas de los Santos validó el proceso en noviembre de 1986. Una junta médica lo aprobó en 1987, los teólogos dieron su asentimiento en abril de 1988, y la Congregación lo aprobó en julio de 1988. El 1 de septiembre de 1988, Juan Pablo II dio la aprobación final necesaria, y el 23 de abril de 1989 la beatificó. Las fuentes utilizadas aquí no describen el milagro en sí, solo los pasos que la Iglesia siguió para examinarlo. En todo ello, el signo apunta más allá de ella, hacia Dios, a quien sirvió por medio de sus cartas y de las hermanas que reunió."
+  ],
+  "prayer": "Beata Franciszka Siedliska (Fran-CHEESH-kah Shed-LEESH-kah), ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Varsovia",
+   "Roma",
+   "Chicago"
+  ]
+ },
+ "angle": "miracle",
+ "books": [],
+ "caption": "She waited years for her calling, then built a family of sisters that crossed the world.\n✝ A forgotten saint, every morning. Follow along.\n\nBlessed Franciszka Siedliska · Feast day: November 21\nBlessed Franciszka Siedliska, a Polish noblewoman who waited out her father's opposition, founded the Sisters of the Holy Family of Nazareth, and was beatified in 1989 after the Church examined a miracle attributed to her.\n\nBlessed Fran-CHEESH-kah Shed-LEESH-kah, pray for us. 🕯\n\nKnow someone named Franciszka? Send them their Blessed.\n\n—\nSources: Wikipedia · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #blessedfranciszkasiedliska #warsaw",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-21/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-21/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-21/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-21/art.jpg"
+ },
+ "review_message_id": 164
+}
