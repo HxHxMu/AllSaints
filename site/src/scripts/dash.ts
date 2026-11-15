@@ -111,7 +111,7 @@ function render(all: Any) {
   $("episodes").querySelector("tbody")!.innerHTML = eps.map((e: Any) => `<tr>
     <td class="numeral">${dLabel(e.date)}</td>
     <td>${e.slug ? `<a href="/saints/${esc(e.slug)}/">${esc(e.saint)}</a>` : esc(e.saint)}</td>
-    <td class="n">${num(e.yt?.views)}</td><td class="n ${e.yt?.avg_pct === best ? "best" : ""}">${e.yt?.avg_pct != null ? e.yt.avg_pct + "%" : "—"}</td>
+    <td class="n">${num(e.yt?.views)}</td><td class="n ${e.yt?.avg_pct === best ? "best" : ""}">${e.yt?.avg_pct != null ? e.yt.avg_pct + "%" : "—"}</td><td class="n">${e.yt?.stayed_pct != null ? e.yt.stayed_pct + "%" : "—"}</td>
     <td class="n">${num(e.yt?.shares)}</td><td class="n">${num(e.yt?.subs)}</td>
     <td class="n">${num(e.ig?.views)}</td><td class="n">${num(e.fb?.plays)}</td><td class="n">${num(e.tt?.views)}</td><td class="n">${num(e.th?.views)}</td><td class="n">${num(e.ig?.shares)}</td><td class="n">${num(e.ig?.saved)}</td>
     <td class="n">${e.duration ? Math.round(e.duration) + " s" : "—"}</td><td class="n">${e.who_words}</td></tr>`).join("");

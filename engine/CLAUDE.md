@@ -13,7 +13,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
                            Catholic Encyclopedia/New Advent, causesanti.va, Santi e Beati, Nominis, Heiligenlexikon;
                            page text ≤8000 chars each), Wikisource Catholic Encyclopedia title search as fallback.
                            Wikipedia-only → fact-check confidence capped at 70 + ⚠️ in the Telegram review note
- → script.write_script     Claude, JSON beats (hook/who/story…/turn/close), 125–145 words, + youtube_title, share_cta,
+ → script.write_script     Claude, JSON beats (hook/who/story…/turn/close), word range from brand.json writing.length (115–130), + youtube_title, share_cta,
                            + website fields: story (600–800 words, 5–8 paragraphs), patronages, places
  → script.fact_check       second Claude pass vs the same cached sources; checks beats + story; returns a script only when
                            beats need fixing, story fixes as find/replace pairs (applied in fact_check); may "reject"

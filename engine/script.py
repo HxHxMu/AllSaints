@@ -2,6 +2,9 @@
 import json, re
 from common import BRAND, claude_json, load_config, log, month_day_label
 
+# spoken-word range, read from brand.json ("115-130 spoken words ...") so the length lives in one place
+LO, HI = map(int, re.match(r"\s*(\d+)\s*-\s*(\d+)", BRAND["writing"]["length"]).groups())
+
 SYSTEM = f"""You write for "All Saints" (A.S.†): one-minute Instagram Reels on lesser-known Catholic saints, narrated by a warm, deep, unhurried male voice over sacred art.
 Tagline: {BRAND['tagline']}
 Voice: {BRAND['voice']['narrator']}
@@ -84,7 +87,7 @@ Return ONLY JSON in exactly this shape (the example values are placeholders):
 
 Requirements:
 - 6 to 8 beats; first is "hook", second is "who" (with map coordinates of where their story mainly happened), last is "close" containing only the prayer line "Saint <Name>, pray for us." (use "Saints ... pray for us." for a pair).
-- Total spoken words across all beats: 125-145.
+- Total spoken words across all beats: {LO}-{HI}.
 - "martyr": true only if they died as a martyr.
 - "dates": use "c." when uncertain; "fl." if only active dates are known.
 - pronunciations: map any unusual name to a phonetic respelling (one token, hyphens allowed) so the narrator says it right; leave empty if none.
@@ -99,11 +102,11 @@ Requirements:
     for attempt in range(3):
         s = claude_json(task, system=SYSTEM, context=ctx, label="script")
         n = word_count(s)
-        if 115 <= n <= 155:
+        if LO - 10 <= n <= HI + 10:
             return s
         log(f"Script length {n} words; retrying")
         # show the draft so the model trims or extends it instead of starting over
-        task = (prompt + f"\n\nYour previous draft had {n} spoken words; it must have 125-145. "
+        task = (prompt + f"\n\nYour previous draft had {n} spoken words; it must have {LO}-{HI}. "
                 "Revise it to that length, keeping everything else that works. Previous draft:\n"
                 + json.dumps(s, ensure_ascii=False))
     return s
@@ -131,7 +134,7 @@ SCRIPT JSON:
 Check both the spoken beats and the website "story" paragraphs.
 For every sentence: is it supported by the sources? Is legend presented as history? Are dates, places, titles (Saint/Blessed, martyr, bishop, etc.) right? Is anything theologically careless or irreverent? Is the map location right?
 {angle['check'] if angle else ''}
-Fix problems with the smallest possible edits, keeping the same beats, roles and length (125-145 words).
+Fix problems with the smallest possible edits, keeping the same beats, roles and length ({LO}-{HI} words).
 Story problems are fixed as find/replace pairs, never by rewriting the story.
 
 Return ONLY JSON:

@@ -126,10 +126,12 @@ def youtube(rows, notes):
         if ids:
             for i in range(0, len(ids), 50):
                 for row in report(dimensions="video", filters="video==" + ",".join(ids[i:i + 50]), sort="-views", maxResults=200,
-                                  metrics="views,averageViewPercentage,averageViewDuration,shares,subscribersGained,estimatedMinutesWatched"):
+                                  metrics="views,engagedViews,averageViewPercentage,averageViewDuration,shares,subscribersGained,estimatedMinutesWatched"):
                     by_id[row["video"]].setdefault("yt", {}).update(
                         {"avg_pct": round(row["averageViewPercentage"], 1), "avg_sec": row["averageViewDuration"],
-                         "shares": row["shares"], "subs": row["subscribersGained"], "minutes": row["estimatedMinutesWatched"]})
+                         "shares": row["shares"], "subs": row["subscribersGained"], "minutes": row["estimatedMinutesWatched"],
+                         # Studio's "stayed to watch" on Shorts: views that weren't swiped away in the first seconds
+                         "stayed_pct": round(100 * row["engagedViews"] / row["views"], 1) if row["views"] else None})
         start = (today() - dt.timedelta(days=DAYS)).isoformat()
         daily = [{"date": r["day"], "views": r["views"], "subs": r["subscribersGained"] - r["subscribersLost"]}
                  for r in report(dimensions="day", metrics="views,subscribersGained,subscribersLost", sort="day")]

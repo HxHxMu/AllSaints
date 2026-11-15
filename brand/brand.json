@@ -58,13 +58,13 @@
     "elevenlabs": {"voice_id": "JBFqnCBsd6RMkjVDRZzb", "model_id": "eleven_multilingual_v2", "stability": 0.55, "similarity_boost": 0.8, "style": 0.15, "speed": 0.92}
   },
   "writing": {
-    "length": "125-145 spoken words (about 55-62 seconds).",
+    "length": "115-130 spoken words (about 50-56 seconds).",
     "structure": [
-      "HOOK (1 sentence, under 14 words): the single most arresting true detail of their life.",
-      "WHO: name, era, place in one breath.",
+      "HOOK (1 sentence, under 14 words): the payoff first. The single most arresting true detail of their life, said plainly, so a stranger knows in two seconds why this life matters. Lead with the human moment, not the name, a title or a date.",
+      "WHO (under 15 words): name, century and one modern place name. No old-and-modern place pairs, no list of titles.",
       "STORY: 3-4 beats, concrete and visual. One idea per sentence.",
       "TURN: what their holiness looked like in practice.",
-      "CLOSE: one line of meaning for today, then 'Saint ___, pray for us.'"
+      "CLOSE: one short line of meaning for today (under 12 words), then 'Saint ___, pray for us.'"
     ],
     "rules": [
       "Accuracy over drama. Separate history from tradition: use 'tradition holds' / 'according to legend' for unverified miracles and martyrdom details.",
