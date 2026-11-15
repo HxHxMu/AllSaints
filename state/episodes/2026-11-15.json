@@ -1,8 +1,8 @@
 {
  "id": "2026-11-15",
  "date": "2026-11-15",
- "status": "approved",
- "updated": "2026-11-08T16:31:11+00:00",
+ "status": "published",
+ "updated": "2026-11-15T12:34:01+00:00",
  "saint": {
   "qid": "Q245621",
   "name": "Saint Roque González de Santa Cruz",
@@ -327,7 +327,8 @@
    "Caaró",
    "Paraguay",
    "Encarnación"
-  ]
+  ],
+  "slug": "roque-gonzalez-de-santa-cruz"
  },
  "angle": "miracle",
  "books": [],
@@ -339,5 +340,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-15/art.jpg"
  },
- "review_message_id": 117
+ "review_message_id": 117,
+ "slug": "roque-gonzalez-de-santa-cruz",
+ "published": {
+  "media_id": "18153481096554608",
+  "permalink": "https://www.instagram.com/reel/DfwyPRdGZmA/",
+  "location_id": null
+ },
+ "published_at": "2026-11-15T07:30-05:00",
+ "facebook": {
+  "id": "1036782752781938",
+  "url": "https://www.facebook.com/reel/1036782752781938/",
+  "published_at": "2026-11-15T07:31-05:00"
+ },
+ "threads": {
+  "id": "17913943449306560",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfwybG-hOWt",
+  "published_at": "2026-11-15T07:33-05:00"
+ },
+ "youtube": {
+  "id": "LUGLo8bs_6s",
+  "url": "https://youtube.com/shorts/LUGLo8bs_6s",
+  "privacy": "public",
+  "published_at": "2026-11-15T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of the Americas"
+  ],
+  "playlists_done": true
+ },
+ "continent": "the Americas",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7708375306876241933",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-15T07:34-05:00"
+ }
 }
