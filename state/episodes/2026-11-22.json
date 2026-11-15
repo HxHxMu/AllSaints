@@ -1,0 +1,293 @@
+{
+ "id": "2026-11-22",
+ "date": "2026-11-22",
+ "status": "review",
+ "updated": "2026-11-15T10:23:58+00:00",
+ "saint": {
+  "qid": "Q709209",
+  "name": "Saint Philemon",
+  "display_name": "St. Philemon",
+  "dates": "fl. 1st century",
+  "region": "Colossae, Asia Minor",
+  "feast": "November 22",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q709209",
+  "name": "Philemon",
+  "links": 30,
+  "enwiki": "Philemon_(biblical_figure)",
+  "images": [
+   "Frescos%20in%20St.%20George%27s%20Church%20%28Staro%20Nagoricane%29%20068.JPG"
+  ],
+  "religions": [],
+  "commonscat": "Saint Philemon",
+  "birth": 100,
+  "death": 70,
+  "lon": 29.1075,
+  "lat": 37.835833333,
+  "selection_reason": "Philemon has the strongest documentation (Paul's letter itself, the Catholic Encyclopedia and Santi e Beati) and a moving story of forgiveness and reconciliation with the runaway Onesimus, yet he is not a household name, and as an early-Church figure in Asia Minor he differs in era and region from the recent run of medieval European saints.",
+  "catholic_veneration": "Venerated as a saint and martyr of Colossae, commemorated on November 22 in the Roman Martyrology with Apphia (and Archippus); also honored in the Byzantine Menaia, which Eastern Catholics share."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Philemon",
+   "display_name": "St. Philemon",
+   "dates": "fl. 1st century",
+   "region": "Colossae, Asia Minor",
+   "feast": "November 22",
+   "martyr": true
+  },
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Paul promised, in his own hand, to repay a runaway slave's debt.",
+    "visual": "art",
+    "scene": "An aged Paul sits in a plain first-century prison lodging, his wrist bound by a light chain, writing on a papyrus sheet with a reed pen by lamplight. A young man in a simple tunic stands humbly beside him."
+   },
+   {
+    "role": "who",
+    "text": "Saint Philemon was a wealthy Christian of Colossae, in Asia Minor, in the first century.",
+    "visual": "map",
+    "lat": 37.79,
+    "lon": 29.26,
+    "place": "Colossae · Asia Minor"
+   },
+   {
+    "role": "story",
+    "text": "His home was a meeting place for the church. Paul called him a dear friend and fellow worker.",
+    "visual": "art",
+    "scene": "Philemon, a well-dressed Greco-Roman householder, welcomes believers into the columned courtyard of his Phrygian house. Men, women and children gather in simple tunics and cloaks, with hills in the distance."
+   },
+   {
+    "role": "story",
+    "text": "Then Onesimus, most likely Philemon's slave, ran away, and met Paul in prison.",
+    "visual": "art",
+    "scene": "Onesimus, a young man in a plain tunic, kneels before Paul in a modest lodging with a barred window. Paul rests a hand on his shoulder, and a scroll lies on the table."
+   },
+   {
+    "role": "story",
+    "text": "Paul sent him back with a letter. He asked Philemon to welcome him, no longer as a slave, but as a beloved brother. Any debt, Paul would repay. He would not command it. He left the choice to Philemon.",
+    "visual": "art",
+    "scene": "Inside his house, Philemon reads an unrolled letter with a thoughtful face. Onesimus waits a few steps away with bowed head, and Apphia stands quietly behind Philemon."
+   },
+   {
+    "role": "turn",
+    "text": "The letter does not record his answer. But the Church remembers his charity, which Paul praised. Tradition holds he died a martyr under Nero, with Apphia.",
+    "visual": "art",
+    "scene": "In a devotional icon style, Philemon and Apphia stand side by side in prayer in their house church, with the gathered faithful behind them. Soft halos show their sanctity."
+   },
+   {
+    "role": "close",
+    "text": "Mercy is a choice, made freely, at our own door. Saint Philemon, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Philemon": "fy-LEE-mun",
+   "Colossae": "kuh-LOSS-ee",
+   "Onesimus": "oh-NESS-ih-mus",
+   "Apphia": "AF-ee-uh"
+  },
+  "caption_hook": "A letter of only twenty-five verses asks one man to forgive another.",
+  "summary": "Saint Philemon, a Christian of Colossae, received Paul's short letter asking him to welcome the runaway Onesimus as a brother, and the Church remembers him for his charity.",
+  "youtube_title": "St. Philemon: The Man Paul Asked to Forgive",
+  "hashtags": [
+   "#saintphilemon",
+   "#colossae",
+   "#philemon",
+   "#onesimus",
+   "#apostlepaul",
+   "#earlychurch",
+   "#forgiveness",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#novemberbyfeast",
+   "#allsaints",
+   "#catholic",
+   "#instacatholic"
+  ],
+  "share_cta": "Know someone named Philemon? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Paul's letter to Philemon is a private letter in the New Testament, addressed to Philemon, Apphia, Archippus and the church that meets in his home.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Paul calls Philemon his dear friend and fellow worker.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Philemon was a wealthy Christian of Colossae whose house was a meeting place for the church; he was kind and hospitable.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Onesimus, most likely a slave of Philemon, ran away and came to Paul, who was in prison.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The usual reading of Onesimus as a runaway slave is debated; the letter does not tell fully how he met Paul.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Paul sent Onesimus back and asked Philemon to receive him no longer as a slave but as a beloved brother.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Paul offered to repay anything Onesimus owed, signing the promise with his own hand.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Paul did not command Philemon but appealed to his free decision.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The letter does not record Philemon's answer; reconciliation belongs to tradition.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology commemorates Philemon of Colossae on November 22, whose charity Paul rejoiced in.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that Philemon and Apphia died as martyrs under Nero; no contemporary records confirm it.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The Menaia of November 22 speak of Philemon, with Apphia, Archippus and Onesimus, as martyred at Colossae in the reign of Nero.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Apphia is generally believed to have been Philemon's wife.",
+    "source": 1,
+    "kind": "tradition"
+   }
+  ],
+  "story": [
+   "Most saints of the early Church left us stories. Philemon left us a letter, and it is enough. In just a few verses, preserved in the New Testament, we meet a man of Colossae, a city of Phrygia in Asia Minor, set in a region of trade and many cultures. Paul wrote to him as a dear friend and fellow worker.",
+   "From the letter, the Catholic Encyclopedia draws a portrait. Philemon was a wealthy man, who owned slaves. He was probably converted by Paul himself, during Paul's long stay at Ephesus, since Paul had likely never visited Colossae. His house was a meeting place for the believers there. He was kind, helpful and charitable, and he opened his home to fellow Christians. Santi e Beati adds a caution: the letter does not tell us his exact fortune, public office or rank, only that his house could hold a church.",
+   "Paul's greeting also names Apphia, called a sister, and Archippus, called a fellow soldier. Tradition has long taken Apphia to be Philemon's wife and Archippus their son. The letter does not say so. The second relationship in particular cannot be proved from the New Testament. Still, the greeting reaches the whole household and the church that gathered there.",
+   "The letter has one purpose. Onesimus, a man of Philemon's household, was away from him. The usual reading is that he was a slave who had run away, and the Catholic Encyclopedia adds that he had probably wronged his master. Santi e Beati notes that the letter does not fully explain his departure or how he met Paul, so some details remain open. Paul was in prison at the time. Rome is the traditional place, though Caesarea and Ephesus have been proposed, and the letter is usually dated to about the years 61 to 63. In that imprisonment Onesimus became dear to Paul, who called him his son. Under Roman law a master could treat a runaway slave as he pleased, and the penalties were harsh.",
+   "Paul sent Onesimus back. He asked Philemon to receive him not only as a slave but as a beloved brother. He said that perhaps Onesimus had been parted from Philemon for a time so that Philemon might have him forever. If Onesimus owed anything, Paul asked that it be charged to his own account, and he signed that promise with his own hand. Paul could have given an order. Instead he left the decision to Philemon, so that his kindness would be freely given and not forced. The letter does not abolish slavery, but it shows the tension between Roman order and Christian brotherhood.",
+   "We are not told how Philemon answered. The reconciliation belongs to later tradition, not to a second, independent witness. The Catholic Encyclopedia notes that tradition remembers Onesimus as bishop of Beraea, which suggests that Paul's request was granted. Some later traditions also made Philemon a bishop, variously linked to Colossae or Gaza. None of this comes from the letter, and none has contemporary confirmation.",
+   "The Church also remembers Philemon as a martyr. The Byzantine Menaia of November 22 speak of Philemon, with Apphia, Archippus and Onesimus, as martyred at Colossae under Nero. An account in the saints' lives says Christians gathered in prayer were attacked and that Philemon and Apphia were brought before an authority and put to death. The details, including the name of the magistrate, belong to a later tradition. Nero's persecution is well attested at Rome after the fire of 64, but nothing proves a systematic action at Colossae, and no records from that time survive. The lack of proof does not make the martyrdom impossible. It only asks us to tell memory apart from certainty.",
+   "The Roman Martyrology keeps his feast on November 22, honoring Philemon of Colossae, whose charity in Christ Jesus made Paul glad. He is venerated with his wife Apphia. What the Church holds most surely is the picture in Paul's letter: a man with an open house and a free choice, asked to forgive in the name of Christ."
+  ],
+  "patronages": [],
+  "places": [
+   "Colossae",
+   "Phrygia",
+   "Asia Minor"
+  ]
+ },
+ "factcheck": {
+  "verdict": "pass",
+  "issues": [],
+  "confidence": 88,
+  "reviewer_note": "No errors found. The spoken beats come to about 138 words, and the Colossae map pin (37.79, 29.26) is correct. Optional trims: the story's 'Byzantine Menaia' and its opening line 'Most saints of the early Church left us stories' go slightly beyond the sources. The spoken line 'runaway slave' is hedged by 'most likely' in beat 4, and the Apphia-as-wife link is only implied in the spoken beats and is hedged in the story and claims."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1440,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 577,
+   "thinking": 360
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 1816,
+   "cache_write": 7400,
+   "cache_read": 0,
+   "out": 8487,
+   "thinking": 5085
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4085,
+   "cache_write": 0,
+   "cache_read": 7400,
+   "out": 4673,
+   "thinking": 4465
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1796,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 4887,
+   "thinking": 2883
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Philemon (biblical figure)",
+   "url": "https://en.wikipedia.org/wiki/Philemon_(biblical_figure)"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Philemon",
+   "url": "https://www.newadvent.org/cathen/11797b.htm"
+  },
+  {
+   "title": "Santi e Beati: Philemon",
+   "url": "https://www.santiebeati.it/dettaglio/90445"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 66.6,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Filemón",
+  "name": "San Filemón",
+  "region": "Colosas, Asia Menor",
+  "dates": "fl. siglo I",
+  "hook": "Una carta de solo veinticinco versículos pide a un hombre que perdone a otro.",
+  "summary": "San Filemón, cristiano de Colosas, recibió la breve carta de Pablo que le pedía acoger como hermano al esclavo fugitivo Onésimo, y la Iglesia lo recuerda por su caridad.",
+  "story": [
+   "La mayoría de los santos de la Iglesia primitiva nos dejaron relatos. Filemón nos dejó una carta, y basta. En solo unos pocos versículos, conservados en el Nuevo Testamento, conocemos a un hombre de Colosas, ciudad de Frigia en Asia Menor, situada en una región de comercio y de muchas culturas. Pablo le escribió como a un querido amigo y compañero de trabajo.",
+   "De la carta, la Enciclopedia Católica traza un retrato. Filemón era un hombre acaudalado, que poseía esclavos. Probablemente fue convertido por el mismo Pablo, durante la larga estancia de Pablo en Éfeso, ya que es probable que Pablo nunca hubiera visitado Colosas. Su casa era lugar de reunión de los creyentes de allí. Era bondadoso, servicial y caritativo, y abría su hogar a los hermanos en la fe. Santi e Beati añade una advertencia: la carta no nos dice cuál era exactamente su fortuna, su cargo público ni su rango, solo que su casa podía albergar una iglesia.",
+   "El saludo de Pablo nombra también a Apia, llamada hermana, y a Arquipo, llamado compañero de armas. La tradición ha considerado desde hace mucho que Apia era la esposa de Filemón y Arquipo su hijo. La carta no lo dice. La segunda relación, en particular, no puede probarse a partir del Nuevo Testamento. Aun así, el saludo llega a toda la familia y a la iglesia que se reunía en su casa.",
+   "La carta tiene un único propósito. Onésimo, miembro de la casa de Filemón, se había alejado de él. La lectura habitual es que era un esclavo que había huido, y la Enciclopedia Católica añade que probablemente había perjudicado a su amo. Santi e Beati señala que la carta no explica del todo su partida ni cómo llegó a encontrarse con Pablo, así que algunos detalles quedan abiertos. Pablo estaba entonces en prisión. Roma es el lugar tradicional, aunque también se han propuesto Cesarea y Éfeso, y la carta suele datarse hacia los años 61 a 63. En esa prisión, Onésimo llegó a ser muy querido para Pablo, que lo llamó su hijo. Según el derecho romano, un amo podía tratar a su esclavo fugitivo como quisiera, y los castigos eran severos.",
+   "Pablo envió de vuelta a Onésimo. Pidió a Filemón que lo recibiera no solo como esclavo, sino como hermano amado. Dijo que quizá Onésimo había sido separado de Filemón por un tiempo para que Filemón lo tuviera para siempre. Si Onésimo le debía algo, Pablo pidió que se cargara a su propia cuenta, y firmó esa promesa de su puño y letra. Pablo podía haber dado una orden. En cambio, dejó la decisión en manos de Filemón, para que su bondad fuera libremente ofrecida y no forzada. La carta no abole la esclavitud, pero muestra la tensión entre el orden romano y la fraternidad cristiana.",
+   "No se nos dice cómo respondió Filemón. La reconciliación pertenece a la tradición posterior, no a un segundo testimonio independiente. La Enciclopedia Católica señala que la tradición recuerda a Onésimo como obispo de Berea, lo que sugiere que se concedió la petición de Pablo. Algunas tradiciones posteriores también hicieron obispo a Filemón, vinculado según los casos a Colosas o a Gaza. Nada de esto procede de la carta, y ninguno de ello cuenta con confirmación contemporánea.",
+   "La Iglesia recuerda también a Filemón como mártir. Los Menaia bizantinos del 22 de noviembre hablan de Filemón, junto con Apia, Arquipo y Onésimo, martirizados en Colosas bajo Nerón. Un relato de las vidas de los santos dice que los cristianos reunidos en oración fueron atacados y que Filemón y Apia fueron llevados ante una autoridad y dados muerte. Los detalles, incluido el nombre del magistrado, pertenecen a una tradición posterior. La persecución de Nerón está bien documentada en Roma tras el incendio del año 64, pero nada prueba una acción sistemática en Colosas, y no se conservan registros de aquella época. La falta de pruebas no hace imposible el martirio. Solo nos pide distinguir entre la memoria y la certeza.",
+   "El Martirologio Romano celebra su fiesta el 22 de noviembre, honrando a Filemón de Colosas, cuya caridad en Cristo Jesús alegró a Pablo. Es venerado junto con su esposa Apia. Lo que la Iglesia sostiene con mayor seguridad es el retrato de la carta de Pablo: un hombre con la casa abierta y una libre elección, a quien se pide perdonar en nombre de Cristo."
+  ],
+  "prayer": "La misericordia es una elección, hecha libremente, a nuestra propia puerta. San Filemón, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Colosas",
+   "Frigia",
+   "Asia Menor"
+  ]
+ },
+ "books": [],
+ "caption": "A letter of only twenty-five verses asks one man to forgive another.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Philemon · Feast day: November 22\nSaint Philemon, a Christian of Colossae, received Paul's short letter asking him to welcome the runaway Onesimus as a brother, and the Church remembers him for his charity.\n\nMercy is a choice, made freely, at our own door. Saint Philemon, pray for us. 🕯\n\nSave this to pray with again next November 22.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintphilemon #colossae",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-22/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-22/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-22/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-22/art.jpg"
+ },
+ "review_message_id": 175
+}
