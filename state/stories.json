@@ -93,5 +93,22 @@
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-oro-deum/teaser-story.mp4",
   "status": "pending",
   "note": "Sung-prayer teaser (St. Patrick's feast). Add to the Music highlight within 24 h."
+ },
+ {
+  "id": "music-2026-11-15",
+  "at": "2026-11-15T15:00-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-15.jpg",
+  "status": "posted",
+  "album": "Blue Chant",
+  "track": "Veritatis",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/story-3.mp4",
+  "posted": {
+   "media_id": "18122524243996071",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4031169128538533861"
+  },
+  "posted_at": "2026-11-15T15:00-05:00",
+  "facebook": {
+   "id": "2121512928488734"
+  }
  }
 ]
