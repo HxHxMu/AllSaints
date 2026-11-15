@@ -318,12 +318,21 @@ def collect():
     return data
 
 
-def run(out=None):
+def run(out=None, report=False):
+    """report=True with out: print the weekly Telegram report instead of sending it (preview)."""
+    import report as weekly
     data = collect()
     if out:
         with open(out, "w") as f:
             json.dump(data, f, indent=1, ensure_ascii=False)
+        if report:
+            print(weekly.build(data) + "\n")
         return print(f"Wrote {out}; notes: {data['notes']}")
+    if report or weekly.due():  # Mondays; a failed report never stops the dashboard update
+        try:
+            weekly.send(data)
+        except Exception as e:
+            log("Weekly report failed:", e)
     if not env("DASH_INGEST_KEY"):  # not set up yet: skip quietly rather than fail the job every night
         return log("Dashboard not set up (no DASH_INGEST_KEY); numbers not sent")
     r = http.post(env("DASH_INGEST_URL", INGEST_URL), json=data, timeout=60,

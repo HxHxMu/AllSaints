@@ -71,6 +71,7 @@ def main():
     ga.add_argument("client_secret")
     mp = sub.add_parser("metrics", help="collect the dashboard's numbers and send them to allholysaints.com/dash/")
     mp.add_argument("--out", help="write the JSON to this file instead of sending it")
+    mp.add_argument("--report", action="store_true", help="the weekly Telegram report: with --out, print it; without, send it now (it sends itself on Mondays)")
     sub.add_parser("dash-key", help="one-time: make the dashboard's ingest key (.env, GitHub, Cloudflare Pages)")
     sub.add_parser("fb-auth", help="one-time: store a never-expiring Facebook Page token (FB_PAGE_ID/FB_PAGE_TOKEN)")
     sub.add_parser("fb-whoami")
@@ -132,7 +133,7 @@ def main():
         youtube.authorize(a.client_secret, scopes=youtube.GSC_SCOPE, refresh_key="GSC_REFRESH_TOKEN")
     elif a.cmd == "metrics":
         import metrics
-        metrics.run(a.out)
+        metrics.run(a.out, a.report)
     elif a.cmd == "dash-key":
         import metrics
         metrics.setup_key()
