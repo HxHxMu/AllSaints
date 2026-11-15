@@ -2,7 +2,7 @@
  "id": "2026-11-14",
  "date": "2026-11-14",
  "status": "published",
- "updated": "2026-11-14T12:33:52+00:00",
+ "updated": "2026-11-15T01:30:38+00:00",
  "saint": {
   "qid": "Q2419830",
   "name": "Saint Laurence O'Toole",
@@ -356,5 +356,9 @@
   "publish_id": "v_inbox_file~v2.7708004151804020750",
   "status": "SEND_TO_USER_INBOX",
   "sent_at": "2026-11-14T07:33-05:00"
+ },
+ "story": {
+  "attempts": 1,
+  "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/17841427978326871/media_publish"
  }
 }
