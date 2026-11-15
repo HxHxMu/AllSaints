@@ -5,3 +5,4 @@
 **Done 2026-11-02:** Bookshop affiliate id 130700 in `state/config.json`; book sections live.
 **Deferred:** Sunday digest email: not until there's an audience (Luis, 2026-11-01). Cost report: built (`pipeline.py cost`). (Haiku for `select_saint`: tested, not worth it; see `engine/CLAUDE.md` → Cost.)
 **Keep:** review queue ≥7 days approved.
+**Decided 2026-11-15 (data review):** Spanish channels shelved until the next review: the Spanish audio track drew 15 of 9,899 YouTube views and no Spanish-speaking country is in YouTube's top 10. No more hand-dubbed Shorts; the site's /es/ edition and Spanish YouTube titles/descriptions stay. All Holy Miracles waits; TikTok stays; Threads gets no attention.
