@@ -1,7 +1,7 @@
 """Source gathering (Wikipedia + Catholic references linked from Wikidata) and saint selection."""
 import html, json, random, re, urllib.parse
 from html.parser import HTMLParser
-from common import get_json, http, DATA, log, claude_json, load_config, load_episodes, month_day_label
+from common import get_json, http, DATA, log, claude_json, load_config, load_episodes, major_feast, month_day_label
 
 WP = "https://en.wikipedia.org/w/api.php"
 WS = "https://en.wikisource.org/w/api.php"
@@ -221,11 +221,15 @@ def select_saint(date, exclude=(), angle=None):
         f"[{i}] {c['name']} (qid {c['qid']}, {c['links']} wiki languages, images: {'yes' if c.get('images') or c.get('commonscat') else 'no'}, "
         f"Catholic references: {', '.join(names[p] for p, _ in refs.get(c['qid'], [])) or 'none'})\n{c['intro']}"
         for i, c in enumerate(shortlist))
+    big = major_feast(date)
+    big_note = (f"This date is also {big}, which many people look up today. All else being equal, prefer a candidate with a "
+                f"documented connection to it (same place, order, era or story, a disciple, a shared relic or church); never invent "
+                f"or stretch a connection, and never pick the famous figure themselves.\n") if big else ""
     prompt = f"""You are the editor of "All Saints" (A.S.†), an Instagram Reels series of one-minute, reverent lives of lesser-known Catholic saints, posted on their feast day.
 
 Feast day: {month_day_label(date)}
 Editorial scope: {cfg['scope']}
-{(angle['select'] + chr(10)) if angle else ''}
+{(angle['select'] + chr(10)) if angle else ''}{big_note}
 Recently published (avoid repeating the same region/era/type back-to-back):
 {recent_summary()}
 
@@ -233,10 +237,12 @@ Candidates:
 {listing}
 
 Pick the ONE candidate that will make the most moving, surprising, well-documented one-minute story (strongly prefer candidates with Catholic references: they are the sources the facts get checked against), who is genuinely venerated as a saint in the Catholic Church (Latin or Eastern Catholic). Reject anyone who is only Blessed, Venerable or a Servant of God (not canonized), anyone venerated only by Orthodox, Anglican or other non-Catholic churches, anyone whose cult was suppressed, and anyone too famous (household names).
-Return JSON: {{"index": <int>, "reason": "<one sentence>", "catholic_veneration": "<how they are venerated: Roman Martyrology / Eastern Catholic calendar / etc.>"}}"""
+Return JSON: {{"index": <int>, "reason": "<one sentence>", "catholic_veneration": "<how they are venerated: Roman Martyrology / Eastern Catholic calendar / etc.>"{', "feast_link": "<the documented connection to ' + big + ' in one sentence, or empty>"' if big else ''}}}"""
     res = claude_json(prompt, label="select")
     pick = shortlist[int(res["index"])]
     pick["selection_reason"] = res.get("reason")
     pick["catholic_veneration"] = res.get("catholic_veneration")
+    if big:
+        pick["major_feast"], pick["feast_link"] = big, (res.get("feast_link") or "").strip()
     log(f"Selected {pick['name']} for {key}: {res.get('reason')}")
     return pick

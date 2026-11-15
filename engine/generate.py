@@ -105,7 +105,9 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
         if fc.get("verdict") == "fixed" and not fc.get("script"):
             log("Fact-check said 'fixed' but returned no script; keeping the draft")
         final = fc.get("script") or draft
-        final.setdefault("portrait", draft.get("portrait"))  # the cover portrait; a fact-check rewrite may drop it
+        final.setdefault("portrait", draft.get("portrait"))
+        if draft.get("feast_line") and "feast_line" not in final:  # a fact-check rewrite may drop it too
+            final["feast_line"] = draft["feast_line"]  # the cover portrait; a fact-check rewrite may drop it
         final["saint"]["feast"] = month_day_label(date)
         final["saint"].setdefault("display_name", final["saint"]["name"].replace("Saint ", "St. ").replace("Saints ", "Sts. "))
         try:  # the website's Spanish edition; never blocks the video

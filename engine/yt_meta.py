@@ -25,8 +25,9 @@ def build_description(ep):
     yt = BRAND.get("youtube", {})
     support = load_config().get("support_url", "").strip()  # Ko-fi page; the line is skipped until it's set
     support = yt.get("support", "{url}").format(url=support) + "\n" if support else ""
+    feast_line = (s.get("feast_line") or "").strip()  # big feast days: the name people search for
     desc = f"""{s.get('caption_hook', '').strip()}
-
+{(chr(10) + feast_line + chr(10)) if feast_line else ''}
 {s.get('summary', '').strip()}
 
 {saint['name']} · {saint.get('dates', '')} · Feast day: {saint.get('feast', '')}

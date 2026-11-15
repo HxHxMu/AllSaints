@@ -141,6 +141,12 @@ def assign_slugs(ep):
     return ep
 
 
+def major_feast(date):
+    """'the feast of Saint Nicholas' when a well-known fixed feast falls on this date (data/major-feasts.json), else None."""
+    p = DATA / "major-feasts.json"
+    return json.loads(p.read_text()).get(date.strftime("%m-%d")) if p.exists() else None
+
+
 def load_json(name, default):
     p = STATE / name
     return json.loads(p.read_text()) if p.exists() else default

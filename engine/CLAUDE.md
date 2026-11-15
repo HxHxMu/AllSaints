@@ -8,6 +8,8 @@ Entry: `pipeline.py <cmd>` (`-h` lists the commands). Run from the repo root wit
 ```
 data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → research.select_saint   Claude picks 1 of ~12 candidates for the date (told which have Catholic references; prefers them)
+                           big fixed feasts (data/major-feasts.json, e.g. 12-06 St. Nicholas): prefers a saint with a documented link and the
+                           script adds "feast_line", shown in the IG caption and YouTube description (never narrated)
                            config "pins" {"2026-12-17": "<qid>"} skips the pick (viewer requests; the qid may sit on any calendar day; ignored if already used or rejected)
  → research.gather_sources Wikipedia full text + up to 4 Catholic references found by Wikidata ID (CATHOLIC_REFS:
                            Catholic Encyclopedia/New Advent, causesanti.va, Santi e Beati, Nominis, Heiligenlexikon;

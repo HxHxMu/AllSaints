@@ -1,6 +1,6 @@
 """Script writing + independent fact-check pass."""
 import json, re
-from common import BRAND, claude_json, load_config, log, month_day_label
+from common import BRAND, claude_json, load_config, log, major_feast, month_day_label
 
 # spoken-word range, read from brand.json ("115-130 spoken words ...") so the length lives in one place
 LO, HI = map(int, re.match(r"\s*(\d+)\s*-\s*(\d+)", BRAND["writing"]["length"]).groups())
@@ -66,6 +66,19 @@ def schema():
     return re.sub(r', "art_hint": "[^"]*"', "", SCHEMA)
 
 
+def feast_rule(date, saint):
+    """On a big feast day: a caption/description line that names it (people search for it), as an extra JSON field."""
+    big = major_feast(date)
+    if not big:
+        return ""
+    link = saint.get("feast_link") or ""
+    return (f'- This date is also {big}. Add a top-level "feast_line": one reverent caption sentence that names it and '
+            f'introduces today\'s saint, e.g. "On the feast of Saint Nicholas, meet a bishop the world forgot." '
+            + (f"Editor's note on the connection: {link} Use it only if the SOURCES support it. " if link else
+               "Mention a connection only if the SOURCES state one; sharing the date is enough. ")
+            + "Never in the narration: the spoken beats stay about this saint.")
+
+
 def word_count(script):
     return sum(len(b["text"].split()) for b in script["beats"])
 
@@ -88,6 +101,7 @@ Return ONLY JSON in exactly this shape (the example values are placeholders):
 Requirements:
 - 6 to 8 beats; first is "hook", second is "who" (with map coordinates of where their story mainly happened), last is "close" containing only the prayer line "Saint <Name>, pray for us." (use "Saints ... pray for us." for a pair).
 - Total spoken words across all beats: {LO}-{HI}.
+{feast_rule(date, saint)}
 - "martyr": true only if they died as a martyr.
 - "dates": use "c." when uncertain; "fl." if only active dates are known.
 - pronunciations: map any unusual name to a phonetic respelling (one token, hyphens allowed) so the narrator says it right; leave empty if none.

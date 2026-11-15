@@ -46,7 +46,8 @@ def build_caption(ep):
     if ep.get("caption_hook_override"):
         body = ep["caption_hook_override"].strip()
     else:
-        body = f"{s.get('caption_hook', '').strip()}\n\n{saint['name']} · Feast day: {saint.get('feast', '')}\n{s.get('summary', '').strip()}\n\n{prayer} 🕯"
+        feast_line = (s.get("feast_line") or "").strip()  # big feast days (data/major-feasts.json)
+        body = f"{s.get('caption_hook', '').strip()}\n\n{feast_line + chr(10) + chr(10) if feast_line else ''}{saint['name']} · Feast day: {saint.get('feast', '')}\n{s.get('summary', '').strip()}\n\n{prayer} 🕯"
     # source names without the article ("Santi e Beati: San X" → "Santi e Beati"; old "Catholic Encyclopedia (1913)/St. X" too)
     # follow line right under the hook, above Instagram's "more" fold
     if CAP.get("follow_line"):
