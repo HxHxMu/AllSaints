@@ -1,14 +1,14 @@
 {
  "id": "2026-11-21",
  "date": "2026-11-21",
- "status": "redo_requested",
- "updated": "2026-11-15T14:11:04+00:00",
+ "status": "review",
+ "updated": "2026-11-15T14:17:53+00:00",
  "saint": {
   "qid": "Q1763046",
   "name": "Saint Agapius",
   "display_name": "St. Agapius",
-  "dates": "died 306",
-  "region": "Caesarea Maritima, Palestine",
+  "dates": "died AD 306",
+  "region": "Caesarea, Israel",
   "feast": "November 21",
   "martyr": true
  },
@@ -30,56 +30,50 @@
   "saint": {
    "name": "Saint Agapius",
    "display_name": "St. Agapius",
-   "dates": "died 306",
-   "region": "Caesarea Maritima, Palestine",
+   "dates": "died AD 306",
+   "region": "Caesarea, Israel",
    "feast": "November 21",
    "martyr": true
   },
-  "portrait": "A Christian of the early fourth century in a plain undyed tunic and a dark cloak, standing and facing the viewer, holding a martyr's palm, with a few smooth stones lying at his feet. Behind him, the pale limestone harbor and arches of Roman Caesarea open onto the Mediterranean.",
+  "portrait": "A Christian martyr of the early fourth century in a plain Roman-era tunic and mantle, standing and facing the viewer. He holds a martyr's palm, and a few stones lie at his feet. Behind him are the columns of a Roman harbor city and the blue Mediterranean.",
   "beats": [
    {
     "role": "hook",
-    "text": "A bear was set upon him, and he survived.",
+    "text": "Offered his freedom, he refused it, and was given to a bear.",
     "visual": "art",
-    "scene": "A devotional icon of a man in a plain tunic standing calmly in the center of a Roman stone amphitheater, a bear a short distance from him. Crowds fill the tiered stone seats of Caesarea under a bright sky."
+    "scene": "A Christian prisoner in a plain tunic stands alone on the sand of a Roman amphitheater, facing a brown bear. Tiers of stone seats rise behind him, and a robed official watches from a raised platform."
    },
    {
     "role": "who",
-    "text": "Saint Agapius, a Christian martyr of Caesarea in Palestine, in the early fourth century.",
+    "text": "Saint Agapius, fourth century, Caesarea, on the coast of modern Israel.",
     "visual": "map",
     "lat": 32.5,
-    "lon": 34.89,
-    "place": "Caesarea Maritima · Palestine"
+    "lon": 34.9,
+    "place": "Caesarea · Israel"
    },
    {
     "role": "story",
-    "text": "Again and again he was tortured, and each time he was held back for a greater trial.",
+    "text": "Persecution had come to the empire. More than once, Agapius was tortured, then held back for a greater trial.",
     "visual": "art",
-    "scene": "A devotional icon of Agapius seated in a dim, vaulted Roman prison cell, hands folded in prayer. A single shaft of golden light falls on him, and a guard in a Roman tunic waits at the barred doorway."
+    "scene": "A Christian prisoner sits in a dim Roman prison cell with a barred window, his hands bound. A guard stands at the arched door, and light falls across the stone floor."
    },
    {
     "role": "story",
-    "text": "Then, in the arena, before the ruler Maximinus, he was offered freedom if he would renounce his faith. Eusebius, who wrote close to those years, says Agapius refused.",
+    "text": "Eusebius, who lived near those years, tells it. In the amphitheater, before Maximinus, he was offered freedom if he renounced his faith. He refused.",
     "visual": "art",
-    "scene": "A devotional icon of the Roman ruler Maximinus seated on a raised platform in armor and a purple cloak, with soldiers beside him. Agapius stands before him in a plain tunic, his open hands lowered in refusal. The arena's stone arches rise behind them."
+    "scene": "A Christian prisoner stands before a Roman ruler seated on a raised throne in a crowded amphitheater. Soldiers flank the ruler, and the prisoner holds his head high with his hands open."
    },
    {
     "role": "story",
-    "text": "A bear was loosed upon him. It wounded him, but it did not take his life.",
+    "text": "According to tradition, the bear wounded him gravely, yet he still breathed. The next day, stones were tied to his feet, and he was drowned in the sea.",
     "visual": "art",
-    "scene": "A devotional icon of Agapius kneeling in prayer on the sand of the arena, his face lifted. A bear stands nearby, and the crowd watches from the stone tiers above."
-   },
-   {
-    "role": "story",
-    "text": "Tradition holds that the next day he was drowned in the sea, with stones tied to his feet.",
-    "visual": "art",
-    "scene": "A devotional icon of Agapius standing at the edge of a stone quay in the Roman harbor of Caesarea, a few stones at his feet. Roman soldiers wait at a respectful distance, and the Mediterranean glows at dusk behind him."
+    "scene": "On a stone pier of a Roman harbor city, soldiers stand beside a wounded, quiet Christian prisoner with stones bound to his feet. The Mediterranean stretches out behind them under a pale sky."
    },
    {
     "role": "turn",
-    "text": "Eusebius gives one reason: faithfulness to the Creator. He would not trade his faith for his freedom. Some loyalties cannot be bought.",
+    "text": "The account gives one reason for his refusal: faithfulness to the Creator. His courage pointed beyond him, to God alone. Faithfulness matters most when it costs the most.",
     "visual": "art",
-    "scene": "A devotional icon of Agapius with his hands raised in prayer, his gaze lifted toward a gold heaven. Behind him are the arches of Caesarea and the open sea."
+    "scene": "A martyr in a plain tunic stands in light on a rocky shore, holding a palm. His face is turned upward to a golden sky, and a few stones lie at his feet."
    },
    {
     "role": "close",
@@ -88,203 +82,170 @@
    }
   ],
   "pronunciations": {
-   "Agapius": "Ah-GAH-pee-us",
-   "Caesarea": "Sess-uh-REE-uh",
-   "Maximinus": "Mak-si-MEE-nus",
-   "Eusebius": "Yoo-SEE-bee-us"
+   "Agapius": "Uh-GAY-pee-us",
+   "Eusebius": "yoo-SEE-bee-us",
+   "Maximinus": "Mack-sih-MY-nus",
+   "Caesarea": "Sess-uh-REE-uh"
   },
-  "caption_hook": "Offered his freedom if he would give up his faith, he refused.",
-  "summary": "Saint Agapius, a martyr of Caesarea in Palestine, refused freedom in exchange for renouncing his faith, survived a bear in the arena, and was drowned in the sea in the year 306.",
-  "youtube_title": "St. Agapius: The Martyr Who Refused Freedom at Caesarea",
+  "caption_hook": "They offered him his freedom in front of Maximinus. Agapius said no.",
+  "summary": "Agapius, a martyr of Caesarea in the early fourth century, refused to renounce his faith in exchange for freedom, survived a bear in the arena, and was drowned in the sea the next day.",
+  "youtube_title": "St. Agapius: Offered Freedom, He Chose Faithfulness",
   "hashtags": [
    "#saintagapius",
    "#caesarea",
-   "#palestine",
    "#martyr",
    "#eusebius",
-   "#earlychurch",
-   "#catholicsaints",
-   "#allsaints",
    "#romanmartyrology",
-   "#fourthcentury",
-   "#lesserknownsaints"
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#allsaints",
+   "#earlychurch",
+   "#christianmartyrs",
+   "#holyland"
   ],
   "share_cta": "",
   "claims": [
    {
-    "claim": "Agapius was a Christian martyr at Caesarea in Palestine in the early fourth century, around 306.",
+    "claim": "Agapius was a martyr at Caesarea in Palestine in 306, in the early fourth century.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "His story is told by Eusebius of Caesarea, who wrote close to the events of the persecution.",
+    "claim": "Caesarea Maritima was the seat of Roman provincial government on the Mediterranean coast; the persecutions began in the empire in 303.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "He was tortured several times but always held back for greater trials.",
+    "claim": "Agapius had been tortured more than once but was always held back for greater trials.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "Before Maximinus in the amphitheater, he was offered freedom if he would abandon the Christian faith, and he refused.",
+    "claim": "His story is told by Eusebius of Caesarea, an author close to the events.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "A bear was loosed against him and wounded him without killing him.",
+    "claim": "He was brought to the amphitheater in the presence of Maximinus Daia.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "According to tradition, the next day stones were tied to his feet and he was drowned in the sea.",
+    "claim": "He was offered freedom if he abandoned the Christian faith and refused.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "A bear was set on him in the arena; it wounded him gravely but he was still alive.",
     "source": 1,
     "kind": "tradition"
    },
    {
-    "claim": "The reason the source attributes to him is faithfulness to the Creator.",
+    "claim": "The next day stones were tied to his feet and he was drowned in the sea.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The reason Eusebius gives for his refusal is faithfulness to the Creator.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "He is listed in the Roman Martyrology on November 21.",
+    "claim": "His feast in the Roman Martyrology is November 21.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "The persecution began in the Roman Empire in 303 under the tetrarchy.",
+    "claim": "Nothing certain is known of his birth, family or profession.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "Caesarea Maritima was the seat of the provincial government and a major city of the eastern Mediterranean.",
+    "claim": "His emblem is the beast of the amphitheater and stones.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "Eusebius, later bishop of Caesarea, gathered accounts of persecuted Christians; his work is a Christian record of memory, not a Roman administrative register.",
+    "claim": "The Roman Martyrology states the bear and drowning according to tradition.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The name Agapios comes from the Greek agape, love.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "Eusebius's account survives in a short Greek version and a longer version preserved mainly in Syriac, published by William Cureton in the nineteenth century.",
+    "claim": "Eusebius also records a different Agapius, beheaded at Caesarea with seven companions; the two must not be confused.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "The longer version gives more detail and words attributed to the condemned, which cannot be treated as a verified transcript.",
+    "claim": "Eusebius's account survives in a short Greek version and a longer version preserved mostly in Syriac.",
     "source": 1,
     "kind": "history"
    },
    {
-    "claim": "Nothing certain is known of his birth, family or profession; nor is the place of burial or the fate of his body known.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "The Greek text says he survived a day before the drowning; the sequence is attested by Eusebius, and the most dramatic details should be read within the language of ancient martyr literature.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "Eusebius places the event in the fourth year of the persecution and links Maximinus's arrival to a day in November; tradition has read this as November 20, 306 for the arena and the next day for the death.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "Older calendars also knew November 20; the present Catholic memorial is November 21.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "Eusebius also tells of another Agapius, beheaded at Caesarea with seven companions; the two accounts must not be merged, and that group is commemorated in the East on March 15.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "Some ancient calendars commemorated Agapius together with Timothy and Thecla, and he entered the Latin martyrologies relatively late.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "The Roman Martyrology praises him as tortured many times, always reserved for greater combats, and this recalls the persecutions under Diocletian.",
+    "claim": "Nominis places the martyrdom during the persecutions of Diocletian and records the same sequence of bear and drowning.",
     "source": 2,
-    "kind": "history"
-   },
-   {
-    "claim": "His emblems are the beast of the amphitheater and stones.",
-    "source": 1,
-    "kind": "history"
-   },
-   {
-    "claim": "The name Agapius comes from the Greek agape, meaning love.",
-    "source": 1,
     "kind": "history"
    }
   ],
-  "story": [
-   "Saint Agapius belongs to a hard chapter of the Church's history. In the year 303 the persecution of Christians began across the Roman Empire under the tetrarchy. In Palestine, how harshly the measures were applied changed from year to year and depended on the provincial and imperial authorities. One city became a place of trials, imprisonments and executions: Caesarea Maritima, the seat of the provincial government and an important city of the eastern Mediterranean.",
-   "Of Agapius himself, very little is known. The sources say plainly that nothing certain survives about his birth, his family or his work. His memory rests almost entirely on the testimony of Eusebius, who was later bishop of Caesarea and who gathered accounts of the Christians who suffered there. Eusebius lived close to these years and these places, which adds to the value of his account. His writing is not a Roman court record. It is a Christian work of memory, and scholars read it with care.",
-   "That account has come down to us in two forms. A short Greek version travels with Eusebius's Church History in part of the manuscript tradition. A longer version survives mainly in Syriac, and William Cureton published and translated it in the nineteenth century. The longer text adds details about the spectacle and speeches attributed to Agapius. These are consistent with the meaning of his witness, but they cannot be treated as a verified transcript. What both versions share is the core: he was exposed to wild beasts in public, he refused to renounce his faith, he survived the first attack, and he was finally put to death by drowning.",
-   "According to the Roman Martyrology, Agapius had suffered torments many times before, but each time he was held back for greater combats. Then, during games in the amphitheater at Caesarea, in the presence of Maximinus, he was brought out once more. Eusebius says he was offered his freedom if he would give up the Christian faith. Agapius did not accept. The reason the source gives for his stand is not any common crime. It is faithfulness to the Creator.",
-   "A bear was loosed against him in the arena. Eusebius describes Agapius as ready to face the trial, and says the animal wounded him without killing him at once. In the words of the Martyrology, and here it speaks as tradition, he was still breathing. According to the Greek text, he survived a day. Then stones were tied to his feet and he was drowned in the sea. The sea fits Caesarea's coastal setting, though no one can name the exact stretch of shore. Where he was buried, and what became of his body, are not known. The most dramatic details are best read within the language of ancient martyr literature, and the sequence of events rests on Eusebius.",
-   "The date is a matter of some care. Eusebius places the event in the fourth year of the persecution and ties Maximinus's arrival to a day in November. Tradition has read this as November 20, 306 for the arena and the following day for the death. The Church's memorial today falls on November 21, though some older calendars kept November 20. The firm fact is that Agapius died at Caesarea during the persecution of the early fourth century. No independent records allow greater precision.",
-   "There is also a warning to the careful reader. Eusebius tells of a second Agapius, who was beheaded at Caesarea with seven companions, among them two men named Alexander and two named Dionysius. The Eastern tradition commemorates that group on March 15. The two accounts end in different deaths and must not be merged. The saint remembered on November 21 is the one of the bear and the sea. Some ancient calendars named Agapius together with Timothy and Thecla, and he entered the Latin martyrologies relatively late. The Roman Martyrology today still keeps his praise, recalling his earlier trials, the bear and his death at sea. His emblems in art are the beast of the amphitheater and stones. His name, from the Greek agape, means love. By including him in her calendar, the Church recognizes the holiness of his witness. His holiness lay in a plain fidelity that would not be traded for freedom."
-  ],
   "patronages": [],
   "places": [
-   "Caesarea Maritima",
+   "Caesarea",
    "Palestine"
+  ],
+  "story": [
+   "Agapius is one of the martyrs of Palestine, remembered by the Church on November 21. His name comes from the Greek agape, which means love. Almost nothing is known about his early life. A Catholic reference says plainly that nothing certain is known of his birth, his family or his profession. What the Church remembers is how his life ended, in the city of Caesarea, in the year 306.",
+   "He lived in the age of the great persecution. In 303, under the rulers who then shared power in the Roman Empire, measures against Christians began to be enforced. In Palestine these measures changed from year to year and depended on provincial and imperial officials. Caesarea, on the Mediterranean coast, was the seat of the provincial government, and it saw trials, imprisonments and executions of Christians.",
+   "The record of these years was written by Eusebius, who later became bishop of the city. He gathered testimony about the Christians persecuted in the region. His work is not a Roman court register. It is a Christian work of memory, written by someone close to the events, and it is best read with care. It survives in a short Greek form and in a longer form preserved mostly in a Syriac version, which was published and translated in the nineteenth century by William Cureton. Both forms agree on the heart of Agapius's story. The longer version adds words attributed to him, but these cannot be treated as an exact transcript, so they are not repeated here.",
+   "According to Eusebius, Agapius had been tortured more than once, but each time he was held back for greater trials. At last he was brought to the amphitheater of Caesarea, in the presence of Maximinus Daia, who then held power in the eastern part of the empire. He was offered his freedom if he would give up the Christian faith. He refused. The reason Eusebius gives is not any crime, but faithfulness to his Creator.",
+   "A bear was then set upon him in the arena. It wounded him gravely, but he did not die at once. The Roman Martyrology, which tells this episode according to tradition, adds that because he was still breathing, he was drowned in the sea on the following day, with stones tied to his feet. His emblem in Christian art is the beast of the amphitheater and the stones. Where his body was laid is not known.",
+   "There is a second Agapius in Eusebius's pages, who was beheaded at Caesarea with seven companions, including two men named Alexander and two named Dionysius. He belongs to another episode of the persecution, and the two men should not be confused. Their stories do not agree, and nothing from one should be carried over to the other. The martyr of November 21 is the one linked with the bear and the sea.",
+   "The exact date has been understood in different ways. Eusebius places the event in November of the fourth year of the persecution. Some readers have placed the arena on November 20, with the drowning the next day, and some older martyrologies kept November 20. The Church today keeps his memory on November 21. The Church honors him as a saint in the Roman Martyrology, which recognizes his holiness. It does not claim more certainty than the sources allow.",
+   "That is a quiet legacy for a man whose life is otherwise hidden. Nothing certain is known of his work, and no words of his survive that can be trusted word for word. What remains is a refusal and the reason behind it. Offered his freedom, he chose faithfulness to God."
   ]
  },
  "factcheck": {
   "verdict": "fixed",
   "issues": [
-   "Story paragraph 1: 'four joint rulers' is not in the sources, which say only 'under the tetrarchy'. Removed.",
-   "Story paragraph 1: 'One city above all' overstates the source, which says only that Caesarea was a setting for trials, detentions and executions. Softened.",
-   "Story paragraph 1: 'a great port' is not in the sources, which call Caesarea an important urban centre of the eastern Mediterranean. Corrected.",
-   "Story paragraph 2: 'great weight' overstates the source, which says Eusebius's closeness 'increases the value' of his account but that it still needs critical reading. Reworded.",
-   "Spoken beats: no changes needed. The count is 129 words. History and tradition are separated acceptably, the Creator reason is attributed to Eusebius, and nothing is said of Agapius being a bishop (that comes only from Wikipedia, and the Catholic reference says his profession is unknown). The map coordinates for Caesarea Maritima are correct."
+   "Story beat 1: 'Again and again' overstates the sources, which say he was tortured 'more than once'. Changed to 'More than once'.",
+   "Story beat 3: the bear and the drowning were stated flatly. The Roman Martyrology gives them 'according to tradition', so the bear sentence now opens with 'According to tradition'. Total word count is now about 127.",
+   "Website story, paragraph 1: 'The Catholic references say plainly' rests on one Catholic reference (Santi e Beati), not several. Changed to 'A Catholic reference says'.",
+   "Website story, paragraph 8: 'no known office to boast of' is slightly irreverent and implies a fact the sources do not state. Wikipedia calls him a bishop, but the Catholic reference says nothing certain is known of his profession. Reworded to match the Catholic reference.",
+   "Checked and correct: the map point (Caesarea Maritima, 32.5, 34.9); the November 21 feast; 'Saint' and 'martyr' as titles; the Wikipedia-only details (bishop, arrested 304, August 19, 'rushed headlong') are correctly left out; the other Agapius, beheaded with seven companions, is kept separate; the hook is under 14 words and the who line under 15."
   ],
   "confidence": 88,
-  "reviewer_note": "The spoken beats label only the drowning as 'tradition', although the Roman Martyrology's 'according to tradition' covers the bear and the drowning together. This is cautious rather than wrong. The Greek text supports 'the next day', and the sources show some date variation (November 20 or 21). Wikipedia's claims that he was a bishop and was held in prison for two years were deliberately left out because the Catholic reference does not support them."
+  "reviewer_note": "Please confirm you are comfortable with 'According to tradition' on the bear beat (the Roman Martyrology's wording), and note that Wikipedia's claim that he was a bishop was deliberately left out because the Catholic reference says nothing certain is known of his profession."
  },
  "usage": [
-  {
-   "step": "select",
-   "model": "claude-sonnet-5-5",
-   "in": 2015,
-   "cache_write": 0,
-   "cache_read": 0,
-   "out": 1858,
-   "thinking": 1553
-  },
   {
    "step": "script",
    "model": "claude-sonnet-5-5",
    "in": 2319,
-   "cache_write": 5429,
+   "cache_write": 5526,
    "cache_read": 0,
-   "out": 9721,
-   "thinking": 5598
+   "out": 8659,
+   "thinking": 5370
   },
   {
    "step": "factcheck",
    "model": "claude-sonnet-5-5",
-   "in": 4940,
+   "in": 4051,
    "cache_write": 0,
-   "cache_read": 5429,
-   "out": 4987,
-   "thinking": 4274
+   "cache_read": 5526,
+   "out": 6688,
+   "thinking": 3952
   },
   {
    "step": "translate_es",
    "model": "claude-haiku-5-5",
-   "in": 1755,
+   "in": 1526,
    "cache_write": 0,
    "cache_read": 0,
-   "out": 2781,
-   "thinking": 772
+   "out": 2293,
+   "thinking": 629
   }
  ],
  "sources": [
@@ -304,34 +265,35 @@
  "art_credits": [
   "Illustration in the Byzantine style, AI-generated (Google Gemini)"
  ],
- "duration": 63.2,
+ "duration": 61.9,
  "narrator": "gemini:Riko",
  "es": {
   "name": "San Agapio",
   "display_name": "San Agapio",
-  "region": "Cesarea Marítima, Palestina",
-  "dates": "murió 306",
-  "hook": "Le ofrecieron la libertad si renunciaba a su fe, pero se negó.",
-  "summary": "San Agapio, mártir de Cesarea en Palestina, rechazó la libertad a cambio de renunciar a su fe, sobrevivió a un oso en el anfiteatro y fue ahogado en el mar en el año 306.",
+  "region": "Cesarea, Israel",
+  "dates": "murió en el 306 d. C.",
+  "hook": "Le ofrecieron la libertad delante de Maximino. Agapio dijo que no.",
+  "summary": "Agapio, mártir de Cesarea a comienzos del siglo IV, se negó a renunciar a su fe a cambio de la libertad, sobrevivió a un oso en el anfiteatro y fue ahogado en el mar al día siguiente.",
   "story": [
-   "San Agapio pertenece a un capítulo difícil de la historia de la Iglesia. En el año 303 comenzó la persecución contra los cristianos en todo el Imperio romano, bajo la tetrarquía. En Palestina, la dureza con que se aplicaron las medidas cambió de un año a otro y dependió de las autoridades provinciales e imperiales. Una ciudad se convirtió en lugar de juicios, encarcelamientos y ejecuciones: Cesarea Marítima, sede del gobierno provincial y ciudad importante del Mediterráneo oriental.",
-   "De Agapio mismo se sabe muy poco. Las fuentes dicen con claridad que nada cierto se conserva sobre su nacimiento, su familia o su obra. Su memoria descansa casi por completo en el testimonio de Eusebio, que más tarde fue obispo de Cesarea y que recogió los relatos de los cristianos que sufrieron allí. Eusebio vivió cerca de esos años y de esos lugares, lo cual aumenta el valor de su relato. Su escrito no es un registro de un tribunal romano. Es una obra cristiana de memoria, y los estudiosos la leen con cuidado.",
-   "Ese relato ha llegado hasta nosotros en dos formas. Una versión griega breve acompaña la Historia eclesiástica de Eusebio en parte de la tradición manuscrita. Una versión más extensa se conserva sobre todo en siríaco, y William Cureton la publicó y tradujo en el siglo XIX. El texto más largo añade detalles sobre el espectáculo y sobre los discursos atribuidos a Agapio. Son coherentes con el sentido de su testimonio, pero no pueden tratarse como una transcripción verificada. Lo que ambas versiones comparten es el núcleo: fue expuesto a fieras en público, se negó a renunciar a su fe, sobrevivió al primer ataque y finalmente fue dado muerte por ahogamiento.",
-   "Según el Martirologio Romano, Agapio había sufrido tormentos muchas veces antes, pero cada vez fue retenido para combates más grandes. Luego, durante los juegos en el anfiteatro de Cesarea, en presencia de Maximino, fue sacado una vez más. Eusebio dice que se le ofreció la libertad si abandonaba la fe cristiana. Agapio no aceptó. La razón que la fuente da para su postura no es ningún crimen común. Es la fidelidad al Creador.",
-   "Se soltó contra él un oso en la arena. Eusebio describe a Agapio dispuesto a enfrentar la prueba, y dice que el animal lo hirió sin matarlo de inmediato. En palabras del Martirologio, y aquí habla como tradición, aún respiraba. Según el texto griego, sobrevivió un día. Después le ataron piedras a los pies y lo ahogaron en el mar. El mar encaja con el entorno costero de Cesarea, aunque nadie puede señalar el tramo exacto de la orilla. Dónde fue sepultado y qué sucedió con su cuerpo no se sabe. Los detalles más dramáticos se entienden mejor dentro del lenguaje de la antigua literatura martirial, y la secuencia de los hechos descansa en Eusebio.",
-   "La fecha requiere cierto cuidado. Eusebio sitúa el hecho en el cuarto año de la persecución y vincula la llegada de Maximino con un día de noviembre. La tradición lo ha leído como el 20 de noviembre de 306 para el anfiteatro y el día siguiente para la muerte. La memoria actual de la Iglesia cae el 21 de noviembre, aunque algunos calendarios antiguos conservaron el 20 de noviembre. El hecho firme es que Agapio murió en Cesarea durante la persecución de comienzos del siglo IV. No hay registros independientes que permitan mayor precisión.",
-   "También hay una advertencia para el lector atento. Eusebio habla de un segundo Agapio, decapitado en Cesarea junto con siete compañeros, entre ellos dos hombres llamados Alejandro y dos llamados Dionisio. La tradición oriental conmemora ese grupo el 15 de marzo. Los dos relatos terminan en muertes distintas y no deben fundirse. El santo recordado el 21 de noviembre es el del oso y el mar. Algunos calendarios antiguos nombraron a Agapio junto con Timoteo y Tecla, y entró en los martirologios latinos relativamente tarde. El Martirologio Romano actual aún conserva su alabanza, recordando sus pruebas anteriores, el oso y su muerte en el mar. Sus atributos en el arte son la fiera del anfiteatro y las piedras. Su nombre, procedente del griego ágape, significa amor. Al incluirlo en su calendario, la Iglesia reconoce la santidad de su testimonio. Su santidad consistió en una fidelidad sencilla que no quiso cambiarse por la libertad."
+   "Agapio es uno de los mártires de Palestina, a quienes la Iglesia recuerda el 21 de noviembre. Su nombre procede del griego ágape, que significa amor. Se sabe casi nada de su vida temprana. Una referencia católica afirma con claridad que nada cierto se conoce sobre su nacimiento, su familia o su oficio. Lo que la Iglesia recuerda es cómo terminó su vida, en la ciudad de Cesarea, en el año 306.",
+   "Vivió en la época de la gran persecución. En el 303, bajo los gobernantes que entonces compartían el poder en el Imperio romano, comenzaron a aplicarse medidas contra los cristianos. En Palestina estas medidas cambiaban de un año a otro y dependían de los funcionarios provinciales e imperiales. Cesarea, en la costa del Mediterráneo, era la sede del gobierno provincial, y en ella hubo juicios, encarcelamientos y ejecuciones de cristianos.",
+   "El registro de estos años lo escribió Eusebio, que más tarde llegaría a ser obispo de la ciudad. Reunió testimonios sobre los cristianos perseguidos en la región. Su obra no es un registro de un tribunal romano. Es una obra cristiana de memoria, escrita por alguien cercano a los hechos, y conviene leerla con cuidado. Se conserva en una forma griega breve y en una forma más extensa, transmitida sobre todo en una versión siríaca, que fue publicada y traducida en el siglo XIX por William Cureton. Ambas formas coinciden en lo esencial de la historia de Agapio. La versión más larga añade palabras que se le atribuyen, pero no pueden tomarse como una transcripción exacta, así que no se repiten aquí.",
+   "Según Eusebio, Agapio había sido torturado más de una vez, pero en cada ocasión se le reservaba para pruebas mayores. Por fin fue llevado al anfiteatro de Cesarea, en presencia de Maximino Daya, quien entonces gobernaba la parte oriental del imperio. Se le ofreció la libertad si renunciaba a la fe cristiana. Se negó. La razón que da Eusebio no es ningún delito, sino la fidelidad a su Creador.",
+   "Entonces se soltó contra él un oso en la arena. Lo hirió gravemente, pero no murió de inmediato. El Martirologio Romano, que narra este episodio según la tradición, añade que, como todavía respiraba, fue ahogado en el mar al día siguiente, con piedras atadas a sus pies. Su emblema en el arte cristiano es la fiera del anfiteatro y las piedras. Se desconoce dónde fue depositado su cuerpo.",
+   "En las páginas de Eusebio aparece otro Agapio, que fue decapitado en Cesarea junto con siete compañeros, entre ellos dos hombres llamados Alejandro y dos llamados Dionisio. Pertenece a otro episodio de la persecución, y no deben confundirse los dos. Sus relatos no coinciden, y nada de uno debe trasladarse al otro. El mártir del 21 de noviembre es el vinculado con el oso y con el mar.",
+   "La fecha exacta se ha entendido de distintas maneras. Eusebio sitúa el suceso en noviembre del cuarto año de la persecución. Algunos lectores han ubicado el combate en el anfiteatro el 20 de noviembre, con el ahogamiento al día siguiente, y algunos martirologios antiguos conservaron el 20 de noviembre. Hoy la Iglesia celebra su memoria el 21 de noviembre. La Iglesia lo honra como santo en el Martirologio Romano, que reconoce su santidad. No reclama más certeza que la que permiten las fuentes.",
+   "Es un legado sereno para un hombre cuya vida, por lo demás, permanece oculta. Nada cierto se sabe de su obra, y no sobreviven palabras suyas que puedan tenerse por fidedignas literalmente. Lo que permanece es una negativa y la razón que la sostiene. Ofrecida la libertad, escogió la fidelidad a Dios."
   ],
   "prayer": "San Agapio, ruega por nosotros.",
   "patronages": [],
   "places": [
-   "Cesarea Marítima",
+   "Cesarea",
    "Palestina"
   ]
  },
  "angle": "miracle",
  "books": [],
- "caption": "Offered his freedom if he would give up his faith, he refused.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Agapius · Feast day: November 21\nSaint Agapius, a martyr of Caesarea in Palestine, refused freedom in exchange for renouncing his faith, survived a bear in the arena, and was drowned in the sea in the year 306.\n\nSaint Agapius, pray for us. 🕯\n\nHad you ever heard of St. Agapius before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintagapius #caesarea",
+ "caption": "They offered him his freedom in front of Maximinus. Agapius said no.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Agapius · Feast day: November 21\nAgapius, a martyr of Caesarea in the early fourth century, refused to renounce his faith in exchange for freedom, survived a bear in the arena, and was drowned in the sea the next day.\n\nSaint Agapius, pray for us. 🕯\n\nHad you ever heard of St. Agapius before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintagapius #caesarea",
  "attempts": 0,
  "assets": {
   "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-21/video.mp4",
@@ -343,9 +305,5 @@
   "name": "Warsaw",
   "id": "108126032553728"
  },
- "review_message_id": 186,
- "redo": {
-  "new_saint": false,
-  "note": null
- }
+ "review_message_id": 191
 }
