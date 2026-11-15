@@ -1,8 +1,8 @@
 {
  "id": "2026-11-21",
  "date": "2026-11-21",
- "status": "review",
- "updated": "2026-11-15T13:58:21+00:00",
+ "status": "redo_requested",
+ "updated": "2026-11-15T14:11:04+00:00",
  "saint": {
   "qid": "Q1763046",
   "name": "Saint Agapius",
@@ -343,5 +343,9 @@
   "name": "Warsaw",
   "id": "108126032553728"
  },
- "review_message_id": 186
+ "review_message_id": 186,
+ "redo": {
+  "new_saint": false,
+  "note": null
+ }
 }
