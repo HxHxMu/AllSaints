@@ -72,26 +72,46 @@ def overrides(ep_id, work):
     return out
 
 
+def portrait_scene(script):
+    """The cover: a portrait of the saint alone (script "portrait"), never a beat's event, which may not show them
+    (Nov 15 2026: "Fire consumed his body" painted a burning chapel and no saint)."""
+    s = script["saint"]
+    lead = (f"A portrait icon of {s.get('name')} ({s.get('dates') or 'their lifetime'}, {s.get('region') or 'their homeland'}), "
+            "alone, standing and facing the viewer, with a gold halo.")
+    if script.get("portrait"):
+        return f"{lead} {script['portrait']}"
+    palm = " holding a martyr's palm," if s.get("martyr") else ""
+    return f"{lead} Dressed as their state of life and era require,{palm} with a simple period-correct setting behind them."
+
+
 def illustrate(saint, script, work, skip=()):
-    """Paint every art beat not in `skip`. The shared style prompt keeps the series consistent
-    (a reference image made Gemini repeat the first composition in every beat)."""
+    """Paint every art beat not in `skip`, plus the cover portrait (key "cover") unless Luis supplied one. The shared
+    style prompt keeps the series consistent (a reference image made Gemini repeat the first composition in every beat).
+    A failed portrait only logs: the caller then falls back to the first beat's art."""
     s = script["saint"]
     setting = ILL["setting_rule"].format(region=s.get("region") or "the saint's homeland", dates=s.get("dates") or "their lifetime")
     beats = [(i, b) for i, b in enumerate(script["beats"]) if b.get("visual") == "art" and i not in skip]
 
-    first = min((i for i, b in enumerate(script["beats"]) if b.get("visual") == "art"), default=None)
+    jobs = beats + ([("cover", None)] if "cover" not in skip else [])
 
     def paint(item):
         i, b = item
         p = work / f"icon{i}.jpg"
-        framing = f" {ILL['cover_framing']}" if i == first and ILL.get("cover_framing") else ""  # the first art beat becomes the cover
+        scene, framing = (portrait_scene(script), f" {ILL.get('cover_framing', '')}") if i == "cover" else (_scene(b), "")
         # style leads: with the scene first, long descriptions pull Gemini toward naturalistic painting
-        _save(_generate(f"{ILL['style']}\n\nScene: {_scene(b)}\n\n{setting} {ILL['consistency']}{framing}"), p)
+        try:
+            _save(_generate(f"{ILL['style']}\n\nScene: {scene}\n\n{setting} {ILL['consistency']}{framing}"), p)
+        except Exception as e:
+            if i != "cover":
+                raise
+            log("Cover portrait failed, the first beat's art becomes the cover:", str(e)[:200])
+            return i, None
         return i, p
 
     art_map = {}
     with cf.ThreadPoolExecutor(4) as ex:
-        for i, p in ex.map(paint, beats):
-            art_map[i] = _art(p, i, ILL["credit"])
+        for i, p in ex.map(paint, jobs):
+            if p:
+                art_map[i] = _art(p, 0 if i == "cover" else i, ILL["credit"])
     log(f"Painted {len(art_map)} icon illustrations with {ILL['model']}")
     return art_map

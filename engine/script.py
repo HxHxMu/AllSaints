@@ -28,6 +28,7 @@ def sources_context(sources):
 
 SCHEMA = """{
  "saint": {"name": "Saint Frumentius", "display_name": "St. Frumentius", "dates": "c. 300 – c. 383", "region": "Aksum, Ethiopia", "feast": "October 27", "martyr": false},
+ "portrait": "how the cover icon shows the saint alone: dress, attributes, what stands behind them",
  "beats": [
   {"role": "hook", "text": "...", "visual": "art", "scene": "what an icon of this moment shows: figures, action, setting", "art_hint": "the image that fits + 2-4 Wikimedia Commons search terms"},
   {"role": "who", "text": "...", "visual": "map", "lat": 14.13, "lon": 38.72, "place": "Aksum · Ethiopia"},
@@ -91,7 +92,8 @@ Requirements:
 - 8-14 hashtags, lowercase: first the saint's name tag (e.g. #saintfrumentius), next the most specific place or patronage tag, then others.
 - "share_cta": one gentle caption line inviting a share, only if it is natural: by name ("Know someone named Winifred? Send them their saint.") when the saint's name is still given today, or by patronage ("Send this to a nurse who could use a patron today.") only if the sources state the patronage. Otherwise "". Never pushy, no "comment Amen".
 {STORY_RULES}
-- "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition."""
+- "scene" (every art beat): one or two sentences describing a devotional icon of that beat's moment: who is shown, what they are doing, and the setting with period-correct architecture, dress and landscape for the place and era (e.g. Qing-dynasty Chinese buildings and dress for eighteenth-century Fujian). Show the saint as a figure in the scene; never ask for text or lettering. Keep it faithful to the sources: legendary moments only if the beat presents them as tradition.
+- "portrait": one or two sentences for the episode's cover, a portrait icon of the saint alone, standing and facing the viewer (it is painted separately from the beats, so it must show the saint even when the hook is about an event). Give their dress true to their state of life, order and era (e.g. a Jesuit's black cassock, a Byzantine bishop's omophorion), one or two attributes the SOURCES support (a martyr's palm only if "martyr" is true; a book, a cross, the church they built), and a simple period-correct setting behind them. No other figures, no text."""
     ctx = sources_context(sources)
     task = prompt
     for attempt in range(3):
