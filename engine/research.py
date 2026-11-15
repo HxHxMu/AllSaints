@@ -154,6 +154,27 @@ def recent_summary(n=10):
     return "\n".join(f"- {e['date']}: {e.get('saint', {}).get('name')} ({e.get('saint', {}).get('region', '')})" for e in eps) or "(none yet)"
 
 
+def uncanonized(qids):
+    """Candidates Wikidata tags Blessed / Venerable / Servant of God that no Catholic source confirms as a saint.
+    Wikidata sometimes tags a Blessed "Catholic saint" too (Franciszka Siedliska, picked for 2026-11-21), and real saints
+    keep an old "blessed" tag, so the Catholic source's own page title decides; unreadable counts as not canonized."""
+    from feasts_build import UNSURE, REFS, canonized
+    drop = set()
+    qids = [q for q in qids if q]
+    for i in range(0, len(qids), 50):
+        r = get_json(WD, {"action": "wbgetentities", "ids": "|".join(qids[i:i + 50]), "props": "claims", "format": "json"})
+        for q, e in r.get("entities", {}).items():
+            claims = e.get("claims", {})
+            status = {(c["mainsnak"].get("datavalue") or {}).get("value", {}).get("id") for c in claims.get("P411", [])}
+            if not status & UNSURE:
+                continue
+            urls = [url.format(claims[p][0]["mainsnak"]["datavalue"]["value"]) for p, _, url in REFS
+                    if claims.get(p) and claims[p][0]["mainsnak"].get("datavalue")]
+            if not any(canonized(u) for u in urls):
+                drop.add(q)
+    return drop
+
+
 def select_saint(date, exclude=(), angle=None):
     cal = json.loads((DATA / "calendar.json").read_text())
     key = date.strftime("%m-%d")
@@ -171,6 +192,14 @@ def select_saint(date, exclude=(), angle=None):
     cands =[c for c in cal.get(key, []) if c["qid"] not in used and 2 <= c["links"] <= 45]
     if not cands:
         cands = [c for c in cal.get(key, []) if c["qid"] not in used]
+    try:  # scope: canonized saints only, never Blesseds / Venerables
+        drop = uncanonized([c["qid"] for c in cands])
+    except Exception as e:
+        log("Canonization check failed (the script-stage check still applies):", e)
+        drop = set()
+    if drop:
+        log("Not canonized, skipped:", ", ".join(c["name"] for c in cands if c["qid"] in drop))
+    cands = [c for c in cands if c["qid"] not in drop]
     if not cands:
         raise RuntimeError(f"No candidates for {key}")
     # prefer ones with images / commons categories
@@ -203,7 +232,7 @@ Recently published (avoid repeating the same region/era/type back-to-back):
 Candidates:
 {listing}
 
-Pick the ONE candidate that will make the most moving, surprising, well-documented one-minute story (strongly prefer candidates with Catholic references: they are the sources the facts get checked against), who is genuinely venerated as a saint in the Catholic Church (Latin or Eastern Catholic). Reject anyone venerated only by Orthodox, Anglican or other non-Catholic churches, anyone whose cult was suppressed, and anyone too famous (household names).
+Pick the ONE candidate that will make the most moving, surprising, well-documented one-minute story (strongly prefer candidates with Catholic references: they are the sources the facts get checked against), who is genuinely venerated as a saint in the Catholic Church (Latin or Eastern Catholic). Reject anyone who is only Blessed, Venerable or a Servant of God (not canonized), anyone venerated only by Orthodox, Anglican or other non-Catholic churches, anyone whose cult was suppressed, and anyone too famous (household names).
 Return JSON: {{"index": <int>, "reason": "<one sentence>", "catholic_veneration": "<how they are venerated: Roman Martyrology / Eastern Catholic calendar / etc.>"}}"""
     res = claude_json(prompt, label="select")
     pick = shortlist[int(res["index"])]

@@ -1,6 +1,6 @@
 """Make one episode end to end (research → script → fact-check → art → voice → render → upload → Telegram review), and the
 backfill of website stories for episodes made before they existed. Run by `pipeline.py generate` / `backfill-story`."""
-import datetime as dt, shutil, traceback
+import datetime as dt, re, shutil, traceback
 from common import BRAND, WORK, assign_slugs, log, load_config, load_episodes, load_episode, save_episode, today, month_day_label
 from captions import build_caption
 
@@ -49,6 +49,7 @@ def commons_art(saint, final, work):
     return art_map, credits
 
 
+NOT_SAINT = re.compile(r"\s*(Blessed|Bl\.|Venerable|Ven\.|Servants? of God)\b", re.I)  # scope: canonized saints only
 MAX_REJECTS = 3  # saints per date the fact-check may reject before the episode fails
 
 
@@ -87,6 +88,9 @@ def generate_one(date: dt.date, upload=True, usage_start=None):
             # nothing independent to check against: say so where Luis approves, and cap the score
             fc["confidence"] = min(fc.get("confidence") or 0, 70)
             fc["reviewer_note"] = "⚠️ Wikipedia is the only source; check the facts before approving. " + (fc.get("reviewer_note") or "")
+        title = ((fc.get("script") or draft).get("saint") or {}).get("name", "")
+        if NOT_SAINT.match(title):  # the writer names a Blessed honestly; that's out of scope, so pick again
+            fc = {"verdict": "reject", "reviewer_note": f"Out of scope: {title} is not a canonized saint."}
         if fc.get("verdict") == "reject":
             ep.setdefault("rejected", []).append({"qid": saint["qid"], "name": saint["name"], "note": fc.get("reviewer_note")})
             if len(ep["rejected"]) >= MAX_REJECTS:  # don't keep paying for scripts on a date with no good candidate
