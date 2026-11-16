@@ -15,7 +15,7 @@ import json, subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageDraw
 from common import BRAND, ROOT
-from cards import font as _font, monogram as _monogram, roman, tracked as _tracked
+from cards import font as _font, monogram as _monogram, roman, tracked as _tracked, width as _width
 from stories import W, H, X, SAFE_BOTTOM
 
 LENGTH = 15.0   # seconds
@@ -33,31 +33,49 @@ def _rgb(hexcol):
 SHORT_SHIFT = 240
 
 
+def _title_lines(d, title, width):
+    """The track title as big as it fits (mobile first: readable as a tile in the Shorts grid): one line, or two."""
+    words = title.upper().split()
+    for size in range(110, 58, -4):
+        f = _font("Cinzel-SemiBold.ttf", size)
+        fits = lambda t: _width(d, t, f, 0.03) <= width
+        if fits(" ".join(words)):
+            return f, [" ".join(words)]
+        for k in range(1, len(words)):
+            a, b = " ".join(words[:k]), " ".join(words[k:])
+            if fits(a) and fits(b):
+                return f, [a, b]
+    return f, [" ".join(words)]
+
+
 def overlay(spec, track, short=False):
-    """Transparent 1080x1920: a soot fade up from the foot, then the card's words inside Instagram's safe area
-    (short=True: inside YouTube Shorts' safe area instead)."""
+    """Transparent 1080x1920: a light veil up from the foot, then the words, bottom-anchored inside Instagram's safe area
+    (short=True: inside YouTube Shorts' safe area, clear of its title row and right-hand buttons). Mobile first
+    (Luis, 2026-11-16): the track title is set big, so the grid tile reads like a cover."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    bottom = SAFE_BOTTOM - SHORT_SHIFT - 30 if short else SAFE_BOTTOM
+    font, lines = _title_lines(d, track["title"], (900 if short else W) - 2 * X)
+    lh = int(font.size * 1.08)
+    album_y = bottom - 96 - 34 - 56                    # album line, then "Listen at", then the credit
+    title_y = album_y - 18 - lh * len(lines)
+    head_y = title_y - 52
     soot = _rgb(C["soot"])
-    up = SHORT_SHIFT if short else 0
-    top, solid = 1080 - up, 1300 - up    # a light veil from just above the words; most of the picture stays clear
+    top, solid = head_y - 220, head_y + 60             # a light veil from just above the words; the picture stays clear
     px = img.load()
-    for y in range(top, H):
-        a = int(185 * min(1, (y - top) / (solid - top)) ** 1.6)   # was 235 from y 960: too dark (Luis, 2026-11-16)
+    for y in range(max(top, 0), H):
+        a = int(185 * min(1, (y - top) / (solid - top)) ** 1.6)   # 235 from y 960 was too dark (Luis, 2026-11-16)
         for x in range(W):
             px[x, y] = (*soot, a)
-    d = ImageDraw.Draw(img)
-    y = 1280 - up   # the block ends ~50 px above the "Listen at" line
-    _tracked(d, (X, y), "THE MUSIC OF ALL SAINTS", _font("Cinzel-Regular.ttf", 26), _rgb(C["gilt"]), 0.16)
-    y += 50
-    _tracked(d, (X, y), f"THIS WEEK  ·  {roman(track['n'])}", _font("Cinzel-Regular.ttf", 24), _rgb(C["ash"]), 0.16)
-    y += 40
-    d.text((X, y), track["title"], font=_font("EBGaramond-Medium.ttf", 62), fill=_rgb(C["vellum"]))
-    y += 80
-    d.text((X, y), f"{spec['album']}, {spec['volume']}", font=_font("Cormorant-MediumItalic.ttf", 40), fill=_rgb(C["giltLight"]))
-    bottom = SAFE_BOTTOM - up - 30 if short else SAFE_BOTTOM
-    d.text((X, bottom - 96), "Listen at allholysaints.com/music", font=_font("EBGaramond-Medium.ttf", 32), fill=_rgb(C["vellum"]))
+    _tracked(d, (X, head_y), f"{spec['album']} · {spec['volume']} · {roman(track['n'])}".upper(),
+             _font("Cinzel-Regular.ttf", 30), _rgb(C["gilt"]), 0.14)
+    for k, line in enumerate(lines):
+        _tracked(d, (X - 3, title_y + k * lh), line, font, _rgb(C["vellum"]), 0.03)
+    d.text((X, album_y), "Gregorian jazz for the quiet hours", font=_font("Cormorant-MediumItalic.ttf", 46),
+           fill=_rgb(C["giltLight"]))
+    d.text((X, bottom - 96), "Listen at allholysaints.com/music", font=_font("EBGaramond-Medium.ttf", 36), fill=_rgb(C["vellum"]))
     _monogram(d, X, bottom - 40, 30, _rgb(C["gilt"]))
-    d.text((X + 110, bottom - 37), "Music by Luis E. Bonilla · made with AI tools", font=_font("EBGaramond-Medium.ttf", 28),
+    d.text((X + 110, bottom - 37), "Music by Luis E. Bonilla · made with AI tools", font=_font("EBGaramond-Medium.ttf", 30),
            fill=_rgb(C["ash"]))
     return img
 
