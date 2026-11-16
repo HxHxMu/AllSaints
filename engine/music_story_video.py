@@ -39,10 +39,10 @@ def overlay(spec, track, short=False):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     soot = _rgb(C["soot"])
     up = SHORT_SHIFT if short else 0
-    top, solid = 960 - up, 1250 - up    # fade starts below the lectern's book; fully dark from `solid`
+    top, solid = 1080 - up, 1300 - up    # a light veil from just above the words; most of the picture stays clear
     px = img.load()
     for y in range(top, H):
-        a = int(235 * min(1, (y - top) / (solid - top)) ** 1.4)
+        a = int(185 * min(1, (y - top) / (solid - top)) ** 1.6)   # was 235 from y 960: too dark (Luis, 2026-11-16)
         for x in range(W):
             px[x, y] = (*soot, a)
     d = ImageDraw.Draw(img)
@@ -62,10 +62,30 @@ def overlay(spec, track, short=False):
     return img
 
 
+def impact_start(audio, at, length):
+    """Where the Story's 15 s start (s into the track): the loudest 15 s stretch of the track's middle (Luis, 2026-11-16:
+    the openings are slow; lead with impact), moved back to the quietest moment of the 4 s before it, so the clip
+    starts on a phrase rather than mid-note."""
+    import numpy as np
+    from music_clips import loudest
+    s = loudest(audio, at, length, LENGTH)
+    lo = max(0.0, s - 4)
+    sr = 8000
+    raw = subprocess.check_output(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{at + lo:.2f}", "-t", f"{s - lo + 0.25:.2f}",
+                                   "-i", str(audio), "-ac", "1", "-ar", str(sr), "-f", "s16le", "-"])
+    x = np.frombuffer(raw, np.int16).astype(np.float32)
+    hop = sr // 4
+    rms = [float(np.sqrt((x[i:i + hop] ** 2).mean())) for i in range(0, len(x) - hop, hop)]
+    return round(lo + (int(np.argmin(rms)) * 0.25 if rms else 0), 2)
+
+
 def render(spec_path, loop, n, short=False):
     spec = json.loads(Path(spec_path).read_text())
     track = next(t for t in spec["tracks"] if t["n"] == n)
     d = ROOT / spec["dir"]
+    if track.get("story_from") is None:   # written back so it can be tuned by ear
+        track["story_from"] = impact_start(d / spec["audio"], track["at"], track["length"])
+        Path(spec_path).write_text(json.dumps(spec, ensure_ascii=False, indent=1) + "\n")
     out = d / ("short-videos" if short else "story-videos")
     out.mkdir(parents=True, exist_ok=True)
     png = out / f"{n}-text.png"
@@ -79,7 +99,7 @@ def render(spec_path, loop, n, short=False):
     video = out / f"{n}.mp4"
     subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-i", str(loop),
                     "-loop", "1", "-framerate", "30", "-t", f"{LENGTH:.2f}", "-i", str(png),
-                    "-ss", f"{track['at'] + track.get('from', 0):.2f}", "-t", f"{LENGTH:.2f}", "-i", str(d / spec["audio"]),
+                    "-ss", f"{track['at'] + track['story_from']:.2f}", "-t", f"{LENGTH:.2f}", "-i", str(d / spec["audio"]),
                     "-filter_complex", ";".join(chain), "-map", "[v]", "-map", "[aud]", "-t", f"{LENGTH:.2f}",
                     "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-r", "30", "-g", "60",
                     "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-movflags", "+faststart", str(video)], check=True)

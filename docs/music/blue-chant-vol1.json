@@ -23,55 +23,64 @@
    "length": 220.76,
    "from": 15.0,
    "youtube": "https://youtube.com/shorts/WfOthRvHsiA",
-   "instagram_share": "blue-chant-1-instagram"
+   "instagram_share": "blue-chant-1-instagram",
+   "story_from": 138.75
   },
   {
    "n": 2,
    "title": "Benedicta in Mulieribus",
    "at": 220.76,
-   "length": 299.96
+   "length": 299.96,
+   "story_from": 169.5
   },
   {
    "n": 3,
    "title": "Veritatis",
    "at": 520.72,
-   "length": 252.0
+   "length": 252.0,
+   "story_from": 195.0
   },
   {
    "n": 4,
    "title": "Trinitas",
    "at": 772.72,
-   "length": 300.96
+   "length": 300.96,
+   "story_from": 180.25
   },
   {
    "n": 5,
    "title": "Rosa Mystica",
    "at": 1073.68,
-   "length": 271.4
+   "length": 271.4,
+   "story_from": 69.5
   },
   {
    "n": 6,
    "title": "Mysterium Fidei",
    "at": 1345.08,
-   "length": 264.76
+   "length": 264.76,
+   "story_from": 115.5
   },
   {
    "n": 7,
    "title": "Domine, lux in tenebris",
    "at": 1609.84,
-   "length": 295.2
+   "length": 295.2,
+   "story_from": 230.75
   },
   {
    "n": 8,
    "title": "Lux Eterna",
    "at": 1905.04,
-   "length": 257.0
+   "length": 257.0,
+   "story_from": 170.25
   },
   {
    "n": 9,
    "title": "De Profundo Cordis",
    "at": 2162.04,
-   "length": 307.96
+   "length": 307.96,
+   "story_from": 143.75
   }
  ]
 }
