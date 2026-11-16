@@ -1,7 +1,7 @@
 # 06 · Pange lingua gloriosi — St. Thomas Aquinas
 
 **Lyric master** · release 6 · planned **Thursday, Mar 25, 2027** (Holy Thursday)
-Status: **text checked** (2026-11-16): English against the 1849 page images; Latin from the 1922 OCR (page-image check before **Feb 25**).
+Status: **text checked** (2026-11-16): English against the 1849 page images; Latin from the 1922 OCR (page-image check before **Feb 25**). Music done 2026-11-16 (Suno + Luis); lyric video rendered (`work/sung/06/06-pange-lingua.mp4`, 5:10) from [06-pange-lingua.json](06-pange-lingua.json); uploaded private, scheduled Mar 25 7:30 ET (5bkvrVoTCgE).
 
 | | |
 |---|---|

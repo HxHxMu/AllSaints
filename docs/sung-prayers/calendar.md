@@ -21,7 +21,7 @@ Draft, 2026-11-03. Pieces come from [catalogue.md](catalogue.md) (numbers in **#
 | 03 | **Mon Jan 4** | Her feast | *A Prayer to Jesus* (cat. 31) | Elizabeth Ann Seton | None: her own English | Dec 7 (sheet ✅, check page image) | ✅ scheduled (KEyQwebQy18) |
 | 04 | **Wed Feb 10** | Ash Wednesday | *Sero te amavi* (cat. 3) | Augustine | Pusey 1838 (PD) | ✅ (sheet locked Nov 7) | ✅ scheduled (aibP2Phms5c) |
 | 05 | **Wed Mar 17** | His feast | *Oro Deum*, prayer for perseverance, *Confessio* §57–58 (cat. 5) | Patrick | N. J. D. White 1920 (PD); Latin White 1918 | Feb 17 (sheet ✅, check page images) | ✅ scheduled (IbmwJHNl9_U) |
-| 06 | **Thu Mar 25** | Holy Thursday | *Pange lingua gloriosi* (cat. 18) | Thomas Aquinas | Caswall 1849 (PD, page images ✅); Latin Britt 1922 | Feb 25 (sheet ✅, check Britt pages) | Mar 11 |
+| 06 | **Thu Mar 25** | Holy Thursday | *Pange lingua gloriosi* (cat. 18) | Thomas Aquinas | Caswall 1849 (PD, page images ✅); Latin Britt 1922 | Feb 25 (sheet ✅, check Britt pages) | ✅ scheduled (5bkvrVoTCgE) |
 | 07 | **Sun Mar 28** | Easter Sunday | Paschal Canon, Ode 1, *Anastaseos imera* (cat. 8) | John of Damascus | Neale 1862 (PD paraphrase; say so) | Feb 28 | Mar 14 |
 | 08 | **Fri May 7** | Pentecost novena begins (day after Ascension) | *Esprit Saint, inspire-moi* (cat. 29) | Mariam Baouardy | **Ours, from the French**; confirm the manuscript first | Apr 9 | Apr 23 |
 | 09 | **Sun May 16** | Pentecost | *O ignis Spiritus paracliti* (cat. 13) | Hildegard of Bingen | Littledale 1864 (PD) | Apr 18 | May 2 |

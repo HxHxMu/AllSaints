@@ -1,0 +1,178 @@
+{
+  "_note": "Spec for engine/sung_video.py. Times in seconds of work/sung/06/audio.wav, from a prompted faster-whisper pass (language la), 2026-11-16. Latin: Britt 1922 as printed; English: Caswall 1849 as printed. All six stanzas sung once; instrumental outro under the credits. Text must match 06-pange-lingua.md exactly.",
+  "dir": "work/sung/06",
+  "audio": "audio.wav",
+  "art": "art.jpg",
+  "art_crop": [
+    122,
+    50,
+    897,
+    1024
+  ],
+  "title": "Pange lingua",
+  "title_en": "Sing, my tongue, the Saviour's glory",
+  "byline": "A hymn of St. Thomas Aquinas",
+  "dates": "1225–1274",
+  "cards": [
+    [
+      0,
+      14.5
+    ],
+    [
+      114,
+      140
+    ]
+  ],
+  "stanzas": [
+    {
+      "n": 1,
+      "at": 16.2,
+      "latin": [
+        "Pange lingua gloriosi",
+        "Corporis mysterium,",
+        "Sanguinisque pretiosi,",
+        "Quem in mundi pretium",
+        "Fructus ventris generosi",
+        "Rex effudit Gentium."
+      ],
+      "english": [
+        "Sing, my tongue, the Saviour's glory,",
+        "Of his Flesh the mystery sing;",
+        "Of the Blood, all price exceeding,",
+        "Shed by our immortal King,",
+        "Destin'd, for the world's redemption,",
+        "From a noble womb to spring."
+      ],
+      "until": 44.5
+    },
+    {
+      "n": 2,
+      "at": 49.6,
+      "latin": [
+        "Nobis datus, nobis natus",
+        "Ex intacta Virgine,",
+        "Et in mundo conversatus,",
+        "Sparso verbi semine,",
+        "Sui moras incolatus",
+        "Miro clausit ordine."
+      ],
+      "english": [
+        "Of a pure and spotless Virgin",
+        "Born for us on earth below,",
+        "He, as Man with man conversing,",
+        "Stay'd, the seeds of truth to sow;",
+        "Then He clos'd in solemn order",
+        "Wondrously his life of woe."
+      ],
+      "until": 77.5
+    },
+    {
+      "n": 3,
+      "at": 82.0,
+      "latin": [
+        "In supremae nocte coenae,",
+        "Recumbens cum fratribus,",
+        "Observata lege plene",
+        "Cibis in legalibus,",
+        "Cibum turbae duodenae",
+        "Se dat suis manibus."
+      ],
+      "english": [
+        "On the night of that Last Supper,",
+        "Seated with his chosen band,",
+        "He the paschal victim eating,",
+        "First fulfils the Law's command;",
+        "Then, as Food to all his brethren",
+        "Gives Himself with his own hand."
+      ],
+      "until": 111.5
+    },
+    {
+      "n": 4,
+      "at": 142.2,
+      "latin": [
+        "Verbum caro, panem verum",
+        "Verbo carnem efficit:",
+        "Fitque sanguis Christi merum,",
+        "Et si sensus deficit,",
+        "Ad firmandum cor sincerum",
+        "Sola fides sufficit."
+      ],
+      "english": [
+        "Word made Flesh, the bread of nature",
+        "By his word to Flesh He turns;",
+        "Wine into his Blood He changes:—",
+        "What though sense no change discerns?",
+        "Only be the heart in earnest,",
+        "Faith her lesson quickly learns."
+      ],
+      "until": 170.5
+    },
+    {
+      "n": 5,
+      "at": 175.9,
+      "latin": [
+        "Tantum ergo Sacramentum",
+        "Veneremur cernui:",
+        "Et antiquum documentum",
+        "Novo cedat ritui:",
+        "Praestet fides supplementum",
+        "Sensuum defectui."
+      ],
+      "english": [
+        "Down in adoration falling,",
+        "Lo! the sacred Host we hail;",
+        "Lo! o'er ancient forms departing,",
+        "Newer rites of grace prevail;",
+        "Faith, for all defects supplying,",
+        "Where the feeble senses fail."
+      ],
+      "until": 203.5
+    },
+    {
+      "n": 6,
+      "at": 211.1,
+      "latin": [
+        "Genitori, Genitoque",
+        "Laus et jubilatio,",
+        "Salus, honor, virtus quoque",
+        "Sit et benedictio:",
+        "Procedenti ab utroque",
+        "Compar sit laudatio."
+      ],
+      "english": [
+        "To the Everlasting Father,",
+        "And the Son who reigns on high,",
+        "With the Holy Ghost proceeding",
+        "Forth from Each eternally,",
+        "Be salvation, honour, blessing,",
+        "Might, and endless majesty."
+      ],
+      "until": 239.5
+    }
+  ],
+  "credits_at": 242,
+  "credits": [
+    [
+      "Words",
+      "St. Thomas Aquinas (1225–1274)"
+    ],
+    [
+      "English",
+      "Edward Caswall (1849)"
+    ],
+    [
+      "Music",
+      "Luis E. Bonilla"
+    ]
+  ],
+  "closing": "Saint Thomas Aquinas, pray for us.",
+  "youtube": {
+    "id": "5bkvrVoTCgE",
+    "url": "https://youtu.be/5bkvrVoTCgE",
+    "privacy": "private",
+    "uploaded": "2026-11-16",
+    "category": "10 (Music)",
+    "publish_at": "2027-03-25T07:30 America/New_York (YouTube scheduled)"
+  }
+}

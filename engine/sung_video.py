@@ -53,7 +53,7 @@ def stanza(spec, s):
     d = ImageDraw.Draw(img)
     lat, en = _font(spec.get("text_font", "EBGaramond-Medium.ttf"), 52), _font("Cormorant-MediumItalic.ttf", 38)
     block = len(s["latin"]) * 68 + 44 + len(s["english"]) * 48
-    y = (H - block) // 2 + 10
+    y = max((H - block) // 2 + 10, 232)  # tall stanzas (6+6 lines) start lower, so the label clears the monogram
     _tracked(d, (TX, y - 92), f"{spec['title'].upper()}  ·  {roman(s['n'])}", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.14)
     d.rectangle([TX, y - 46, TX + 72, y - 43], fill=C["martyr"])
     for line in s["latin"]:
