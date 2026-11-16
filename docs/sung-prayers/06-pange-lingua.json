@@ -174,5 +174,23 @@
     "uploaded": "2026-11-16",
     "category": "10 (Music)",
     "publish_at": "2027-03-25T07:30 America/New_York (YouTube scheduled)"
+  },
+  "teaser": {
+    "from": 174.4,
+    "to": 201.8,
+    "stanzas": [
+      5
+    ],
+    "intro": [
+      "Holy Thursday.",
+      "The Tantum ergo of St. Thomas Aquinas,",
+      "over seven centuries old, sung in Latin."
+    ],
+    "intro_for": 3.0,
+    "end": 2.5,
+    "end_text": [
+      "The whole hymn on YouTube · @AllHolySaints"
+    ],
+    "icon_h": 700
   }
 }

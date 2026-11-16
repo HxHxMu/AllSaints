@@ -235,9 +235,11 @@ def teaser_end(where=("The whole hymn on YouTube · @AllHolySaints",)):
 
 
 def teaser(spec_path):
+    global ICON_H
     spec = json.loads(Path(spec_path).read_text())
     d = ROOT / spec["dir"]
     t = spec["teaser"]
+    ICON_H = t.get("icon_h", 900)  # a shorter icon band for long stanzas, so the text clears Instagram's Story reply bar
     a0, a1 = t["from"], t["to"]
     end_for = t.get("end", END)
     total = a1 - a0 + end_for
