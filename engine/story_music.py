@@ -184,7 +184,7 @@ def music_short(items, now):
             continue
         n = album["tracks"].index(s["track"]) + 1
         m = short_meta(album, n)
-        meta = {"snippet": {**m, "categoryId": "10", "defaultLanguage": "en", "defaultAudioLanguage": "zxx"},
+        meta = {"snippet": {**m, "categoryId": "10", "defaultLanguage": "en"},
                 "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False, "embeddable": True}}
         if BRAND.get("youtube", {}).get("synthetic_media"):
             meta["status"]["containsSyntheticMedia"] = True
