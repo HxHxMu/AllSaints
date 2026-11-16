@@ -1,8 +1,8 @@
 {
  "id": "2026-11-16",
  "date": "2026-11-16",
- "status": "approved",
- "updated": "2026-11-09T12:49:04+00:00",
+ "status": "published",
+ "updated": "2026-11-16T12:34:00+00:00",
  "saint": {
   "qid": "Q394693",
   "name": "Saint Agnes of Assisi",
@@ -339,7 +339,8 @@
    "San Damiano",
    "Florencia",
    "Padua"
-  ]
+  ],
+  "slug": "ines-de-asis"
  },
  "books": [],
  "caption": "She left her father's home at fifteen, and tradition holds no one could carry her back.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Agnes of Assisi · Feast day: November 16\nAgnes of Assisi, younger sister of Saint Clare, followed her sister into poverty at fifteen, and tradition holds that her family's armed men could not carry her home; she went on to lead Poor Clare communities and found houses across northern Italy.\n\nSaint Agnes of Assisi, pray for us. 🕯\n\nSave this to pray with again next November 16.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintagnesofassisi #poorclares",
@@ -350,5 +351,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-16/art.jpg"
  },
- "review_message_id": 123
+ "review_message_id": 123,
+ "slug": "agnes-of-assisi",
+ "published": {
+  "media_id": "18094470260229614",
+  "permalink": "https://www.instagram.com/reel/DfzXA_hkiPw/",
+  "location_id": null
+ },
+ "published_at": "2026-11-16T07:30-05:00",
+ "facebook": {
+  "id": "1123390566959846",
+  "url": "https://www.facebook.com/reel/1123390566959846/",
+  "published_at": "2026-11-16T07:32-05:00"
+ },
+ "threads": {
+  "id": "18420510349087463",
+  "url": "https://www.threads.com/@all.holy.saints/post/DfzXPaNBX6z",
+  "published_at": "2026-11-16T07:33-05:00"
+ },
+ "youtube": {
+  "id": "f3g2UyJQs1o",
+  "url": "https://youtube.com/shorts/f3g2UyJQs1o",
+  "privacy": "public",
+  "published_at": "2026-11-16T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7708746320789440526",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-16T07:34-05:00"
+ }
 }
