@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 from common import BRAND, ROOT
-from cards import font as _font, monogram as _monogram, roman, tracked as _tracked
+from cards import font as _font, monogram as _monogram, roman, tracked as _tracked, width as _width
 
 VW, VH = 1080, 1920
 VX = 72                     # text margin
@@ -54,7 +54,11 @@ def base(spec, track):
     img.putalpha(fade)
     d = ImageDraw.Draw(img)
     _tracked(d, (VX, ART + 10), f"{spec['album']} · {spec['volume']}".upper(), _font("Cinzel-Regular.ttf", 32), C["gilt"], 0.14)
-    _tracked(d, (VX - 3, ART + 62), f"{roman(track['n'])}. {track['title']}".upper(), _font("Cinzel-SemiBold.ttf", 72), C["vellum"], 0.04)
+    title = f"{roman(track['n'])}. {track['title']}".upper()
+    size = 72   # long titles ("Benedicta in Mulieribus") shrink to fit the margins
+    while size > 40 and _width(d, title, _font("Cinzel-SemiBold.ttf", size), 0.04) > VW - 2 * VX:
+        size -= 2
+    _tracked(d, (VX - 3, ART + 62 + (72 - size) // 2), title, _font("Cinzel-SemiBold.ttf", size), C["vellum"], 0.04)
     d.rectangle([VX, ART + 170, VX + 90, ART + 174], fill=C["martyr"])
     return img
 

@@ -124,14 +124,15 @@ def post_night(ep):
     return {**instagram.publish_story(url), "image": url}
 
 
-def _facebook(st, image_url, what):
-    """Post a card that is already on Instagram to the Facebook Page as a Story. `st` is its state dict ({id | attempts,
-    error}), updated in place; returns True when it changed. Skips what's done, given up, or has no image."""
+def _facebook(st, image_url, what, video_url=None):
+    """Post a card that is already on Instagram to the Facebook Page as a Story (the video when there is one). `st` is
+    its state dict ({id | attempts, error}), updated in place; returns True when it changed. Skips what's done, given
+    up, or has nothing to post."""
     import facebook, telegram
-    if not image_url or st.get("id") or st.get("attempts", 0) >= 3 or not facebook.configured():
+    if not (image_url or video_url) or st.get("id") or st.get("attempts", 0) >= 3 or not facebook.configured():
         return False
     try:
-        st.update(facebook.publish_story(image_url))
+        st.update(facebook.publish_video_story(video_url) if video_url else facebook.publish_story(image_url))
         st.pop("error", None)
     except Exception as e:
         traceback.print_exc()
@@ -195,11 +196,16 @@ def run_seasonal(now):
             telegram.send(f"❌ Story failed ({s['attempts']}x): {s['id']}\n{str(e)[:200]}")
         changed = True
     for s in items:
-        if s.get("status") == "posted" and s.get("image"):  # video Stories are Instagram-only
+        # the weekly music Story has both: Facebook gets the animated video too (from 2026-11-16; before, the still card).
+        # Video-only Stories (sung-prayer teasers) stay Instagram-only: Facebook gets their own post from shares.json.
+        if s.get("status") == "posted" and s.get("image"):
             fb = s.get("facebook") or {}
-            if _facebook(fb, storage.resolve_direct(s["image"]), s["id"]):
+            video = storage.resolve_direct(s["video"]) if s.get("video") and s["at"][:10] >= "2026-11-16" else None
+            if _facebook(fb, storage.resolve_direct(s["image"]), s["id"], video):
                 s["facebook"] = fb
                 changed = True
+    from story_music import music_short
+    changed = music_short(items, now) or changed
     if changed:
         save_json(FILE, items)
 

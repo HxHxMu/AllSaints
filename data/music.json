@@ -7,7 +7,41 @@
   "about": "Eight original pieces and the Gregorian Ave Maria, played as jazz.",
   "url": "allholysaints.com/music",
   "story_video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/story-{n}.mp4",
-  "tracks": ["Ave Maria", "Benedicta in Mulieribus", "Veritatis", "Trinitas", "Rosa Mystica", "Mysterium Fidei",
-             "Domine, lux in tenebris", "Lux Eterna", "De Profundo Cordis"]
+  "tracks": [
+   "Ave Maria",
+   "Benedicta in Mulieribus",
+   "Veritatis",
+   "Trinitas",
+   "Rosa Mystica",
+   "Mysterium Fidei",
+   "Domine, lux in tenebris",
+   "Lux Eterna",
+   "De Profundo Cordis"
+  ],
+  "short": {
+   "title": "{track} · Gregorian Jazz for Prayer and Study #Shorts",
+   "titles": {
+    "1": "Ave Maria (Gregorian Chant) Played as Jazz #Shorts"
+   },
+   "line": "An original piece in the Gregorian modes, played as jazz.",
+   "lines": {
+    "1": "The Gregorian Ave Maria, sung to Our Lady for centuries, arranged as jazz."
+   },
+   "full_hour": "https://youtu.be/x-H1HoczgAo",
+   "credit": "Composed and produced by Luis E. Bonilla, made with AI tools. Cover art: an icon in the Byzantine style, AI-generated.",
+   "credits": {
+    "1": "Arranged and produced by Luis E. Bonilla from the traditional chant, made with AI tools. Cover art: an icon in the Byzantine style, AI-generated."
+   },
+   "hashtags": "#GregorianChant #Jazz #SacredMusic",
+   "tags": [
+    "Blue Chant",
+    "Catholic music",
+    "Gregorian chant",
+    "jazz",
+    "prayer music",
+    "sacred music",
+    "study music"
+   ]
+  }
  }
 ]

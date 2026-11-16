@@ -110,6 +110,20 @@ def publish_story(image_url):
     return {"id": sid}
 
 
+def publish_video_story(video_url):
+    """A Page video Story (the weekly music Story's animated art): start, upload by URL, finish. Returns {id}."""
+    page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
+    start = _check(http.post(f"{GRAPH}/{page}/video_stories", data={"upload_phase": "start", "access_token": tok}, timeout=60),
+                   "video story start")
+    _check(http.post(start.get("upload_url") or f"{RUPLOAD}/{start['video_id']}", timeout=300,
+                     headers={"Authorization": f"OAuth {tok}", "file_url": video_url}), "video story upload")
+    res = _check(http.post(f"{GRAPH}/{page}/video_stories", timeout=60, data={
+        "upload_phase": "finish", "video_id": start["video_id"], "access_token": tok}), "video story")
+    sid = res.get("post_id") or start["video_id"]
+    log("Facebook video Story:", sid)
+    return {"id": sid}
+
+
 def post_link(message, link):
     """A Page post with a link (Facebook builds the preview card from the link's page). Returns {id, url}."""
     page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)

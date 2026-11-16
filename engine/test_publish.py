@@ -251,6 +251,25 @@ class Stories(unittest.TestCase):
         self.assertEqual(_music_skip(dt.date(2026, 12, 20)), "O Antiphons / Christmas octave")
         self.assertIsNone(_music_skip(dt.date(2026, 11, 15)))
 
+    def test_music_strict_cadence(self):
+        import datetime as dt
+        import story_music
+        sung = [{"id": "veni-facebook", "at": "2026-11-29T07:45:00-05:00", "status": "pending"}]
+        with mock.patch.object(story_music, "load_json", side_effect=lambda f, d: sung if f == "shares.json" else []):
+            self.assertIn("veni-facebook", story_music._why_not(dt.date(2026, 11, 29)))
+            pick = lambda d: story_music._music_pick(d)[1]
+            self.assertEqual(pick(dt.date(2026, 11, 15)), 3)   # Veritatis, as posted
+            self.assertEqual(pick(dt.date(2026, 12, 6)), 4)    # Christ the King and Advent I held track IV, not skipped it
+            self.assertEqual(pick(dt.date(2027, 1, 10)), 6)    # O Antiphons, Christmas, Epiphany held VI
+
+    def test_music_short_text(self):
+        import json, story_music
+        album = json.loads((story_music.DATA / "music.json").read_text())[0]
+        one, three = story_music.short_meta(album, 1), story_music.short_meta(album, 3)
+        self.assertIn("Arranged", one["description"])
+        self.assertTrue(three["title"].startswith("Veritatis") and three["title"].endswith("#Shorts"))
+        self.assertIn("Composed", three["description"])
+
     def test_run_due_before_story_time_posts_nothing(self):
         import datetime as dt
         import stories, story_music

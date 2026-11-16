@@ -30,7 +30,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
 poll (every 10 min): telegram.process_updates → publish_due
    → instagram.publish_reel → youtube.upload_short + facebook.publish_reel + tiktok.upload_draft + threads.publish_video (each independent; ≤3 retries; never re-posts the Reel)
-   → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, weekly music card from data/music.json, seasonal Stories)
+   → shares.run_due (scheduled link/Reel posts) → stories.run_due (nightly prayer card, weekly music Story from data/music.json: animated art on IG + FB Stories, same video as a YouTube Short; one track a Sunday, a Sunday with another post holds it a week; seasonal Stories)
    → check_queue (once a day after 20:00: Telegram if tomorrow is missing/failed/unapproved, the next days are empty, or yesterday never posted)
 ```
 
