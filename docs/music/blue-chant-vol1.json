@@ -45,14 +45,14 @@
    "title": "Trinitas",
    "at": 772.72,
    "length": 300.96,
-   "story_from": 180.25
+   "story_from": 176.0
   },
   {
    "n": 5,
    "title": "Rosa Mystica",
    "at": 1073.68,
    "length": 271.4,
-   "story_from": 69.5
+   "story_from": 65.0
   },
   {
    "n": 6,
@@ -66,7 +66,7 @@
    "title": "Domine, lux in tenebris",
    "at": 1609.84,
    "length": 295.2,
-   "story_from": 230.75
+   "story_from": 240.5
   },
   {
    "n": 8,
@@ -80,7 +80,7 @@
    "title": "De Profundo Cordis",
    "at": 2162.04,
    "length": 307.96,
-   "story_from": 143.75
+   "story_from": 252.0
   }
  ]
 }

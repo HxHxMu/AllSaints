@@ -63,20 +63,31 @@ def overlay(spec, track, short=False):
 
 
 def impact_start(audio, at, length):
-    """Where the Story's 15 s start (s into the track): the loudest 15 s stretch of the track's middle (Luis, 2026-11-16:
-    the openings are slow; lead with impact), moved back to the quietest moment of the 4 s before it, so the clip
-    starts on a phrase rather than mid-note."""
+    """Where the Story's 15 s start (s into the track): the liveliest stretch (Luis, 2026-11-16: "the beginnings are
+    always slow... lively part"). Liveliness = spectral flux (how many notes start and change), plus a little loudness;
+    the first 10% and last 12% (intro, outro) are left out. Then moved back to the quietest moment of the 4 s before
+    it, so the clip starts on a phrase rather than mid-note."""
     import numpy as np
-    from music_clips import loudest
-    s = loudest(audio, at, length, LENGTH)
-    lo = max(0.0, s - 4)
-    sr = 8000
-    raw = subprocess.check_output(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{at + lo:.2f}", "-t", f"{s - lo + 0.25:.2f}",
+    sr, n, hop = 22050, 2048, 512
+    raw = subprocess.check_output(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{at:.2f}", "-t", f"{length:.2f}",
                                    "-i", str(audio), "-ac", "1", "-ar", str(sr), "-f", "s16le", "-"])
-    x = np.frombuffer(raw, np.int16).astype(np.float32)
-    hop = sr // 4
-    rms = [float(np.sqrt((x[i:i + hop] ** 2).mean())) for i in range(0, len(x) - hop, hop)]
-    return round(lo + (int(np.argmin(rms)) * 0.25 if rms else 0), 2)
+    x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768
+    frames = np.lib.stride_tricks.sliding_window_view(x, n)[::hop] * np.hanning(n)
+    mag = np.log1p(10 * np.abs(np.fft.rfft(frames, axis=1)))
+    flux = np.maximum(mag[1:] - mag[:-1], 0).sum(1)
+    rms = np.sqrt((frames ** 2).mean(1))[1:]
+    fps = sr / hop
+    secs = int(len(flux) / fps)
+    per = lambda v: np.array([v[int(i * fps):int((i + 1) * fps)].mean() for i in range(secs)])
+    f, r = per(flux), per(rms)
+    score = f / f.mean() + 0.5 * r / r.mean()
+    clip = int(LENGTH)
+    lo, hi = int(secs * 0.10), max(int(secs * 0.10) + 1, int(secs * 0.88) - clip)
+    s = lo + int(np.argmax([score[k:k + clip].mean() for k in range(lo, hi)]))
+    back = max(0, s - 4)
+    q = [float(np.sqrt((x[int((back + k * 0.25) * sr):int((back + k * 0.25 + 0.25) * sr)] ** 2).mean()))
+         for k in range(int((s - back) * 4) + 1)]
+    return round(back + int(np.argmin(q)) * 0.25, 2)
 
 
 def render(spec_path, loop, n, short=False):
