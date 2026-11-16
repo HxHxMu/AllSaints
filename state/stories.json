@@ -109,6 +109,10 @@
   "posted_at": "2026-11-15T15:00-05:00",
   "facebook": {
    "id": "2121512928488734"
+  },
+  "youtube": {
+   "attempts": 1,
+   "error": "YouTube upload init failed 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Request contains an invalid argument.\",\n    \"errors\": [\n      {\n        \"domain\": \"youtube.api.v3.VideoInsertResponse.Error\",\n        \"reason\": \"INVALID_REQUEST_METADATA\"\n      }\n    ],\n    \"status\": \"INVALID_ARGUMENT\"\n "
   }
  }
 ]
