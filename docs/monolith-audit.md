@@ -1,12 +1,11 @@
 # Monolith audit: what to split, and in what order
 
-*2026-11-10. This builds on `docs/architect-report.md` and doesn't repeat it.*
+*2026-11-10.*
 
 > **Status (2026-11-11):** steps 1–6 shipped on 2026-11-10 (commit 08a63e1) and ran clean in production (poll, generate and the Nov 11 post on all five platforms). Steps 7, 8 and 10 are done in the working tree (stories → `story_music.py` + `o_antiphons.py` + `data/o-antiphons.json`; youtube → `yt_meta.py` + `yt_playlists.py`; dashboard → `src/scripts/dash.ts` + `src/styles/dash.css`). Step 9 (Telegram handler) is deliberately left out.
 > - **Moved docs:** the material from `engine/CLAUDE.md` went to `docs/engine/{youtube,meta,tiktok,compilation,cost-dashboard}.md`, not `docs/website.md` or `docs/sung-prayers/` as first planned: those folders hold your work in progress.
 > - **ffmpeg calls:** left as they were. Their flags differ per module (`-nostdin`, `check_output`), so a shared wrapper would have changed behaviour. Only `duration` moved to `cards.py`.
 > - **Paid render not run:** `generate --date … --no-upload` was skipped. It costs ~$0.40 and writes `state/episodes/<date>.json` locally. `generate.py` is a verbatim move.
-> - **Stale references:** `docs/architect-report.md` (§3.2 and the backlog) still names `engine/pipeline.py` for `publish_*` and `build_caption`. It wasn't touched because it has your uncommitted edits.
 
 **Bottom line:** two files are worth splitting now and one doc is worth slimming. That's about 3 hours of work in six steps you can land one at a time. Everything else is small enough to leave alone.
 

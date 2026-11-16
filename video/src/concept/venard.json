@@ -1,0 +1,23 @@
+{
+	"useArt": true,
+	"dir": "concept/venard",
+	"music": "episodes/sample/music.mp3",
+	"saint": {
+		"name": "Saint Théophane Vénard",
+		"dates": "1829 – 1861",
+		"place": "Tonkin · 1860"
+	},
+	"quote": {
+		"text": "A slight sabre-cut will separate my head from my body, like the spring flower which the Master of the garden gathers for His pleasure.",
+		"source": "Letter to his father · 20 January 1861"
+	},
+	"art": {
+		"icon": "icon.png",
+		"cageScene": "cage-scene.png",
+		"cageClip": "cage-clip.mp4"
+	},
+	"candle": {
+		"x": 0.73,
+		"y": 0.6
+	}
+}
