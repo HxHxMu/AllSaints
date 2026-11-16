@@ -189,7 +189,8 @@ def music_short(items, now):
         if BRAND.get("youtube", {}).get("synthetic_media"):
             meta["status"]["containsSyntheticMedia"] = True
         try:
-            r = http.get(resolve_direct(s["video"]), timeout=300)
+            src = album["short_video"].format(n=n) if album.get("short_video") else s["video"]  # words clear of Shorts' UI
+            r = http.get(resolve_direct(src), timeout=300)
             r.raise_for_status()
             with tempfile.TemporaryDirectory() as tmp:
                 path = Path(tmp) / "short.mp4"

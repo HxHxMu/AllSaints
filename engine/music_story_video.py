@@ -2,6 +2,8 @@
 playing, and the music card's words over the foot of the picture.
 
     python engine/music_story_video.py docs/music/blue-chant-vol1.json <loop.mp4> all     # or a track number
+    ... --short    the YouTube Short version: same video, words raised clear of Shorts' title and buttons
+                   (<dir>/short-videos/<n>.mp4 → release asset short-<n>.mp4, data/music.json "short_video")
 
 The loop (a ~10 s animation; its last frame doesn't meet its first) is cross-faded back into its own start, so the
 15 s Story never jumps. Writes <dir>/story-videos/<n>.mp4; upload them to the album's release as story-<n>.mp4 and
@@ -26,18 +28,25 @@ def _rgb(hexcol):
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
 
-def overlay(spec, track):
-    """Transparent 1080x1920: a soot fade up from the foot, then the card's words inside Instagram's safe area."""
+# YouTube Shorts lays its title, channel row and buttons over the bottom ~520 px and the right ~160 px (Luis's
+# screenshot of Veritatis, 2026-11-16): the Short's words sit higher, ending above y 1400.
+SHORT_SHIFT = 240
+
+
+def overlay(spec, track, short=False):
+    """Transparent 1080x1920: a soot fade up from the foot, then the card's words inside Instagram's safe area
+    (short=True: inside YouTube Shorts' safe area instead)."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     soot = _rgb(C["soot"])
-    top, solid = 960, 1250    # fade starts below the lectern's book; fully dark from `solid`
+    up = SHORT_SHIFT if short else 0
+    top, solid = 960 - up, 1250 - up    # fade starts below the lectern's book; fully dark from `solid`
     px = img.load()
     for y in range(top, H):
         a = int(235 * min(1, (y - top) / (solid - top)) ** 1.4)
         for x in range(W):
             px[x, y] = (*soot, a)
     d = ImageDraw.Draw(img)
-    y = 1280   # the block ends ~50 px above the "Listen at" line
+    y = 1280 - up   # the block ends ~50 px above the "Listen at" line
     _tracked(d, (X, y), "THE MUSIC OF ALL SAINTS", _font("Cinzel-Regular.ttf", 26), _rgb(C["gilt"]), 0.16)
     y += 50
     _tracked(d, (X, y), f"THIS WEEK  ·  {roman(track['n'])}", _font("Cinzel-Regular.ttf", 24), _rgb(C["ash"]), 0.16)
@@ -45,21 +54,22 @@ def overlay(spec, track):
     d.text((X, y), track["title"], font=_font("EBGaramond-Medium.ttf", 62), fill=_rgb(C["vellum"]))
     y += 80
     d.text((X, y), f"{spec['album']}, {spec['volume']}", font=_font("Cormorant-MediumItalic.ttf", 40), fill=_rgb(C["giltLight"]))
-    d.text((X, SAFE_BOTTOM - 96), "Listen at allholysaints.com/music", font=_font("EBGaramond-Medium.ttf", 32), fill=_rgb(C["vellum"]))
-    _monogram(d, X, SAFE_BOTTOM - 40, 30, _rgb(C["gilt"]))
-    d.text((X + 110, SAFE_BOTTOM - 37), "Music by Luis E. Bonilla · made with AI tools", font=_font("EBGaramond-Medium.ttf", 28),
+    bottom = SAFE_BOTTOM - up - 30 if short else SAFE_BOTTOM
+    d.text((X, bottom - 96), "Listen at allholysaints.com/music", font=_font("EBGaramond-Medium.ttf", 32), fill=_rgb(C["vellum"]))
+    _monogram(d, X, bottom - 40, 30, _rgb(C["gilt"]))
+    d.text((X + 110, bottom - 37), "Music by Luis E. Bonilla · made with AI tools", font=_font("EBGaramond-Medium.ttf", 28),
            fill=_rgb(C["ash"]))
     return img
 
 
-def render(spec_path, loop, n):
+def render(spec_path, loop, n, short=False):
     spec = json.loads(Path(spec_path).read_text())
     track = next(t for t in spec["tracks"] if t["n"] == n)
     d = ROOT / spec["dir"]
-    out = d / "story-videos"
+    out = d / ("short-videos" if short else "story-videos")
     out.mkdir(parents=True, exist_ok=True)
     png = out / f"{n}-text.png"
-    overlay(spec, track).save(png)
+    overlay(spec, track, short).save(png)
     dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(loop)]))
     # two passes of the loop, the second fading in over the last second of the first
     chain = [f"[0:v]scale={W}:{H},setsar=1,fps=30,split[a][b]",
@@ -79,4 +89,4 @@ def render(spec_path, loop, n):
 if __name__ == "__main__":
     spec = json.loads(Path(sys.argv[1]).read_text())
     for n in ([t["n"] for t in spec["tracks"]] if sys.argv[3] == "all" else [int(sys.argv[3])]):
-        print(render(sys.argv[1], Path(sys.argv[2]), n))
+        print(render(sys.argv[1], Path(sys.argv[2]), n, short="--short" in sys.argv))
