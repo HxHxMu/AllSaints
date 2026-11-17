@@ -20,10 +20,33 @@ def pick_bed(seed: str):
     return prepare(beds[i])
 
 
-def prepare(src, target_lufs=-15, min_seconds=100):
-    """Level-match a bed to the mix's reference loudness and, if shorter than an episode could run,
+# Bed loudness, so every episode has the music at the same level under the narration (tts.py: voice at −16 LUFS).
+# −15 LUFS keeps the balance the channel was tuned on: Episode.jsx plays the bed at 0.14 (−17 dB → about −32 LUFS,
+# 16 LU under the voice) and lifts it to 0.30 for the close (about −25.5 LUFS). LRA 1 makes loudnorm level the bed
+# slowly over time (the beds swing 4–6 LU inside; with LRA 11 a Reel's outro could land anywhere from −24 to −27 LUFS).
+# A gentle slow 2:1 compressor first evens out phrase-to-phrase swells that loudnorm's 3 s window leaves (the outro
+# heard 1.4 s at a time: 4.9 LU spread before, 2.3 after); set BED_COMP = "" to drop it.
+# The limiter is a 4× oversampled brick wall at −1 dBTP (alimiter alone is sample-peak), after loudnorm's own −1.5.
+BED_LUFS, BED_LRA, BED_TP = -15, 1, -1.0
+BED_COMP = "acompressor=threshold=0.1:ratio=2:attack=200:release=1500:knee=6:makeup=1"
+
+
+def bed_filter(target_lufs=BED_LUFS, lra=BED_LRA, tp=BED_TP, comp=BED_COMP):
+    limit = 10 ** (tp / 20)
+    return ((f"{comp}," if comp else "") + f"loudnorm=I={target_lufs}:TP={tp - 0.5}:LRA={lra},"
+            f"aresample=176400,alimiter=limit={limit:.6f}:attack=5:release=80:level=disabled,aresample=44100")
+
+
+def bed_path(src, min_seconds=100, **kw):
+    """Cache name carries a hash of the settings, so changing them re-prepares every bed."""
+    key = hashlib.md5(f"{bed_filter(**kw)}|{min_seconds}".encode()).hexdigest()[:8]
+    return WORK / "music" / f"{src.stem}-bed-{key}.mp3"
+
+
+def prepare(src, target_lufs=BED_LUFS, min_seconds=100):
+    """Level a bed to BED_LUFS with a true-peak ceiling and, if shorter than an episode could run,
     extend it by crossfading it into itself (Remotion's loop would otherwise hard-cut)."""
-    out = WORK / "music" / (src.stem + "-bed.mp3")
+    out = bed_path(src, min_seconds, target_lufs=target_lufs)
     if out.exists() and out.stat().st_size and out.stat().st_mtime > src.stat().st_mtime:
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -34,7 +57,7 @@ def prepare(src, target_lufs=-15, min_seconds=100):
     for k in range(1, copies):
         steps.append(f"{prev}[{k}]acrossfade=d=4:c1=tri:c2=tri[x{k}]")
         prev = f"[x{k}]"
-    steps.append(f"{prev}loudnorm=I={target_lufs}:TP=-1.5:LRA=11")
+    steps.append(f"{prev}{bed_filter(target_lufs)}")
     inputs = [a for _ in range(copies) for a in ("-i", str(src))]
     tmp = out.with_suffix(".tmp.mp3")  # rename only when complete, so a failed run never leaves a bad bed cached
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(steps),

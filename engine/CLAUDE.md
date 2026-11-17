@@ -24,7 +24,7 @@ data/calendar.json (Wikidata: saints by feast day, sitelink count = fame proxy)
  → illustrate.illustrate   Gemini image per beat (brand.json → illustration), plus the cover: a separate portrait of the saint alone from the script's `portrait` line, with `cover_framing` (plain gold top fifth, head in the upper third, so grid crops keep the head); it is also the website icon (art.jpg) and the video's opening frame. A failed portrait falls back to the first beat's art. Overrides from art/<ep_id>/ (`cover.jpg` replaces the portrait)
    (art.collect_candidates / assign_art only when config art_source = "commons")
  → tts.synthesize          Gemini TTS per beat + faster-whisper timings (fallback ElevenLabs), paced, loudnorm −16 LUFS
- → music.pick_bed        Luis's beds from assets/music/, rotated by date (neighbours differ; auto-prepared by music.py)
+ → music.pick_bed        Luis's beds from assets/music/, rotated by date (neighbours differ); prepared to work/music/: gentle 2:1 compressor, −15 LUFS at LRA 1 (levelled over time), −1 dBTP oversampled limiter (`BED_*`; cache name hashes the settings)
  → render.build_props/render  Remotion → video.mp4 (1080×1920 h264) + cover.jpg + preview.mp4
  → storage.upload          GitHub Release `ep-YYYY-MM-DD`
  → telegram.send_review    preview + ✅ Approve · 🔁 Redo (note) · ✏️ Edit caption · 🔄 New saint
