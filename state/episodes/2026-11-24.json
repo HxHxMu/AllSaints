@@ -1,0 +1,348 @@
+{
+ "id": "2026-11-24",
+ "date": "2026-11-24",
+ "status": "review",
+ "updated": "2026-11-17T10:25:06+00:00",
+ "saint": {
+  "qid": "Q568014",
+  "name": "Saint Pierre Dumoulin-Borie",
+  "display_name": "St. Pierre Dumoulin-Borie",
+  "dates": "1808 – 1838",
+  "region": "Đồng Hới, Vietnam",
+  "feast": "November 24",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q568014",
+  "name": "Pierre Dumoulin-Borie",
+  "links": 10,
+  "enwiki": "Pierre_Dumoulin-Borie",
+  "images": [
+   "Pierre%20Borie%20MEP.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Pierre Dumoulin-Borie",
+  "birth": 1808,
+  "death": 1838,
+  "lon": 106.6,
+  "lat": 17.483333333,
+  "selection_reason": "Pierre Dumoulin-Borie, a young French missionary bishop-elect in Tonkin who was caged, tried and beheaded on 24 November 1838, has a vivid and well-sourced story (Catholic Encyclopedia, Santi e Beati, Nominis). He died on the feast day itself, and Southeast Asia fits the recent rotation better than another European medieval saint.",
+  "catholic_veneration": "Canonized by Pope John Paul II on 19 June 1988 among the Vietnamese Martyrs (Saint Andrew Dũng-Lạc and Companions); memorial on 24 November in the General Roman Calendar and Roman Martyrology."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Pierre Dumoulin-Borie",
+   "display_name": "St. Pierre Dumoulin-Borie",
+   "dates": "1808 – 1838",
+   "region": "Đồng Hới, Vietnam",
+   "feast": "November 24",
+   "martyr": true
+  },
+  "portrait": "A young French missionary bishop-elect in a plain black cassock with a simple wooden cross at his breast, one hand holding a small book and the other raised in a quiet blessing; a martyr's palm rests in the crook of his arm. Behind him are the gold-leaf background of an icon and the soft green hills and rice terraces of nineteenth-century Vietnam.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "In prison, he learned he had been named a bishop.",
+    "visual": "art",
+    "scene": "A young French priest in a dark cassock kneels in a bare prison room with timber posts and a tiled roof in nineteenth-century Vietnam. A messenger in a conical hat stands at the door with a folded letter, and the priest looks up with calm surprise."
+   },
+   {
+    "role": "who",
+    "text": "Saint Pierre Dumoulin-Borie, a French missionary who served in Vietnam in the nineteenth century.",
+    "visual": "map",
+    "lat": 17.47,
+    "lon": 106.62,
+    "place": "Đồng Hới · Vietnam"
+   },
+   {
+    "role": "story",
+    "text": "His parents wanted him to stay in France. He said he would follow his vocation wherever it led.",
+    "visual": "art",
+    "scene": "A young seminarian stands before his seated parents at a wooden table in a modest stone house in rural Limousin, France, in the early nineteenth century. He speaks earnestly with one hand on his heart, and a small crucifix hangs on the wall behind them."
+   },
+   {
+    "role": "story",
+    "text": "Ordained in eighteen thirty, he sailed for Asia. Chinese smugglers brought him secretly into Saigon.",
+    "visual": "art",
+    "scene": "A small wooden Chinese junk with battened sails glides up a river toward a port in nineteenth-century Vietnam at dusk. A young French priest in plain dark clothing sits among the Chinese boatmen, and palm trees and thatched roofs line the bank."
+   },
+   {
+    "role": "story",
+    "text": "Persecution soon began. He lived mostly in hiding, yet reached even the most remote Christian communities.",
+    "visual": "art",
+    "scene": "At night, in a hut of a rice-farming village with a thatched roof, a priest in a dark cassock blesses a small circle of kneeling Vietnamese Christians in period dress. A single oil lamp lights their faces, and the hills lie beyond the doorway."
+   },
+   {
+    "role": "story",
+    "text": "Arrested in eighteen thirty-eight, he was sentenced to death on the twenty-fourth of November. It was carried out that day.",
+    "visual": "art",
+    "scene": "A calm young priest in a dark cassock stands upright before seated mandarin officials in a court hall with carved wooden pillars and a tiled roof in Nguyễn-dynasty Vietnam. Guards stand along the walls, and the saint's face is serene and unafraid."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was simple: he kept going to his people, whatever the danger.",
+    "visual": "art",
+    "scene": "A priest in a dark cassock walks alone along a narrow dyke between flooded rice paddies toward a distant village at dawn. Misty green mountains rise behind him, and a small cross is visible at his breast."
+   },
+   {
+    "role": "close",
+    "text": "Follow the call, even far from home. Saint Pierre Dumoulin-Borie, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Pierre": "Pee-AIR",
+   "Dumoulin-Borie": "Doo-moo-LAN-Bo-REE"
+  },
+  "caption_hook": "The news that he was a bishop reached him only in prison.",
+  "summary": "A young French missionary priest hidden in Vietnam learned in prison that he had been named a bishop, and was put to death on November 24, 1838.",
+  "youtube_title": "St. Pierre Dumoulin-Borie: Named Bishop While in Prison",
+  "hashtags": [
+   "#saintpierredumoulinborie",
+   "#vietnammartyrs",
+   "#vietnam",
+   "#tonkin",
+   "#catholicsaints",
+   "#martyr",
+   "#missionary",
+   "#parisforeignmissions",
+   "#lesserknownsaints",
+   "#allsaints",
+   "#saintoftheday"
+  ],
+  "share_cta": "Know someone named Pierre? Send them their saint.",
+  "claims": [
+   {
+    "claim": "He learned in prison that he had been named a bishop (titular bishop of Acanthus, with the Vicariate Apostolic of Western Tongking).",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was a French missionary priest of the Paris Foreign Missions Society who served in Vietnam in the nineteenth century; he died at Đồng Hới.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His parents did not want him to be a missionary abroad; he warned them he would follow his vocation wherever it called, even to the foreign missions.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He was ordained a priest at Bayeux in 1830 and sailed for Asia, reaching Macao in 1831.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Chinese smugglers brought him to Saigon, evading the ban on proselytizing.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "An edict of persecution was issued in January 1833; he had to remain almost continually concealed and endure great privations.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He visited even the least accessible Christian communities of his vast district.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was arrested in 1838; the death sentence was pronounced on 24 November 1838, and executed that same day.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the sixth of twelve children of Guillaume Borie and Rose Labrunie, born at Beynat on 20 February 1808.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His godfather, his uncle Pierre Borie, was a refractory priest during the Revolution and later curé of Sionac, and began his education; another uncle, Jean Borie, voted for the death of Louis XVI.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He studied at Beaulieu and Servières and entered the seminary of Tulle in 1826.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He entered the Paris Foreign Missions seminary on 6 October 1829.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "In the Paris riots of 1830 a crowd mistook him for a Swiss guard and nearly lynched him, but his accent saved him.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He was too young for ordination, but a dispensation from Rome permitted his immediate ordination.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He sailed from Le Havre on 1 December 1830 and reached Macao on 18 July 1831.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He arrived in Tongking in 1832 and made rapid progress in the language.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His health failed in 1834 and he regained his strength the following year.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was named titular bishop of Acanthus on 30 January 1836.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He and two native priests, Pierre Võ Đăng Khoa and Vincent Nguyễn Thế Điểm, were put to death at Đồng Hới by order of Emperor Minh Mạng; he was beheaded and the priests strangled.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His body was exhumed secretly eleven months later and rests in the Martyrs' Room of the Paris Foreign Missions Society in Paris; his remains were brought to France in 1843.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified in 1900 and canonized by Pope John Paul II in 1988 among the 117 Martyrs of Vietnam; his feast is 24 November.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Beynat",
+   "Đồng Hới",
+   "Vietnam",
+   "Paris"
+  ],
+  "story": [
+   "Pierre-Rose-Ursule Dumoulin-Borie was born on 20 February 1808 at Beynat, in the Limousin region of France, in the diocese of Tulle. He was the sixth of twelve children of Guillaume Borie and Rose Labrunie, a middle-class family. His relatives reflected the divisions of a country shaken by revolution. His godfather and uncle, Pierre Borie, had been a refractory priest during the Revolution and later became curé of Sionac. He gave the boy his first schooling. Another uncle, Jean Borie, was a deputy who voted for the death of King Louis XVI.",
+   "Pierre left for the seminary of Servières in 1824. He also studied at Beaulieu, and in 1826 entered the seminary of Tulle. All the while he was drawn to carrying the Gospel to distant lands. According to the Church in France's Nominis site, his parents set that dream aside. They would have been glad to see him a priest in France, but not a missionary or a doctor abroad. Pierre did not change his mind. He warned them that he would follow his vocation wherever it called him, even to the foreign missions. On 6 October 1829 he entered the seminary of the Paris Foreign Missions Society and spent thirteen months there.",
+   "The same source records that during the riots in Paris in 1830 a crowd took him for a Swiss guard and nearly lynched him, until his accent saved him. He was still too young for the priesthood, and the plan had been to ordain him on the way to his mission. A dispensation from Rome allowed his ordination at once, and he was ordained at Bayeux on 21 November 1830. He sailed from Le Havre on 1 December and reached Macao, in China, on 18 July 1831.",
+   "From there he was brought to Saigon by Chinese smugglers, who carried him past the ban on missionaries. He reached Tongking in 1832. He learned the language quickly, but only about eight months after he was installed, in January 1833, an edict of persecution was issued. For years afterwards Pierre had to stay almost continually hidden and endure great hardship. In 1834 his health failed under the strain. He recovered the next year, and his strength allowed him to visit even the most remote Christian communities in the vast district in his care.",
+   "In 1838 he was arrested. In prison he learned that he had been named titular bishop of Acanthus, an appointment dated 30 January 1836, and Vicar Apostolic of Western Tongking. The news had reached him only now, when he was a captive. Soon afterwards, on 24 November 1838, the sentence of death was pronounced on him and on two native priests, Pierre Võ Đăng Khoa and Vincent Nguyễn Thế Điểm. It was carried out that same day at Đồng Hới, by order of Emperor Minh Mạng. The Roman Martyrology records that Pierre was beheaded and the two priests were strangled. He was thirty.",
+   "Eleven months later his body was exhumed in secret. His remains were brought to France in 1843, and they rest today in the Martyrs' Room of the Paris Foreign Missions Society in Paris. The Church beatified him in 1900. In 1988 he was canonized by Pope John Paul II among the 117 Martyrs of Vietnam. His memorial is kept on 24 November, the day he died.",
+   "The sources show a man who went where he was sent and stayed. He lived in hiding, in poor health and in danger, and still made his way to the people entrusted to him. That steady faithfulness, kept to the end, is the heart of his witness."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Story paragraph 6 gave the canonization date as 19 June 1988. The sources give only the year 1988. Changed to 'In 1988'.",
+   "Story paragraph 7 said 'Nothing in the sources suggests a dramatic saint'. The sources do include a near-lynching and a beheading. Reworded to a neutral statement.",
+   "Story paragraph 7 credited 'the Church' with calling steady faithfulness the heart of his holiness. No source says this. Reworded as an observation.",
+   "The portrait prompt gave him a pectoral cross. He was only bishop-elect, so it was changed to a plain wooden cross.",
+   "The spoken beats total about 119 words, and the hook is 10 words. Every spoken claim matches the sources. The map point (17.47, 106.62) is correct for Đồng Hới. No change was needed to the spoken text."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The art scenes (messenger with letter, trial hall, junk on a river) are invented illustration, not sourced. Check that the images do not look like documented events. Also confirm the Nominis detail about the Paris riots ('suisse') is acceptable as 'Swiss guard'."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2674,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 861,
+   "thinking": 622
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2068,
+   "cache_write": 8253,
+   "cache_read": 0,
+   "out": 12072,
+   "thinking": 7901
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4917,
+   "cache_write": 0,
+   "cache_read": 8253,
+   "out": 8106,
+   "thinking": 4770
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1667,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3271,
+   "thinking": 1464
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Pierre Dumoulin-Borie",
+   "url": "https://en.wikipedia.org/wiki/Pierre_Dumoulin-Borie"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Pierre Dumoulin-Borie",
+   "url": "https://www.newadvent.org/cathen/02686c.htm"
+  },
+  {
+   "title": "Santi e Beati: Pierre Dumoulin-Borie",
+   "url": "https://www.santiebeati.it/dettaglio/93414"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Pierre Dumoulin-Borie",
+   "url": "https://nominis.cef.fr/contenus/saint/126/Saint-Pierre-Dumoulin-Borie.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 58.9,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Pedro Dumoulin-Borie",
+  "display_name": "San Pedro",
+  "region": "Đồng Hới, Vietnam",
+  "dates": "1808 – 1838",
+  "hook": "La noticia de que había sido nombrado obispo le llegó solo en la prisión.",
+  "summary": "Un joven sacerdote misionero francés, escondido en Vietnam, supo en la prisión que había sido nombrado obispo, y fue ejecutado el 24 de noviembre de 1838.",
+  "story": [
+   "Pierre-Rose-Ursule Dumoulin-Borie nació el 20 de febrero de 1808 en Beynat, en la región del Limusín, en Francia, en la diócesis de Tulle. Fue el sexto de doce hijos de Guillaume Borie y Rose Labrunie, una familia de clase media. Sus parientes reflejaban las divisiones de un país sacudido por la revolución. Su padrino y tío, Pierre Borie, había sido sacerdote refractario durante la Revolución y más tarde llegó a ser párroco de Sionac. Él le dio al niño su primera instrucción. Otro tío, Jean Borie, fue diputado y votó por la muerte del rey Luis XVI.",
+   "Pierre partió en 1824 hacia el seminario de Servières. También estudió en Beaulieu y, en 1826, ingresó en el seminario de Tulle. Durante todo ese tiempo sintió el impulso de llevar el Evangelio a tierras lejanas. Según el sitio Nominis de la Iglesia en Francia, sus padres dejaron de lado ese sueño. Habrían querido verlo sacerdote en Francia, pero no misionero ni médico en el extranjero. Pierre no cambió de parecer. Les advirtió que seguiría su vocación allí donde lo llamara, incluso en las misiones extranjeras. El 6 de octubre de 1829 ingresó en el seminario de la Sociedad de las Misiones Extranjeras de París, y permaneció allí trece meses.",
+   "La misma fuente recoge que, durante los disturbios de París en 1830, una multitud lo tomó por un guardia suizo y casi lo linchó, hasta que su acento lo salvó. Todavía era demasiado joven para el sacerdocio, y el plan era ordenarlo de camino a su misión. Una dispensa de Roma permitió que fuera ordenado de inmediato, y fue ordenado en Bayeux el 21 de noviembre de 1830. Zarpó de Le Havre el 1 de diciembre y llegó a Macao, en China, el 18 de julio de 1831.",
+   "Desde allí, contrabandistas chinos lo llevaron a Saigón, y lo trasladaron más allá de la prohibición que pesaba sobre los misioneros. Llegó a Tonkín en 1832. Aprendió la lengua con rapidez, pero solo unos ocho meses después de su llegada, en enero de 1833, se promulgó un edicto de persecución. Durante años, Pierre tuvo que permanecer casi continuamente escondido y soportó grandes penurias. En 1834 su salud se quebrantó por el esfuerzo. Se recuperó al año siguiente, y sus fuerzas le permitieron visitar incluso las comunidades cristianas más apartadas del extenso distrito a su cargo.",
+   "En 1838 fue arrestado. En la prisión supo que había sido nombrado obispo titular de Acanto, un nombramiento fechado el 30 de enero de 1836, y vicario apostólico del Tonkín Occidental. La noticia le había llegado solo entonces, cuando ya era prisionero. Poco después, el 24 de noviembre de 1838, se pronunció la sentencia de muerte contra él y contra dos sacerdotes vietnamitas, Pedro Võ Đăng Khoa y Vicente Nguyễn Thế Điểm. Se ejecutó ese mismo día en Đồng Hới, por orden del emperador Minh Mạng. El Martirologio Romano registra que a Pedro lo decapitaron y que a los dos sacerdotes los estrangularon. Él tenía treinta años.",
+   "Once meses después, su cuerpo fue exhumado en secreto. Sus restos fueron llevados a Francia en 1843, y hoy descansan en la Sala de los Mártires de la Sociedad de las Misiones Extranjeras de París. La Iglesia lo benefició en 1900. En 1988 fue canonizado por el papa Juan Pablo II junto con los 117 Mártires de Vietnam. Su memoria se celebra el 24 de noviembre, el día de su muerte.",
+   "Las fuentes muestran a un hombre que fue donde se le envió y permaneció allí. Vivió escondido, con la salud frágil y en peligro, y aun así llegó a las personas que le habían sido encomendadas. Esa fidelidad constante, mantenida hasta el final, es el corazón de su testimonio."
+  ],
+  "prayer": "Sigue la llamada, incluso lejos de casa. San Pedro Dumoulin-Borie, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Beynat",
+   "Đồng Hới",
+   "Vietnam",
+   "París"
+  ]
+ },
+ "books": [],
+ "caption": "The news that he was a bishop reached him only in prison.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Pierre Dumoulin-Borie · Feast day: November 24\nA young French missionary priest hidden in Vietnam learned in prison that he had been named a bishop, and was put to death on November 24, 1838.\n\nFollow the call, even far from home. Saint Pierre Dumoulin-Borie, pray for us. 🕯\n\nKnow someone named Pierre? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintpierredumoulinborie #vietnammartyrs",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/art.jpg"
+ },
+ "review_message_id": 208
+}
