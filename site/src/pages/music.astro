@@ -20,8 +20,26 @@ const tracks = [
   ["De Profundo Cordis", "de-profundo-cordis-9"],
 ];
 const roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+// the producer's own profiles: they name each other, so search ties this album to the same Luis E. Bonilla
+const PRODUCER = [
+  ["Discogs", "https://www.discogs.com/artist/17022757-Luis-E-Bonilla"],
+  ["MusicBrainz", "https://musicbrainz.org/artist/77ed9086-2855-4a68-9985-865169e55f62"],
+  ["Wikidata", "https://www.wikidata.org/wiki/Q137176863"],
+];
+const byArtist = { "@type": "Person", name: "Luis E. Bonilla", sameAs: PRODUCER.map(([, href]) => href) };
+const jsonld = {
+  "@context": "https://schema.org", "@type": "MusicAlbum", name: "Blue Chant, Volume I", url: new URL("/music/", Astro.site).href,
+  image: new URL(cover.src, Astro.site).href, genre: ["Jazz", "Sacred music"], byArtist, numTracks: tracks.length,
+  sameAs: [ALBUM, "https://www.youtube.com/watch?v=x-H1HoczgAo"],
+  publisher: { "@type": "Organization", "@id": "https://allholysaints.com/#organization", name: "All Holy Saints" },
+  track: tracks.map(([title, slug], i) => ({
+    "@type": "MusicRecording", name: title, position: i + 1, byArtist, url: `https://soundcloud.com/all-holy-saints/${slug}`,
+    // I is an arrangement of the chant, not an original melody
+    ...(i === 0 && { recordingOf: { "@type": "MusicComposition", name: "Ave Maria", genre: "Gregorian chant", composer: { "@type": "Person", name: "Traditional" } } }),
+  })),
+};
 ---
-<Base title="Blue Chant · Music" description="Blue Chant, Volume I: avant-garde jazz built on Gregorian chant, eight original pieces and the Gregorian Ave Maria. Music for prayer, study and the quiet hours.">
+<Base title="Blue Chant · Music" jsonld={jsonld} description="Blue Chant, Volume I: avant-garde jazz built on Gregorian chant, eight original pieces and the Gregorian Ave Maria. Music for prayer, study and the quiet hours.">
   <article class="wrap music">
     <div class="cover" data-sc={PLAYLIST_ID}>
       <Picture src={cover} alt="Blue Chant, Volume I: a monk-cantor sings at a lectern beside an upright bass, under a blue night sky"
@@ -42,7 +60,8 @@ const roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
       </ol>
       <p>Open, searching, unhurried. Music for prayer, study and the quiet hours.</p>
       <h2 class="label">How it's made</h2>
-      <p>Composed and produced by Luis E. Bonilla, made with AI tools.</p>
+      <p>Composed, arranged and produced by Luis E. Bonilla, made with AI tools.</p>
+      <p class="fine muted">Luis E. Bonilla on {PRODUCER.map(([name, href], i) => <>{i > 0 && " · "}<a href={href}>{name}</a></>)}</p>
       {SUPPORT_URL && <a class="rubric support" href={SUPPORT_URL} rel="noopener"><span>🕯 Light a candle<small>Help keep the forgotten remembered. Supports the stories and music.</small></span><span aria-hidden="true">›</span></a>}
     </div>
   </article>
