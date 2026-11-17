@@ -30,7 +30,10 @@ const byArtist = { "@type": "Person", name: "Luis E. Bonilla", sameAs: PRODUCER.
 const jsonld = {
   "@context": "https://schema.org", "@type": "MusicAlbum", name: "Blue Chant, Volume I", url: new URL("/music/", Astro.site).href,
   image: new URL(cover.src, Astro.site).href, genre: ["Jazz", "Sacred music"], byArtist, numTracks: tracks.length,
-  sameAs: [ALBUM, "https://www.youtube.com/watch?v=x-H1HoczgAo"],
+  // MusicBrainz release group (the album) and release (this digital edition), both linking back to /music/
+  sameAs: [ALBUM, "https://www.youtube.com/watch?v=x-H1HoczgAo",
+    "https://musicbrainz.org/release-group/6f6b1c3a-4a63-4f61-a327-5697d48960d7",
+    "https://musicbrainz.org/release/9ae78cbd-5b47-46b0-8891-98ad8dd863b4"],
   publisher: { "@type": "Organization", "@id": "https://allholysaints.com/#organization", name: "All Holy Saints" },
   track: tracks.map(([title, slug], i) => ({
     "@type": "MusicRecording", name: title, position: i + 1, byArtist, url: `https://soundcloud.com/all-holy-saints/${slug}`,
