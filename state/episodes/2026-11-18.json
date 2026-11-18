@@ -1,8 +1,8 @@
 {
  "id": "2026-11-18",
  "date": "2026-11-18",
- "status": "approved",
- "updated": "2026-11-11T12:35:56+00:00",
+ "status": "published",
+ "updated": "2026-11-18T12:34:44+00:00",
  "saint": {
   "qid": "Q1274242",
   "name": "Saint Romanus of Caesarea",
@@ -293,7 +293,8 @@
    "Cesarea",
    "Palestina",
    "Sevilla"
-  ]
+  ],
+  "slug": "romano-de-cesarea"
  },
  "angle": "miracle",
  "books": [],
@@ -305,5 +306,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-18/art.jpg"
  },
- "review_message_id": 139
+ "review_message_id": 139,
+ "slug": "romanus-of-caesarea",
+ "published": {
+  "media_id": "18344701105276862",
+  "permalink": "https://www.instagram.com/reel/Df4gp0vDB7Z/",
+  "location_id": null
+ },
+ "published_at": "2026-11-18T07:30-05:00",
+ "facebook": {
+  "id": "1613052100084540",
+  "url": "https://www.facebook.com/reel/1613052100084540/",
+  "published_at": "2026-11-18T07:32-05:00"
+ },
+ "threads": {
+  "id": "18648420043031689",
+  "url": "https://www.threads.com/@all.holy.saints/post/Df4g3vtB1mM",
+  "published_at": "2026-11-18T07:33-05:00"
+ },
+ "youtube": {
+  "id": "akL8cAVHkjI",
+  "url": "https://youtube.com/shorts/akL8cAVHkjI",
+  "privacy": "public",
+  "published_at": "2026-11-18T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of the Middle East"
+  ],
+  "playlists_done": true
+ },
+ "continent": "the Middle East",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7709488513062307854",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-18T07:34-05:00"
+ }
 }
