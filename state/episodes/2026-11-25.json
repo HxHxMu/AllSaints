@@ -1,0 +1,326 @@
+{
+ "id": "2026-11-25",
+ "date": "2026-11-25",
+ "status": "review",
+ "updated": "2026-11-18T10:24:45+00:00",
+ "saint": {
+  "qid": "Q1285323",
+  "name": "Saint Mercurius",
+  "display_name": "St. Mercurius",
+  "dates": "3rd century",
+  "region": "Cappadocia, Turkey",
+  "feast": "November 25",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q1285323",
+  "name": "Saint Mercurius",
+  "links": 21,
+  "enwiki": "Saint_Mercurius",
+  "images": [
+   "Saint%20Mercure.jpg"
+  ],
+  "religions": [],
+  "commonscat": "Saint Mercurius",
+  "birth": 225,
+  "death": 251,
+  "lon": 35.4875,
+  "lat": 38.7225,
+  "selection_reason": "Margherita Occhiena is only Venerable and so is ineligible, while Saint Mercurius, the Cappadocian soldier-martyr under Decius known as Abu Sayfain ('wielder of two swords') after the sword the Archangel Michael gave him, has a vivid story, a Santi e Beati entry and a feast on November 25.",
+  "catholic_veneration": "Saint and martyr in the Roman Martyrology (commemorated November 25, with Santi e Beati as a source), and also venerated in the Eastern Catholic tradition, including the Coptic Catholic Church."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Mercurius",
+   "display_name": "St. Mercurius",
+   "dates": "3rd century",
+   "region": "Cappadocia, Turkey",
+   "feast": "November 25",
+   "martyr": true
+  },
+  "portrait": "A Byzantine-style icon of Saint Mercurius as a Roman soldier: bronze scale armor under a red military cloak, a lance in one hand and the martyr's palm in the other, his face calm and direct. Behind him are the soft, cone-shaped rock hills of Cappadocia under a gold sky.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says a Roman general confessed Christ to his friend, the emperor.",
+    "visual": "art",
+    "scene": "A third-century Roman general in bronze armor and a red cloak stands before an emperor seated on a throne in a columned marble hall. His hands are open in honest confession, and palace guards look on in silence."
+   },
+   {
+    "role": "who",
+    "text": "Saint Mercurius, a Roman soldier of the third century, from Turkey.",
+    "visual": "map",
+    "lat": 38.72,
+    "lon": 35.49,
+    "place": "Cappadocia · Turkey"
+   },
+   {
+    "role": "story",
+    "text": "According to his legend, he served with honor and rose to command the army. Then the emperor ordered Christians punished.",
+    "visual": "art",
+    "scene": "A Roman commander in armor rides before ranks of legionaries carrying standards across a dry plain. The mood is honorable and disciplined, and a distant city wall stands on the horizon."
+   },
+   {
+    "role": "story",
+    "text": "Mercurius remembered that his father was a Christian. He had been baptized Philopatros, which means, lover of the father.",
+    "visual": "art",
+    "scene": "An officer in Roman armor sits alone in a lamplit tent at dawn, his helmet set aside and his head bowed in thought. Soft light enters through the tent flap."
+   },
+   {
+    "role": "story",
+    "text": "So he went to his friend the emperor, and confessed his faith. Tortures followed. Tradition holds an angel healed his wounds three times.",
+    "visual": "art",
+    "scene": "In a dim stone prison, a wounded Roman soldier kneels while a radiant angel in flowing robes lays a hand over his side. Golden light fills the cell and no instruments of torture are shown."
+   },
+   {
+    "role": "story",
+    "text": "Then he was carried on a donkey to Cappadocia, his homeland, where he was beheaded.",
+    "visual": "art",
+    "scene": "A bound soldier in a plain tunic rides a donkey led by Roman guards along a dusty road through Cappadocia's cone-shaped rock hills. His head is lifted, calm and unafraid."
+   },
+   {
+    "role": "turn",
+    "text": "He would not hide his faith, even from a friend who ruled the empire.",
+    "visual": "art",
+    "scene": "Mercurius stands steady in the courtyard of a Roman palace, his armor set aside and one hand resting on his chest. Soldiers and officials stand quietly behind him among tall columns."
+   },
+   {
+    "role": "close",
+    "text": "Love of the Father comes before every other loyalty. Saint Mercurius, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Mercurius": "mer-KYOOR-ee-us",
+   "Philopatros": "fih-LOP-ah-tros",
+   "Cappadocia": "kap-ah-DOH-shuh"
+  },
+  "caption_hook": "He was a general, and the emperor was his friend. He confessed his faith to him anyway.",
+  "summary": "According to his ancient legend, the Roman general Saint Mercurius confessed Christ to his friend the emperor, and was beheaded in Cappadocia, his homeland.",
+  "youtube_title": "St. Mercurius: The General Who Confessed Christ",
+  "hashtags": [
+   "#saintmercurius",
+   "#cappadocia",
+   "#abusayfain",
+   "#catholic",
+   "#saints",
+   "#martyr",
+   "#romansoldier",
+   "#coptic",
+   "#catholicsaints",
+   "#allsaints",
+   "#lesserknownsaints",
+   "#november25"
+  ],
+  "share_cta": "Know someone from Toro, Seminara or Serracapriola? Send them their patron.",
+  "claims": [
+   {
+    "claim": "Saint Mercurius is commemorated in the Roman Martyrology at Caesarea in Cappadocia, in present-day Turkey, with a feast on November 25.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His cult at Caesarea in Cappadocia on November 25 is ancient and is the only thing that is certain about him.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "According to his legendary Passio, he served with honor under the emperors who published an edict of persecution.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to the legend, he rose to be a general commanding the army.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He remembered that he was the son of a Christian and had been baptized with the symbolic name Philopatros, 'lover of the father'.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He presented himself to confess his faith before his friend the emperor.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Severe tortures followed, and an angel healed his wounds three times.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was taken on a donkey to Cappadocia, his homeland, to be beheaded.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "His relics were said to bring wonderful healings and sudden conversions.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Cappadocian believers held that Mercurius, shown in soldier's dress, killed the apostate emperor Julian with his lance by divine command, more than a hundred years after his death. The source calls this only a legend.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Julian historically fought the Persians on the eastern frontier and died in that fighting, and his death was welcomed by persecuted Christians.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In Eastern tradition he is called Abu Sayfain, 'wielder of two swords', after a second sword the Archangel Michael gave him.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to one tradition, Basil prayed before an icon of Mercurius as a soldier with a spear. The image vanished and returned with a bloodied spear, and Julian was mortally wounded by the spear of an unknown Saracen soldier.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Greek accounts name his father Gordianus, a Scythian, and Coptic accounts name him Yares, who was baptized as Noah.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Wikipedia gives his martyrdom date as December 4, while the Roman Martyrology gives November 25.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He is patron of Seminara, Serracapriola and Toro.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His emblem is the palm of martyrdom.",
+    "source": 1,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Seminara",
+   "Serracapriola",
+   "Toro"
+  ],
+  "places": [
+   "Cappadocia",
+   "Caesarea",
+   "Turkey"
+  ],
+  "story": [
+   "Very little can be said with certainty about Saint Mercurius, and the Church is honest about that. The Italian reference Santi e Beati, which also quotes the Roman Martyrology, notes that his legendary account was shaped by devout imagination in the East. The one thing that is certain is the antiquity of his veneration at Caesarea in Cappadocia, in present-day Turkey, where the Church has kept his feast on November 25 for a very long time. What follows is the story the tradition tells, and it is a story worth hearing.",
+   "According to his Passio, the legendary account of his suffering, Mercurius served the Roman army with honor in the third century, in the time of the emperors who issued an edict of persecution against Christians. The same source notes that those two emperors, Decius and Valerian, never actually reigned together, a detail that shows the account is legend rather than history. In the legend he rose to the very top and became a general.",
+   "Then comes the moment that gives the story its heart. Mercurius remembered that he was the son of a Christian father. He had been baptized with a symbolic name, Philopatros, which means 'lover of the father'. Santi e Beati remarks that he stepped forward for love of the Father, and not only of his earthly father. He went to his friend the emperor and confessed his faith.",
+   "Tradition tells that cruel tortures followed, and that an angel healed his wounds three times. In the end he was carried on a donkey to Cappadocia, the land of his birth, and there he was beheaded. The Church names his death with reverence and nothing more: he died a martyr, and he is shown with the martyr's palm.",
+   "Devotion to him spread, above all in the East. The sources say his relics were thought to bring wonderful healings and sudden conversions. In Eastern tradition he is also known as Abu Sayfain, 'wielder of two swords'. According to that tradition, the Archangel Michael appeared to him in battle and gave him a shining sword to go with his own. Eastern accounts also give differing details about his family. Greek accounts call his father Gordianus, a Scythian, while Coptic accounts name him Yares, who was baptized as Noah. Wikipedia places his martyrdom on December 4, but the Roman Martyrology keeps November 25, and that is the date we follow.",
+   "A second legend grew up around him more than a hundred years after his death. Believers in Cappadocia said Mercurius, who appeared in icons as a soldier, had struck down the emperor Julian the Apostate with his lance, by divine command. History records that Julian fought the Persians on the empire's eastern frontier and died there, and that persecuted Christians welcomed his death as a deliverance. Santi e Beati is plain that the lance story is only a legend. Another tradition tells of a different image: Basil prayed before an icon of Mercurius as a soldier with a spear, the figure vanished, and it later returned with a bloodied spear, while Julian was mortally wounded by the spear of an unknown Saracen soldier. Both stories show how much the faithful loved their soldier-martyr, even if they cannot be treated as history.",
+   "Mercurius is a patron of the Italian towns of Seminara, Serracapriola and Toro, where his name is still honored. The lesson of his story does not depend on any detail of the legend. A man with rank, a career and an emperor's friendship refused to hide who he was, because the love of the Father came before every other loyalty. That is the holiness of Saint Mercurius."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Close beat had no meaning line. The 'Love of the Father...' sentence sat in the turn, so I moved it into the close ahead of 'Saint Mercurius, pray for us.' The turn keeps its first sentence. The word count is unchanged at 128 and the close line is under 12 words.",
+   "Story paragraph 5 said 'In Coptic and Greek traditions he is also known as Abu Sayfain'. Source [0] gives Abu Sayfain as an Arabic or Egyptian Arabic name, tied to the Coptic account of Michael's sword, not a Greek name. Changed to 'In Eastern tradition', which matches the claims list.",
+   "Story paragraph 2 said the Decius and Valerian detail was 'one of several signs that the story grew in the telling'. The source gives only that one observation, so 'several' was unsupported. Reworded to the single detail the source supports.",
+   "Story paragraph 1 said Santi e Beati was 'drawing on the Roman Martyrology' when it notes the legend came from devout imagination. The page quotes the Martyrology entry separately and takes the legend commentary from its own biography text. Reworded so Santi e Beati 'also quotes' the Martyrology.",
+   "Checked and fine: the hook, who line and map (Kayseri/Caesarea, Turkey), the legend-hedging ('tradition says', 'according to his legend', 'tradition holds'), the Saint/martyr titles, the three angelic healings, the donkey journey and beheading, the palm emblem, the Julian lance legend (flagged as only a legend), the Basil icon tradition, the Gordianus/Yares family details, and the November 25 vs December 4 date handling."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Almost everything about Mercurius is legend. Confirm you are comfortable with the unhedged 'Roman soldier' in the who line, and that the Love-of-the-Father line now sits in the close beat rather than the turn."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1423,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 440,
+   "thinking": 231
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2033,
+   "cache_write": 5410,
+   "cache_read": 0,
+   "out": 9795,
+   "thinking": 6111
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4414,
+   "cache_write": 0,
+   "cache_read": 5410,
+   "out": 9205,
+   "thinking": 5997
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1640,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2693,
+   "thinking": 942
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Saint Mercurius",
+   "url": "https://en.wikipedia.org/wiki/Saint_Mercurius"
+  },
+  {
+   "title": "Santi e Beati: Saint Mercurius",
+   "url": "https://www.santiebeati.it/dettaglio/79100"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 64.2,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Mercurio",
+  "name": "San Mercurio",
+  "region": "Capadocia, Turquía",
+  "dates": "siglo III",
+  "hook": "Era general, y el emperador era su amigo. Aun así, le confesó su fe.",
+  "summary": "Según su antigua leyenda, el general romano San Mercurio confesó a Cristo ante su amigo el emperador, y fue decapitado en Capadocia, su tierra natal.",
+  "story": [
+   "Se puede afirmar muy poco con certeza sobre San Mercurio, y la Iglesia es sincera al respecto. La obra italiana de referencia Santi e Beati, que también cita el Martirologio Romano, señala que su relato legendario fue moldeado por la piadosa imaginación de Oriente. Lo único seguro es la antigüedad de su veneración en Cesarea de Capadocia, en la actual Turquía, donde la Iglesia conserva desde hace mucho tiempo su fiesta el 25 de noviembre. Lo que sigue es el relato que transmite la tradición, y es una historia que vale la pena escuchar.",
+   "Según su Pasión, es decir, el relato legendario de su sufrimiento, Mercurio sirvió con honor al ejército romano en el siglo III, en tiempos de los emperadores que promulgaron un edicto de persecución contra los cristianos. La misma fuente observa que esos dos emperadores, Decio y Valeriano, nunca reinaron juntos, un detalle que muestra que el relato es una leyenda y no historia. En la leyenda, llegó a lo más alto y se convirtió en general.",
+   "Entonces llega el momento que da a la historia su corazón. Mercurio recordó que era hijo de un padre cristiano. Había sido bautizado con un nombre simbólico, Filópatro, que significa «amante del padre». Santi e Beati señala que se adelantó por amor al Padre, y no solo por amor a su padre terrenal. Fue ante su amigo el emperador y confesó su fe.",
+   "Según la tradición, siguieron crueles torturas, y un ángel sanó sus heridas en tres ocasiones. Al final, lo llevaron en un asno a Capadocia, la tierra de su nacimiento, y allí fue decapitado. La Iglesia recuerda su muerte con reverencia y nada más: murió como mártir, y se le representa con la palma del martirio.",
+   "La devoción hacia él se extendió, sobre todo en Oriente. Las fuentes dicen que se creía que sus reliquias obraban maravillosas curaciones y conversiones repentinas. En la tradición oriental también se le conoce como Abu Sayfain, «el que empuña dos espadas». Según esa tradición, el arcángel Miguel se le apareció en la batalla y le entregó una espada resplandeciente para acompañar la suya. Los relatos orientales también ofrecen detalles distintos sobre su familia. Los relatos griegos llaman a su padre Gordiano, un escita, mientras que los relatos coptos lo nombran Yares, quien fue bautizado como Noé. Wikipedia sitúa su martirio el 4 de diciembre, pero el Martirologio Romano mantiene el 25 de noviembre, y esa es la fecha que seguimos.",
+   "Una segunda leyenda surgió en torno a él más de cien años después de su muerte. Los creyentes de Capadocia decían que Mercurio, representado en los iconos como soldado, había abatido con su lanza al emperador Juliano el Apóstata, por mandato divino. La historia registra que Juliano combatió contra los persas en la frontera oriental del imperio y murió allí, y que los cristianos perseguidos acogieron su muerte como una liberación. Santi e Beati deja claro que el relato de la lanza es solo una leyenda. Otra tradición habla de una imagen distinta: Basilio oró ante un icono de Mercurio como soldado con una lanza, la figura desapareció y después regresó con la lanza ensangrentada, mientras que Juliano fue herido de muerte por la lanza de un soldado sarraceno desconocido. Ambos relatos muestran cuánto amaban los fieles a su soldado mártir, aunque no puedan tratarse como historia.",
+   "San Mercurio es patrono de las localidades italianas de Seminara, Serracapriola y Toro, donde su nombre sigue siendo honrado. La enseñanza de su historia no depende de ningún detalle de la leyenda. Un hombre con rango, carrera y la amistad de un emperador se negó a ocultar quién era, porque el amor al Padre iba antes que cualquier otra lealtad. Esa es la santidad de San Mercurio."
+  ],
+  "prayer": "El amor al Padre está por encima de toda otra lealtad. San Mercurio, ruega por nosotros.",
+  "patronages": [
+   "Seminara",
+   "Serracapriola",
+   "Toro"
+  ],
+  "places": [
+   "Capadocia",
+   "Cesarea",
+   "Turquía"
+  ]
+ },
+ "books": [],
+ "caption": "He was a general, and the emperor was his friend. He confessed his faith to him anyway.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Mercurius · Feast day: November 25\nAccording to his ancient legend, the Roman general Saint Mercurius confessed Christ to his friend the emperor, and was beheaded in Cappadocia, his homeland.\n\nLove of the Father comes before every other loyalty. Saint Mercurius, pray for us. 🕯\n\nSave this to pray with again next November 25.\n\n—\nSources: Wikipedia · Santi e Beati\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmercurius #cappadocia",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/art.jpg"
+ },
+ "review_message_id": 216
+}
