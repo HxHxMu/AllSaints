@@ -1,8 +1,8 @@
 {
  "id": "2026-11-19",
  "date": "2026-11-19",
- "status": "approved",
- "updated": "2026-11-16T16:35:08+00:00",
+ "status": "published",
+ "updated": "2026-11-19T12:34:50+00:00",
  "saint": {
   "qid": "Q68598",
   "name": "Saint Mechtilde of Hackeborn",
@@ -325,7 +325,8 @@
    "Eisleben",
    "Sajonia",
    "Turingia"
-  ]
+  ],
+  "slug": "matilde-de-hackeborn"
  },
  "books": [],
  "caption": "A nun who sang through suffering, and whom, in her visions, Christ called his nightingale.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Mechtilde of Hackeborn · Feast day: November 19\nSaint Mechtilde of Hackeborn, a thirteenth-century choir mistress and teacher at Helfta, kept praising God through years of pain, and her visions were gathered in the Book of Special Grace.\n\nSaint Mechtilde, pray for us. 🕯\n\nSave this to pray with again next November 19.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmechtilde #helfta",
@@ -340,5 +341,41 @@
  "location": {
   "name": "Helfta",
   "id": "709698535563606"
+ },
+ "slug": "mechtilde-of-hackeborn",
+ "published": {
+  "media_id": "18112741430215032",
+  "permalink": "https://www.instagram.com/reel/Df7FhtpCRSx/",
+  "location_id": null,
+  "location": "Helfta (rejected, posted untagged)"
+ },
+ "published_at": "2026-11-19T07:30-05:00",
+ "facebook": {
+  "id": "1719040906505556",
+  "url": "https://www.facebook.com/reel/1719040906505556/",
+  "published_at": "2026-11-19T07:32-05:00"
+ },
+ "threads": {
+  "id": "18103013975556502",
+  "url": "https://www.threads.com/@all.holy.saints/post/Df7FtOtoeXx",
+  "published_at": "2026-11-19T07:33-05:00"
+ },
+ "youtube": {
+  "id": "F7GLz1Sp4Nw",
+  "url": "https://youtube.com/shorts/F7GLz1Sp4Nw",
+  "privacy": "public",
+  "published_at": "2026-11-19T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7709859758861502478",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-19T07:34-05:00"
  }
 }
