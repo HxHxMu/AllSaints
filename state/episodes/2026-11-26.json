@@ -1,0 +1,406 @@
+{
+ "id": "2026-11-26",
+ "date": "2026-11-26",
+ "status": "review",
+ "updated": "2026-11-19T10:49:09+00:00",
+ "saint": {
+  "qid": "Q119289",
+  "name": "Saint Leonard of Port Maurice",
+  "display_name": "St. Leonard of Port Maurice",
+  "dates": "1676 – 1751",
+  "region": "Imperia, Italy",
+  "feast": "November 26",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q119289",
+  "name": "Leonard of Port Maurice",
+  "links": 19,
+  "enwiki": "Leonard_of_Port_Maurice",
+  "images": [
+   "S%20Leonardo.JPG"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Leonard of Port Maurice",
+  "birth": 1676,
+  "death": 1751,
+  "lon": 12.482777777,
+  "lat": 41.893055555,
+  "selection_reason": "Leonard of Port Maurice has the strongest documentation of the four, including the Dicastery for the Causes of Saints, the Catholic Encyclopedia and Santi e Beati. His story is vivid: he was a Franciscan missionary who preached across Italy and set up hundreds of Stations of the Cross, including the one in Rome's Colosseum in 1750. He is also not a household name, and as an 18th-century Italian he avoids repeating the recent eras and regions.",
+  "catholic_veneration": "Canonized by Pius IX in 1867 and commemorated on 26 November in the Roman Martyrology; Pius XI named him patron of parish priests and missionaries, and he is kept on the Franciscan calendar."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Leonard of Port Maurice",
+   "display_name": "St. Leonard of Port Maurice",
+   "dates": "1676 – 1751",
+   "region": "Imperia, Italy",
+   "feast": "November 26",
+   "martyr": false
+  },
+  "portrait": "A Franciscan friar in a patched grey-brown habit with a white cord, bareheaded and barefoot, holding a wooden crucifix against his chest and looking at the viewer with a gentle, weary face. Behind him stand the arches of the Roman Colosseum under a pale sky.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "He hoped to go to China, but illness kept him in Italy.",
+    "visual": "art",
+    "scene": "A pale young Franciscan priest in a grey habit stands at the window of a plain baroque friary cell in Rome, one hand pressed to his side, looking out over terracotta rooftops. An older friar beside him offers a cup, and a crucifix hangs on the whitewashed wall."
+   },
+   {
+    "role": "who",
+    "text": "Saint Leonard of Port Maurice, an eighteenth century Franciscan friar from Imperia.",
+    "visual": "map",
+    "lat": 43.8859,
+    "lon": 8.0285,
+    "place": "Imperia · Italy"
+   },
+   {
+    "role": "story",
+    "text": "After four years in his hometown, he was well again, and began to preach.",
+    "visual": "art",
+    "scene": "A Franciscan friar in a grey habit climbs stone steps from a Ligurian harbor town of pastel houses and fishing boats toward a small church. Neighbors in eighteenth-century dress greet him from doorways, and the sea glitters behind."
+   },
+   {
+    "role": "story",
+    "text": "Thousands came, more than any church could hold, so he often preached in the open.",
+    "visual": "art",
+    "scene": "A barefoot Franciscan stands at a simple wooden pulpit in a broad Tuscan village square, one hand raised, before a vast crowd of peasants, townsfolk and children in eighteenth-century dress. A stone church with open doors stands behind him, and cypress-covered hills lie beyond."
+   },
+   {
+    "role": "story",
+    "text": "He spread the Way of the Cross, raising its stations in more than five hundred places, among them Rome's Colosseum.",
+    "visual": "art",
+    "scene": "Inside the Roman Colosseum, fourteen small shrines line the arena, with a tall wooden cross at the center. A Franciscan friar leads kneeling pilgrims in eighteenth-century dress in prayer among the ancient arches."
+   },
+   {
+    "role": "story",
+    "text": "In Corsica, torn by bitter divisions, he won an unexpected embrace of peace.",
+    "visual": "art",
+    "scene": "On a hillside Corsican village square of rough stone houses with a Genoese watchtower above, a barefoot Franciscan stands between two groups of men in dark island dress. Two former rivals embrace before him as villagers look on."
+   },
+   {
+    "role": "turn",
+    "text": "Where people expected a bejeweled cardinal, they found a shoeless, muddy friar. He often stayed another week, to hear confessions. Peace still begins with a humble heart.",
+    "visual": "art",
+    "scene": "A barefoot Franciscan with a mud-stained hem sits on a simple bench beneath a tree beside a village church, bending to hear the confession of a kneeling peasant. A dusty country road and farmland stretch behind them."
+   },
+   {
+    "role": "close",
+    "text": "Saint Leonard of Port Maurice, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Maurice": "Mor-EESS",
+   "Imperia": "Im-PAIR-ee-ah"
+  },
+  "caption_hook": "A sick friar who never reached China ended up filling the squares of Italy with listeners.",
+  "summary": "Saint Leonard of Port Maurice, an eighteenth-century Franciscan, regained his health and preached to crowds across Italy, spreading the Way of the Cross from town squares to the Roman Colosseum.",
+  "youtube_title": "St. Leonard of Port Maurice: The Friar of the Colosseum",
+  "hashtags": [
+   "#saintleonardofportmaurice",
+   "#imperia",
+   "#missionaries",
+   "#franciscan",
+   "#wayofthecross",
+   "#stationsofthecross",
+   "#colosseum",
+   "#italy",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saintoftheday",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Leonard? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Leonard was born on 20 December 1676 at Porto Maurizio, today part of Imperia, on the Ligurian Riviera.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was the son of Domenico Casanova and Anna Maria Benza and was born Paolo Girolamo Casanova.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He studied with the Jesuits at the Collegio Romano in Rome.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He received the Franciscan habit on 2 October 1697 and made his novitiate at Ponticelli in the Sabine mountains, in the Riformella branch.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was ordained a priest on 23 September 1702 and taught at San Bonaventura on the Palatine.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "After ordination he expected to be sent to the missions in China.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Severe gastric haemorrhage left him so ill that he was sent to the monastery at Porto Maurizio in 1704, and the China plan came to nothing.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "After four years he was restored to health and began to preach in Porto Maurizio and nearby.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Cosimo III de' Medici handed the monastery of Monte alle Croci near Florence to the Riformella, and Leonard was sent there to give missions in Tuscany.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1710 he founded the retreat of Icontro near Florence, where missionaries could withdraw for spiritual renewal.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Alphonsus Liguori called him the great missionary of his century.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "From 1720 he held missions in central and southern Italy and often had to preach in the open because churches could not hold the thousands who came.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He preached missions for over forty years across Italy; they lasted 15 to 18 days, and he often stayed another week to hear confessions.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He spread the devotion of the Stations of the Cross and erected them in more than five hundred places, including the Colosseum in Rome.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In the Holy Year of 1750, called by Benedict XIV, he set up fourteen stations and a great cross in the Colosseum.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He promoted devotion to the Sacred Heart, perpetual adoration of the Blessed Sacrament, and the Immaculate Conception.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "From May to November 1744 he preached in Corsica, then under Genoa and torn by party strife.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "In Corsica he obtained an unexpected embrace of peace despite grave divisions among the inhabitants.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "On papal diplomatic assignments, citizens who expected a bejeweled cardinal instead met a humble, shoeless, muddy friar.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was spiritual director for a time to Maria Clementina Sobieska.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Benedict XIV held him in high esteem and asked his promise that he would come to Rome to die.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He died at San Bonaventura on the Palatine on the night of 26 November 1751.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His partly incorrupt body is kept in the high altar of San Bonaventura.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified by Pius VI in 1796 and canonized by Pius IX on 29 June 1867.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Pius XI named him patron of popular missions and missionaries in 1923, and he has been patron of the city of Imperia since the mid-1990s.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His writings include sermons, letters and devotional works such as the Way of the Cross simplified and explained and the resolutions known as Proponimenti.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "St. Leonard's Church in Boston's North End, founded in 1873, was the first Catholic church in New England built by Italian immigrants.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His father was a ship captain.",
+    "source": 0,
+    "kind": "history"
+   }
+  ],
+  "story": [
+   "Paolo Girolamo Casanova was born on 20 December 1676 at Porto Maurizio, a town on the Ligurian Riviera that is today part of Imperia. His parents were Domenico Casanova and Anna Maria Benza, and his father was a ship captain. The family lived by the sea, and the boy grew up among harbors and sailors.",
+   "As a boy he went to Rome and was taken in by an uncle. There he studied with the Jesuits at the Collegio Romano and did brilliantly. He also spent time at the Roman oratories, which offered prayer and religious teaching, including to lay people. But he chose a stricter road. On 2 October 1697 he received the Franciscan habit and took the name Leonard. He belonged to the Riformella, a reform within the Friars Minor marked by poverty, penance, silence and prayer. He made his novitiate at Ponticelli in the Sabine mountains, then studied theology at the Roman retreat of San Bonaventura on the Palatine. He was ordained on 23 September 1702 and stayed on to teach.",
+   "Leonard hoped to be sent to the missions in China. It did not happen. Soon after his ordination he fell gravely ill with a severe gastric haemorrhage, and in 1704 his superiors sent him home to the monastery at Porto Maurizio, hoping the air of the Riviera would help. He spent four years there before his health returned. The Church's own biographers saw the recovery as a sign of providence. What history can say is that he recovered and began to preach, and that his years of weakness shaped the urgency of his sermons: do not put off reconciliation.",
+   "Around 1708 the work of his life began. Cosimo III de' Medici gave the monastery of Monte alle Croci, near Florence, to the Riformella, and Leonard was sent there to give missions in Tuscany. In 1710 he founded the retreat of Icontro in the hills outside Florence, a place where he and his companions could rest in silence after the missions and renew themselves. Preaching and prayer belonged together for him. In 1720 he crossed the borders of Tuscany and began to preach through central and southern Italy. Thousands came, often too many for any church, so he preached in the open. Over more than forty years his missions lasted fifteen to eighteen days, and he often stayed another week simply to hear confessions. Saint Alphonsus Liguori called him the great missionary of the century.",
+   "Leonard is best remembered for the Way of the Cross. It was already a Franciscan devotion, since the friars had long guarded the holy places in the Holy Land, but few did more than Leonard to put it within reach of ordinary people. He preached it at his missions and set up its stations in more than five hundred places across Italy. He also promoted devotion to the Sacred Heart, perpetual adoration of the Blessed Sacrament, and the Immaculate Conception, which he longed to see defined as a dogma of the faith.",
+   "Popes trusted him with difficult work. Benedict XIV sent him on delicate errands to places such as Genoa, Corsica, Lucca and Spoleto. People there expected a cardinal in jewels and instead met a humble, shoeless, muddy friar. From May to November 1744 he preached in Corsica, which then belonged to the Republic of Genoa and was torn by party strife, and he obtained an unexpected embrace of peace among its divided people. For a time he also served as spiritual director to Maria Clementina Sobieska.",
+   "In the Holy Year of 1750 he preached tirelessly in Rome. In the Colosseum he set up fourteen stations of the Cross and a great cross in the area of the ancient amphitheater. It was his last great labor. Worn out by missions and penances, he was called to Rome by Benedict XIV, who had asked his promise that he would come there to die. He reached his beloved San Bonaventura on the evening of 26 November 1751 and died that night.",
+   "The Romans already venerated him. Pius VI beatified him in 1796 and Pius IX canonized him on 29 June 1867. In 1923 Pius XI named him patron of popular missions and missionaries, and he is also patron of Imperia, the city of his birth. His partly incorrupt body is kept in the high altar of San Bonaventura, where he died. His writings, among them the Way of the Cross simplified and explained, were translated widely. In 1873 Italian immigrants in Boston's North End founded a church in his name, the first Catholic church in New England built by Italians."
+  ],
+  "patronages": [
+   "missionaries",
+   "Imperia"
+  ],
+  "places": [
+   "Imperia",
+   "Rome",
+   "Florence",
+   "Corsica",
+   "Colosseum"
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Spoken beats: every sentence is supported by the sources and no legend is presented as history. Word count is about 121 and the hook and who lines are within their limits. The map pin for Imperia is correct. No fixes needed.",
+   "Story, Colosseum paragraph: 'a great cross at the center of the ancient arena, so that a place long linked with suffering became a place of prayer' goes beyond the sources. Source 2 says only that he set up fourteen shrines and a great cross 'nell'area dell'anfiteatro'. Reworded to match.",
+   "Story, final paragraph: 'rests beneath the high altar' changes the source wording. Sources 0 and 1 say the body is kept 'in the high altar'. Corrected.",
+   "Story, Way of the Cross paragraph: 'holy places in Jerusalem' is narrower than the source, which says the Franciscans were custodians of the Holy Sites in the Holy Land. Corrected."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Source dates conflict (Dicastery gives beatification 19 March 1796 and a 1869 canonization header; Wikipedia and Catholic Encyclopedia give 19 June 1796 and 29 June 1867). The script uses only the year 1796 and 29 June 1867. The who line says 'eighteenth century' although he was born in 1676; this fits his active ministry but you may want to confirm."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1604,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 972,
+   "thinking": 718
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2080,
+   "cache_write": 12558,
+   "cache_read": 0,
+   "out": 16000,
+   "thinking": 11640
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2080,
+   "cache_write": 0,
+   "cache_read": 12558,
+   "out": 11106,
+   "thinking": 6305
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 5614,
+   "cache_write": 0,
+   "cache_read": 12558,
+   "out": 6403,
+   "thinking": 5705
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1999,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3254,
+   "thinking": 1026
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Leonard of Port Maurice",
+   "url": "https://en.wikipedia.org/wiki/Leonard_of_Port_Maurice"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Leonard of Port Maurice",
+   "url": "https://www.newadvent.org/cathen/09178c.htm"
+  },
+  {
+   "title": "Dicastery for the Causes of Saints: Leonard of Port Maurice",
+   "url": "https://www.causesanti.va/it/santi-e-beati/leonardo-da-porto-maurizio.html"
+  },
+  {
+   "title": "Santi e Beati: Leonard of Port Maurice",
+   "url": "https://www.santiebeati.it/dettaglio/79300"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Leonard of Port Maurice",
+   "url": "https://nominis.cef.fr/contenus/saint/131/Saint-Leonard-de-Port-Maurice.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 59.8,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Leonardo de Porto Mauricio",
+  "display_name": "San Leonardo",
+  "region": "Imperia, Italia",
+  "dates": "1676 – 1751",
+  "hook": "Un fraile enfermo que nunca llegó a China terminó llenando las plazas de Italia de oyentes.",
+  "summary": "San Leonardo de Porto Mauricio, franciscano del siglo XVIII, recuperó la salud y predicó a multitudes por toda Italia, extendiendo el Vía Crucis desde las plazas de los pueblos hasta el Coliseo romano.",
+  "story": [
+   "Paolo Girolamo Casanova nació el 20 de diciembre de 1676 en Porto Mauricio, un pueblo de la Riviera ligur que hoy forma parte de Imperia. Sus padres fueron Domenico Casanova y Anna Maria Benza, y su padre era capitán de barco. La familia vivía junto al mar, y el niño creció entre puertos y marineros.",
+   "De niño fue a Roma y lo acogió un tío. Allí estudió con los jesuitas en el Colegio Romano y tuvo un rendimiento brillante. También pasó tiempo en los oratorios romanos, que ofrecían oración y enseñanza religiosa, incluso a los laicos. Pero eligió un camino más estricto. El 2 de octubre de 1697 recibió el hábito franciscano y tomó el nombre de Leonardo. Perteneció a la Riformella, una reforma dentro de los Frailes Menores caracterizada por la pobreza, la penitencia, el silencio y la oración. Hizo el noviciado en Ponticelli, en los montes Sabinos, y después estudió teología en el retiro romano de San Buenaventura, en el Palatino. Fue ordenado sacerdote el 23 de septiembre de 1702 y se quedó para enseñar.",
+   "Leonardo esperaba ser enviado a las misiones de China. Eso no ocurrió. Poco después de su ordenación cayó gravemente enfermo con una hemorragia gástrica severa, y en 1704 sus superiores lo enviaron de vuelta al monasterio de Porto Mauricio, con la esperanza de que el aire de la Riviera le ayudara. Pasó allí cuatro años antes de recuperar la salud. Los propios biógrafos de la Iglesia vieron la recuperación como un signo de la providencia. Lo que la historia puede afirmar es que se recuperó y comenzó a predicar, y que sus años de debilidad marcaron la urgencia de sus sermones: no posterguen la reconciliación.",
+   "Hacia 1708 comenzó la obra de su vida. Cosme III de Médici entregó a la Riformella el monasterio de Monte alle Croci, cerca de Florencia, y Leonardo fue enviado allí para dar misiones en la Toscana. En 1710 fundó el retiro de Icontro, en las colinas a las afueras de Florencia, un lugar donde él y sus compañeros podían descansar en silencio después de las misiones y renovarse. Para él, la predicación y la oración iban unidas. En 1720 cruzó las fronteras de la Toscana y comenzó a predicar por el centro y el sur de Italia. Acudían miles de personas, muchas veces más de las que cabía en cualquier iglesia, así que predicaba al aire libre. Durante más de cuarenta años, sus misiones duraron de quince a dieciocho días, y con frecuencia se quedaba otra semana simplemente para escuchar confesiones. San Alfonso María de Ligorio lo llamó el gran misionero del siglo.",
+   "Leonardo es recordado sobre todo por el Vía Crucis. Ya era una devoción franciscana, pues los frailes habían custodiado durante mucho tiempo los lugares santos de Tierra Santa, pero pocos hicieron más que Leonardo para acercarla a la gente sencilla. La predicó en sus misiones y erigió sus estaciones en más de quinientos lugares de Italia. También promovió la devoción al Sagrado Corazón, la adoración perpetua del Santísimo Sacramento y la Inmaculada Concepción, que deseaba ver definida como dogma de fe.",
+   "Los papas confiaron en él para tareas difíciles. Benedicto XIV lo envió en delicadas misiones a lugares como Génova, Córcega, Lucca y Spoleto. La gente esperaba allí a un cardenal con joyas y, en cambio, encontraba a un fraile humilde, descalzo y cubierto de barro. De mayo a noviembre de 1744 predicó en Córcega, que entonces pertenecía a la República de Génova y estaba desgarrada por luchas de facciones, y logró un inesperado abrazo de paz entre sus pueblos divididos. Durante un tiempo también fue director espiritual de María Clementina Sobieska.",
+   "En el Año Santo de 1750 predicó incansablemente en Roma. En el Coliseo instaló catorce estaciones del Vía Crucis y una gran cruz en la zona del antiguo anfiteatro. Fue su última gran obra. Agotado por las misiones y las penitencias, Benedicto XIV lo llamó a Roma, pues le había pedido la promesa de que fuera allí a morir. Llegó a su querido San Buenaventura la tarde del 26 de noviembre de 1751 y murió esa noche.",
+   "Los romanos ya lo veneraban. Pío VI lo beatificó en 1796 y Pío IX lo canonizó el 29 de junio de 1867. En 1923 Pío XI lo proclamó patrono de las misiones populares y de los misioneros, y también es patrono de Imperia, la ciudad de su nacimiento. Su cuerpo, parcialmente incorrupto, se conserva en el altar mayor de San Buenaventura, donde murió. Sus escritos, entre ellos el Vía Crucis simplificado y explicado, se tradujeron ampliamente. En 1873 inmigrantes italianos del North End de Boston fundaron una iglesia en su nombre, la primera iglesia católica construida por italianos en Nueva Inglaterra."
+  ],
+  "prayer": "San Leonardo de Porto Mauricio, ruega por nosotros.",
+  "patronages": [
+   "misioneros",
+   "Imperia"
+  ],
+  "places": [
+   "Imperia",
+   "Roma",
+   "Florencia",
+   "Córcega",
+   "Coliseo"
+  ]
+ },
+ "books": [],
+ "caption": "A sick friar who never reached China ended up filling the squares of Italy with listeners.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Leonard of Port Maurice · Feast day: November 26\nSaint Leonard of Port Maurice, an eighteenth-century Franciscan, regained his health and preached to crowds across Italy, spreading the Way of the Cross from town squares to the Roman Colosseum.\n\nSaint Leonard of Port Maurice, pray for us. 🕯\n\nHad you ever heard of St. Leonard of Port Maurice before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintleonardofportmaurice #imperia",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-26/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-26/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-26/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-26/art.jpg"
+ },
+ "review_message_id": 224
+}
