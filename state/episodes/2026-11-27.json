@@ -2,7 +2,7 @@
  "id": "2026-11-27",
  "date": "2026-11-27",
  "status": "approved",
- "updated": "2026-11-20T18:56:35+00:00",
+ "updated": "2026-11-20T18:57:00+00:00",
  "saint": {
   "qid": "Q561251",
   "name": "Saint Virgil of Salzburg",
@@ -330,5 +330,9 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/art.jpg"
  },
- "review_message_id": 249
+ "review_message_id": 249,
+ "location": {
+  "name": "Salzburg",
+  "id": "102189213155511"
+ }
 }
