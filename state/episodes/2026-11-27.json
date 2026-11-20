@@ -1,0 +1,324 @@
+{
+ "id": "2026-11-27",
+ "date": "2026-11-27",
+ "status": "review",
+ "updated": "2026-11-20T10:25:05+00:00",
+ "saint": {
+  "qid": "Q561251",
+  "name": "Saint Vergilius of Salzburg",
+  "display_name": "St. Vergilius of Salzburg",
+  "dates": "c. 700 – 784",
+  "region": "Salzburg, Austria",
+  "feast": "November 27",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q561251",
+  "name": "Vergilius of Salzburg",
+  "links": 26,
+  "enwiki": "Virgil_of_Salzburg",
+  "images": [
+   "Saint%20Virgilius%2C%20Salzburg.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Virgilius of Salzburg",
+  "birth": 700,
+  "death": 784,
+  "lon": 13.045,
+  "lat": 47.8,
+  "selection_reason": "Vergilius of Salzburg died on 27 November 784, so his feast falls on the day, and he is well documented and unusual: an Irish monk-scholar called 'the Geometer', who built Salzburg's cathedral, evangelized Carinthia, and was denounced to the pope by Boniface for teaching that there were 'another world' and antipodes, yet was vindicated and canonized in 1233.",
+  "catholic_veneration": "Canonized by Pope Gregory IX in 1233; commemorated on 27 November in the Roman Martyrology; patron saint of Salzburg and Carinthia (Austria), and venerated in Ireland."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Vergilius of Salzburg",
+   "display_name": "St. Vergilius of Salzburg",
+   "dates": "c. 700 – 784",
+   "region": "Salzburg, Austria",
+   "feast": "November 27",
+   "martyr": false
+  },
+  "portrait": "An Irish-born bishop of the eighth century in a plain, dark early medieval chasuble over a white alb, a bishop's crozier in one hand and a small model of a cathedral in the other. Behind him, a simple stone church and snow-capped Alpine peaks.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A monk was reported to the pope for believing people lived beneath us.",
+    "visual": "art",
+    "scene": "In a plain early medieval monastery study, an Irish monk-scholar in a simple habit sits at a writing desk over a parchment marked with a circle diagram. Through the open arch behind him, a mounted messenger rides away carrying a sealed letter."
+   },
+   {
+    "role": "who",
+    "text": "Saint Vergilius, an Irish monk of the eighth century, who became bishop of Salzburg.",
+    "visual": "map",
+    "lat": 47.8,
+    "lon": 13.04,
+    "place": "Salzburg · Austria"
+   },
+   {
+    "role": "story",
+    "text": "Around the year seven forty-five, he left Ireland, meaning to reach the Holy Land. He settled among the Franks instead.",
+    "visual": "art",
+    "scene": "On a rocky Irish shore, a monk in a hooded habit holds a pilgrim's staff beside a wooden sailing boat. Round stone huts and a tall carved stone cross stand on the green hill behind him."
+   },
+   {
+    "role": "story",
+    "text": "In Salzburg he led the monastery of Saint Peter. Boniface accused him of teaching about people beneath the earth. The pope ruled a council should be held only if it were proved.",
+    "visual": "art",
+    "scene": "In an early medieval Bavarian church hall, an Irish abbot stands calmly beside a table holding a parchment. Facing him, a missionary bishop gestures in accusation while a few clergy in plain vestments look on."
+   },
+   {
+    "role": "story",
+    "text": "Vergilius cleared himself of the charge. Later, as bishop, he built Salzburg's cathedral, and sent missionaries into Carinthia.",
+    "visual": "art",
+    "scene": "A bishop in a dark chasuble holds a model of a new stone cathedral at a building site, where masons work on a Romanesque-style wall. Alpine mountains rise behind them, and a small group of monks with staves walks toward the mountain valley."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was patient, learned work. He held that a baptism spoken in ignorance was valid, and he built up the Church. Faith has room for honest questions.",
+    "visual": "art",
+    "scene": "Inside a small early medieval Bavarian church, a bishop stands with his hand raised in blessing beside a stone baptismal font. A priest pours water over the head of a kneeling catechumen while a few villagers watch."
+   },
+   {
+    "role": "close",
+    "text": "Saint Vergilius, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Vergilius": "Ver-JIL-ee-us",
+   "Carinthia": "Ka-RIN-thee-ah",
+   "Salzburg": "SALTS-burg"
+  },
+  "caption_hook": "The Irish monk who was reported to the pope for his ideas about the far side of the earth.",
+  "summary": "Saint Vergilius was an Irish monk who settled in Salzburg, was accused by Boniface over his teaching on the antipodes, cleared himself, and as bishop built the cathedral and sent missionaries into Carinthia.",
+  "youtube_title": "St. Vergilius of Salzburg: Accused Over the Antipodes",
+  "hashtags": [
+   "#saintvergilius",
+   "#salzburg",
+   "#carinthia",
+   "#irishsaints",
+   "#saintboniface",
+   "#catholicsaints",
+   "#saintoftheday",
+   "#november27",
+   "#allsaints",
+   "#catholic",
+   "#ireland",
+   "#austria"
+  ],
+  "share_cta": "Know someone named Virgil? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Vergilius was an Irish monk-priest of the eighth century.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Around 745 he left Ireland intending to visit the Holy Land but settled among the Franks.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He led the monastery of Saint Peter in Salzburg as abbot.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Boniface accused him to Pope Zachary of teaching about the antipodes, people on the other side of the earth.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Zachary directed that a council be held only if it were clearly established that he held the doctrine.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Vergilius freed himself of the charge of teaching a doctrine contrary to Scripture.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "A priest who baptized through ignorance used incorrect words; Vergilius held the baptism valid, and Pope Zachary decided in his favour.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He became bishop of Salzburg; the date is uncertain (749, or 766 or 767).",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He built Salzburg's cathedral, consecrated in 774, and sent missionaries into Carinthia.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "In 755 he sent his companion Modestus to Carinthia at the request of Duke Boruth.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He was canonized by Pope Gregory IX in 1233.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He died at Salzburg on 27 November 784.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His grave was forgotten, then found in 1181 during rebuilding of the cathedral, and his bones were moved in 1288.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded a chapter of twelve priests, and 67 churches depended on Salzburg at his death.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He is patron of the city and state of Salzburg, of the dioceses of Salzburg and Graz-Seckau, of children, and of those in difficult childbirth.",
+    "source": 3,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Salzburg",
+   "Graz-Seckau",
+   "children",
+   "childbirth"
+  ],
+  "places": [
+   "Salzburg",
+   "Carinthia",
+   "Bavaria",
+   "Ireland"
+  ],
+  "story": [
+   "Vergilius is known by many forms of his name: Virgil, Feirgil, Fergal. He came from Ireland in the eighth century, an island that in his time was famous for monasteries and schools of Scripture, grammar and learning. Later writers say he came from a noble family, and one tradition links him to the royal house of Loegaire. The sources are careful, though. His birthplace, his exact birth date and his early training are uncertain. Some suggest he studied at Iona, but that comes from clues, not from direct testimony. Whether he was the same man as Fergil, abbot of Aghaboe in what is now County Laois, is also possible but not proven.",
+   "Around 745 he left Ireland. Like many Irish monks, he meant to make a pilgrimage to the Holy Land, a work of piety. But he settled among the Franks instead. There Pippin, then the real power behind the Frankish throne and soon to be king, received him with great favour. After about two years, Vergilius went on to Bavaria, to the court of Duke Odilo, and came to Salzburg. He became abbot of the monastery of Saint Peter, in a city on the roads between Bavaria, the Alpine valleys and the Slavic lands.",
+   "Salzburg's Church was young and its lines of authority were tangled. Bishops, monasteries and the duke's own power all overlapped, and Saint Boniface, the great missionary and papal legate, was reorganizing the Church in Germany. So Vergilius and Boniface came into conflict. The first dispute was over a baptism. A priest, through ignorance of Latin, had used incorrect words. Boniface wanted such baptisms repeated. Vergilius held that the sacrament was valid, and Pope Zachary decided in his favour.",
+   "The second dispute was stranger. Boniface told the pope that Vergilius taught about men beneath the earth, on the far side of a round world, the antipodes. Boniface probably feared this meant a people not descended from Adam and not redeemed by Christ. Pope Zachary answered with caution. If it were clearly established that Vergilius held such a belief, a council should be held. The treatise in which he explained his teaching has been lost. But the Catholic Encyclopedia says two things are certain: the question touched original sin and the redemption of all people, and Vergilius freed himself of the charge of teaching against Scripture. Boniface, it seems, had misunderstood him. The old geographers, and the stories of Irish voyagers, probably lay behind his idea.",
+   "He later became bishop of Salzburg. The sources do not agree on when: some give 749, older accounts 766 or 767. One account says that out of humility he at first left his episcopal duties to a fellow Irishman, Bishop Dobdagrecus. As bishop he organized his church with care. He founded a chapter of twelve priests, and by his death sixty-seven churches depended on Salzburg. In 755 he sent his companion Modestus to the Slavic people of Carinthia at the request of their duke, Boruth. From there the faith spread, and Vergilius came to be called the Apostle of Carinthia.",
+   "He also built. On the site of the old church of Saint Peter he raised a new cathedral, consecrated in 774, and moved into its crypt the relics of Saint Rupert, an earlier bishop honoured in Salzburg. Art and craft flourished in his time. The Tassilo Chalice, perhaps the oldest Mass chalice in the world, was made in these years, probably in Salzburg. He was also a man of letters. He died in Salzburg on 27 November 784, though one older source gives 789.",
+   "His grave was soon forgotten. It was found again in 1181 when the cathedral was rebuilt, and his bones were laid in a new tomb in 1288. Pope Gregory IX canonized him on 18 June 1233. Today he is patron of the city and state of Salzburg, and of children. A marble statue of him stands by the cathedral doors, and some churches in the Southern Hemisphere, on the far side of the earth he spoke of, bear his name. He is remembered on 27 November."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Story beat 2: 'The pope ordered a council, but only if it were proved' overstates the sources. The pope said a council should be held if it were clearly established. Reworded to 'ruled a council should be held only if it were proved'.",
+   "Story beat 1: 'About seven forty-five' could be heard as a clock time. Changed to 'Around the year seven forty-five'. The script is now 129 words, still within 115-130.",
+   "Story paragraph 6: calls Rupert 'the founder of the Salzburg church'. The sources only say he was a bishop associated with Salzburg's tradition, so this is softened.",
+   "Story paragraph 4: 'Boniface feared this meant...' states Boniface's motive as fact. The sources say it is only likely, so this is hedged.",
+   "Checked and fine: the hook is 13 words, the who line is 14 words, and the map point for Salzburg is correct. The dates, the baptism dispute, the antipodes charge, Modestus and Carinthia, the 774 cathedral and the 1233 canonization all match the sources. Vergilius is correctly called Saint and bishop, and martyr is false."
+  ],
+  "confidence": 85,
+  "reviewer_note": "Sources disagree on the date he became bishop (749 vs 766/767) and on his death year (784 vs 789). The script avoids stating either date in the spoken beats; the story paragraphs give both."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1868,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 628,
+   "thinking": 401
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2052,
+   "cache_write": 11077,
+   "cache_read": 0,
+   "out": 12111,
+   "thinking": 8433
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4380,
+   "cache_write": 0,
+   "cache_read": 11077,
+   "out": 7688,
+   "thinking": 4926
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1879,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3190,
+   "thinking": 1053
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Virgil of Salzburg",
+   "url": "https://en.wikipedia.org/wiki/Virgil_of_Salzburg"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Vergilius of Salzburg",
+   "url": "https://www.newadvent.org/cathen/15353d.htm"
+  },
+  {
+   "title": "Santi e Beati: Vergilius of Salzburg",
+   "url": "https://www.santiebeati.it/dettaglio/79450"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Vergilius of Salzburg",
+   "url": "https://www.heiligenlexikon.de/BiographienV/Virgilius_von_Salzburg.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 61.5,
+ "narrator": "elevenlabs",
+ "es": {
+  "name": "San Virgilio de Salzburgo",
+  "display_name": "San Virgilio",
+  "region": "Salzburgo, Austria",
+  "dates": "c. 700 – 784",
+  "hook": "El monje irlandés que fue denunciado ante el papa por sus ideas sobre el otro lado de la tierra.",
+  "summary": "San Virgilio fue un monje irlandés que se estableció en Salzburgo. Bonifacio lo acusó por su enseñanza sobre las antípodas, pero se justificó. Como obispo, construyó la catedral y envió misioneros a Carintia.",
+  "story": [
+   "Virgilio es conocido con varias formas de su nombre: Virgilio, Feirgil, Fergal. Procedía de Irlanda, en el siglo VIII, una isla que en su tiempo era famosa por sus monasterios y por sus escuelas de Escritura, gramática y saber. Escritores posteriores dicen que procedía de una familia noble, y una tradición lo vincula con la casa real de Loegaire. Las fuentes, sin embargo, son prudentes. Su lugar de nacimiento, su fecha exacta de nacimiento y su formación temprana son inciertos. Algunos sugieren que estudió en Iona, pero esto procede de indicios, no de testimonio directo. También es posible, aunque no está probado, que fuera el mismo hombre que Fergil, abad de Aghaboe, en lo que hoy es el condado de Laois.",
+   "Hacia el año 745 dejó Irlanda. Como muchos monjes irlandeses, pretendía hacer una peregrinación a Tierra Santa, una obra de piedad. Pero se estableció entre los francos. Allí Pipino, entonces el verdadero poder detrás del trono franco y pronto rey, lo recibió con gran favor. Después de unos dos años, Virgilio pasó a Baviera, a la corte del duque Odilón, y llegó a Salzburgo. Se convirtió en abad del monasterio de San Pedro, en una ciudad situada en las rutas entre Baviera, los valles alpinos y las tierras eslavas.",
+   "La Iglesia de Salzburgo era joven y sus líneas de autoridad estaban enredadas. Obispos, monasterios y el propio poder del duque se superponían, y San Bonifacio, el gran misionero y legado papal, estaba reorganizando la Iglesia en Alemania. Así, Virgilio y Bonifacio entraron en conflicto. La primera disputa fue por un bautismo. Un sacerdote, por desconocimiento del latín, había usado palabras incorrectas. Bonifacio quería que tales bautismos se repitieran. Virgilio sostenía que el sacramento era válido, y el papa Zacarías falló a su favor.",
+   "La segunda disputa fue más extraña. Bonifacio le dijo al papa que Virgilio enseñaba sobre hombres bajo la tierra, al otro lado de un mundo redondo, las antípodas. Bonifacio probablemente temía que esto significara un pueblo no descendiente de Adán y no redimido por Cristo. El papa Zacarías respondió con cautela. Si se establecía con claridad que Virgilio sostenía tal creencia, debía celebrarse un concilio. El tratado en el que explicaba su enseñanza se ha perdido. Pero la Enciclopedia Católica afirma dos cosas como ciertas: la cuestión tocaba el pecado original y la redención de todas las personas, y Virgilio quedó libre de la acusación de enseñar contra la Escritura. Bonifacio, al parecer, lo había malinterpretado. Probablemente, detrás de su idea estuvieron los antiguos geógrafos y los relatos de navegantes irlandeses.",
+   "Más tarde llegó a ser obispo de Salzburgo. Las fuentes no coinciden en la fecha: algunas dan el año 749, relatos más antiguos el 766 o el 767. Un relato dice que, por humildad, al principio dejó sus funciones episcopales en manos de un compatriota irlandés, el obispo Dobdagrecus. Como obispo organizó su iglesia con cuidado. Fundó un cabildo de doce sacerdotes, y a su muerte sesenta y siete iglesias dependían de Salzburgo. En el año 755 envió a su compañero Modesto al pueblo eslavo de Carintia, a petición de su duque, Borut. Desde allí la fe se extendió, y Virgilio llegó a ser llamado el Apóstol de Carintia.",
+   "También edificó. En el lugar de la antigua iglesia de San Pedro levantó una nueva catedral, consagrada en el año 774, y trasladó a su cripta las reliquias de San Ruperto, un obispo anterior venerado en Salzburgo. El arte y la artesanía florecieron en su tiempo. El Cáliz de Tasilón, quizá el cáliz de Misa más antiguo del mundo, se hizo en estos años, probablemente en Salzburgo. También fue un hombre de letras. Murió en Salzburgo el 27 de noviembre de 784, aunque una fuente más antigua da el año 789.",
+   "Su tumba pronto fue olvidada. Fue hallada de nuevo en 1181, cuando la catedral fue reconstruida, y sus huesos se colocaron en una nueva tumba en 1288. El papa Gregorio IX lo canonizó el 18 de junio de 1233. Hoy es patrono de la ciudad y del estado de Salzburgo, y de los niños. Una estatua de mármol suya se alza junto a las puertas de la catedral, y algunas iglesias del Hemisferio Sur, al otro lado de la tierra de la que él habló, llevan su nombre. Se le recuerda el 27 de noviembre."
+  ],
+  "prayer": "San Virgilio, ruega por nosotros.",
+  "patronages": [
+   "Salzburgo",
+   "Graz-Seckau",
+   "niños",
+   "parto"
+  ],
+  "places": [
+   "Salzburgo",
+   "Carintia",
+   "Baviera",
+   "Irlanda"
+  ]
+ },
+ "books": [],
+ "caption": "The Irish monk who was reported to the pope for his ideas about the far side of the earth.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Vergilius of Salzburg · Feast day: November 27\nSaint Vergilius was an Irish monk who settled in Salzburg, was accused by Boniface over his teaching on the antipodes, cleared himself, and as bishop built the cathedral and sent missionaries into Carinthia.\n\nSaint Vergilius, pray for us. 🕯\n\nKnow someone named Virgil? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintvergilius #carinthia",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-27/art.jpg"
+ },
+ "review_message_id": 232
+}
