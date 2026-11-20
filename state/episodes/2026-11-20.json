@@ -1,8 +1,8 @@
 {
  "id": "2026-11-20",
  "date": "2026-11-20",
- "status": "approved",
- "updated": "2026-11-14T12:10:02+00:00",
+ "status": "published",
+ "updated": "2026-11-20T12:34:42+00:00",
  "saint": {
   "qid": "Q381815",
   "name": "Saint Edmund the Martyr",
@@ -305,7 +305,8 @@
    "Thetford",
    "Hoxne",
    "Suffolk"
-  ]
+  ],
+  "slug": "edmundo-el-martir"
  },
  "books": [],
  "caption": "A king who could have saved his life with one word—but refused.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Edmund the Martyr · Feast day: November 20\nEdmund, King of East Anglia, was killed by Viking invaders in 869 after refusing to renounce his Christian faith.\n\nSaint Edmund the Martyr, pray for us. 🕯\n\nHad you ever heard of St. Edmund the Martyr before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon · Catholic Encyclopedia (1913)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintedmund #eastanglia",
@@ -316,5 +317,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-20/art.jpg"
  },
- "review_message_id": 156
+ "review_message_id": 156,
+ "slug": "edmund-the-martyr",
+ "published": {
+  "media_id": "17929038831438808",
+  "permalink": "https://www.instagram.com/reel/Df9qPWoGbYy/",
+  "location_id": null
+ },
+ "published_at": "2026-11-20T07:30-05:00",
+ "facebook": {
+  "id": "1192857249830760",
+  "url": "https://www.facebook.com/reel/1192857249830760/",
+  "published_at": "2026-11-20T07:32-05:00"
+ },
+ "threads": {
+  "id": "18112522990915875",
+  "url": "https://www.threads.com/@all.holy.saints/post/Df9qfANOIc9",
+  "published_at": "2026-11-20T07:33-05:00"
+ },
+ "youtube": {
+  "id": "1Z1y-9lvHpo",
+  "url": "https://youtube.com/shorts/1Z1y-9lvHpo",
+  "privacy": "public",
+  "published_at": "2026-11-20T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7710230826789062670",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-20T07:34-05:00"
+ }
 }
