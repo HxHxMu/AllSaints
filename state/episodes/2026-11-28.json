@@ -1,0 +1,8 @@
+{
+ "id": "2026-11-28",
+ "date": "2026-11-28",
+ "status": "failed",
+ "updated": "2026-11-21T10:21:12+00:00",
+ "attempts": 1,
+ "error": "CalledProcessError: Command '['npx', 'remotion', 'render', 'src/index.js', 'Episode', '/home/runner/work/AllSaints/AllSaints/work/2026-11-28/video.mp4', '--props=/home/runner/work/AllSaints/AllSaints/work/2026-11-28/props.json', '--codec=h264', '--crf=19', '--audio-bitrate=192k', '--x264-preset=medium', '--concurrency=100%', '--log=error']' returned non-zero exit status 1."
+}
