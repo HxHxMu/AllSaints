@@ -18,7 +18,15 @@ def repo():
 def get_or_create_release(tag, name=None, body=""):
     r = http.get(f"{API}/repos/{repo()}/releases/tags/{tag}", headers=_h(), timeout=30)
     if r.status_code == 200:
-        return r.json()
+        rel = r.json()
+        # A re-generated episode (e.g. a saint swap) reuses its tag: refresh the title/notes,
+        # but only when the caller passes them (asset-only uploads like story.jpg don't).
+        patch = {k: v for k, v in (("name", name), ("body", body)) if v and rel.get(k) != v}
+        if patch:
+            r = http.patch(rel["url"], headers=_h(), timeout=30, json=patch)
+            r.raise_for_status()
+            rel = {**r.json(), "assets": rel.get("assets", [])}
+        return rel
     r = http.post(f"{API}/repos/{repo()}/releases", headers=_h(), timeout=30,
                   json={"tag_name": tag, "name": name or tag, "body": body, "prerelease": True})
     r.raise_for_status()
