@@ -28,7 +28,7 @@ def art():
             raw = illustrate._generate(f"{STYLE}\n\nScene: {EP['beats'][i]['scene']}")
             illustrate._save(raw, p, trim=0.0)
         return p
-    with cf.ThreadPoolExecutor(4) as ex:
+    with cf.ThreadPoolExecutor(3) as ex:   # the Gemini key rate-limits (429) at 4+
         print(list(ex.map(one, range(len(EP["beats"])))))
 
 
@@ -172,7 +172,7 @@ def video():
             ss = max(0.0, dur(clip) - secs - 0.5) if i == len(EP["beats"]) - 1 else 0.0   # the prayer: end on her face
             sat = 0.0 if (D == ROOT and i == 3) else 0.3   # keep a trace of amber in flame and lantern; Part I shot 4 came out sepia
             subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-ss", f"{ss:.2f}", "-i", str(clip), "-i", str(out / f"cap{i}.png"),
-                            "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,"
+                            "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,unsharp=5:5:0.6,"   # Gemini free clips are ~720p: firm up the upscale (grain goes on after)
                             f"hue=s={sat},colorbalance=bs=0.06:bm=0.04:rs=-0.03,eq=contrast=1.12:gamma=0.95[bg];[bg][1:v]overlay=0:0,format=yuv420p[v]",
                             "-map", "[v]", "-r", str(fps), "-frames:v", str(round(secs * fps)), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
             segs.append((o, secs, v))
