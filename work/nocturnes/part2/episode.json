@@ -1,51 +1,52 @@
 {
- "saint": "Margaret of Cortona",
- "series": "Lives of the Saints",
- "part": "II",
- "part_title": "The Closed Door",
- "next": "Part III · The Rope",
- "question": "Who opens the door\nwhen your own is shut?",
- "next_voice": "Next, in Part Three: the rope.",
- "score": [
-  65.5,
-  122.0
- ],
- "beats": [
-  {
-   "role": "hook",
-   "text": "Her father's door was the last door she had left.",
-   "scene": "A heavy closed wooden door in the rough stone wall of a poor farmhouse at dusk; the long shadow of a woman holding a small child falls across the door. Nobody visible, only the shadow."
-  },
-  {
-   "role": "who",
-   "text": "She came home to Laviano with her little son, and nothing else."
-  },
-  {
-   "role": "story",
-   "text": "Her stepmother would not have them in the house.",
-   "scene": "Inside the dark doorway of a poor medieval farmhouse, a severe older peasant woman in a dark headscarf stands blocking the way, one hand on the door frame, hard light from outside on her face, cold expression. Ordinary and human, not a villain."
-  },
-  {
-   "role": "story",
-   "text": "And her father turned her away."
-  },
-  {
-   "role": "story",
-   "text": "Tradition says she sat under a fig tree in the garden, and wept."
-  },
-  {
-   "role": "turn",
-   "text": "She was tempted to go back to the only life she knew.",
-   "scene": "A crossroads at night seen from behind a young woman in a dark hooded cloak carrying a sleeping small child on her shoulder: one road leads back toward a distant castle with lit windows on a hill, the other into darkness toward a far town on a ridge. Her face is not visible."
-  },
-  {
-   "role": "turn",
-   "text": "Instead she took her son and walked to Cortona, to the Franciscan friars.",
-   "scene": "Dawn: seen from far behind, a young woman in a dark hooded cloak walks up a long steep road toward a walled hilltop town, holding a small boy by the hand, pale light breaking over the ridge, long shadows behind them. Their faces are not visible."
-  },
-  {
-   "role": "turn",
-   "text": "There, two women of the town opened their door to her."
-  }
- ]
+  "saint": "Margaret of Cortona",
+  "series": "Lives of the Saints",
+  "part": "II",
+  "part_title": "The Closed Door",
+  "next": "Part III · The Rope",
+  "question": "Who opens the door\nwhen your own is shut?",
+  "next_voice": "Next, in Part Three: the rope.",
+  "score": [
+    65.5,
+    127.5
+  ],
+  "beats": [
+    {
+      "role": "hook",
+      "text": "Her father's door was the last door she had left.",
+      "scene": "A heavy closed wooden door in the rough stone wall of a poor farmhouse at dusk; the long shadow of a woman holding a small child falls across the door. Nobody visible, only the shadow."
+    },
+    {
+      "role": "who",
+      "text": "She came home to Laviano with her little son, and nothing else."
+    },
+    {
+      "role": "story",
+      "text": "Her stepmother would not have them in the house.",
+      "scene": "Inside the dark doorway of a poor medieval farmhouse, a severe older peasant woman in a dark headscarf stands blocking the way, one hand on the door frame, hard light from outside on her face, cold expression. Ordinary and human, not a villain."
+    },
+    {
+      "role": "story",
+      "text": "And her father turned her away."
+    },
+    {
+      "role": "story",
+      "text": "Tradition says she sat under a fig tree in the garden, and wept."
+    },
+    {
+      "role": "turn",
+      "text": "She was tempted to go back to the only life she knew.",
+      "scene": "A crossroads at night seen from behind a young woman in a dark hooded cloak carrying a sleeping small child on her shoulder: one road leads back toward a distant castle with lit windows on a hill, the other into darkness toward a far town on a ridge. Her face is not visible."
+    },
+    {
+      "role": "turn",
+      "text": "Instead she took her son and walked to Cortona, to the Franciscan friars.",
+      "scene": "Dawn: seen from far behind, a young woman in a dark hooded cloak walks up a long steep road toward a walled hilltop town, holding a small boy by the hand, pale light breaking over the ridge, long shadows behind them. Their faces are not visible."
+    },
+    {
+      "role": "turn",
+      "text": "There, two women of the town opened their door to her."
+    }
+  ],
+  "gap": 1.4
 }

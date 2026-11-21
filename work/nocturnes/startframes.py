@@ -7,12 +7,16 @@ import illustrate
 from common import env, http, log
 
 ROOT = Path(__file__).parent
-REFS = [ROOT / "part2/start/ref2-6.png", ROOT / "part2/start/ref5.png"]   # Margaret in Part I (shots 2 and 5)
+# Margaret in Part I: shot 2 is her canonical face (where we meet her), plus a tight crop of it and shot 5 (with her son).
+# Refs are frames pulled from work/nocturnes/live/ (ffmpeg -ss 6 / 9 of 2.mp4, -ss 5 of 5.mp4).
+REFS = [ROOT / "part2/start/ref2-6.png", ROOT / "part2/start/ref-face.png", ROOT / "part2/start/ref5.png"]
 LOOK = ("A single still frame from a black-and-white 1920s German Expressionist silent film: orthochromatic film stock, extreme "
         "chiaroscuro, one hard light source, deep black shadows, painted theatrical sets with skewed angular architecture, drifting "
         "mist, visible film grain. Thirteenth-century Italy. Solemn and reverent. Vertical 9:16, the image fills the frame. No text.")
-SAME = ("The young woman in this scene is the same woman as in the reference images: the same face, features, age and dark hooded "
-        "cloak with a light linen veil. The small boy is the same child as in the second reference image.")
+SAME = ("The young woman in this scene is exactly the same woman as in the three reference images (the second is a close-up of her "
+        "face): the same face shape, long straight nose, pale skin, high cheekbones, dark eyes and dark brows, the same age, the same "
+        "dark hooded wool cloak over a light linen veil. Keep her face recognisable even when she is small in the frame or turned "
+        "away. The small boy is the same child as in the third reference image.")
 
 
 def frame(prompt, out):
@@ -33,8 +37,12 @@ def frame(prompt, out):
 
 
 if __name__ == "__main__":
-    part, shots = sys.argv[1], [int(x) for x in sys.argv[2:]]
+    # python startframes.py part2 2 4 5 8 [--variants a,b]: one frame per shot, or one per variant (2a.png, 2b.png)
+    args = [a for a in sys.argv[1:] if not a.startswith("--") and "," not in a]
+    var = sys.argv[sys.argv.index("--variants") + 1].split(",") if "--variants" in sys.argv else [""]
+    part, shots = args[0], [int(x) for x in args[1:]]
     D = ROOT / part
     prompts = json.loads((D / "start" / "prompts.json").read_text())
-    with cf.ThreadPoolExecutor(4) as ex:
-        print(list(ex.map(lambda n: frame(prompts[str(n)], D / "start" / f"{n}.png"), shots)))
+    jobs = [(n, v) for n in shots for v in var]
+    with cf.ThreadPoolExecutor(3) as ex:   # 3 at a time: the new Gemini key rate-limits (429) at 4+
+        print(list(ex.map(lambda j: frame(prompts[str(j[0])], D / "start" / f"{j[0]}{j[1]}.png"), jobs)))

@@ -68,7 +68,7 @@ LIVE = "--live" in sys.argv
 _arg = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
 TIMES = json.loads(Path(_arg("--timings")).read_text()) if _arg("--timings") else None
 AUDIO = _arg("--audio")
-GAP = 0.9   # pause after each line (lines are silence-trimmed; 0.35 s was the gap when takes kept their own pauses)
+GAP = EP.get("gap", 0.9)   # pause after each line (lines are silence-trimmed; 0.35 s was the gap when takes kept their own pauses)
 SCORE_FROM, SCORE_END = EP.get("score", [0.0, 65.5])   # score.wav seconds; each part ends on a phrase dip
 INK, PAPER = (12, 11, 10), (226, 219, 203)
 
@@ -170,9 +170,9 @@ def video():
         if LIVE and clip.exists():  # Luis's live-action clips (any length >= the beat, 24 fps): cover-crop, grade to the series look;
             # shots without a clip fall back to the still in art/ with a slow push (mixed parts, 2026-11-18)
             ss = max(0.0, dur(clip) - secs - 0.5) if i == len(EP["beats"]) - 1 else 0.0   # the prayer: end on her face
-            sat = 0.0 if i == 3 else 0.3   # keep a trace of amber in flame and lantern; shot 4 came out sepia
+            sat = 0.0 if (D == ROOT and i == 3) else 0.3   # keep a trace of amber in flame and lantern; Part I shot 4 came out sepia
             subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-ss", f"{ss:.2f}", "-i", str(clip), "-i", str(out / f"cap{i}.png"),
-                            "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+                            "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,"
                             f"hue=s={sat},colorbalance=bs=0.06:bm=0.04:rs=-0.03,eq=contrast=1.12:gamma=0.95[bg];[bg][1:v]overlay=0:0,format=yuv420p[v]",
                             "-map", "[v]", "-r", str(fps), "-frames:v", str(round(secs * fps)), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
             segs.append((o, secs, v))
