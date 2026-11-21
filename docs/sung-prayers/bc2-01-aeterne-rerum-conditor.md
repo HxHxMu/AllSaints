@@ -1,6 +1,8 @@
 # Blue Chant II · 01 · Aeterne rerum conditor — St. Ambrose
 
-Track 1 of [Blue Chant, Volume II](chants.md): the cockcrow hymn. New melody (Suno or Gemini), not the chant. Not committed.
+Track 1 of [Blue Chant, Volume II](chants.md): the cockcrow hymn. New melody (Suno), not the chant. Not committed.
+
+Audio: `work/sung/bc2/01/audio.wav`, 6:00 (Suno take of Nov 17; an earlier "01" download was really Splendor, now `bc2/02-alt/`). Whisper hears all 8 stanzas in order: v1 at 0:19, v5 at 2:52, last line ends ~4:31, then ~1:30 of instrumental with no words, **kept in full** (Luis, Nov 17). **Check:** stanza 1 seems to repeat lines 3–4 (0:33–0:46) — `check-opening.mp3`; ending `check-ending.mp3` (from 4:22).
 
 | | |
 |---|---|

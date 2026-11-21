@@ -14,18 +14,18 @@ The guides and scores stay in `work/sung/bc2/guides/` in case that changes.
 
 ## Tracklist
 
-| # | Hymn | Words by | Notes |
-|---|---|---|---|
-| 01 | *Aeterne rerum conditor* (at cockcrow) | St. Ambrose; Augustine names it as his | Ambrose's original text, not the 1632 Roman revision |
-| 02 | *Splendor paternae gloriae* (morning) | St. Ambrose | |
-| 03 | *Vexilla regis prodeunt* | St. Venantius Fortunatus (569) | |
-| 04 | *Pange lingua gloriosi proelium* | St. Venantius Fortunatus | |
-| 05 | *Adoro te devote* | **attributed** to St. Thomas Aquinas (debated) | replaces Aquinas's *Pange lingua*, which is already sung prayer 06 |
-| 06 | *Lauda Sion* | St. Thomas Aquinas | 24 stanzas: 2–3 generations, or selected stanzas (say so) |
-| 07 | *Verbum supernum prodiens* (→ *O salutaris*) | St. Thomas Aquinas | |
-| 08 | *Ave generosa* | St. Hildegard of Bingen | replaces *O ignis*, which is already sung prayer 09 |
-| 09 | *Deus creator omnium* (evening) | St. Ambrose; quoted by Augustine, *Confessions* IX.12 | |
-| 10 | *Te Deum* | attr. St. Nicetas of Remesiana | audio done (`work/sung/C01/audio.wav`); credit depends on how it was made |
+| # | Hymn | Words by | Notes | Status (Nov 18) |
+|---|---|---|---|---|
+| 01 | *Aeterne rerum conditor* (at cockcrow) | St. Ambrose; Augustine names it as his | Ambrose's original text, not the 1632 Roman revision | **audio** 6:00 (`work/sung/bc2/01/`) |
+| 02 | *Splendor paternae gloriae* (morning) | St. Ambrose | | **audio** 4:24 (`bc2/02/`); spare take `bc2/02-alt/` |
+| 03 | *Vexilla regis prodeunt* | St. Venantius Fortunatus (569) | | **audio** 5:54 (`bc2/03/`), Amen kept |
+| 04 | *Pange lingua gloriosi proelium* | St. Venantius Fortunatus | not Aquinas's *Pange lingua* | **audio** 5:32 (`bc2/04/`) |
+| 05 | *Adoro te devote* | **attributed** to St. Thomas Aquinas (debated) | replaces Aquinas's *Pange lingua*, which is already sung prayer 06 | **audio** 5:20 (`bc2/05/`) |
+| 06 | *Lauda Sion* | St. Thomas Aquinas | 24 strophes, ~8–9 min: Suno Part 1 + Extend (sheet) | sheet, no audio |
+| 07 | *Verbum supernum prodiens* (→ *O salutaris*) | St. Thomas Aquinas | ends with *O salutaris* (st. 5–6) | sheet, no audio |
+| 08 | *Ave generosa* | St. Hildegard of Bingen | replaces *O ignis*, which is already sung prayer 09 | **audio** 4:17 (`bc2/08/`) |
+| 09 | *Deus creator omnium* (evening) | St. Ambrose; quoted by Augustine, *Confessions* IX.12 | | sheet, no audio |
+| 10 | *Te Deum* | attr. St. Nicetas of Remesiana | new melody; sings only Part 1 (to *Paraclitum Spiritum*) | **audio** 4:14 (`C01/`), partial; listen at ~1:36, ~3:25 |
 
 Spare: *Ubi caritas* (attr. St. Paulinus of Aquileia), *O virtus Sapientiae* (Hildegard).
 

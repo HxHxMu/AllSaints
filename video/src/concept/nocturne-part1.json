@@ -1,0 +1,88 @@
+{
+ "saint": "Saint Margaret\nof Cortona",
+ "part": "Part I",
+ "partTitle": "The Hound",
+ "segments": [
+  {
+   "kind": "title",
+   "dur": 4.286,
+   "start": 0
+  },
+  {
+   "kind": "scene",
+   "n": 0,
+   "plate": "gate",
+   "dur": 7.03,
+   "text": "One evening a hound came home alone, and a young woman's life turned on it.",
+   "start": 4.286
+  },
+  {
+   "kind": "scene",
+   "n": 1,
+   "plate": "farm",
+   "dur": 7.744,
+   "text": "Her name was Margaret, a farmer's daughter from Laviano, in Umbria, born in 1247.",
+   "start": 11.316
+  },
+  {
+   "kind": "scene",
+   "n": 2,
+   "plate": "hearth",
+   "dur": 6.902,
+   "text": "Her mother died when she was seven. Her father remarried, and at home she found little warmth.",
+   "start": 19.06
+  },
+  {
+   "kind": "scene",
+   "n": 3,
+   "plate": "road",
+   "dur": 6.005,
+   "text": "At seventeen she ran away with a young nobleman. Not as his wife, but as his mistress.",
+   "start": 25.962
+  },
+  {
+   "kind": "scene",
+   "n": 4,
+   "plate": "window",
+   "dur": 5.531,
+   "text": "For nine years she lived in his castle, and she bore him a son.",
+   "start": 31.967
+  },
+  {
+   "kind": "scene",
+   "n": 5,
+   "plate": "forest-bw",
+   "dur": 8.465,
+   "text": "Then one day he did not come home. His hound returned without him, and led her into the forest.",
+   "start": 37.498
+  },
+  {
+   "kind": "scene",
+   "n": 6,
+   "plate": "clearing",
+   "dur": 5.705,
+   "text": "There, among the trees, she found him. He had been murdered.",
+   "start": 45.963
+  },
+  {
+   "kind": "scene",
+   "n": 7,
+   "plate": "chapel",
+   "dur": 4.292,
+   "text": "Saint Margaret of Cortona, pray for us.",
+   "start": 51.668
+  },
+  {
+   "kind": "question",
+   "dur": 5.254,
+   "text": "Where does a soul go\nwhen the ground falls away?",
+   "start": 55.96
+  },
+  {
+   "kind": "next",
+   "dur": 4.286,
+   "text": "Part II · The Closed Door",
+   "start": 61.214
+  }
+ ]
+}
