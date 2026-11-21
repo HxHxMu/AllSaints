@@ -1,0 +1,52 @@
+{
+ "saint": "Margaret of Cortona",
+ "series": "Nocturnes",
+ "part": "I",
+ "part_title": "The Hound",
+ "next": "Part II · The Closed Door",
+ "question": "Where does a soul go\nwhen the ground falls away?",
+ "beats": [
+  {
+   "role": "hook",
+   "text": "One evening a hound came home alone, and a young woman's life turned on it.",
+   "scene": "The black silhouette of a large medieval hunting hound standing alone in the arched gateway of a stone castle at dusk, its enormous shadow stretched across the courtyard toward the viewer."
+  },
+  {
+   "role": "who",
+   "text": "Her name was Margaret, a farmer's daughter from Laviano, in Umbria, born in 1247.",
+   "scene": "A young peasant woman of thirteenth-century Umbria in a plain wool dress and linen veil, standing in the doorway of a stone farmhouse, rolling hills behind her, hard side light on her face."
+  },
+  {
+   "role": "story",
+   "text": "Her mother died when she was seven. Her father remarried, and at home she found little warmth.",
+   "scene": "A small girl in a simple medieval dress sitting alone on a stool beside a dying hearth fire, while the huge shadow of a standing woman looms across the wall above her; the woman herself is not seen."
+  },
+  {
+   "role": "story",
+   "text": "At seventeen she ran away with a young nobleman. Not as his wife, but as his mistress.",
+   "scene": "A young nobleman on horseback with a young woman riding behind him, galloping at night along a crooked road that climbs toward a jagged hilltop castle, long shadows thrown by moonlight."
+  },
+  {
+   "role": "story",
+   "text": "For nine years she lived in his castle, and she bore him a son.",
+   "scene": "A young woman in a fine thirteenth-century gown standing at a tall narrow castle window, holding a small boy, a single shaft of light falling across them in a dark stone chamber."
+  },
+  {
+   "role": "turn",
+   "text": "Then one day he did not come home. His hound returned without him, and led her into the forest.",
+   "scene": "A hunting hound leading a young woman carrying a lantern into a dark forest of twisted, leaning trees, shafts of pale light cutting through thick mist."
+  },
+  {
+   "role": "turn",
+   "text": "There, among the trees, she found him. He had been murdered.",
+   "scene": "A young woman kneeling in a misty forest clearing with her hands over her face, the hound beside her; beyond her a cloaked figure lies still on the ground, mostly in deep shadow. No blood, no wound visible."
+  },
+  {
+   "role": "turn",
+   "text": "With her little son, she went home, to her father's door.",
+   "scene": "A single candle burning in the darkness of a small stone chapel, its light catching a simple wooden crucifix on the wall, long shadows."
+  }
+ ],
+ "next_voice": "Next, in Part Two: the closed door.",
+ "note": "A part that leaves the story open ends on a narrated teaser; 'pray for us' closes only the final part (Luis, 2026-11-18)."
+}

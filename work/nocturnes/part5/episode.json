@@ -1,0 +1,43 @@
+{
+ "saint": "Margaret of Cortona",
+ "series": "Lives of the Saints",
+ "part": "V",
+ "part_title": "The House of Mercy",
+ "next": "Part VI · The Hermitage",
+ "question": "Who near you\nneeds mercy?",
+ "score": [
+  259.0,
+  305.0
+ ],
+ "beats": [
+  {
+   "role": "hook",
+   "text": "The woman Cortona once whispered about now begged in its streets for the poor."
+  },
+  {
+   "role": "story",
+   "text": "With the town's help she founded a hospital, the House of Mercy.",
+   "scene": "A long vaulted hospital hall, rows of simple beds, lamps burning."
+  },
+  {
+   "role": "story",
+   "text": "Her sisters of the Third Order nursed the sick, and she nursed with them."
+  },
+  {
+   "role": "story",
+   "text": "She made peace between families at war.",
+   "scene": "Two men's hands clasping across a table, a candle between them."
+  },
+  {
+   "role": "story",
+   "text": "She even warned the warrior bishop of Arezzo to lay down his sword.",
+   "scene": "A bishop's mitre and a sword lying side by side on a table in a dark room."
+  },
+  {
+   "role": "story",
+   "text": "He would not, and he died in battle.",
+   "scene": "A battlefield at dusk in mist, broken lances and a fallen banner. Nothing graphic."
+  }
+ ],
+ "next_voice": "Next, in Part Six, the last: the hermitage."
+}

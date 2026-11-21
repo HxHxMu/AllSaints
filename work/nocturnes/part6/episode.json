@@ -1,0 +1,51 @@
+{
+ "saint": "Margaret of Cortona",
+ "series": "Lives of the Saints",
+ "part": "VI",
+ "part_title": "The Hermitage",
+ "next": "Lives of the Saints",
+ "question": "Who have you\ngiven up on?",
+ "score": [
+  305.0,
+  359.7
+ ],
+ "beats": [
+  {
+   "role": "hook",
+   "text": "In her last years she climbed above the town, to a ruined little church."
+  },
+  {
+   "role": "story",
+   "text": "She had it rebuilt, and lived beside it in a cell.",
+   "scene": "A tiny stone cell beside a small chapel, a narrow bed and a crucifix, the town far below through the doorway."
+  },
+  {
+   "role": "story",
+   "text": "She prayed for Cortona, and for sinners like the one she had been."
+  },
+  {
+   "role": "story",
+   "text": "She died there on the twenty-second of February, 1297. She was about fifty.",
+   "scene": "A candle burning down in an empty stone cell at dawn, a folded brown habit on the bed."
+  },
+  {
+   "role": "story",
+   "text": "Cortona buried her in her little church, and built a great church over it.",
+   "scene": "A stone basilica on a hilltop above a town, morning mist below."
+  },
+  {
+   "role": "story",
+   "text": "Her body rests there still.",
+   "scene": "Candles burning before a glass reliquary in a dim side chapel, seen from a distance, nothing of the body shown."
+  },
+  {
+   "role": "story",
+   "text": "The Church declared her a saint in 1728.",
+   "scene": "Light streaming down through a high church window onto the stone floor."
+  },
+  {
+   "role": "close",
+   "text": "Saint Margaret of Cortona, pray for us."
+  }
+ ]
+}

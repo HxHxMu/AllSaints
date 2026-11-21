@@ -1,0 +1,52 @@
+{
+ "saint": "Margaret of Cortona",
+ "series": "Lives of the Saints",
+ "part": "III",
+ "part_title": "The Rope",
+ "next": "Part IV · The Habit",
+ "question": "What would you give\nto be forgiven?",
+ "score": [
+  122.0,
+  182.5
+ ],
+ "beats": [
+  {
+   "role": "hook",
+   "text": "In Cortona, the friars of Saint Francis listened to her story.",
+   "scene": "A friar in a brown habit seen from behind, listening in a dim stone cloister; a woman's shadow on the wall beside him."
+  },
+  {
+   "role": "story",
+   "text": "She earned her bread nursing the sick women of the town."
+  },
+  {
+   "role": "story",
+   "text": "She ate little, slept on the ground, and gave away what she had.",
+   "scene": "A straw mat on a bare stone floor, a crust of bread and a cup beside it, moonlight through a small high window."
+  },
+  {
+   "role": "story",
+   "text": "It was not enough for her.",
+   "scene": "A small window at night, rain on the sill, a candle guttering."
+  },
+  {
+   "role": "story",
+   "text": "One Sunday she walked into the church of the town that knew her past,"
+  },
+  {
+   "role": "story",
+   "text": "a cord around her neck,",
+   "scene": "Close detail: a coarse rope cord knotted at a woman's throat over dark wool, hard light."
+  },
+  {
+   "role": "story",
+   "text": "and before them all, she begged their forgiveness for the scandal she had given."
+  },
+  {
+   "role": "story",
+   "text": "Not everyone believed her.",
+   "scene": "A row of shadowed faces in church pews, some turned away."
+  }
+ ],
+ "next_voice": "Next, in Part Four: the habit."
+}

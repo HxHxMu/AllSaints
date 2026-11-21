@@ -1,0 +1,62 @@
+{
+ "saint": "Margaret of Cortona",
+ "series": "Lives of the Saints",
+ "part": "IV",
+ "part_title": "The Habit",
+ "next": "Part V · The House of Mercy",
+ "question": "Would you have\nbelieved her?",
+ "score": [
+  182.5,
+  259.0
+ ],
+ "beats": [
+  {
+   "role": "hook",
+   "text": "She asked the friars for the habit of Saint Francis.",
+   "scene": "A brown Franciscan habit and a knotted white cord folded on a plain wooden table, a shaft of light."
+  },
+  {
+   "role": "story",
+   "text": "They made her wait three years.",
+   "scene": "A cloister arcade with the light moving across the columns, seasons of leaves on the stones."
+  },
+  {
+   "role": "story",
+   "text": "She was young and beautiful, and Cortona remembered who she had been."
+  },
+  {
+   "role": "story",
+   "text": "People whispered that her penance was for show.",
+   "scene": "Two shadows of women whispering, cast huge on a plastered wall."
+  },
+  {
+   "role": "story",
+   "text": "She bore it, and kept to her prayer.",
+   "scene": "A woman's joined hands on a rough wooden prayer stool, a single candle."
+  },
+  {
+   "role": "story",
+   "text": "Her son she sent to school in Arezzo."
+  },
+  {
+   "role": "story",
+   "text": "He would grow up to become a friar himself.",
+   "scene": "A young friar's silhouette in a cloister doorway against bright light."
+  },
+  {
+   "role": "story",
+   "text": "At last, in 1277, they gave her the habit of the Third Order."
+  },
+  {
+   "role": "story",
+   "text": "Her confessor wrote that in prayer, Christ spoke to her.",
+   "scene": "A simple wooden crucifix on a dark wall, one candle, light falling from above."
+  },
+  {
+   "role": "story",
+   "text": "She was no longer anyone's mistress. She was a daughter of Saint Francis.",
+   "scene": "A small green shoot growing between the stones of a church floor, lit by a shaft of light."
+  }
+ ],
+ "next_voice": "Next, in Part Five: the house of mercy."
+}
