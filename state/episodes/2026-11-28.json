@@ -1,8 +1,389 @@
 {
  "id": "2026-11-28",
  "date": "2026-11-28",
- "status": "failed",
- "updated": "2026-11-21T10:21:12+00:00",
- "attempts": 1,
- "error": "CalledProcessError: Command '['npx', 'remotion', 'render', 'src/index.js', 'Episode', '/home/runner/work/AllSaints/AllSaints/work/2026-11-28/video.mp4', '--props=/home/runner/work/AllSaints/AllSaints/work/2026-11-28/props.json', '--codec=h264', '--crf=19', '--audio-bitrate=192k', '--x264-preset=medium', '--concurrency=100%', '--log=error']' returned non-zero exit status 1."
+ "status": "review",
+ "updated": "2026-11-21T14:57:57+00:00",
+ "attempts": 0,
+ "saint": {
+  "qid": "Q2716620",
+  "name": "Saint James of the Marches",
+  "display_name": "St. James of the Marches",
+  "dates": "c. 1393 – 1476",
+  "region": "Monteprandone, Italy",
+  "feast": "November 28",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q2716620",
+  "name": "James of the Marches",
+  "links": 14,
+  "enwiki": "James_of_the_Marches",
+  "images": [
+   "Carlo%20Crivelli%20St%20James%20of%20the%20Marches%201477.jpg",
+   "Francisco%20de%20Zurbaran%20James%20of%20the%20Marches.JPG"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Saint James of the Marches",
+  "birth": 1393,
+  "death": 1476,
+  "lon": 14.248611111,
+  "lat": 40.835833333,
+  "selection_reason": "James of the Marches (canonized 1726) has a vivid, well-documented life as an Observant Franciscan preacher who drew huge crowds, promoted the Monti di Pietà against usury, and travelled as a papal envoy across Europe. His feast falls on today's date, and the Catholic sources (Catholic Encyclopedia, Dicastery for the Causes of Saints, Santi e Beati) support fact-checking, whereas Sosthenes' identification and story are thin and uncertain.",
+  "catholic_veneration": "Canonized by Pope Benedict XIII in 1726; commemorated on 28 November in the Roman Martyrology and in the Franciscan calendar, with his body venerated at Santa Maria la Nova in Naples."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint James of the Marches",
+   "display_name": "St. James of the Marches",
+   "dates": "c. 1393 – 1476",
+   "region": "Monteprandone, Italy",
+   "feast": "November 28",
+   "martyr": false
+  },
+  "portrait": "A Franciscan friar in a plain grey-brown habit with a knotted cord, standing and facing the viewer with a calm, weathered face. In his right hand he holds a chalice with a small snake escaping from it. Behind him are the brick walls and rooftops of a hill town in the Marche under a soft gold sky.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Six times he received the last anointing, and still he kept preaching.",
+    "visual": "art",
+    "scene": "A gaunt Franciscan friar lies on a plain cot in a bare stone cell. A priest anoints his forehead while brothers in grey habits kneel around him with candles. A small crucifix hangs on the wall in fifteenth-century Italy."
+   },
+   {
+    "role": "who",
+    "text": "Saint James of the Marches, fifteenth century, born in Monteprandone, Italy.",
+    "visual": "map",
+    "lat": 42.8947,
+    "lon": 13.8097,
+    "place": "Monteprandone · Italy"
+   },
+   {
+    "role": "story",
+    "text": "He was born poor and minded animals as a boy. Yet he studied law, then became a Franciscan friar.",
+    "visual": "art",
+    "scene": "A poor boy in a rough tunic watches a few farm animals on a green hillside in the Marche. A small walled hill town with a bell tower rises behind him, and the Adriatic glints far off."
+   },
+   {
+    "role": "story",
+    "text": "His sermons were thunder. He spoke the people's language, with gestures and stories. No one dozed.",
+    "visual": "art",
+    "scene": "A Franciscan friar in a grey habit stands on an open-air wooden pulpit in a medieval Italian piazza, one arm raised in gesture. A packed crowd of townspeople in fifteenth-century dress listens, rapt, beneath a stone civic palace."
+   },
+   {
+    "role": "story",
+    "text": "He saw the poor trapped by usurers. So he set up the Monti di Pietà, lending houses that charged little.",
+    "visual": "art",
+    "scene": "Inside a modest Italian lending house, a Franciscan friar stands beside a table where a clerk receives a pledged cloak from a poor woman and hands her coins. Ordinary townspeople wait in line under a vaulted brick ceiling."
+   },
+   {
+    "role": "story",
+    "text": "Popes sent him to Hungary and Bosnia. Milan offered him a bishopric; he declined.",
+    "visual": "art",
+    "scene": "A Franciscan friar in a travel-worn grey habit walks a road with a companion friar toward a walled Central European town with church spires. Fields and distant hills stretch behind them in fifteenth-century dress and setting."
+   },
+   {
+    "role": "turn",
+    "text": "He kept seven Lents a year, yet mercy softened his fire. Preaching is holy when it lifts the poor.",
+    "visual": "art",
+    "scene": "A Franciscan friar sits alone at a rough wooden table in a bare cell, with a simple bowl of boiled beans before him. He gazes at a crucifix on the wall as light falls through a small window."
+   },
+   {
+    "role": "close",
+    "text": "Saint James of the Marches, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Monteprandone": "Mon-teh-pran-DOH-neh",
+   "Monti di Pietà": "MON-tee-dee-pyay-TAH"
+  },
+  "caption_hook": "A lawyer's training, a poor boy's roots, and a voice that moved whole cities.",
+  "summary": "Saint James of the Marches, a poor boy who minded animals, then a lawyer, then a Franciscan preacher, spoke in the squares of Italy and Central Europe, set up lending houses to free the poor from usury, and refused a bishop's throne.",
+  "youtube_title": "St. James of the Marches: The Friar Who Fought Usury",
+  "hashtags": [
+   "#saintjamesofthemarches",
+   "#monteprandone",
+   "#montidipieta",
+   "#franciscan",
+   "#naples",
+   "#marche",
+   "#catholicsaints",
+   "#saints",
+   "#italy",
+   "#preacher",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named James? Send them their saint.",
+  "claims": [
+   {
+    "claim": "James received Extreme Unction six times when gravely ill, yet endured the hard life of an itinerant preacher.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was born at Monteprandone in the Marche, Italy, to a poor family, around 1393 (dates of 1391 and 1394 are also given).",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "In personal memories he described his childhood as a minder of animals.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He studied at Offida, Ascoli and Perugia, where he took a doctorate in law.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Before entering the Order he worked in Florence, in the household of a noble family and as a judge of sorcerers (Wikipedia) and as an official in the Florentine administration (Santi e Beati).",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He entered the Friars Minor in 1416 near Assisi at Santa Maria degli Angeli, taking the name James; sources vary on the exact day.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He studied theology at Fiesole under Saint Bernardine of Siena and was ordained in 1420.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His sermons were like thunder, delivered in the vernacular with gestures and dramatized stories, so that no one could doze.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He preached against blasphemy, gambling, superstition, luxury and usury, and promoted devotion to the name of Jesus.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His preaching in cities led to reforms of civic statutes and to confraternities, for example at Jesi and Recanati.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He devised the Monti di Pietà to free the victims of usurers; they lent money at very low rates on pawned objects.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He fasted through seven Lents a year and on other days ate a bowl of beans cooked in water.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His severity was softened by mercy.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "From 1432 he was sent to Eastern Europe; he served in Bosnia and Hungary and was named inquisitor of Austria and Hungary.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "In Bosnia he met hostility from the ruler and queen.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In Hungary he faced persecution, attempts on his life, and an excommunication by the archdeacon of Bács.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1443 Pope Eugene IV named him apostolic nuncio to preach the crusade against the Turks, and in 1456 he was sent to Hungary as successor to John of Capistrano.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He declined the bishopric of Milan in 1460.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He is shown holding a chalice with a snake escaping, alluding to attempts by heretics to poison him or, less likely, to the Precious Blood controversy.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "At Brescia in 1462 he voiced a theological opinion on the Precious Blood, was summoned by the local inquisitor, and appealed to Rome, where no decision was given.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He gathered about two hundred codices in the library of Santa Maria delle Grazie at Monteprandone as a workshop for preachers.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His sources note harsh campaigns against dissidents and Jews, which must be weighed in their historical context.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He spent his last three years in Naples and died there on 28 November 1476; his last words were 'Jesus, Mary. Blessed be the Passion of Jesus.'",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was buried in the Franciscan church of Santa Maria la Nova in Naples; Naples venerates him as one of its patrons.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was beatified by Urban VIII in 1624 and canonized by Benedict XIII in 1726; his feast is 28 November.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology calls him outstanding for preaching and austerity of life.",
+    "source": 3,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "Marche",
+   "Naples"
+  ],
+  "places": [
+   "Monteprandone",
+   "Assisi",
+   "Perugia",
+   "Naples",
+   "Hungary"
+  ],
+  "story": [
+   "Domenico Gangala was born at Monteprandone, a town in the Marche of central Italy, along the Adriatic. The year is uncertain: most modern reckonings say 1393, while older works give 1391 and some traditions 1394. His family was poor. In personal memories he later recalled that as a child he minded animals, and that detail helps us see how unlikely his road to learning was.",
+   "A priest in his family took him to Offida for his first lessons, and he went on to Ascoli and then to the university at Perugia, where he took a doctorate in law. He lived in the house of a jurist, helped teach the household's children, and later followed his patron to Florence, where he served in the city's administration. Later biographers sometimes describe a sudden break with the world. The record suggests something slower, a calling that ripened in Tuscany among the Franciscans.",
+   "In 1416 he entered the Order of Friars Minor near Assisi, at Santa Maria degli Angeli, where the Observants lived. Sources differ on the exact day. He took the name James. He studied theology at Fiesole under Saint Bernardine of Siena, who became his teacher and friend, and he was ordained a priest in 1420. His penances were severe. He kept seven Lents each year, and on other days a bowl of beans boiled in water was his meal. Sick many times, he received the anointing of the dying six times, yet he went on with the tiring life of the travelling preacher. The one thing he feared, we are told, was that bodily pain might distract him from prayer.",
+   "His preaching was famous. From Bernardine he learned the use of voice and gesture, and he spoke in the language of ordinary people, with lively stories acted out before the crowd. His sermons rang like thunder, but they were full of Scripture, and he drew on Dante too. He spoke against blasphemy, gambling, superstition, luxury and above all usury, and he spread devotion to the Holy Name of Jesus. Trained in law, he saw sin as something that damaged contracts, debts and the common life of a city. In towns such as Jesi and Recanati his visits were followed by reforms of civic statutes, and confraternities were founded. To free the poor from moneylenders he devised the Monti di Pietà, charitable lending houses that gave small loans at very low rates against pawned goods.",
+   "From 1432 the popes sent him to Eastern Europe. He worked in Bosnia and Hungary, advised at the time of the Council of Basel, and was named inquisitor of Austria and Hungary. The work was dangerous. He met hostility in Bosnia, and in Hungary he faced persecution, attempts on his life, and an excommunication from a local archdeacon. In 1443 Pope Eugene IV named him apostolic nuncio to preach a crusade against the Turks, and when John of Capistrano died in 1456 James was sent to Hungary in his place. Artists show him holding a chalice with a snake slipping out of it, a sign of attempts by heretics to poison him, or, less likely, of a controversy over the Precious Blood. Our sources also note that his campaigns against dissenters and against Jews were harsh, and must be weighed honestly in their historical setting.",
+   "He was not without critics at home. The Observant Franciscans were growing and drew envy, and James suffered for it. In 1462, while preaching at Brescia, he voiced a theological opinion about the Precious Blood during the three days of Christ's burial. The local inquisitor summoned him, he appealed to Rome, and the question was argued before Pope Pius II, but no decision was ever given. Milan had offered him its bishopric two years earlier, and he had refused.",
+   "Late in life he gathered about two hundred manuscripts in the library of Santa Maria delle Grazie at Monteprandone, a workshop of sermons and Scripture for preachers who would fight error and save souls. Part of it survives today. He spent his last three years in Naples and died there on 28 November 1476, reportedly saying, 'Jesus, Mary. Blessed be the Passion of Jesus.' He was buried in the Franciscan church of Santa Maria la Nova. Pope Urban VIII beatified him in 1624, and Pope Benedict XIII canonized him in 1726. Naples counts him among its patrons, and the Marche remembers him as its own."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Hook said 'anointed for death'. The sources say he received Extreme Unction six times, so it now reads 'received the last anointing' (same word count).",
+   "Story: 'within sight of the Adriatic' and 'hill town' go beyond the sources, which say only that the region lies along the Adriatic. Reworded.",
+   "Story: Bernardine 'became his model' conflicts with Santi e Beati, which says the bond was discipleship and familiarity and should not be reduced to imitation. Changed to 'teacher and friend'.",
+   "Story: the chalice and snake is tied only to 'some endeavours of heretics' to poison him. Made that explicit.",
+   "Caption and summary call him a 'shepherd boy'. The sources say only that he minded animals. Reworded, and the boyhood scene now says 'farm animals' instead of 'sheep and goats'.",
+   "Summary said he 'filled the squares of Europe', which is hyperbole. Toned down to what the sources support (preached in Italy and Central/Eastern Europe).",
+   "Checked and fine: word count (about 118), hook under 14 words, map coordinates for Monteprandone, 'Saint' usage, six anointings, seven Lents and the bowl of beans, Monti di Pietà, Milan declined, 1443 nuncio, 1456 Hungary, Brescia 1462, last words, beatification and canonization dates, and the note on the harsh campaigns."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Sources disagree on birth year (1391, 1393, 1394) and entry date (26 July or 1 August 1416); the script uses 'fifteenth century' and 'c. 1393'. The Monti di Pietà are credited to him as the Dicastery and Wikipedia say. The sources give the Milan offer as 'bishopric' and 'archbishop', and the script follows the Catholic Encyclopedia. Check that the story's sentence on harsh campaigns against Jews reads as you want."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1411,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 666,
+   "thinking": 404
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2084,
+   "cache_write": 14306,
+   "cache_read": 0,
+   "out": 11314,
+   "thinking": 6700
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 5411,
+   "cache_write": 0,
+   "cache_read": 14306,
+   "out": 10317,
+   "thinking": 6547
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1942,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3670,
+   "thinking": 1489
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: James of the Marches",
+   "url": "https://en.wikipedia.org/wiki/James_of_the_Marches"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): James of the Marches",
+   "url": "https://www.newadvent.org/cathen/08278b.htm"
+  },
+  {
+   "title": "Dicastery for the Causes of Saints: James of the Marches",
+   "url": "https://www.causesanti.va/it/santi-e-beati/giacomo-della-marca.html"
+  },
+  {
+   "title": "Santi e Beati: James of the Marches",
+   "url": "https://www.santiebeati.it/dettaglio/35550"
+  },
+  {
+   "title": "Nominis (Église catholique en France): James of the Marches",
+   "url": "https://nominis.cef.fr/contenus/saint/141/Saint-Jacques-de-la-Marche.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 61.7,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Jacobo de la Marca",
+  "display_name": "San Jacobo",
+  "region": "Monteprandone, Italia",
+  "dates": "c. 1393 – 1476",
+  "hook": "La formación de un abogado, las raíces de un niño pobre y una voz que conmovió a ciudades enteras.",
+  "summary": "San Jacobo de la Marca, un niño pobre que cuidaba animales, después abogado y más tarde predicador franciscano, habló en las plazas de Italia y de Europa Central, fundó casas de préstamo para liberar a los pobres de la usura y rechazó el trono episcopal de una diócesis.",
+  "story": [
+   "Domenico Gangala nació en Monteprandone, una localidad de la región de las Marcas, en el centro de Italia, junto al Adriático. El año es incierto: la mayoría de los cálculos modernos indica 1393, mientras que obras más antiguas dan 1391 y algunas tradiciones, 1394. Su familia era pobre. En sus recuerdos personales relató más tarde que de niño cuidaba animales, y ese detalle nos ayuda a comprender lo improbable que era su camino hacia el estudio.",
+   "Un sacerdote de su familia lo llevó a Offida para sus primeras lecciones, y después continuó en Ascoli y luego en la universidad de Perugia, donde obtuvo el doctorado en derecho. Vivió en la casa de un jurista, ayudó a enseñar a los hijos de la familia y más tarde siguió a su protector a Florencia, donde sirvió en la administración de la ciudad. Algunos biógrafos posteriores describen una ruptura repentina con el mundo. Los documentos sugieren algo más lento: una vocación que maduró en la Toscana, entre los franciscanos.",
+   "En 1416 ingresó en la Orden de Frailes Menores cerca de Asís, en Santa María de los Ángeles, donde vivían los observantes. Las fuentes difieren en el día exacto. Tomó el nombre de Jacobo. Estudió teología en Fiésole bajo San Bernardino de Siena, que llegó a ser su maestro y amigo, y fue ordenado sacerdote en 1420. Sus penitencias eran severas. Observaba siete cuaresmas cada año y, en otros días, su comida era un cuenco de habas cocidas en agua. Enfermo en muchas ocasiones, recibió seis veces la unción de los moribundos, y aun así continuó con la fatigosa vida del predicador itinerante. Lo único que temía, según se nos dice, era que el dolor del cuerpo le distrajera de la oración.",
+   "Su predicación fue famosa. De Bernardino aprendió el uso de la voz y del gesto, y hablaba en la lengua de la gente sencilla, con historias vivas representadas ante la multitud. Sus sermones resonaban como truenos, pero estaban llenos de la Escritura, y recurría también a Dante. Habló contra la blasfemia, el juego, la superstición, el lujo y, sobre todo, la usura, y difundió la devoción al Santo Nombre de Jesús. Formado en derecho, veía el pecado como algo que dañaba los contratos, las deudas y la vida común de una ciudad. En localidades como Jesi y Recanati, sus visitas fueron seguidas por reformas de los estatutos municipales y por la fundación de cofradías. Para liberar a los pobres de los prestamistas ideó los Montes de Piedad, casas de préstamo caritativo que concedían pequeños créditos a intereses muy bajos a cambio de prendas.",
+   "A partir de 1432 los papas lo enviaron a Europa del Este. Trabajó en Bosnia y en Hungría, asesoró durante el Concilio de Basilea y fue nombrado inquisidor de Austria y Hungría. La labor era peligrosa. Encontró hostilidad en Bosnia, y en Hungría sufrió persecución, atentados contra su vida y una excomunión dictada por un arcediano local. En 1443 el papa Eugenio IV lo nombró nuncio apostólico para predicar una cruzada contra los turcos, y cuando Juan de Capistrano murió en 1456, Jacobo fue enviado a Hungría en su lugar. Los artistas lo representan sosteniendo un cáliz del que sale una serpiente, signo de los intentos de los herejes por envenenarlo o, menos probablemente, de una controversia sobre la Preciosa Sangre. Nuestras fuentes señalan también que sus campañas contra los disidentes y contra los judíos fueron duras, y deben valorarse con honestidad en su contexto histórico.",
+   "No careció de críticos en su propio país. Los franciscanos observantes crecían y despertaban envidia, y Jacobo sufrió por ello. En 1462, mientras predicaba en Brescia, expuso una opinión teológica sobre la Preciosa Sangre durante los tres días de la sepultura de Cristo. El inquisidor local lo citó, él apeló a Roma y la cuestión se debatió ante el papa Pío II, pero nunca se emitió una decisión. Dos años antes, Milán le había ofrecido su obispado, y él lo había rechazado.",
+   "Hacia el final de su vida reunió unos doscientos manuscritos en la biblioteca de Santa María de las Gracias, en Monteprandone, un taller de sermones y de Escritura para predicadores que combatieran el error y salvaran almas. Parte de ella se conserva hoy. Pasó sus últimos tres años en Nápoles y murió allí el 28 de noviembre de 1476, según se dice con estas palabras: «¡Jesús, María! Bendita sea la Pasión de Jesús». Fue sepultado en la iglesia franciscana de Santa María la Nueva. El papa Urbano VIII lo benefició en 1624, y el papa Benedicto XIII lo canonizó en 1726. Nápoles lo cuenta entre sus patronos, y las Marcas lo recuerdan como uno de los suyos."
+  ],
+  "prayer": "San Jacobo de la Marca, ruega por nosotros.",
+  "patronages": [
+   "Las Marcas",
+   "Nápoles"
+  ],
+  "places": [
+   "Monteprandone",
+   "Asís",
+   "Perugia",
+   "Nápoles",
+   "Hungría"
+  ]
+ },
+ "books": [],
+ "caption": "A lawyer's training, a poor boy's roots, and a voice that moved whole cities.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint James of the Marches · Feast day: November 28\nSaint James of the Marches, a poor boy who minded animals, then a lawyer, then a Franciscan preacher, spoke in the squares of Italy and Central Europe, set up lending houses to free the poor from usury, and refused a bishop's throne.\n\nSaint James of the Marches, pray for us. 🕯\n\nSave this to pray with again next November 28.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintjamesofthemarches #monteprandone",
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/art.jpg"
+ },
+ "review_message_id": 260
 }
