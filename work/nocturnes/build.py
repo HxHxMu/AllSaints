@@ -2,7 +2,7 @@
     ../.venv/bin/python build.py art|voice|video   (run from engine/ via sys.path)"""
 import json, subprocess, sys, concurrent.futures as cf
 from pathlib import Path
-sys.path.insert(0, "/Volumes/lebe/Dev/AllSaints/engine")
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "engine"))
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).parent   # shared: score.wav, fonts
@@ -10,7 +10,7 @@ ROOT = Path(__file__).parent   # shared: score.wav, fonts
 D = ROOT / sys.argv[sys.argv.index("--part") + 1] if "--part" in sys.argv else ROOT
 EP = json.loads((D / "episode.json").read_text())
 W, H = 1080, 1920
-FONTS = Path("/Volumes/lebe/Dev/AllSaints/brand/fonts")
+FONTS = Path(__file__).resolve().parents[2] / "brand/fonts"
 STYLE = ("A still frame from a 1920s German Expressionist silent film, in the manner of the great silent epics: "
          "black-and-white orthochromatic film, extreme chiaroscuro, a single hard light source, deep black shadows, long "
          "distorted shadows cast on walls and ground, theatrical painted sets with skewed angular architecture, mist and "
@@ -41,7 +41,18 @@ def voice():
         beats.append({"role": "close", "text": EP["next_voice"]}); paths.append(D / "voice" / "next.mp3")
     per = [tts._gemini_beat(b, {}, p) for b, p in zip(beats, paths)]
     tts._pace(per, paths)
+    trim(paths)
     print([round(tts.duration(p), 2) for p in paths])
+
+
+def trim(paths):
+    """Cut the silence Gemini leaves before and after a line (it varies by take; the pause between lines is GAP)."""
+    sr = "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08"
+    for p in paths:
+        t = p.with_suffix(".trim.mp3")
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(p), "-af", f"{sr},areverse,{sr},areverse",
+                        "-b:a", "192k", str(t)], check=True)
+        t.replace(p)
 
 
 # ---- video ----
@@ -51,6 +62,13 @@ def font(name, size):
 
 FRAK = ROOT / "UnifrakturMaguntia-Book.ttf"
 LIVE = "--live" in sys.argv
+# --timings f.json --audio f.mp4: rebuild a cut whose audio survived (after the 2026-11-20 drive loss, Part I's approved
+# master existed only as a 720p phone copy): segments take the measured durations [title, beat 1..n, question, next]
+# and the saved audio track is copied in unchanged instead of mixing voice and score again
+_arg = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
+TIMES = json.loads(Path(_arg("--timings")).read_text()) if _arg("--timings") else None
+AUDIO = _arg("--audio")
+GAP = 0.9   # pause after each line (lines are silence-trimmed; 0.35 s was the gap when takes kept their own pauses)
 SCORE_FROM, SCORE_END = EP.get("score", [0.0, 65.5])   # score.wav seconds; each part ends on a phrase dip
 INK, PAPER = (12, 11, 10), (226, 219, 203)
 
@@ -126,21 +144,23 @@ def video():
     def still(img, secs, name):
         o = out / f"{name}.mp4"
         subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-loop", "1", "-framerate", str(fps), "-t", f"{secs:.3f}", "-i", str(img),
-                        "-vf", f"scale={W}:{H},format=yuv420p", "-r", str(fps), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
+                        "-vf", f"scale={W}:{H},format=yuv420p", "-r", str(fps), "-frames:v", str(round(secs * fps)), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
         return o
     # Part I runs on the score from its start (organ intro under the title) to its phrase end at 65.5 s; the cards
     # take up the difference, so the music breathes on them
-    beats = sum(dur(D / "voice" / f"{i}.mp3") + 0.35 for i in range(len(EP["beats"])))
+    beats = sum(dur(D / "voice" / f"{i}.mp3") + GAP for i in range(len(EP["beats"])))
     spare = SCORE_END - SCORE_FROM - beats
     # the narrator voices the teaser over the "next" card (Luis, 2026-11-18: an open story can't end on "pray for us")
     nv = D / "voice" / "next.mp3" if EP.get("next_voice") else None   # the last part has no teaser: an end card
     t_next = dur(nv) + 1.4 if nv else 5.0
     spare -= t_next
     t_title, t_q = spare * 0.45, spare * 0.55
+    if TIMES:
+        t_title, t_q, t_next = TIMES[0], TIMES[-2], TIMES[-1]
     segs.append((still(out / "card-title.jpg", t_title, "s00"), t_title, None))
     for i, b in enumerate(EP["beats"]):
         v = D / "voice" / f"{i}.mp3"
-        secs = dur(v) + 0.35
+        secs = TIMES[1 + i] if TIMES else dur(v) + GAP
         caption(out / f"cap{i}.png", b["text"])
         n = int(secs * fps)
         z = {"in": f"1.0+0.10*on/{n}", "out": f"1.10-0.10*on/{n}"}.get(moves[i % len(moves)], "1.08")
@@ -149,12 +169,12 @@ def video():
         clip = D / "live" / f"{i + 1}.mp4"
         if LIVE and clip.exists():  # Luis's live-action clips (any length >= the beat, 24 fps): cover-crop, grade to the series look;
             # shots without a clip fall back to the still in art/ with a slow push (mixed parts, 2026-11-18)
-            ss = max(0.0, dur(clip) - secs) if i == len(EP["beats"]) - 1 else 0.0   # the prayer: end on her face
+            ss = max(0.0, dur(clip) - secs - 0.5) if i == len(EP["beats"]) - 1 else 0.0   # the prayer: end on her face
             sat = 0.0 if i == 3 else 0.3   # keep a trace of amber in flame and lantern; shot 4 came out sepia
             subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-ss", f"{ss:.2f}", "-i", str(clip), "-i", str(out / f"cap{i}.png"),
                             "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
                             f"hue=s={sat},colorbalance=bs=0.06:bm=0.04:rs=-0.03,eq=contrast=1.12:gamma=0.95[bg];[bg][1:v]overlay=0:0,format=yuv420p[v]",
-                            "-map", "[v]", "-t", f"{secs:.3f}", "-r", str(fps), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
+                            "-map", "[v]", "-r", str(fps), "-frames:v", str(round(secs * fps)), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
             segs.append((o, secs, v))
             if i == len(EP["beats"]) - 1:
                 segs.append((still(out / "card-question.jpg", t_q, "s07q"), t_q, None))
@@ -163,7 +183,7 @@ def video():
                         "-i", str(D / "art" / f"{i}.jpg"), "-i", str(out / f"cap{i}.png"), "-filter_complex",
                         f"[0:v]scale={W * 2}:{H * 2},zoompan=z='{z}':x='{x}':y='(ih-ih/zoom)/2':d=1:s={W}x{H}:fps={fps},"
                         f"hue=s=0,eq=contrast=1.15[bg];[bg][1:v]overlay=0:0,format=yuv420p[v]",
-                        "-map", "[v]", "-t", f"{secs:.3f}", "-r", str(fps), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
+                        "-map", "[v]", "-r", str(fps), "-frames:v", str(round(secs * fps)), "-c:v", "libx264", "-crf", "16", str(o)], check=True)
         segs.append((o, secs, v))
         if i == len(EP["beats"]) - 1:  # the question card, after the prayer (Luis, 2026-11-17)
             segs.append((still(out / "card-question.jpg", t_q, "s07q"), t_q, None))
@@ -185,7 +205,7 @@ def video():
     music = str(ROOT / "score.wav")
     nb = len(delays)
     n = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}.get(EP["part"], EP["part"])
-    final = D / f"nocturnes-margaret-part{n}{'-live' if LIVE else ''}.mp4"
+    final = D / f"nocturnes-margaret-part{n}{'-live' if LIVE else ''}{'-approved' if AUDIO else ''}.mp4"
     # film look: grain, flicker (brightness wobble), vignette, gate weave; music low under the voice, louder on cards
     look = (f"[0:v]noise=alls=22:allf=t,eq=brightness='0.025*sin(2*PI*t*7.3)+0.015*sin(2*PI*t*2.1)':eval=frame,"
             f"vignette=PI/4.2,crop={W - 16}:{H - 16}:8+3*sin(t*5):8+3*cos(t*4.3),scale={W}:{H},"
@@ -201,6 +221,12 @@ def video():
              f"[{nb + 1}:a]atrim={SCORE_FROM}:{SCORE_FROM + total:.2f},asetpts=PTS-STARTPTS,afade=t=in:d=0.6,volume=0.9,"
              f"volume='{duck}':eval=frame,afade=t=out:st={total - 1.6:.2f}:d=1.6[bed];"
              f"[nar][bed]amix=inputs=2:normalize=0,apad[a]")
+    if AUDIO:  # the approved mix as it was: picture graded here, audio stream copied untouched
+        subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-i", str(pic), "-i", AUDIO, "-filter_complex", look,
+                        "-map", "[v]", "-map", "1:a", "-t", f"{total:.3f}", "-c:v", "libx264", "-crf", "21", "-preset", "slow",
+                        "-tune", "grain", "-r", str(fps), "-c:a", "copy", "-movflags", "+faststart", str(final)], check=True)
+        print(final, round(total, 2), "s")
+        return
     subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-i", str(pic), *inputs, "-i", music,
                     "-filter_complex", f"{look};{audio}", "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}",
                     "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-r", str(fps), "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
@@ -216,4 +242,4 @@ def video():
 
 
 if __name__ == "__main__":
-    {"art": art, "voice": voice, "video": video}[sys.argv[1]]()
+    {"art": art, "voice": voice, "trim": lambda: trim(sorted((D / "voice").glob("*.mp3"))), "video": video}[sys.argv[1]]()

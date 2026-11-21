@@ -2,7 +2,7 @@
 by giving Gemini frames of her from Part I as reference.   python startframes.py part2 2 4 5 8"""
 import base64, json, sys, concurrent.futures as cf
 from pathlib import Path
-sys.path.insert(0, "/Volumes/lebe/Dev/AllSaints/engine")
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "engine"))
 import illustrate
 from common import env, http, log
 
