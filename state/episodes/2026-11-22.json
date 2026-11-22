@@ -2,7 +2,7 @@
  "id": "2026-11-22",
  "date": "2026-11-22",
  "status": "approved",
- "updated": "2026-11-15T13:07:37+00:00",
+ "updated": "2026-11-22T12:31:13+00:00",
  "saint": {
   "qid": "Q709209",
   "name": "Saint Philemon",
@@ -278,7 +278,8 @@
    "Colosas",
    "Frigia",
    "Asia Menor"
-  ]
+  ],
+  "slug": "filemon"
  },
  "books": [],
  "caption": "A letter of only twenty-five verses asks one man to forgive another.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Philemon · Feast day: November 22\nSaint Philemon, a Christian of Colossae, received Paul's short letter asking him to welcome the runaway Onesimus as a brother, and the Church remembers him for his charity.\n\nMercy is a choice, made freely, at our own door. Saint Philemon, pray for us. 🕯\n\nSave this to pray with again next November 22.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintphilemon #colossae",
@@ -293,5 +294,21 @@
  "location": {
   "name": "Colossae",
   "id": "100086763755011"
- }
+ },
+ "slug": "philemon",
+ "youtube": {
+  "id": "kfYi4U3_q1I",
+  "url": "https://youtube.com/shorts/kfYi4U3_q1I",
+  "privacy": "public",
+  "published_at": "2026-11-22T07:31-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of the Middle East"
+  ],
+  "playlists_done": true
+ },
+ "continent": "the Middle East",
+ "publish_error": "location 100086763755011 rejected | video_url container failed: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18127563508932611'} | resumable create failed: {\"error\":{\"message\":\"The parameter video_url is required\",\"type\":\"IGApiException\",\"code\":100,\"fbtrace_id\":\"AqnJU2jKsnqq3jq_njNzio5\"}}",
+ "publish_attempts": 1
 }
