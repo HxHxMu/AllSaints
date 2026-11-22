@@ -7,7 +7,7 @@
   "question": "What would you give\nto be forgiven?",
   "score": [
     127.5,
-    182.5
+    189.0
   ],
   "beats": [
     {
@@ -27,7 +27,7 @@
     {
       "role": "story",
       "text": "It was not enough for her.",
-      "scene": "A small window at night, rain on the sill, a candle guttering."
+      "scene": "An empty bare room at night, no people: a small window with rain running down the glass and dripping from the sill, a single candle guttering on the sill."
     },
     {
       "role": "story",
@@ -36,7 +36,7 @@
     {
       "role": "story",
       "text": "a cord around her neck,",
-      "scene": "Close detail: a coarse rope cord knotted at a woman's throat over dark wool, hard light."
+      "scene": "Close detail: a woman's hands clasped in prayer at her chest over dark wool, the frayed end of a rough penitent's cord running through her fingers; hard side light."
     },
     {
       "role": "story",
@@ -48,5 +48,6 @@
       "scene": "A row of shadowed faces in church pews, some turned away."
     }
   ],
-  "next_voice": "Next, in Part Four: the habit."
+  "next_voice": "Next, in Part Four: the habit.",
+  "gap": 1.4
 }
