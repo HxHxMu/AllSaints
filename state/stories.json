@@ -121,5 +121,11 @@
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/sung-pange-lingua/teaser-story.mp4",
   "status": "pending",
   "note": "Sung-prayer teaser (Holy Thursday). Add to the Music highlight within 24 h."
+ },
+ {
+  "id": "music-2026-11-22",
+  "at": "2026-11-22T15:00-05:00",
+  "status": "skipped",
+  "reason": "Christ the King"
  }
 ]
