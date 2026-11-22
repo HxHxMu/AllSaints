@@ -1,8 +1,8 @@
 {
  "id": "2026-11-22",
  "date": "2026-11-22",
- "status": "approved",
- "updated": "2026-11-22T12:31:13+00:00",
+ "status": "published",
+ "updated": "2026-11-22T12:43:50+00:00",
  "saint": {
   "qid": "Q709209",
   "name": "Saint Philemon",
@@ -310,5 +310,27 @@
  },
  "continent": "the Middle East",
  "publish_error": "location 100086763755011 rejected | video_url container failed: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18127563508932611'} | resumable create failed: {\"error\":{\"message\":\"The parameter video_url is required\",\"type\":\"IGApiException\",\"code\":100,\"fbtrace_id\":\"AqnJU2jKsnqq3jq_njNzio5\"}}",
- "publish_attempts": 1
+ "publish_attempts": 1,
+ "published": {
+  "media_id": "18121858142005727",
+  "permalink": "https://www.instagram.com/reel/DgC09FclbSy/",
+  "location_id": null,
+  "location": "Colossae (rejected, posted untagged)"
+ },
+ "published_at": "2026-11-22T07:40-05:00",
+ "facebook": {
+  "id": "2693132394538563",
+  "url": "https://www.facebook.com/reel/2693132394538563/",
+  "published_at": "2026-11-22T07:42-05:00"
+ },
+ "threads": {
+  "id": "18456084355127161",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgC1KvCPqhg",
+  "published_at": "2026-11-22T07:43-05:00"
+ },
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7710975341531056159",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-22T07:43-05:00"
+ }
 }
