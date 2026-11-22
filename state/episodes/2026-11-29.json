@@ -1,0 +1,354 @@
+{
+ "id": "2026-11-29",
+ "date": "2026-11-29",
+ "status": "review",
+ "updated": "2026-11-22T10:25:53+00:00",
+ "saint": {
+  "qid": "Q512156",
+  "name": "Saint Saturnin",
+  "display_name": "St. Saturnin",
+  "dates": "died c. 250",
+  "region": "Toulouse, France",
+  "feast": "November 29",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q512156",
+  "name": "Saturninus",
+  "links": 28,
+  "enwiki": "Saturnin",
+  "images": [
+   "Saturninus%20vignay.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Saturnin of Toulouse",
+  "birth": 300,
+  "death": 257,
+  "lon": 1.443888888,
+  "lat": 43.604438888,
+  "selection_reason": "Saturnin of Toulouse, first bishop of Toulouse, was dragged to his death by a bull from the capitol steps; the story is vivid and early (the Passio, the Catholic Encyclopedia, and the great basilica of Saint-Sernin built over his tomb), and it brings France into the series and the Decian-era mission to Gaul, which has not appeared recently.",
+  "catholic_veneration": "Roman Martyrology, memorial on 29 November as martyr and first bishop of Toulouse; one of the seven 'Apostles to the Gauls'; a pre-congregation saint with a long-established cult, especially in Toulouse."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Saturnin",
+   "display_name": "St. Saturnin",
+   "dates": "died c. 250",
+   "region": "Toulouse, France",
+   "feast": "November 29",
+   "martyr": true
+  },
+  "portrait": "A third-century bishop in a plain white tunic and a simple bishop's pallium band, holding a shepherd's crook in one hand and a martyr's palm in the other, facing the viewer calmly. Behind him stand the brick walls of a Roman Gaulish town and the small doorway of a modest church.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says priests blamed silent oracles on one bishop's walk to church.",
+    "visual": "art",
+    "scene": "A bishop in a plain white tunic walks along a Roman street in a Gaulish town, past the columns of a pagan temple. Robed pagan priests stand on the temple steps and watch him with troubled faces."
+   },
+   {
+    "role": "who",
+    "text": "Saint Saturnin, first bishop of Toulouse, France, in the third century.",
+    "visual": "map",
+    "lat": 43.6047,
+    "lon": 1.4442,
+    "place": "Toulouse · France"
+   },
+   {
+    "role": "story",
+    "text": "He reached Toulouse around the year two hundred fifty, when Christians in Gaul were few.",
+    "visual": "art",
+    "scene": "A bishop arrives at the brick gate of a Roman town in southern Gaul, carrying a staff, with a few humble townspeople nearby. Low red-tiled roofs and a Roman road lie behind them."
+   },
+   {
+    "role": "story",
+    "text": "One day the priests seized him and ordered him to sacrifice to their idols. He refused, and would not be moved.",
+    "visual": "art",
+    "scene": "Before the columned Roman capitol, pagan priests and a crowd surround the calm, upright bishop and point to an altar. The bishop stands firm with his hands lowered, and a bull waits nearby."
+   },
+   {
+    "role": "story",
+    "text": "According to the Acts, they tied him by the feet to a bull, and he died a martyr.",
+    "visual": "art",
+    "scene": "A devotional icon of the bishop's martyrdom, shown with restraint. The bishop lies bound by a rope to a bull in a Roman street before the capitol, his face serene, and angels with a palm wait above him."
+   },
+   {
+    "role": "story",
+    "text": "Two Christian women gathered his remains and buried them in a deep ditch. Today his body rests in the great basilica of Saint Sernin.",
+    "visual": "art",
+    "scene": "Two women in plain Roman-era veils and tunics lay a shrouded body into a deep earthen grave at dusk. Beside them, a faint vision of a great Romanesque basilica with a tall brick bell tower rises in the sky."
+   },
+   {
+    "role": "turn",
+    "text": "He kept to his road and would not bow to idols. Faithful steps, taken daily, can outlast a city's gods.",
+    "visual": "art",
+    "scene": "The bishop in white walks steadily along an old Roman road toward a small humble church, carrying his shepherd's staff. The pagan capitol stands in the background and golden morning light falls on the church door."
+   },
+   {
+    "role": "close",
+    "text": "Saint Saturnin, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Saturnin": "Sa-tur-NAN",
+   "Sernin": "Sair-NAN",
+   "Toulouse": "Too-LOOZ"
+  },
+  "caption_hook": "He never fought the temple. He only kept walking to church.",
+  "summary": "Saint Saturnin, the first bishop of Toulouse, refused to sacrifice to pagan gods around the year 250, and the Church has honored his martyrdom ever since.",
+  "youtube_title": "St. Saturnin: The Bishop of Toulouse and the Silent Oracles",
+  "hashtags": [
+   "#saintsaturnin",
+   "#toulouse",
+   "#saintsernin",
+   "#apostlestothegauls",
+   "#firstbishop",
+   "#catholicmartyrs",
+   "#earlychurch",
+   "#france",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#allsaints",
+   "#thesaintstheworldforgot"
+  ],
+  "share_cta": "Know someone named Saturnin or Sernin? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Saturnin was the first bishop of Toulouse.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He came to Toulouse during the consulate of Decius and Gratus, around the year 250.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Christian communities in Gaul were few and small at the time.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "To reach his church he had to pass before the capitol, where there was a temple.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "According to the Acts, the pagan priests ascribed the silence of their oracles to his frequent passings.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to the Acts, the priests seized him, and he refused unshakeably to sacrifice to the idols.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to the Acts, he was condemned to be tied by the feet to a bull, which dragged him about the town until the rope broke.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Two Christian women gathered his remains and buried them in a deep ditch so the pagans would not profane them.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "His successors Hilary and Exuperius gave him a more honourable burial.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "A church was erected where the bull stopped; it is called the church of the Taur.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "His body was transferred early and is preserved in the church of Saint Sernin, one of the most ancient and beautiful in southern France.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His feast is on 29 November, listed in the Hieronymian Martyrology and the Roman Martyrology.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Legends linking him to the founding of the churches of Eauze, Auch, Pamplona and Amiens have no historic foundation.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He is counted among the missionaries sent to evangelize Gaul around 250, as was Denis of Paris.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Fabian is thought to have sent seven bishops to Gaul after the Decian persecution had nearly dissolved the small Christian communities.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Acts of Saturninus were used by Gregory of Tours.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Legend says he was sent by Saint Peter; he most probably had no link with the apostles and came from the East or Africa.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The Passio Saturnini was written between 430 and 450 and is an important document for the early Church in Gaul.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He is regarded as protector of bullfights, and as patron of Pamplona and Toulouse.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "A Christian community with a bishop named Saturnin existed in Toulouse in the mid-third century, and its witness probably reached the Albi region.",
+    "source": 3,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "bullfights",
+   "Pamplona",
+   "Toulouse"
+  ],
+  "places": [
+   "Toulouse",
+   "Pamplona",
+   "Gaul"
+  ],
+  "story": [
+   "Saturnin of Toulouse, also called Sernin or Saturninus, is remembered as the first bishop of Toulouse in southern France. He was one of the missionaries who carried the Gospel into Gaul in the middle of the third century. Wikipedia reports that Pope Fabian is thought to have sent seven bishops from Rome after the persecution under the Emperor Decius had nearly dissolved the small Christian communities there. Saturnin went to Toulouse, and Denis went to Paris. Church tradition dates Saturnin's arrival to the year 250, when Decius and Gratus were consuls.",
+   "It is difficult to separate history from legend in his story, and the sources say so plainly. Legend holds that Saint Peter himself sent him, and a later account even made him one of the seventy-two disciples of Christ. Modern Catholic reference works judge that he most probably had no link with the apostles. He may have come from the East, or from Africa, since his name is an African one. The safest statement is that he was one of the missionary bishops who came to Gaul around 250 and founded the see of Toulouse.",
+   "Our best account is the Acts of his martyrdom, called the Passio. It was written, according to Piero Bargellini, between 430 and 450, and Gregory of Tours made use of it. The Acts tell of a Gaul where Christian communities were few and small, while the pagan temples were crowded with people offering sacrifice. Saturnin's preaching nonetheless won converts, and he soon had a little church in the city.",
+   "To reach that church, the Acts say, he had to pass before the capitol, the city's principal pagan temple. The pagan priests there sacrificed animals to receive answers from their gods, and, according to the Acts, they blamed his frequent passing for the silence of their oracles. In time, Bargellini notes, a crowd gathered around him.",
+   "According to the Acts, the priests seized him one day and demanded that he sacrifice to their idols. He refused, and the sources describe his refusal as unshakeable. One later account adds that he declared he did not fear the thunderbolts of Jupiter. The priests condemned him to be tied by the feet to a bull, which dragged him about the town until the rope broke. The Roman Martyrology gives a shorter record, that he was a bishop and martyr of Toulouse who died under Decius, around the year 250. The sources differ in some details, but they agree that he died a martyr at the hands of the pagans of Toulouse.",
+   "The Acts say that two Christian women gathered up his remains and buried them in a deep ditch, so that the pagans could not profane them. Once the Church could worship in peace, his successors Hilary and Exuperius gave him a more honourable burial. Tradition marks the place where the bull stopped, and a church was built there. It is known as the church of the Taur, which means the bull, and the old street leading there still bears the name. Later his body was moved to the church that bears his name, Saint Sernin. The Catholic Encyclopedia calls it one of the most ancient and beautiful churches of southern France, and it houses his relics today.",
+   "His cult spread far beyond Toulouse. Many places in France and Spain are named for him, and he is honoured as a patron of Pamplona. He is remembered as protector of bullfights, and his feast is kept on 29 November. Later legends linked him to the founding of the churches of Eauze, Auch, Pamplona and Amiens, but the Catholic Encyclopedia says these have no historic foundation. What remains certain is that a bishop named Saturnin led the Church in Toulouse in the middle of the third century. He gave his life rather than deny Christ, and the witness of that early community, the diocese of Albi holds, probably reached the lands beyond the city."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Hook stated the oracle-silence story as plain fact. The sources attribute it to the Acts (tradition). Rephrased with 'Tradition says', still under 14 words.",
+   "Story beat 1 said Christians 'there' (Toulouse) were few. The Catholic Encyclopedia says it is unknown whether Christians were already in the town, and the Passio speaks of Gaul generally. Changed to 'in Gaul'. Art scene softened so it no longer shows a Christian welcome party.",
+   "Story paragraph 2 credited 'the later martyrology' with making him one of the seventy-two disciples. Wikipedia attributes that to the Acts, and the martyrology only supplies the genealogy. Changed to 'a later account'.",
+   "Story paragraph 4 called the capitol 'the temple at the heart of Toulouse'. The sources say only that it was the principal pagan temple (Jupiter Capitolinus), and Wikipedia places it near Place Esquirol. Changed to 'the city's principal pagan temple'.",
+   "Story paragraph 5 called the Roman Martyrology's entry a 'shorter record' of the bull story. It actually gives a different tradition (seized at the capitol and cast down its steps). Corrected so the two accounts are not merged.",
+   "Story paragraph 5 said all sources agree he died for refusing to sacrifice. The Roman Martyrology does not mention a refusal. Narrowed to 'died a martyr at the hands of the pagans of Toulouse'.",
+   "Story paragraph 7 said places are named for him 'including Pamplona'. Only a borough of Pamplona (Burgo de San Cernín) bears his name. Reworded.",
+   "Story paragraph 7 presented the Albi region's reception of his witness as certain. The sources say 'probably' (fort vraisemblable). Added the hedge."
+  ],
+  "confidence": 85,
+  "reviewer_note": "Sources disagree on the manner of death (bull per Catholic Encyclopedia and Wikipedia; thrown from capitol steps per the Roman Martyrology). Script follows the bull account, hedged with 'According to the Acts'. Check that the story find strings match the paragraph text exactly, especially the Roman Martyrology sentence, which the story writes as 'around the year 250' in digits."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2162,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1154,
+   "thinking": 927
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2047,
+   "cache_write": 8790,
+   "cache_read": 0,
+   "out": 12157,
+   "thinking": 8279
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4627,
+   "cache_write": 0,
+   "cache_read": 8790,
+   "out": 9842,
+   "thinking": 5863
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1706,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3023,
+   "thinking": 1070
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Saturnin",
+   "url": "https://en.wikipedia.org/wiki/Saturnin"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Saturninus",
+   "url": "https://www.newadvent.org/cathen/13486b.htm"
+  },
+  {
+   "title": "Santi e Beati: Saturninus",
+   "url": "https://www.santiebeati.it/dettaglio/79700"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Saturninus",
+   "url": "https://nominis.cef.fr/contenus/saint/9431/Saint-Sernin.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 61.9,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Saturnino de Toulouse",
+  "display_name": "San Saturnino",
+  "region": "Toulouse, Francia",
+  "dates": "murió c. 250",
+  "hook": "Nunca luchó contra el templo. Solo seguía caminando hacia la iglesia.",
+  "summary": "San Saturnino, primer obispo de Toulouse, se negó a sacrificar a los dioses paganos hacia el año 250, y la Iglesia ha honrado su martirio desde entonces.",
+  "story": [
+   "Saturnino de Toulouse, también llamado Sernin o Saturninus, es recordado como el primer obispo de Toulouse, en el sur de Francia. Fue uno de los misioneros que llevaron el Evangelio a la Galia a mediados del siglo III. Wikipedia informa que se cree que el papa san Fabián envió desde Roma a siete obispos después de que la persecución del emperador Decio casi hubiera disuelto las pequeñas comunidades cristianas de la zona. Saturnino fue a Toulouse, y Dionisio fue a París. La tradición de la Iglesia fecha la llegada de Saturnino en el año 250, cuando Decio y Grato eran cónsules.",
+   "Es difícil separar la historia de la leyenda en su relato, y las fuentes lo reconocen con claridad. Según la leyenda, fue el propio san Pedro quien lo envió, y un relato posterior lo convirtió incluso en uno de los setenta y dos discípulos de Cristo. Las obras de referencia católicas modernas consideran que lo más probable es que no tuviera ninguna relación con los apóstoles. Pudo haber llegado desde Oriente o desde África, ya que su nombre es de origen africano. La afirmación más prudente es que fue uno de los obispos misioneros que llegaron a la Galia hacia el año 250 y fundaron la sede de Toulouse.",
+   "Nuestro mejor testimonio son las Actas de su martirio, llamadas Passio. Según Piero Bargellini, fue redactada entre los años 430 y 450, y Gregorio de Tours la utilizó. Las Actas describen una Galia donde las comunidades cristianas eran escasas y pequeñas, mientras que los templos paganos estaban llenos de personas que ofrecían sacrificios. Sin embargo, la predicación de Saturnino logró conversiones, y pronto tuvo una pequeña iglesia en la ciudad.",
+   "Para llegar a esa iglesia, según las Actas, tenía que pasar frente al Capitolio, el principal templo pagano de la ciudad. Los sacerdotes paganos sacrificaban animales para recibir respuestas de sus dioses y, según las Actas, culpaban a sus frecuentes paseos por allí del silencio de sus oráculos. Con el tiempo, observa Bargellini, se formó una multitud a su alrededor.",
+   "Según las Actas, un día los sacerdotes lo apresaron y le exigieron que sacrificara a sus ídolos. Él se negó, y las fuentes describen su negativa como inquebrantable. Un relato posterior añade que declaró no temer los rayos de Júpiter. Los sacerdotes lo condenaron a ser atado por los pies a un toro, que lo arrastró por la ciudad hasta que la cuerda se rompió. El Martirologio Romano ofrece un registro más breve: que fue obispo y mártir de Toulouse, y que murió bajo Decio, hacia el año 250. Las fuentes difieren en algunos detalles, pero coinciden en que murió como mártir a manos de los paganos de Toulouse.",
+   "Las Actas cuentan que dos mujeres cristianas recogieron sus restos y los enterraron en una zanja profunda, para que los paganos no los profanaran. Cuando la Iglesia pudo rendir culto en paz, sus sucesores Hilario y Exuperio le dieron una sepultura más honrosa. La tradición señala el lugar donde se detuvo el toro, y allí se construyó una iglesia. Se conoce como la iglesia del Taur, que significa el toro, y la antigua calle que conduce a ella aún conserva ese nombre. Más tarde, su cuerpo fue trasladado a la iglesia que lleva su nombre, San Sernín. La Enciclopedia Católica la describe como una de las iglesias más antiguas y bellas del sur de Francia, y hoy alberga sus reliquias.",
+   "Su culto se extendió mucho más allá de Toulouse. Numerosos lugares de Francia y España llevan su nombre, y es venerado como patrón de Pamplona. Se le recuerda como protector de las corridas de toros, y su fiesta se celebra el 29 de noviembre. Leyendas posteriores lo vincularon con la fundación de las iglesias de Eauze, Auch, Pamplona y Amiens, pero la Enciclopedia Católica afirma que estas no tienen un fundamento histórico. Lo que permanece cierto es que un obispo llamado Saturnino dirigió la Iglesia en Toulouse a mediados del siglo III. Entregó su vida antes que negar a Cristo, y el testimonio de aquella primera comunidad, sostiene la diócesis de Albi, probablemente llegó a las tierras más allá de la ciudad."
+  ],
+  "prayer": "San Saturnino, ruega por nosotros.",
+  "patronages": [
+   "corridas de toros",
+   "Pamplona",
+   "Toulouse"
+  ],
+  "places": [
+   "Toulouse",
+   "Pamplona",
+   "la Galia"
+  ]
+ },
+ "books": [],
+ "caption": "He never fought the temple. He only kept walking to church.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Saturnin · Feast day: November 29\nSaint Saturnin, the first bishop of Toulouse, refused to sacrifice to pagan gods around the year 250, and the Church has honored his martyrdom ever since.\n\nSaint Saturnin, pray for us. 🕯\n\nHad you ever heard of St. Saturnin before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintsaturnin #toulouse",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-29/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-29/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-29/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-29/art.jpg"
+ },
+ "review_message_id": 262
+}
