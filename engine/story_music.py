@@ -66,8 +66,12 @@ def _week(day, stories=None):
     if day <= PIVOT:
         return (day - MUSIC_FROM).days // 7
     s = PIVOT + dt.timedelta(days=7)
+    items = load_json(FILE, []) if stories is None else stories
+    # a Sunday counts if it was free, or if its music card went out anyway (Christ the King 2026, posted late by hand)
+    sent = {x["id"] for x in items if x["id"].startswith("music-") and x.get("status") in ("pending", "posted")}
     return (PIVOT - MUSIC_FROM).days // 7 + sum(1 for k in range((day - s).days // 7)
-                                                if not _why_not(s + dt.timedelta(days=7 * k), stories)) + 1
+                                                if f"music-{s + dt.timedelta(days=7 * k)}" in sent
+                                                or not _why_not(s + dt.timedelta(days=7 * k), stories)) + 1
 
 
 def _music_pick(day, stories=None):

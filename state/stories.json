@@ -124,8 +124,12 @@
  },
  {
   "id": "music-2026-11-22",
-  "at": "2026-11-22T15:00-05:00",
-  "status": "skipped",
-  "reason": "Christ the King"
+  "at": "2026-11-23T00:55-05:00",
+  "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-22.jpg",
+  "status": "pending",
+  "album": "Blue Chant",
+  "track": "Trinitas",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/story-4.mp4",
+  "note": "Christ the King Sunday: the rule skipped it; Luis asked to post it anyway (late, Mon ~1 AM ET)"
  }
 ]

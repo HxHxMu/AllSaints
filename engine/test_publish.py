@@ -261,6 +261,8 @@ class Stories(unittest.TestCase):
             self.assertEqual(pick(dt.date(2026, 11, 15)), 3)   # Veritatis, as posted
             self.assertEqual(pick(dt.date(2026, 12, 6)), 4)    # Christ the King and Advent I held track IV, not skipped it
             self.assertEqual(pick(dt.date(2027, 1, 10)), 6)    # O Antiphons, Christmas, Epiphany held VI
+            posted = [{"id": "music-2026-11-22", "at": "2026-11-23T00:55-05:00", "status": "posted"}]
+            self.assertEqual(story_music._music_pick(dt.date(2026, 12, 6), posted)[1], 5)  # IV went out on Christ the King anyway
 
     def test_music_short_text(self):
         import json, story_music
