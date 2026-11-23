@@ -126,10 +126,22 @@
   "id": "music-2026-11-22",
   "at": "2026-11-23T00:55-05:00",
   "image": "https://github.com/HxHxMu/AllSaints/releases/download/stories-music-2026/2026-11-22.jpg",
-  "status": "pending",
+  "status": "posted",
   "album": "Blue Chant",
   "track": "Trinitas",
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/music-blue-chant-vol1/story-4.mp4",
-  "note": "Christ the King Sunday: the rule skipped it; Luis asked to post it anyway (late, Mon ~1 AM ET)"
+  "note": "Christ the King Sunday: the rule skipped it; Luis asked to post it anyway (late, Mon ~1 AM ET)",
+  "posted": {
+   "media_id": "18381623080300351",
+   "permalink": "https://www.instagram.com/stories/all.holy.saints/4036544778240940121"
+  },
+  "posted_at": "2026-11-23T01:00-05:00",
+  "facebook": {
+   "id": "1678141807017415"
+  },
+  "youtube": {
+   "id": "8x0u9bC6C_U",
+   "url": "https://youtube.com/shorts/8x0u9bC6C_U"
+  }
  }
 ]
