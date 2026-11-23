@@ -8,7 +8,10 @@ def build_title(ep):
     s = ep["script"]
     name = s["saint"].get("display_name") or s["saint"]["name"]
     title = (s.get("youtube_title") or f"{name}, {s['saint'].get('region', '')}".rstrip(", ")).strip()
-    if name.split()[-1] not in title:  # the saint's name is what people search for
+    # the saint's name is what people search for; match the given name ("Edmund"), not the last word of
+    # "St. Edmund the Martyr" / "St. Herculanus of Perugia", or the title doubles: "St. Edmund the Martyr: St. Edmund: ..."
+    words = [w for w in name.replace(",", " ").split() if w.rstrip(".") not in ("St", "Saint", "Saints", "Sts")]
+    if words and words[0] not in title:
         title = f"{name}: {title}"
     return (title[:90].rstrip() + " #Shorts")[:100]
 
