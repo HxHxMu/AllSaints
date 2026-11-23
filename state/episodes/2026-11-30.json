@@ -1,0 +1,364 @@
+{
+ "id": "2026-11-30",
+ "date": "2026-11-30",
+ "status": "review",
+ "updated": "2026-11-23T10:25:55+00:00",
+ "saint": {
+  "qid": "Q251060",
+  "name": "Saint Frumentius",
+  "display_name": "St. Frumentius",
+  "dates": "c. 300 – c. 360",
+  "region": "Aksum, Ethiopia",
+  "feast": "November 30",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q251060",
+  "name": "Frumentius",
+  "links": 33,
+  "enwiki": "Frumentius",
+  "images": [
+   "St%20Frumentius.jpg"
+  ],
+  "religions": [
+   "Christianity"
+  ],
+  "commonscat": "Saint Frumentius",
+  "birth": 315,
+  "death": 383,
+  "lon": 38.733333333,
+  "lat": 14.116666666,
+  "selection_reason": "Frumentius's story is vivid and well documented: a Tyrian boy enslaved at the Aksumite court who became tutor to the heir, then went to Alexandria and returned as first bishop of Ethiopia. He has Catholic references (Santi e Beati, Nominis, Ökumenisches Heiligenlexikon), is not a household name, and gives a fresh region and era after the recent run of Italy, France and Vietnam.",
+  "catholic_veneration": "Saint in the Roman Martyrology (commemorated October 27), and venerated in the Eastern Catholic traditions of Ethiopia and Eritrea as Abba Salama, 'Father of Peace'.",
+  "major_feast": "the feast of Saint Andrew",
+  "feast_link": ""
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Frumentius",
+   "display_name": "St. Frumentius",
+   "dates": "c. 300 – c. 360",
+   "region": "Aksum, Ethiopia",
+   "feast": "November 30",
+   "martyr": false
+  },
+  "feast_line": "On his feast, meet a captive boy who became the first bishop of Ethiopia.",
+  "portrait": "An early Eastern bishop in a long tunic and a pale omophorion draped over his shoulders, holding a pastoral staff in one hand and a closed Gospel book in the other, his face calm and kindly. Behind him stand a tall carved Aksumite stone stele and a plain stone church under a warm golden sky.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "A boy taken as a slave carried the Gospel into Ethiopia.",
+    "visual": "art",
+    "scene": "Two boys in plain tunics stand before a seated king in a stone-and-timber palace of ancient Aksum. Courtiers in white wraps look on, and a tall carved stone stele rises outside the doorway."
+   },
+   {
+    "role": "who",
+    "text": "Saint Frumentius, of the fourth century, lived in Aksum, Ethiopia.",
+    "visual": "map",
+    "lat": 14.13,
+    "lon": 38.72,
+    "place": "Aksum · Ethiopia"
+   },
+   {
+    "role": "story",
+    "text": "He was a boy from Tyre, sailing home with Aedesius. At a Red Sea harbor, the ship's crew was killed. The boys were taken to the king of Aksum.",
+    "visual": "art",
+    "scene": "Two boys in simple tunics stand on a Red Sea shore beside a moored wooden sailing ship. Barren hills rise behind them, and an Aksumite official in a white wrap approaches to lead them inland."
+   },
+   {
+    "role": "story",
+    "text": "Frumentius served the king as secretary. After the king died, he helped guide the young heir. He helped Christian merchants find places to pray.",
+    "visual": "art",
+    "scene": "A young Frumentius stands beside the boy prince and the widowed queen in a stone hall of the Aksumite court. Nearby, a few traveling merchants kneel in prayer in a modest stone chapel."
+   },
+   {
+    "role": "story",
+    "text": "Free to leave, he went to Alexandria. He asked Bishop Athanasius to send a bishop to Aksum. Athanasius chose Frumentius himself.",
+    "visual": "art",
+    "scene": "In a columned basilica in fourth-century Alexandria lit by hanging lamps, Bishop Athanasius in Eastern vestments lays his hands on the kneeling Frumentius. Clergy stand quietly around them."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was patient work. He came back as bishop. The people called him Father of Peace, and Revealer of Light.",
+    "visual": "art",
+    "scene": "Bishop Frumentius, with a pastoral staff and omophorion, blesses a gathering of Aksumite men, women and children outside a simple stone church. Tall carved stelae and dry highland hills lie behind them."
+   },
+   {
+    "role": "close",
+    "text": "God can bring light even out of captivity. Saint Frumentius, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Frumentius": "Froo-MEN-shus",
+   "Aedesius": "Ay-DEE-see-us",
+   "Aksum": "AHK-soom",
+   "Athanasius": "Ath-uh-NAY-shus"
+  },
+  "caption_hook": "He reached Ethiopia as a captive. He came back as its first bishop.",
+  "summary": "Saint Frumentius, a boy from Tyre taken into service at the court of Aksum, later returned from Alexandria as the first bishop of Ethiopia.",
+  "youtube_title": "St. Frumentius: The Captive Boy Who Became a Bishop",
+  "hashtags": [
+   "#saintfrumentius",
+   "#aksum",
+   "#ethiopia",
+   "#abbasalama",
+   "#fatherofpeace",
+   "#athanasius",
+   "#earlychurch",
+   "#ethiopianchristianity",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saintoftheday",
+   "#allsaints"
+  ],
+  "share_cta": "Send this to a merchant who could use a patron today.",
+  "claims": [
+   {
+    "claim": "Frumentius was born in Tyre, in Phoenicia (modern Lebanon), around the year 300.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He was a boy from Tyre who sailed home with Aedesius (Edesius).",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Our knowledge of his story comes from the historian Rufinus, who cites Aedesius as his authority.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "At a Red Sea harbor the ship's crew was killed, and the two boys were taken to the king of Aksum.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius became the king's secretary, and Aedesius his cupbearer.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius was also treasurer at the court.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "After the king's death the two helped guide the young heir, Ezana, at the request of the widowed queen.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius encouraged Christian merchants and helped them find places to gather for prayer.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius went to Alexandria and asked Athanasius to send a bishop and priests to Aksum, and Athanasius chose him and consecrated him bishop, about 343 according to the Ökumenisches Heiligenlexikon.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Aedesius returned to Tyre and was ordained a priest.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius returned to Aksum as its first bishop.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The people called him 'Revealer of Light' and Abba Salama, 'Father of Peace'.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "It seems he converted the young king, as an inscription suggests (Santi e Beati).",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded the first monastery of Ethiopia, Dabba Selama.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "His appointment began the tradition that the Patriarch of Alexandria appointed Ethiopia's bishops.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "About 356 or 357 the emperor Constantius II wrote to the king of Aksum asking that Frumentius be removed, because he opposed Arianism; according to Wikipedia the king refused.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Ethiopian traditions credit him with the first Geʽez translation of the New Testament and with developing the Geʽez script.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He died around 360.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "The faith he planted endured, even through the later Islamic invasion, and Ethiopians never forgot it.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Crusaders returning from the Holy Land brought news of Ethiopian Christian pilgrims, and the legend of Prester John grew.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Frumentius is patron of merchants (Santi e Beati) and of the former Kingdom of Aksum (Wikipedia).",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Catholic Church keeps his feast on July 20 (Roman Martyrology); other Catholic references also give October 27 and November 30.",
+    "source": 1,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "merchants",
+   "Kingdom of Aksum"
+  ],
+  "places": [
+   "Aksum",
+   "Ethiopia",
+   "Tyre",
+   "Alexandria",
+   "Red Sea"
+  ],
+  "story": [
+   "Frumentius was born around the year 300 in Tyre, the old Phoenician port city that lies in modern Lebanon. We know almost nothing of his early life. What we do know comes from the historian Rufinus, who wrote in the same century and said he had the story from Aedesius, the young man who shared Frumentius's fate.",
+   "As a boy, Frumentius set out on a voyage with Aedesius. The sources say the voyage went to 'India', but one reference work suggests the destination was the kingdom of Aksum itself. On the return journey the ship put in at a harbor on the Red Sea. There the crew was killed, and the two boys were taken alive to the king of Aksum. Accounts differ on the details, including who travelled with them and whether Aedesius was brother or friend. They agree on the main course of events.",
+   "At the Aksumite court the boys were clever and well liked. Aedesius became the king's cupbearer, and Frumentius his secretary and treasurer. Shortly before the king died, he freed them. The widowed queen then asked them to stay and help her with the kingdom and with the education of her young son, Ezana. They agreed, and Frumentius used his influence. He encouraged the Christian merchants who passed through the country to practice their faith openly, and he helped them find places to gather for prayer. Around those small places of prayer, slowly and with effort, the Christian faith began to reach the Ethiopians themselves.",
+   "When Ezana came of age, the two young men were free to go home. Aedesius returned to Tyre, where he was ordained a priest. Frumentius went with him as far as Alexandria in Egypt. There he went to Athanasius, the great bishop and patriarch, and asked him to send a bishop and priests to the far country where he had planted the first seed. According to the sources, Athanasius listened with great interest and judged that Frumentius himself was the right man. He consecrated him bishop, about the year 343 according to the Ökumenisches Heiligenlexikon. Other sources give earlier or slightly later dates.",
+   "Frumentius returned to Aksum, where he was received with affection and honor. The people called him Kesate Birhan, 'Revealer of Light', and Abba Salama, 'Father of Peace'. He made Aksum the seat of his church. Santi e Beati says it seems he converted the young king, as an inscription suggests. The Church of Ethiopia also remembers him for founding its first monastery, Dabba Selama. His appointment began a long tradition by which the Patriarch of Alexandria appointed the bishops of Ethiopia.",
+   "His ministry did not go unchallenged. Around 356 or 357 the emperor Constantius II, who favored Arianism, wrote to the king of Aksum asking that Frumentius be replaced, because Athanasius, Arianism's great opponent, had appointed him. According to Wikipedia, the king refused. Ethiopian tradition also credits Frumentius with the first translation of the New Testament into Geʽez and with helping to develop the Geʽez script. These are traditions, not documented history.",
+   "Frumentius died around the year 360. Centuries later, crusaders returning from the Holy Land spoke with wonder of Christian pilgrims from a distant African kingdom, and the legend of 'Prester John' grew from rumors of Christians beyond the Muslim lands. The sources note that the faith Frumentius brought took root so deeply that it survived the Islamic conquests, and that Ethiopians never forgot it. He is remembered as the patron of merchants and of the former Kingdom of Aksum. The Roman Martyrology names him on July 20, and other Catholic references also mark October 27 and November 30."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Feast date: the script gave November 30, the Eastern Orthodox date, and linked it to Saint Andrew. The Roman Martyrology and Santi e Beati give July 20 for the Catholic Church, so feast is now July 20 and the feast_line no longer names Saint Andrew.",
+   "The close beat had no line of meaning before the prayer. Added a short one, 'God can bring light even out of captivity.' It echoes his title Revealer of Light. Total spoken length is now about 128 words.",
+   "Story beat: 'He gave Christian merchants places to pray' overstates the sources, which say he encouraged the merchants and helped them find places to gather. Changed to 'helped ... find'.",
+   "Claims list: the merchants claim now reads 'helped ... find places to pray'. The Ezana claim now follows Santi e Beati (it seems he converted the young king, as an inscription suggests) instead of Wikipedia's baptism claim.",
+   "Story paragraph 2: 'the word was used loosely then' is not in any source. The Heiligenlexikon only says Aksum is probably what was meant. Removed the unsupported assertion.",
+   "Story paragraph 3: 'used his influence quietly' adds a detail the sources do not give. Removed 'quietly'.",
+   "Story paragraph 5: Wikipedia says Frumentius baptized Ezana, while the Catholic reference says only that it seems he converted the young king. Per the rule, the story now follows the Catholic reference. The claim that Ezana built many churches comes from Wikipedia alone and is dropped with the baptism claim.",
+   "Checked and correct: the Aksum map coordinates (14.13, 38.72), his c. 300 – c. 360 dates (Heiligenlexikon and Nominis), the legend and tradition handling (Geʽez translation marked as tradition), the omission of the brother-or-friend discrepancy, and martyr: false."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Please confirm the July 20 Catholic feast against the Roman Martyrology, and that the new close line, 'God can bring light even out of captivity,' suits the voice. Sources disagree on whether Aedesius was Frumentius's brother or friend, so the script avoids saying which."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2501,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 863,
+   "thinking": 616
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2185,
+   "cache_write": 6990,
+   "cache_read": 0,
+   "out": 12613,
+   "thinking": 8445
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4803,
+   "cache_write": 0,
+   "cache_read": 6990,
+   "out": 9796,
+   "thinking": 6279
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1722,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2768,
+   "thinking": 858
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Frumentius",
+   "url": "https://en.wikipedia.org/wiki/Frumentius"
+  },
+  {
+   "title": "Santi e Beati: Frumentius",
+   "url": "https://www.santiebeati.it/dettaglio/75400"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Frumentius",
+   "url": "https://nominis.cef.fr/contenus/saint/8725/Saint-Frumence.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Frumentius",
+   "url": "https://www.heiligenlexikon.de/BiographienF/Frumentius_von_Aethiopien.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 63.1,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Frumencio",
+  "name": "San Frumencio",
+  "region": "Axum, Etiopía",
+  "dates": "c. 300 – c. 360",
+  "hook": "Llegó a Etiopía como cautivo. Regresó como su primer obispo.",
+  "summary": "San Frumencio, un muchacho de Tiro puesto al servicio de la corte de Axum, regresó más tarde desde Alejandría como el primer obispo de Etiopía.",
+  "story": [
+   "Frumencio nació hacia el año 300 en Tiro, la antigua ciudad portuaria fenicia que hoy se encuentra en el Líbano. Sabemos casi nada de su juventud. Lo que conocemos procede del historiador Rufino, que escribió en ese mismo siglo y afirmó haber recibido la historia de Edesio, el joven que compartió el destino de Frumencio.",
+   "Siendo niño, Frumencio emprendió un viaje junto a Edesio. Las fuentes dicen que el viaje tenía como destino «la India», pero una obra de referencia sugiere que el destino era el propio reino de Axum. En el viaje de regreso, el barco hizo escala en un puerto del mar Rojo. Allí la tripulación fue asesinada, y los dos muchachos fueron llevados con vida ante el rey de Axum. Los relatos difieren en los detalles, incluido quién viajaba con ellos y si Edesio era hermano o amigo. Coinciden en el curso principal de los acontecimientos.",
+   "En la corte axumita, los muchachos eran inteligentes y muy estimados. Edesio se convirtió en copero del rey, y Frumencio en su secretario y tesorero. Poco antes de que el rey muriera, los liberó. La reina viuda les pidió entonces que se quedaran y la ayudaran en el gobierno del reino y en la educación de su joven hijo, Ezana. Ellos aceptaron, y Frumencio usó su influencia. Animó a los comerciantes cristianos que pasaban por el país a practicar su fe abiertamente, y los ayudó a encontrar lugares donde reunirse para orar. Alrededor de aquellos pequeños lugares de oración, poco a poco y con esfuerzo, la fe cristiana comenzó a llegar a los propios etíopes.",
+   "Cuando Ezana llegó a la mayoría de edad, los dos jóvenes quedaron libres para volver a casa. Edesio regresó a Tiro, donde fue ordenado sacerdote. Frumencio lo acompañó hasta Alejandría, en Egipto. Allí acudió a Atanasio, el gran obispo y patriarca, y le pidió que enviara un obispo y sacerdotes al lejano país donde él había sembrado la primera semilla. Según las fuentes, Atanasio escuchó con gran interés y juzgó que el propio Frumencio era el hombre adecuado. Lo consagró obispo, hacia el año 343 según el Ökumenisches Heiligenlexikon. Otras fuentes dan fechas anteriores o algo posteriores.",
+   "Frumencio regresó a Axum, donde fue recibido con afecto y honor. El pueblo lo llamó Kesate Birhan, «Revelador de la Luz», y Abba Salama, «Padre de la Paz». Hizo de Axum la sede de su iglesia. Santi e Beati afirma que, según parece, convirtió al joven rey, como sugiere una inscripción. La Iglesia de Etiopía también lo recuerda por haber fundado su primer monasterio, Dabba Selama. Su nombramiento inició una larga tradición según la cual el patriarca de Alejandría designaba a los obispos de Etiopía.",
+   "Su ministerio no estuvo exento de oposición. Hacia el año 356 o 357, el emperador Constancio II, que favorecía el arrianismo, escribió al rey de Axum pidiendo que Frumencio fuera reemplazado, porque Atanasio, el gran opositor del arrianismo, lo había nombrado. Según Wikipedia, el rey se negó. La tradición etíope también atribuye a Frumencio la primera traducción del Nuevo Testamento al ge'ez y su contribución al desarrollo de la escritura ge'ez. Se trata de tradiciones, no de historia documentada.",
+   "Frumencio murió hacia el año 360. Siglos después, los cruzados que regresaban de Tierra Santa hablaban con asombro de peregrinos cristianos procedentes de un lejano reino africano, y la leyenda del «Preste Juan» creció a partir de rumores sobre cristianos más allá de las tierras musulmanas. Las fuentes señalan que la fe que Frumencio trajo echó raíces tan profundas que sobrevivió a las conquistas islámicas, y que los etíopes nunca la olvidaron. Se le recuerda como patrono de los comerciantes y del antiguo Reino de Axum. El Martirologio Romano lo menciona el 20 de julio, y otras referencias católicas también señalan el 27 de octubre y el 30 de noviembre."
+  ],
+  "prayer": "Dios puede traer luz incluso desde el cautiverio. San Frumencio, ruega por nosotros.",
+  "patronages": [
+   "comerciantes",
+   "antiguo Reino de Axum"
+  ],
+  "places": [
+   "Axum",
+   "Etiopía",
+   "Tiro",
+   "Alejandría",
+   "mar Rojo"
+  ]
+ },
+ "books": [],
+ "caption": "He reached Ethiopia as a captive. He came back as its first bishop.\n✝ A forgotten saint, every morning. Follow along.\n\nOn his feast, meet a captive boy who became the first bishop of Ethiopia.\n\nSaint Frumentius · Feast day: November 30\nSaint Frumentius, a boy from Tyre taken into service at the court of Aksum, later returned from Alexandria as the first bishop of Ethiopia.\n\nGod can bring light even out of captivity. Saint Frumentius, pray for us. 🕯\n\nSend this to a merchant who could use a patron today.\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintfrumentius #aksum",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-30/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-30/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-30/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-30/art.jpg"
+ },
+ "review_message_id": 272
+}
