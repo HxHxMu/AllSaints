@@ -1,8 +1,8 @@
 {
  "id": "2026-11-23",
  "date": "2026-11-23",
- "status": "approved",
- "updated": "2026-11-16T16:20:23+00:00",
+ "status": "published",
+ "updated": "2026-11-23T12:35:01+00:00",
  "saint": {
   "qid": "Q319653",
   "name": "Saint Columbanus",
@@ -343,7 +343,8 @@
    "Luxeuil",
    "Bregenz",
    "Bangor"
-  ]
+  ],
+  "slug": "columbano"
  },
  "books": [],
  "caption": "A letter written as a ship waited at Nantes: the farewell of an Irish monk who was sent away from his own community.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Columbanus · Feast day: November 23\nSaint Columbanus, an Irish monk, founded monasteries in Burgundy, was exiled after rebuking a king, and ended his days building Bobbio in Italy.\n\nLove can cross any distance, even exile. Saint Columbanus, pray for us. 🕯\n\nHad you ever heard of St. Columbanus before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintcolumbanus #bobbio",
@@ -354,5 +355,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-23/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-23/art.jpg"
  },
- "review_message_id": 195
+ "review_message_id": 195,
+ "slug": "columbanus",
+ "published": {
+  "media_id": "18223058092342677",
+  "permalink": "https://www.instagram.com/reel/DgFYuLJAZwc/",
+  "location_id": null
+ },
+ "published_at": "2026-11-23T07:30-05:00",
+ "facebook": {
+  "id": "1965513741288380",
+  "url": "https://www.facebook.com/reel/1965513741288380/",
+  "published_at": "2026-11-23T07:33-05:00"
+ },
+ "threads": {
+  "id": "18093931835289440",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgFY63-MIkT",
+  "published_at": "2026-11-23T07:34-05:00"
+ },
+ "youtube": {
+  "id": "jUCKkegajBk",
+  "url": "https://youtube.com/shorts/jUCKkegajBk",
+  "privacy": "public",
+  "published_at": "2026-11-23T07:34-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7711344110174799902",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-23T07:35-05:00"
+ }
 }
