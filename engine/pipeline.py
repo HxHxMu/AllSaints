@@ -67,6 +67,8 @@ def main():
     ya = sub.add_parser("yt-auth")
     ya.add_argument("client_secret", help="OAuth client JSON downloaded from Google Cloud (Desktop app)")
     sub.add_parser("yt-whoami")
+    yr = sub.add_parser("yt-retitle", help="re-set the title of uploaded Shorts from the current build_title (fixes)")
+    yr.add_argument("episodes", nargs="+")
     ga = sub.add_parser("gsc-auth", help="one-time: Search Console access for the dashboard (pick Luis's own Google account)")
     ga.add_argument("client_secret")
     mp = sub.add_parser("metrics", help="collect the dashboard's numbers and send them to allholysaints.com/dash/")
@@ -189,6 +191,10 @@ def main():
     elif a.cmd == "yt-cover":
         for ep_id in a.episodes:
             youtube_cover(load_episode(ep_id))
+    elif a.cmd == "yt-retitle":
+        import youtube
+        for ep_id in a.episodes:
+            youtube.set_title(load_episode(ep_id))
     elif a.cmd == "post":
         cmd_post(a.post_id)
     elif a.cmd == "refresh-token":

@@ -58,6 +58,28 @@ def set_localizations(ep):
     return True
 
 
+def set_title(ep):
+    """Re-set an uploaded Short's title from build_title (e.g. after a title fix); the rest of the snippet is kept."""
+    vid = (ep.get("youtube") or {}).get("id")
+    if not vid:
+        return False
+    token = _access_token()
+    _check_channel(token)
+    r = session.get(f"{API}/videos", params={"part": "snippet", "id": vid}, headers={"Authorization": f"Bearer {token}"}, timeout=30)
+    sn = r.json()["items"][0]["snippet"]
+    new = build_title(ep)
+    if sn["title"] == new:
+        log(f"YouTube: {vid} title already right")
+        return False
+    keep = ("description", "categoryId", "tags", "defaultLanguage", "defaultAudioLanguage")
+    body = {"id": vid, "snippet": {"title": new, **{k: sn[k] for k in keep if k in sn}}}
+    r = session.put(f"{API}/videos", params={"part": "snippet"}, json=body, headers={"Authorization": f"Bearer {token}"}, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"YouTube title update failed {r.status_code}: {r.text[:300]}")
+    log(f"YouTube: {vid} title {sn['title']!r} -> {new!r}")
+    return True
+
+
 def upload_short(ep, video_path: Path):
     """Upload the episode's MP4 as a Short. Returns {"id", "url", "privacy"}."""
     privacy = load_config().get("youtube_privacy", "public")
