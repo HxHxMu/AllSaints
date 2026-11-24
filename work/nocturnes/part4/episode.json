@@ -7,7 +7,7 @@
   "question": "Would you have\nbelieved her?",
   "score": [
     189.0,
-    259.0
+    250.5
   ],
   "beats": [
     {
@@ -27,7 +27,7 @@
     {
       "role": "story",
       "text": "People whispered that her penance was for show.",
-      "scene": "Two shadows of women whispering, cast huge on a plastered wall."
+      "scene": "Two shadows of women whispering behind their hands, cast huge on a plastered wall; no people visible, only the shadows."
     },
     {
       "role": "story",
@@ -55,8 +55,9 @@
     {
       "role": "story",
       "text": "She was no longer anyone's mistress. She was a daughter of Saint Francis.",
-      "scene": "A small green shoot growing between the stones of a church floor, lit by a shaft of light."
+      "scene": "A small young shoot with two leaves growing between the worn stones of a church floor, lit by a shaft of light."
     }
   ],
-  "next_voice": "Next, in Part Five: the house of mercy."
+  "next_voice": "Next, in Part Five: the house of mercy.",
+  "gap": 1.4
 }
