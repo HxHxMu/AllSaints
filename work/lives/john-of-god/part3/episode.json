@@ -1,0 +1,56 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "III",
+  "part_title": "The Crossing",
+  "next": "Part IV · The Madman",
+  "question": "Sent\nwhere?",
+  "score": [
+    131.5,
+    195.0
+  ],
+  "gap": 1.4,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "He was nearly forty, with nothing to his name but a pack on his back.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "John had left the army and crossed to Africa, with a Portuguese family driven out of their home.",
+      "scene": "A dark sixteenth-century harbour at dusk: a small wooden sailing ship with a patched sail rides at a stone quay under a hard moon, a ragged family of four adults and bundled belongings stand huddled at the water's edge seen from behind, among them a tall man in a faded cloak carrying a heavy bundle; skewed angular quayside buildings, drifting mist. No faces visible."
+    },
+    {
+      "role": "story",
+      "text": "They had lost everything, and he found work to feed them.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "Then he came back to Gibraltar, on his confessor's advice.",
+      "scene": "The great dark rock of Gibraltar rising over a small walled harbour town at dawn, a hard light on the sheer cliff, mist on the water; on the stony shore in the foreground a single tiny traveller with a pack on his back, seen from far behind, walks toward the town gate. Painted theatrical set, skewed angular rooftops."
+    },
+    {
+      "role": "story",
+      "text": "He carried holy books and pictures from town to town, and sold them for almost nothing.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Tradition holds that a vision of the Infant Jesus came to him, and called him John of God.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Tradition holds, too, that it sent him to Granada.",
+      "scene": "A lonely white road winding up through bare Andalusian hills at dusk toward a far city of towers and domes on a hill under a vast sky, one beam of hard light falling on the road ahead; far down the road a single tiny traveller with a pack on his back is seen from behind, walking away. No other people, no faces."
+    },
+    {
+      "role": "turn",
+      "text": "So he went to Granada, and began to sell books there.",
+      "live": true
+    }
+  ],
+  "next_voice": "Next, in Part Four: the madman."
+}
