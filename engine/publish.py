@@ -175,6 +175,7 @@ def publish_youtube(ep, video=None):
         youtube_cover(ep)
     except Exception:
         traceback.print_exc()
+    _notify(youtube_grid_reminder(ep))
     try:
         youtube_playlists(ep)
     except Exception:
@@ -194,6 +195,19 @@ def youtube_cover(ep):
     yt["cover"] = True
     ep["youtube"] = yt
     save_episode(ep)
+
+
+def youtube_grid_reminder(ep):
+    """The API thumbnail only reaches 16:9 surfaces; the Shorts grid keeps a frame YouTube picks until the cover is
+    uploaded by hand in Studio (checked 2026-11-24). Telegram Luis the Studio link and the cover to upload."""
+    import storage
+    vid = (ep.get("youtube") or {}).get("id")
+    cover = (ep.get("assets") or {}).get("cover.jpg")
+    lines = ["🖼 Shorts grid thumbnail: upload the cover in YouTube Studio (Thumbnail → Upload).",
+             f"https://studio.youtube.com/video/{vid}/edit"]
+    if cover:
+        lines.append(f"Cover: {storage.resolve_direct(cover)}")
+    return "\n".join(lines)
 
 
 def youtube_playlists(ep):
