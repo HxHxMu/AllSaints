@@ -5,7 +5,7 @@
   published; state ep["story"] {media_id, permalink, image | attempts, error}, max 3 attempts, failures to Telegram.
 - Every card also goes to the Facebook Page as a Story once it is on Instagram (Instagram's "share to Facebook" skips
   API posts): state ep["story_fb"] / the entry's "facebook", {id | attempts, error}, independent of Instagram.
-- Seasonal series (state/stories.json): prerendered cards on a GitHub release, each {"id", "at", "image" (or "video": Instagram only),
+- Seasonal series (state/stories.json): prerendered cards on a GitHub release, each {"id", "at", "image" (or "video": Instagram only, unless "facebook_video": true),
   "status"}. "draft" entries wait for Luis's OK in chat (then "pending"); poll posts pending ones once due.
   The O Antiphons (Dec 17-23) are made by `stories.py o-antiphons` (o_antiphons.py, texts in data/o-antiphons.json).
 - Weekly music card (story_music.py; config "music_story", default "Sun 15:00"; "" turns it off): an album from data/music.json and
@@ -198,6 +198,13 @@ def run_seasonal(now):
     for s in items:
         # the weekly music Story has both: Facebook gets the animated video too (from 2026-11-16; before, the still card).
         # Video-only Stories (sung-prayer teasers) stay Instagram-only: Facebook gets their own post from shares.json.
+        if s.get("status") == "posted" and s.get("video") and s.get("facebook_video") and not s.get("image"):
+            # a video-only Story that should reach the Facebook Page too (the series teaser, 2026-11)
+            fb = s.get("facebook") or {}
+            if _facebook(fb, None, s["id"], storage.resolve_direct(s["video"])):
+                s["facebook"] = fb
+                changed = True
+            continue
         if s.get("status") == "posted" and s.get("image"):
             fb = s.get("facebook") or {}
             video = storage.resolve_direct(s["video"]) if s.get("video") and s["at"][:10] >= "2026-11-16" else None

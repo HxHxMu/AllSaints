@@ -143,5 +143,21 @@
    "id": "8x0u9bC6C_U",
    "url": "https://youtube.com/shorts/8x0u9bC6C_U"
   }
+ },
+ {
+  "id": "lots-margaret-teaser-story",
+  "at": "2026-11-28T19:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Series teaser as a Story. Luis adds Instagram's countdown sticker (Mon Nov 30, 7:30 PM) by hand."
+ },
+ {
+  "id": "lots-margaret-tomorrow-story",
+  "at": "2026-11-29T20:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/tomorrow-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Advent Sunday reminder: Lives of the Saints begins tomorrow evening."
  }
 ]

@@ -1,0 +1,14 @@
+{
+  "saint": "Margaret of Cortona",
+  "series": "Lives of the Saints",
+  "part": "teaser",
+  "beats": [
+    {"role": "hook", "text": "For nine years she was a nobleman's mistress."},
+    {"role": "story", "text": "Then one day his dog came home alone."},
+    {"role": "story", "text": "Her own father shut the door on her and her son."},
+    {"role": "story", "text": "The whole town called her a sinner. She agreed, and begged them to forgive her."},
+    {"role": "story", "text": "This is how she became a saint."},
+    {"role": "story", "text": "Lives of the Saints. Saint Margaret of Cortona. A vertical drama in six parts."},
+    {"role": "close", "text": "Beginning Monday, November thirtieth."}
+  ]
+}

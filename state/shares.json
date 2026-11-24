@@ -92,5 +92,68 @@
   "message": "Holy Thursday. St. Thomas Aquinas wrote Pange lingua for the feast of Corpus Christi; tonight it is sung as the Blessed Sacrament is carried to the altar of repose. Sung in Latin, with Caswall's English on screen. 🕯",
   "link": "https://youtu.be/5bkvrVoTCgE",
   "status": "pending"
+ },
+ {
+  "id": "lots-margaret-teaser-youtube",
+  "at": "2026-11-26T19:30:00-05:00",
+  "platform": "youtube",
+  "title": "Lives of the Saints · St. Margaret of Cortona · Teaser",
+  "message": "For nine years she was a nobleman's mistress. This Advent, her story.\n\nLives of the Saints · St. Margaret of Cortona\nA vertical drama in six parts. Part I, Monday, November 30, 7:30 PM ET; one part each evening through Saturday.\n\nEvery line comes from her documented life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "tags": [
+   "St. Margaret of Cortona",
+   "Lives of the Saints",
+   "Catholic saints",
+   "Advent",
+   "silent film",
+   "vertical drama"
+  ],
+  "synthetic": true,
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser.mp4",
+  "status": "pending"
+ },
+ {
+  "id": "lots-margaret-teaser-instagram",
+  "at": "2026-11-26T19:30:00-05:00",
+  "platform": "instagram",
+  "message": "For nine years she was a nobleman's mistress. This Advent, her story.\n\nLives of the Saints · St. Margaret of Cortona\nA vertical drama in six parts. Part I, Monday, November 30, 7:30 PM ET; one part each evening through Saturday.\n\nEvery line comes from her documented life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser-cover.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "lots-margaret-teaser-facebook",
+  "at": "2026-11-26T19:30:00-05:00",
+  "platform": "facebook_reel",
+  "message": "For nine years she was a nobleman's mistress. This Advent, her story.\n\nLives of the Saints · St. Margaret of Cortona\nA vertical drama in six parts. Part I, Monday, November 30, 7:30 PM ET; one part each evening through Saturday.\n\nEvery line comes from her documented life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser.mp4",
+  "cover": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser-cover.jpg",
+  "status": "pending"
+ },
+ {
+  "id": "lots-margaret-teaser-tiktok",
+  "at": "2026-11-26T19:15:00-05:00",
+  "platform": "tiktok",
+  "message": "For nine years she was a nobleman's mistress. Lives of the Saints, a vertical drama in six parts, begins Mon Nov 30. #StMargaretOfCortona #CatholicSaints #Advent",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser.mp4",
+  "status": "pending",
+  "note": "Inbox draft; Luis posts it at 7:30 PM with this caption and TikTok's AI label on."
+ },
+ {
+  "id": "lots-margaret-tomorrow-youtube",
+  "at": "2026-11-29T20:30:00-05:00",
+  "platform": "youtube",
+  "title": "Lives of the Saints begins tomorrow · St. Margaret of Cortona",
+  "message": "Lives of the Saints begins tomorrow evening: Part I of St. Margaret of Cortona, 7:30 PM ET.\n\nNarration is an AI voice; film is AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #Advent",
+  "tags": [
+   "St. Margaret of Cortona",
+   "Lives of the Saints",
+   "Catholic saints",
+   "Advent",
+   "silent film",
+   "vertical drama"
+  ],
+  "synthetic": true,
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/tomorrow.mp4",
+  "status": "pending"
  }
 ]
