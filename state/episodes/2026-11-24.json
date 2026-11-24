@@ -1,8 +1,8 @@
 {
  "id": "2026-11-24",
  "date": "2026-11-24",
- "status": "approved",
- "updated": "2026-11-17T13:11:51+00:00",
+ "status": "published",
+ "updated": "2026-11-24T12:33:50+00:00",
  "saint": {
   "qid": "Q568014",
   "name": "Saint Pierre Dumoulin-Borie",
@@ -333,7 +333,8 @@
    "Đồng Hới",
    "Vietnam",
    "París"
-  ]
+  ],
+  "slug": "pedro-dumoulin-borie"
  },
  "books": [],
  "caption": "The news that he was a bishop reached him only in prison.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Pierre Dumoulin-Borie · Feast day: November 24\nA young French missionary priest hidden in Vietnam learned in prison that he had been named a bishop, and was put to death on November 24, 1838.\n\nFollow the call, even far from home. Saint Pierre Dumoulin-Borie, pray for us. 🕯\n\nKnow someone named Pierre? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintpierredumoulinborie #vietnammartyrs",
@@ -344,5 +345,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-24/art.jpg"
  },
- "review_message_id": 208
+ "review_message_id": 208,
+ "slug": "pierre-dumoulin-borie",
+ "published": {
+  "media_id": "18097127990480775",
+  "permalink": "https://www.instagram.com/reel/DgH9ZcYAHFC/",
+  "location_id": null
+ },
+ "published_at": "2026-11-24T07:30-05:00",
+ "facebook": {
+  "id": "2340121430118357",
+  "url": "https://www.facebook.com/reel/2340121430118357/",
+  "published_at": "2026-11-24T07:32-05:00"
+ },
+ "threads": {
+  "id": "18364011889222929",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgH9mGuNAVm",
+  "published_at": "2026-11-24T07:33-05:00"
+ },
+ "youtube": {
+  "id": "sHsLBkt_eso",
+  "url": "https://youtube.com/shorts/sHsLBkt_eso",
+  "privacy": "public",
+  "published_at": "2026-11-24T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Asia"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Asia",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7711715068295677966",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-24T07:33-05:00"
+ }
 }
