@@ -1,0 +1,56 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "IV",
+  "part_title": "The Madman",
+  "next": "Part V · The House",
+  "question": "Mad,\nor mended?",
+  "score": [
+    195.0,
+    257.0
+  ],
+  "gap": 1.4,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "A grown man ran through Granada, crying out for mercy.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "On the twentieth of January, 1537, he had heard John of Ávila preach.",
+      "scene": "Interior of a vast dark Spanish church at night: a tall carved stone pulpit lit by a hard shaft of light from a high window, a preacher in a plain dark cassock stands in it, seen from behind and far away, one arm raised; below him a packed crowd of small dark figures seen from behind, heads bowed. Skewed angular arches, drifting incense smoke. No faces."
+    },
+    {
+      "role": "story",
+      "text": "John was forty-two. He wept aloud, and beat his breast.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "He gave away all he owned, and the city took him for mad.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "They shut him in the Royal Hospital.",
+      "scene": "A long dark vaulted hospital ward of sixteenth-century Granada seen down its length: rows of bare iron-barred cell doors along both walls, one door slightly ajar with a thin bar of hard light on the stone floor, a single lantern hanging at the far end, mist on the floor. No people."
+    },
+    {
+      "role": "turn",
+      "text": "One account says he was chained there, and beaten.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Then John of Ávila came to see him.",
+      "scene": "A small barred stone cell at night: a bent man in a worn cloak sits on straw against the far wall with his head bowed, tiny and in deep shadow; in the open doorway, a hooded preacher in a plain dark cassock stands with his back to the camera, a lantern in his hand throwing a long shaft of light across the floor toward the seated man. No faces."
+    },
+    {
+      "role": "turn",
+      "text": "He told John to serve the poor, and not to punish himself.",
+      "live": true
+    }
+  ],
+  "next_voice": "Next, in Part Five: the house."
+}
