@@ -1,0 +1,56 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "I",
+  "part_title": "The Runaway",
+  "next": "Part II · The Gallows",
+  "question": "Can a lost boy\nstill be led?",
+  "score": [
+    0.0,
+    76.0
+  ],
+  "gap": 1.8,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "At eight years old, a boy left his home in Portugal, and never saw his mother again.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "His name was João Cidade, born in 1495 in Montemor-o-Novo. We call him John.",
+      "scene": "A small whitewashed hill town in southern Portugal at dawn, crowned by the dark crenellated walls of a ruined castle, crooked lanes falling away below it, mist in the valley, one hard shaft of early light. No people."
+    },
+    {
+      "role": "story",
+      "text": "His first biographer says he followed a travelling priest who had stayed with the family.",
+      "scene": "Night in a humble Portuguese house: a travelling priest in a dark cloak and wide hat sits at a rough wooden table lit by one candle, telling stories, his huge shadow thrown up the whitewashed wall; in the doorway a small boy of eight in a plain tunic watches him, half in shadow, entranced. The boy's parents are not seen."
+    },
+    {
+      "role": "story",
+      "text": "The priest led him over the border into Spain, and left him with a shepherd in Oropesa.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "At home, his mother died soon after. Of grief, the biographer says.",
+      "scene": "An empty doorway of a small whitewashed house at dusk, a dark shawl left lying on a wooden chair beside it, a candle guttering on the sill, the road beyond the door running away empty into the hills. No people."
+    },
+    {
+      "role": "story",
+      "text": "The boy grew up among the flocks, and his master came to love him like a son.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "So much that one day, he offered John his daughter's hand.",
+      "scene": "Inside a dim Castilian farmhouse: a broad, grey-bearded old farmer in a plain wool coat stands with his hand on the shoulder of his grown daughter, a young woman of about twenty, whose eyes are lowered shyly, her hair under a linen headscarf; facing them, seen from behind in silhouette against the light of the open door, a young shepherd with a sheepskin over his shoulders. Long shadows across the floor. Ordinary kind people, warm and plain."
+    },
+    {
+      "role": "turn",
+      "text": "John would not marry. At about twenty-two, he ran off to be a soldier.",
+      "live": true
+    }
+  ],
+  "next_voice": "Next, in Part Two: the gallows."
+}
