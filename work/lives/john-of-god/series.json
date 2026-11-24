@@ -3,10 +3,15 @@
   "slug": "john-of-god",
   "title_card": "SAINT JOHN\nOF GOD",
   "setting": "early sixteenth-century Portugal and Spain (the Alentejo, Castile, Andalusia, Granada)",
-  "score_note": "score.wav = Luis's Suno 'John of God Score' (6:00). Quiet dips: 61, 76, 83, 211.5, 276, 296, 309, 336.5 s. Part I = 0-76.",
+  "score_note": "score.wav = Luis's Suno 'John of God Score' (6:00). Quiet dips: 61, 76, 83, 131.5, 211.5, 276, 296, 309, 336.5 s. Part I = 0-76. Part II = 67-131.5 (overlaps I by 9 s: no dip after 76 gives 60 s before 131.5).",
   "look": "A single still frame from a black-and-white 1920s German Expressionist silent film: orthochromatic film stock, extreme chiaroscuro, one hard light source, deep black shadows, painted theatrical sets with skewed angular architecture, drifting mist, visible film grain. Early sixteenth-century Portugal and Spain, authentic period clothing and buildings. Solemn and reverent, never horror or gore. Vertical 9:16, the image fills the frame. No text. The entire image is black and white with no colour at all: monochrome orthochromatic film.",
   "john_boy": "a thin Portuguese boy of eight with a pale face, large dark eyes and short dark hair, in a plain undyed wool tunic, barefoot",
   "john_young": "a lean Iberian young man of about twenty-two with a weathered face, deep-set dark eyes, dark brows, short dark curly hair and a short dark beard, in a rough dark wool shepherd's tunic with a sheepskin over his shoulders",
-  "refs": [],
-  "same": "The man in this scene is exactly the same man as in the reference images: the same face shape, deep-set dark eyes, dark brows, dark curly hair and short beard. Keep his face recognisable even when he is small in the frame or turned away."
+  "refs": [
+    "refs/john-4.png",
+    "refs/john-8.png"
+  ],
+  "same": "The man in this scene is exactly the same man as in the reference images: the same face shape, deep-set dark eyes, dark brows, dark curly hair and short beard. Keep his face recognisable even when he is small in the frame or turned away.",
+  "john_soldier": "a lean Iberian young man in his twenties with deep-set dark eyes, dark brows, short dark curly hair and a short dark beard, in a plain sixteenth-century Spanish foot-soldier's quilted doublet, breeches and a steel morion helmet",
+  "john_older": "a lean, weathered Iberian man of about thirty-seven with deep-set dark eyes, dark brows, short dark curly hair touched with grey and a short dark beard, in a worn, patched soldier's doublet and a faded travelling cloak"
 }

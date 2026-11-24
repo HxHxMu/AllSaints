@@ -1,0 +1,53 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "II",
+  "part_title": "The Gallows",
+  "next": "Part III · The Crossing",
+  "question": "Spared\nfor what?",
+  "score": [67.0, 131.5],
+  "gap": 1.4,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "A young soldier stood under the gallows, condemned to hang.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "John had marched to war for the Count of Oropesa, against the French at Fuenterrabía.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "His first biographer says John was set to guard the plunder, and much of it was stolen.",
+      "scene": "Night inside a soldiers' canvas tent in a sixteenth-century army camp: wooden treasure chests stand broken open and empty, their lids hanging, a few scattered coins and an overturned silver cup on the trampled ground, a lantern swinging from the tent pole throws hard shadows; the tent flap hangs open onto darkness. No people."
+    },
+    {
+      "role": "story",
+      "text": "An officer stepped in, and won his pardon.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "He went back to the sheep in Oropesa, for some four years.",
+      "scene": "A wide Castilian plain at dusk under a huge stormy sky, a flock of sheep spread over stony ground and dry grass, a few twisted holm oaks; far off, a lone shepherd with a long crook and a sheepskin over his shoulders stands among them, a small dark figure seen from behind. On a distant rise, the dark square tower of a castle over a small town."
+    },
+    {
+      "role": "turn",
+      "text": "Then the Count's soldiers marched past, on their way to fight the Turks. John went with them.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Years later, the war over, he walked home to Montemor-o-Novo.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "An uncle told him: his mother was long dead, and his father had become a Franciscan friar.",
+      "scene": "Evening at the open door of a small whitewashed Portuguese house: an old grey-haired uncle in a plain dark coat stands in the doorway, one hand raised to the shoulder of a tall travel-worn man in a faded cloak who faces him, seen from behind in silhouette, his head bowed. One candle inside lights the old man's grave, kind face. A crooked lane falls away behind them in shadow."
+    }
+  ],
+  "next_voice": "Next, in Part Three: the crossing."
+}
