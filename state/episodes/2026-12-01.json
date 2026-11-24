@@ -1,0 +1,340 @@
+{
+ "id": "2026-12-01",
+ "date": "2026-12-01",
+ "status": "review",
+ "updated": "2026-11-24T10:25:07+00:00",
+ "saint": {
+  "qid": "Q961817",
+  "name": "Saint Alexander Briant",
+  "display_name": "St. Alexander Briant",
+  "dates": "c. 1556 – 1581",
+  "region": "Somerset, England",
+  "feast": "December 1",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q961817",
+  "name": "Alexander Briant",
+  "links": 10,
+  "enwiki": "Alexander_Briant",
+  "images": [
+   "Alexander%20Briant.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Alexander Briant",
+  "birth": 1556,
+  "death": 1581,
+  "lon": -0.164,
+  "lat": 51.512861111,
+  "selection_reason": "Alexander Briant, a young Somerset priest tortured in the Tower of London, secretly admitted to the Society of Jesus while imprisoned, and hanged at Tyburn on 1 December 1581 alongside Campion and Sherwin, has a vivid, well-documented story that is far less known than Campion's, with Catholic Encyclopedia and Santi e Beati sources, and England has not featured in the recent run.",
+  "catholic_veneration": "Canonized by Pope Paul VI on 25 October 1970 as one of the Forty Martyrs of England and Wales; commemorated in the Roman Martyrology on 1 December (and with the Forty Martyrs on 25 October in England and Wales)."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Alexander Briant",
+   "display_name": "St. Alexander Briant",
+   "dates": "c. 1556 – 1581",
+   "region": "Somerset, England",
+   "feast": "December 1",
+   "martyr": true
+  },
+  "portrait": "A very young, clean-shaven priest with a gentle, serene face, wearing a plain black Elizabethan-era priest's gown and holding a palm of martyrdom in one hand and a small crucifix in the other. Behind him, a simple stone wall with a narrow arched window and soft golden light.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tortured in the Tower, he wrote that he felt no pain.",
+    "visual": "art",
+    "scene": "A young priest in a plain dark gown kneels in a bare stone cell of the Tower of London, his face calm and lifted, a single shaft of golden light falling from a narrow arched window onto his folded hands."
+   },
+   {
+    "role": "who",
+    "text": "Alexander Briant was a young priest from Somerset, in sixteenth-century England.",
+    "visual": "map",
+    "lat": 51.1,
+    "lon": -2.9,
+    "place": "Somerset · England"
+   },
+   {
+    "role": "story",
+    "text": "At Oxford, he was called the beautiful youth. There he came to the Catholic faith.",
+    "visual": "art",
+    "scene": "A youthful scholar in a Tudor student's gown stands beside an older tutor in a dark academic robe in the stone quadrangle of a sixteenth-century Oxford college, pointing together at an open book."
+   },
+   {
+    "role": "story",
+    "text": "He trained for the priesthood abroad, was ordained in fifteen seventy-eight, and returned to labour in Somerset.",
+    "visual": "art",
+    "scene": "A young priest in dark Elizabethan dress quietly celebrates Mass at a small table in a candlelit room of a Somerset farmhouse, with a few kneeling villagers in plain sixteenth-century country clothes."
+   },
+   {
+    "role": "story",
+    "text": "In April fifteen eighty-one, officers hunting his old tutor arrested him. In the Tower of London he was tortured, yet stayed steadfast.",
+    "visual": "art",
+    "scene": "Two Tudor officers in doublets and caps lead a bound young priest through a dim stone archway toward the White Tower, while he looks ahead with a peaceful, steady expression."
+   },
+   {
+    "role": "story",
+    "text": "From prison he asked to join the Jesuits, and they agreed.",
+    "visual": "art",
+    "scene": "A young priest sits at a rough wooden table in a stone prison cell, writing a letter by candlelight with a quill, a small crucifix propped before him and a thin beam of light from a high window."
+   },
+   {
+    "role": "turn",
+    "text": "Condemned for treason, he died at Tyburn on the first of December, fifteen eighty-one, with Edmund Campion and Ralph Sherwin. He was about twenty-five. A young man's faith held when everything else was taken.",
+    "visual": "art",
+    "scene": "Three priests in simple dark gowns stand together with bowed, peaceful faces in an open field at Tyburn outside Tudor London, a silent crowd in sixteenth-century dress gathered behind them under a pale winter sky."
+   },
+   {
+    "role": "close",
+    "text": "Saint Alexander Briant, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Briant": "BRY-unt",
+   "Tyburn": "TY-burn",
+   "Campion": "CAM-pee-un",
+   "Sherwin": "SHUR-win"
+  },
+  "caption_hook": "A beautiful young scholar, a secret priest, and a letter written from the Tower of London.",
+  "summary": "Alexander Briant, a young Somerset priest, was tortured in the Tower of London, asked from prison to join the Jesuits, and was martyred at Tyburn in 1581 beside Edmund Campion and Ralph Sherwin.",
+  "youtube_title": "St. Alexander Briant: The Young Priest of the Tower",
+  "hashtags": [
+   "#saintalexanderbriant",
+   "#somerset",
+   "#tyburn",
+   "#fortymartyrsofenglandandwales",
+   "#englishmartyrs",
+   "#jesuit",
+   "#towerofLondon",
+   "#elizabethanengland",
+   "#catholicsaints",
+   "#martyr",
+   "#lesserknownsaints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Alexander? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Alexander Briant was born in Somerset around 1556, though the exact date of birth is uncertain.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "At Oxford he was called 'the beautiful youth' for the beauty and purity of his countenance.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "At Oxford he was a pupil of Robert Persons, and this together with his association with Richard Holtby is credited with his coming to the Catholic faith.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He trained for the priesthood at the English College (Douai, then at Reims) and was ordained priest on 29 March 1578.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was sent to the English mission in August 1579 and laboured in his own county of Somerset.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition records that he reconciled to the Faith the father of his former tutor, Robert Persons.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was arrested on 28 April 1581 by officers searching for Robert Persons.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was sent to the Counter, then to the Tower of London, where he was tortured.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "From the Tower he wrote to the Jesuit Fathers in England asking to be admitted to the Society of Jesus, and the request was granted.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He wrote that he felt no pain during the tortures, adding: 'Whether this that I say be miraculous or no, God knoweth.'",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was arraigned with six other priests on 16 November 1581 in Queen's Bench, Westminster, for high treason, and condemned to death.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was executed at Tyburn on 1 December 1581, aged about twenty-five, with Edmund Campion and Ralph Sherwin.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Through malice or carelessness of the executioner, he suffered needlessly.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He was canonized by Pope Paul VI on 25 October 1970 as one of the Forty Martyrs of England and Wales; his feast is 1 December.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "A corporal housed in the English College in Rome has five priests' names stitched into it, including Briant's.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 2023 a pastoral area of the Diocese of Clifton was named in his honour.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was still a secular priest when arrested; his Jesuit membership came from his request made in prison.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His case shows the conflict between religious fidelity and political obedience in Elizabethan England, and the treason charge cannot automatically be taken as proof of conspiracy.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Tyburn",
+   "Tower of London",
+   "Somerset",
+   "Oxford"
+  ],
+  "story": [
+   "Alexander Briant was born in Somerset, in the southwest of England, around the year 1556. The exact date is not certain, and sources disagree by several years. Tradition describes him as the son of a small landowner, but little is known of his childhood. What is clear is the path his life took once he reached Oxford.",
+   "He entered Hart Hall, a college linked to the history of today's Hertford College, while still very young. His striking beauty and the peace in his face earned him the name the beautiful youth, as the sources remember him. At Oxford he became a pupil of Robert Persons, himself a Somerset man and a future Jesuit. Together with his association with Richard Holtby, this bond is credited with leading him to the Catholic faith, in a university bound to the religious settlement of the Crown.",
+   "The Church in England was then under heavy pressure. Catholic worship was restricted, and the laws against it were growing harsher, especially after Pope Pius V excommunicated Queen Elizabeth in 1570. Priests could not be trained freely at home, so young men crossed the sea to the English College, which was founded at Douai and then lodged at Reims. Alexander went abroad, and he was ordained a priest on 29 March 1578.",
+   "In August 1579 he was sent back to England. He worked in his own county of Somerset, offering Mass and the sacraments to Catholics who still held to the Church of Rome. It was quiet, hidden work and carried real danger. According to tradition, he also reconciled to the Catholic Church the father of his old tutor, Robert Persons. That closeness probably cost him dearly, for Persons had returned to England in 1580 with Edmund Campion, and the Crown's agents were hunting him.",
+   "On 28 April 1581, officers searching for Persons arrested Alexander instead. They hoped he would give them information. He was sent to the Counter prison in London and then to the Tower of London, where he was tortured. The sources say these attempts were fruitless. Alexander did not betray his old teacher, and he remained steadfast.",
+   "In the Tower, Alexander wrote a letter to the Jesuit Fathers in England, asking to be admitted to the Society of Jesus. They granted his request. Until then he had been a secular priest, so this was a request he made only in prison. In the same letter he said he had felt no pain during his tortures, and he added, with humility: \"Whether this that I say be miraculous or no, God knoweth.\"",
+   "On 16 November 1581 he was brought with six other priests before the Queen's Bench at Westminster, charged with high treason, and condemned to death. A modern Italian account notes that the charge cannot simply be taken as proof of any conspiracy; his story shows the clash between religious loyalty and political obedience in Elizabethan England. On 1 December 1581 he was executed at Tyburn, alongside Edmund Campion and Ralph Sherwin. He was about twenty-five years old. The sources record that through malice or carelessness he suffered more than he should have, and that his face was said to be strikingly beautiful to the end.",
+   "The Church remembered him. Pope Paul VI canonized him on 25 October 1970 among the Forty Martyrs of England and Wales, and his own feast is kept on 1 December, the day of his death. In the English College in Rome there is a cloth, a corporal used at Mass, with the names of five priests stitched into it, and Alexander Briant's is one of them. In 2023, a pastoral area of the Diocese of Clifton was named in his honour."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Beat 3: 'students called him the beautiful youth' invents who gave the nickname. The Catholic Encyclopedia only says he won the appellation at Oxford. Changed to 'he was called' (word count unchanged).",
+   "Story: 'a nickname among his fellow students' is unsupported, and the Italian source treats the nickname as hagiographic memory. Reworded to say the sources remember him that way.",
+   "Story: 'his friendship with Richard Holtby' overstates the sources, which say 'association'. Fixed.",
+   "Story: 'That friendship would cost him dearly' states as fact what the Catholic Encyclopedia only says 'probably' led to his fate. Hedged.",
+   "Story: 'a gift he sought only in prison, when he had nothing left to gain from it in the world' is embellishment and speculation about motive. Cut back to the documented fact.",
+   "Claims: the 25 October 1970 canonization date is in source 3, not source 0. Source reference corrected.",
+   "Checked and fine: hook (11 words, supported by the letter), who line, ordination 1578, arrest 28 April 1581, Tower, Jesuit admission, execution at Tyburn with Campion and Sherwin, age about 25, 'Saint' title (canonized 1970), map coordinates for Somerset, and total spoken length of about 126 words."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Spoken script is about 126 words. The 'beautiful youth' nickname is hagiographic tradition per the Italian source, so confirm you are happy stating it plainly. Also note that beatification dates conflict between sources (1886 vs 1921) and are not used."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 3062,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 656,
+   "thinking": 407
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2069,
+   "cache_write": 8198,
+   "cache_read": 0,
+   "out": 8232,
+   "thinking": 4401
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4558,
+   "cache_write": 0,
+   "cache_read": 8198,
+   "out": 7507,
+   "thinking": 4285
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1654,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2989,
+   "thinking": 1166
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Alexander Briant",
+   "url": "https://en.wikipedia.org/wiki/Alexander_Briant"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Alexander Briant",
+   "url": "https://www.newadvent.org/cathen/01296b.htm"
+  },
+  {
+   "title": "Santi e Beati: Alexander Briant",
+   "url": "https://www.santiebeati.it/dettaglio/93209"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Alexander Briant",
+   "url": "https://www.heiligenlexikon.de/BiographienA/Alexander_Briant.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 62.4,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Alejandro Briant",
+  "display_name": "San Alejandro",
+  "region": "Somerset, Inglaterra",
+  "dates": "c. 1556 – 1581",
+  "hook": "Un joven y hermoso erudito, un sacerdote clandestino y una carta escrita desde la Torre de Londres.",
+  "summary": "Alejandro Briant, joven sacerdote de Somerset, fue torturado en la Torre de Londres, pidió desde la prisión ingresar en la Compañía de Jesús y fue martirizado en Tyburn en 1581 junto a Edmundo Campion y Ralph Sherwin.",
+  "story": [
+   "Alejandro Briant nació en Somerset, en el suroeste de Inglaterra, alrededor del año 1556. La fecha exacta no es segura, y las fuentes difieren en varios años. Según la tradición, era hijo de un pequeño terrateniente, pero poco se sabe de su infancia. Lo que sí está claro es el camino que tomó su vida al llegar a Oxford.",
+   "Ingresó muy joven en Hart Hall, un colegio vinculado a la historia del actual Hertford College. Su notable belleza y la paz de su rostro le valieron el nombre de el hermoso joven, como lo recuerdan las fuentes. En Oxford se convirtió en discípulo de Robert Persons, también natural de Somerset y futuro jesuita. Junto con su relación con Richard Holtby, este vínculo se atribuye a su conversión a la fe católica, en una universidad ligada al acuerdo religioso de la Corona.",
+   "La Iglesia en Inglaterra estaba entonces bajo una fuerte presión. El culto católico estaba restringido y las leyes en su contra se endurecían, sobre todo después de que el papa Pío V excomulgara a la reina Isabel en 1570. Los sacerdotes no podían formarse libremente en el país, así que los jóvenes cruzaban el mar hacia el Colegio Inglés, fundado en Douai y después instalado en Reims. Alejandro partió al extranjero y fue ordenado sacerdote el 29 de marzo de 1578.",
+   "En agosto de 1579 fue enviado de regreso a Inglaterra. Trabajó en su propio condado de Somerset, celebrando la Misa y administrando los sacramentos a los católicos que seguían fieles a la Iglesia de Roma. Era una labor silenciosa y oculta, con un peligro real. Según la tradición, también reconcilió con la Iglesia católica al padre de su antiguo maestro, Robert Persons. Esa cercanía probablemente le costó muy caro, pues Persons había regresado a Inglaterra en 1580 junto con Edmundo Campion, y los agentes de la Corona lo buscaban.",
+   "El 28 de abril de 1581, los oficiales que buscaban a Persons arrestaron en cambio a Alejandro. Esperaban que les diera información. Fue llevado a la prisión de la Counter en Londres y después a la Torre de Londres, donde fue torturado. Las fuentes afirman que estos intentos fueron infructuosos. Alejandro no traicionó a su antiguo maestro y se mantuvo firme.",
+   "Desde la Torre, Alejandro escribió una carta a los padres jesuitas en Inglaterra, pidiendo ser admitido en la Compañía de Jesús. Ellos concedieron su petición. Hasta entonces había sido sacerdote secular, así que esta petición la hizo únicamente estando en prisión. En la misma carta afirmó que no había sentido dolor durante sus torturas, y añadió con humildad: \"Si lo que digo es milagroso o no, Dios lo sabe.\"",
+   "El 16 de noviembre de 1581 fue llevado, junto con otros seis sacerdotes, ante el Tribunal del Banco de la Reina en Westminster, acusado de alta traición, y condenado a muerte. Un relato italiano moderno señala que la acusación no puede tomarse sin más como prueba de conspiración alguna; su historia muestra el choque entre la lealtad religiosa y la obediencia política en la Inglaterra isabelina. El 1 de diciembre de 1581 fue ejecutado en Tyburn, junto a Edmundo Campion y Ralph Sherwin. Tenía unos veinticinco años. Las fuentes registran que, por malicia o descuido, sufrió más de lo debido, y que su rostro se consideró notablemente hermoso hasta el final.",
+   "La Iglesia lo recordó. El papa Pablo VI lo canonizó el 25 de octubre de 1970 entre los Cuarenta Mártires de Inglaterra y Gales, y su fiesta propia se celebra el 1 de diciembre, día de su muerte. En el Colegio Inglés de Roma se conserva un corporal, el paño usado en la Misa, con los nombres de cinco sacerdotes bordados, entre ellos el de Alejandro Briant. En 2023, una zona pastoral de la Diócesis de Clifton recibió su nombre en su honor."
+  ],
+  "prayer": "San Alejandro Briant, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Tyburn",
+   "Torre de Londres",
+   "Somerset",
+   "Oxford"
+  ]
+ },
+ "books": [],
+ "caption": "A beautiful young scholar, a secret priest, and a letter written from the Tower of London.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Alexander Briant · Feast day: December 1\nAlexander Briant, a young Somerset priest, was tortured in the Tower of London, asked from prison to join the Jesuits, and was martyred at Tyburn in 1581 beside Edmund Campion and Ralph Sherwin.\n\nSaint Alexander Briant, pray for us. 🕯\n\nSave this to pray with again next December 1.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintalexanderbriant #somerset",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-01/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-01/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-01/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-01/art.jpg"
+ },
+ "review_message_id": 281
+}
