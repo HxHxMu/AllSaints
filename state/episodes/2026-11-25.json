@@ -1,8 +1,8 @@
 {
  "id": "2026-11-25",
  "date": "2026-11-25",
- "status": "approved",
- "updated": "2026-11-20T17:09:09+00:00",
+ "status": "published",
+ "updated": "2026-11-25T12:33:58+00:00",
  "saint": {
   "qid": "Q1285323",
   "name": "Saint Mercurius",
@@ -311,7 +311,8 @@
    "Capadocia",
    "Cesarea",
    "Turquía"
-  ]
+  ],
+  "slug": "mercurio"
  },
  "books": [],
  "caption": "He was a general, and the emperor was his friend. He confessed his faith to him anyway.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Mercurius · Feast day: November 25\nAccording to his ancient legend, the Roman general Saint Mercurius confessed Christ to his friend the emperor, and was beheaded in Cappadocia, his homeland.\n\nLove of the Father comes before every other loyalty. Saint Mercurius, pray for us. 🕯\n\nSave this to pray with again next November 25.\n\n—\nSources: Wikipedia · Santi e Beati\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintmercurius #cappadocia",
@@ -322,5 +323,39 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-25/art.jpg"
  },
- "review_message_id": 216
+ "review_message_id": 216,
+ "slug": "mercurius",
+ "published": {
+  "media_id": "18016982861989358",
+  "permalink": "https://www.instagram.com/reel/DgKiMujRkCC/",
+  "location_id": null
+ },
+ "published_at": "2026-11-25T07:30-05:00",
+ "facebook": {
+  "id": "3414311728770159",
+  "url": "https://www.facebook.com/reel/3414311728770159/",
+  "published_at": "2026-11-25T07:32-05:00"
+ },
+ "threads": {
+  "id": "18655125100023517",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgKibUOvzuG",
+  "published_at": "2026-11-25T07:33-05:00"
+ },
+ "youtube": {
+  "id": "jpSiUhXH_aQ",
+  "url": "https://youtube.com/shorts/jpSiUhXH_aQ",
+  "privacy": "public",
+  "published_at": "2026-11-25T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of the Middle East"
+  ],
+  "playlists_done": true
+ },
+ "continent": "the Middle East",
+ "tiktok": {
+  "attempts": 1,
+  "error": "TikTok upload chunk 1/4 failed 503: \n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n  <head>\n    <title>503 first byte timeout"
+ }
 }
