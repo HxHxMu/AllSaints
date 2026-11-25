@@ -9,7 +9,7 @@
     195.0,
     257.0
   ],
-  "gap": 1.4,
+  "gap": 2.0,
   "beats": [
     {
       "role": "hook",
@@ -52,5 +52,6 @@
       "live": true
     }
   ],
-  "next_voice": "Next, in Part Five: the house."
+  "next_voice": "Next, in Part Five: the house.",
+  "title_share": 0.5
 }

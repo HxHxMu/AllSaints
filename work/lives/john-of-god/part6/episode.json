@@ -1,0 +1,56 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "VI",
+  "part_title": "The River",
+  "next": "Lives of the Saints",
+  "question": "Who is sick\nnear you?",
+  "score": [
+    296.0,
+    358.5
+  ],
+  "gap": 2.0,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "The hospital was burning, and John went in.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "Fire had broken out in the great hospital of Granada.",
+      "scene": "Night: a large sixteenth-century stone hospital with arched windows burning, flames pouring from upper windows and the roof, thick smoke rolling into a stormy sky, hard orange-less black-and-white firelight on the cobbled square in front; far below, tiny dark figures hurrying, seen from far behind. Skewed angular architecture, no faces."
+    },
+    {
+      "role": "story",
+      "text": "He carried the sick out, one by one.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "Later, he plunged into a river to save a drowning young man.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "He could not save him.",
+      "scene": "A wide dark river at dusk under a heavy sky, calm rippled water spreading in rings where something has gone under, a worn dark cloak and a pair of boots left on the empty muddy bank in the foreground, bare willows, mist on the far shore. No people."
+    },
+    {
+      "role": "turn",
+      "text": "He fell ill, and died on the eighth of March, 1550: his fifty-fifth birthday.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "In 1690, the Church declared him a saint, patron of hospitals and the sick.",
+      "scene": "A long bare whitewashed hospital ward of sixteenth-century Granada at night seen down its length: two rows of empty straw pallets, a single candle burning on a small wooden table at the far end beneath a plain wooden crucifix, a shaft of soft light from a high window, mist on the floor. No people."
+    },
+    {
+      "role": "close",
+      "text": "Saint John of God, pray for us.",
+      "scene": "A plain wooden cross on a bare stone wall with one candle burning below it, hard side light, deep black shadows, a thin rising line of candle smoke. No people."
+    }
+  ],
+  "title_share": 0.5
+}
