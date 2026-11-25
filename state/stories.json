@@ -159,5 +159,21 @@
   "facebook_video": true,
   "status": "pending",
   "note": "Advent Sunday reminder: Lives of the Saints begins tomorrow evening."
+ },
+ {
+  "id": "lots-john-teaser-story",
+  "at": "2026-12-12T19:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-john-of-god/teaser-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Series teaser as a Story. Luis adds Instagram's countdown sticker (Mon Dec 14, 7:30 PM) by hand."
+ },
+ {
+  "id": "lots-john-tomorrow-story",
+  "at": "2026-12-13T20:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-john-of-god/tomorrow-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Reminder: Lives of the Saints begins tomorrow evening."
  }
 ]

@@ -1,0 +1,35 @@
+{
+ "saint": "John of God",
+ "series": "Lives of the Saints",
+ "part": "teaser",
+ "beats": [
+  {
+   "role": "hook",
+   "text": "At eight years old, he followed a stranger away from home."
+  },
+  {
+   "role": "story",
+   "text": "Years later, a soldier, he stood under the gallows."
+  },
+  {
+   "role": "story",
+   "text": "Then he ran through Granada crying for mercy, and they called him mad."
+  },
+  {
+   "role": "story",
+   "text": "When the hospital burned, he carried the sick out through the flames."
+  },
+  {
+   "role": "story",
+   "text": "This is how he became a saint."
+  },
+  {
+   "role": "story",
+   "text": "Lives of the Saints. Saint John of God. A vertical drama in six parts."
+  },
+  {
+   "role": "close",
+   "text": "Beginning Monday, December fourteenth."
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "slug": "marguerite-bourgeoys",
+  "title_card": "SAINT MARGUERITE\nBOURGEOYS",
+  "setting": "seventeenth-century France (Troyes, Champagne) and New France (Ville-Marie, now Montreal)",
+  "score_note": "score.wav = Luis's pick 'Marguerite Bourgeoys · Lives of the Saints (Silent Film Score) B' (Suno cccb8019, 359.5 s, downloaded 2026-11-24). Quiet dips: 49.25, 81.5, 126.25, 190.5, 245.75, 260; true silences 273-274.4, 288.8-290, 306.4-308.5; ends 358.3. Windows: I 0-65.5 · II 64.0-126.25 · III 126.25-190.5 · IV 184.0-245.75 · V 245.75-307.5 · VI 296.0-358.5 (each over 60 s; overlaps allowed).",
+  "look": "A single still frame from a black-and-white 1920s German Expressionist silent film: orthochromatic film stock, extreme chiaroscuro, one hard light source, deep black shadows, painted theatrical sets with skewed angular architecture, drifting mist, visible film grain. Seventeenth-century France and New France, authentic period clothing and buildings. Solemn and reverent, never horror or gore. Vertical 9:16, the image fills the frame. No text. The entire image is black and white with no colour at all: monochrome orthochromatic film.",
+  "marguerite_young": "a young French woman of about twenty with an oval face, calm dark eyes and dark hair under a plain white linen coif, in a simple seventeenth-century dark wool gown with a white collar",
+  "marguerite_middle": "a French woman of about thirty-three with an oval face, calm dark eyes, strong brows and dark hair under a white linen coif, in a plain dark wool gown, white collar and a dark shawl",
+  "marguerite_old": "an elderly French woman of about seventy-five with a lined, gentle face, calm dark eyes and white hair under a plain white linen coif, in a plain black wool gown and white collar",
+  "refs": [
+    "refs/marguerite-1.png"
+  ],
+  "same": "The woman in this scene is exactly the same woman as in the reference image: the same face shape, calm dark eyes, strong dark brows, nose and mouth. Keep her face recognisable even when she is small in the frame or turned away; adjust only her age and clothing as the scene says."
+}

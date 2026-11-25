@@ -1,0 +1,56 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "part": "I",
+  "part_title": "The Procession",
+  "next": "Part II · The Call",
+  "question": "What is\nasked of you?",
+  "score": [
+    0.0,
+    65.5
+  ],
+  "gap": 2.0,
+  "title_share": 0.5,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "At twenty, a girl walked in a procession, and her life changed.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "Marguerite Bourgeoys was born in Troyes, in 1620.",
+      "scene": "A seventeenth-century French town seen from a hillside at dawn: steep crooked half-timbered houses packed along a winding river, a great Gothic cathedral with a single unfinished tower rising over the rooftops, mist in the valley, a hard low light from one side. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "Her mother died before she turned twenty.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "She joined a sodality that taught poor girls.",
+      "scene": "A bare seventeenth-century French schoolroom of one long table and rows of plain wooden benches, empty, a high window throwing a hard shaft of light across the floorboards, a slate and a small crucifix on the wall, drifting dust. No people."
+    },
+    {
+      "role": "story",
+      "text": "Then came a Rosary procession, on the seventh of October, 1640.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "She felt called to give her life to God, and did not yet know how.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "That call would take her across an ocean.",
+      "scene": "A lone sailing ship of the seventeenth century on a vast dark sea under a heavy sky, seen from far away, one hard shaft of light falling on its sails, towering waves, mist on the horizon. No people."
+    },
+    {
+      "role": "turn",
+      "text": "For years she went on teaching, and waited.",
+      "live": true
+    }
+  ]
+}
