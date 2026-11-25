@@ -1,0 +1,345 @@
+{
+ "id": "2026-12-02",
+ "date": "2026-12-02",
+ "status": "review",
+ "updated": "2026-11-25T10:24:08+00:00",
+ "saint": {
+  "qid": "Q774567",
+  "name": "Saint Chromatius",
+  "display_name": "Saint Chromatius",
+  "dates": "c. 340 – c. 407",
+  "region": "Aquileia, Italy",
+  "feast": "December 2",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q774567",
+  "name": "Chromatius",
+  "links": 23,
+  "enwiki": "Chromatius",
+  "images": [
+   "Th%C3%BCr%20St.%20Johannes%2016.JPG"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Chromatius",
+  "birth": 335,
+  "death": 407,
+  "lon": 13.4,
+  "lat": 45.683333,
+  "selection_reason": "Chromatius, bishop of Aquileia, has a well-documented life: he sought to reconcile Jerome and Rufinus, he was a correspondent of John Chrysostom in exile, and his lost sermons were rediscovered in the 20th century. Choosing him also avoids a second martyr in a row after Alexander Briant, and Bibiana's vivid passio is largely legendary.",
+  "catholic_veneration": "Saint listed in the Roman Martyrology on December 2 and honored as a Father of the Church of Aquileia; Catholic Encyclopedia (1913), Santi e Beati and Nominis confirm his cult."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Chromatius",
+   "display_name": "Saint Chromatius",
+   "dates": "c. 340 – c. 407",
+   "region": "Aquileia, Italy",
+   "feast": "December 2",
+   "martyr": false
+  },
+  "portrait": "A fourth-century bishop of northern Italy, shown standing and facing the viewer, in a long cream tunic with a plain cream-colored chasuble and a white pallium band. He holds a pastoral staff in one hand and an open book of Scripture in the other. Behind him is a simple columned late-Roman basilica with a mosaic floor.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Two scholars quarreled bitterly, and one bishop worked to bring them back together.",
+    "visual": "art",
+    "scene": "A bishop in a plain cream chasuble stands between two scholars in late-Roman tunics, who sit at writing desks piled with scrolls and turn their faces away from each other. The scene is a columned hall in a fourth-century Italian city, lit by oil lamps."
+   },
+   {
+    "role": "who",
+    "text": "Chromatius was bishop of Aquileia, in northern Italy, in the fourth century.",
+    "visual": "map",
+    "lat": 45.77,
+    "lon": 13.37,
+    "place": "Aquileia · Italy"
+   },
+   {
+    "role": "story",
+    "text": "The scholars were Jerome and Rufinus, divided over the teachings of Origen. Chromatius rejected those teachings himself, yet he still sought peace.",
+    "visual": "art",
+    "scene": "The bishop sits listening with open, calm hands, while Jerome and Rufinus, two scholars in tunics and cloaks, speak earnestly on either side of him. Scrolls and codices lie on a table in a stone room of late-Roman Aquileia."
+   },
+   {
+    "role": "story",
+    "text": "Jerome was translating the Bible into Latin. Chromatius sent him letters of encouragement, and money. Jerome called him the most holy and learned of bishops.",
+    "visual": "art",
+    "scene": "The bishop hands a sealed letter and a small purse of coins to a traveling messenger in a hooded cloak. Codices and a writing stand sit on the table beside him, in a lamp-lit room with round arches and a view of the sea road."
+   },
+   {
+    "role": "story",
+    "text": "He took Rufinus into his own home. He urged him not to answer Jerome's last attack, but to translate a history of the Church.",
+    "visual": "art",
+    "scene": "The bishop welcomes the scholar Rufinus at the door of a late-Roman house with a courtyard. Beyond them a writing desk with scrolls and an oil lamp is set ready in a quiet room."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was practical. He gave money, welcome and encouragement, and he shared his people's hardship as invaders came.",
+    "visual": "art",
+    "scene": "The bishop with his pastoral staff gives bread and coins to townspeople, including mothers and elderly men, at the gate of Aquileia. Late-Roman walls and a distant line of hills rise behind them under a pale evening sky."
+   },
+   {
+    "role": "close",
+    "text": "Peace is patient work, done one friend at a time. Saint Chromatius, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Chromatius": "kroh-MAY-shus",
+   "Aquileia": "ah-kwee-LAY-ah",
+   "Rufinus": "roo-FYE-nus",
+   "Origen": "OR-ih-jen"
+  },
+  "caption_hook": "Jerome and Rufinus fought bitterly. Chromatius stayed a friend to both.",
+  "summary": "Saint Chromatius, fourth-century bishop of Aquileia, supported Jerome's Bible translation, welcomed Rufinus, and tried to make peace between them.",
+  "youtube_title": "Saint Chromatius: The Bishop Who Tried to Reconcile Jerome",
+  "hashtags": [
+   "#saintchromatius",
+   "#aquileia",
+   "#fatherofthechurch",
+   "#saintjerome",
+   "#churchfathers",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#catholic",
+   "#saints",
+   "#allsaints",
+   "#december2",
+   "#italy"
+  ],
+  "share_cta": "",
+  "claims": [
+   {
+    "claim": "Chromatius was bishop of Aquileia, in northern Italy, in the fourth century, and died about 406-407.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Jerome and Rufinus quarreled bitterly over Origenism; Chromatius rejected the doctrines of Origen yet tried to make peace between them.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Chromatius sent Jerome letters of encouragement and financial help while Jerome translated the Bible into Latin.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Jerome dedicated several of his biblical translations and commentaries to Chromatius, written at his suggestion.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Jerome called Chromatius the most holy and most learned of bishops.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "Chromatius took Rufinus into his own home so that he could continue Eusebius's Ecclesiastical History.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He urged Rufinus not to answer Jerome's last attack but to devote himself to new works, especially translating Eusebius's Ecclesiastical History.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology remembers him as a true peacemaker who helped the monasteries destroyed by Alaric and the suffering people.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He shared the troubled fortunes of his people through the barbarian invasions until his death.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Chromatius was ordained priest under Bishop Valerianus, took part in the regional council at Aquileia in 381, and became bishop about 387 or 388, consecrated by Ambrose of Milan.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "His family included a brother, Eusebius, and three sisters, and priests and laymen gathered at their home.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Jerome praised Chromatius's family, comparing his mother to the prophetess Anna and his sisters to the wise virgins.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "In 404 John Chrysostom, condemned again to exile, sought help; Chromatius wrote to Emperor Honorius on his behalf, in vain.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Chromatius opposed Arianism with zeal and rooted it out in his diocese.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Pope Benedict XVI said Chromatius probably died in exile at Grado in 407, and described his preaching language as fresh, colorful and incisive.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "About forty homilies and sixty treatises on Matthew's Gospel are now attributed to him; his writings were long attributed to others and nearly unknown for centuries.",
+    "source": 4,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that Mark the Evangelist spread Christianity in Aquileia.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Aquileia was a Roman colony, fortified by Marcus Aurelius as a bulwark against invasions from the East.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Two battles of Theodosius, in 387 and 394, brought war and devastation to Friuli.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology lists him on December 2, though no formal canonization is known.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Aquileia",
+   "Grado",
+   "Friuli"
+  ],
+  "story": [
+   "Aquileia, on the Adriatic, was an important Roman city. It began as a Roman colony and was fortified under Marcus Aurelius as a bulwark against invasions from the east. Tradition holds that Mark the Evangelist first brought the Gospel there. The list of its bishops is uncertain in the early centuries and secure from the year 285. This was the city where Chromatius was born, probably around 340, and where he grew up.",
+   "His family had means and a deep faith. He had a brother, Eusebius, and three sisters, and their home became a gathering place for priests and laypeople who studied Scripture and prayed together. Around 370 the household welcomed a former imperial official named Jerome, who had given up his post and was preparing for the work that would fill his life: translating the Scriptures into Latin. Jerome later praised the whole family. He compared Chromatius's mother to the prophetess Anna and his sisters to the wise virgins of the Gospel.",
+   "Chromatius was ordained a priest by Bishop Valerianus, who relied on him in defending the faith against Arianism, which still had followers in northern Italy, even among bishops. In 381 a regional council met at Aquileia to settle these questions, and Chromatius was among those who shaped its conclusions. When Valerianus died, he became bishop, around 387 or 388, and was consecrated by Ambrose of Milan.",
+   "From that seat he became one of the most respected bishops of his day. He wrote to Ambrose and Jerome, and to Rufinus, a scholar from Aquileia. He encouraged all three to write, and he sent Jerome letters of encouragement and money. Jerome answered by dedicating several of his translations and commentaries to him, and he called Chromatius the most holy and most learned of bishops.",
+   "Then came the quarrel. Jerome and Rufinus, once friends, fell into a bitter dispute over the teachings of Origen. Chromatius himself rejected those teachings, but he would not give up either friend. He kept communion with Rufinus and took him into his own home. He urged him not to answer Jerome's last attack, but to turn to new work, above all translating the Ecclesiastical History of Eusebius. The sources do not say the friendship was mended. They do say he did everything he could to bring both men back to their writing desks.",
+   "Peace was hard to find in those years. Twice, in 387 and 394, the armies of Theodosius fought in Friuli, and the people paid for it. In 404 John Chrysostom, bishop of Constantinople, was condemned to exile again and sought help. Chromatius wrote to the emperor Honorius on his behalf, but it was in vain, and Chrysostom died in exile. Later the Visigoths pressed in on Aquileia. The Roman Martyrology remembers how Chromatius helped the monasteries destroyed by Alaric and the suffering people. Pope Benedict XVI said he probably died in exile at Grado in 407, the same year as Chrysostom.",
+   "Chromatius was also a preacher. About forty of his sermons and some sixty treatises on the Gospel of Matthew are now attributed to him, though for centuries they were credited to other authors, and in 1969 Lemarié discovered and published thirty-eight sermons. Benedict XVI noted that he always began from the Word of God and returned to it. His language was fresh, colorful and incisive, and he used images his listeners could easily grasp.",
+   "No formal canonization is known, but the Church has long honored him as a saint. The Roman Martyrology names him on December 2 as a true peacemaker and a wise interpreter of the mysteries of God's word. His life asks us to be patient with people who are hard to love."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Hook was two sentences; the rules call for one. Merged into a single 13-word sentence.",
+   "The closing meaning line ('Peace is patient work…') sat inside the turn beat, so the close was only the prayer. Moved it to the close beat; the turn now ends at 'as invaders came'. Total length is about 124 words.",
+   "Summary said he 'spent his life trying to make peace between them'. The sources only show him trying to reconcile Jerome and Rufinus, so it now says he 'tried to make peace between them'.",
+   "display_name and youtube_title used the abbreviation 'St.'; changed to 'Saint'.",
+   "Story paragraph 1 called Aquileia 'one of the great cities of the late Roman world' and 'at the head of the Adriatic'. The sources say only that it was on the Adriatic, a Roman colony and a fortified garrison city. Softened.",
+   "Story paragraph 7 calls Henri Lemarié's 1969 find 'lost' sermons. The sources say he discovered and published them, and give his first name as Joseph in the editions list. Reworded to 'Lemarié discovered and published', with no first name."
+  ],
+  "confidence": 86,
+  "reviewer_note": "Check Jerome's 'prophetess Anna': the German source says 'Hanna', which could mean Hannah, Samuel's mother, since Chromatius and Eusebius are compared to Samuel. Also, the turn-beat image of giving bread to townspeople is an illustration; the sources only say he relieved the people's suffering."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1992,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1027,
+   "thinking": 802
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2044,
+   "cache_write": 11380,
+   "cache_read": 0,
+   "out": 9489,
+   "thinking": 5497
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4723,
+   "cache_write": 0,
+   "cache_read": 11380,
+   "out": 9389,
+   "thinking": 6161
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1703,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2686,
+   "thinking": 722
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Chromatius",
+   "url": "https://en.wikipedia.org/wiki/Chromatius"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Chromatius",
+   "url": "https://www.newadvent.org/cathen/03730a.htm"
+  },
+  {
+   "title": "Santi e Beati: Chromatius",
+   "url": "https://www.santiebeati.it/dettaglio/90492"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Chromatius",
+   "url": "https://nominis.cef.fr/contenus/saint/210/Saint-Chromace-d-Aquilee.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Chromatius",
+   "url": "https://www.heiligenlexikon.de/BiographienC/Chromatius.htm"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 64.4,
+ "narrator": "gemini:Riko",
+ "es": {
+  "display_name": "San Cromacio",
+  "name": "San Cromacio",
+  "region": "Aquileya, Italia",
+  "dates": "c. 340 – c. 407",
+  "hook": "Jerónimo y Rufino se enfrentaron con amargura. Cromacio siguió siendo amigo de ambos.",
+  "summary": "San Cromacio, obispo de Aquileya en el siglo IV, apoyó la traducción de la Biblia realizada por Jerónimo, acogió a Rufino e intentó restablecer la paz entre ellos.",
+  "story": [
+   "Aquileya, junto al mar Adriático, fue una importante ciudad romana. Comenzó como colonia romana y fue fortificada bajo Marco Aurelio como baluarte contra las invasiones procedentes del este. Según la tradición, Marcos el Evangelista llevó allí el Evangelio por primera vez. La lista de sus obispos es incierta en los primeros siglos y segura a partir del año 285. Fue en esta ciudad donde nació Cromacio, probablemente hacia el año 340, y donde creció.",
+   "Su familia tenía medios y una fe profunda. Tenía un hermano, Eusebio, y tres hermanas, y su casa se convirtió en un lugar de reunión para sacerdotes y laicos que estudiaban las Escrituras y oraban juntos. Hacia el año 370, la familia acogió a un antiguo funcionario imperial llamado Jerónimo, que había renunciado a su cargo y se preparaba para la obra que llenaría su vida: traducir las Escrituras al latín. Más tarde, Jerónimo elogió a toda la familia. Comparó a la madre de Cromacio con la profetisa Ana y a sus hermanas con las vírgenes prudentes del Evangelio.",
+   "Cromacio fue ordenado sacerdote por el obispo Valeriano, que confiaba en él para defender la fe frente al arrianismo, que todavía tenía seguidores en el norte de Italia, incluso entre los obispos. En el año 381, un concilio regional se reunió en Aquileya para resolver estas cuestiones, y Cromacio fue uno de los que dieron forma a sus conclusiones. Cuando murió Valeriano, se convirtió en obispo, hacia el año 387 o 388, y fue consagrado por Ambrosio de Milán.",
+   "Desde esa sede llegó a ser uno de los obispos más respetados de su tiempo. Escribió a Ambrosio, a Jerónimo y a Rufino, un erudito de Aquileya. Animó a los tres a escribir, y envió a Jerónimo cartas de aliento y dinero. Jerónimo respondió dedicándole varias de sus traducciones y comentarios, y llamó a Cromacio el obispo más santo y más docto.",
+   "Entonces llegó la disputa. Jerónimo y Rufino, antiguos amigos, se enzarzaron en una amarga polémica sobre las enseñanzas de Orígenes. El propio Cromacio rechazó esas enseñanzas, pero no quiso renunciar a ninguno de los dos amigos. Mantuvo la comunión con Rufino y lo acogió en su propia casa. Le pidió que no respondiera al último ataque de Jerónimo, sino que se dedicara a nuevas obras, sobre todo a traducir la Historia eclesiástica de Eusebio. Las fuentes no dicen que la amistad se recompusiera. Sí dicen que hizo todo lo posible para que ambos volvieran a sus escritos.",
+   "La paz era difícil de encontrar en aquellos años. En 387 y en 394, los ejércitos de Teodosio combatieron dos veces en Friuli, y el pueblo pagó las consecuencias. En 404, Juan Crisóstomo, obispo de Constantinopla, fue condenado de nuevo al destierro y buscó ayuda. Cromacio escribió al emperador Honorio en su favor, pero fue en vano, y Crisóstomo murió en el exilio. Más tarde, los visigodos presionaron sobre Aquileya. El Martirologio Romano recuerda cómo Cromacio ayudó a los monasterios destruidos por Alarico y a la población que sufría. El papa Benedicto XVI dijo que probablemente murió en el exilio en Grado, en 407, el mismo año que Crisóstomo.",
+   "Cromacio fue también predicador. Hoy se le atribuyen unos cuarenta de sus sermones y unos sesenta tratados sobre el Evangelio de Mateo, aunque durante siglos se atribuyeron a otros autores; en 1969, Lemarié descubrió y publicó treinta y ocho sermones. Benedicto XVI señaló que siempre partía de la Palabra de Dios y volvía a ella. Su lenguaje era fresco, vivo y penetrante, y empleaba imágenes que sus oyentes podían entender con facilidad.",
+   "No se conoce ninguna canonización formal, pero la Iglesia lo ha honrado durante mucho tiempo como santo. El Martirologio Romano lo recuerda el 2 de diciembre como un verdadero pacificador y un sabio intérprete de los misterios de la palabra de Dios. Su vida nos pide ser pacientes con las personas que nos resultan difíciles de amar."
+  ],
+  "prayer": "La paz es una obra paciente, que se realiza un amigo a la vez. San Cromacio, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Aquileya",
+   "Grado",
+   "Friuli"
+  ]
+ },
+ "books": [],
+ "caption": "Jerome and Rufinus fought bitterly. Chromatius stayed a friend to both.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Chromatius · Feast day: December 2\nSaint Chromatius, fourth-century bishop of Aquileia, supported Jerome's Bible translation, welcomed Rufinus, and tried to make peace between them.\n\nPeace is patient work, done one friend at a time. Saint Chromatius, pray for us. 🕯\n\nSave this to pray with again next December 2.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintchromatius #aquileia",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-02/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-02/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-02/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-02/art.jpg"
+ },
+ "review_message_id": 289
+}
