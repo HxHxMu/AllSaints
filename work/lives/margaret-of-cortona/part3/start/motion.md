@@ -42,4 +42,4 @@ Shots 2, 5, 7 are the ones to make first (Margaret moves). 1, 3, 4, 6, 8 work as
 **Motion:** the faces in the pews stay stern and still; one by one some of them turn their heads away; candlelight flickers across them.
 
 ---
-Name the clips by shot number (`1.mp4` … `8.mp4`) and drop them in `work/nocturnes/part3/live/`.
+Name the clips by shot number (`1.mp4` … `8.mp4`) and drop them in `work/lives/margaret-of-cortona/part3/live/`.

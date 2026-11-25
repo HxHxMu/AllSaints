@@ -1,0 +1,14 @@
+{
+  "saint": "Margaret of Cortona",
+  "slug": "margaret-of-cortona",
+  "title_card": "SAINT MARGARET\nOF CORTONA",
+  "setting": "thirteenth-century central Italy",
+  "score_note": "score.wav = Luis's Suno score for Margaret. Part I window is in part1/episode.json 'score' (default 0-65.5); the teaser uses 228.5-258.",
+  "look": "A single still frame from a black-and-white 1920s German Expressionist silent film: orthochromatic film stock, extreme chiaroscuro, one hard light source, deep black shadows, painted theatrical sets with skewed angular architecture, drifting mist, visible film grain. Thirteenth-century Italy. Solemn and reverent. Vertical 9:16, the image fills the frame. No text.",
+  "refs": [
+    "part2/start/ref2-6.png",
+    "part2/start/ref-face.png",
+    "part2/start/ref5.png"
+  ],
+  "same": "The young woman in this scene is exactly the same woman as in the three reference images (the second is a close-up of her face): the same face shape, long straight nose, pale skin, high cheekbones, dark eyes and dark brows, the same age, the same dark hooded wool cloak over a light linen veil. Keep her face recognisable even when she is small in the frame or turned away. The small boy is the same child as in the third reference image."
+}

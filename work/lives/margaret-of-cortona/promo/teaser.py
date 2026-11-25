@@ -1,18 +1,18 @@
 """Lives of the Saints: series teaser for St. Margaret of Cortona (~29 s, vertical).
 Opens on the Ember cover frame (the Shorts grid tile), then quick cuts from the six parts under Riko's lines,
-the Ember title band, and the date card.   ../../.venv/bin/python teaser.py   (from work/nocturnes)"""
+the Ember title band, and the date card.   ../../../../.venv/bin/python teaser.py   (from work/lives/margaret-of-cortona/promo)"""
 import subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parent.parent
 D = ROOT / "teaser"; OUT = D / "build"; OUT.mkdir(parents=True, exist_ok=True)
-F = ROOT.parents[1] / "brand/fonts"; FRAK = ROOT / "UnifrakturMaguntia-Book.ttf"
+F = ROOT.parents[2] / "brand/fonts"; FRAK = ROOT.parent / "UnifrakturMaguntia-Book.ttf"
 W, H, FPS = 1080, 1920, 24
 INK, PAPER, AMBER = (14, 12, 10), (226, 219, 203), (226, 150, 58)
 SCORE = (228.5, 258.0)   # the score's loudest stretch, ending on its phrase dip at 258 s
 GAP = 0.35
-L = lambda p, n: ROOT / ("live" if p == 1 else f"part{p}/live") / f"{n}.mp4"
+L = lambda p, n: ROOT / f"part{p}/live" / f"{n}.mp4"
 # line -> cuts: (part, clip, in-point s, weight)
 CUTS = [
     [(1, 4, 2.0, 1), (1, 5, 3.0, 1)],                    # a nobleman's mistress

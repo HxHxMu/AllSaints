@@ -1,5 +1,5 @@
 """Lives of the Saints (silent-film series) test: a saint micro-drama part in the style of 1920s German Expressionist silent film.
-    Generalised copy of work/nocturnes/build.py (Margaret stays there, untouched). Per saint: work/lives/<saint>/ with
+    Shared by every series. Per saint: work/lives/<saint>/ with
     series.json (name, setting, slug), score.wav, partN/episode.json.
     .venv/bin/python work/lives/build.py art|voice|video --saint john-of-god --part part1 [--live]"""
 import json, subprocess, sys, concurrent.futures as cf
@@ -174,7 +174,7 @@ def video():
         if LIVE and clip.exists():  # Luis's live-action clips (any length >= the beat, 24 fps): cover-crop, grade to the series look;
             # shots without a clip fall back to the still in art/ with a slow push (mixed parts, 2026-11-18)
             ss = max(0.0, dur(clip) - secs - 0.5) if i == len(EP["beats"]) - 1 else 0.0   # the prayer: end on her face
-            sat = 0.3   # keep a trace of amber in flame and lantern
+            sat = 0.0 if i in EP.get("mono", []) else 0.3   # trace of amber in flame and lantern; "mono": shots that came out sepia (Margaret I shot 4)
             subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-ss", f"{ss:.2f}", "-i", str(clip), "-i", str(out / f"cap{i}.png"),
                             "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,unsharp=5:5:0.6,"   # Gemini free clips are ~720p: firm up the upscale (grain goes on after)
                             f"hue=s={sat},colorbalance=bs=0.06:bm=0.04:rs=-0.03,eq=contrast=1.12:gamma=0.95[bg];[bg][1:v]overlay=0:0,format=yuv420p[v]",

@@ -44,4 +44,4 @@ Paste the **look** line at the start of every prompt so the clips match each oth
 - **Text or letters appearing** in the picture: re-roll.
 - Firefly may make the clips in colour despite "black-and-white". That's fine: I'll grade them to match the series (black and white, cold tint, amber only for flame) when I cut them in.
 
-Drop the clips in `work/nocturnes/firefly/` named `1.mp4` … `8.mp4`, or send them to me, and I'll cut them to the narration, score and cards so we can compare them with the cut-out version.
+Drop the clips in `work/lives/margaret-of-cortona/firefly/` named `1.mp4` … `8.mp4`, or send them to me, and I'll cut them to the narration, score and cards so we can compare them with the cut-out version.

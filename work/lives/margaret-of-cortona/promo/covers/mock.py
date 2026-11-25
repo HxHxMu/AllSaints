@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 S = Path(__file__).parent
 REPO = Path("/Users/luisbonilla/Dev/AllSaints")
 F = REPO / "brand/fonts"
-FRAK = REPO / "work/nocturnes/UnifrakturMaguntia-Book.ttf"
+FRAK = REPO / "work/lives/UnifrakturMaguntia-Book.ttf"
 W, H = 1080, 1920
 PAPER, AMBER = (236, 232, 222), (226, 150, 58)
 TITLES = ["The Hound", "The Closed Door", "The Rope", "The Habit", "The House of Mercy", "The Hermitage"]

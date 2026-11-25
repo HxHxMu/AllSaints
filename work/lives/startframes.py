@@ -1,5 +1,4 @@
-"""Start frames for image-to-video (Luis animates them on free tiers): a still per clip shot. Generalised from
-work/nocturnes/startframes.py: look and the "same person" line come from <saint>/series.json; reference images
+"""Start frames for image-to-video (Luis animates them on free tiers): a still per clip shot. Look and the "same person" line come from <saint>/series.json; reference images
 (frames of the saint, once a face is chosen) are listed there as "refs" (paths relative to the saint folder).
     .venv/bin/python work/lives/startframes.py john-of-god part1 2 4 5 [--variants a,b]"""
 import base64, json, sys, concurrent.futures as cf

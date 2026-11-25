@@ -1,16 +1,16 @@
 """Ember covers (design C) for the six parts, and release copies that open on them for 0.5 s (YouTube's Shorts grid
 shows a frame of the video, not the uploaded cover). The approved cut is untouched: picture and audio start 0.5 s later.
-    ../../.venv/bin/python covers.py        (from work/nocturnes)"""
+    ../../../../.venv/bin/python covers.py [part ...]      (from work/lives/margaret-of-cortona/promo)"""
 import json, subprocess
 from pathlib import Path
 from PIL import Image
 from teaser import GRADE, band, ff
 
-ROOT = Path(__file__).parent
-OUT = ROOT / "covers"; OUT.mkdir(exist_ok=True)
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "promo" / "covers"; OUT.mkdir(exist_ok=True)
 # part -> (clip with her face, second, approved master)
 PARTS = {
-    1: (ROOT / "live/2.mp4", 6.0, ROOT / "nocturnes-margaret-part1-live-approved.mp4"),
+    1: (ROOT / "part1/live/2.mp4", 6.0, ROOT / "part1/nocturnes-margaret-part1-live-approved.mp4"),
     2: (ROOT / "part2/live/2.mp4", 4.0, ROOT / "part2/nocturnes-margaret-part2-live-approved.mp4"),
     3: (ROOT / "part3/live/6.mp4", 1.5, ROOT / "part3/nocturnes-margaret-part3-live-approved.mp4"),
     4: (ROOT / "part4/live/8.mp4", 4.0, ROOT / "part4/nocturnes-margaret-part4-live-approved.mp4"),
@@ -23,7 +23,7 @@ NUM = ["I", "II", "III", "IV", "V", "VI"]
 
 
 def title(n):
-    ep = ROOT / ("episode.json" if n == 1 else f"part{n}/episode.json")
+    ep = ROOT / f"part{n}/episode.json"
     return json.loads(ep.read_text())["part_title"]
 
 

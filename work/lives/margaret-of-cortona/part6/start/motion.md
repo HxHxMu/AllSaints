@@ -1,6 +1,6 @@
 # Part VI · The Hermitage · camera and motion prompts (image-to-video)
 
-**For every clip:** upload the start frame, paste its prompt, **9:16**. All shots go in **one Meta AI chat**, main shots first. Name each clip by its shot number (`1.mp4` … `8.mp4`) in `work/nocturnes/part6/live/`.
+**For every clip:** upload the start frame, paste its prompt, **9:16**. All shots go in **one Meta AI chat**, main shots first. Name each clip by its shot number (`1.mp4` … `8.mp4`) in `work/lives/margaret-of-cortona/part6/live/`.
 
 Add this line to the end of **every** prompt, so the tool doesn't modernise the look:
 > One continuous shot, no cuts. 1920s silent-film camera: heavy, tripod-steady, slow and deliberate, no handheld shake, no drone or crane moves, no fast zoom. Keep the black-and-white film look, the grain and the faces exactly as in the image. Nobody speaks; no text appears.

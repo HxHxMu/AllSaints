@@ -42,4 +42,4 @@ Shots 2, 4, 5, 8 are the ones to make first (Margaret moves). 1, 3, 6, 7 work as
 **Motion:** the two women in the doorway reach out and take her hands; warm candlelight flickers and spills over her face and the cobbles; the boy looks up at them; her expression softens.
 
 ---
-Name the clips by shot number (`2.mp4`, `4.mp4` …) and drop them in `work/nocturnes/part2/live/`, or attach them in chat.
+Name the clips by shot number (`2.mp4`, `4.mp4` …) and drop them in `work/lives/margaret-of-cortona/part2/live/`, or attach them in chat.
