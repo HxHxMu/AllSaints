@@ -157,7 +157,8 @@ def video():
     nv = D / "voice" / "next.mp3" if EP.get("next_voice") else None   # the last part has no teaser: an end card
     t_next = dur(nv) + 1.4 if nv else 5.0
     spare -= t_next
-    t_title, t_q = spare * 0.45, spare * 0.55
+    ts = EP.get("title_share", 0.45)   # share of the spare time on the title card; the rest is the question card
+    t_title, t_q = spare * ts, spare * (1 - ts)
     if TIMES:
         t_title, t_q, t_next = TIMES[0], TIMES[-2], TIMES[-1]
     segs.append((still(out / "card-title.jpg", t_title, "s00"), t_title, None))

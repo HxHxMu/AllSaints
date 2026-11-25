@@ -1,0 +1,57 @@
+{
+  "saint": "John of God",
+  "series": "Lives of the Saints",
+  "part": "V",
+  "part_title": "The House",
+  "next": "Part VI · The River",
+  "question": "Whose\nhouse?",
+  "score": [
+    257.0,
+    320.5
+  ],
+  "gap": 2.0,
+  "beats": [
+    {
+      "role": "hook",
+      "text": "John gave his cloak to every beggar he met.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "Then he walked to Our Lady of Guadalupe, to pray.",
+      "scene": "A vast dry Spanish mountain landscape at dusk under a huge stormy sky: on a far ridge the dark fortress-like walls and towers of a great monastery with a hard light on its stone; far below on a winding stony road a single tiny pilgrim with a staff, seen from far behind, walks toward it. Skewed angular rocks, drifting mist. No faces."
+    },
+    {
+      "role": "story",
+      "text": "Back in Granada, he rented a house for the sick poor.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "One account says he carried them in on his own shoulders.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "By night, he begged for them, street by street.",
+      "scene": "A narrow sixteenth-century Granada street at night under a hard moon: one tiny figure in a cloak with a hood, seen from far behind, stands at a closed wooden door with a hand raised to knock, a small lantern at his feet throwing a pool of light on the cobbles; skewed angular houses on either side, mist at the ground. No faces."
+    },
+    {
+      "role": "turn",
+      "text": "The Bishop of Tuy gave him a habit, for his own.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "And it was the bishop who fixed his name: John of God.",
+      "scene": "A dim sixteenth-century bishop's study: a heavy carved wooden desk with an open parchment, a quill in an inkwell and a single candle, a tall high-backed chair empty behind it, a dark episcopal cloak and a plain coarse habit folded together on a corner of the desk; hard shaft of light from a high arched window, drifting dust. No people."
+    },
+    {
+      "role": "turn",
+      "text": "Others began to join him, one by one.",
+      "live": true
+    }
+  ],
+  "next_voice": "Next, in Part Six: the river.",
+  "title_share": 0.5
+}
