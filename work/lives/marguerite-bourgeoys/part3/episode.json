@@ -1,0 +1,57 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "gap": 2.0,
+  "title_share": 0.5,
+  "part": "III",
+  "part_title": "The Crossing",
+  "next": "Part IV · The Stable",
+  "question": "How far would\nyou go?",
+  "score": [
+    126.25,
+    190.5
+  ],
+  "next_voice": "Next, in Part Four: the stable.",
+  "beats": [
+    {
+      "role": "hook",
+      "text": "In 1653, she crossed the Atlantic.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "She sailed with a company of colonists bound for New France.",
+      "scene": "The empty deck of a seventeenth-century sailing ship at dusk, coiled ropes, a lantern, tall dark masts, heavy sails, a hard shaft of light across the wet planks, mist and a vast dark sea beyond the rail. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "For a long time, there was only the sea.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "The Vatican biography says she reached Ville-Marie on the sixteenth of November.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "It was a small fort on an island, at the edge of a great forest.",
+      "scene": "A small wooden fort-town on a river island seen from the water at dawn: a log palisade, a few steep-roofed log houses, one small cross, a vast dark forest and drifting mist beyond, hard low light from one side. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "turn",
+      "text": "There was no school yet, and no pupils.",
+      "scene": "A bare cold log hut in a snowy clearing at the edge of a dark forest, one small window with no light in it, empty snow, a lone fence post, a heavy sky, hard side light. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "turn",
+      "text": "She had crossed an ocean to teach, and she would have to wait.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Years would pass before her first school.",
+      "live": true
+    }
+  ]
+}

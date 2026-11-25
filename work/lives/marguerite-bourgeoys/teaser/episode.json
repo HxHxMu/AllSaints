@@ -1,0 +1,35 @@
+{
+ "saint": "Marguerite Bourgeoys",
+ "series": "Lives of the Saints",
+ "part": "teaser",
+ "beats": [
+  {
+   "role": "hook",
+   "text": "At twenty, a girl walked in a procession, and her life changed."
+  },
+  {
+   "role": "story",
+   "text": "She crossed an ocean to teach in a colony that had no school."
+  },
+  {
+   "role": "story",
+   "text": "Her first schoolroom was a stable."
+  },
+  {
+   "role": "story",
+   "text": "She took in the young women who came, and began a new kind of community."
+  },
+  {
+   "role": "story",
+   "text": "This is how she became a saint."
+  },
+  {
+   "role": "story",
+   "text": "Lives of the Saints. Saint Marguerite Bourgeoys. A vertical drama in six parts."
+  },
+  {
+   "role": "close",
+   "text": "Beginning Monday, January eleventh."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "part": "II",
+  "part_title": "The Call",
+  "next": "Part III · The Crossing",
+  "question": "Would you go?",
+  "score": [64.0, 126.25],
+  "gap": 2.0,
+  "title_share": 0.5,
+  "beats": [
+    {"role": "hook", "text": "A governor asked her to cross the ocean and teach.", "live": true},
+    {"role": "who", "text": "In 1642, she first heard of Ville-Marie, a new colony in Canada.",
+     "scene": "A bare seventeenth-century French room at night: a large hand-drawn map of the New World unrolled on a plain wooden table, curling at the edges, one candle burning beside it, a hard shaft of light across the vast empty ocean on the map, deep shadows. Skewed angular painted-set walls. No people."},
+    {"role": "story", "text": "About ten years later, she met its governor, Maisonneuve.", "live": true},
+    {"role": "story", "text": "He was looking for someone to teach the colony's children.",
+     "scene": "A small seventeenth-century wooden fort-town on a wide river island at dusk: a log palisade, a few steep-roofed log houses, a single small cross, vast dark forest and mist beyond, hard low light from one side. Skewed angular painted-set architecture. No people."},
+    {"role": "story", "text": "She later told of a prayer, in which Our Lady said: Go, I will not forsake you.", "live": true},
+    {"role": "turn", "text": "She said yes.", "live": true},
+    {"role": "turn", "text": "In 1653, she left Troyes.",
+     "scene": "An old walled seventeenth-century French town gate at dawn seen from outside, a bare road leading away from it between bare fields into mist, a hard low light from the side, long shadows, crooked half-timbered roofs behind the wall. Skewed angular painted-set architecture. No people."},
+    {"role": "turn", "text": "She was thirty-three, and the road led to the sea.", "live": true}
+  ],
+  "next_voice": "Next, in Part Three: the crossing."
+}

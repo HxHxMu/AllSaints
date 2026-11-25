@@ -175,5 +175,21 @@
   "facebook_video": true,
   "status": "pending",
   "note": "Reminder: Lives of the Saints begins tomorrow evening."
+ },
+ {
+  "id": "lots-marguerite-teaser-story",
+  "at": "2027-01-09T19:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-marguerite-bourgeoys/teaser-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Series teaser as a Story. Luis adds Instagram's countdown sticker (Mon Jan 11, 7:30 PM) by hand."
+ },
+ {
+  "id": "lots-marguerite-tomorrow-story",
+  "at": "2027-01-10T20:30:00-05:00",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-marguerite-bourgeoys/tomorrow-story.mp4",
+  "facebook_video": true,
+  "status": "pending",
+  "note": "Reminder: Lives of the Saints begins tomorrow evening."
  }
 ]

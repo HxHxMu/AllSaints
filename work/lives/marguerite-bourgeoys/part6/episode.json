@@ -1,0 +1,56 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "gap": 2.0,
+  "title_share": 0.5,
+  "part": "VI",
+  "part_title": "The Rule",
+  "next": "Lives of the Saints",
+  "question": "What will you\nbegin?",
+  "score": [
+    296.0,
+    358.5
+  ],
+  "beats": [
+    {
+      "role": "hook",
+      "text": "At seventy-eight, she saw her community's rule accepted.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "Forty years of teaching had grown into a community.",
+      "scene": "A plain stone seventeenth-century convent house with steep roofs and a small bell tower in deep winter snow at dusk, warm light in a few small windows, a path of footprints leading to the door, mist, hard side light. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "The sisters kept their way: teachers among the people, not behind walls.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "She died in Montreal on the twelfth of January, 1700.",
+      "scene": "A wide frozen river at night under a heavy sky, a small fort-town far away on its bank with a single candle glowing in one window, deep snow, hard low light. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "The Vatican biography says her last act was a prayer for a sick young sister.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "In 1982, the Church declared her a saint.",
+      "scene": "The interior of a bare stone chapel, a shaft of hard light from a high window falling on a small wooden altar with one lit candle and a plain statue of the Virgin, dust drifting, deep shadows. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "turn",
+      "text": "Her sisters still teach today, in several countries.",
+      "live": true
+    },
+    {
+      "role": "close",
+      "text": "Saint Marguerite Bourgeoys, pray for us.",
+      "scene": "A plain wooden cross on a bare stone wall with one candle burning below it, hard side light, deep black shadows, a thin rising line of candle smoke. Skewed angular painted-set architecture. No people."
+    }
+  ]
+}

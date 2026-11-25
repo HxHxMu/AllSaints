@@ -1,0 +1,57 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "gap": 2.0,
+  "title_share": 0.5,
+  "part": "V",
+  "part_title": "The Daughters",
+  "next": "Part VI · The Rule",
+  "question": "Whom would\nyou take in?",
+  "score": [
+    245.75,
+    307.5
+  ],
+  "next_voice": "Next, in Part Six: the rule.",
+  "beats": [
+    {
+      "role": "hook",
+      "text": "Ships kept bringing young women to the colony.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "They came from France, sent by the King, and she took them in.",
+      "scene": "A seventeenth-century sailing ship moored at a rough wooden landing on a wide river in thick mist at dawn, seen from far away, tiny dark figures on the pier seen only from behind, one hard shaft of light, dark forest on the far shore. Skewed angular painted-set architecture. "
+    },
+    {
+      "role": "story",
+      "text": "She became a mother to them.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "With a few companions, she formed a community of teaching women.",
+      "scene": "A plain seventeenth-century room with a long wooden table, several simple chairs pushed back as if just left, a single candle, a small crucifix on the wall, a hard shaft of light from a window across the floor. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "They took vows, but did not live behind cloister walls.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "In 1670, she crossed the ocean again, to ask the King's protection.",
+      "scene": "A lone seventeenth-century sailing ship on a vast dark sea under a heavy sky, seen from far away, one hard shaft of light on its sails, towering waves, mist on the horizon. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "turn",
+      "text": "In 1671, Louis XIV granted the community his charter.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "Free to teach where she was needed, she came home to Montreal.",
+      "live": true
+    }
+  ]
+}

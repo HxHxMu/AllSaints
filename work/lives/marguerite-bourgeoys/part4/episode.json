@@ -1,0 +1,57 @@
+{
+  "saint": "Marguerite Bourgeoys",
+  "series": "Lives of the Saints",
+  "gap": 2.0,
+  "title_share": 0.5,
+  "part": "IV",
+  "part_title": "The Stable",
+  "next": "Part V · The Daughters",
+  "question": "What would you\nbuild from nothing?",
+  "score": [
+    184.0,
+    245.75
+  ],
+  "next_voice": "Next, in Part Five: the daughters.",
+  "beats": [
+    {
+      "role": "hook",
+      "text": "The governor gave her a stable.",
+      "live": true
+    },
+    {
+      "role": "who",
+      "text": "In 1658, Maisonneuve gave her an old stone stable.",
+      "scene": "An old seventeenth-century stone stable with a low sagging roof and a plain wooden door standing half open, on the edge of a small colonial town in snow at dusk, a lantern glowing in the dark doorway, hard side light, mist. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "story",
+      "text": "She turned it into a school.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "It was the first school in Montreal.",
+      "live": true
+    },
+    {
+      "role": "story",
+      "text": "She taught the children of the colony.",
+      "scene": "Seen only from behind: rows of small children in plain dark seventeenth-century clothes sitting on bare wooden benches in a rough stone room, facing a tall window that throws a hard shaft of light across the floor, dust drifting, a slate on the far wall. No faces visible, backs of heads only."
+    },
+    {
+      "role": "turn",
+      "text": "Years after she crossed the ocean, her work had begun.",
+      "live": true
+    },
+    {
+      "role": "turn",
+      "text": "The Vatican biography says she also saw to the restoring of the cross on Mount Royal.",
+      "scene": "A tall plain wooden cross standing on the summit of a wooded mountain at dusk above a wide river valley and a tiny fort-town far below, hard low light from one side, mist in the valley, vast dark forest. Skewed angular painted-set architecture. No people."
+    },
+    {
+      "role": "turn",
+      "text": "But a school was only the beginning.",
+      "live": true
+    }
+  ]
+}
