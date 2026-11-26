@@ -1,8 +1,8 @@
 {
  "id": "2026-11-26",
  "date": "2026-11-26",
- "status": "approved",
- "updated": "2026-11-20T17:14:14+00:00",
+ "status": "published",
+ "updated": "2026-11-26T12:34:41+00:00",
  "saint": {
   "qid": "Q119289",
   "name": "Saint Leonard of Port Maurice",
@@ -391,7 +391,8 @@
    "Florencia",
    "Córcega",
    "Coliseo"
-  ]
+  ],
+  "slug": "leonardo-de-porto-mauricio"
  },
  "books": [],
  "caption": "A sick friar who never reached China ended up filling the squares of Italy with listeners.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Leonard of Port Maurice · Feast day: November 26\nSaint Leonard of Port Maurice, an eighteenth-century Franciscan, regained his health and preached to crowds across Italy, spreading the Way of the Cross from town squares to the Roman Colosseum.\n\nSaint Leonard of Port Maurice, pray for us. 🕯\n\nHad you ever heard of St. Leonard of Port Maurice before today?\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintleonardofportmaurice #imperia",
@@ -406,5 +407,41 @@
  "location": {
   "name": "Imperia",
   "id": "1467770969743786"
+ },
+ "slug": "leonard-of-port-maurice",
+ "published": {
+  "media_id": "17916999984560270",
+  "permalink": "https://www.instagram.com/reel/DgNHGqQzq5q/",
+  "location_id": null,
+  "location": "Imperia (rejected, posted untagged)"
+ },
+ "published_at": "2026-11-26T07:30-05:00",
+ "facebook": {
+  "id": "1350659317086448",
+  "url": "https://www.facebook.com/reel/1350659317086448/",
+  "published_at": "2026-11-26T07:32-05:00"
+ },
+ "threads": {
+  "id": "18112463294567736",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgNHSJEOTiy",
+  "published_at": "2026-11-26T07:33-05:00"
+ },
+ "youtube": {
+  "id": "A0eTqPqiqhQ",
+  "url": "https://youtube.com/shorts/A0eTqPqiqhQ",
+  "privacy": "public",
+  "published_at": "2026-11-26T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7712457377341261855",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-26T07:34-05:00"
  }
 }
