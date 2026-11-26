@@ -1,0 +1,310 @@
+{
+ "id": "2026-12-03",
+ "date": "2026-12-03",
+ "status": "review",
+ "updated": "2026-11-26T10:31:14+00:00",
+ "saint": {
+  "qid": "Q473131",
+  "name": "Saint Cassian of Tangier",
+  "display_name": "St. Cassian of Tangier",
+  "dates": "d. c. 298",
+  "region": "Tangier, Morocco",
+  "feast": "December 3",
+  "martyr": true
+ },
+ "saint_pick": {
+  "qid": "Q473131",
+  "name": "Cassian of Tangier",
+  "links": 11,
+  "enwiki": "Cassian_of_Tangier",
+  "images": [
+   "Marcellus%20Cassian.jpg"
+  ],
+  "religions": [],
+  "birth": 300,
+  "death": 298,
+  "lon": -5.8044679,
+  "lat": 35.7694908,
+  "selection_reason": "Cassian, the court stenographer at Tangier who threw down his stylus and tablets rather than record an unjust sentence on Saint Marcellus the centurion, gives a vivid, surprising and moving one-minute story. It also brings a fresh region (Morocco, North Africa) after a run of European and missionary-bishop saints, and Santi e Beati and the Heiligenlexikon can check the facts.",
+  "catholic_veneration": "Saint listed in the Roman Martyrology on 3 December as a martyr of Tangier (Tingis) under Diocletian, AD 298.",
+  "major_feast": "the feast of Saint Francis Xavier",
+  "feast_link": ""
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Cassian of Tangier",
+   "display_name": "St. Cassian of Tangier",
+   "dates": "d. c. 298",
+   "region": "Tangier, Morocco",
+   "feast": "December 3",
+   "martyr": true
+  },
+  "feast_line": "On the feast of Saint Francis Xavier, meet a court clerk of Tangier the world forgot.",
+  "portrait": "A Roman-era clerk of North Africa in a plain belted tunic and cloak, holding a martyr's palm in one hand and wax writing tablets with a stylus in the other. Behind him are the pale stone walls and a colonnade of the Roman port city of Tingis under a calm sky.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "Tradition says a clerk threw down his pen to protest a death sentence.",
+    "visual": "art",
+    "scene": "Inside a Roman provincial courtroom, a clerk in a plain tunic stands at a low desk, flinging his stylus and wax tablets to the floor. A magistrate on a raised seat and soldiers look on, framed by stone columns and arches."
+   },
+   {
+    "role": "who",
+    "text": "Saint Cassian of Tangier, in Morocco, lived in the late third century.",
+    "visual": "map",
+    "lat": 35.7595,
+    "lon": -5.834,
+    "place": "Tangier · Morocco"
+   },
+   {
+    "role": "story",
+    "text": "According to the account of his passion, he was the court's recorder. The accused was Marcellus, a Christian centurion who refused to keep serving as a soldier.",
+    "visual": "art",
+    "scene": "A Roman basilica-style hall in a North African provincial town. A seated clerk with tablets writes beside a magistrate's bench, while a centurion in a military tunic stands calmly before the court between two guards."
+   },
+   {
+    "role": "story",
+    "text": "When the death sentence was spoken, Cassian threw down his stylus and tablets, and protested that it was unjust.",
+    "visual": "art",
+    "scene": "The clerk Cassian stands behind his desk with his arm outstretched, his stylus and tablets scattered on the stone floor. The magistrate looks up in surprise, and the centurion watches him quietly."
+   },
+   {
+    "role": "story",
+    "text": "He was arrested at once. Tradition holds that he was put to death on the third of December.",
+    "visual": "art",
+    "scene": "Two Roman soldiers lead Cassian by the arms out of a stone courthouse into the light of a North African street. He walks with calm dignity, and white-walled houses and a palm tree stand behind him."
+   },
+   {
+    "role": "turn",
+    "text": "His holiness was a plain refusal: he would not lend his hand to a verdict he judged unjust. Sometimes faithfulness means laying down the pen.",
+    "visual": "art",
+    "scene": "A devotional icon of Cassian kneeling in prayer beside a simple desk, with his tablets and stylus resting before him. A small martyr's palm lies across the desk, and the walls of ancient Tingis rise behind him."
+   },
+   {
+    "role": "close",
+    "text": "Saint Cassian, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Cassian": "KASH-un",
+   "Marcellus": "mar-SEL-us",
+   "Tangier": "tan-JEER"
+  },
+  "caption_hook": "He was only the man who wrote things down, until the day he refused to.",
+  "summary": "According to the account of his passion, Cassian, a court recorder at Tangier, threw down his stylus rather than record the unjust death sentence of Marcellus the centurion, and was himself martyred.",
+  "youtube_title": "St. Cassian of Tangier: The Clerk Who Dropped His Pen",
+  "hashtags": [
+   "#saintcassian",
+   "#tangier",
+   "#stenographers",
+   "#morocco",
+   "#northafrica",
+   "#martyr",
+   "#saintmarcellus",
+   "#catholicsaints",
+   "#saintoftheday",
+   "#romanmartyrology",
+   "#earlychurch",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Cassian? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Cassian is venerated as a martyr at Tangier (Roman Tingis), in present-day Morocco, with a feast on 3 December.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Cassian is listed in the Roman Martyrology at 3 December as a martyr of Tangier.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He lived in the late third century, traditionally dying in 298.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The account of his passion presents him as the court recorder (exceptor) at the trial of Marcellus.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Marcellus was a Christian centurion who refused to continue military service in circumstances connected with imperial celebrations.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "When the death sentence on Marcellus was pronounced, Cassian threw down his stylus and writing tablets and protested that the sentence was unjust.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Cassian was arrested immediately.",
+    "source": 0,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He was put to death on 3 December, according to the passion appended to the acts of Marcellus; the detail of beheading is traditional and less certain.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The poet Prudentius names Tangier as the city of Cassian, the earliest literary witness to his cult.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Cassian is the patron saint of stenographers.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The date 298 is traditional and derived from the trial of Marcellus, not independently documented.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Marcellus's sentence is commonly placed on 30 October 298 before the deputy of the prefect, named Aurelius Agricola or Agricolanus.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "According to tradition, Marcellus's courage and joyful acceptance of the sentence convinced Cassian to refuse to record it.",
+    "source": 2,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The former Spanish cathedral of Tangier stands where an old church probably honored Cassian and Marcellus, and is now home to sisters of Mother Teresa's order who do social work.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "stenographers"
+  ],
+  "places": [
+   "Tangier",
+   "Morocco",
+   "Mauritania Tingitana"
+  ],
+  "story": [
+   "Some saints leave behind long biographies. Cassian of Tangier left almost none, and what the Church does remember of him is a single gesture. The gesture is a clerk setting down his tools.",
+   "The city is the first thing the sources are sure about. Cassian is tied to Tingis, today's Tangier in Morocco, an important city of the Roman province of Mauritania Tingitana. It was an important link between the African provinces and the Iberian peninsula. His memory has belonged to that city from the earliest records of his cult. Beyond this the record is thin. No contemporary document tells us his family, his birthplace, his age, or how he came to the Christian faith, and the sources warn us not to borrow stories from other martyrs who share his name.",
+   "The oldest literary witness is the Christian poet Prudentius, who wrote in the fourth and fifth centuries. In the fourth hymn of his Peristephanon, a work in praise of the martyrs and the cities that cherish them, he gives Tangier its own Cassian. The reference is brief. It does not say what Cassian did, what he said, or how he died. But it shows that by the poet's day his name was already known and honored in Christian memory.",
+   "The fuller story comes from a text called the Passion of Cassian, kept as an appendix to the acts of Saint Marcellus. Marcellus was a Christian centurion who refused to keep serving in the army in circumstances connected with imperial celebrations. According to the traditional account, he stood trial at Tangier before the deputy of the prefect, named Aurelius Agricola, or Agricolanus in some manuscripts. His sentence is commonly dated to 30 October 298, in the age of the four rulers under Diocletian. The great persecutions began only in 303, so scholars caution against reading this episode as part of them. Individual soldiers and officials could still find themselves facing a choice between their faith and their public duty.",
+   "In that passion, Cassian is the exceptor, the court's recorder. This was a technical post. He was not the judge, only the man who wrote down what was said in the hearing. Then comes the moment at the center of the story. When the death sentence was spoken against Marcellus, Cassian threw down his stylus and writing tablets and protested that the verdict was unjust. The tools he had been given to record the sentence became the sign of his refusal to take part in it. The Ecumenical Lexicon of Saints adds that, according to tradition, the courage of Marcellus and his joyful acceptance of the sentence had convinced Cassian. The text says Cassian was arrested at once.",
+   "The passion places his death on the third day before the nones of December, which is 3 December, and the Church's liturgical tradition has kept that day as his feast. Traditional accounts say he was beheaded. Careful scholars note that this detail is far less certain than his name and his city. The year 298 itself comes from his link with the trial of Marcellus and not from a separate record. Scholars also remind us that the passion was written to praise Christian steadfastness. The dialogue and small gestures in it should not be treated as an official transcript. None of this lessens the faith behind his memory. It only shows what we know and what we receive by tradition.",
+   "Today the Roman Martyrology still names him on 3 December as a martyr of Tangier. Stenographers look to him as their patron. In Tangier, the former Spanish cathedral stands where, probably, an older church honored Cassian and Marcellus. Sisters of the Missionaries of Charity, the order of Mother Teresa, now live there and do social work. Cassian's holiness was not loud. It lay in a refusal, as the passion tells it, made when the pen was already in his hand, and in the cost he accepted for it."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Hook stated the pen-throwing as plain fact, but it comes only from the Passion of Cassian (tradition). Rewrote it with 'Tradition says' and kept it to 13 words, using the sources' protest detail.",
+   "Portrait described Cassian as 'young', but the sources say his age is unknown. Removed 'young'.",
+   "Story: 'the chief town of the Roman province' overstates the source, which calls Tingis an important urban centre of Mauritania Tingitana. Softened.",
+   "Story: 'the Church has kept that day as his feast ever since' claims an unbroken usage from his death, which the sources don't state. Removed 'ever since'.",
+   "Story: 'Stenographers and court reporters' goes beyond the source, which names only stenographers. Removed 'court reporters'.",
+   "Story: the Missionaries of Charity 'serve the poor' goes beyond the Heiligenlexikon, which says they do social work. Corrected.",
+   "Story: the final sentence presented his refusal as plain fact. Added 'as the passion tells it'.",
+   "Checked and fine: map coordinates for Tangier, Saint/martyr titles, 3 December feast, the 298 date given as tradition, the beheading hedged as uncertain, no 'few days later' (the Wikipedia detail conflicts with the 30 October trial), and the pronunciations. Spoken length is about 119 words."
+  ],
+  "confidence": 88,
+  "reviewer_note": "The feast_line names Saint Francis Xavier, which is true for 3 December but not in these sources, so confirm it against the calendar. The hook now opens with 'Tradition says' and runs 13 words, so check how it sounds read aloud."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2333,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 1112,
+   "thinking": 896
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2161,
+   "cache_write": 5581,
+   "cache_read": 0,
+   "out": 7823,
+   "thinking": 4338
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4176,
+   "cache_write": 0,
+   "cache_read": 5581,
+   "out": 11764,
+   "thinking": 8353
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1690,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 2997,
+   "thinking": 1052
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Cassian of Tangier",
+   "url": "https://en.wikipedia.org/wiki/Cassian_of_Tangier"
+  },
+  {
+   "title": "Santi e Beati: Cassian of Tangier",
+   "url": "https://www.santiebeati.it/dettaglio/80250"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Cassian of Tangier",
+   "url": "https://www.heiligenlexikon.de/BiographienC/Cassian_Cassius.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 58.5,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Casiano de Tánger",
+  "display_name": "San Casiano",
+  "region": "Tánger, Marruecos",
+  "dates": "m. c. 298",
+  "hook": "Era solo el hombre que ponía las cosas por escrito, hasta el día en que se negó a hacerlo.",
+  "summary": "Según el relato de su pasión, Casiano, escribano de la corte en Tánger, arrojó al suelo su estilo antes que registrar la injusta sentencia de muerte contra Marcelo, el centurión, y él mismo fue martirizado.",
+  "story": [
+   "Algunos santos dejan largas biografías. De Casiano de Tánger apenas queda nada, y lo que la Iglesia recuerda de él es un solo gesto. Ese gesto es el de un escribano que deja en el suelo sus instrumentos de trabajo.",
+   "La ciudad es lo primero de lo que las fuentes están seguras. Casiano aparece vinculado a Tingis, la actual Tánger en Marruecos, una ciudad importante de la provincia romana de Mauritania Tingitana. Era un vínculo importante entre las provincias africanas y la península ibérica. Su memoria ha pertenecido a esa ciudad desde los primeros testimonios de su culto. Más allá de esto, el registro es escaso. Ningún documento contemporáneo nos dice su familia, su lugar de nacimiento, su edad ni cómo llegó a la fe cristiana, y las fuentes advierten que no deben tomarse prestadas historias de otros mártires que comparten su nombre.",
+   "El testimonio literario más antiguo es el del poeta cristiano Prudencio, que escribió en los siglos IV y V. En el cuarto himno de su Peristephanon, obra en alabanza de los mártires y de las ciudades que los veneran, le da a Tánger su propio Casiano. La referencia es breve. No dice qué hizo Casiano, qué dijo ni cómo murió. Pero muestra que, en tiempos del poeta, su nombre ya era conocido y honrado en la memoria cristiana.",
+   "El relato más completo procede de un texto llamado Pasión de Casiano, conservado como apéndice a las actas de San Marcelo. Marcelo era un centurión cristiano que se negó a seguir sirviendo en el ejército en circunstancias relacionadas con las celebraciones imperiales. Según el relato tradicional, compareció ante juicio en Tánger ante el lugarteniente del prefecto, llamado Aurelio Agrícola, o Agricolano en algunos manuscritos. Su sentencia suele fecharse el 30 de octubre de 298, en la época de los cuatro emperadores bajo Diocleciano. Las grandes persecuciones comenzaron solo en 303, por lo que los estudiosos advierten que no conviene leer este episodio como parte de ellas. Aun así, soldados y funcionarios individuales podían verse ante la elección entre su fe y su deber público.",
+   "En esa pasión, Casiano es el exceptor, el escribano del tribunal. Era un cargo técnico. No era el juez, sino solo el hombre que anotaba lo que se decía en la audiencia. Luego llega el momento central del relato. Cuando se pronunció la sentencia de muerte contra Marcelo, Casiano arrojó al suelo su estilo y sus tablillas de escritura y protestó porque el veredicto era injusto. Las herramientas que se le habían dado para registrar la sentencia se convirtieron en señal de su negativa a participar en ella. El Léxico Ecuménico de los Santos añade que, según la tradición, el valor de Marcelo y su alegre aceptación de la sentencia habían convencido a Casiano. El texto dice que Casiano fue arrestado de inmediato.",
+   "La pasión sitúa su muerte el tercer día antes de los nones de diciembre, es decir, el 3 de diciembre, y la tradición litúrgica de la Iglesia ha conservado ese día como su fiesta. Las narraciones tradicionales dicen que fue decapitado. Los estudiosos prudentes señalan que este detalle es mucho menos seguro que su nombre y su ciudad. El año 298 mismo proviene de su vínculo con el juicio de Marcelo, y no de un registro independiente. Los estudiosos recuerdan también que la pasión fue escrita para alabar la firmeza cristiana. Los diálogos y pequeños gestos que contiene no deben tomarse como una transcripción oficial. Nada de esto disminuye la fe que sostiene su memoria. Solo muestra lo que sabemos y lo que recibimos por tradición.",
+   "Hoy el Martirologio Romano aún lo nombra el 3 de diciembre como mártir de Tánger. Los estenógrafos lo miran como su patrono. En Tánger, la antigua catedral española se levanta donde, probablemente, una iglesia más antigua honraba a Casiano y a Marcelo. Hoy viven allí hermanas de las Misioneras de la Caridad, la congregación de la madre Teresa, que realizan obras sociales. La santidad de Casiano no fue ruidosa. Consistió en una negativa, tal como la narra la pasión, hecha cuando la pluma ya estaba en su mano, y en el precio que aceptó pagar por ella."
+  ],
+  "prayer": "San Casiano, ruega por nosotros.",
+  "patronages": [
+   "estenógrafos"
+  ],
+  "places": [
+   "Tánger",
+   "Marruecos",
+   "Mauritania Tingitana"
+  ]
+ },
+ "books": [],
+ "caption": "He was only the man who wrote things down, until the day he refused to.\n✝ A forgotten saint, every morning. Follow along.\n\nOn the feast of Saint Francis Xavier, meet a court clerk of Tangier the world forgot.\n\nSaint Cassian of Tangier · Feast day: December 3\nAccording to the account of his passion, Cassian, a court recorder at Tangier, threw down his stylus rather than record the unjust death sentence of Marcellus the centurion, and was himself martyred.\n\nSaint Cassian, pray for us. 🕯\n\nKnow someone named Cassian? Send them their saint.\n\n—\nSources: Wikipedia · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintcassian #stenographers",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-03/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-03/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-03/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-03/art.jpg"
+ },
+ "review_message_id": 299
+}
