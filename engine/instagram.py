@@ -95,12 +95,13 @@ def find_reel(caption, hours=36):
     return None
 
 
-def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = None, location_id=None):
+def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = None, location_id=None, share_to_feed=True):
+    """share_to_feed=False: the Reel shows in the Reels tab and Reels feed but not on the profile grid."""
     tok = get_token()
     uid = _uid()
     errors = []
     if video_url:
-        data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true", "access_token": tok}
+        data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true" if share_to_feed else "false", "access_token": tok}
         if cover_url:
             data["cover_url"] = cover_url
         if location_id:
@@ -122,7 +123,7 @@ def publish_reel(caption, video_url=None, cover_url=None, video_path: Path = Non
         log(errors[-1])
     if video_path:
         # resumable upload of the local file
-        data = {"media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true", "access_token": tok}
+        data = {"media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true" if share_to_feed else "false", "access_token": tok}
         if cover_url:
             data["cover_url"] = cover_url
         if location_id:

@@ -1,7 +1,7 @@
 """One-off scheduled posts (state/shares.json), e.g. a Facebook Page post linking a sung-prayer video on its release day.
 
 Each entry: {"id", "at": ISO time with offset, "platform": "facebook" | "instagram" | "facebook_reel" | "tiktok" | "youtube", "message",
-"link", "status": "pending"}; an Instagram or facebook_reel entry also has "video" (and optionally "cover"), URLs of a
+"link", "status": "pending"}; an Instagram entry may set "share_to_feed": false (Reels tab only, off the grid); an Instagram or facebook_reel entry also has "video" (and optionally "cover"), URLs of a
 Reel uploaded ahead of time, and posts it as a Reel with "message" as the caption ("link" is only checked, since
 Instagram captions can't carry links). A tiktok entry sends "video" to the TikTok inbox as a draft and Telegram carries
 "message" for Luis to paste when he posts it (the series teaser and parts, 2026-11). A youtube entry uploads "video"
@@ -34,7 +34,8 @@ def _post(s):
     if s["platform"] == "instagram":
         import instagram, storage
         res = instagram.publish_reel(s["message"], video_url=storage.resolve_direct(s["video"]),
-                                     cover_url=storage.resolve_direct(s["cover"]) if s.get("cover") else None)
+                                     cover_url=storage.resolve_direct(s["cover"]) if s.get("cover") else None,
+                                     share_to_feed=s.get("share_to_feed", True))
         return "Instagram", res, res.get("permalink") or ""
     import facebook, storage
     if s["platform"] == "facebook_reel":
