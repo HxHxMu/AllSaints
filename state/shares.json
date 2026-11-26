@@ -649,5 +649,33 @@
   "platform": "facebook_video",
   "at": "2027-01-18T19:45:00-05:00",
   "status": "pending"
+ },
+ {
+  "id": "lots-margaret-film-youtube",
+  "at": "2026-12-07T19:30:00-05:00",
+  "platform": "youtube",
+  "title": "Lives of the Saints · St. Margaret of Cortona · The Full Film (6 parts)",
+  "message": "The full film: Parts I–VI of St. Margaret of Cortona, one continuous story.\n\nI The Hound · II The Closed Door · III The Rope · IV The Habit · V The House of Mercy · VI The Hermitage\n\nEvery line comes from her documented life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "tags": [
+   "St. Margaret of Cortona",
+   "Lives of the Saints",
+   "Catholic saints",
+   "Advent",
+   "silent film",
+   "vertical drama"
+  ],
+  "synthetic": true,
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/film.mp4",
+  "status": "pending",
+  "note": "16:9, vertical frame centred; YouTube, Facebook and the website (not Instagram or TikTok)."
+ },
+ {
+  "id": "lots-margaret-film-facebook",
+  "at": "2026-12-07T19:45:00-05:00",
+  "platform": "facebook_video",
+  "title": "Lives of the Saints · St. Margaret of Cortona · The Full Film (6 parts)",
+  "message": "The full film: Parts I–VI of St. Margaret of Cortona, one continuous story. The six parts are on YouTube: @AllHolySaints.\n\nI The Hound · II The Closed Door · III The Rope · IV The Habit · V The House of Mercy · VI The Hermitage\n\nEvery line comes from her documented life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargaretOfCortona #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/film.mp4",
+  "status": "pending"
  }
 ]
