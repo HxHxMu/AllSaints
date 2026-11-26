@@ -1,4 +1,4 @@
-"""Facebook Page Reels (Graph API video_reels) and Stories. Reels the bot posts to Instagram through the API are not
+"""Facebook Page Reels (Graph API video_reels), Page videos (16:9 films) and Stories. Reels the bot posts to Instagram through the API are not
 cross-posted by Instagram's "share to Facebook" setting, so the Page gets its own upload of the same video.
 
 Secrets: FB_PAGE_ID, FB_PAGE_TOKEN (a Page token made from a long-lived user token never expires;
@@ -94,6 +94,27 @@ def publish_reel(description, video_url=None, video_path: Path = None, cover_url
         link = ""
     url = f"https://www.facebook.com{link}" if link.startswith("/") else (link or f"https://www.facebook.com/reel/{vid}")
     log("Facebook Reel:", vid)
+    return {"id": vid, "url": url}
+
+
+def publish_video(title, description, video_url, cover_url=None):
+    """A regular Page video (16:9 films, longer than a Reel): Facebook fetches video_url itself. Returns {id, url}.
+    Recorded as posted once Facebook returns the id; the cover and permalink lookups after that only log on failure."""
+    page, tok = env("FB_PAGE_ID", required=True), env("FB_PAGE_TOKEN", required=True)
+    vid = _check(http.post(f"https://graph-video.facebook.com/v24.0/{page}/videos", timeout=900, data={
+        "file_url": video_url, "title": title, "description": description, "published": "true", "access_token": tok}),
+        "video upload")["id"]
+    log("Facebook video:", vid)
+    if cover_url:
+        try:
+            set_cover(vid, cover_url)
+        except Exception as e:
+            log("Facebook cover failed:", str(e)[:200])
+    try:
+        link = http.get(f"{GRAPH}/{vid}", params={"fields": "permalink_url", "access_token": tok}, timeout=30).json().get("permalink_url", "")
+    except Exception:
+        link = ""
+    url = f"https://www.facebook.com{link}" if link.startswith("/") else (link or f"https://www.facebook.com/watch/?v={vid}")
     return {"id": vid, "url": url}
 
 

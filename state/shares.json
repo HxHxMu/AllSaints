@@ -631,5 +631,23 @@
   "cover": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/part6-cover.jpg",
   "status": "pending",
   "share_to_feed": false
+ },
+ {
+  "title": "Lives of the Saints · St. John of God · The Full Film (6 parts)",
+  "message": "The full film: Parts I–VI of St. John of God, one continuous story. The six parts are on YouTube: @AllHolySaints.\n\nI The Runaway · II The Gallows · III The Crossing · IV The Madman · V The House · VI The River\n\nEvery line comes from the record of his life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StJohnOfGod #LivesOfTheSaints #CatholicSaints #Advent #AllHolySaints",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-john-of-god/film.mp4",
+  "id": "lots-john-film-facebook",
+  "platform": "facebook_video",
+  "at": "2026-12-21T19:45:00-05:00",
+  "status": "pending"
+ },
+ {
+  "title": "Lives of the Saints · St. Marguerite Bourgeoys · The Full Film (6 parts)",
+  "message": "The full film: Parts I–VI of St. Marguerite Bourgeoys, one continuous story. The six parts are on YouTube: @AllHolySaints.\n\nI The Procession · II The Call · III The Crossing · IV The Stable · V The Daughters · VI The Rule\n\nEvery line comes from the record of her life; what comes from tradition is told as tradition.\n\nNarration is an AI voice; film and stills are AI-generated (Meta AI, Google Gemini). Score by Luis E. Bonilla, made with AI tools (Suno).\n\n#StMargueriteBourgeoys #LivesOfTheSaints #CatholicSaints #AllHolySaints",
+  "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-marguerite-bourgeoys/film.mp4",
+  "id": "lots-marguerite-film-facebook",
+  "platform": "facebook_video",
+  "at": "2027-01-18T19:45:00-05:00",
+  "status": "pending"
  }
 ]

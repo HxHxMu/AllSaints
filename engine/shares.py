@@ -1,6 +1,6 @@
 """One-off scheduled posts (state/shares.json), e.g. a Facebook Page post linking a sung-prayer video on its release day.
 
-Each entry: {"id", "at": ISO time with offset, "platform": "facebook" | "instagram" | "facebook_reel" | "tiktok" | "youtube", "message",
+Each entry: {"id", "at": ISO time with offset, "platform": "facebook" | "instagram" | "facebook_reel" | "facebook_video" (a 16:9 Page video; needs "title") | "tiktok" | "youtube", "message",
 "link", "status": "pending"}; an Instagram entry may set "share_to_feed": false (Reels tab only, off the grid); an Instagram or facebook_reel entry also has "video" (and optionally "cover"), URLs of a
 Reel uploaded ahead of time, and posts it as a Reel with "message" as the caption ("link" is only checked, since
 Instagram captions can't carry links). A tiktok entry sends "video" to the TikTok inbox as a draft and Telegram carries
@@ -42,6 +42,10 @@ def _post(s):
         res = facebook.publish_reel(s["message"], video_url=storage.resolve_direct(s["video"]),
                                     cover_url=storage.resolve_direct(s["cover"]) if s.get("cover") else None)
         return "Facebook (Reel)", res, res["url"]
+    if s["platform"] == "facebook_video":
+        res = facebook.publish_video(s["title"], s["message"], storage.resolve_direct(s["video"]),
+                                     cover_url=storage.resolve_direct(s["cover"]) if s.get("cover") else None)
+        return "Facebook (video)", res, res["url"]
     if s["platform"] == "youtube":
         import tempfile, youtube
         from common import BRAND, http
@@ -57,7 +61,7 @@ def _post(s):
             path = Path(tmp) / "video.mp4"
             path.write_bytes(r.content)
             vid = youtube.upload_video(meta, path, "snippet,status")
-        return "YouTube", {"id": vid["id"]}, f"https://youtube.com/shorts/{vid['id']}"
+        return "YouTube", {"id": vid["id"]}, f"https://youtu.be/{vid['id']}"
     if s["platform"] == "tiktok":
         import tempfile, tiktok
         from common import http
@@ -81,7 +85,7 @@ def run_due(now=None):
     for s in shares:
         if s.get("status") != "pending" or dt.datetime.fromisoformat(s["at"]) > now or s.get("attempts", 0) >= 3:
             continue
-        if s["platform"] not in ("facebook", "instagram", "facebook_reel", "tiktok", "youtube"):
+        if s["platform"] not in ("facebook", "instagram", "facebook_reel", "facebook_video", "tiktok", "youtube"):
             continue
         if s["platform"].startswith("facebook") and not facebook.configured() or s["platform"] == "tiktok" and not tiktok.configured():
             continue
