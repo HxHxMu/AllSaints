@@ -109,7 +109,11 @@
   ],
   "synthetic": true,
   "video": "https://github.com/HxHxMu/AllSaints/releases/download/series-margaret/teaser.mp4",
-  "status": "pending"
+  "status": "posted",
+  "posted": {
+   "id": "iF7C-tdL-a0"
+  },
+  "posted_at": "2026-11-27T00:30+00:00"
  },
  {
   "id": "lots-margaret-tomorrow-youtube",
