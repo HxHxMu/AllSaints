@@ -1,0 +1,398 @@
+{
+ "id": "2026-12-04",
+ "date": "2026-12-04",
+ "status": "review",
+ "updated": "2026-11-27T10:24:35+00:00",
+ "saint": {
+  "qid": "Q180797",
+  "name": "Saint Anno II",
+  "display_name": "St. Anno II",
+  "dates": "c. 1010 – 1075",
+  "region": "Cologne, Germany",
+  "feast": "December 4",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q180797",
+  "name": "Anno II, Archbishop of Cologne",
+  "links": 20,
+  "enwiki": "Anno_II",
+  "images": [
+   "Anno%20II.jpg"
+  ],
+  "religions": [
+   "Catholic Church"
+  ],
+  "commonscat": "Anno II",
+  "birth": 1010,
+  "death": 1075,
+  "lon": 6.957777777,
+  "lat": 50.942222222,
+  "selection_reason": "Anno II offers a vivid, well-sourced story in the Vita Annonis and the Annolied: he seized the boy-king Henry IV at Kaiserswerth, ruled as regent, fled the Cologne uprising of 1074, then ended his life in penance. It also avoids another Italian bishop right after several Italian saints.",
+  "catholic_veneration": "Canonized in 1183 by Pope Lucius III; commemorated on 4 December in the Roman Martyrology and venerated especially in the Archdiocese of Cologne."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Anno II",
+   "display_name": "St. Anno II",
+   "dates": "c. 1010 – 1075",
+   "region": "Cologne, Germany",
+   "feast": "December 4",
+   "martyr": false
+  },
+  "portrait": "An eleventh-century archbishop in Romanesque vestments: a green chasuble over an alb, a white pallium, a tall mitre, and a crozier in one hand. In the other hand he holds a small model of a church, and behind him are the plain stone arches of a Rhineland abbey.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "The archbishop who seized a boy king is now a saint.",
+    "visual": "art",
+    "scene": "On the bank of the Rhine at an eleventh-century imperial palace, an archbishop in vestments and mitre stands beside German nobles. A young boy in royal robes looks toward a wooden boat moored at the water's edge."
+   },
+   {
+    "role": "who",
+    "text": "Anno was archbishop of Cologne, Germany, in the eleventh century.",
+    "visual": "map",
+    "lat": 50.94,
+    "lon": 6.96,
+    "place": "Cologne · Germany"
+   },
+   {
+    "role": "story",
+    "text": "Born a Swabian noble, he led the cathedral school at Bamberg. The emperor made him archbishop of Cologne, though he accepted with great reluctance.",
+    "visual": "art",
+    "scene": "A young cleric in a plain dark cassock teaches a group of students at a writing desk inside a Romanesque cathedral school. Through an arched doorway, an emperor in a crown and red mantle looks on."
+   },
+   {
+    "role": "story",
+    "text": "When the emperor died, his son Henry became king. In ten sixty-two, Anno led a plot at Kaiserswerth on the Rhine. The boy was drawn onto a boat and taken from his mother's rule.",
+    "visual": "art",
+    "scene": "A young boy in royal dress steps aboard a wooden river boat on the Rhine, guided by robed churchmen and nobles. A stone palace stands on the shore behind them."
+   },
+   {
+    "role": "story",
+    "text": "For a time he governed the empire, then lost ground at court. He also helped end a split in the papacy.",
+    "visual": "art",
+    "scene": "Bishops in mitres and copes sit in a Romanesque church in solemn council. In the center, a pope in a simple papal vestment is acknowledged by an archbishop who bows before him."
+   },
+   {
+    "role": "turn",
+    "text": "In his diocese he cared for the poor, reformed monasteries, and founded Siegburg Abbey, where he was buried. God works even through flawed hands.",
+    "visual": "art",
+    "scene": "An archbishop in vestments holds a model of a hilltop abbey while Benedictine monks in black habits kneel around him. Poor villagers wait at the foot of the hill, and the church rises behind them in the Rhineland landscape."
+   },
+   {
+    "role": "close",
+    "text": "Saint Anno, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Anno": "AH-no",
+   "Kaiserswerth": "KY-zers-vairt",
+   "Siegburg": "ZEEG-boorg",
+   "Swabian": "SWAY-bee-an",
+   "Bamberg": "BAHM-bairg"
+  },
+  "caption_hook": "He took a child king from his mother's rule. The Church still honors him as a saint.",
+  "summary": "Anno II, eleventh-century archbishop of Cologne, led the seizure of the boy king Henry IV, yet he also reformed monasteries, founded Siegburg Abbey, and was canonized in 1183.",
+  "youtube_title": "St. Anno: The Archbishop Who Seized a Boy King",
+  "hashtags": [
+   "#saintanno",
+   "#cologne",
+   "#siegburg",
+   "#archbishopanno",
+   "#kaiserswerth",
+   "#medievalsaints",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#allsaints",
+   "#germany",
+   "#holyromanempire",
+   "#saintoftheday"
+  ],
+  "share_cta": "",
+  "claims": [
+   {
+    "claim": "Anno II was born around 1010 into a noble Swabian family at Altsteußlingen near Ehingen.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was educated in Bamberg and became head of the cathedral school there.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1046 he became chaplain to Emperor Henry III and accompanied him on the Hungarian campaigns of 1051 and 1052.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1054 he was made provost of the cathedral at Goslar.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The emperor appointed him Archbishop of Cologne in 1056.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He accepted the office of archbishop with the greatest repugnance.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His appointment met distrust in Cologne, where local interests were established.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Henry III died in 1056 and was succeeded by his young son Henry IV, with Empress Agnes governing for him.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "In spring 1062 at Kaiserswerth on the Rhine, Anno led the party that seized the young king and took power from Empress Agnes.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The young king was drawn onto a boat and removed from his mother's control.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Anno carried the king off to Cologne.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "His responsibility for the seizure is a central historical fact that later veneration cannot soften.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Anno for a short time held chief authority, then shared it with other archbishops, keeping supervision of Henry's education.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Archbishop Adalbert of Bremen gained influence over the young king and Anno gradually lost ground at court.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "At the synod of Mantua in May 1064 he declared Alexander II the rightful pope against the antipope put forward by Empress Agnes's party.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Synods at Augsburg in 1062 and Mantua in 1064 ended the schism under Anno's decisive influence.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "In 1072 Anno resumed a share in governing the empire.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His prayer was continuous, his austerities extreme, his preaching incessant, his charity inexhaustible.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He reformed all the monasteries of his diocese and established five new ones.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He is said to have visited all the parishes of his diocese, cared for the poor, and founded a hospital.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "After taking the Siegberg in 1059 he founded the Benedictine monastery at Siegburg, whose church he consecrated in 1066.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He founded Michaelsberg abbey, modelled on Fruttuaria, which became a centre of Cluniac reform in Germany.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "On his way to Rome in 1068 he met the antipope Honorius II and was received by Alexander II only after severe penance.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "His plan to seize the monastery of Malmedy failed; he had to give it up in 1071.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He promoted relatives to high church offices, including his nephew Burchard as Bishop of Halberstadt and his brother Werner as Archbishop of Magdeburg.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "At Easter 1074 the citizens of Cologne rose against him and were defeated within three days and severely punished.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition holds that Anno put mocking masks over the doors of the 1074 rebels; the surviving carvings are actually pulleys dressed as house decoration.",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "He took no further part in public business and died at Siegburg Abbey on 4 December 1075, where he was buried.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He was canonized in 1183 by Pope Lucius III, confirming a cult that had grown around his tomb.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He is the patron of gout sufferers.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Roman Martyrology commemorates him on 4 December at Siegburg.",
+    "source": 2,
+    "kind": "history"
+   }
+  ],
+  "patronages": [
+   "gout sufferers"
+  ],
+  "places": [
+   "Cologne",
+   "Siegburg",
+   "Kaiserswerth",
+   "Bamberg"
+  ],
+  "story": [
+   "Anno was born around the year 1010 at Altsteußlingen, near Ehingen in Swabia, into a noble family of that region. They were not among the great princely houses that dominated the politics of the Rhineland. He was schooled at the cathedral school of Bamberg, then an important centre of learning in the German kingdom, and became head of that school. The Catholic Encyclopedia says his learning in sacred and secular subjects, and his unusual virtue, drew the attention of Emperor Henry III.",
+   "After 1046 Anno served as the emperor's chaplain and accompanied him on his campaigns in Hungary in 1051 and 1052. In 1054 he was made provost of the new cathedral at Goslar. Two years later, in 1056, the emperor appointed him Archbishop of Cologne. The Catholic Encyclopedia says he accepted the office with the greatest reluctance. The people of Cologne were not glad to receive an outsider from Swabia, and some local interests resisted his appointment.",
+   "That same year Henry III died. His son Henry IV was still a small child, and the empress, Agnes of Poitou, governed in his name. A government in a child's name invited rivalry among the great princes of Church and realm. In the spring of 1062, at Kaiserswerth on the Rhine, Anno led a group of princes who seized the young king. The sources tell us the boy was drawn onto a boat and taken from his mother's control. Anno carried him off to Cologne. One modern Catholic account insists that Anno's responsibility is a central historical fact and that later veneration must not soften it.",
+   "For a short time Anno held the chief authority in the empire. He soon had to share it with other archbishops, keeping the supervision of the young king's education. Archbishop Adalbert of Bremen gained the king's ear, and Anno lost ground at court. He did not lose his place in the Church's larger troubles. A dispute over the papacy was dividing Germany and Italy, because some supported a rival candidate against Pope Alexander II. At Augsburg in 1062 and at Mantua in 1064, Anno worked for the recognition of Alexander, and these synods helped end the schism. His own path with Rome was not always smooth. On a journey in 1068 he met the antipope, probably to persuade him to give up his claim, and Pope Alexander received him only after he had undertaken severe penance. He was also criticised for promoting relatives. His nephew Burchard became Bishop of Halberstadt, and his brother Werner Archbishop of Magdeburg.",
+   "The Catholic Encyclopedia says the cares of state never kept him from his duty as a bishop. His prayer was continuous, his austerities extreme, his preaching incessant, his charity inexhaustible. A later German account says he visited all the parishes of his diocese, cared for the poor, and founded a hospital. After winning the hill called the Siegberg in 1059, he founded a Benedictine monastery there. This was Siegburg Abbey, whose church he consecrated in 1066. After visiting the abbey of Fruttuaria in Italy, he brought the reforms associated with Cluny into his monasteries, against fierce resistance. Siegburg became a centre of reform for the whole empire. All told, he founded or helped found several houses, among them Grafschaft and Saalfeld, and he reformed others. He also built and consecrated churches in Cologne. His effort to take the monastery of Malmedy failed, and he had to give it up in 1071.",
+   "Anno's years were not peaceful in his own city. At Easter 1074 the citizens of Cologne rose against him. The revolt was crushed within three days and severely punished. A popular legend says he had mocking masks set above the doors of the rebels' houses. Researchers have found that the carvings still seen in Cologne are really pulleys dressed up as house decoration, so this must be held only as a story. After that year Anno took no further part in public affairs.",
+   "He died at Siegburg Abbey on 4 December 1075 and was buried there. A cult grew up around his tomb, and in 1183 Pope Lucius III canonized him. Medieval writers praised his virtues in two works, the Latin Life of Anno and the German Annolied. Historians show a man in whom reform and power were closely tangled, and the Church does not hide this. His memory is kept in the Archdiocese of Cologne, in Siegburg, and in the Roman Martyrology. He is also known as a patron of those who suffer from gout. His life shows that God can use a flawed, powerful man for lasting good."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "Turn beat said Anno 'lies buried' at Siegburg. Sources give only that he was buried there, and source 3 records later translations of his relics. Changed to 'was buried' (same word count).",
+   "Scene for the Kaiserswerth beat showed a crowned empress watching from the palace gate. No source places Agnes there. Removed the invented detail.",
+   "Scenes called Henry a 'small boy'. He was about eleven or twelve in 1062 (six at his accession). Changed to 'young boy'."
+  ],
+  "confidence": 86,
+  "reviewer_note": "Canonization date: Wikipedia and Santi e Beati say 1183 under Lucius III, but the 1913 Catholic Encyclopedia only says 'shortly afterwards'; 1183 is kept. The close has no separate meaning line, because 'God works even through flawed hands' sits in the turn. The story's line 'the Church does not hide this' is mild editorializing, left as is."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 2724,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 845,
+   "thinking": 653
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2022,
+   "cache_write": 12318,
+   "cache_read": 0,
+   "out": 10046,
+   "thinking": 5345
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 5530,
+   "cache_write": 0,
+   "cache_read": 12318,
+   "out": 7818,
+   "thinking": 4533
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1997,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3145,
+   "thinking": 851
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Anno II",
+   "url": "https://en.wikipedia.org/wiki/Anno_II"
+  },
+  {
+   "title": "Catholic Encyclopedia (1913): Anno II, Archbishop of Cologne",
+   "url": "https://www.newadvent.org/cathen/01541b.htm"
+  },
+  {
+   "title": "Santi e Beati: Anno II, Archbishop of Cologne",
+   "url": "https://www.santiebeati.it/dettaglio/80430"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Anno II, Archbishop of Cologne",
+   "url": "https://www.heiligenlexikon.de/BiographienA/Anno_von_Koeln.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 62.8,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Anno II",
+  "display_name": "San Anno",
+  "region": "Colonia, Alemania",
+  "dates": "c. 1010 – 1075",
+  "hook": "Arrebató al joven rey la autoridad de su madre. Aun así, la Iglesia lo venera como santo.",
+  "summary": "Anno II, arzobispo de Colonia en el siglo XI, dirigió la captura del joven rey Enrique IV; sin embargo, también reformó monasterios, fundó la abadía de Siegburg y fue canonizado en 1183.",
+  "story": [
+   "Anno nació hacia el año 1010 en Altsteußlingen, cerca de Ehingen, en Suabia, en el seno de una familia noble de esa región. No pertenecía a las grandes casas principescas que dominaban la política de Renania. Se formó en la escuela catedralicia de Bamberg, entonces un importante centro de saber en el reino germánico, y llegó a dirigir esa escuela. La Enciclopedia Católica dice que su saber en materias sagradas y profanas, y su virtud poco común, atrajeron la atención del emperador Enrique III.",
+   "Después de 1046, Anno sirvió como capellán del emperador y lo acompañó en sus campañas en Hungría en 1051 y 1052. En 1054 fue nombrado prepósito de la nueva catedral de Goslar. Dos años más tarde, en 1056, el emperador lo designó arzobispo de Colonia. La Enciclopedia Católica dice que aceptó el cargo con la mayor reticencia. Los habitantes de Colonia no se alegraron de recibir a un forastero suabo, y algunos intereses locales se opusieron a su nombramiento.",
+   "Ese mismo año murió Enrique III. Su hijo Enrique IV era todavía un niño pequeño, y la emperatriz, Inés de Poitou, gobernaba en su nombre. Un gobierno en nombre de un niño despertaba la rivalidad entre los grandes príncipes de la Iglesia y del reino. En la primavera de 1062, en Kaiserswerth, junto al Rin, Anno encabezó a un grupo de príncipes que se apoderó del joven rey. Las fuentes cuentan que el niño fue subido a una barca y apartado del control de su madre. Anno lo llevó consigo a Colonia. Un relato católico moderno sostiene que la responsabilidad de Anno es un hecho histórico central y que la veneración posterior no debe suavizarlo.",
+   "Durante un breve tiempo, Anno ostentó la máxima autoridad en el imperio. Pronto tuvo que compartirla con otros arzobispos, aunque conservó la supervisión de la educación del joven rey. El arzobispo Adalberto de Bremen se ganó el favor del rey, y Anno perdió terreno en la corte. Sin embargo, no perdió su lugar en las grandes dificultades de la Iglesia. Una disputa sobre el papado dividía Alemania e Italia, porque algunos apoyaban a un candidato rival frente al papa Alejandro II. En Augsburgo, en 1062, y en Mantua, en 1064, Anno trabajó por el reconocimiento de Alejandro, y estos sínodos ayudaron a poner fin al cisma. Su propio camino con Roma no siempre fue fácil. En un viaje en 1068 se encontró con el antipapa, probablemente para persuadirlo de que renunciara a su pretensión, y el papa Alejandro lo recibió solo después de que hubiera cumplido una severa penitencia. También fue criticado por promover a parientes: su sobrino Burcardo llegó a ser obispo de Halberstadt, y su hermano Werner, arzobispo de Magdeburgo.",
+   "La Enciclopedia Católica dice que las preocupaciones del Estado nunca lo apartaron de su deber como obispo. Su oración era continua, sus austeridades extremas, su predicación incesante y su caridad inagotable. Un relato alemán posterior dice que visitó todas las parroquias de su diócesis, cuidó de los pobres y fundó un hospital. Tras ganar la colina llamada Siegberg en 1059, fundó allí un monasterio benedictino: la abadía de Siegburg, cuya iglesia consagró en 1066. Después de visitar la abadía de Fruttuaria, en Italia, introdujo en sus monasterios las reformas asociadas a Cluny, en medio de una fuerte resistencia. Siegburg se convirtió en un centro de reforma para todo el imperio. En total, fundó o ayudó a fundar varias casas, entre ellas Grafschaft y Saalfeld, y reformó otras. También construyó y consagró iglesias en Colonia. Su intento de tomar el monasterio de Malmedy fracasó, y tuvo que renunciar a él en 1071.",
+   "Los años de Anno no fueron pacíficos en su propia ciudad. En la Pascua de 1074, los ciudadanos de Colonia se levantaron contra él. La revuelta fue aplastada en tres días y castigada con severidad. Una leyenda popular dice que hizo colocar máscaras burlonas sobre las puertas de las casas de los rebeldes. Los investigadores han descubierto que las figuras talladas que aún se ven en Colonia son en realidad poleas disfrazadas de decoración de fachadas, por lo que esto debe considerarse solo como un relato. Tras ese año, Anno no volvió a participar en los asuntos públicos.",
+   "Murió en la abadía de Siegburg el 4 de diciembre de 1075 y fue sepultado allí. En torno a su tumba creció un culto, y en 1183 el papa Lucio III lo canonizó. Los escritores medievales alabaron sus virtudes en dos obras: la Vida latina de Anno y el Annolied alemán. Los historiadores muestran a un hombre en quien la reforma y el poder estaban estrechamente entrelazados, y la Iglesia no lo oculta. Su memoria se conserva en la archidiócesis de Colonia, en Siegburg y en el Martirologio Romano. También es conocido como patrono de quienes padecen gota. Su vida muestra que Dios puede servirse de un hombre imperfecto y poderoso para un bien duradero."
+  ],
+  "prayer": "San Anno, ruega por nosotros.",
+  "patronages": [
+   "quienes padecen gota"
+  ],
+  "places": [
+   "Colonia",
+   "Siegburg",
+   "Kaiserswerth",
+   "Bamberg"
+  ]
+ },
+ "books": [],
+ "caption": "He took a child king from his mother's rule. The Church still honors him as a saint.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Anno II · Feast day: December 4\nAnno II, eleventh-century archbishop of Cologne, led the seizure of the boy king Henry IV, yet he also reformed monasteries, founded Siegburg Abbey, and was canonized in 1183.\n\nSaint Anno, pray for us. 🕯\n\nSave this to pray with again next December 4.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintanno #cologne",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-04/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-04/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-04/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-04/art.jpg"
+ },
+ "review_message_id": 309
+}
