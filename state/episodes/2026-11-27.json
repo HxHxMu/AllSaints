@@ -1,8 +1,8 @@
 {
  "id": "2026-11-27",
  "date": "2026-11-27",
- "status": "approved",
- "updated": "2026-11-20T18:57:00+00:00",
+ "status": "published",
+ "updated": "2026-11-27T12:33:59+00:00",
  "saint": {
   "qid": "Q561251",
   "name": "Saint Virgil of Salzburg",
@@ -319,7 +319,8 @@
    "Carintia",
    "Baviera",
    "Irlanda"
-  ]
+  ],
+  "slug": "virgilio-de-salzburgo"
  },
  "books": [],
  "caption": "An Irish monk, a round earth, and a letter sent to Rome.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Virgil of Salzburg · Feast day: November 27\nSaint Virgil of Salzburg, an Irish monk, was reported to the pope for his ideas about the world, cleared himself, and then built Salzburg's cathedral and sent missionaries into Carinthia.\n\nHe stayed, and served where he was sent. Saint Virgil, pray for us. 🕯\n\nKnow someone named Virgil? Send them their saint.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Santi e Beati · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintvirgil #carinthia",
@@ -334,5 +335,40 @@
  "location": {
   "name": "Salzburg",
   "id": "102189213155511"
+ },
+ "slug": "virgil-of-salzburg",
+ "published": {
+  "media_id": "18141295282640380",
+  "permalink": "https://www.instagram.com/reel/DgPrzGxBqDr/",
+  "location_id": "102189213155511",
+  "location": "Salzburg"
+ },
+ "published_at": "2026-11-27T07:30-05:00",
+ "facebook": {
+  "id": "1154365457385548",
+  "url": "https://www.facebook.com/reel/1154365457385548/",
+  "published_at": "2026-11-27T07:32-05:00"
+ },
+ "threads": {
+  "id": "18106688171575232",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgPsCWDqz3R",
+  "published_at": "2026-11-27T07:33-05:00"
+ },
+ "youtube": {
+  "id": "S_QEmofUbb4",
+  "url": "https://youtube.com/shorts/S_QEmofUbb4",
+  "privacy": "public",
+  "published_at": "2026-11-27T07:33-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "attempts": 1,
+  "error": "TikTok upload chunk 4/4 failed 503: \n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n  <head>\n    <title>503 first byte timeout"
  }
 }
