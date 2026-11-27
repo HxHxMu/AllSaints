@@ -30,10 +30,27 @@ import "../../styles/dash.css";
     <p class="muted" id="error" hidden></p>
 
     <section aria-labelledby="h-pipe">
-      <h2 class="sec" id="h-pipe">The coming days</h2>
-      <ol class="litany" id="upcoming"></ol>
+      <h2 class="sec" id="h-pipe">The schedule</h2>
       <div class="problems" id="problems" hidden></div>
+      <div class="cal" id="cal" hidden>
+        <div class="cal-head">
+          <button type="button" class="cal-nav" id="cal-prev" aria-label="Previous month">‹</button>
+          <p class="label" id="cal-month"></p>
+          <button type="button" class="cal-nav" id="cal-next" aria-label="Next month">›</button>
+        </div>
+        <div class="cal-grid" id="cal-grid" role="grid"></div>
+        <p class="cal-key small muted" id="cal-key"></p>
+        <div class="cal-day" id="cal-day" hidden></div>
+      </div>
+      <h3 class="sub">Coming up</h3>
+      <ol class="sched" id="upcoming"></ol>
+      <details class="later" id="later" hidden><summary class="label" id="later-sum"></summary><ol class="sched" id="later-list"></ol></details>
       <div class="tiles" id="cost"></div>
+    </section>
+
+    <section aria-labelledby="h-hist">
+      <h2 class="sec" id="h-hist">The last two weeks</h2>
+      <ol class="sched" id="history"></ol>
     </section>
 
     <section aria-labelledby="h-aud">

@@ -37,7 +37,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q requests cryptography
+      - run: pip install -q requests cryptography pillow
       - name: Run
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then T="${{ github.event.inputs.task }}";

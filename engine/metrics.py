@@ -304,6 +304,12 @@ def collect():
     notes, rows = [], episode_rows(eps)
     data = {"generated_at": dt.datetime.now(tz()).isoformat(timespec="minutes"), "timezone": load_config().get("timezone"),
             "pipeline": pipeline(eps), "episodes": rows, "notes": notes}
+    try:
+        import dash_schedule
+        data["schedule"] = dash_schedule.collect(eps)
+    except Exception as e:  # the schedule never stops the numbers
+        log("metrics schedule:", e)
+        notes.append(f"Schedule: {str(e)[:160]}")
     for key, fn in (("youtube", lambda: youtube(rows, notes)), ("instagram", lambda: instagram(rows, notes)),
                      ("facebook", lambda: facebook(rows, notes)), ("threads", lambda: threads(rows, notes)),
                      ("tiktok", lambda: tiktok(rows, notes)), ("search", lambda: search(notes))):

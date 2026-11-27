@@ -57,6 +57,92 @@ function scatter(el: HTMLElement, pts: { x: number; y: number; tip: string }[]) 
 const rank = (title: string, rows: { k: string; v: string }[]) =>
   `<div><h3>${esc(title)}</h3>${rows.length ? `<ol class="rank">${rows.map((r) => `<li><span title="${esc(r.k)}">${esc(r.k)}</span><span>${r.v}</span></li>`).join("")}</ol>` : `<p class="empty">Nothing yet.</p>`}</div>`;
 
+// --- the schedule --------------------------------------------------------------------------------
+const KIND: Record<string, [string, string]> = { saint: ["Saint", "✝"], lives: ["Lives", "▶"], sung: ["Sung prayer", "℣"],
+  music: ["Music", "♪"], seasonal: ["Seasonal", "✦"], compilation: ["Compilation", "❖"] };
+const PLAT: Record<string, string> = { instagram: "IG", youtube: "YT", facebook: "FB", threads: "Threads", tiktok: "TikTok", story: "IG Story", fb_story: "FB Story" };
+const SWORD: Record<string, [string, string]> = { posted: ["posted", "ok"], published: ["posted", "ok"], approved: ["approved", ""], pending: ["scheduled", ""],
+  planned: ["planned", "dim"], review: ["awaiting your Approve", "wait"], waiting: ["retrying", "wait"], partial: ["partly posted", "wait"],
+  draft: ["draft", "wait"], skipped: ["stands aside", "dim"], failed: ["failed", "bad"], missing: ["not made yet", "bad"] };
+const MARK: Record<string, string> = { posted: "✓", draft: "✓", failed: "✗", skipped: "–" };
+const hhmm = (at: string) => { const [h, mi] = at.slice(11, 16).split(":").map(Number); return `${((h + 11) % 12) + 1}:${String(mi).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`; };
+
+function row(it: Any, today: string, withDate = true) {
+  const [kw, glyph] = KIND[it.kind] || [it.kind, "·"];
+  const [word, cls] = SWORD[it.status] || [it.status, ""];
+  const title = it.kind === "saint" && it.slug ? `<a href="/saints/${esc(it.slug)}/">${esc(it.title)}</a>` : esc(it.title || "—");
+  const plats = (it.platforms || []).map((p: Any) => {
+    const label = `${MARK[p.s] || "·"} ${PLAT[p.p] || p.p}${p.p === "tiktok" && p.s === "draft" ? " draft" : ""}`;
+    return p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" class="p ${p.s}">${esc(label)}</a>` : `<span class="p ${p.s}">${esc(label)}</span>`;
+  }).join("");
+  return `<li class="${it.date === today ? "today" : ""} k-${it.kind}">
+    <span class="d">${withDate ? dLabel(it.date) : ""}<span class="t">${hhmm(it.at)}</span></span>
+    <span class="who"><span class="kind" title="${esc(kw)}">${glyph} ${esc(kw)}</span>${title}${it.note ? `<span class="note">${esc(it.note)}</span>` : ""}</span>
+    <span class="st ${cls}">${word}</span>
+    <span class="plat">${plats}</span></li>`;
+}
+
+function list(el: HTMLElement, items: Any[], today: string) {
+  let last = "";
+  el.innerHTML = items.map((it) => { const r = row(it, today, it.date !== last); last = it.date; return r; }).join("")
+    || `<li><span></span><span class="empty">Nothing scheduled.</span></li>`;
+}
+
+function schedule(S: Any, today: string) {
+  const items: Any[] = S.items;
+  const future = items.filter((i) => i.date >= today), past = items.filter((i) => i.date < today).reverse();
+  const cut = new Date(today + "T12:00:00"); cut.setDate(cut.getDate() + 21);
+  const soon = cut.toISOString().slice(0, 10);
+  list($("upcoming"), future.filter((i) => i.date <= soon), today);
+  const later = future.filter((i) => i.date > soon);
+  if (later.length) {
+    $("later").hidden = false;
+    $("later-sum").textContent = `Later: ${later.length} more, through ${short(later[later.length - 1].date)}`;
+    list($("later-list"), later, today);
+  }
+  list($("history"), past.filter((i) => i.status !== "skipped"), today);
+  calendar(items, today, new Set(S.warnings.map((w: Any) => w.date)));
+}
+
+function calendar(items: Any[], today: string, warned: Set<string>) {
+  const byDay: Record<string, Any[]> = {};
+  for (const it of items) (byDay[it.date] ||= []).push(it);
+  let [y, mo] = today.split("-").map(Number);
+  const first = items[0]?.date.slice(0, 7), lastM = items[items.length - 1]?.date.slice(0, 7);
+  $("cal").hidden = false;
+  $("cal-key").textContent = Object.values(KIND).filter(([k]) => k !== "Saint").map(([k, g]) => `${g} ${k}`).join("   ");
+  const show = (iso: string) => {
+    const day = byDay[iso] || [];
+    const box = $("cal-day"); box.hidden = false;
+    box.innerHTML = `<p class="label">${dLabel(iso)}</p>` + (day.length ? `<ol class="sched">${day.map((i) => row(i, today, false)).join("")}</ol>` : `<p class="empty">Nothing on this day.</p>`);
+  };
+  const draw = () => {
+    const key = `${y}-${String(mo).padStart(2, "0")}`;
+    $("cal-month").textContent = new Date(y, mo - 1, 1).toLocaleString("en-US", { month: "long", year: "numeric" });
+    ($("cal-prev") as HTMLButtonElement).disabled = !!first && key <= first;
+    ($("cal-next") as HTMLButtonElement).disabled = !!lastM && key >= lastM;
+    const start = (new Date(y, mo - 1, 1).getDay() + 6) % 7, n = new Date(y, mo, 0).getDate();
+    let s = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => `<span class="dow">${d}</span>`).join("");
+    s += `<span class="pad"></span>`.repeat(start);
+    for (let d = 1; d <= n; d++) {
+      const iso = `${key}-${String(d).padStart(2, "0")}`, day = byDay[iso] || [];
+      const saint = day.find((i) => i.kind === "saint");
+      const marks = day.filter((i) => i.kind !== "saint" && i.status !== "skipped").map((i) => KIND[i.kind]?.[1] || "·");
+      const tipTxt = day.map((i) => `${hhmm(i.at)} · ${esc(i.title || "No saint yet")}`).join("<br>") || "Nothing scheduled";
+      const cls = [iso === today ? "today" : "", iso < today ? "past" : "", warned.has(iso) ? "warn" : "", saint?.status === "missing" ? "missing" : ""].join(" ");
+      s += `<button type="button" class="cell ${cls}" data-day="${iso}" data-tip="${esc(tipTxt)}" aria-label="${esc(dLabel(iso))}: ${day.length} posts">
+        <span class="n">${d}</span>${saint?.cover ? `<img src="${esc(saint.cover)}" alt="" loading="lazy">` : ""}
+        <span class="m">${[...new Set(marks)].join(" ")}</span></button>`;
+    }
+    s += `<span class="pad"></span>`.repeat((7 - ((start + n) % 7)) % 7);
+    $("cal-grid").innerHTML = s;
+  };
+  $("cal-prev").onclick = () => { mo--; if (mo < 1) { mo = 12; y--; } draw(); };
+  $("cal-next").onclick = () => { mo++; if (mo > 12) { mo = 1; y++; } draw(); };
+  $("cal-grid").onclick = (e) => { const c = (e.target as Element).closest<HTMLElement>(".cell"); if (c) show(c.dataset.day!); };
+  draw();
+}
+
 function render(all: Any) {
   const m = all.metrics;
   if (!m) { $("updated").textContent = "No numbers yet"; $("error").hidden = false; $("error").textContent = "The nightly metrics run hasn't sent anything yet."; return; }
@@ -67,19 +153,17 @@ function render(all: Any) {
   if (Date.now() - when.getTime() > 36 * 3600e3) notes.unshift("These numbers are more than a day old: check the Maintenance workflow.");
   if (notes.length) { $("notes").hidden = false; $("notes").innerHTML = notes.map((n: string) => `<li>${esc(n)}</li>`).join(""); }
 
-  // 1. pipeline
+  // 1. schedule (dash_schedule.py) + the old problem list
   const P = m.pipeline, today = P.now.slice(0, 10);
-  const ST: Record<string, [string, string]> = { published: ["posted", "ok"], approved: ["approved", ""], publishing: ["posting now", "wait"],
-    review: ["awaiting your Approve", "wait"], generating: ["being made", ""], redo_requested: ["redo requested", "wait"], failed: ["failed", "bad"], missing: ["not made yet", "bad"] };
-  $("upcoming").innerHTML = P.upcoming.slice(0, 8).map((r: Any) => {
-    const [word, cls] = ST[r.status] || [r.status, ""];
-    const plat = r.status === "published" ? ["instagram", "youtube", "facebook", "threads", "tiktok", "story"].map((k) => `${r[k] ? "✓" : "·"} ${k === "tiktok" ? "tiktok draft" : k}`).join("  ") : "";
-    return `<li class="${r.date === today ? "today" : ""}"><span class="d">${dLabel(r.date)}</span><span class="who">${esc(r.saint || "—")}</span><span class="st ${cls}">${word}</span><span class="plat">${plat}</span></li>`;
-  }).join("");
-  if (P.problems.length) {
+  const probs: string[] = P.problems.map((r: Any) => `${short(r.date)} · ${esc(r.saint || "—")}: ${esc(r.status)}${r.errors?.length ? ` — ${esc(r.errors.join("; "))}` : ""}`);
+  const SCH = m.schedule;
+  if (SCH) probs.push(...SCH.warnings.map((w: Any) => `${short(w.date)} · ${esc(w.text)}`));
+  if (probs.length) {
     $("problems").hidden = false;
-    $("problems").innerHTML = `<p class="label">Needs a look</p>` + P.problems.map((r: Any) => `<p>${short(r.date)} · ${esc(r.saint || "—")}: ${esc(r.status)}${r.errors?.length ? ` — ${esc(r.errors.join("; "))}` : ""}</p>`).join("");
+    $("problems").innerHTML = `<p class="label">Needs a look</p>` + [...new Set(probs)].map((p) => `<p>${p}</p>`).join("");
   }
+  if (SCH) schedule(SCH, today);
+  else $("upcoming").innerHTML = `<li><span></span><span class="empty">The schedule arrives with tonight's update.</span></li>`;
   const C = P.cost, [lo, hi] = C.budget;
   $("cost").innerHTML = tile(`$${C.per_30_days.toFixed(2)}`, `a month at today's rate ($${C.per_episode.toFixed(2)} a saint). Budget $${lo}–${hi}.`, C.per_30_days / hi)
     + tile(`$${C.month_to_date.toFixed(2)}`, `for the ${C.episodes} saints of ${MON[Number(C.month.slice(5)) - 1]} made so far (Claude + Gemini)`);
