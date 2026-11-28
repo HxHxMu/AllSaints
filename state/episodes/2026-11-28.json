@@ -1,8 +1,8 @@
 {
  "id": "2026-11-28",
  "date": "2026-11-28",
- "status": "approved",
- "updated": "2026-11-21T15:04:34+00:00",
+ "status": "published",
+ "updated": "2026-11-28T12:33:36+00:00",
  "attempts": 0,
  "saint": {
   "qid": "Q2716620",
@@ -375,7 +375,8 @@
    "Perugia",
    "Nápoles",
    "Hungría"
-  ]
+  ],
+  "slug": "jacobo-de-la-marca"
  },
  "books": [],
  "caption": "A lawyer's training, a poor boy's roots, and a voice that moved whole cities.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint James of the Marches · Feast day: November 28\nSaint James of the Marches, a poor boy who minded animals, then a lawyer, then a Franciscan preacher, spoke in the squares of Italy and Central Europe, set up lending houses to free the poor from usury, and refused a bishop's throne.\n\nSaint James of the Marches, pray for us. 🕯\n\nSave this to pray with again next November 28.\n\n—\nSources: Wikipedia · Catholic Encyclopedia (1913) · Dicastery for the Causes of Saints · Santi e Beati · Nominis (Église catholique en France)\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintjamesofthemarches #monteprandone",
@@ -385,5 +386,40 @@
   "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/preview.mp4",
   "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-11-28/art.jpg"
  },
- "review_message_id": 260
+ "review_message_id": 260,
+ "slug": "james-of-the-marches",
+ "published": {
+  "media_id": "17990831846883609",
+  "permalink": "https://www.instagram.com/reel/DgSQlfRh7ma/",
+  "location_id": null
+ },
+ "published_at": "2026-11-28T07:30-05:00",
+ "facebook": {
+  "id": "1673157331221191",
+  "url": "https://www.facebook.com/reel/1673157331221191/",
+  "published_at": "2026-11-28T07:32-05:00"
+ },
+ "threads": {
+  "id": "18099855689665822",
+  "url": "https://www.threads.com/@all.holy.saints/post/DgSQx-gRopl",
+  "published_at": "2026-11-28T07:32-05:00"
+ },
+ "youtube": {
+  "id": "_XU2ZhofL6s",
+  "url": "https://youtube.com/shorts/_XU2ZhofL6s",
+  "privacy": "public",
+  "published_at": "2026-11-28T07:32-05:00",
+  "cover": true,
+  "playlists": [
+   "Saints of November",
+   "Saints of Europe"
+  ],
+  "playlists_done": true
+ },
+ "continent": "Europe",
+ "tiktok": {
+  "publish_id": "v_inbox_file~v2.7713199275018078222",
+  "status": "SEND_TO_USER_INBOX",
+  "sent_at": "2026-11-28T07:33-05:00"
+ }
 }
