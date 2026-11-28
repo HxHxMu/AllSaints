@@ -1,0 +1,337 @@
+{
+ "id": "2026-12-05",
+ "date": "2026-12-05",
+ "status": "review",
+ "updated": "2026-11-28T10:24:47+00:00",
+ "saint": {
+  "qid": "Q316440",
+  "name": "Saint Sabas",
+  "display_name": "St. Sabas",
+  "dates": "439 – 532",
+  "region": "Judean Desert, near Jerusalem",
+  "feast": "December 5",
+  "martyr": false
+ },
+ "saint_pick": {
+  "qid": "Q316440",
+  "name": "Saint Savvas the Sanctified",
+  "links": 32,
+  "enwiki": "Sabbas_the_Sanctified",
+  "images": [
+   "SabbastheSanctified.jpg"
+  ],
+  "religions": [
+   "Christianity"
+  ],
+  "commonscat": "Sabbas the Sanctified",
+  "birth": 439,
+  "death": 532,
+  "lon": 35.331,
+  "lat": 31.705,
+  "selection_reason": "Sabas the Sanctified has a vivid, well-documented life (Cyril of Scythopolis's Vita, the founding of Mar Saba in the Judean desert, his defense of Chalcedonian orthodoxy) and is from a region and type (6th-century Palestinian monk) not seen in the recent run, whereas Crispina would echo the North African martyr Cassian of Tangier from two days earlier.",
+  "catholic_veneration": "Saint in the Roman Martyrology (feast December 5), and also venerated in the Byzantine-rite Eastern Catholic churches; Santi e Beati, Nominis and the Ökumenisches Heiligenlexikon list him."
+ },
+ "script": {
+  "saint": {
+   "name": "Saint Sabas",
+   "display_name": "St. Sabas",
+   "dates": "439 – 532",
+   "region": "Judean Desert, near Jerusalem",
+   "feast": "December 5",
+   "martyr": false
+  },
+  "portrait": "An elderly Byzantine monk with a long white beard, dressed in a dark monastic habit and hood, holding a scroll in one hand and raising the other in blessing. Behind him, a cliffside monastery of stone terraces and a small domed church rises above a deep desert gorge.",
+  "beats": [
+   {
+    "role": "hook",
+    "text": "At eight years old, he entered a monastery, and refused to leave.",
+    "visual": "art",
+    "scene": "A small boy in a plain tunic stands at the arched stone gate of a fifth-century Cappadocian monastery. Robed monks welcome him, and on the dusty road behind him his relatives stand beckoning."
+   },
+   {
+    "role": "who",
+    "text": "Saint Sabas lived in the fifth and sixth centuries, in the desert near Jerusalem.",
+    "visual": "map",
+    "lat": 31.706,
+    "lon": 35.328,
+    "place": "Judean Desert · near Jerusalem"
+   },
+   {
+    "role": "story",
+    "text": "As a young man he went to Jerusalem, longing to live alone with God. The elder Euthymius sent him first to a monastery, to learn obedience.",
+    "visual": "art",
+    "scene": "A young monk in a dark habit kneels before the white-bearded elder Euthymius on a rocky desert path. The elder gestures toward a distant walled monastery among the Judean hills."
+   },
+   {
+    "role": "story",
+    "text": "Sabas obeyed until he was thirty. Then he lived in a cave. Later, disciples gathered around him.",
+    "visual": "art",
+    "scene": "A monk in prayer stands at the mouth of a cave cut into a desert cliff. Below, a few robed disciples climb the rocky path toward him."
+   },
+   {
+    "role": "story",
+    "text": "Tradition holds an angel led him to a desert valley. There the Great Lavra grew, a community of hermits. Today it is called Mar Saba.",
+    "visual": "art",
+    "scene": "A winged angel in Byzantine style points Sabas toward a steep gorge, where hermits' cells and caves are carved into the rock face. A small domed chapel stands among them."
+   },
+   {
+    "role": "turn",
+    "text": "In old age he travelled to Constantinople to defend the faith. He also won relief for poor peasants.",
+    "visual": "art",
+    "scene": "An aged, white-bearded monk in a plain dark habit stands before a crowned Byzantine emperor in a marble hall with gold mosaics. Courtiers in embroidered robes look on."
+   },
+   {
+    "role": "close",
+    "text": "Silence with God makes room for everyone else. Saint Sabas, pray for us.",
+    "visual": "close"
+   }
+  ],
+  "pronunciations": {
+   "Sabas": "SAB-us",
+   "Euthymius": "yoo-THIM-ee-us",
+   "Lavra": "LAV-ra"
+  },
+  "caption_hook": "A boy of eight chose the monastery. Fifteen centuries later, his desert community still stands.",
+  "summary": "Saint Sabas entered a monastery as a child, became a hermit and founded the Great Lavra, today's Mar Saba, then defended the faith before emperors.",
+  "youtube_title": "St. Sabas: The Boy Monk Who Founded Mar Saba",
+  "hashtags": [
+   "#saintsabas",
+   "#marsaba",
+   "#judeandesert",
+   "#jerusalem",
+   "#monk",
+   "#hermit",
+   "#desertfathers",
+   "#byzantine",
+   "#catholicsaints",
+   "#lesserknownsaints",
+   "#saints",
+   "#allsaints"
+  ],
+  "share_cta": "Know someone named Sabas or Sava? Send them their saint.",
+  "claims": [
+   {
+    "claim": "Sabas entered a monastery at about eight years old.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He resisted pressure from his family to return to the world.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He lived from 439 to 532.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He lived in the desert near Jerusalem.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "As a young man he went to Jerusalem, seeking solitude.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Euthymius judged him too young for solitude and sent him to Theoctistus's monastery to learn obedience.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "Sabas lived in obedience until about the age of thirty, then lived in a cave.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Disciples gathered around him, and the Great Lavra grew from this.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "The Great Lavra was founded in 483 in the Kidron Valley and became known as Mar Saba.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "The Vita attributes the choice of the site to an angelic guide.",
+    "source": 1,
+    "kind": "tradition"
+   },
+   {
+    "claim": "The monastery of Mar Saba still exists and its life is still strict.",
+    "source": 3,
+    "kind": "history"
+   },
+   {
+    "claim": "He travelled to Constantinople to Emperor Anastasios in 511 and Justinian in 531, defending the Council of Chalcedon.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "He obtained relief from taxes for artisans and compensation for poor peasants.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "He was named head of the hermits in the 490s and was ordained a priest in 491.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "He composed the Jerusalem Typikon, a rule for church services.",
+    "source": 0,
+    "kind": "history"
+   },
+   {
+    "claim": "Cyril of Scythopolis, his disciple, wrote his Life about a generation after his death.",
+    "source": 1,
+    "kind": "history"
+   },
+   {
+    "claim": "His relics were taken to Venice and returned to Mar Saba by Pope Paul VI in 1965.",
+    "source": 2,
+    "kind": "history"
+   },
+   {
+    "claim": "Tradition says Mary appeared to Sabas before the first buildings and promised the lavra would last.",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Tradition says that after a youthful temptation he vowed never to eat an apple again, and his monks keep this custom.",
+    "source": 3,
+    "kind": "tradition"
+   },
+   {
+    "claim": "Sabas died on December 5, 532, and his feast is December 5.",
+    "source": 1,
+    "kind": "history"
+   }
+  ],
+  "patronages": [],
+  "places": [
+   "Mar Saba",
+   "Jerusalem",
+   "Judean Desert",
+   "Cappadocia"
+  ],
+  "story": [
+   "Sabas was born in 439 in Moutalaske, a village near Caesarea in Cappadocia, in what is now Turkey. His parents, John and Sophia, were a military family, and when his father's duties called him away the boy was left in the care of relatives. According to his biographer, tensions over the child's custody and the family's property may have hastened what came next. The heart of the story is ancient and secure: Sabas gave himself to the monastic life very young.",
+   "Around the age of eight he entered a monastery near his home. There he learned the psalms, the discipline of prayer and the work of a shared life. His family urged him to leave and take up an ordinary life, even marriage, but he held firm. Those years in Cappadocia mattered, because they gave him a thorough schooling in community life before he ever sought the desert.",
+   "In his late teens he went to Jerusalem, one of the many pilgrims and ascetics drawn to the Holy Land in those years. He longed for solitude, and he sought out Euthymius the Great, one of the most respected monks of Palestine. Euthymius judged him too young for the hermit's life and sent him to Theoctistus, who led a community under a strict common rule. This was the wisdom of the desert tradition: a hermit is first taught obedience and life with others, and only then solitude. Sabas lived under that discipline until about thirty. He remained close to Euthymius, who died in 473, and the two were bound by a lasting spiritual friendship.",
+   "After this long apprenticeship Sabas was allowed to live in a cave, keeping ties with the community for worship. When Euthymius died, he withdrew further into the wilderness. But holiness draws people, and disciples began to find him. In 483, in the Kidron Valley southeast of Jerusalem, he established the community that became the Great Lavra. A lavra is a gathering of hermits. They lived apart in caves and cells during the week, yet were united by a common leader, common rules, and above all the Eucharist. Tradition holds that an angel guided Sabas to the place, and that Mary promised him the lavra would endure. Whatever one makes of the stories, the monastery has endured: it is known today as Mar Saba and is among the oldest monasteries still living.",
+   "Sabas became a priest in 491 and, in the following years, the patriarch of Jerusalem made him leader of the hermits of the region. He founded further monasteries, and the Church later remembered him as a model of holiness. He was also drawn into the great arguments that followed the Council of Chalcedon in 451. Sabas defended its teaching and opposed those who denied it. He went in person to Constantinople, to Emperor Anastasios in 511 and to Justinian in 531, when he was an old man of about ninety. One source adds that he obtained from an emperor relief from taxes on artisans, and compensation for poor peasants. The hermit never lost sight of ordinary people.",
+   "His biographer was Cyril of Scythopolis, a monk from his own circle, who wrote his Life about a generation after Sabas died. Cyril's account mixes memory with the familiar patterns of monastic storytelling, and modern scholars read it with care. Among the traditions preserved is one about discipline. After being tempted as a young monk to eat an apple outside mealtimes, Sabas is said to have vowed never to eat one again, and tradition says the monks of Mar Saba follow him in this to this day. Sabas is also credited with composing a rule for the church services of the monasteries, the Jerusalem Typikon, which shaped worship across the Byzantine world.",
+   "Sabas died on December 5, 532, in the Great Lavra, at about ninety-three. His monastery went on to shelter many monks, among them John of Damascus. His relics were taken to Venice, and in 1965 Pope Paul VI returned them to Mar Saba as a gesture of goodwill. The Roman Martyrology remembers him on the day of his death, honoring a man who sought solitude and ended up serving a great family of believers, and who defended the faith of Chalcedon before emperors."
+  ]
+ },
+ "factcheck": {
+  "verdict": "fixed",
+  "issues": [
+   "caption_hook: 'Eighty-odd years later, his desert community still stands' is wrong. The Great Lavra was founded in 483, about 44 years after his birth in 439, and it still stands about fifteen centuries later. Replaced with 'Fifteen centuries later'.",
+   "Story paragraph 7: 'held to the faith under pressure from the powerful' is not in the sources. They say he defended Chalcedon and appealed to emperors, not that he was pressured by them. Reworded to match the sources.",
+   "Spoken beats checked: 125 words, hook 12 words, who line 14 words, close line under 12 words. Legend is flagged ('Tradition holds' for the angel). Dates, titles and the Mar Saba coordinates (31.706, 35.328) are correct. The 483 founding date follows the Catholic reference over Wikipedia's 484. The 'late teens' arrival in Jerusalem follows Santi e Beati and Nominis over Wikipedia's chronology. No other changes needed."
+  ],
+  "confidence": 88,
+  "reviewer_note": "Sources disagree on dates: Wikipedia gives 484 for the Lavra's founding, 439–532 life dates, and an age-17 tonsure with ten years at Flavian's monastery. I followed the Catholic references (483, a late-teens arrival in Jerusalem). The 'relief for peasants' line rests on Nominis alone."
+ },
+ "usage": [
+  {
+   "step": "select",
+   "model": "claude-sonnet-5-5",
+   "in": 1876,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 626,
+   "thinking": 386
+  },
+  {
+   "step": "script",
+   "model": "claude-sonnet-5-5",
+   "in": 2068,
+   "cache_write": 12167,
+   "cache_read": 0,
+   "out": 8515,
+   "thinking": 4843
+  },
+  {
+   "step": "factcheck",
+   "model": "claude-sonnet-5-5",
+   "in": 4409,
+   "cache_write": 0,
+   "cache_read": 12167,
+   "out": 7714,
+   "thinking": 5024
+  },
+  {
+   "step": "translate_es",
+   "model": "claude-haiku-5-5",
+   "in": 1826,
+   "cache_write": 0,
+   "cache_read": 0,
+   "out": 3173,
+   "thinking": 1085
+  }
+ ],
+ "sources": [
+  {
+   "title": "Wikipedia: Sabbas the Sanctified",
+   "url": "https://en.wikipedia.org/wiki/Sabbas_the_Sanctified"
+  },
+  {
+   "title": "Santi e Beati: Saint Savvas the Sanctified",
+   "url": "https://www.santiebeati.it/dettaglio/80600"
+  },
+  {
+   "title": "Nominis (Église catholique en France): Saint Savvas the Sanctified",
+   "url": "https://nominis.cef.fr/contenus/saint/225/Saint-Sabas.html"
+  },
+  {
+   "title": "Ökumenisches Heiligenlexikon: Saint Savvas the Sanctified",
+   "url": "https://www.heiligenlexikon.de/BiographienS/Sabas_von_Mar_Saba.html"
+  }
+ ],
+ "art_credits": [
+  "Illustration in the Byzantine style, AI-generated (Google Gemini)"
+ ],
+ "duration": 61.1,
+ "narrator": "gemini:Riko",
+ "es": {
+  "name": "San Sabas",
+  "display_name": "San Sabas",
+  "region": "Desierto de Judea, cerca de Jerusalén",
+  "dates": "439 – 532",
+  "hook": "Un niño de ocho años eligió el monasterio. Quince siglos después, su comunidad del desierto sigue en pie.",
+  "summary": "San Sabas ingresó en un monasterio siendo niño, se hizo ermitaño y fundó la Gran Laura, hoy Mar Saba, y luego defendió la fe ante emperadores.",
+  "story": [
+   "Sabas nació en 439 en Moutalaske, una aldea cercana a Cesarea de Capadocia, en lo que hoy es Turquía. Sus padres, Juan y Sofía, pertenecían a una familia militar, y cuando el padre tuvo que ausentarse por sus deberes, el niño quedó al cuidado de parientes. Según su biógrafo, las tensiones por la custodia del niño y por los bienes familiares pudieron acelerar lo que vino después. El núcleo de la historia es antiguo y seguro: Sabas se entregó a la vida monástica siendo muy joven.",
+   "Hacia los ocho años ingresó en un monasterio cercano a su casa. Allí aprendió los salmos, la disciplina de la oración y el trabajo de la vida compartida. Su familia le instó a dejar aquello y llevar una vida corriente, incluso a casarse, pero él se mantuvo firme. Aquellos años en Capadocia fueron importantes, porque le dieron una sólida formación en la vida comunitaria antes de buscar el desierto.",
+   "Ya en su adolescencia tardía viajó a Jerusalén, como tantos peregrinos y ascetas atraídos por la Tierra Santa en aquellos años. Anhelaba la soledad y buscó a Eutimio el Grande, uno de los monjes más respetados de Palestina. Eutimio lo consideró demasiado joven para la vida eremítica y lo envió a Teoctisto, que dirigía una comunidad regida por una norma común estricta. Esta era la sabiduría de la tradición del desierto: el ermitaño primero aprende la obediencia y la vida con otros, y solo después la soledad. Sabas vivió bajo esa disciplina hasta cerca de los treinta años. Permaneció unido a Eutimio, que murió en 473, y ambos quedaron ligados por una amistad espiritual duradera.",
+   "Tras este largo aprendizaje, a Sabas se le permitió vivir en una cueva, manteniendo los lazos con la comunidad para el culto. Cuando murió Eutimio, se internó aún más en el desierto. Pero la santidad atrae a la gente, y los discípulos comenzaron a encontrarlo. En 483, en el valle del Cedrón, al sudeste de Jerusalén, fundó la comunidad que llegaría a ser la Gran Laura. Una laura es una reunión de ermitaños. Durante la semana vivían separados en cuevas y celdas, pero estaban unidos por un líder común, reglas comunes y, sobre todo, la Eucaristía. Según la tradición, un ángel guió a Sabas hasta el lugar, y María le prometió que la laura perduraría. Sea cual sea la lectura que se haga de estos relatos, el monasterio ha perdurado: hoy se conoce como Mar Saba y es uno de los monasterios más antiguos que siguen habitados.",
+   "Sabas fue ordenado sacerdote en 491 y, en los años siguientes, el patriarca de Jerusalén lo nombró superior de los ermitaños de la región. Fundó otros monasterios, y la Iglesia lo recordó después como modelo de santidad. También se vio envuelto en las grandes controversias que siguieron al Concilio de Calcedonia en 451. Sabas defendió su enseñanza y se opuso a quienes la negaban. Viajó personalmente a Constantinopla, ante el emperador Anastasio en 511 y ante Justiniano en 531, cuando ya era un anciano de unos noventa años. Una fuente añade que obtuvo de un emperador el alivio de impuestos para los artesanos y una compensación para los campesinos pobres. El ermitaño nunca perdió de vista a la gente sencilla.",
+   "Su biógrafo fue Cirilo de Escitópolis, un monje de su propio círculo, que escribió su Vida unas dos generaciones después de la muerte de Sabas. El relato de Cirilo mezcla el recuerdo con los patrones conocidos de la narración monástica, y los estudiosos modernos lo leen con cuidado. Entre las tradiciones conservadas hay una sobre la disciplina. Según se cuenta, siendo un joven monje fue tentado a comer una manzana fuera de las horas de comida, y prometió no volver a comer ninguna; según la tradición, los monjes de Mar Saba siguen su ejemplo en esto hasta hoy. También se le atribuye la composición de una regla para los oficios religiosos de los monasterios, el Typikón de Jerusalén, que dio forma a la liturgia en todo el mundo bizantino.",
+   "Sabas murió el 5 de diciembre de 532, en la Gran Laura, a unos noventa y tres años. Su monasterio llegó a acoger a numerosos monjes, entre ellos Juan Damasceno. Sus reliquias fueron llevadas a Venecia y, en 1965, el papa Pablo VI las devolvió a Mar Saba como gesto de buena voluntad. El Martirologio Romano lo recuerda en el día de su muerte, honrando a un hombre que buscó la soledad y terminó sirviendo a una gran familia de creyentes, y que defendió ante emperadores la fe de Calcedonia."
+  ],
+  "prayer": "El silencio con Dios deja espacio para todos los demás. San Sabas, ruega por nosotros.",
+  "patronages": [],
+  "places": [
+   "Mar Saba",
+   "Jerusalén",
+   "Desierto de Judea",
+   "Capadocia"
+  ]
+ },
+ "books": [],
+ "caption": "A boy of eight chose the monastery. Fifteen centuries later, his desert community still stands.\n✝ A forgotten saint, every morning. Follow along.\n\nSaint Sabas · Feast day: December 5\nSaint Sabas entered a monastery as a child, became a hermit and founded the Great Lavra, today's Mar Saba, then defended the faith before emperors.\n\nSilence with God makes room for everyone else. Saint Sabas, pray for us. 🕯\n\nHad you ever heard of St. Sabas before today?\n\n—\nSources: Wikipedia · Santi e Beati · Nominis (Église catholique en France) · Ökumenisches Heiligenlexikon\nArt: Illustration in the Byzantine style, AI-generated (Google Gemini)\n\n#AllHolySaints #saintoftheday #catholicsaints #saintsabas #marsaba",
+ "attempts": 0,
+ "assets": {
+  "video.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-05/video.mp4",
+  "cover.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-05/cover.jpg",
+  "preview.mp4": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-05/preview.mp4",
+  "art.jpg": "https://github.com/HxHxMu/AllSaints/releases/download/ep-2026-12-05/art.jpg"
+ },
+ "review_message_id": 319
+}
