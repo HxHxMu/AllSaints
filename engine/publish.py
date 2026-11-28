@@ -81,7 +81,8 @@ def publish_episode(ep):
     ep.update(status="published", published=res, published_at=now.isoformat(timespec="minutes"))
     save_episode(ep)
     _notify(f"📣 Posted: {ep['saint']['display_name']}\n{res.get('permalink') or ''}"
-            + (f"\n📍 {res['location']}" if res.get("location") else ""))
+            + (f"\n📍 {res['location']}" if res.get("location") else "")
+            + ("\n➕ Open it and tap ➤ → Add to story (the API can't share a Reel to Stories)." if res.get("permalink") else ""))
     publish_facebook(ep, vid)
     publish_threads(ep)
     publish_youtube(ep, vid)

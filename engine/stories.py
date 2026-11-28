@@ -1,7 +1,8 @@
 """Instagram Stories (no AI). Stories reach followers, not new people, so they carry what the Reels don't:
 
-- Nightly card (config "story_time", default 20:30): today's saint's icon and the episode's closing line
-  ("Saint X, pray for us."), and tomorrow's saint when that episode is already approved. Only after today's Reel is
+- Nightly card (config "story_time", default 20:30): tomorrow's saint, full-bleed icon, with the hook of tomorrow's
+  episode when it is already approved (today's saint is already in the feed); else tonight's closing prayer on
+  today's icon. Only after today's Reel is
   published; state ep["story"] {media_id, permalink, image | attempts, error}, max 3 attempts, failures to Telegram.
 - Every card also goes to the Facebook Page as a Story once it is on Instagram (Instagram's "share to Facebook" skips
   API posts): state ep["story_fb"] / the entry's "facebook", {id | attempts, error}, independent of Instagram.
@@ -42,64 +43,78 @@ def _manuscript(iso):
     return f"{roman(d)} · {MONTHS[m]}".upper()
 
 
-def _painted_band(cover: Image.Image):
-    """The icon from a Reel cover: its painted band (17-64%), clear of the monogram and the title lettering."""
-    w, h = cover.size
-    return cover.crop((0, int(h * 0.17), w, int(h * 0.64))).resize((W, round(W * (h * 0.47) / w)), Image.LANCZOS)
+SAFE_TEXT = H - 290         # v2: text block ends above the reply bar
 
 
-def night_card(ep, nxt=None, cover: Image.Image = None):
-    """Icon on top sinking into soot; the closing line; tomorrow's saint; the monogram. Long names shorten the icon
-    (from the bottom of the painting) so the text never runs into the footer."""
-    img, end = _night(ep, nxt, cover, 0)
-    over = end + 60 - (SAFE_BOTTOM - 40)
-    return _night(ep, nxt, cover, over)[0] if over > 0 else img
+def _shaded(art: Image.Image, dark_from: float):
+    """The whole icon, full bleed (heads stay clear of Instagram's bar), sinking into soot under the text."""
+    img = art.convert("RGB").resize((W, H), Image.LANCZOS)
+    shade = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(shade)
+    y0 = int(H * dark_from)
+    for y in range(y0, H):
+        d.line([(0, y), (W, y)], fill=min(235, int(235 * ((y - y0) / (H * 0.30)) ** 1.2)))
+    for y in range(0, 200):  # keep Instagram's name and progress bar readable
+        d.line([(0, y), (W, y)], fill=int(120 * (1 - y / 200)))
+    img.paste(Image.new("RGB", (W, H), C["soot"]), (0, 0), shade)
+    return img
 
 
-def _night(ep, nxt, cover, cut):
-    img = Image.new("RGB", (W, H), C["soot"])
-    band = _painted_band(cover)
-    band = band.crop((0, 0, W, band.size[1] - cut))
-    img.paste(band, (0, TOP))
-    bh = TOP + band.size[1]
-    fade = Image.new("L", (W, H), 0)
-    fd = ImageDraw.Draw(fade)
-    for y in range(TOP, TOP + 80):  # the painting rises out of the soot at the top...
-        fd.line([(0, y), (W, y)], fill=int(255 * (1 - (y - TOP) / 80) ** 1.4))
-    for y in range(bh - 260, bh + 1):  # ...and sinks back into it below
-        fd.line([(0, y), (W, y)], fill=int(255 * ((y - bh + 260) / 260) ** 1.4))
-    fd.rectangle([0, bh, W, H], fill=255)
-    img.paste(Image.new("RGB", (W, H), C["soot"]), (0, 0), fade)
-    d = ImageDraw.Draw(img)
-    y = bh + 30
-    _tracked(d, (X, y), _manuscript(ep["date"]), _font("Cinzel-Regular.ttf", 26), C["gilt"], 0.16)
-    y += 70
-    close = next((b["text"] for b in ep["script"]["beats"] if b.get("role") == "close"),
-                 f"{ep['saint']['name']}, pray for us.")
-    big = _font("Cormorant-MediumItalic.ttf", 76)
-    for line in _lines(d, close, big, W - 2 * X):
-        d.text((X, y), line, font=big, fill=C["giltLight"])
-        y += 90
-    y += 34
-    d.rectangle([X, y, X + 72, y + 3], fill=C["martyr"])
-    if nxt:
-        y += 60
-        _tracked(d, (X, y), "TOMORROW", _font("Cinzel-Regular.ttf", 24), C["ash"], 0.16)
-        y += 48
-        name = _font("EBGaramond-Medium.ttf", 50)
-        for line in _lines(d, nxt["saint"]["display_name"], name, W - 2 * X):
-            d.text((X, y), line, font=name, fill=C["vellum"])
-            y += 62
-        d.text((X, y + 4), nxt["saint"].get("region", ""), font=_font("Cormorant-MediumItalic.ttf", 36), fill=C["ash"])
-        y += 48
-    _monogram(d, X, SAFE_BOTTOM - 40, 30, C["gilt"])
-    d.text((X + 110, SAFE_BOTTOM - 37), "allholysaints.com", font=_font("EBGaramond-Medium.ttf", 28), fill=C["ash"])
-    return img, y
+def _text_layer(label, line, size, name=None, region=None):
+    """Transparent 1080x1920 layer: small-caps label, the big italic line, then (tomorrow) the saint's name."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    big = _font("Cormorant-MediumItalic.ttf", size)
+    lines = _lines(d, line, big, W - 2 * X)
+    lh = int(size * 1.16)
+    total = 66 + len(lines) * lh + (134 if name else 0) + (50 if region else 0)
+    y = SAFE_TEXT - total
+    _tracked(d, (X, y), label, _font("Cinzel-Regular.ttf", 38), C["gilt"], 0.14)
+    y += 66
+    for ln in lines:
+        d.text((X, y), ln, font=big, fill=C["giltLight"])
+        y += lh
+    if name:
+        y += 30
+        d.rectangle([X, y, X + 90, y + 4], fill=C["martyr"])
+        y += 30
+        d.text((X, y), name, font=_font("EBGaramond-Medium.ttf", 60), fill=C["vellum"])
+        y += 74
+    if region:
+        d.text((X, y), region, font=_font("Cormorant-MediumItalic.ttf", 44), fill=C["ash"])
+    return lay
 
 
-def _cover(ep):
+def _hook(ep):
+    return next((b["text"] for b in ep["script"]["beats"] if b.get("role") == "hook"), "")
+
+
+def night_card(ep, nxt=None, art=None, nxt_art=None):
+    """Tonight's card: tomorrow's saint, full-bleed icon, with the hook of tomorrow's (approved) episode, so followers
+    come back for the Reel (today's saint is already in their feed). Falls back to tonight's closing prayer on today's
+    icon when tomorrow isn't approved yet."""
+    if nxt and nxt_art is not None and _hook(nxt):
+        hook = _hook(nxt)
+        bg, txt = _shaded(nxt_art, 0.36), _text_layer("TOMORROW · " + _post_time(), hook, 88 if len(hook) < 80 else 76,
+                                                      nxt["saint"]["display_name"], nxt["saint"].get("region", ""))
+    else:
+        close = next((b["text"] for b in ep["script"]["beats"] if b.get("role") == "close"),
+                     f"{ep['saint']['name']}, pray for us.")
+        bg, txt = _shaded(art, 0.42), _text_layer(_manuscript(ep["date"]), close, 92 if len(close) < 80 else 80)
+    return Image.alpha_composite(bg.convert("RGBA"), txt).convert("RGB")
+
+
+def _post_time():
+    hh, mm = map(int, load_config().get("post_time", "07:30").split(":"))
+    return f"{(hh - 1) % 12 + 1}:{mm:02d} {'AM' if hh < 12 else 'PM'}"
+
+
+def _asset(ep, name="art.jpg"):
+    """An episode's release image: the clean icon (art.jpg), else the Reel cover."""
     import storage
-    r = http.get(storage.resolve_direct(ep["assets"]["cover.jpg"]), timeout=60)
+    a = ep.get("assets", {})
+    url = a.get(name) or a.get("cover.jpg")
+    r = http.get(storage.resolve_direct(url), timeout=60)
     r.raise_for_status()
     return Image.open(io.BytesIO(r.content)).convert("RGB")
 
@@ -110,7 +125,20 @@ def _tomorrow(ep):
         nxt = load_episode(nid)
     except Exception:
         return None
-    return nxt if nxt and nxt.get("status") in ("approved", "publishing", "published") else None
+    return nxt if nxt and nxt.get("status") in ("approved", "publishing", "published") and nxt.get("assets") else None
+
+
+def render_night(ep, out_dir: Path):
+    """Tonight's card as story.jpg. Returns its path."""
+    nxt = _tomorrow(ep)
+    try:
+        nxt_art = _asset(nxt) if nxt else None
+    except Exception:
+        traceback.print_exc()
+        nxt_art = None
+    jpg = out_dir / "story.jpg"
+    night_card(ep, nxt, None if nxt_art is not None else _asset(ep), nxt_art).save(jpg, quality=92)
+    return jpg
 
 
 def post_night(ep):
@@ -118,9 +146,7 @@ def post_night(ep):
     import instagram, storage
     out = ROOT / "work" / ep["id"]
     out.mkdir(parents=True, exist_ok=True)
-    jpg = out / "story.jpg"
-    night_card(ep, _tomorrow(ep), _cover(ep)).save(jpg, quality=92)
-    url = storage.resolve_direct(storage.upload(f"ep-{ep['id']}", {"story.jpg": jpg})["story.jpg"])
+    url = storage.resolve_direct(storage.upload(f"ep-{ep['id']}", {"story.jpg": render_night(ep, out)})["story.jpg"])
     return {**instagram.publish_story(url), "image": url}
 
 
@@ -222,8 +248,7 @@ if __name__ == "__main__":
         ep = load_episode(sys.argv[2])
         out = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "work" / ep["id"] / "story.jpg"
         out.parent.mkdir(parents=True, exist_ok=True)
-        night_card(ep, _tomorrow(ep), _cover(ep)).save(out, quality=92)
-        print(out)
+        print(render_night(ep, out.parent))
     elif sys.argv[1] == "music":
         day = dt.date.fromisoformat(sys.argv[2])
         out = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "work" / "music-stories" / f"{day}.jpg"
